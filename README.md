@@ -2,6 +2,8 @@
 
 English | [日本語](README_ja.md)
 
+**In short:** A small LLM writes its own consistency rules, some of them wrong. A network then checks the LLM's answers against those rules while also doubting each rule, using belief propagation. This is close to BTProp (Hou et al., NAACL 2025). The difference is that the rules come from the LLM itself and the network estimates which rules to trust, without labels. We did not compare with BTProp directly.
+
 Code, data, and results for a set of small experiments. A small language model (Gemma-2 2B) answers many true/false statements. The statements are linked by rules, and we try to find which of the model's answers are wrong by looking at the whole network of answers.
 Every number in the two articles below comes from files in this repository.
 
