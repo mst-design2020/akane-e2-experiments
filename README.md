@@ -75,6 +75,10 @@ python summ.py ../results/C_A.json
 python fig27.py
 ```
 
+## Related work and what is different
+
+The closest work we know is BTProp (Hou et al., NAACL 2025, https://arxiv.org/abs/2406.06950). It builds links between statements with a separate model (NLI) and uses belief propagation to detect an LLM's hallucinations. Here, the model also writes the exclusion rules itself, and the network also estimates whether each rule is true (E2-6). We did not run BTProp or use its benchmarks, so we cannot say which is better. The model's own confidence (P(True)), which the BTProp paper treats as a strong baseline, is included here as a baseline. Other related work: Crum et al. 2024 (asking LLMs for disjointness axioms), Xu et al. 2026 (neighbor-consistency belief), Jiang, Lowd and Dou 2012 (cleaning an extracted knowledge base with Markov logic), Maieutic prompting (Jung et al. 2022), BeliefBank (Kassner et al. 2021).
+
 ## Limitations
 
 - Only one small model (Gemma-2 2B), only English, and only two domains: geography and taxonomy.
