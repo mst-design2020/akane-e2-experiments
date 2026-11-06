@@ -1,3 +1,4 @@
 E2_results/
 __pycache__/
 *.pyc
+*.obo
