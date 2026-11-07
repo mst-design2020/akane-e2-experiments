@@ -11,7 +11,7 @@ Every number in the three articles below comes from files in this repository.
 - Article 2 (Japanese): E2-4 to E2-7, rules written by the model itself. https://note.com/mst_design2020/n/n5d7de09a97f2
 - Article 3 (Japanese): E2-8 and E2-9, a third domain and more wrong rules. https://note.com/mst_design2020/n/n0cddc2e4f209
 
-Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/
+Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X
 
 ## AKANE Architecture in short
 

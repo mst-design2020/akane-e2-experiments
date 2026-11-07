@@ -11,7 +11,7 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 - 記事2「ルールまでAIに作らせたら――自分の答えを、自分で作ったルールで確かめられるか」（E2-4〜E2-7） https://note.com/mst_design2020/n/n5d7de09a97f2
 - 記事3「外れたルールでも、疑えば使えるか――AIの間違い探しで、ルールの外れを増やしてみた」（E2-8・E2-9） https://note.com/mst_design2020/n/n0cddc2e4f209
 
-著者：加藤雅也（M.S.T.デザイン代表・大分県佐伯市） https://mst-design.jp/
+著者：加藤雅也（M.S.T.デザイン代表・大分県佐伯市） https://mst-design.jp/ ・ ORCID https://orcid.org/0009-0001-6803-654X
 
 ## AKANE Architectureとは（短く）
 
