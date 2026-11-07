@@ -1,5 +1,7 @@
 # AKANE Architecture E2 実験：AIの間違いを、問題どうしのつながりから見つける
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24045800.svg)](https://doi.org/10.5281/zenodo.24045800)
+
 [English](README.md) | 日本語
 
 **ひとことで：** 小さなAIに、答えを確かめるためのルールを自分で作らせます（外れも混ざります）。そのルールでAIの答えを確かめるとき、ルール自体が本当かどうかも一緒に疑いながら、確率伝搬で間違いを探します。BTProp（Hou ほか、NAACL 2025）に近い考え方です。違うのは、ルールをAI自身が作ることと、どのルールを信じるかを正解なしで網が決めることです。BTPropとは直接比べていません。
@@ -11,7 +13,7 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 - 記事2「ルールまでAIに作らせたら――自分の答えを、自分で作ったルールで確かめられるか」（E2-4〜E2-7） https://note.com/mst_design2020/n/n5d7de09a97f2
 - 記事3「外れたルールでも、疑えば使えるか――AIの間違い探しで、ルールの外れを増やしてみた」（E2-8・E2-9） https://note.com/mst_design2020/n/n0cddc2e4f209
 
-著者：加藤雅也（M.S.T.デザイン代表・大分県佐伯市） https://mst-design.jp/ ・ ORCID https://orcid.org/0009-0001-6803-654X
+著者：加藤雅也（M.S.T.デザイン代表・大分県佐伯市） https://mst-design.jp/ ・ ORCID https://orcid.org/0009-0001-6803-654X ・ DOI https://doi.org/10.5281/zenodo.24045800
 
 ## AKANE Architectureとは（短く）
 
