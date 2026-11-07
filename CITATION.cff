@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+type: software
+title: "AKANE Architecture E2: Finding an LLM's mistakes from how its answers connect"
+abstract: >-
+  Code, data, and results for small experiments in which a small language model
+  (Gemma-2 2B) answers many true/false statements and writes its own consistency
+  rules, some of them wrong. A network checks the model's answers against those
+  rules while also doubting each rule, using belief propagation, and the signals
+  are compared with the model's confidence and with counting rule violations.
+authors:
+  - family-names: Kato
+    given-names: Masaya
+    affiliation: "M.S.T. Design, Saiki, Oita, Japan"
+    orcid: "https://orcid.org/0009-0001-6803-654X"
+repository-code: "https://github.com/mst-design2020/akane-e2-experiments"
+url: "https://mst-design.jp/research/"
+license: MIT
+keywords:
+  - hallucination detection
+  - belief propagation
+  - large language models
+  - probabilistic graphical models
+  - energy-based models
+  - p-bit
