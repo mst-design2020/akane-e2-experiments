@@ -1,5 +1,7 @@
 # AKANE Architecture E2: Finding an LLM's mistakes from how its answers connect
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24045800.svg)](https://doi.org/10.5281/zenodo.24045800)
+
 English | [日本語](README_ja.md)
 
 **In short:** A small LLM writes its own consistency rules, some of them wrong. A network then checks the LLM's answers against those rules while also doubting each rule, using belief propagation. This is close to BTProp (Hou et al., NAACL 2025). The difference is that the rules come from the LLM itself and the network estimates which rules to trust, without labels. We did not compare with BTProp directly.
@@ -11,7 +13,7 @@ Every number in the three articles below comes from files in this repository.
 - Article 2 (Japanese): E2-4 to E2-7, rules written by the model itself. https://note.com/mst_design2020/n/n5d7de09a97f2
 - Article 3 (Japanese): E2-8 and E2-9, a third domain and more wrong rules. https://note.com/mst_design2020/n/n0cddc2e4f209
 
-Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X
+Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X · DOI https://doi.org/10.5281/zenodo.24045800
 
 ## AKANE Architecture in short
 
