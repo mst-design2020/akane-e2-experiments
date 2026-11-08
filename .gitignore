@@ -2,3 +2,6 @@ E2_results/
 __pycache__/
 *.pyc
 *.obo
+
+# BTProp comparison work folder
+analysis/btprop/work/

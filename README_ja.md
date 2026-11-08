@@ -75,6 +75,8 @@ $$
 | E2-7 | 地理での繰り返し／ほかの方法との比べ | 地理：BP 0.82 対 数える 0.80：同着。分類：BPがほかの方法すべてに勝ち。地理：組み合わせと同着 | `plans/E2-7_geo_and_baselines.md` |
 | E2-8 | 3つ目の分野（病気の分類、Human Disease Ontology、3,304問）。確かめる組もAIに選ばせる | ルールは84%正しい。ルールも疑うBP 0.76 対 数える 0.74：勝ち（10回とも）。AIに選ばせた組は8割が外れで、全部の組を聞くより少し下（基準では同着） | `plans/E2-8_disease.md` |
 | E2-9 | 同じ網で、ルールの外れの割合だけを0〜5割と変える（病気・分類） | 外れを増やしても、BPと数えるの差はほぼ同じ（基準では「変わらない」）。ルールを全部信じるBPは、ルールが正しいときは上、外れ3割で逆転。追加の確かめ：人のつながりのルールを抜くと、分類では外れが多いほど差が開いた（+0.03→+0.09） | `plans/E2-9_wrong_rate.md` |
+| E2-10 | BTProp（Hou ほか、NAACL 2025）と同じテスト。論文の作者が公開したChatGPTの文の木と自信をそのまま使い、最後の確率の計算だけを入れ替える（FactCheckGPT 631主張、WikiBio 921文） | BTPropが自信より良くなる幅は再現（+0.03／+0.08）。WikiBio：BTProp 0.80 対 ルールも疑うBP 0.77でBTPropの勝ち（5回とも）。FactCheckGPT：0.79 対 0.80で同着 | `plans/E2-10_btprop.md` |
+| E2-11 | 同じ木で、NLIのつながりを0〜5割くじで逆にする | BTPropは外れ2〜3割でAIの自信より下に落ちる（5割で0.60〜0.65）。ルールも疑うBPは自信の近くで止まる。FactCheckGPTは外れ2割から、WikiBioは5割で疑うBPの勝ち | `plans/E2-10_btprop.md` |
 
 ## ファイルの置き場所
 
@@ -87,6 +89,7 @@ $$
   - `E2-7_answers_gemma-2-2b-it.json`：地理のルールの質問と、言い換えの質問への答え
   - `E2-8_answers_gemma-2-2b-it.json`：病気の○×問題・ルールの質問・組選び（AIが書いた番号）への答え
 - `analysis/`：E2-4〜E2-9の計算（CPUのみ）と `check_formulas.py`
+- `analysis/btprop/`：E2-10・E2-11。BTPropのコードにはライセンス表示がないので、ここには入れず、`setup_btprop.sh` で決まった版を取ってきて正解ラベルもそろえる
 - `results/`：計算結果のJSONと図
 - `plans/`：各実験の計画と結果
 
@@ -123,9 +126,23 @@ python merge29.py
 python check_formulas.py
 ```
 
+E2-10・E2-11（BTPropとの比べ、CPUのみで数分。`pyyaml absl-py` と、WikiBioの正解をHugging Faceから取るための `datasets` も使う）：
+
+```
+cd analysis/btprop
+bash setup_btprop.sh          # BTProp（6e80da8）とFactCheckGPT・WikiBioの正解を取ってくる
+cd work/BTProp
+python ../../bt_repro.py factcheckgpt                       # 公開どおりのBTProp
+python ../../e210.py factcheckgpt ../../E210_factcheckgpt.json
+python ../../e210.py wikibio ../../E210_wikibio.json
+python ../../e211.py wikibio ../../E211_wikibio.json        # つながりを逆にする
+```
+
+WikiBioについて：BTPropは「彼」などを名前に置き換えた文で評価していて、その文は公開されていない。`align_wikibio.py` で、公開の正解と BTPropの文を、順番と文の似かたで突き合わせた（929文中924文）。また、公開のBTPropのコードは、木の無い主張を確率1（本当）にする。FactCheckGPT（48主張）では、そこだけAIの自信を使ったBTPropも出し、それと比べた。
+
 ## 近い研究と、違うところ
 
-一番近いのはBTProp（Hou ほか、NAACL 2025、https://arxiv.org/abs/2406.06950 ）です。問題どうしのつながりを別のAI（NLI）の判定で作り、確率伝搬でAIの間違いを見つけます。ここでは、両立しないというルールもAI自身に作らせ、そのルールが本当かどうかも網の中で疑わせました（E2-6）。BTPropそのものは動かしておらず、BTPropのテスト問題でも試していないので、どちらが優れているかは言えません。BTPropの論文で強い比べ相手とされる「AIの自信」（P(True)）は、ここでも比べ相手に入れています。ほかに近い研究：Crum ほか 2024（AIに両立しないかを聞いてルールを作る）、Xu ほか 2026（近所の答えとの一致）、Jiang・Lowd・Dou 2012（自動で集めた知識をルールで掃除）、Maieutic prompting（Jung ほか 2022）、BeliefBank（Kassner ほか 2021）。E2-9の「ルールを疑うと、ルールが正しいときは少し損で、外れが多いときに効く」という形は、Snorkel（Ratner ほか、VLDB 2017、https://arxiv.org/abs/1711.10160 ）の分析（ルールの当たり具合を学ぶ利点は、ルールの当たり外れがばらばらなときに大きい）と同じ傾向です。ここでは、それがAIが自分の答えを確かめる場面でも見えた、という位置づけです。
+一番近いのはBTProp（Hou ほか、NAACL 2025、https://arxiv.org/abs/2406.06950 ）です。問題どうしのつながりを別のAI（NLI）の判定で作り、確率伝搬でAIの間違いを見つけます。ここでは、両立しないというルールもAI自身に作らせ、そのルールが本当かどうかも網の中で疑わせました（E2-6）。E2-10でBTPropを、論文の作者が公開した木そのもので動かしました。つながりが正しいままでは、WikiBioでBTPropが上、FactCheckGPTで同着なので、私たちの方法が優れているとは言えません。つながりの一部が外れていると（E2-11）、つながりを絶対に正しいとするBTPropは大きく崩れ、ルールも疑うBPは崩れませんでした。BTPropの論文で強い比べ相手とされる「AIの自信」（P(True)）は、ここでも比べ相手に入れています。ほかに近い研究：Crum ほか 2024（AIに両立しないかを聞いてルールを作る）、Xu ほか 2026（近所の答えとの一致）、Jiang・Lowd・Dou 2012（自動で集めた知識をルールで掃除）、Maieutic prompting（Jung ほか 2022）、BeliefBank（Kassner ほか 2021）。E2-9の「ルールを疑うと、ルールが正しいときは少し損で、外れが多いときに効く」という形は、Snorkel（Ratner ほか、VLDB 2017、https://arxiv.org/abs/1711.10160 ）の分析（ルールの当たり具合を学ぶ利点は、ルールの当たり外れがばらばらなときに大きい）と同じ傾向です。ここでは、それがAIが自分の答えを確かめる場面でも見えた、という位置づけです。
 
 ## 言えないこと（弱点）
 
@@ -135,6 +152,7 @@ python check_formulas.py
 - E2-9の外れは、くじで選んでわざと逆にしたもので、AIが自然に出す外れ（見逃しが多い）とは形が違う。つながりのルールを抜いた確かめは、結果を見たあとで足したもの。
 - 同じデータで実験を重ねている（E2-4〜E2-7）。分け方の5通りは同じデータの使い回し。
 - E2-7の「言い換えのぶれ」「近所の答えとの一致」は、元の論文の方法を、はい・いいえの1回の答えに合わせて簡単にしたもの。
+- E2-10・E2-11の木はChatGPTで作られたもの。私たちの方法はデータの2割で調整し、BTPropは公開の設定（WikiBioの前120人で作った表）のまま。E2-11の外れはくじで逆にしたもので、本物のNLIの間違いとは形が違う。分解のつながりは外していない。E2-10の「調整の幅を広げる」「分解を有向にする」は結果を見たあとで足した確かめ（結論は変わらない）。
 - p-bitはパソコンの中で真似たもの（ギブスサンプリング）。速さや電力については、この実験からは何も言えない。
 
 ## 作り方について
@@ -143,11 +161,14 @@ python check_formulas.py
 
 ## ライセンス
 
-コードはMITライセンスです（`LICENSE`）。`data/` はGemmaの出力で、Gemmaの利用規約に従います。GeoNames・WordNet・Human Disease Ontologyは、それぞれのライセンスに従います。
+コードはMITライセンスです（`LICENSE`）。`data/` はGemmaの出力で、Gemmaの利用規約に従います。GeoNames・WordNet・Human Disease Ontology・Factcheck-GPT（Apache 2.0）・WikiBioの正解ラベルは、それぞれのライセンスに従います。BTPropのコードと記録は入れていません。
 
 ## 使ったデータとモデル
 
 - GeoNames（`geonamescache` パッケージ経由） https://www.geonames.org/
 - WordNet（NLTK経由） https://wordnet.princeton.edu/
 - Human Disease Ontology（2026-10-29版、CC0） https://disease-ontology.org/ 。ファイルはリポジトリに入れず、ノートと計算の中でGitHubのタグ v2026-10-29 から取ってくる。
+- BTPropのコードと公開記録（6e80da8） https://github.com/UCSB-NLP-Chang/BTProp
+- FactCheckGPTの正解（Factbench.jsonl、Wang ほか 2024） https://github.com/yuxiaw/Factcheck-GPT
+- WikiBioの正解（Manakul ほか 2023） https://huggingface.co/datasets/potsawee/wiki_bio_gpt3_hallucination
 - Gemma-2 2B（指示調整版） https://huggingface.co/google/gemma-2-2b-it 。`data/` のGemmaの答えは、Gemmaの利用規約に従って使っています。
