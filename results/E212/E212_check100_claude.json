@@ -1,0 +1,505 @@
+{
+ "note": "Claude（AI）が2026-11-09、モデルの判定を見る前に付けた。前＝親→子、後＝子→親。",
+ "items": [
+  {
+   "parent": "Charlotte Rae was known for her portrayal of Edna Garrett in the sitcom \"Diff'rent Strokes.\"",
+   "child": "Charlotte Rae was known for her portrayal of Edna Garrett in the sitcom \"The Facts of Life.\"",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Sylvain Barrier became the first rider to win three consecutive titles in the series.",
+   "child": "Sylvain Barrier did not become the first rider to win three consecutive titles in the series.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Bane has released several EPs and splits.",
+   "child": "Bane has released 9 EPs and splits.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "Geranium offers a unique and creative menu.",
+   "child": "Geranium offers a range of digital marketing services, not a menu.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "C# is an object-oriented programming language.",
+   "child": "C# supports the concepts of classes and objects, which are fundamental to object-oriented programming.",
+   "claude": "entail-entail"
+  },
+  {
+   "parent": "Recruiters review resumes and job applications to determine the best fit for a position.",
+   "child": "Recruiters analyze resumes and job applications to match the candidate's profile with the requirements of the job.",
+   "claude": "entail-entail"
+  },
+  {
+   "parent": "Micky Moody joined Snafu in 1974.",
+   "child": "Micky Moody joined Snafu in 1973.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Paul Taylor began playing guitar at the age of 12.",
+   "child": "Paul Taylor began playing guitar at the age of 6.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "The reaction between copper and ferrous sulphate results in the formation of copper sulfate.",
+   "child": "The chemical equation for the reaction is Cu + FeSO4 -> CuSO4 + Fe.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "John Vallely is an American former professional basketball player.",
+   "child": "John Vallely is an Irish former professional basketball player.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Frederick Thomas Brentnall designed a wide range of buildings including churches, schools, factories, warehouses, offices, shops, and private residences.",
+   "child": "Frederick Thomas Brentnall primarily designed public buildings such as schools, churches, hospitals, and government buildings.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Brian Hughes was born on October 28, 1956.",
+   "child": "Brian Hughes was born on June 7, 1955.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Producing one new star per year on average in the Milky Way may seem like a small number.",
+   "child": "Producing 1-2 new stars per year on average in the Milky Way is consistent with the estimated rate.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Alan Dinehart was active during the silent and early sound film eras.",
+   "child": "Alan Dinehart was active during the 1930s and 1940s.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Kenan Hasagić is a Bosnian professional footballer.",
+   "child": "Kenan Hasagić is a Bosnian football coach.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Matt Striebel was a member of the 2001 NCAA championship team at Princeton University.",
+   "child": "Matt Striebel was a member of the Rochester Rattlers in 2001.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "The SM U-30 German submarine had a displacement of 834 tons when submerged.",
+   "child": "The SM U-30 German submarine had a displacement of 971 tons when submerged.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "'Blackpink in Your Area' includes all of Blackpink's previous releases and additional tracks such as 'Ddu-Du Ddu-Du' and 'Forever Young'.",
+   "child": "'Blackpink in Your Area' includes some of Blackpink's previous releases and additional tracks such as 'Ddu-Du Ddu-Du' and 'Forever Young'.",
+   "claude": "entail-neutral"
+  },
+  {
+   "parent": "Whitey Kurowski was born in Chicago, Illinois.",
+   "child": "Whitey Kurowski was born in Reading, Pennsylvania.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Michael Replogle has worked with cities in more than 40 countries to develop and implement sustainable transport policies and projects.",
+   "child": "Michael Replogle has worked with over 25 countries to develop and implement sustainable transport policies and projects.",
+   "claude": "entail-neutral"
+  },
+  {
+   "parent": "Gündüz Kılıç is a Turkish professional footballer.",
+   "child": "Gündüz Kılıç is a Turkish actor, known for his roles in various Turkish TV series and films.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Geoff Griffin played in the 1980s and 1990s.",
+   "child": "Geoff Griffin played professional cricket in the 1960s, not the 1980s and 1990s.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "The American Fantasy Press specializes in science fiction literature.",
+   "child": "The American Fantasy Press specializes in fantasy literature.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Bridget Moynahan's birth name is Kathryn Bridget Moynahan.",
+   "child": "Kathryn Bridget Moynahan's birth name is Kathryn Bridget Moynahan.",
+   "claude": "entail-neutral"
+  },
+  {
+   "parent": "Jerry Leger has released five studio albums.",
+   "child": "Jerry Leger has released 10 studio albums.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Alana Davis has released an EP titled \"Acoustic Soul\" in 2005.",
+   "child": "Alana Davis has released an EP titled \"Acoustic Soul\" in 2009.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Affection involves a sense of warmth and tenderness towards the object of affection.",
+   "child": "Expressions of affection often include physical gestures, kind words, and acts of service to demonstrate love and warmth.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Alan Dinehart acted opposite stars such as Mary Pickford, Lillian Gish, and Clara Bow.",
+   "child": "Alan Dinehart acted opposite stars such as Bette Davis, Mae West, Cary Grant, Joan Crawford, Humphrey Bogart, and many others.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "The profitability of industries like palm oil, rubber, and mining surpassed that of the declining slave trade, leading to their emergence as primary sources of profit for European traders.",
+   "child": "The profitability of industries like cotton trade, banking and finance, and oil and energy surpassed that of the declining slave trade, leading to their emergence as primary sources of profit for European traders.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Sinking sand is a natural phenomenon.",
+   "child": "Natural factors such as erosion, water flow, and seismic activity can contribute to the formation of sinking sand.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "Abong Mbang is in the Abong-Mbang sub-division of the Adamawa Division.",
+   "child": "Abong Mbang is in the East Region of Cameroon.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "John Vallely retired from the NBA in 1980.",
+   "child": "John Vallely retired from the NBA in 1974.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Virginia Bottomley was elected as Member of Parliament for South West Surrey in 1984.",
+   "child": "Virginia Bottomley was elected as the Member of Parliament for South West Surrey in 1984.",
+   "claude": "entail-entail"
+  },
+  {
+   "parent": "From 2007 to 2010, Jack Straw served as Lord Chancellor.",
+   "child": "From 2007 to 2010, Jack Straw did not serve as Lord Chancellor.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Many mobile apps, including some popular ones, have been successfully developed using C# and Xamarin.",
+   "child": "Many mobile apps, including some popular ones, have been successfully developed using Java and Android Studio.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Alan Dinehart was born in New York City.",
+   "child": "Alan Dinehart was born in St. Paul, Minnesota, United States.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Royce Campbell has released an album titled \"Royce Campbell Plays the Music of Pat Martino\" in 1995.",
+   "child": "Royce Campbell has released an album titled \"Hot Reunion\" in 1995.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Gary Smith's research focuses on public finance.",
+   "child": "Gary Smith's research focuses on athlete performance and training, not public finance.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Mayhew Foster was a prolific writer.",
+   "child": "Mayhew Foster was not a prolific writer.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Reliability is an important attribute of spacecraft batteries.",
+   "child": "The failure of a spacecraft battery can lead to the loss of communication, navigation, or other essential functions during a mission.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Stan Heal (born October 28, 1932) is an American former professional basketball player.",
+   "child": "Stan Heal (born December 18, 1957) is an American former professional basketball player.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Georg Friedrich Parrot was born on October 22, 1767.",
+   "child": "Georg Friedrich Parrot was born on April 11, 1767.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "John Cameron immigrated to Canada in 1883.",
+   "child": "John Cameron immigrated to Canada in 1825.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Geoff Griffin was born on 28 August 1965.",
+   "child": "Geoff Griffin was born on August 7, 1965.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Tom Wise later sat as an independent.",
+   "child": "Tom Wise later sat as a member of the UK Independence Party (UKIP).",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Gary Smith is a distinguished professor of economics.",
+   "child": "Gary Smith is a former professional boxer turned trainer and boxing analyst.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Neptune is classified as an ice giant planet, consisting mainly of water, ammonia, and methane gases.",
+   "child": "Neptune is classified as an ice giant planet, consisting mainly of hydrogen, helium, methane, and small amounts of other gases like ammonia.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "In plot of the Night Buffalo, Manuel is trying to make sense of the sudden death of Gregorio.",
+   "child": "In the plot of The Night Buffalo, Manuel is trying to make sense of the sudden death of his brother, Gregorio.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "Advertising helps to increase brand recognition among consumers.",
+   "child": "Consistent advertising campaigns create top-of-mind awareness, making consumers more likely to think of the brand when making purchasing decisions.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "Look Homeward, Angel was a successful novel.",
+   "child": "Look Homeward, Angel received mostly positive reviews upon its publication in 1929, but also faced criticism for its length and meandering narrative.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Stan Heal was also selected to the NBA All-Star Game in 1959.",
+   "child": "Stan Heal was not selected to the NBA All-Star Game in 1959.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "The main reasons homeless people from outside of San Francisco went to San Francisco were for more compassion and support for the homeless population.",
+   "child": "The main reasons homeless people from outside of San Francisco went to San Francisco were for access to services, mild climate, employment opportunities, community and support networks, and legal protections.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Bridget Moynahan also had a recurring role in the CBS drama Blue Bloods.",
+   "child": "Bridget Moynahan had a recurring role in the TV show \"Blue Bloods\" as ADA Erin Reagan.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "Edward Synge was the son of the Rev. Edward Synge, rector of St. Werburgh's Church, Dublin.",
+   "child": "Edward Synge was the son of the Rev. George Synge, who was a politician and Church of Ireland clergyman.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "The final step in making iced matcha latte is to stir the mixure",
+   "child": "The final step in making an iced matcha latte is to top it off with ice cubes and serve it cold.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Intellidimension is a platform for managing and publishing large-scale, multilingual ontologies and taxonomies.",
+   "child": "Intellidimension is a software company that specializes in developing tools and solutions for data integration, data migration, and data management.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Carlos Arniches y Barrera began writing plays in 1891.",
+   "child": "Carlos Arniches y Barrera began writing plays in the late 19th century.",
+   "claude": "entail-neutral"
+  },
+  {
+   "parent": "Joe Holland played college basketball for the University of San Francisco.",
+   "child": "Joe Holland played college basketball for the University of Minnesota.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Richard Allen Epstein is a prolific author.",
+   "child": "Richard Allen Epstein is not mentioned in the background knowledge.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Rickey Paulding finished his college career as the University of Detroit Mercy's all-time leader in points with 2,072.",
+   "child": "Rickey Paulding finished his college career as the University of Detroit Mercy's all-time leader in points with 2,190.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Thomas Clayton Wolfe is considered a major American modernist writer.",
+   "child": "Thomas Clayton Wolfe is not considered a major American modernist writer.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Elisha Brown Jr. (1776–1852) was a politician from Rhode Island.",
+   "child": "Elisha Brown Jr. (1776–1852) was a politician from Atlanta, Georgia, USA.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "It is difficult to determine an average height for the four female presidents of the United States.",
+   "child": "It is difficult to determine the impact of gender on the presidencies of the four female presidents of the United States.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "In 1980, the oldest justice on the United States Supreme Court was Justice William O. Douglas.",
+   "child": "In 1980, the oldest justice on the United States Supreme Court was Associate Justice William O. Douglas.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "The 1932 Australian Grand Prix was held on a dirt track circuit at the Phillip Island Grand Prix Circuit.",
+   "child": "The 1932 Australian Grand Prix was held on a dirt track circuit at the Phillip Island circuit in Victoria, Australia.",
+   "claude": "entail-entail"
+  },
+  {
+   "parent": "Richard Allen Epstein has written more than twenty books.",
+   "child": "Richard Allen Epstein has written approximately 30 books.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "Richard Carpenter was nominated for a BAFTA Award for Best British Screenplay in 1967.",
+   "child": "Richard Carpenter was nominated for a BAFTA Award in 1967 for his work on the television series \"The Avengers\", specifically for the episode \"A Surfeit of H2O\".",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Kirill Karabits has also held the position of Principal Guest Conductor of the BBC Philharmonic since 2011.",
+   "child": "Kirill Karabits has held the position of Principal Guest Conductor of the BBC Philharmonic since 2016.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "The American Fantasy Press is a small publisher.",
+   "child": "The American Fantasy Press is a small independent publishing house specializing in fantasy and science fiction books.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "Andy Hurley joined the hardcore punk band Racetraitor.",
+   "child": "Andy Hurley joined the band called Fall Out Boy in 2003 as their drummer.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Paul Y. R. Waddington received his B.A. in 1967 from the University of Oxford.",
+   "child": "Paul Y. R. Waddington received his B.A. in 2001 from the University of Oxford.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "George Milne died in 1945 in Derby.",
+   "child": "George Milne died on January 19, 1948, in London, England.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Lawson stores carry groceries.",
+   "child": "Lawson stores do not carry groceries.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Linda Hunt appeared in the film The Incredibles (2004).",
+   "child": "Linda Hunt did not appear in the film The Incredibles (2004).",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "This new approach involves ensuring that the AI system understands human preferences.",
+   "child": "This new approach involves utilizing AI systems to optimize processes and drive growth, rather than focusing solely on ensuring that the AI system understands human preferences.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "During William Allan Neilson's tenure at Smith College, he was instrumental in transforming the college from a small, local institution into a major national university.",
+   "child": "During William Allan Neilson's tenure at Smith College, he was instrumental in transforming the college with the help of Elizabeth Cutter Morrow, the wife of the U.S. ambassador to Mexico and the daughter of the founder of Smith College.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "John Joseph Hughes was ordained a priest in 1819.",
+   "child": "John Joseph Hughes was ordained a priest in 1826.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Sonam Gyatso is credited with unifying the political and spiritual authority of Tibet.",
+   "child": "Sonam Gyatso is not mentioned in the background knowledge. Therefore, the statement remains unchanged.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Willie Naulls was drafted by the St. Louis Hawks in the 1956 NBA draft.",
+   "child": "Willie Naulls was not drafted by the St. Louis Hawks in the 1956 NBA draft.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Tom Butler has appeared in the film The Exorcism of Emily Rose.",
+   "child": "Tom Butler has appeared in films such as \"Shooter,\" \"Fifty Shades of Grey,\" and \"The Accused,\" but he did not appear in the film The Exorcism of Emily Rose.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "John Russell VC was accompanied by two other sergeants during the mission.",
+   "child": "John Russell VC was accompanied by three other sergeants during the mission.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Bob Miller is a former American football player.",
+   "child": "Bob Miller is a retired American sportscaster, not a former American football player.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Mayhew Foster was an English Quaker minister.",
+   "child": "Mayhew Foster was an author and playwright.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "This Mortal Coil was known for their ethereal, haunting and atmospheric sound.",
+   "child": "This Mortal Coil was known for their ethereal, haunting, and atmospheric music that incorporated elements of post-punk, dream pop, and ambient music.",
+   "claude": "neutral-entail"
+  },
+  {
+   "parent": "Rickey Paulding has played professionally in the NBA Development League.",
+   "child": "Rickey Paulding has played professionally in the NBA G League.",
+   "claude": "entail-entail"
+  },
+  {
+   "parent": "Bryan McClendon was born on April 28, 1983.",
+   "child": "Bryan McClendon was born on May 23, 1983.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Donald Alexander Mackinnon (1873–1936) was a politician.",
+   "child": "Donald Alexander Mackinnon (1873–1936) was a poet, not a politician.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Ron Meagher was born in the Bronx, New York.",
+   "child": "Ron Meagher was born in Des Moines, Iowa, United States.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Kirill Karabits has also held the position of Principal Guest Conductor of the BBC Philharmonic since 2011.",
+   "child": "Kirill Karabits has held the position of Principal Guest Conductor of the BBC Philharmonic since 2009.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "John Liscio is an entrepreneur.",
+   "child": "John Liscio is a political lobbyist.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Raymond Harry Brown is best known for his invention of the Brown Box.",
+   "child": "Raymond Harry Brown is not mentioned in the background knowledge. Therefore, the statement remains unchanged.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "Alan Dinehart was often cast as a romantic lead.",
+   "child": "Alan Dinehart was often cast as a villain or antagonist in films and television shows.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Paul Caddis began his career with Celtic.",
+   "child": "Paul Caddis began his career with Swindon Town.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Arthur Sewall graduated from Bowdoin College in 1856.",
+   "child": "Arthur Sewall graduated from Bowdoin College in 1865.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "James Clarke (VC) was buried in St. Mary's Churchyard, Islington, London.",
+   "child": "James Clarke (VC) was buried at the cemetery of St Patrick's Church in Claudy, Northern Ireland.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Willie Naulls was named to the All-Star team in 1959.",
+   "child": "Willie Naulls was named to the All-Star team in 1962.",
+   "claude": "neutral-neutral"
+  },
+  {
+   "parent": "The abolitionist movement in Europe led to an increased demand for African raw materials.",
+   "child": "The abolitionist movement in Europe aimed to end the transatlantic slave trade and slavery, which would decrease the demand for African raw materials.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "The Brown Box was used to play a variety of games.",
+   "child": "The Brown Box was used for playing various simple video games on a television screen.",
+   "claude": "entail-entail"
+  },
+  {
+   "parent": "Terraform modules can be easily managed.",
+   "child": "Managing multiple Terraform modules across different environments can lead to complex dependencies and conflicts.",
+   "claude": "contradict-contradict"
+  },
+  {
+   "parent": "Kirill Karabits has held the position of Chief Conductor of the National Symphony Orchestra of Ukraine since 2008.",
+   "child": "Kirill Karabits has held the position of Chief Conductor of the National Symphony Orchestra of Ukraine since 2011.",
+   "claude": "contradict-contradict"
+  }
+ ]
+}
