@@ -54,7 +54,7 @@ The plan for each experiment was written and fixed before seeing its results. Th
 
 ## How the computation works
 
-This section writes down what the code computes. `analysis/check_formulas.py` checks the code against these formulas (see the end of this section).
+This section writes down what the code computes. `analysis/check_formulas.py` checks the code against these formulas (see the end of this section). The formulas for E6–E8 are in [E6–E8: how the computation works](#e6e8-how-the-computation-works).
 
 **Inputs from the model.** For each statement $i$, the model is asked "Is the following statement true? Answer Yes or No only." and we keep $s_i$ = (logit of "Yes") − (logit of "No") at the first answer token. For each pair of labels $k$ (for example "plant" and "animal"), the model is asked an exclusion question in both orders, and $z_k$ is the mean of the two Yes−No logits. From E2-5 on, the wording is "Is it true that no plant is an animal? Answer Yes or No only." (wording P2). For wordings where "No" means exclusion (E2-4, and P0/P1 in E2-5), the sign is flipped, so that always $z_k > 0$ means the model says the two labels never hold together.
 
@@ -289,6 +289,53 @@ Setup: the 700 items from E6/E7 plus 300 new items from E4-2 claims whose nouns 
 - Main comparison 1 (⑧A vs ⑧D): 0.050 vs 0.037, D better in all 5 splits but by 0.011 to 0.013, below the 0.02 fixed beforehand, so a tie by the rule.
 - Main comparison 2 (⑥ vs network with negative evidence): the network is worse (0.091 vs 0.047, 5/5). The penalty weight chosen on the training folds was 0 in 23 of 25 splits; the negative evidence did not help.
 - New 300 items (all choices fixed on the 700): AURC ⑧D 0.039, ⑥D 0.043, ③ 0.055, E6 features + LR 0.055, ① 0.118. Against Gemma's confidence the gain is clear (0.079, 95% interval 0.043 to 0.121, resampling nouns); against one-step NLI it is 0.017 (−0.007 to 0.040), not shown with 300 items. The new items seem easier than the 700.
+
+## E6–E8: how the computation works
+
+These formulas describe what the code computes. `analysis/e8/check_formulas_e8.py` checks the E8 code against them (end of this section).
+
+**Claims and the outside judge.** Each claim is "X is a type of C." (X is a noun, C one of the 46 categories). Gemma's answer is the Yes−No logit $\ell$ with the same prompt as E4. The outside judge is an NLI model (DeBERTa-v3-large-mnli-fever-anli-ling-wanli); $e(p \Rightarrow h)$ is its entailment probability for premise $p$ and hypothesis $h$. Premises are always `"w" means: <definition>` and hypotheses `W is a type of <word>.`
+
+**One step (E6 ③).** With the Wiktionary noun senses of X written $d_1,\dots,d_K$ (at most 8),
+
+$$ s_1 = \max_{k} \; e\big(\text{"X" means: } d_k \;\Rightarrow\; \text{X is a type of C.}\big) $$
+
+and $s_1 = \sigma(\ell)$ when no definition was found. E6 ② (in the prompt) is $\sigma(\ell')$, where $\ell'$ is the Yes−No logit when the numbered definitions are placed before the question. E6 ④ (network) is $\sigma\big(\ell + w\cdot \mathrm{logit}(1-\prod_k (1-e_k))\big)$ with $w \in \{0, 0.25, \dots, 4\}$ chosen on the training folds ($e_k$ are the per-sense values above).
+
+**Chain nodes.** A node $n = (w, j)$ is "sense $j$ of word $w$", with definition $d_n$ and genus $g(n)$ (head of the first noun chunk from spaCy, plus a few rules).
+
+- Step strength: $\;\epsilon_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } g(n).)$
+- Arrival: $\;a_n = 1$ if $w$ is C itself, otherwise $a_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of C.})$
+- Next nodes $\mathrm{ch}(n)$: A takes all of the first 4 senses of $g(n)$. B, C and D pick one sense $j^*$ of $g(n)$ ($j^* = 1$ if $g(n)$ has one sense).
+  - B: the first sense without a label such as obsolete, archaic, rare or slang (sense 1 if all are labelled)
+  - C: $j^* = \arg\max_j \cos\big(v(d_n),\, v(d_{g(n),j})\big)$ ($v$ = all-mpnet-base-v2 sentence embedding)
+  - D: Gemma is asked `Dictionary definition of "w": d_n … which meaning of the word "g" is used? 1. … 2. … Answer with the number only.`; the logits of the tokens "1", "2", … at the first answer position are softmaxed and the top number is taken. The category C is not shown.
+
+**Strongest path (⑥).** The best product of step strengths times arrival over paths of up to 3 steps:
+
+$$ S(n, t) = \begin{cases} a_n & a_n = 1 \text{ or } t = 0 \\ \max\big(a_n,\; \epsilon_n \cdot \max_{c \in \mathrm{ch}(n)} S(c, t-1)\big) & \text{otherwise} \end{cases} \qquad s_6 = \max_k S\big((X,k), 3\big) $$
+
+i.e. the maximum of $\epsilon_{n_0}\cdots\epsilon_{n_{t-1}}\, a_{n_t}$ over paths $(X,k)=n_0 \to n_1 \to \dots \to n_t$ with $t \le 3$. ⑥b (OR over paths) says yes if any path has every step $\epsilon > 0.5$ and arrival $a > 0.5$.
+
+**Network (⑦; with negative evidence in E8).** Each chain node gets $z_n \in \{0,1\}$ ("$w$ in this sense is a type of C"), and a root $z_R$ ("X is a type of C").
+
+$$ P(z) \;\propto\; \exp\Big( b\, z_R + \sum_n u_n z_n \Big) \prod_{(p \to c)} (1 - \varepsilon\, w_{pc})^{[z_p = 0,\; z_c = 1]}, \qquad u_n = \beta\,\mathrm{logit}(a_n) + b - \gamma\, \nu_n $$
+
+- Links $(p \to c)$ are root → each sense of X ($w = 1$) and the chain steps ($w = \epsilon_p$). A link only lowers the probability when the child is a type of C but the parent is not.
+- Nodes with $a_n = 1$ get $u_n = 30$ (nearly clamped).
+- Negative evidence: $\nu_n = \max_{G} e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } G.)$, where $G$ runs over the broad groups disjoint from C (animal, plant, food, man-made object, material, body part, disease, activity; disjointness from a hand-made common-sense table). $\gamma = 0$ gives the E7 form.
+- The output is $P(z_R = 1)$ from damped loopy BP (synchronous, damping 0.5, 40 iterations). $(\beta, b, \varepsilon) \in \{0.25,0.5,1\} \times \{-1,0,1,2\} \times \{0.8,0.95,0.99\}$ is chosen by log loss on the training folds, then $\gamma \in \{0,1,2,4,8\}$.
+- In E7 the nodes are words, not senses: the node evidence uses the best arrival over the word's senses, and steps between the same two words are merged as $\prod_k (1 - \varepsilon\,\epsilon_k)$ (noisy-OR).
+
+**Learned combiners (⑤, ⑧).** ⑤ is logistic regression on the E6 features ($\ell$, $\max_k e_k$, $\max_k c_k$, $\mathrm{mean}_k e_k$, $\mathrm{mean}_k c_k$, $1-\prod_k(1-e_k)$, $K$, whether definitions exist; $c_k$ is the contradiction probability). ⑧ adds $s_6$, ⑥b, the number of steps on the strongest path, the network value, $\max_k \nu_{(X,k)}$, the number of senses of the first genus on the strongest path, and whether any chain exists.
+
+**Metric.** Every method gives $p = P(\text{correct})$; answer $=[p > 0.5]$, confidence $= \max(p, 1-p)$. Sorting by confidence and writing $r_j$ for the error rate among the top $j$,
+
+$$ \mathrm{AURC} = \frac{1}{N} \sum_{j=1}^{N} r_j $$
+
+(lower is better). Items are split by noun into 5 folds (seeds 600–604); 4 folds choose and train, the fifth is scored.
+
+**Checking the E8 code against these formulas.** `cd analysis/e8; python check_formulas_e8.py ../../data/E8_chains_nli.json` (about 15 seconds on a CPU). Result: the strongest path matches a brute-force enumeration of all paths on all 4,000 cases (1,000 items × A–D; difference $10^{-16}$). For the network, items with at most 13 nodes are compared with exact probabilities from enumerating every assignment: exact on 60 tree-shaped items (difference $10^{-14}$), at most 0.015 off on 31 items with loops (loopy BP is an approximation, as expected).
 
 ## Layout
 
