@@ -1,0 +1,6316 @@
+[
+{
+"part": "x",
+"src": 58086,
+"stmt": "Rhinoceros is a type of person.",
+"claude": 0,
+"sid": 659,
+"no": 1
+},
+{
+"part": "x",
+"src": 71850,
+"stmt": "Traveler is a type of game.",
+"claude": 0,
+"sid": 596,
+"no": 2
+},
+{
+"part": "rule",
+"src": 77816,
+"stmt": "Flower is a type of body part.",
+"claude": null,
+"no": 3
+},
+{
+"part": "x",
+"src": 36915,
+"stmt": "Juvenile is a type of boat.",
+"claude": 0,
+"sid": 3,
+"no": 4
+},
+{
+"part": "x",
+"src": 2032,
+"stmt": "Alumnus is a type of plant.",
+"claude": 0,
+"sid": 571,
+"no": 5
+},
+{
+"part": "x",
+"src": 31336,
+"stmt": "Headdress is a type of flower.",
+"claude": 0,
+"sid": 518,
+"no": 6
+},
+{
+"part": "x",
+"src": 22604,
+"stmt": "Dubbing is a type of device.",
+"claude": 0,
+"sid": 99,
+"no": 7
+},
+{
+"part": "x",
+"src": 54290,
+"stmt": "Primrose is a type of flower.",
+"claude": 1,
+"sid": 610,
+"no": 8
+},
+{
+"part": "x",
+"src": 19586,
+"stmt": "Cuttlefish is a type of artist.",
+"claude": 0,
+"sid": 595,
+"no": 9
+},
+{
+"part": "x",
+"src": 22084,
+"stmt": "Dragonfly is a type of fish.",
+"claude": 0,
+"sid": 347,
+"no": 10
+},
+{
+"part": "x",
+"src": 38197,
+"stmt": "Lally is a type of tool.",
+"claude": 0,
+"sid": 24,
+"no": 11
+},
+{
+"part": "x",
+"src": 22326,
+"stmt": "Dredge is a type of man-made object.",
+"claude": 1,
+"sid": 304,
+"no": 12
+},
+{
+"part": "x",
+"src": 54241,
+"stmt": "Priestess is a type of dog.",
+"claude": 0,
+"sid": 671,
+"no": 13
+},
+{
+"part": "x",
+"src": 29304,
+"stmt": "Granddaughter is a type of mammal.",
+"claude": 2,
+"sid": 96,
+"no": 14
+},
+{
+"part": "x",
+"src": 66536,
+"stmt": "Stewardess is a type of equipment.",
+"claude": 0,
+"sid": 480,
+"no": 15
+},
+{
+"part": "x",
+"src": 50848,
+"stmt": "Pendulum is a type of device.",
+"claude": 1,
+"sid": 289,
+"no": 16
+},
+{
+"part": "x",
+"src": 11100,
+"stmt": "Cadet is a type of dish.",
+"claude": 0,
+"sid": 449,
+"no": 17
+},
+{
+"part": "x",
+"src": 42033,
+"stmt": "Manger is a type of worker.",
+"claude": 0,
+"sid": 380,
+"no": 18
+},
+{
+"part": "x",
+"src": 62946,
+"stmt": "Ski is a type of device.",
+"claude": 0,
+"sid": 639,
+"no": 19
+},
+{
+"part": "x",
+"src": 26209,
+"stmt": "Financier is a type of worker.",
+"claude": 1,
+"sid": 410,
+"no": 20
+},
+{
+"part": "rule",
+"src": 77972,
+"stmt": "Dish is a type of tool.",
+"claude": null,
+"no": 21
+},
+{
+"part": "x",
+"src": 45703,
+"stmt": "Mosquito is a type of weapon.",
+"claude": 0,
+"sid": 151,
+"no": 22
+},
+{
+"part": "x",
+"src": 34401,
+"stmt": "Impressionist is a type of fabric.",
+"claude": 0,
+"sid": 492,
+"no": 23
+},
+{
+"part": "x",
+"src": 14165,
+"stmt": "Claimant is a type of disease.",
+"claude": 0,
+"sid": 561,
+"no": 24
+},
+{
+"part": "x",
+"src": 31438,
+"stmt": "Headliner is a type of equipment.",
+"claude": 0,
+"sid": 39,
+"no": 25
+},
+{
+"part": "x",
+"src": 8522,
+"stmt": "Bock is a type of vegetable.",
+"claude": 0,
+"sid": 352,
+"no": 26
+},
+{
+"part": "x",
+"src": 74557,
+"stmt": "Vizier is a type of athlete.",
+"claude": 0,
+"sid": 375,
+"no": 27
+},
+{
+"part": "x",
+"src": 77152,
+"stmt": "Yarrow is a type of flower.",
+"claude": 1,
+"sid": 540,
+"no": 28
+},
+{
+"part": "x",
+"src": 1953,
+"stmt": "Alternator is a type of vehicle.",
+"claude": 0,
+"sid": 121,
+"no": 29
+},
+{
+"part": "x",
+"src": 18787,
+"stmt": "Crusher is a type of machine.",
+"claude": 1,
+"sid": 97,
+"no": 30
+},
+{
+"part": "x",
+"src": 51942,
+"stmt": "Phytoplankton is a type of plant.",
+"claude": 2,
+"sid": 504,
+"no": 31
+},
+{
+"part": "rule",
+"src": 78890,
+"stmt": "Person is a type of worker.",
+"claude": null,
+"no": 32
+},
+{
+"part": "x",
+"src": 24288,
+"stmt": "Erotic is a type of living thing.",
+"claude": 0,
+"sid": 327,
+"no": 33
+},
+{
+"part": "x",
+"src": 32340,
+"stmt": "Hoarder is a type of mammal.",
+"claude": 2,
+"sid": 343,
+"no": 34
+},
+{
+"part": "x",
+"src": 56752,
+"stmt": "Rapporteur is a type of person.",
+"claude": 1,
+"sid": 498,
+"no": 35
+},
+{
+"part": "rule",
+"src": 78843,
+"stmt": "Room is a type of building.",
+"claude": null,
+"no": 36
+},
+{
+"part": "rule",
+"src": 78063,
+"stmt": "Man-made object is a type of device.",
+"claude": null,
+"no": 37
+},
+{
+"part": "x",
+"src": 16957,
+"stmt": "Contemplative is a type of footwear.",
+"claude": 0,
+"sid": 590,
+"no": 38
+},
+{
+"part": "rule",
+"src": 78425,
+"stmt": "Aircraft is a type of machine.",
+"claude": null,
+"no": 39
+},
+{
+"part": "rule",
+"src": 79323,
+"stmt": "Game is a type of tool.",
+"claude": null,
+"no": 40
+},
+{
+"part": "x",
+"src": 22483,
+"stmt": "Drummer is a type of worker.",
+"claude": 2,
+"sid": 265,
+"no": 41
+},
+{
+"part": "x",
+"src": 76132,
+"stmt": "Wife is a type of mammal.",
+"claude": 2,
+"sid": 456,
+"no": 42
+},
+{
+"part": "rule",
+"src": 78070,
+"stmt": "Man-made object is a type of weapon.",
+"claude": null,
+"no": 43
+},
+{
+"part": "rule",
+"src": 78719,
+"stmt": "Toy is a type of game.",
+"claude": null,
+"no": 44
+},
+{
+"part": "rule",
+"src": 77874,
+"stmt": "Vegetable is a type of plant.",
+"claude": null,
+"no": 45
+},
+{
+"part": "x",
+"src": 12958,
+"stmt": "Chalet is a type of building.",
+"claude": 1,
+"sid": 242,
+"no": 46
+},
+{
+"part": "rule",
+"src": 78379,
+"stmt": "Boat is a type of device.",
+"claude": null,
+"no": 47
+},
+{
+"part": "x",
+"src": 43918,
+"stmt": "Messenger is a type of person.",
+"claude": 1,
+"sid": 202,
+"no": 48
+},
+{
+"part": "rule",
+"src": 78243,
+"stmt": "Equipment is a type of tool.",
+"claude": null,
+"no": 49
+},
+{
+"part": "x",
+"src": 62824,
+"stmt": "Skater is a type of person.",
+"claude": 1,
+"sid": 143,
+"no": 50
+},
+{
+"part": "rule",
+"src": 79350,
+"stmt": "Game is a type of sport.",
+"claude": null,
+"no": 51
+},
+{
+"part": "x",
+"src": 8192,
+"stmt": "Blouse is a type of fish.",
+"claude": 0,
+"sid": 167,
+"no": 52
+},
+{
+"part": "x",
+"src": 39426,
+"stmt": "Libertine is a type of fish.",
+"claude": 0,
+"sid": 632,
+"no": 53
+},
+{
+"part": "x",
+"src": 18104,
+"stmt": "Coupe is a type of container.",
+"claude": 0,
+"sid": 524,
+"no": 54
+},
+{
+"part": "x",
+"src": 36754,
+"stmt": "Juggler is a type of living thing.",
+"claude": 1,
+"sid": 292,
+"no": 55
+},
+{
+"part": "x",
+"src": 6976,
+"stmt": "Beret is a type of toy.",
+"claude": 0,
+"sid": 195,
+"no": 56
+},
+{
+"part": "rule",
+"src": 78108,
+"stmt": "Tool is a type of device.",
+"claude": null,
+"no": 57
+},
+{
+"part": "x",
+"src": 63676,
+"stmt": "Snob is a type of vegetable.",
+"claude": 0,
+"sid": 351,
+"no": 58
+},
+{
+"part": "x",
+"src": 22909,
+"stmt": "Earl is a type of animal.",
+"claude": 0,
+"sid": 647,
+"no": 59
+},
+{
+"part": "x",
+"src": 22011,
+"stmt": "Doorbell is a type of boat.",
+"claude": 0,
+"sid": 574,
+"no": 60
+},
+{
+"part": "x",
+"src": 7493,
+"stmt": "Billionaire is a type of body part.",
+"claude": 0,
+"sid": 162,
+"no": 61
+},
+{
+"part": "rule",
+"src": 78335,
+"stmt": "Car is a type of machine.",
+"claude": null,
+"no": 62
+},
+{
+"part": "x",
+"src": 69311,
+"stmt": "Taster is a type of worker.",
+"claude": 1,
+"sid": 285,
+"no": 63
+},
+{
+"part": "x",
+"src": 31947,
+"stmt": "Helmsman is a type of boat.",
+"claude": 0,
+"sid": 546,
+"no": 64
+},
+{
+"part": "x",
+"src": 69722,
+"stmt": "Tenement is a type of building.",
+"claude": 1,
+"sid": 1,
+"no": 65
+},
+{
+"part": "x",
+"src": 8267,
+"stmt": "Boardroom is a type of room.",
+"claude": 1,
+"sid": 470,
+"no": 66
+},
+{
+"part": "x",
+"src": 1817,
+"stmt": "Alderman is a type of boat.",
+"claude": 0,
+"sid": 603,
+"no": 67
+},
+{
+"part": "x",
+"src": 3858,
+"stmt": "Ashtray is a type of metal.",
+"claude": 0,
+"sid": 685,
+"no": 68
+},
+{
+"part": "x",
+"src": 19036,
+"stmt": "Cultivar is a type of material.",
+"claude": 0,
+"sid": 665,
+"no": 69
+},
+{
+"part": "x",
+"src": 40442,
+"stmt": "Lodger is a type of plant.",
+"claude": 0,
+"sid": 477,
+"no": 70
+},
+{
+"part": "x",
+"src": 27129,
+"stmt": "Freeman is a type of worker.",
+"claude": 0,
+"sid": 251,
+"no": 71
+},
+{
+"part": "x",
+"src": 29209,
+"stmt": "Grader is a type of sport.",
+"claude": 0,
+"sid": 119,
+"no": 72
+},
+{
+"part": "x",
+"src": 19512,
+"stmt": "Cutthroat is a type of plant.",
+"claude": 0,
+"sid": 176,
+"no": 73
+},
+{
+"part": "x",
+"src": 31241,
+"stmt": "Hater is a type of dog.",
+"claude": 0,
+"sid": 296,
+"no": 74
+},
+{
+"part": "x",
+"src": 54222,
+"stmt": "Preteen is a type of person.",
+"claude": 1,
+"sid": 622,
+"no": 75
+},
+{
+"part": "x",
+"src": 32099,
+"stmt": "Hiker is a type of athlete.",
+"claude": 0,
+"sid": 532,
+"no": 76
+},
+{
+"part": "x",
+"src": 57019,
+"stmt": "Razor is a type of weapon.",
+"claude": 2,
+"sid": 348,
+"no": 77
+},
+{
+"part": "rule",
+"src": 78993,
+"stmt": "Athlete is a type of mammal.",
+"claude": null,
+"no": 78
+},
+{
+"part": "rule",
+"src": 79164,
+"stmt": "Metal is a type of material.",
+"claude": null,
+"no": 79
+},
+{
+"part": "rule",
+"src": 78334,
+"stmt": "Car is a type of device.",
+"claude": null,
+"no": 80
+},
+{
+"part": "x",
+"src": 15209,
+"stmt": "Coffin is a type of footwear.",
+"claude": 0,
+"sid": 692,
+"no": 81
+},
+{
+"part": "x",
+"src": 24618,
+"stmt": "Everlasting is a type of plant.",
+"claude": 1,
+"sid": 171,
+"no": 82
+},
+{
+"part": "x",
+"src": 53087,
+"stmt": "Plumber is a type of bird.",
+"claude": 0,
+"sid": 63,
+"no": 83
+},
+{
+"part": "x",
+"src": 54406,
+"stmt": "Princess is a type of person.",
+"claude": 1,
+"sid": 419,
+"no": 84
+},
+{
+"part": "x",
+"src": 61795,
+"stmt": "Ship is a type of tool.",
+"claude": 0,
+"sid": 690,
+"no": 85
+},
+{
+"part": "x",
+"src": 14281,
+"stmt": "Clarence is a type of vehicle.",
+"claude": 0,
+"sid": 305,
+"no": 86
+},
+{
+"part": "rule",
+"src": 78076,
+"stmt": "Man-made object is a type of musical instrument.",
+"claude": null,
+"no": 87
+},
+{
+"part": "x",
+"src": 12948,
+"stmt": "Chalet is a type of car.",
+"claude": 0,
+"sid": 645,
+"no": 88
+},
+{
+"part": "rule",
+"src": 78649,
+"stmt": "Footwear is a type of device.",
+"claude": null,
+"no": 89
+},
+{
+"part": "x",
+"src": 70949,
+"stmt": "Tongs is a type of tool.",
+"claude": 1,
+"sid": 448,
+"no": 90
+},
+{
+"part": "rule",
+"src": 78450,
+"stmt": "Aircraft is a type of sport.",
+"claude": null,
+"no": 91
+},
+{
+"part": "x",
+"src": 60254,
+"stmt": "Schoolgirl is a type of metal.",
+"claude": 0,
+"sid": 60,
+"no": 92
+},
+{
+"part": "x",
+"src": 28382,
+"stmt": "Geranium is a type of living thing.",
+"claude": 1,
+"sid": 40,
+"no": 93
+},
+{
+"part": "x",
+"src": 38282,
+"stmt": "Landlady is a type of flower.",
+"claude": 0,
+"sid": 225,
+"no": 94
+},
+{
+"part": "x",
+"src": 65044,
+"stmt": "Spitfire is a type of living thing.",
+"claude": 0,
+"sid": 125,
+"no": 95
+},
+{
+"part": "x",
+"src": 7679,
+"stmt": "Biographer is a type of disease.",
+"claude": 0,
+"sid": 51,
+"no": 96
+},
+{
+"part": "x",
+"src": 27889,
+"stmt": "Gazelle is a type of food.",
+"claude": 0,
+"sid": 10,
+"no": 97
+},
+{
+"part": "x",
+"src": 4036,
+"stmt": "Assistant is a type of person.",
+"claude": 1,
+"sid": 630,
+"no": 98
+},
+{
+"part": "x",
+"src": 6336,
+"stmt": "Battleship is a type of person.",
+"claude": 0,
+"sid": 542,
+"no": 99
+},
+{
+"part": "rule",
+"src": 78110,
+"stmt": "Tool is a type of equipment.",
+"claude": null,
+"no": 100
+},
+{
+"part": "x",
+"src": 77041,
+"stmt": "Wrestler is a type of athlete.",
+"claude": 1,
+"sid": 693,
+"no": 101
+},
+{
+"part": "x",
+"src": 34626,
+"stmt": "Individualist is a type of person.",
+"claude": 1,
+"sid": 79,
+"no": 102
+},
+{
+"part": "x",
+"src": 63380,
+"stmt": "Slipknot is a type of material.",
+"claude": 0,
+"sid": 600,
+"no": 103
+},
+{
+"part": "x",
+"src": 27347,
+"stmt": "Galleon is a type of boat.",
+"claude": 1,
+"sid": 149,
+"no": 104
+},
+{
+"part": "x",
+"src": 71713,
+"stmt": "Transvestite is a type of sport.",
+"claude": 0,
+"sid": 182,
+"no": 105
+},
+{
+"part": "x",
+"src": 43229,
+"stmt": "Mathematician is a type of worker.",
+"claude": 1,
+"sid": 190,
+"no": 106
+},
+{
+"part": "x",
+"src": 30983,
+"stmt": "Handyman is a type of weapon.",
+"claude": 0,
+"sid": 317,
+"no": 107
+},
+{
+"part": "x",
+"src": 4285,
+"stmt": "Atheist is a type of dog.",
+"claude": 0,
+"sid": 686,
+"no": 108
+},
+{
+"part": "x",
+"src": 8020,
+"stmt": "Blazer is a type of man-made object.",
+"claude": 1,
+"sid": 660,
+"no": 109
+},
+{
+"part": "x",
+"src": 38108,
+"stmt": "Ladybug is a type of equipment.",
+"claude": 0,
+"sid": 303,
+"no": 110
+},
+{
+"part": "x",
+"src": 24378,
+"stmt": "Escapist is a type of game.",
+"claude": 0,
+"sid": 344,
+"no": 111
+},
+{
+"part": "x",
+"src": 31116,
+"stmt": "Harmonica is a type of equipment.",
+"claude": 0,
+"sid": 696,
+"no": 112
+},
+{
+"part": "rule",
+"src": 77971,
+"stmt": "Dish is a type of man-made object.",
+"claude": null,
+"no": 113
+},
+{
+"part": "x",
+"src": 10090,
+"stmt": "Buddy is a type of man-made object.",
+"claude": 0,
+"sid": 110,
+"no": 114
+},
+{
+"part": "x",
+"src": 47144,
+"stmt": "Neurotic is a type of metal.",
+"claude": 0,
+"sid": 341,
+"no": 115
+},
+{
+"part": "x",
+"src": 47087,
+"stmt": "Neurosurgeon is a type of footwear.",
+"claude": 0,
+"sid": 626,
+"no": 116
+},
+{
+"part": "x",
+"src": 11241,
+"stmt": "Calender is a type of tool.",
+"claude": 0,
+"sid": 114,
+"no": 117
+},
+{
+"part": "x",
+"src": 38316,
+"stmt": "Landlady is a type of game.",
+"claude": 0,
+"sid": 601,
+"no": 118
+},
+{
+"part": "x",
+"src": 28068,
+"stmt": "Geisha is a type of plant.",
+"claude": 0,
+"sid": 335,
+"no": 119
+},
+{
+"part": "x",
+"src": 72744,
+"stmt": "Undercarriage is a type of device.",
+"claude": 0,
+"sid": 93,
+"no": 120
+},
+{
+"part": "rule",
+"src": 78519,
+"stmt": "Container is a type of boat.",
+"claude": null,
+"no": 121
+},
+{
+"part": "rule",
+"src": 79119,
+"stmt": "Fabric is a type of material.",
+"claude": null,
+"no": 122
+},
+{
+"part": "x",
+"src": 65041,
+"stmt": "Sphincter is a type of disease.",
+"claude": 0,
+"sid": 416,
+"no": 123
+},
+{
+"part": "x",
+"src": 44666,
+"stmt": "Minion is a type of living thing.",
+"claude": 1,
+"sid": 106,
+"no": 124
+},
+{
+"part": "x",
+"src": 14423,
+"stmt": "Clary is a type of weapon.",
+"claude": 0,
+"sid": 677,
+"no": 125
+},
+{
+"part": "x",
+"src": 556,
+"stmt": "Accordion is a type of fish.",
+"claude": 0,
+"sid": 415,
+"no": 126
+},
+{
+"part": "x",
+"src": 21068,
+"stmt": "Detainee is a type of living thing.",
+"claude": 1,
+"sid": 417,
+"no": 127
+},
+{
+"part": "x",
+"src": 40940,
+"stmt": "Macadamia is a type of living thing.",
+"claude": 1,
+"sid": 656,
+"no": 128
+},
+{
+"part": "x",
+"src": 67664,
+"stmt": "Suitor is a type of game.",
+"claude": 0,
+"sid": 427,
+"no": 129
+},
+{
+"part": "x",
+"src": 76803,
+"stmt": "Workman is a type of footwear.",
+"claude": 0,
+"sid": 36,
+"no": 130
+},
+{
+"part": "x",
+"src": 44448,
+"stmt": "Milkman is a type of vegetable.",
+"claude": 0,
+"sid": 520,
+"no": 131
+},
+{
+"part": "x",
+"src": 61561,
+"stmt": "Sheeting is a type of food.",
+"claude": 0,
+"sid": 42,
+"no": 132
+},
+{
+"part": "x",
+"src": 51474,
+"stmt": "Peshmerga is a type of living thing.",
+"claude": 1,
+"sid": 15,
+"no": 133
+},
+{
+"part": "x",
+"src": 39043,
+"stmt": "Legislator is a type of worker.",
+"claude": 1,
+"sid": 621,
+"no": 134
+},
+{
+"part": "x",
+"src": 27048,
+"stmt": "Freelancer is a type of living thing.",
+"claude": 1,
+"sid": 194,
+"no": 135
+},
+{
+"part": "x",
+"src": 62167,
+"stmt": "Shrine is a type of vehicle.",
+"claude": 0,
+"sid": 235,
+"no": 136
+},
+{
+"part": "rule",
+"src": 77829,
+"stmt": "Fruit is a type of plant.",
+"claude": null,
+"no": 137
+},
+{
+"part": "x",
+"src": 8029,
+"stmt": "Blazer is a type of weapon.",
+"claude": 0,
+"sid": 648,
+"no": 138
+},
+{
+"part": "x",
+"src": 29642,
+"stmt": "Greenhouse is a type of device.",
+"claude": 0,
+"sid": 548,
+"no": 139
+},
+{
+"part": "x",
+"src": 44113,
+"stmt": "Microphone is a type of sport.",
+"claude": 0,
+"sid": 159,
+"no": 140
+},
+{
+"part": "x",
+"src": 48380,
+"stmt": "Opportunist is a type of person.",
+"claude": 1,
+"sid": 107,
+"no": 141
+},
+{
+"part": "x",
+"src": 43391,
+"stmt": "Meatball is a type of food.",
+"claude": 1,
+"sid": 227,
+"no": 142
+},
+{
+"part": "x",
+"src": 68742,
+"stmt": "Synchrotron is a type of device.",
+"claude": 1,
+"sid": 253,
+"no": 143
+},
+{
+"part": "x",
+"src": 75025,
+"stmt": "Wally is a type of sport.",
+"claude": 0,
+"sid": 663,
+"no": 144
+},
+{
+"part": "x",
+"src": 48104,
+"stmt": "Obstetrician is a type of person.",
+"claude": 1,
+"sid": 680,
+"no": 145
+},
+{
+"part": "x",
+"src": 4324,
+"stmt": "Athlete is a type of living thing.",
+"claude": 1,
+"sid": 212,
+"no": 146
+},
+{
+"part": "x",
+"src": 76493,
+"stmt": "Womanizer is a type of body part.",
+"claude": 0,
+"sid": 71,
+"no": 147
+},
+{
+"part": "x",
+"src": 34787,
+"stmt": "Informer is a type of fruit.",
+"claude": 0,
+"sid": 261,
+"no": 148
+},
+{
+"part": "x",
+"src": 8383,
+"stmt": "Bobbin is a type of fruit.",
+"claude": 0,
+"sid": 337,
+"no": 149
+},
+{
+"part": "x",
+"src": 11656,
+"stmt": "Candlestick is a type of device.",
+"claude": 0,
+"sid": 545,
+"no": 150
+},
+{
+"part": "x",
+"src": 31664,
+"stmt": "Hearse is a type of man-made object.",
+"claude": 1,
+"sid": 487,
+"no": 151
+},
+{
+"part": "x",
+"src": 35832,
+"stmt": "Invalid is a type of game.",
+"claude": 0,
+"sid": 309,
+"no": 152
+},
+{
+"part": "x",
+"src": 1559,
+"stmt": "Airship is a type of body part.",
+"claude": 0,
+"sid": 687,
+"no": 153
+},
+{
+"part": "x",
+"src": 70259,
+"stmt": "Thermometer is a type of tool.",
+"claude": 2,
+"sid": 521,
+"no": 154
+},
+{
+"part": "x",
+"src": 46159,
+"stmt": "Musket is a type of vehicle.",
+"claude": 0,
+"sid": 118,
+"no": 155
+},
+{
+"part": "x",
+"src": 70856,
+"stmt": "Tomahawk is a type of man-made object.",
+"claude": 1,
+"sid": 172,
+"no": 156
+},
+{
+"part": "x",
+"src": 42596,
+"stmt": "Marlin is a type of living thing.",
+"claude": 1,
+"sid": 437,
+"no": 157
+},
+{
+"part": "rule",
+"src": 78648,
+"stmt": "Footwear is a type of tool.",
+"claude": null,
+"no": 158
+},
+{
+"part": "x",
+"src": 7776,
+"stmt": "Bison is a type of mammal.",
+"claude": 1,
+"sid": 453,
+"no": 159
+},
+{
+"part": "x",
+"src": 32833,
+"stmt": "Hornet is a type of worker.",
+"claude": 0,
+"sid": 442,
+"no": 160
+},
+{
+"part": "x",
+"src": 42498,
+"stmt": "Mariner is a type of metal.",
+"claude": 0,
+"sid": 144,
+"no": 161
+},
+{
+"part": "x",
+"src": 54084,
+"stmt": "Preacher is a type of person.",
+"claude": 1,
+"sid": 338,
+"no": 162
+},
+{
+"part": "x",
+"src": 34131,
+"stmt": "Impala is a type of sport.",
+"claude": 0,
+"sid": 188,
+"no": 163
+},
+{
+"part": "x",
+"src": 48658,
+"stmt": "Orchid is a type of artist.",
+"claude": 0,
+"sid": 282,
+"no": 164
+},
+{
+"part": "x",
+"src": 17772,
+"stmt": "Corrective is a type of man-made object.",
+"claude": 0,
+"sid": 462,
+"no": 165
+},
+{
+"part": "x",
+"src": 71812,
+"stmt": "Traveler is a type of reptile.",
+"claude": 0,
+"sid": 254,
+"no": 166
+},
+{
+"part": "x",
+"src": 20582,
+"stmt": "Deflector is a type of equipment.",
+"claude": 1,
+"sid": 59,
+"no": 167
+},
+{
+"part": "rule",
+"src": 78470,
+"stmt": "Weapon is a type of machine.",
+"claude": null,
+"no": 168
+},
+{
+"part": "x",
+"src": 67620,
+"stmt": "Suitor is a type of living thing.",
+"claude": 1,
+"sid": 21,
+"no": 169
+},
+{
+"part": "x",
+"src": 56827,
+"stmt": "Ratchet is a type of tool.",
+"claude": 1,
+"sid": 543,
+"no": 170
+},
+{
+"part": "x",
+"src": 9764,
+"stmt": "Briefcase is a type of vegetable.",
+"claude": 0,
+"sid": 120,
+"no": 171
+},
+{
+"part": "rule",
+"src": 78561,
+"stmt": "Furniture is a type of equipment.",
+"claude": null,
+"no": 172
+},
+{
+"part": "x",
+"src": 37602,
+"stmt": "Kitchen is a type of equipment.",
+"claude": 0,
+"sid": 667,
+"no": 173
+},
+{
+"part": "x",
+"src": 37402,
+"stmt": "Kimono is a type of fish.",
+"claude": 0,
+"sid": 66,
+"no": 174
+},
+{
+"part": "x",
+"src": 67158,
+"stmt": "Strainer is a type of game.",
+"claude": 0,
+"sid": 203,
+"no": 175
+},
+{
+"part": "x",
+"src": 32788,
+"stmt": "Hooch is a type of artist.",
+"claude": 0,
+"sid": 7,
+"no": 176
+},
+{
+"part": "rule",
+"src": 78289,
+"stmt": "Vehicle is a type of device.",
+"claude": null,
+"no": 177
+},
+{
+"part": "x",
+"src": 62240,
+"stmt": "Sibling is a type of mammal.",
+"claude": 2,
+"sid": 507,
+"no": 178
+},
+{
+"part": "x",
+"src": 60714,
+"stmt": "Searchlight is a type of metal.",
+"claude": 0,
+"sid": 324,
+"no": 179
+},
+{
+"part": "x",
+"src": 52966,
+"stmt": "Plenipotentiary is a type of equipment.",
+"claude": 0,
+"sid": 279,
+"no": 180
+},
+{
+"part": "x",
+"src": 75640,
+"stmt": "Webcam is a type of man-made object.",
+"claude": 1,
+"sid": 273,
+"no": 181
+},
+{
+"part": "x",
+"src": 68690,
+"stmt": "Synagogue is a type of vegetable.",
+"claude": 0,
+"sid": 395,
+"no": 182
+},
+{
+"part": "rule",
+"src": 79395,
+"stmt": "Sport is a type of game.",
+"claude": null,
+"no": 183
+},
+{
+"part": "x",
+"src": 70490,
+"stmt": "Thwart is a type of device.",
+"claude": 0,
+"sid": 513,
+"no": 184
+},
+{
+"part": "x",
+"src": 33046,
+"stmt": "Houseboat is a type of device.",
+"claude": 0,
+"sid": 168,
+"no": 185
+},
+{
+"part": "x",
+"src": 69969,
+"stmt": "Terrier is a type of bird.",
+"claude": 0,
+"sid": 18,
+"no": 186
+},
+{
+"part": "x",
+"src": 42611,
+"stmt": "Marlin is a type of drink.",
+"claude": 0,
+"sid": 62,
+"no": 187
+},
+{
+"part": "x",
+"src": 7948,
+"stmt": "Blacksmith is a type of artist.",
+"claude": 2,
+"sid": 216,
+"no": 188
+},
+{
+"part": "x",
+"src": 54567,
+"stmt": "Private is a type of fruit.",
+"claude": 0,
+"sid": 644,
+"no": 189
+},
+{
+"part": "x",
+"src": 1098,
+"stmt": "Advertiser is a type of metal.",
+"claude": 0,
+"sid": 370,
+"no": 190
+},
+{
+"part": "x",
+"src": 66010,
+"stmt": "Statesman is a type of living thing.",
+"claude": 1,
+"sid": 519,
+"no": 191
+},
+{
+"part": "x",
+"src": 13382,
+"stmt": "Chime is a type of organ.",
+"claude": 0,
+"sid": 441,
+"no": 192
+},
+{
+"part": "x",
+"src": 66988,
+"stmt": "Storeroom is a type of vegetable.",
+"claude": 0,
+"sid": 315,
+"no": 193
+},
+{
+"part": "x",
+"src": 52198,
+"stmt": "Pigeon is a type of person.",
+"claude": 0,
+"sid": 373,
+"no": 194
+},
+{
+"part": "x",
+"src": 25391,
+"stmt": "Falconer is a type of sport.",
+"claude": 0,
+"sid": 61,
+"no": 195
+},
+{
+"part": "x",
+"src": 11797,
+"stmt": "Canoe is a type of vehicle.",
+"claude": 1,
+"sid": 689,
+"no": 196
+},
+{
+"part": "x",
+"src": 12465,
+"stmt": "Caterer is a type of sport.",
+"claude": 0,
+"sid": 45,
+"no": 197
+},
+{
+"part": "x",
+"src": 23621,
+"stmt": "Emir is a type of boat.",
+"claude": 0,
+"sid": 494,
+"no": 198
+},
+{
+"part": "x",
+"src": 2880,
+"stmt": "Apparel is a type of clothing.",
+"claude": 1,
+"sid": 201,
+"no": 199
+},
+{
+"part": "x",
+"src": 7125,
+"stmt": "Bethel is a type of body part.",
+"claude": 0,
+"sid": 208,
+"no": 200
+},
+{
+"part": "x",
+"src": 56515,
+"stmt": "Raglan is a type of furniture.",
+"claude": 0,
+"sid": 557,
+"no": 201
+},
+{
+"part": "rule",
+"src": 78426,
+"stmt": "Aircraft is a type of equipment.",
+"claude": null,
+"no": 202
+},
+{
+"part": "x",
+"src": 75435,
+"stmt": "Watchman is a type of body part.",
+"claude": 0,
+"sid": 38,
+"no": 203
+},
+{
+"part": "x",
+"src": 16570,
+"stmt": "Congressman is a type of flower.",
+"claude": 0,
+"sid": 474,
+"no": 204
+},
+{
+"part": "x",
+"src": 13698,
+"stmt": "Chronicler is a type of artist.",
+"claude": 2,
+"sid": 633,
+"no": 205
+},
+{
+"part": "x",
+"src": 54228,
+"stmt": "Preteen is a type of metal.",
+"claude": 0,
+"sid": 19,
+"no": 206
+},
+{
+"part": "x",
+"src": 32327,
+"stmt": "Hitchhiker is a type of worker.",
+"claude": 0,
+"sid": 175,
+"no": 207
+},
+{
+"part": "x",
+"src": 10848,
+"stmt": "Buyer is a type of material.",
+"claude": 0,
+"sid": 223,
+"no": 208
+},
+{
+"part": "x",
+"src": 24970,
+"stmt": "Exporter is a type of material.",
+"claude": 0,
+"sid": 287,
+"no": 209
+},
+{
+"part": "x",
+"src": 53587,
+"stmt": "Poodle is a type of disease.",
+"claude": 0,
+"sid": 232,
+"no": 210
+},
+{
+"part": "x",
+"src": 29962,
+"stmt": "Groundhog is a type of man-made object.",
+"claude": 0,
+"sid": 589,
+"no": 211
+},
+{
+"part": "x",
+"src": 17330,
+"stmt": "Coordinator is a type of person.",
+"claude": 1,
+"sid": 284,
+"no": 212
+},
+{
+"part": "rule",
+"src": 79336,
+"stmt": "Game is a type of toy.",
+"claude": null,
+"no": 213
+},
+{
+"part": "x",
+"src": 46360,
+"stmt": "Nacho is a type of material.",
+"claude": 0,
+"sid": 558,
+"no": 214
+},
+{
+"part": "x",
+"src": 26328,
+"stmt": "Firearm is a type of man-made object.",
+"claude": 1,
+"sid": 189,
+"no": 215
+},
+{
+"part": "x",
+"src": 5536,
+"stmt": "Bankrupt is a type of man-made object.",
+"claude": 0,
+"sid": 224,
+"no": 216
+},
+{
+"part": "x",
+"src": 29499,
+"stmt": "Grandparent is a type of food.",
+"claude": 0,
+"sid": 241,
+"no": 217
+},
+{
+"part": "x",
+"src": 10231,
+"stmt": "Bulldozer is a type of machine.",
+"claude": 1,
+"sid": 58,
+"no": 218
+},
+{
+"part": "x",
+"src": 66412,
+"stmt": "Stepmother is a type of person.",
+"claude": 1,
+"sid": 17,
+"no": 219
+},
+{
+"part": "x",
+"src": 43735,
+"stmt": "Mercenary is a type of worker.",
+"claude": 1,
+"sid": 314,
+"no": 220
+},
+{
+"part": "x",
+"src": 54976,
+"stmt": "Propeller is a type of reptile.",
+"claude": 0,
+"sid": 68,
+"no": 221
+},
+{
+"part": "x",
+"src": 55557,
+"stmt": "Psychologist is a type of worker.",
+"claude": 1,
+"sid": 679,
+"no": 222
+},
+{
+"part": "x",
+"src": 37630,
+"stmt": "Kitten is a type of mammal.",
+"claude": 1,
+"sid": 92,
+"no": 223
+},
+{
+"part": "x",
+"src": 44436,
+"stmt": "Milkman is a type of living thing.",
+"claude": 1,
+"sid": 248,
+"no": 224
+},
+{
+"part": "x",
+"src": 55208,
+"stmt": "Protectionist is a type of plant.",
+"claude": 0,
+"sid": 378,
+"no": 225
+},
+{
+"part": "rule",
+"src": 77975,
+"stmt": "Dish is a type of equipment.",
+"claude": null,
+"no": 226
+},
+{
+"part": "x",
+"src": 505,
+"stmt": "Accelerometer is a type of sport.",
+"claude": 0,
+"sid": 353,
+"no": 227
+},
+{
+"part": "x",
+"src": 44801,
+"stmt": "Minnow is a type of disease.",
+"claude": 0,
+"sid": 9,
+"no": 228
+},
+{
+"part": "x",
+"src": 7866,
+"stmt": "Biter is a type of living thing.",
+"claude": 1,
+"sid": 136,
+"no": 229
+},
+{
+"part": "x",
+"src": 23219,
+"stmt": "Educator is a type of worker.",
+"claude": 1,
+"sid": 48,
+"no": 230
+},
+{
+"part": "rule",
+"src": 78430,
+"stmt": "Aircraft is a type of weapon.",
+"claude": null,
+"no": 231
+},
+{
+"part": "x",
+"src": 59298,
+"stmt": "Salesman is a type of fish.",
+"claude": 0,
+"sid": 252,
+"no": 232
+},
+{
+"part": "x",
+"src": 2841,
+"stmt": "Apologist is a type of worker.",
+"claude": 0,
+"sid": 428,
+"no": 233
+},
+{
+"part": "x",
+"src": 58382,
+"stmt": "Ripper is a type of plant.",
+"claude": 0,
+"sid": 299,
+"no": 234
+},
+{
+"part": "x",
+"src": 64582,
+"stmt": "Sovereign is a type of game.",
+"claude": 0,
+"sid": 293,
+"no": 235
+},
+{
+"part": "x",
+"src": 32602,
+"stmt": "Homeowner is a type of person.",
+"claude": 1,
+"sid": 669,
+"no": 236
+},
+{
+"part": "x",
+"src": 16854,
+"stmt": "Consulate is a type of device.",
+"claude": 0,
+"sid": 43,
+"no": 237
+},
+{
+"part": "x",
+"src": 60121,
+"stmt": "Schizophrenic is a type of sport.",
+"claude": 0,
+"sid": 497,
+"no": 238
+},
+{
+"part": "rule",
+"src": 79109,
+"stmt": "Fabric is a type of clothing.",
+"claude": null,
+"no": 239
+},
+{
+"part": "x",
+"src": 62003,
+"stmt": "Shook is a type of body part.",
+"claude": 0,
+"sid": 581,
+"no": 240
+},
+{
+"part": "x",
+"src": 51059,
+"stmt": "Pensioner is a type of sport.",
+"claude": 0,
+"sid": 436,
+"no": 241
+},
+{
+"part": "x",
+"src": 6566,
+"stmt": "Beekeeper is a type of person.",
+"claude": 1,
+"sid": 219,
+"no": 242
+},
+{
+"part": "x",
+"src": 40404,
+"stmt": "Locomotive is a type of man-made object.",
+"claude": 1,
+"sid": 34,
+"no": 243
+},
+{
+"part": "rule",
+"src": 78741,
+"stmt": "Musical instrument is a type of equipment.",
+"claude": null,
+"no": 244
+},
+{
+"part": "x",
+"src": 23900,
+"stmt": "Empty is a type of container.",
+"claude": 0,
+"sid": 578,
+"no": 245
+},
+{
+"part": "x",
+"src": 17462,
+"stmt": "Copywriter is a type of clothing.",
+"claude": 0,
+"sid": 403,
+"no": 246
+},
+{
+"part": "rule",
+"src": 78837,
+"stmt": "Room is a type of container.",
+"claude": null,
+"no": 247
+},
+{
+"part": "x",
+"src": 54958,
+"stmt": "Propagandist is a type of person.",
+"claude": 1,
+"sid": 422,
+"no": 248
+},
+{
+"part": "x",
+"src": 35398,
+"stmt": "Interceptor is a type of aircraft.",
+"claude": 1,
+"sid": 123,
+"no": 249
+},
+{
+"part": "x",
+"src": 51291,
+"stmt": "Peripheral is a type of animal.",
+"claude": 0,
+"sid": 384,
+"no": 250
+},
+{
+"part": "x",
+"src": 45448,
+"stmt": "Mongoose is a type of living thing.",
+"claude": 1,
+"sid": 295,
+"no": 251
+},
+{
+"part": "rule",
+"src": 78064,
+"stmt": "Man-made object is a type of machine.",
+"claude": null,
+"no": 252
+},
+{
+"part": "x",
+"src": 18855,
+"stmt": "Crustacean is a type of body part.",
+"claude": 0,
+"sid": 320,
+"no": 253
+},
+{
+"part": "x",
+"src": 14029,
+"stmt": "Circuitry is a type of sport.",
+"claude": 0,
+"sid": 148,
+"no": 254
+},
+{
+"part": "rule",
+"src": 78215,
+"stmt": "Machine is a type of worker.",
+"claude": null,
+"no": 255
+},
+{
+"part": "x",
+"src": 66654,
+"stmt": "Stingray is a type of living thing.",
+"claude": 1,
+"sid": 382,
+"no": 256
+},
+{
+"part": "rule",
+"src": 78062,
+"stmt": "Man-made object is a type of tool.",
+"claude": null,
+"no": 257
+},
+{
+"part": "x",
+"src": 50578,
+"stmt": "Patriot is a type of aircraft.",
+"claude": 0,
+"sid": 501,
+"no": 258
+},
+{
+"part": "x",
+"src": 57173,
+"stmt": "Recliner is a type of body part.",
+"claude": 0,
+"sid": 313,
+"no": 259
+},
+{
+"part": "x",
+"src": 9491,
+"stmt": "Brazier is a type of drink.",
+"claude": 0,
+"sid": 389,
+"no": 260
+},
+{
+"part": "x",
+"src": 60828,
+"stmt": "Sectional is a type of man-made object.",
+"claude": 1,
+"sid": 103,
+"no": 261
+},
+{
+"part": "x",
+"src": 34265,
+"stmt": "Implant is a type of body part.",
+"claude": 0,
+"sid": 654,
+"no": 262
+},
+{
+"part": "x",
+"src": 32934,
+"stmt": "Hostage is a type of game.",
+"claude": 0,
+"sid": 577,
+"no": 263
+},
+{
+"part": "x",
+"src": 2697,
+"stmt": "Antelope is a type of footwear.",
+"claude": 0,
+"sid": 662,
+"no": 264
+},
+{
+"part": "x",
+"src": 21825,
+"stmt": "Dominatrix is a type of vehicle.",
+"claude": 0,
+"sid": 694,
+"no": 265
+},
+{
+"part": "x",
+"src": 47782,
+"stmt": "Notary is a type of person.",
+"claude": 1,
+"sid": 563,
+"no": 266
+},
+{
+"part": "x",
+"src": 21682,
+"stmt": "Dispensary is a type of man-made object.",
+"claude": 1,
+"sid": 280,
+"no": 267
+},
+{
+"part": "x",
+"src": 45022,
+"stmt": "Missus is a type of person.",
+"claude": 1,
+"sid": 360,
+"no": 268
+},
+{
+"part": "rule",
+"src": 78656,
+"stmt": "Footwear is a type of weapon.",
+"claude": null,
+"no": 269
+},
+{
+"part": "x",
+"src": 17196,
+"stmt": "Convener is a type of material.",
+"claude": 0,
+"sid": 368,
+"no": 270
+},
+{
+"part": "x",
+"src": 69876,
+"stmt": "Termite is a type of mammal.",
+"claude": 0,
+"sid": 346,
+"no": 271
+},
+{
+"part": "x",
+"src": 37449,
+"stmt": "Kingfisher is a type of insect.",
+"claude": 0,
+"sid": 350,
+"no": 272
+},
+{
+"part": "rule",
+"src": 78792,
+"stmt": "Building is a type of container.",
+"claude": null,
+"no": 273
+},
+{
+"part": "x",
+"src": 36975,
+"stmt": "Kangaroo is a type of athlete.",
+"claude": 0,
+"sid": 446,
+"no": 274
+},
+{
+"part": "x",
+"src": 54360,
+"stmt": "Prince is a type of person.",
+"claude": 1,
+"sid": 550,
+"no": 275
+},
+{
+"part": "x",
+"src": 32146,
+"stmt": "Hillbilly is a type of material.",
+"claude": 0,
+"sid": 539,
+"no": 276
+},
+{
+"part": "rule",
+"src": 78901,
+"stmt": "Worker is a type of living thing.",
+"claude": null,
+"no": 277
+},
+{
+"part": "x",
+"src": 43642,
+"stmt": "Mensch is a type of person.",
+"claude": 1,
+"sid": 349,
+"no": 278
+},
+{
+"part": "x",
+"src": 69790,
+"stmt": "Tequila is a type of plant.",
+"claude": 0,
+"sid": 592,
+"no": 279
+},
+{
+"part": "x",
+"src": 59494,
+"stmt": "Sarcophagus is a type of man-made object.",
+"claude": 1,
+"sid": 64,
+"no": 280
+},
+{
+"part": "x",
+"src": 48605,
+"stmt": "Orator is a type of footwear.",
+"claude": 0,
+"sid": 264,
+"no": 281
+},
+{
+"part": "x",
+"src": 36721,
+"stmt": "Jogger is a type of food.",
+"claude": 0,
+"sid": 310,
+"no": 282
+},
+{
+"part": "x",
+"src": 74445,
+"stmt": "Vise is a type of tool.",
+"claude": 1,
+"sid": 112,
+"no": 283
+},
+{
+"part": "x",
+"src": 18217,
+"stmt": "Cowgirl is a type of animal.",
+"claude": 2,
+"sid": 652,
+"no": 284
+},
+{
+"part": "x",
+"src": 5478,
+"stmt": "Banjo is a type of fish.",
+"claude": 0,
+"sid": 625,
+"no": 285
+},
+{
+"part": "x",
+"src": 15996,
+"stmt": "Composer is a type of person.",
+"claude": 1,
+"sid": 20,
+"no": 286
+},
+{
+"part": "x",
+"src": 2668,
+"stmt": "Antelope is a type of living thing.",
+"claude": 1,
+"sid": 528,
+"no": 287
+},
+{
+"part": "x",
+"src": 70995,
+"stmt": "Toolbox is a type of tool.",
+"claude": 0,
+"sid": 365,
+"no": 288
+},
+{
+"part": "x",
+"src": 34038,
+"stmt": "Immigrant is a type of game.",
+"claude": 0,
+"sid": 383,
+"no": 289
+},
+{
+"part": "x",
+"src": 11655,
+"stmt": "Candlestick is a type of tool.",
+"claude": 0,
+"sid": 670,
+"no": 290
+},
+{
+"part": "x",
+"src": 23344,
+"stmt": "Electric is a type of car.",
+"claude": 0,
+"sid": 321,
+"no": 291
+},
+{
+"part": "x",
+"src": 1919,
+"stmt": "Aloe is a type of room.",
+"claude": 0,
+"sid": 473,
+"no": 292
+},
+{
+"part": "x",
+"src": 50020,
+"stmt": "Parachute is a type of device.",
+"claude": 1,
+"sid": 552,
+"no": 293
+},
+{
+"part": "x",
+"src": 59811,
+"stmt": "Sauerkraut is a type of fruit.",
+"claude": 0,
+"sid": 278,
+"no": 294
+},
+{
+"part": "x",
+"src": 76176,
+"stmt": "Wildflower is a type of living thing.",
+"claude": 1,
+"sid": 443,
+"no": 295
+},
+{
+"part": "x",
+"src": 13172,
+"stmt": "Cheeseburger is a type of man-made object.",
+"claude": 0,
+"sid": 333,
+"no": 296
+},
+{
+"part": "x",
+"src": 39006,
+"stmt": "Legate is a type of game.",
+"claude": 0,
+"sid": 152,
+"no": 297
+},
+{
+"part": "rule",
+"src": 79242,
+"stmt": "Organ is a type of container.",
+"claude": null,
+"no": 298
+},
+{
+"part": "x",
+"src": 53635,
+"stmt": "Poppy is a type of sport.",
+"claude": 0,
+"sid": 336,
+"no": 299
+},
+{
+"part": "x",
+"src": 24147,
+"stmt": "Epileptic is a type of disease.",
+"claude": 0,
+"sid": 25,
+"no": 300
+},
+{
+"part": "x",
+"src": 15904,
+"stmt": "Communicator is a type of person.",
+"claude": 1,
+"sid": 467,
+"no": 301
+},
+{
+"part": "x",
+"src": 9397,
+"stmt": "Brandy is a type of food.",
+"claude": 0,
+"sid": 366,
+"no": 302
+},
+{
+"part": "x",
+"src": 4645,
+"stmt": "Authoritarian is a type of sport.",
+"claude": 0,
+"sid": 526,
+"no": 303
+},
+{
+"part": "x",
+"src": 65663,
+"stmt": "Stagecoach is a type of vehicle.",
+"claude": 1,
+"sid": 391,
+"no": 304
+},
+{
+"part": "x",
+"src": 27834,
+"stmt": "Gazebo is a type of fish.",
+"claude": 0,
+"sid": 244,
+"no": 305
+},
+{
+"part": "x",
+"src": 543,
+"stmt": "Accomplice is a type of athlete.",
+"claude": 0,
+"sid": 98,
+"no": 306
+},
+{
+"part": "x",
+"src": 26075,
+"stmt": "Fife is a type of fabric.",
+"claude": 0,
+"sid": 604,
+"no": 307
+},
+{
+"part": "x",
+"src": 22780,
+"stmt": "Dunce is a type of flower.",
+"claude": 0,
+"sid": 531,
+"no": 308
+},
+{
+"part": "x",
+"src": 4800,
+"stmt": "Ax is a type of man-made object.",
+"claude": 1,
+"sid": 674,
+"no": 309
+},
+{
+"part": "x",
+"src": 35063,
+"stmt": "Inpatient is a type of fruit.",
+"claude": 0,
+"sid": 493,
+"no": 310
+},
+{
+"part": "x",
+"src": 7717,
+"stmt": "Biologist is a type of worker.",
+"claude": 1,
+"sid": 681,
+"no": 311
+},
+{
+"part": "x",
+"src": 57866,
+"stmt": "Retriever is a type of game.",
+"claude": 0,
+"sid": 661,
+"no": 312
+},
+{
+"part": "rule",
+"src": 79097,
+"stmt": "Fabric is a type of man-made object.",
+"claude": null,
+"no": 313
+},
+{
+"part": "x",
+"src": 5425,
+"stmt": "Bandicoot is a type of disease.",
+"claude": 0,
+"sid": 117,
+"no": 314
+},
+{
+"part": "x",
+"src": 45344,
+"stmt": "Moll is a type of person.",
+"claude": 1,
+"sid": 75,
+"no": 315
+},
+{
+"part": "rule",
+"src": 78109,
+"stmt": "Tool is a type of machine.",
+"claude": null,
+"no": 316
+},
+{
+"part": "rule",
+"src": 79026,
+"stmt": "Athlete is a type of worker.",
+"claude": null,
+"no": 317
+},
+{
+"part": "x",
+"src": 57721,
+"stmt": "Restaurateur is a type of athlete.",
+"claude": 0,
+"sid": 586,
+"no": 318
+},
+{
+"part": "x",
+"src": 54913,
+"stmt": "Proletarian is a type of worker.",
+"claude": 1,
+"sid": 614,
+"no": 319
+},
+{
+"part": "x",
+"src": 40864,
+"stmt": "Lyre is a type of man-made object.",
+"claude": 1,
+"sid": 509,
+"no": 320
+},
+{
+"part": "x",
+"src": 40680,
+"stmt": "Loudspeaker is a type of man-made object.",
+"claude": 1,
+"sid": 263,
+"no": 321
+},
+{
+"part": "x",
+"src": 73442,
+"stmt": "Uterus is a type of container.",
+"claude": 0,
+"sid": 246,
+"no": 322
+},
+{
+"part": "x",
+"src": 7625,
+"stmt": "Biochemist is a type of worker.",
+"claude": 1,
+"sid": 676,
+"no": 323
+},
+{
+"part": "x",
+"src": 55258,
+"stmt": "Protege is a type of vegetable.",
+"claude": 0,
+"sid": 316,
+"no": 324
+},
+{
+"part": "x",
+"src": 67495,
+"stmt": "Subcontractor is a type of food.",
+"claude": 0,
+"sid": 355,
+"no": 325
+},
+{
+"part": "x",
+"src": 63290,
+"stmt": "Sleuth is a type of metal.",
+"claude": 0,
+"sid": 256,
+"no": 326
+},
+{
+"part": "rule",
+"src": 78290,
+"stmt": "Vehicle is a type of machine.",
+"claude": null,
+"no": 327
+},
+{
+"part": "x",
+"src": 45953,
+"stmt": "Motorcyclist is a type of sport.",
+"claude": 0,
+"sid": 570,
+"no": 328
+},
+{
+"part": "x",
+"src": 11441,
+"stmt": "Camcorder is a type of room.",
+"claude": 0,
+"sid": 682,
+"no": 329
+},
+{
+"part": "x",
+"src": 21367,
+"stmt": "Dinghy is a type of boat.",
+"claude": 1,
+"sid": 274,
+"no": 330
+},
+{
+"part": "x",
+"src": 41079,
+"stmt": "Macho is a type of animal.",
+"claude": 0,
+"sid": 129,
+"no": 331
+},
+{
+"part": "x",
+"src": 36490,
+"stmt": "Jasmine is a type of vegetable.",
+"claude": 0,
+"sid": 482,
+"no": 332
+},
+{
+"part": "x",
+"src": 10973,
+"stmt": "Cactus is a type of weapon.",
+"claude": 0,
+"sid": 269,
+"no": 333
+},
+{
+"part": "x",
+"src": 15797,
+"stmt": "Commodore is a type of machine.",
+"claude": 0,
+"sid": 161,
+"no": 334
+},
+{
+"part": "rule",
+"src": 78263,
+"stmt": "Equipment is a type of material.",
+"claude": null,
+"no": 335
+},
+{
+"part": "x",
+"src": 45937,
+"stmt": "Motorcyclist is a type of footwear.",
+"claude": 0,
+"sid": 331,
+"no": 336
+},
+{
+"part": "x",
+"src": 48410,
+"stmt": "Oppressor is a type of device.",
+"claude": 0,
+"sid": 602,
+"no": 337
+},
+{
+"part": "x",
+"src": 29854,
+"stmt": "Grocer is a type of living thing.",
+"claude": 1,
+"sid": 5,
+"no": 338
+},
+{
+"part": "x",
+"src": 42069,
+"stmt": "Mangrove is a type of weapon.",
+"claude": 0,
+"sid": 584,
+"no": 339
+},
+{
+"part": "x",
+"src": 46534,
+"stmt": "Narrator is a type of clothing.",
+"claude": 0,
+"sid": 229,
+"no": 340
+},
+{
+"part": "rule",
+"src": 78014,
+"stmt": "Drink is a type of food.",
+"claude": null,
+"no": 341
+},
+{
+"part": "x",
+"src": 73938,
+"stmt": "Velvet is a type of man-made object.",
+"claude": 1,
+"sid": 50,
+"no": 342
+},
+{
+"part": "x",
+"src": 50340,
+"stmt": "Parsonage is a type of man-made object.",
+"claude": 1,
+"sid": 197,
+"no": 343
+},
+{
+"part": "x",
+"src": 35022,
+"stmt": "Innocent is a type of man-made object.",
+"claude": 0,
+"sid": 554,
+"no": 344
+},
+{
+"part": "rule",
+"src": 78424,
+"stmt": "Aircraft is a type of device.",
+"claude": null,
+"no": 345
+},
+{
+"part": "x",
+"src": 8154,
+"stmt": "Bloodhound is a type of vegetable.",
+"claude": 0,
+"sid": 319,
+"no": 346
+},
+{
+"part": "x",
+"src": 2242,
+"stmt": "Amputee is a type of person.",
+"claude": 1,
+"sid": 65,
+"no": 347
+},
+{
+"part": "x",
+"src": 37030,
+"stmt": "Kea is a type of living thing.",
+"claude": 1,
+"sid": 105,
+"no": 348
+},
+{
+"part": "x",
+"src": 69060,
+"stmt": "Tam is a type of dish.",
+"claude": 0,
+"sid": 569,
+"no": 349
+},
+{
+"part": "x",
+"src": 38398,
+"stmt": "Landowner is a type of person.",
+"claude": 1,
+"sid": 362,
+"no": 350
+},
+{
+"part": "x",
+"src": 30811,
+"stmt": "Hamster is a type of athlete.",
+"claude": 0,
+"sid": 233,
+"no": 351
+},
+{
+"part": "x",
+"src": 63928,
+"stmt": "Socialist is a type of person.",
+"claude": 1,
+"sid": 549,
+"no": 352
+},
+{
+"part": "x",
+"src": 58558,
+"stmt": "Robber is a type of living thing.",
+"claude": 1,
+"sid": 591,
+"no": 353
+},
+{
+"part": "x",
+"src": 48479,
+"stmt": "Optimist is a type of body part.",
+"claude": 0,
+"sid": 609,
+"no": 354
+},
+{
+"part": "x",
+"src": 59790,
+"stmt": "Satirist is a type of artist.",
+"claude": 2,
+"sid": 527,
+"no": 355
+},
+{
+"part": "x",
+"src": 75898,
+"stmt": "Wheelchair is a type of game.",
+"claude": 0,
+"sid": 594,
+"no": 356
+},
+{
+"part": "rule",
+"src": 78244,
+"stmt": "Equipment is a type of device.",
+"claude": null,
+"no": 357
+},
+{
+"part": "x",
+"src": 12068,
+"stmt": "Carbine is a type of man-made object.",
+"claude": 1,
+"sid": 221,
+"no": 358
+},
+{
+"part": "x",
+"src": 58153,
+"stmt": "Rickey is a type of tree.",
+"claude": 0,
+"sid": 46,
+"no": 359
+},
+{
+"part": "x",
+"src": 19637,
+"stmt": "Cyborg is a type of body part.",
+"claude": 0,
+"sid": 379,
+"no": 360
+},
+{
+"part": "x",
+"src": 45583,
+"stmt": "Moray is a type of disease.",
+"claude": 0,
+"sid": 209,
+"no": 361
+},
+{
+"part": "x",
+"src": 4662,
+"stmt": "Autofocus is a type of man-made object.",
+"claude": 0,
+"sid": 228,
+"no": 362
+},
+{
+"part": "x",
+"src": 17429,
+"stmt": "Copycat is a type of body part.",
+"claude": 0,
+"sid": 14,
+"no": 363
+},
+{
+"part": "x",
+"src": 59495,
+"stmt": "Sarcophagus is a type of tool.",
+"claude": 0,
+"sid": 413,
+"no": 364
+},
+{
+"part": "x",
+"src": 42108,
+"stmt": "Mantel is a type of device.",
+"claude": 0,
+"sid": 258,
+"no": 365
+},
+{
+"part": "rule",
+"src": 78738,
+"stmt": "Musical instrument is a type of tool.",
+"claude": null,
+"no": 366
+},
+{
+"part": "x",
+"src": 20642,
+"stmt": "Delegate is a type of person.",
+"claude": 1,
+"sid": 31,
+"no": 367
+},
+{
+"part": "x",
+"src": 50751,
+"stmt": "Pedophile is a type of food.",
+"claude": 0,
+"sid": 298,
+"no": 368
+},
+{
+"part": "x",
+"src": 68130,
+"stmt": "Survivalist is a type of fish.",
+"claude": 0,
+"sid": 432,
+"no": 369
+},
+{
+"part": "x",
+"src": 70184,
+"stmt": "Theorist is a type of person.",
+"claude": 1,
+"sid": 142,
+"no": 370
+},
+{
+"part": "x",
+"src": 14662,
+"stmt": "Clinician is a type of person.",
+"claude": 1,
+"sid": 218,
+"no": 371
+},
+{
+"part": "x",
+"src": 14877,
+"stmt": "Clubhouse is a type of machine.",
+"claude": 0,
+"sid": 451,
+"no": 372
+},
+{
+"part": "x",
+"src": 22931,
+"stmt": "Earl is a type of boat.",
+"claude": 0,
+"sid": 634,
+"no": 373
+},
+{
+"part": "x",
+"src": 28928,
+"stmt": "Golf is a type of metal.",
+"claude": 0,
+"sid": 49,
+"no": 374
+},
+{
+"part": "x",
+"src": 67712,
+"stmt": "Sunflower is a type of living thing.",
+"claude": 1,
+"sid": 627,
+"no": 375
+},
+{
+"part": "x",
+"src": 52856,
+"stmt": "Playmate is a type of mammal.",
+"claude": 2,
+"sid": 533,
+"no": 376
+},
+{
+"part": "x",
+"src": 45011,
+"stmt": "Missus is a type of boat.",
+"claude": 0,
+"sid": 193,
+"no": 377
+},
+{
+"part": "x",
+"src": 43422,
+"stmt": "Meatball is a type of game.",
+"claude": 0,
+"sid": 440,
+"no": 378
+},
+{
+"part": "x",
+"src": 26651,
+"stmt": "Flashlight is a type of tool.",
+"claude": 2,
+"sid": 588,
+"no": 379
+},
+{
+"part": "rule",
+"src": 78903,
+"stmt": "Worker is a type of mammal.",
+"claude": null,
+"no": 380
+},
+{
+"part": "x",
+"src": 48541,
+"stmt": "Orangutan is a type of fruit.",
+"claude": 0,
+"sid": 211,
+"no": 381
+},
+{
+"part": "x",
+"src": 23045,
+"stmt": "Easel is a type of sport.",
+"claude": 0,
+"sid": 80,
+"no": 382
+},
+{
+"part": "x",
+"src": 3105,
+"stmt": "Aquarium is a type of boat.",
+"claude": 0,
+"sid": 619,
+"no": 383
+},
+{
+"part": "rule",
+"src": 78858,
+"stmt": "Person is a type of mammal.",
+"claude": null,
+"no": 384
+},
+{
+"part": "x",
+"src": 31268,
+"stmt": "Hater is a type of person.",
+"claude": 1,
+"sid": 164,
+"no": 385
+},
+{
+"part": "x",
+"src": 64210,
+"stmt": "Soloist is a type of metal.",
+"claude": 0,
+"sid": 358,
+"no": 386
+},
+{
+"part": "x",
+"src": 23127,
+"stmt": "Ecologist is a type of worker.",
+"claude": 1,
+"sid": 475,
+"no": 387
+},
+{
+"part": "x",
+"src": 50108,
+"stmt": "Paramedic is a type of dish.",
+"claude": 0,
+"sid": 420,
+"no": 388
+},
+{
+"part": "x",
+"src": 31704,
+"stmt": "Heathen is a type of flower.",
+"claude": 0,
+"sid": 127,
+"no": 389
+},
+{
+"part": "x",
+"src": 73206,
+"stmt": "Uniform is a type of equipment.",
+"claude": 0,
+"sid": 83,
+"no": 390
+},
+{
+"part": "x",
+"src": 74186,
+"stmt": "Vigilante is a type of person.",
+"claude": 1,
+"sid": 404,
+"no": 391
+},
+{
+"part": "x",
+"src": 38950,
+"stmt": "Leaker is a type of person.",
+"claude": 1,
+"sid": 22,
+"no": 392
+},
+{
+"part": "rule",
+"src": 78198,
+"stmt": "Machine is a type of tool.",
+"claude": null,
+"no": 393
+},
+{
+"part": "rule",
+"src": 78292,
+"stmt": "Vehicle is a type of car.",
+"claude": null,
+"no": 394
+},
+{
+"part": "x",
+"src": 50129,
+"stmt": "Paramedic is a type of worker.",
+"claude": 1,
+"sid": 393,
+"no": 395
+},
+{
+"part": "x",
+"src": 1449,
+"stmt": "Airliner is a type of boat.",
+"claude": 0,
+"sid": 160,
+"no": 396
+},
+{
+"part": "x",
+"src": 40227,
+"stmt": "Lobbyist is a type of boat.",
+"claude": 0,
+"sid": 330,
+"no": 397
+},
+{
+"part": "x",
+"src": 30678,
+"stmt": "Haggis is a type of organ.",
+"claude": 0,
+"sid": 567,
+"no": 398
+},
+{
+"part": "x",
+"src": 40204,
+"stmt": "Lobbyist is a type of living thing.",
+"claude": 1,
+"sid": 35,
+"no": 399
+},
+{
+"part": "x",
+"src": 28383,
+"stmt": "Geranium is a type of animal.",
+"claude": 0,
+"sid": 583,
+"no": 400
+},
+{
+"part": "x",
+"src": 31961,
+"stmt": "Helmsman is a type of athlete.",
+"claude": 0,
+"sid": 481,
+"no": 401
+},
+{
+"part": "x",
+"src": 52212,
+"stmt": "Piglet is a type of mammal.",
+"claude": 1,
+"sid": 454,
+"no": 402
+},
+{
+"part": "x",
+"src": 21712,
+"stmt": "Doge is a type of living thing.",
+"claude": 1,
+"sid": 53,
+"no": 403
+},
+{
+"part": "x",
+"src": 68875,
+"stmt": "Tactician is a type of food.",
+"claude": 0,
+"sid": 73,
+"no": 404
+},
+{
+"part": "x",
+"src": 67708,
+"stmt": "Sultan is a type of organ.",
+"claude": 0,
+"sid": 300,
+"no": 405
+},
+{
+"part": "x",
+"src": 33542,
+"stmt": "Hyena is a type of plant.",
+"claude": 0,
+"sid": 455,
+"no": 406
+},
+{
+"part": "x",
+"src": 26722,
+"stmt": "Flatmate is a type of organ.",
+"claude": 0,
+"sid": 238,
+"no": 407
+},
+{
+"part": "x",
+"src": 6767,
+"stmt": "Beloved is a type of insect.",
+"claude": 0,
+"sid": 130,
+"no": 408
+},
+{
+"part": "rule",
+"src": 78245,
+"stmt": "Equipment is a type of machine.",
+"claude": null,
+"no": 409
+},
+{
+"part": "x",
+"src": 14590,
+"stmt": "Cleric is a type of plant.",
+"claude": 0,
+"sid": 500,
+"no": 410
+},
+{
+"part": "x",
+"src": 71335,
+"stmt": "Trader is a type of worker.",
+"claude": 1,
+"sid": 411,
+"no": 411
+},
+{
+"part": "x",
+"src": 64729,
+"stmt": "Spaniel is a type of dog.",
+"claude": 1,
+"sid": 371,
+"no": 412
+},
+{
+"part": "x",
+"src": 68677,
+"stmt": "Swot is a type of sport.",
+"claude": 0,
+"sid": 286,
+"no": 413
+},
+{
+"part": "x",
+"src": 8649,
+"stmt": "Bonsai is a type of animal.",
+"claude": 0,
+"sid": 84,
+"no": 414
+},
+{
+"part": "x",
+"src": 2760,
+"stmt": "Anti is a type of living thing.",
+"claude": 0,
+"sid": 412,
+"no": 415
+},
+{
+"part": "x",
+"src": 29650,
+"stmt": "Greenhouse is a type of container.",
+"claude": 0,
+"sid": 688,
+"no": 416
+},
+{
+"part": "rule",
+"src": 78071,
+"stmt": "Man-made object is a type of container.",
+"claude": null,
+"no": 417
+},
+{
+"part": "rule",
+"src": 78981,
+"stmt": "Artist is a type of worker.",
+"claude": null,
+"no": 418
+},
+{
+"part": "x",
+"src": 71580,
+"stmt": "Transistor is a type of fish.",
+"claude": 0,
+"sid": 458,
+"no": 419
+},
+{
+"part": "rule",
+"src": 78651,
+"stmt": "Footwear is a type of equipment.",
+"claude": null,
+"no": 420
+},
+{
+"part": "x",
+"src": 4359,
+"stmt": "Athlete is a type of worker.",
+"claude": 2,
+"sid": 576,
+"no": 421
+},
+{
+"part": "x",
+"src": 36224,
+"stmt": "Ivy is a type of car.",
+"claude": 0,
+"sid": 236,
+"no": 422
+},
+{
+"part": "x",
+"src": 40634,
+"stmt": "Loom is a type of man-made object.",
+"claude": 1,
+"sid": 565,
+"no": 423
+},
+{
+"part": "x",
+"src": 68422,
+"stmt": "Swimsuit is a type of equipment.",
+"claude": 0,
+"sid": 398,
+"no": 424
+},
+{
+"part": "x",
+"src": 36427,
+"stmt": "Jammer is a type of body part.",
+"claude": 0,
+"sid": 649,
+"no": 425
+},
+{
+"part": "x",
+"src": 45252,
+"stmt": "Modernist is a type of person.",
+"claude": 1,
+"sid": 87,
+"no": 426
+},
+{
+"part": "x",
+"src": 51048,
+"stmt": "Pensioner is a type of person.",
+"claude": 1,
+"sid": 237,
+"no": 427
+},
+{
+"part": "x",
+"src": 40314,
+"stmt": "Locket is a type of device.",
+"claude": 0,
+"sid": 646,
+"no": 428
+},
+{
+"part": "x",
+"src": 45266,
+"stmt": "Molester is a type of mammal.",
+"claude": 2,
+"sid": 392,
+"no": 429
+},
+{
+"part": "x",
+"src": 14891,
+"stmt": "Clubhouse is a type of room.",
+"claude": 0,
+"sid": 429,
+"no": 430
+},
+{
+"part": "x",
+"src": 21804,
+"stmt": "Dominatrix is a type of living thing.",
+"claude": 1,
+"sid": 377,
+"no": 431
+},
+{
+"part": "x",
+"src": 5614,
+"stmt": "Barbell is a type of mammal.",
+"claude": 0,
+"sid": 4,
+"no": 432
+},
+{
+"part": "x",
+"src": 45428,
+"stmt": "Monastery is a type of container.",
+"claude": 0,
+"sid": 517,
+"no": 433
+},
+{
+"part": "x",
+"src": 45035,
+"stmt": "Moa is a type of animal.",
+"claude": 0,
+"sid": 369,
+"no": 434
+},
+{
+"part": "x",
+"src": 3684,
+"stmt": "Artist is a type of fish.",
+"claude": 0,
+"sid": 560,
+"no": 435
+},
+{
+"part": "x",
+"src": 4016,
+"stmt": "Assistant is a type of dish.",
+"claude": 0,
+"sid": 301,
+"no": 436
+},
+{
+"part": "rule",
+"src": 78336,
+"stmt": "Car is a type of equipment.",
+"claude": null,
+"no": 437
+},
+{
+"part": "x",
+"src": 58160,
+"stmt": "Rickey is a type of man-made object.",
+"claude": 0,
+"sid": 179,
+"no": 438
+},
+{
+"part": "rule",
+"src": 78471,
+"stmt": "Weapon is a type of equipment.",
+"claude": null,
+"no": 439
+},
+{
+"part": "x",
+"src": 37375,
+"stmt": "Kilt is a type of boat.",
+"claude": 0,
+"sid": 580,
+"no": 440
+},
+{
+"part": "x",
+"src": 6900,
+"stmt": "Bereaved is a type of living thing.",
+"claude": 1,
+"sid": 345,
+"no": 441
+},
+{
+"part": "x",
+"src": 47792,
+"stmt": "Notary is a type of game.",
+"claude": 0,
+"sid": 192,
+"no": 442
+},
+{
+"part": "x",
+"src": 968,
+"stmt": "Adolescent is a type of mammal.",
+"claude": 2,
+"sid": 396,
+"no": 443
+},
+{
+"part": "x",
+"src": 18827,
+"stmt": "Crustacean is a type of food.",
+"claude": 2,
+"sid": 650,
+"no": 444
+},
+{
+"part": "rule",
+"src": 78514,
+"stmt": "Container is a type of device.",
+"claude": null,
+"no": 445
+},
+{
+"part": "x",
+"src": 312,
+"stmt": "Abolitionist is a type of artist.",
+"claude": 0,
+"sid": 257,
+"no": 446
+},
+{
+"part": "x",
+"src": 10734,
+"stmt": "Buttercup is a type of man-made object.",
+"claude": 0,
+"sid": 191,
+"no": 447
+},
+{
+"part": "x",
+"src": 36550,
+"stmt": "Jeep is a type of container.",
+"claude": 0,
+"sid": 431,
+"no": 448
+},
+{
+"part": "x",
+"src": 39864,
+"stmt": "Limousine is a type of clothing.",
+"claude": 0,
+"sid": 508,
+"no": 449
+},
+{
+"part": "x",
+"src": 6888,
+"stmt": "Benefactor is a type of person.",
+"claude": 1,
+"sid": 409,
+"no": 450
+},
+{
+"part": "x",
+"src": 75072,
+"stmt": "Wanton is a type of living thing.",
+"claude": 0,
+"sid": 318,
+"no": 451
+},
+{
+"part": "x",
+"src": 56760,
+"stmt": "Rapporteur is a type of organ.",
+"claude": 0,
+"sid": 484,
+"no": 452
+},
+{
+"part": "x",
+"src": 20762,
+"stmt": "Denture is a type of man-made object.",
+"claude": 1,
+"sid": 372,
+"no": 453
+},
+{
+"part": "x",
+"src": 39806,
+"stmt": "Limiter is a type of man-made object.",
+"claude": 1,
+"sid": 615,
+"no": 454
+},
+{
+"part": "x",
+"src": 31786,
+"stmt": "Heifer is a type of living thing.",
+"claude": 1,
+"sid": 104,
+"no": 455
+},
+{
+"part": "x",
+"src": 14962,
+"stmt": "Coauthor is a type of vegetable.",
+"claude": 0,
+"sid": 302,
+"no": 456
+},
+{
+"part": "x",
+"src": 642,
+"stmt": "Accountant is a type of game.",
+"claude": 0,
+"sid": 132,
+"no": 457
+},
+{
+"part": "x",
+"src": 50022,
+"stmt": "Parachute is a type of equipment.",
+"claude": 1,
+"sid": 357,
+"no": 458
+},
+{
+"part": "x",
+"src": 11148,
+"stmt": "Cafe is a type of man-made object.",
+"claude": 1,
+"sid": 613,
+"no": 459
+},
+{
+"part": "x",
+"src": 51628,
+"stmt": "Pew is a type of man-made object.",
+"claude": 1,
+"sid": 26,
+"no": 460
+},
+{
+"part": "rule",
+"src": 77372,
+"stmt": "Animal is a type of mammal.",
+"claude": null,
+"no": 461
+},
+{
+"part": "x",
+"src": 75534,
+"stmt": "Wearer is a type of mammal.",
+"claude": 2,
+"sid": 334,
+"no": 462
+},
+{
+"part": "x",
+"src": 58491,
+"stmt": "Rival is a type of weapon.",
+"claude": 0,
+"sid": 544,
+"no": 463
+},
+{
+"part": "x",
+"src": 57950,
+"stmt": "Revisionist is a type of artist.",
+"claude": 0,
+"sid": 606,
+"no": 464
+},
+{
+"part": "x",
+"src": 52948,
+"stmt": "Plenipotentiary is a type of mammal.",
+"claude": 2,
+"sid": 607,
+"no": 465
+},
+{
+"part": "x",
+"src": 45114,
+"stmt": "Mockingbird is a type of person.",
+"claude": 0,
+"sid": 247,
+"no": 466
+},
+{
+"part": "x",
+"src": 58946,
+"stmt": "Rugby is a type of equipment.",
+"claude": 0,
+"sid": 137,
+"no": 467
+},
+{
+"part": "x",
+"src": 8466,
+"stmt": "Bobcat is a type of mammal.",
+"claude": 1,
+"sid": 485,
+"no": 468
+},
+{
+"part": "x",
+"src": 19880,
+"stmt": "Dahlia is a type of plant.",
+"claude": 1,
+"sid": 476,
+"no": 469
+},
+{
+"part": "x",
+"src": 45835,
+"stmt": "Motorboat is a type of machine.",
+"claude": 2,
+"sid": 564,
+"no": 470
+},
+{
+"part": "x",
+"src": 43319,
+"stmt": "Maxi is a type of room.",
+"claude": 0,
+"sid": 153,
+"no": 471
+},
+{
+"part": "x",
+"src": 43040,
+"stmt": "Matchbox is a type of toy.",
+"claude": 0,
+"sid": 668,
+"no": 472
+},
+{
+"part": "x",
+"src": 40480,
+"stmt": "Loner is a type of living thing.",
+"claude": 1,
+"sid": 599,
+"no": 473
+},
+{
+"part": "x",
+"src": 21936,
+"stmt": "Dongle is a type of metal.",
+"claude": 0,
+"sid": 198,
+"no": 474
+},
+{
+"part": "x",
+"src": 68069,
+"stmt": "Surgeon is a type of worker.",
+"claude": 1,
+"sid": 559,
+"no": 475
+},
+{
+"part": "x",
+"src": 24654,
+"stmt": "Everlasting is a type of game.",
+"claude": 0,
+"sid": 140,
+"no": 476
+},
+{
+"part": "x",
+"src": 32659,
+"stmt": "Homophobe is a type of sport.",
+"claude": 0,
+"sid": 502,
+"no": 477
+},
+{
+"part": "x",
+"src": 14739,
+"stmt": "Clock is a type of machine.",
+"claude": 2,
+"sid": 536,
+"no": 478
+},
+{
+"part": "x",
+"src": 42334,
+"stmt": "Margarita is a type of dish.",
+"claude": 0,
+"sid": 642,
+"no": 479
+},
+{
+"part": "x",
+"src": 30884,
+"stmt": "Handkerchief is a type of device.",
+"claude": 0,
+"sid": 620,
+"no": 480
+},
+{
+"part": "x",
+"src": 26165,
+"stmt": "Finalist is a type of athlete.",
+"claude": 0,
+"sid": 81,
+"no": 481
+},
+{
+"part": "x",
+"src": 33084,
+"stmt": "Housekeeper is a type of flower.",
+"claude": 0,
+"sid": 367,
+"no": 482
+},
+{
+"part": "x",
+"src": 64377,
+"stmt": "Sophomore is a type of boat.",
+"claude": 0,
+"sid": 538,
+"no": 483
+},
+{
+"part": "rule",
+"src": 78154,
+"stmt": "Device is a type of machine.",
+"claude": null,
+"no": 484
+},
+{
+"part": "x",
+"src": 5446,
+"stmt": "Bandit is a type of device.",
+"claude": 0,
+"sid": 376,
+"no": 485
+},
+{
+"part": "rule",
+"src": 78155,
+"stmt": "Device is a type of equipment.",
+"claude": null,
+"no": 486
+},
+{
+"part": "x",
+"src": 46626,
+"stmt": "Nawab is a type of clothing.",
+"claude": 0,
+"sid": 629,
+"no": 487
+},
+{
+"part": "x",
+"src": 1831,
+"stmt": "Alderman is a type of athlete.",
+"claude": 0,
+"sid": 406,
+"no": 488
+},
+{
+"part": "x",
+"src": 31257,
+"stmt": "Hater is a type of boat.",
+"claude": 0,
+"sid": 407,
+"no": 489
+},
+{
+"part": "x",
+"src": 40707,
+"stmt": "Loudspeaker is a type of disease.",
+"claude": 0,
+"sid": 605,
+"no": 490
+},
+{
+"part": "x",
+"src": 21210,
+"stmt": "Dieter is a type of fish.",
+"claude": 0,
+"sid": 56,
+"no": 491
+},
+{
+"part": "x",
+"src": 9995,
+"stmt": "Brogan is a type of food.",
+"claude": 0,
+"sid": 568,
+"no": 492
+},
+{
+"part": "x",
+"src": 61955,
+"stmt": "Shogun is a type of fabric.",
+"claude": 0,
+"sid": 133,
+"no": 493
+},
+{
+"part": "x",
+"src": 26223,
+"stmt": "Finch is a type of bird.",
+"claude": 1,
+"sid": 234,
+"no": 494
+},
+{
+"part": "x",
+"src": 41927,
+"stmt": "Manatee is a type of vehicle.",
+"claude": 0,
+"sid": 400,
+"no": 495
+},
+{
+"part": "x",
+"src": 34627,
+"stmt": "Individualist is a type of worker.",
+"claude": 0,
+"sid": 623,
+"no": 496
+},
+{
+"part": "x",
+"src": 16100,
+"stmt": "Conch is a type of living thing.",
+"claude": 1,
+"sid": 555,
+"no": 497
+},
+{
+"part": "x",
+"src": 12970,
+"stmt": "Chalet is a type of game.",
+"claude": 0,
+"sid": 666,
+"no": 498
+},
+{
+"part": "x",
+"src": 62926,
+"stmt": "Skewer is a type of game.",
+"claude": 0,
+"sid": 255,
+"no": 499
+},
+{
+"part": "x",
+"src": 66863,
+"stmt": "Stole is a type of weapon.",
+"claude": 0,
+"sid": 637,
+"no": 500
+},
+{
+"part": "x",
+"src": 28908,
+"stmt": "Golf is a type of equipment.",
+"claude": 0,
+"sid": 699,
+"no": 501
+},
+{
+"part": "x",
+"src": 53093,
+"stmt": "Plumber is a type of tree.",
+"claude": 0,
+"sid": 272,
+"no": 502
+},
+{
+"part": "x",
+"src": 35849,
+"stmt": "Inventor is a type of drink.",
+"claude": 0,
+"sid": 387,
+"no": 503
+},
+{
+"part": "x",
+"src": 71076,
+"stmt": "Tortoise is a type of reptile.",
+"claude": 1,
+"sid": 100,
+"no": 504
+},
+{
+"part": "x",
+"src": 68839,
+"stmt": "Tabor is a type of boat.",
+"claude": 0,
+"sid": 16,
+"no": 505
+},
+{
+"part": "x",
+"src": 6992,
+"stmt": "Berk is a type of living thing.",
+"claude": 1,
+"sid": 457,
+"no": 506
+},
+{
+"part": "x",
+"src": 57121,
+"stmt": "Receptionist is a type of worker.",
+"claude": 1,
+"sid": 85,
+"no": 507
+},
+{
+"part": "x",
+"src": 9998,
+"stmt": "Brogan is a type of man-made object.",
+"claude": 1,
+"sid": 616,
+"no": 508
+},
+{
+"part": "x",
+"src": 28364,
+"stmt": "Georgette is a type of clothing.",
+"claude": 0,
+"sid": 196,
+"no": 509
+},
+{
+"part": "x",
+"src": 16868,
+"stmt": "Consulate is a type of building.",
+"claude": 1,
+"sid": 259,
+"no": 510
+},
+{
+"part": "x",
+"src": 50504,
+"stmt": "Passerby is a type of organ.",
+"claude": 0,
+"sid": 55,
+"no": 511
+},
+{
+"part": "x",
+"src": 39101,
+"stmt": "Lemur is a type of animal.",
+"claude": 1,
+"sid": 210,
+"no": 512
+},
+{
+"part": "x",
+"src": 23434,
+"stmt": "Electrode is a type of equipment.",
+"claude": 0,
+"sid": 354,
+"no": 513
+},
+{
+"part": "x",
+"src": 8603,
+"stmt": "Bodybuilder is a type of animal.",
+"claude": 2,
+"sid": 154,
+"no": 514
+},
+{
+"part": "x",
+"src": 51082,
+"stmt": "Peony is a type of car.",
+"claude": 0,
+"sid": 214,
+"no": 515
+},
+{
+"part": "rule",
+"src": 78291,
+"stmt": "Vehicle is a type of equipment.",
+"claude": null,
+"no": 516
+},
+{
+"part": "x",
+"src": 66195,
+"stmt": "Steed is a type of animal.",
+"claude": 1,
+"sid": 150,
+"no": 517
+},
+{
+"part": "x",
+"src": 5987,
+"stmt": "Basset is a type of dog.",
+"claude": 1,
+"sid": 283,
+"no": 518
+},
+{
+"part": "x",
+"src": 44802,
+"stmt": "Minnow is a type of game.",
+"claude": 0,
+"sid": 90,
+"no": 519
+},
+{
+"part": "x",
+"src": 47570,
+"stmt": "Niqab is a type of reptile.",
+"claude": 0,
+"sid": 57,
+"no": 520
+},
+{
+"part": "x",
+"src": 50347,
+"stmt": "Parsonage is a type of boat.",
+"claude": 0,
+"sid": 134,
+"no": 521
+},
+{
+"part": "x",
+"src": 57489,
+"stmt": "Reporter is a type of worker.",
+"claude": 1,
+"sid": 94,
+"no": 522
+},
+{
+"part": "x",
+"src": 41129,
+"stmt": "Madame is a type of insect.",
+"claude": 0,
+"sid": 207,
+"no": 523
+},
+{
+"part": "x",
+"src": 13795,
+"stmt": "Chrysalis is a type of body part.",
+"claude": 0,
+"sid": 374,
+"no": 524
+},
+{
+"part": "x",
+"src": 22415,
+"stmt": "Drosophila is a type of food.",
+"claude": 0,
+"sid": 425,
+"no": 525
+},
+{
+"part": "x",
+"src": 36820,
+"stmt": "Jukebox is a type of equipment.",
+"claude": 1,
+"sid": 101,
+"no": 526
+},
+{
+"part": "rule",
+"src": 77935,
+"stmt": "Food is a type of weapon.",
+"claude": null,
+"no": 527
+},
+{
+"part": "rule",
+"src": 78200,
+"stmt": "Machine is a type of equipment.",
+"claude": null,
+"no": 528
+},
+{
+"part": "rule",
+"src": 77973,
+"stmt": "Dish is a type of device.",
+"claude": null,
+"no": 529
+},
+{
+"part": "x",
+"src": 43570,
+"stmt": "Menial is a type of plant.",
+"claude": 0,
+"sid": 240,
+"no": 530
+},
+{
+"part": "x",
+"src": 37928,
+"stmt": "Kylie is a type of aircraft.",
+"claude": 0,
+"sid": 628,
+"no": 531
+},
+{
+"part": "x",
+"src": 12234,
+"stmt": "Caribou is a type of game.",
+"claude": 2,
+"sid": 695,
+"no": 532
+},
+{
+"part": "x",
+"src": 33049,
+"stmt": "Houseboat is a type of vehicle.",
+"claude": 1,
+"sid": 608,
+"no": 533
+},
+{
+"part": "x",
+"src": 19070,
+"stmt": "Cuppa is a type of container.",
+"claude": 0,
+"sid": 88,
+"no": 534
+},
+{
+"part": "x",
+"src": 1208,
+"stmt": "Agitator is a type of vegetable.",
+"claude": 0,
+"sid": 534,
+"no": 535
+},
+{
+"part": "x",
+"src": 8786,
+"stmt": "Bookkeeper is a type of living thing.",
+"claude": 1,
+"sid": 204,
+"no": 536
+},
+{
+"part": "x",
+"src": 76253,
+"stmt": "Winch is a type of musical instrument.",
+"claude": 0,
+"sid": 230,
+"no": 537
+},
+{
+"part": "x",
+"src": 69004,
+"stmt": "Takin is a type of fish.",
+"claude": 0,
+"sid": 465,
+"no": 538
+},
+{
+"part": "x",
+"src": 31584,
+"stmt": "Headscarf is a type of clothing.",
+"claude": 1,
+"sid": 582,
+"no": 539
+},
+{
+"part": "x",
+"src": 33807,
+"stmt": "Idealist is a type of disease.",
+"claude": 0,
+"sid": 268,
+"no": 540
+},
+{
+"part": "x",
+"src": 74896,
+"stmt": "Wallaby is a type of plant.",
+"claude": 0,
+"sid": 122,
+"no": 541
+},
+{
+"part": "x",
+"src": 64774,
+"stmt": "Spastic is a type of reptile.",
+"claude": 0,
+"sid": 488,
+"no": 542
+},
+{
+"part": "x",
+"src": 69679,
+"stmt": "Temp is a type of worker.",
+"claude": 1,
+"sid": 67,
+"no": 543
+},
+{
+"part": "x",
+"src": 18021,
+"stmt": "Councilman is a type of worker.",
+"claude": 1,
+"sid": 525,
+"no": 544
+},
+{
+"part": "x",
+"src": 36110,
+"stmt": "Isolationist is a type of living thing.",
+"claude": 1,
+"sid": 12,
+"no": 545
+},
+{
+"part": "x",
+"src": 64295,
+"stmt": "Songbird is a type of room.",
+"claude": 0,
+"sid": 277,
+"no": 546
+},
+{
+"part": "x",
+"src": 72264,
+"stmt": "Trusty is a type of game.",
+"claude": 0,
+"sid": 386,
+"no": 547
+},
+{
+"part": "x",
+"src": 12072,
+"stmt": "Carbine is a type of equipment.",
+"claude": 0,
+"sid": 124,
+"no": 548
+},
+{
+"part": "x",
+"src": 6801,
+"stmt": "Beloved is a type of fabric.",
+"claude": 0,
+"sid": 187,
+"no": 549
+},
+{
+"part": "x",
+"src": 8792,
+"stmt": "Bookkeeper is a type of reptile.",
+"claude": 0,
+"sid": 464,
+"no": 550
+},
+{
+"part": "x",
+"src": 33747,
+"stmt": "Ibis is a type of footwear.",
+"claude": 0,
+"sid": 562,
+"no": 551
+},
+{
+"part": "x",
+"src": 59678,
+"stmt": "Satchel is a type of man-made object.",
+"claude": 1,
+"sid": 308,
+"no": 552
+},
+{
+"part": "x",
+"src": 30498,
+"stmt": "Gynecologist is a type of living thing.",
+"claude": 1,
+"sid": 361,
+"no": 553
+},
+{
+"part": "x",
+"src": 66426,
+"stmt": "Stepson is a type of mammal.",
+"claude": 2,
+"sid": 294,
+"no": 554
+},
+{
+"part": "x",
+"src": 5981,
+"stmt": "Basset is a type of animal.",
+"claude": 1,
+"sid": 270,
+"no": 555
+},
+{
+"part": "x",
+"src": 63526,
+"stmt": "Snapdragon is a type of living thing.",
+"claude": 1,
+"sid": 495,
+"no": 556
+},
+{
+"part": "x",
+"src": 30882,
+"stmt": "Handkerchief is a type of man-made object.",
+"claude": 1,
+"sid": 271,
+"no": 557
+},
+{
+"part": "x",
+"src": 49665,
+"stmt": "Palmetto is a type of musical instrument.",
+"claude": 0,
+"sid": 483,
+"no": 558
+},
+{
+"part": "x",
+"src": 44827,
+"stmt": "Minster is a type of boat.",
+"claude": 0,
+"sid": 260,
+"no": 559
+},
+{
+"part": "x",
+"src": 7047,
+"stmt": "Betel is a type of tree.",
+"claude": 2,
+"sid": 158,
+"no": 560
+},
+{
+"part": "x",
+"src": 48162,
+"stmt": "Ombudsman is a type of living thing.",
+"claude": 1,
+"sid": 499,
+"no": 561
+},
+{
+"part": "x",
+"src": 33351,
+"stmt": "Hummingbird is a type of animal.",
+"claude": 1,
+"sid": 452,
+"no": 562
+},
+{
+"part": "x",
+"src": 16504,
+"stmt": "Conformist is a type of artist.",
+"claude": 0,
+"sid": 108,
+"no": 563
+},
+{
+"part": "rule",
+"src": 78659,
+"stmt": "Footwear is a type of clothing.",
+"claude": null,
+"no": 564
+},
+{
+"part": "x",
+"src": 72309,
+"stmt": "Tugboat is a type of disease.",
+"claude": 0,
+"sid": 166,
+"no": 565
+},
+{
+"part": "x",
+"src": 22494,
+"stmt": "Drunkard is a type of living thing.",
+"claude": 1,
+"sid": 116,
+"no": 566
+},
+{
+"part": "x",
+"src": 124,
+"stmt": "Abbess is a type of building.",
+"claude": 0,
+"sid": 635,
+"no": 567
+},
+{
+"part": "x",
+"src": 45545,
+"stmt": "Moray is a type of insect.",
+"claude": 0,
+"sid": 611,
+"no": 568
+},
+{
+"part": "x",
+"src": 18860,
+"stmt": "Cubby is a type of living thing.",
+"claude": 0,
+"sid": 340,
+"no": 569
+},
+{
+"part": "x",
+"src": 51387,
+"stmt": "Perpetrator is a type of insect.",
+"claude": 0,
+"sid": 523,
+"no": 570
+},
+{
+"part": "x",
+"src": 60694,
+"stmt": "Searchlight is a type of equipment.",
+"claude": 1,
+"sid": 463,
+"no": 571
+},
+{
+"part": "x",
+"src": 57670,
+"stmt": "Restaurant is a type of building.",
+"claude": 1,
+"sid": 102,
+"no": 572
+},
+{
+"part": "x",
+"src": 12467,
+"stmt": "Cattle is a type of animal.",
+"claude": 1,
+"sid": 435,
+"no": 573
+},
+{
+"part": "x",
+"src": 52944,
+"stmt": "Pleaser is a type of game.",
+"claude": 0,
+"sid": 418,
+"no": 574
+},
+{
+"part": "x",
+"src": 36683,
+"stmt": "Jodhpur is a type of vehicle.",
+"claude": 0,
+"sid": 691,
+"no": 575
+},
+{
+"part": "x",
+"src": 2531,
+"stmt": "Ani is a type of animal.",
+"claude": 1,
+"sid": 222,
+"no": 576
+},
+{
+"part": "x",
+"src": 21272,
+"stmt": "Dildo is a type of equipment.",
+"claude": 0,
+"sid": 572,
+"no": 577
+},
+{
+"part": "x",
+"src": 26727,
+"stmt": "Flea is a type of animal.",
+"claude": 1,
+"sid": 478,
+"no": 578
+},
+{
+"part": "x",
+"src": 53719,
+"stmt": "Porpoise is a type of athlete.",
+"claude": 0,
+"sid": 170,
+"no": 579
+},
+{
+"part": "x",
+"src": 49317,
+"stmt": "Pacifist is a type of insect.",
+"claude": 0,
+"sid": 426,
+"no": 580
+},
+{
+"part": "rule",
+"src": 78603,
+"stmt": "Clothing is a type of tool.",
+"claude": null,
+"no": 581
+},
+{
+"part": "x",
+"src": 46105,
+"stmt": "Murine is a type of food.",
+"claude": 0,
+"sid": 636,
+"no": 582
+},
+{
+"part": "x",
+"src": 75267,
+"stmt": "Warship is a type of fruit.",
+"claude": 0,
+"sid": 183,
+"no": 583
+},
+{
+"part": "x",
+"src": 5629,
+"stmt": "Barbell is a type of tool.",
+"claude": 0,
+"sid": 0,
+"no": 584
+},
+{
+"part": "x",
+"src": 19548,
+"stmt": "Cutthroat is a type of game.",
+"claude": 0,
+"sid": 297,
+"no": 585
+},
+{
+"part": "x",
+"src": 12512,
+"stmt": "Caveman is a type of living thing.",
+"claude": 1,
+"sid": 541,
+"no": 586
+},
+{
+"part": "rule",
+"src": 77833,
+"stmt": "Fruit is a type of food.",
+"claude": null,
+"no": 587
+},
+{
+"part": "x",
+"src": 65269,
+"stmt": "Spokeswoman is a type of body part.",
+"claude": 0,
+"sid": 184,
+"no": 588
+},
+{
+"part": "x",
+"src": 28852,
+"stmt": "Goldilocks is a type of flower.",
+"claude": 0,
+"sid": 471,
+"no": 589
+},
+{
+"part": "x",
+"src": 67654,
+"stmt": "Suitor is a type of person.",
+"claude": 1,
+"sid": 547,
+"no": 590
+},
+{
+"part": "x",
+"src": 8656,
+"stmt": "Bonsai is a type of plant.",
+"claude": 1,
+"sid": 76,
+"no": 591
+},
+{
+"part": "x",
+"src": 2519,
+"stmt": "Anesthesiologist is a type of worker.",
+"claude": 1,
+"sid": 698,
+"no": 592
+},
+{
+"part": "x",
+"src": 16360,
+"stmt": "Confessional is a type of toy.",
+"claude": 0,
+"sid": 516,
+"no": 593
+},
+{
+"part": "x",
+"src": 27052,
+"stmt": "Freelancer is a type of fish.",
+"claude": 0,
+"sid": 145,
+"no": 594
+},
+{
+"part": "x",
+"src": 58373,
+"stmt": "Rink is a type of sport.",
+"claude": 0,
+"sid": 421,
+"no": 595
+},
+{
+"part": "x",
+"src": 43168,
+"stmt": "Materiel is a type of equipment.",
+"claude": 1,
+"sid": 640,
+"no": 596
+},
+{
+"part": "x",
+"src": 16456,
+"stmt": "Confidante is a type of person.",
+"claude": 1,
+"sid": 423,
+"no": 597
+},
+{
+"part": "rule",
+"src": 79286,
+"stmt": "Disease is a type of weapon.",
+"claude": null,
+"no": 598
+},
+{
+"part": "x",
+"src": 22630,
+"stmt": "Dubbing is a type of game.",
+"claude": 0,
+"sid": 146,
+"no": 599
+},
+{
+"part": "x",
+"src": 58237,
+"stmt": "Rifle is a type of animal.",
+"claude": 0,
+"sid": 503,
+"no": 600
+},
+{
+"part": "x",
+"src": 76998,
+"stmt": "Wraparound is a type of metal.",
+"claude": 0,
+"sid": 111,
+"no": 601
+},
+{
+"part": "x",
+"src": 56246,
+"stmt": "Quartermaster is a type of person.",
+"claude": 1,
+"sid": 30,
+"no": 602
+},
+{
+"part": "x",
+"src": 19551,
+"stmt": "Cuttlefish is a type of animal.",
+"claude": 1,
+"sid": 405,
+"no": 603
+},
+{
+"part": "x",
+"src": 76507,
+"stmt": "Wombat is a type of tree.",
+"claude": 0,
+"sid": 139,
+"no": 604
+},
+{
+"part": "x",
+"src": 23254,
+"stmt": "Eft is a type of aircraft.",
+"claude": 0,
+"sid": 306,
+"no": 605
+},
+{
+"part": "x",
+"src": 18558,
+"stmt": "Critter is a type of equipment.",
+"claude": 0,
+"sid": 95,
+"no": 606
+},
+{
+"part": "x",
+"src": 25752,
+"stmt": "Felt is a type of material.",
+"claude": 1,
+"sid": 28,
+"no": 607
+},
+{
+"part": "x",
+"src": 12592,
+"stmt": "Celibate is a type of person.",
+"claude": 1,
+"sid": 658,
+"no": 608
+},
+{
+"part": "x",
+"src": 76338,
+"stmt": "Winger is a type of aircraft.",
+"claude": 0,
+"sid": 226,
+"no": 609
+},
+{
+"part": "x",
+"src": 60462,
+"stmt": "Scraper is a type of device.",
+"claude": 1,
+"sid": 529,
+"no": 610
+},
+{
+"part": "x",
+"src": 19458,
+"stmt": "Cutler is a type of living thing.",
+"claude": 1,
+"sid": 486,
+"no": 611
+},
+{
+"part": "x",
+"src": 26738,
+"stmt": "Flea is a type of vegetable.",
+"claude": 0,
+"sid": 157,
+"no": 612
+},
+{
+"part": "x",
+"src": 11309,
+"stmt": "Calico is a type of fabric.",
+"claude": 1,
+"sid": 447,
+"no": 613
+},
+{
+"part": "x",
+"src": 45083,
+"stmt": "Mockingbird is a type of bird.",
+"claude": 1,
+"sid": 438,
+"no": 614
+},
+{
+"part": "x",
+"src": 70750,
+"stmt": "Toddler is a type of mammal.",
+"claude": 2,
+"sid": 672,
+"no": 615
+},
+{
+"part": "x",
+"src": 31545,
+"stmt": "Headmistress is a type of worker.",
+"claude": 1,
+"sid": 47,
+"no": 616
+},
+{
+"part": "x",
+"src": 54038,
+"stmt": "Prankster is a type of person.",
+"claude": 1,
+"sid": 359,
+"no": 617
+},
+{
+"part": "rule",
+"src": 77878,
+"stmt": "Vegetable is a type of food.",
+"claude": null,
+"no": 618
+},
+{
+"part": "x",
+"src": 21141,
+"stmt": "Detonator is a type of furniture.",
+"claude": 0,
+"sid": 624,
+"no": 619
+},
+{
+"part": "x",
+"src": 49623,
+"stmt": "Paleontologist is a type of worker.",
+"claude": 1,
+"sid": 414,
+"no": 620
+},
+{
+"part": "rule",
+"src": 77821,
+"stmt": "Fruit is a type of living thing.",
+"claude": null,
+"no": 621
+},
+{
+"part": "x",
+"src": 62371,
+"stmt": "Sieve is a type of body part.",
+"claude": 0,
+"sid": 206,
+"no": 622
+},
+{
+"part": "x",
+"src": 21391,
+"stmt": "Dingo is a type of animal.",
+"claude": 1,
+"sid": 266,
+"no": 623
+},
+{
+"part": "rule",
+"src": 78341,
+"stmt": "Car is a type of container.",
+"claude": null,
+"no": 624
+},
+{
+"part": "x",
+"src": 61104,
+"stmt": "Senna is a type of man-made object.",
+"claude": 0,
+"sid": 128,
+"no": 625
+},
+{
+"part": "x",
+"src": 42688,
+"stmt": "Marten is a type of living thing.",
+"claude": 1,
+"sid": 245,
+"no": 626
+},
+{
+"part": "x",
+"src": 36192,
+"stmt": "Itinerant is a type of artist.",
+"claude": 0,
+"sid": 322,
+"no": 627
+},
+{
+"part": "x",
+"src": 25868,
+"stmt": "Fetus is a type of man-made object.",
+"claude": 0,
+"sid": 281,
+"no": 628
+},
+{
+"part": "rule",
+"src": 78512,
+"stmt": "Container is a type of man-made object.",
+"claude": null,
+"no": 629
+},
+{
+"part": "x",
+"src": 55873,
+"stmt": "Pulley is a type of footwear.",
+"claude": 0,
+"sid": 551,
+"no": 630
+},
+{
+"part": "rule",
+"src": 78381,
+"stmt": "Boat is a type of equipment.",
+"claude": null,
+"no": 631
+},
+{
+"part": "rule",
+"src": 78516,
+"stmt": "Container is a type of equipment.",
+"claude": null,
+"no": 632
+},
+{
+"part": "x",
+"src": 70673,
+"stmt": "Timepiece is a type of tool.",
+"claude": 0,
+"sid": 135,
+"no": 633
+},
+{
+"part": "rule",
+"src": 78611,
+"stmt": "Clothing is a type of weapon.",
+"claude": null,
+"no": 634
+},
+{
+"part": "x",
+"src": 29640,
+"stmt": "Greenhouse is a type of man-made object.",
+"claude": 1,
+"sid": 72,
+"no": 635
+},
+{
+"part": "x",
+"src": 6158,
+"stmt": "Bathrobe is a type of metal.",
+"claude": 0,
+"sid": 512,
+"no": 636
+},
+{
+"part": "x",
+"src": 24025,
+"stmt": "Entrepreneur is a type of food.",
+"claude": 0,
+"sid": 653,
+"no": 637
+},
+{
+"part": "rule",
+"src": 78857,
+"stmt": "Person is a type of animal.",
+"claude": null,
+"no": 638
+},
+{
+"part": "x",
+"src": 59221,
+"stmt": "Sailboat is a type of machine.",
+"claude": 0,
+"sid": 267,
+"no": 639
+},
+{
+"part": "x",
+"src": 35547,
+"stmt": "Interviewee is a type of worker.",
+"claude": 0,
+"sid": 460,
+"no": 640
+},
+{
+"part": "x",
+"src": 32544,
+"stmt": "Hoist is a type of car.",
+"claude": 0,
+"sid": 231,
+"no": 641
+},
+{
+"part": "x",
+"src": 72781,
+"stmt": "Underdog is a type of tree.",
+"claude": 0,
+"sid": 77,
+"no": 642
+},
+{
+"part": "x",
+"src": 39149,
+"stmt": "Lender is a type of bird.",
+"claude": 0,
+"sid": 445,
+"no": 643
+},
+{
+"part": "x",
+"src": 24298,
+"stmt": "Erotic is a type of flower.",
+"claude": 0,
+"sid": 276,
+"no": 644
+},
+{
+"part": "x",
+"src": 25081,
+"stmt": "Extremist is a type of fruit.",
+"claude": 0,
+"sid": 181,
+"no": 645
+},
+{
+"part": "x",
+"src": 76530,
+"stmt": "Wombat is a type of building.",
+"claude": 0,
+"sid": 69,
+"no": 646
+},
+{
+"part": "x",
+"src": 66729,
+"stmt": "Stockbroker is a type of footwear.",
+"claude": 0,
+"sid": 424,
+"no": 647
+},
+{
+"part": "x",
+"src": 73976,
+"stmt": "Vermouth is a type of plant.",
+"claude": 0,
+"sid": 433,
+"no": 648
+},
+{
+"part": "x",
+"src": 4500,
+"stmt": "Auctioneer is a type of material.",
+"claude": 0,
+"sid": 141,
+"no": 649
+},
+{
+"part": "x",
+"src": 22311,
+"stmt": "Dredge is a type of animal.",
+"claude": 0,
+"sid": 643,
+"no": 650
+},
+{
+"part": "x",
+"src": 62172,
+"stmt": "Shrine is a type of container.",
+"claude": 0,
+"sid": 399,
+"no": 651
+},
+{
+"part": "x",
+"src": 67424,
+"stmt": "Stupid is a type of person.",
+"claude": 0,
+"sid": 37,
+"no": 652
+},
+{
+"part": "x",
+"src": 1525,
+"stmt": "Airship is a type of dog.",
+"claude": 0,
+"sid": 408,
+"no": 653
+},
+{
+"part": "x",
+"src": 9230,
+"stmt": "Bovine is a type of toy.",
+"claude": 0,
+"sid": 169,
+"no": 654
+},
+{
+"part": "x",
+"src": 4704,
+"stmt": "Avenger is a type of vegetable.",
+"claude": 0,
+"sid": 243,
+"no": 655
+},
+{
+"part": "x",
+"src": 62604,
+"stmt": "Simulator is a type of game.",
+"claude": 0,
+"sid": 147,
+"no": 656
+},
+{
+"part": "x",
+"src": 74888,
+"stmt": "Wallaby is a type of living thing.",
+"claude": 1,
+"sid": 131,
+"no": 657
+},
+{
+"part": "x",
+"src": 40581,
+"stmt": "Longhorn is a type of tree.",
+"claude": 0,
+"sid": 490,
+"no": 658
+},
+{
+"part": "x",
+"src": 46575,
+"stmt": "National is a type of boat.",
+"claude": 0,
+"sid": 173,
+"no": 659
+},
+{
+"part": "x",
+"src": 42285,
+"stmt": "Marc is a type of fruit.",
+"claude": 0,
+"sid": 165,
+"no": 660
+},
+{
+"part": "x",
+"src": 4546,
+"stmt": "Audiovisual is a type of material.",
+"claude": 0,
+"sid": 510,
+"no": 661
+},
+{
+"part": "x",
+"src": 24947,
+"stmt": "Exporter is a type of drink.",
+"claude": 0,
+"sid": 506,
+"no": 662
+},
+{
+"part": "x",
+"src": 70765,
+"stmt": "Toddler is a type of tool.",
+"claude": 0,
+"sid": 401,
+"no": 663
+},
+{
+"part": "rule",
+"src": 79216,
+"stmt": "Organ is a type of living thing.",
+"claude": null,
+"no": 664
+},
+{
+"part": "x",
+"src": 3461,
+"stmt": "Aristocrat is a type of fruit.",
+"claude": 0,
+"sid": 683,
+"no": 665
+},
+{
+"part": "x",
+"src": 60760,
+"stmt": "Secessionist is a type of metal.",
+"claude": 0,
+"sid": 186,
+"no": 666
+},
+{
+"part": "x",
+"src": 58556,
+"stmt": "Roadhouse is a type of game.",
+"claude": 0,
+"sid": 163,
+"no": 667
+},
+{
+"part": "rule",
+"src": 78946,
+"stmt": "Artist is a type of living thing.",
+"claude": null,
+"no": 668
+},
+{
+"part": "x",
+"src": 26337,
+"stmt": "Firearm is a type of weapon.",
+"claude": 1,
+"sid": 566,
+"no": 669
+},
+{
+"part": "x",
+"src": 67080,
+"stmt": "Stowaway is a type of vegetable.",
+"claude": 0,
+"sid": 381,
+"no": 670
+},
+{
+"part": "x",
+"src": 31894,
+"stmt": "Helicopter is a type of man-made object.",
+"claude": 1,
+"sid": 113,
+"no": 671
+},
+{
+"part": "x",
+"src": 58602,
+"stmt": "Robber is a type of game.",
+"claude": 0,
+"sid": 618,
+"no": 672
+},
+{
+"part": "x",
+"src": 54280,
+"stmt": "Primrose is a type of living thing.",
+"claude": 1,
+"sid": 29,
+"no": 673
+},
+{
+"part": "x",
+"src": 56621,
+"stmt": "Rancher is a type of body part.",
+"claude": 0,
+"sid": 311,
+"no": 674
+},
+{
+"part": "rule",
+"src": 77981,
+"stmt": "Dish is a type of container.",
+"claude": null,
+"no": 675
+},
+{
+"part": "x",
+"src": 42594,
+"stmt": "Marksman is a type of game.",
+"claude": 0,
+"sid": 515,
+"no": 676
+},
+{
+"part": "x",
+"src": 66596,
+"stmt": "Stickler is a type of person.",
+"claude": 1,
+"sid": 325,
+"no": 677
+},
+{
+"part": "x",
+"src": 63698,
+"stmt": "Snob is a type of person.",
+"claude": 1,
+"sid": 326,
+"no": 678
+},
+{
+"part": "x",
+"src": 58651,
+"stmt": "Roebuck is a type of animal.",
+"claude": 1,
+"sid": 612,
+"no": 679
+},
+{
+"part": "x",
+"src": 11863,
+"stmt": "Cantilever is a type of body part.",
+"claude": 0,
+"sid": 631,
+"no": 680
+},
+{
+"part": "x",
+"src": 7440,
+"stmt": "Bilingual is a type of person.",
+"claude": 1,
+"sid": 8,
+"no": 681
+},
+{
+"part": "x",
+"src": 27644,
+"stmt": "Gasket is a type of game.",
+"claude": 0,
+"sid": 11,
+"no": 682
+},
+{
+"part": "rule",
+"src": 78153,
+"stmt": "Device is a type of tool.",
+"claude": null,
+"no": 683
+},
+{
+"part": "rule",
+"src": 77518,
+"stmt": "Fish is a type of food.",
+"claude": null,
+"no": 684
+},
+{
+"part": "x",
+"src": 44088,
+"stmt": "Microphone is a type of equipment.",
+"claude": 1,
+"sid": 27,
+"no": 685
+},
+{
+"part": "x",
+"src": 20012,
+"stmt": "Dandelion is a type of mammal.",
+"claude": 0,
+"sid": 439,
+"no": 686
+},
+{
+"part": "x",
+"src": 49513,
+"stmt": "Paintbrush is a type of tool.",
+"claude": 1,
+"sid": 70,
+"no": 687
+},
+{
+"part": "x",
+"src": 72102,
+"stmt": "Tripod is a type of equipment.",
+"claude": 1,
+"sid": 684,
+"no": 688
+},
+{
+"part": "x",
+"src": 47196,
+"stmt": "Newlywed is a type of living thing.",
+"claude": 1,
+"sid": 155,
+"no": 689
+},
+{
+"part": "x",
+"src": 26258,
+"stmt": "Finch is a type of material.",
+"claude": 0,
+"sid": 156,
+"no": 690
+},
+{
+"part": "x",
+"src": 51198,
+"stmt": "Perfectionist is a type of living thing.",
+"claude": 1,
+"sid": 587,
+"no": 691
+},
+{
+"part": "x",
+"src": 893,
+"stmt": "Actuator is a type of machine.",
+"claude": 1,
+"sid": 23,
+"no": 692
+},
+{
+"part": "x",
+"src": 25022,
+"stmt": "Expressionist is a type of game.",
+"claude": 0,
+"sid": 522,
+"no": 693
+},
+{
+"part": "rule",
+"src": 77948,
+"stmt": "Food is a type of material.",
+"claude": null,
+"no": 694
+},
+{
+"part": "x",
+"src": 68084,
+"stmt": "Surrealist is a type of fish.",
+"claude": 0,
+"sid": 461,
+"no": 695
+},
+{
+"part": "x",
+"src": 39244,
+"stmt": "Letterman is a type of reptile.",
+"claude": 0,
+"sid": 575,
+"no": 696
+},
+{
+"part": "x",
+"src": 40640,
+"stmt": "Loom is a type of car.",
+"claude": 0,
+"sid": 78,
+"no": 697
+},
+{
+"part": "rule",
+"src": 78423,
+"stmt": "Aircraft is a type of tool.",
+"claude": null,
+"no": 698
+},
+{
+"part": "x",
+"src": 18625,
+"stmt": "Crocodile is a type of body part.",
+"claude": 0,
+"sid": 553,
+"no": 699
+},
+{
+"part": "x",
+"src": 54362,
+"stmt": "Prince is a type of artist.",
+"claude": 0,
+"sid": 33,
+"no": 700
+},
+{
+"part": "x",
+"src": 70110,
+"stmt": "Theologian is a type of reptile.",
+"claude": 0,
+"sid": 177,
+"no": 701
+},
+{
+"part": "x",
+"src": 19090,
+"stmt": "Curate is a type of living thing.",
+"claude": 1,
+"sid": 390,
+"no": 702
+},
+{
+"part": "rule",
+"src": 78288,
+"stmt": "Vehicle is a type of tool.",
+"claude": null,
+"no": 703
+},
+{
+"part": "x",
+"src": 67240,
+"stmt": "Strategist is a type of person.",
+"claude": 1,
+"sid": 430,
+"no": 704
+},
+{
+"part": "x",
+"src": 33431,
+"stmt": "Huntress is a type of worker.",
+"claude": 0,
+"sid": 126,
+"no": 705
+},
+{
+"part": "x",
+"src": 31056,
+"stmt": "Harlequin is a type of reptile.",
+"claude": 0,
+"sid": 332,
+"no": 706
+},
+{
+"part": "x",
+"src": 72880,
+"stmt": "Underpants is a type of man-made object.",
+"claude": 1,
+"sid": 174,
+"no": 707
+},
+{
+"part": "x",
+"src": 5978,
+"stmt": "Bartender is a type of game.",
+"claude": 0,
+"sid": 291,
+"no": 708
+},
+{
+"part": "x",
+"src": 30563,
+"stmt": "Gyroscope is a type of machine.",
+"claude": 2,
+"sid": 444,
+"no": 709
+},
+{
+"part": "x",
+"src": 73764,
+"stmt": "Vase is a type of container.",
+"claude": 1,
+"sid": 356,
+"no": 710
+},
+{
+"part": "rule",
+"src": 78468,
+"stmt": "Weapon is a type of tool.",
+"claude": null,
+"no": 711
+},
+{
+"part": "x",
+"src": 75484,
+"stmt": "Waterfowl is a type of game.",
+"claude": 0,
+"sid": 657,
+"no": 712
+},
+{
+"part": "x",
+"src": 45250,
+"stmt": "Modernist is a type of building.",
+"claude": 0,
+"sid": 307,
+"no": 713
+},
+{
+"part": "x",
+"src": 77280,
+"stmt": "Zoologist is a type of living thing.",
+"claude": 1,
+"sid": 52,
+"no": 714
+},
+{
+"part": "x",
+"src": 66887,
+"stmt": "Stoner is a type of bird.",
+"claude": 0,
+"sid": 290,
+"no": 715
+},
+{
+"part": "x",
+"src": 57419,
+"stmt": "Repairman is a type of fruit.",
+"claude": 0,
+"sid": 450,
+"no": 716
+},
+{
+"part": "x",
+"src": 74855,
+"stmt": "Waitress is a type of food.",
+"claude": 0,
+"sid": 262,
+"no": 717
+},
+{
+"part": "x",
+"src": 36926,
+"stmt": "Juvenile is a type of person.",
+"claude": 1,
+"sid": 678,
+"no": 718
+},
+{
+"part": "x",
+"src": 39481,
+"stmt": "Librarian is a type of food.",
+"claude": 0,
+"sid": 585,
+"no": 719
+},
+{
+"part": "x",
+"src": 10437,
+"stmt": "Burglar is a type of body part.",
+"claude": 0,
+"sid": 109,
+"no": 720
+},
+{
+"part": "rule",
+"src": 78066,
+"stmt": "Man-made object is a type of vehicle.",
+"claude": null,
+"no": 721
+},
+{
+"part": "x",
+"src": 28210,
+"stmt": "Genitalia is a type of vegetable.",
+"claude": 0,
+"sid": 697,
+"no": 722
+},
+{
+"part": "x",
+"src": 30068,
+"stmt": "Grubby is a type of toy.",
+"claude": 0,
+"sid": 32,
+"no": 723
+},
+{
+"part": "x",
+"src": 74321,
+"stmt": "Violin is a type of musical instrument.",
+"claude": 1,
+"sid": 328,
+"no": 724
+},
+{
+"part": "x",
+"src": 21472,
+"stmt": "Dinky is a type of artist.",
+"claude": 0,
+"sid": 44,
+"no": 725
+},
+{
+"part": "x",
+"src": 29254,
+"stmt": "Gramophone is a type of game.",
+"claude": 0,
+"sid": 6,
+"no": 726
+},
+{
+"part": "x",
+"src": 56166,
+"stmt": "Purveyor is a type of living thing.",
+"claude": 1,
+"sid": 220,
+"no": 727
+},
+{
+"part": "x",
+"src": 63708,
+"stmt": "Snob is a type of game.",
+"claude": 0,
+"sid": 115,
+"no": 728
+},
+{
+"part": "x",
+"src": 4754,
+"stmt": "Aviator is a type of man-made object.",
+"claude": 0,
+"sid": 250,
+"no": 729
+},
+{
+"part": "x",
+"src": 6439,
+"stmt": "Beagle is a type of sport.",
+"claude": 0,
+"sid": 491,
+"no": 730
+},
+{
+"part": "x",
+"src": 1763,
+"stmt": "Alcoholic is a type of drink.",
+"claude": 2,
+"sid": 489,
+"no": 731
+},
+{
+"part": "x",
+"src": 24920,
+"stmt": "Expert is a type of person.",
+"claude": 1,
+"sid": 593,
+"no": 732
+},
+{
+"part": "x",
+"src": 15859,
+"stmt": "Commoner is a type of worker.",
+"claude": 0,
+"sid": 86,
+"no": 733
+},
+{
+"part": "x",
+"src": 15870,
+"stmt": "Communicator is a type of living thing.",
+"claude": 1,
+"sid": 239,
+"no": 734
+},
+{
+"part": "x",
+"src": 65849,
+"stmt": "Stapler is a type of boat.",
+"claude": 0,
+"sid": 638,
+"no": 735
+},
+{
+"part": "rule",
+"src": 77817,
+"stmt": "Flower is a type of organ.",
+"claude": null,
+"no": 736
+},
+{
+"part": "x",
+"src": 58006,
+"stmt": "Rheumatic is a type of living thing.",
+"claude": 1,
+"sid": 641,
+"no": 737
+},
+{
+"part": "x",
+"src": 73414,
+"stmt": "Usurper is a type of game.",
+"claude": 0,
+"sid": 664,
+"no": 738
+},
+{
+"part": "x",
+"src": 46448,
+"stmt": "Narc is a type of person.",
+"claude": 1,
+"sid": 388,
+"no": 739
+},
+{
+"part": "x",
+"src": 30247,
+"stmt": "Guerrilla is a type of weapon.",
+"claude": 0,
+"sid": 41,
+"no": 740
+},
+{
+"part": "x",
+"src": 11426,
+"stmt": "Camcorder is a type of device.",
+"claude": 1,
+"sid": 655,
+"no": 741
+},
+{
+"part": "x",
+"src": 14439,
+"stmt": "Clary is a type of body part.",
+"claude": 0,
+"sid": 312,
+"no": 742
+},
+{
+"part": "rule",
+"src": 78606,
+"stmt": "Clothing is a type of equipment.",
+"claude": null,
+"no": 743
+},
+{
+"part": "x",
+"src": 70622,
+"stmt": "Tights is a type of vegetable.",
+"claude": 0,
+"sid": 573,
+"no": 744
+},
+{
+"part": "rule",
+"src": 78740,
+"stmt": "Musical instrument is a type of machine.",
+"claude": null,
+"no": 745
+},
+{
+"part": "x",
+"src": 45680,
+"stmt": "Mosquito is a type of mammal.",
+"claude": 0,
+"sid": 363,
+"no": 746
+},
+{
+"part": "x",
+"src": 44580,
+"stmt": "Mimic is a type of reptile.",
+"claude": 0,
+"sid": 54,
+"no": 747
+},
+{
+"part": "x",
+"src": 20346,
+"stmt": "Decadent is a type of dish.",
+"claude": 0,
+"sid": 364,
+"no": 748
+},
+{
+"part": "x",
+"src": 23436,
+"stmt": "Electrode is a type of car.",
+"claude": 0,
+"sid": 556,
+"no": 749
+},
+{
+"part": "x",
+"src": 73030,
+"stmt": "Underwear is a type of clothing.",
+"claude": 1,
+"sid": 288,
+"no": 750
+},
+{
+"part": "x",
+"src": 47001,
+"stmt": "Neurologist is a type of worker.",
+"claude": 1,
+"sid": 91,
+"no": 751
+},
+{
+"part": "x",
+"src": 25220,
+"stmt": "Facilitator is a type of vegetable.",
+"claude": 0,
+"sid": 178,
+"no": 752
+},
+{
+"part": "x",
+"src": 17067,
+"stmt": "Contrarian is a type of animal.",
+"claude": 0,
+"sid": 434,
+"no": 753
+},
+{
+"part": "x",
+"src": 39902,
+"stmt": "Lingerie is a type of equipment.",
+"claude": 0,
+"sid": 675,
+"no": 754
+},
+{
+"part": "x",
+"src": 2877,
+"stmt": "Apparel is a type of weapon.",
+"claude": 0,
+"sid": 469,
+"no": 755
+},
+{
+"part": "x",
+"src": 38093,
+"stmt": "Ladybug is a type of insect.",
+"claude": 1,
+"sid": 339,
+"no": 756
+},
+{
+"part": "rule",
+"src": 78065,
+"stmt": "Man-made object is a type of equipment.",
+"claude": null,
+"no": 757
+},
+{
+"part": "x",
+"src": 19437,
+"stmt": "Customer is a type of weapon.",
+"claude": 0,
+"sid": 598,
+"no": 758
+},
+{
+"part": "x",
+"src": 52995,
+"stmt": "Plover is a type of bird.",
+"claude": 1,
+"sid": 329,
+"no": 759
+},
+{
+"part": "x",
+"src": 3008,
+"stmt": "Applicator is a type of device.",
+"claude": 1,
+"sid": 342,
+"no": 760
+},
+{
+"part": "x",
+"src": 41919,
+"stmt": "Manatee is a type of food.",
+"claude": 0,
+"sid": 472,
+"no": 761
+},
+{
+"part": "x",
+"src": 17106,
+"stmt": "Contrarian is a type of metal.",
+"claude": 0,
+"sid": 397,
+"no": 762
+},
+{
+"part": "x",
+"src": 64651,
+"stmt": "Spacecraft is a type of vehicle.",
+"claude": 1,
+"sid": 199,
+"no": 763
+},
+{
+"part": "x",
+"src": 66773,
+"stmt": "Stockholder is a type of furniture.",
+"claude": 0,
+"sid": 496,
+"no": 764
+},
+{
+"part": "x",
+"src": 24286,
+"stmt": "Erica is a type of game.",
+"claude": 0,
+"sid": 217,
+"no": 765
+},
+{
+"part": "x",
+"src": 66637,
+"stmt": "Stiletto is a type of footwear.",
+"claude": 1,
+"sid": 535,
+"no": 766
+},
+{
+"part": "x",
+"src": 64322,
+"stmt": "Songwriter is a type of dish.",
+"claude": 0,
+"sid": 180,
+"no": 767
+},
+{
+"part": "x",
+"src": 14245,
+"stmt": "Clamp is a type of musical instrument.",
+"claude": 0,
+"sid": 205,
+"no": 768
+},
+{
+"part": "x",
+"src": 15915,
+"stmt": "Communicator is a type of sport.",
+"claude": 0,
+"sid": 511,
+"no": 769
+},
+{
+"part": "x",
+"src": 6518,
+"stmt": "Bedroom is a type of building.",
+"claude": 0,
+"sid": 138,
+"no": 770
+},
+{
+"part": "x",
+"src": 26403,
+"stmt": "Firstborn is a type of sport.",
+"claude": 0,
+"sid": 459,
+"no": 771
+},
+{
+"part": "x",
+"src": 6944,
+"stmt": "Bereaved is a type of game.",
+"claude": 0,
+"sid": 468,
+"no": 772
+},
+{
+"part": "x",
+"src": 70296,
+"stmt": "Thermos is a type of plant.",
+"claude": 0,
+"sid": 597,
+"no": 773
+},
+{
+"part": "x",
+"src": 64649,
+"stmt": "Spacecraft is a type of machine.",
+"claude": 2,
+"sid": 579,
+"no": 774
+},
+{
+"part": "x",
+"src": 67046,
+"stmt": "Stork is a type of aircraft.",
+"claude": 0,
+"sid": 514,
+"no": 775
+},
+{
+"part": "x",
+"src": 72742,
+"stmt": "Undercarriage is a type of man-made object.",
+"claude": 1,
+"sid": 215,
+"no": 776
+},
+{
+"part": "x",
+"src": 76404,
+"stmt": "Wingman is a type of game.",
+"claude": 0,
+"sid": 617,
+"no": 777
+},
+{
+"part": "x",
+"src": 2473,
+"stmt": "Android is a type of worker.",
+"claude": 0,
+"sid": 651,
+"no": 778
+},
+{
+"part": "x",
+"src": 70196,
+"stmt": "Therapist is a type of living thing.",
+"claude": 1,
+"sid": 466,
+"no": 779
+},
+{
+"part": "x",
+"src": 24518,
+"stmt": "Eunuch is a type of living thing.",
+"claude": 1,
+"sid": 200,
+"no": 780
+},
+{
+"part": "rule",
+"src": 78696,
+"stmt": "Toy is a type of equipment.",
+"claude": null,
+"no": 781
+},
+{
+"part": "x",
+"src": 21130,
+"stmt": "Detonator is a type of man-made object.",
+"claude": 1,
+"sid": 673,
+"no": 782
+},
+{
+"part": "x",
+"src": 14231,
+"stmt": "Clamp is a type of tool.",
+"claude": 1,
+"sid": 13,
+"no": 783
+},
+{
+"part": "x",
+"src": 9845,
+"stmt": "Brill is a type of animal.",
+"claude": 1,
+"sid": 185,
+"no": 784
+},
+{
+"part": "x",
+"src": 17609,
+"stmt": "Cornerback is a type of athlete.",
+"claude": 1,
+"sid": 89,
+"no": 785
+},
+{
+"part": "x",
+"src": 35875,
+"stmt": "Inventor is a type of body part.",
+"claude": 0,
+"sid": 394,
+"no": 786
+},
+{
+"part": "x",
+"src": 53689,
+"stmt": "Porpoise is a type of dog.",
+"claude": 0,
+"sid": 2,
+"no": 787
+},
+{
+"part": "x",
+"src": 747,
+"stmt": "Achiever is a type of fruit.",
+"claude": 0,
+"sid": 74,
+"no": 788
+},
+{
+"part": "rule",
+"src": 77862,
+"stmt": "Fruit is a type of organ.",
+"claude": null,
+"no": 789
+},
+{
+"part": "x",
+"src": 17508,
+"stmt": "Corgi is a type of clothing.",
+"claude": 0,
+"sid": 385,
+"no": 790
+},
+{
+"part": "x",
+"src": 59847,
+"stmt": "Sauna is a type of animal.",
+"claude": 0,
+"sid": 249,
+"no": 791
+},
+{
+"part": "x",
+"src": 32108,
+"stmt": "Hillbilly is a type of living thing.",
+"claude": 1,
+"sid": 479,
+"no": 792
+},
+{
+"part": "x",
+"src": 5554,
+"stmt": "Bankrupt is a type of person.",
+"claude": 1,
+"sid": 537,
+"no": 793
+},
+{
+"part": "x",
+"src": 45166,
+"stmt": "Mod is a type of metal.",
+"claude": 0,
+"sid": 275,
+"no": 794
+},
+{
+"part": "rule",
+"src": 78791,
+"stmt": "Building is a type of weapon.",
+"claude": null,
+"no": 795
+},
+{
+"part": "x",
+"src": 5381,
+"stmt": "Ballroom is a type of sport.",
+"claude": 0,
+"sid": 530,
+"no": 796
+},
+{
+"part": "x",
+"src": 74647,
+"stmt": "Vole is a type of worker.",
+"claude": 0,
+"sid": 213,
+"no": 797
+},
+{
+"part": "rule",
+"src": 78115,
+"stmt": "Tool is a type of weapon.",
+"claude": null,
+"no": 798
+},
+{
+"part": "x",
+"src": 49108,
+"stmt": "Outhouse is a type of container.",
+"claude": 0,
+"sid": 323,
+"no": 799
+},
+{
+"part": "x",
+"src": 59135,
+"stmt": "Sagebrush is a type of weapon.",
+"claude": 0,
+"sid": 82,
+"no": 800
+},
+{
+"part": "x",
+"src": 35685,
+"stmt": "Introvert is a type of worker.",
+"claude": 0,
+"sid": 402,
+"no": 801
+},
+{
+"part": "x",
+"src": 12546,
+"stmt": "Caveman is a type of person.",
+"claude": 1,
+"sid": 505,
+"no": 802
+}
+]
