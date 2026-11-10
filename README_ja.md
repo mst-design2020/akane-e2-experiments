@@ -54,7 +54,7 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 
 ## 計算のしかた
 
-コードが実際に何を計算しているかを、式で書きます。コードがこの式どおりかは `analysis/check_formulas.py` で確かめられます（この節の最後）。
+コードが実際に何を計算しているかを、式で書きます。コードがこの式どおりかは `analysis/check_formulas.py` で確かめられます（この節の最後）。E6〜E8の式は「[E6〜E8の計算のしかた](#e6e8の計算のしかた)」にあります。
 
 **AIから受け取るもの。** 問題 $i$ ごとに「Is the following statement true? Answer Yes or No only.」と聞き、最初の語の「Yes」と「No」のロジットの差を $s_i$ とします。ラベルの組 $k$（例：植物と動物）ごとに「両立しないか」を2つの順番で聞き、Yes−Noのロジットの平均を $z_k$ とします。E2-5からの聞き方は「Is it true that no plant is an animal? Answer Yes or No only.」（聞き方P2）です。「No」が両立しないを意味する聞き方（E2-4、E2-5のP0・P1）では符号を逆にし、いつも $z_k > 0$ が「AIは両立しないと言った」になるようにしています。
 
@@ -289,6 +289,53 @@ E7の鎖はよく途中で意味を取り違えました（50本中30本）。E8
 - 主な比べ1（⑧A対⑧D）：0.050対0.037。5回ともDが良いが差は0.011〜0.013で、決めておいた0.02に届かず、決まりでは同着。
 - 主な比べ2（⑥対 網＋打ち消し）：網の方が悪い（0.091対0.047、5/5）。学習用の分で選んだ打ち消しの強さは25回中23回で0。打ち消しは効かなかった。
 - 新しい300個（決め方はすべて700個で固定）：AURC ⑧D 0.039、⑥D 0.043、③ 0.055、E6の特徴＋学習 0.055、① 0.118。Gemmaの自信との差ははっきり（0.079、語で取り直した95%の幅 0.043〜0.121）。1段だけのNLIとの差は0.017（−0.007〜0.040）で、300個では言い切れない。新しい300個は700個より易しかったようです。
+
+## E6〜E8の計算のしかた
+
+コードが実際に何を計算しているかを、式で書きます。E8のコードがこの式どおりかは `analysis/e8/check_formulas_e8.py` で確かめられます（この節の最後）。
+
+**問いと、外の判定。** 問いは「X is a type of C.」です（X は物の語、C は46分類のどれか）。Gemmaの答えは、E4と同じ聞き方での Yes−No のロジット $\ell$ です。外の判定には NLI（DeBERTa-v3-large-mnli-fever-anli-ling-wanli）を使い、前提 $p$ から仮説 $h$ が言える確率（entailment の確率）を $e(p \Rightarrow h)$ と書きます。前提はいつも `"w" means: <説明文>`、仮説は `W is a type of <語>.` の形です。
+
+**1段だけ（E6の③）。** 物の語 X の Wiktionary の名詞の意味を $d_1,\dots,d_K$（最大8つ）とすると
+
+$$ s_1 = \max_{k} \; e\big(\text{"X" means: } d_k \;\Rightarrow\; \text{X is a type of C.}\big) $$
+
+説明文が取れなかった語では $s_1 = \sigma(\ell)$ です。E6の②（聞き方に入れる）は、説明文を番号つきで質問の前に並べて聞き直したときの Yes−No のロジット $\ell'$ を使い $\sigma(\ell')$、④（網）は $\sigma\big(\ell + w\cdot \mathrm{logit}(1-\prod_k (1-e_k))\big)$ で、$w \in \{0, 0.25, \dots, 4\}$ を学習用の分で選びます（$e_k$ は上の各意味の値）。
+
+**鎖の点。** 点 $n = (w, j)$ は「語 $w$ の $j$ 番目の意味」で、その説明文を $d_n$、頭の名詞（spaCy の最初の名詞句の主辞と少しの決まり）を $g(n)$ とします。
+
+- 段の確かさ：$\;\epsilon_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } g(n).)$
+- 着き：$\;a_n = 1$（$w$ が C そのもの）、それ以外は $a_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of C.})$
+- 次の点 $\mathrm{ch}(n)$：A は $g(n)$ の最初の4つの意味ぜんぶ。B・C・D は $g(n)$ の意味を1つ $j^*$ に決めます（$g(n)$ の意味が1つなら $j^* = 1$）。
+  - B：$j^* =$ 「obsolete・archaic・rare・slang などの印がない」最初の意味（全部に印があれば1番目）
+  - C：$j^* = \arg\max_j \cos\big(v(d_n),\, v(d_{g(n),j})\big)$（$v$ は all-mpnet-base-v2 の文のベクトル）
+  - D：Gemma に `Dictionary definition of "w": d_n … which meaning of the word "g" is used? 1. … 2. … Answer with the number only.` と聞き、答えの最初の語での数字「1」「2」…のロジットを softmax して、一番高い番号。C（分類）は見せません。
+
+**一番強い道（⑥）。** 3段までの道の、段の確かさの掛け算と着きの最大です。
+
+$$ S(n, t) = \begin{cases} a_n & a_n = 1 \text{ または } t = 0 \\ \max\big(a_n,\; \epsilon_n \cdot \max_{c \in \mathrm{ch}(n)} S(c, t-1)\big) & \text{それ以外} \end{cases} \qquad s_6 = \max_k S\big((X,k), 3\big) $$
+
+つまり、道 $(X,k)=n_0 \to n_1 \to \dots \to n_t$（$t \le 3$）ごとの $\epsilon_{n_0}\cdots\epsilon_{n_{t-1}}\, a_{n_t}$ の最大です。⑥b（道の「または」）は、全部の段が $\epsilon > 0.5$ で着きが $a > 0.5$ の道が1本でもあれば「はい」とします。
+
+**網（⑦、E8の打ち消し入り）。** 鎖の点ごとに $z_n \in \{0,1\}$（「この意味の $w$ は C の一種」）と、根 $z_R$（「X は C の一種」）を置きます。
+
+$$ P(z) \;\propto\; \exp\Big( b\, z_R + \sum_n u_n z_n \Big) \prod_{(p \to c)} (1 - \varepsilon\, w_{pc})^{[z_p = 0,\; z_c = 1]}, \qquad u_n = \beta\,\mathrm{logit}(a_n) + b - \gamma\, \nu_n $$
+
+- つながり $(p \to c)$ は、根から物の語の各意味（$w = 1$）と、鎖の段（$w = \epsilon_p$）です。「子が C の一種なのに親がそうでない」ときだけ確率を弱めます。
+- $a_n = 1$ の点は $u_n = 30$（ほぼ固定）にします。
+- 打ち消し：$\nu_n = \max_{G} e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } G.)$。$G$ は、C と両立しない大きなまとまり（animal・plant・food・man-made object・material・body part・disease・activity のうち、常識で決めた表で C と重ならないもの）です。$\gamma = 0$ なら E7 と同じ形です。
+- 出すのは $P(z_R = 1)$ で、輪のある確率伝搬（同時に更新、ダンピング0.5、40回）で求めます。$(\beta, b, \varepsilon) \in \{0.25,0.5,1\} \times \{-1,0,1,2\} \times \{0.8,0.95,0.99\}$ を学習用の分の対数損失で選び、そのうえで $\gamma \in \{0,1,2,4,8\}$ を選びます。
+- E7の網は、点が「語」で意味に分けていません。点の手がかりは意味の中で一番高い着き、同じ2語の間の段は $\prod_k (1 - \varepsilon\,\epsilon_k)$ にまとめています（noisy-OR）。
+
+**学習（⑤・⑧）。** ⑤は E6 の特徴（$\ell$、$\max_k e_k$、$\max_k c_k$、$\mathrm{mean}_k e_k$、$\mathrm{mean}_k c_k$、$1-\prod_k(1-e_k)$、$K$、説明文の有無。$c_k$ は矛盾の確率）でのロジスティック回帰。⑧はそれに $s_6$、⑥b、一番強い道の段の数、網の値、$\max_k \nu_{(X,k)}$、一番強い道の最初の頭の名詞の意味の数、鎖があるか、を足したものです。
+
+**物差し。** どの方法も $p = P(\text{正しい})$ を出し、答え $=[p > 0.5]$、確かさ $= \max(p, 1-p)$ です。確かな順に並べて上から $j$ 個答えたときの誤り率を $r_j$ として
+
+$$ \mathrm{AURC} = \frac{1}{N} \sum_{j=1}^{N} r_j $$
+
+（小さいほど良い）。物の語ごとに5つに分け（seed 600〜604）、4つで選び・学習して残り1つで測ります。
+
+**コードが式どおりかの確かめ（E8）。** `cd analysis/e8; python check_formulas_e8.py ../../data/E8_chains_nli.json`（CPUで十数秒）。結果：一番強い道は、道を全部数え上げた式と、4,000組（1,000問×A〜D）で一致（ずれ $10^{-16}$）。網は、点が13個以下の問いで全部の組み合わせを数え上げた確率と比べ、木の形の60問で一致（ずれ $10^{-14}$）、輪のある31問で最大0.015のずれ（輪のある確率伝搬は近似なので想定どおり）。
 
 ## ファイルの置き場所
 
