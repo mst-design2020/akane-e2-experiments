@@ -1,0 +1,1494 @@
+[
+{
+"no": 0,
+"stmt": "communicator -> living thing",
+"path": [
+"communicator",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 1,
+"stmt": "coupe -> container",
+"path": [
+"coupe",
+"dish",
+"vessel"
+]
+},
+{
+"no": 2,
+"stmt": "anti -> living thing",
+"path": [
+"anti",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 3,
+"stmt": "contrarian -> animal",
+"path": [
+"contrarian",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 4,
+"stmt": "synchrotron -> device",
+"path": [
+"synchrotron",
+"cyclotron",
+"accelerator"
+]
+},
+{
+"no": 5,
+"stmt": "athlete -> living thing",
+"path": [
+"athlete",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 6,
+"stmt": "crustacean -> body part",
+"path": [
+"crustacean",
+"arthropod",
+"animal",
+"person"
+]
+},
+{
+"no": 7,
+"stmt": "astrologer -> animal",
+"path": [
+"astrologer",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 8,
+"stmt": "earl -> animal",
+"path": [
+"earl",
+"butterfly",
+"insect",
+"arthropod"
+]
+},
+{
+"no": 9,
+"stmt": "freelancer -> living thing",
+"path": [
+"freelancer",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 10,
+"stmt": "coupe -> container",
+"path": [
+"coupe",
+"dish",
+"vessel"
+]
+},
+{
+"no": 11,
+"stmt": "steed -> animal",
+"path": [
+"steed",
+"stallion",
+"horse"
+]
+},
+{
+"no": 12,
+"stmt": "minion -> living thing",
+"path": [
+"minion",
+"size",
+"set",
+"tuber"
+]
+},
+{
+"no": 13,
+"stmt": "villager -> living thing",
+"path": [
+"villager",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 14,
+"stmt": "mater -> material",
+"path": [
+"mater",
+"meninx",
+"membrane"
+]
+},
+{
+"no": 15,
+"stmt": "bandit -> device",
+"path": [
+"bandit",
+"aircraft",
+"vehicle"
+]
+},
+{
+"no": 16,
+"stmt": "firearm -> man-made object",
+"path": [
+"firearm",
+"weapon",
+"instrument",
+"device"
+]
+},
+{
+"no": 17,
+"stmt": "grocer -> living thing",
+"path": [
+"grocer",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 18,
+"stmt": "panelist -> living thing",
+"path": [
+"panelist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 19,
+"stmt": "mantis -> animal",
+"path": [
+"mantis",
+"insect",
+"arthropod"
+]
+},
+{
+"no": 20,
+"stmt": "mantel -> device",
+"path": [
+"mantel",
+"maneuver",
+"movement"
+]
+},
+{
+"no": 21,
+"stmt": "pervert -> device",
+"path": [
+"pervert",
+"person",
+"genitalia",
+"organ"
+]
+},
+{
+"no": 22,
+"stmt": "headliner -> equipment",
+"path": [
+"headliner",
+"fabric",
+"material",
+"apparatus"
+]
+},
+{
+"no": 23,
+"stmt": "socialite -> living thing",
+"path": [
+"socialite",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 24,
+"stmt": "macho -> animal",
+"path": [
+"macho",
+"mullet",
+"fish"
+]
+},
+{
+"no": 25,
+"stmt": "tripod -> equipment",
+"path": [
+"tripod",
+"machine",
+"device"
+]
+},
+{
+"no": 26,
+"stmt": "steed -> animal",
+"path": [
+"steed",
+"stallion",
+"horse"
+]
+},
+{
+"no": 27,
+"stmt": "statesman -> living thing",
+"path": [
+"statesman",
+"man",
+"human"
+]
+},
+{
+"no": 28,
+"stmt": "obstetrician -> person",
+"path": [
+"obstetrician",
+"physician",
+"doctor"
+]
+},
+{
+"no": 29,
+"stmt": "isolationist -> living thing",
+"path": [
+"isolationist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 30,
+"stmt": "motorboat -> machine",
+"path": [
+"motorboat",
+"vessel",
+"craft",
+"power"
+]
+},
+{
+"no": 31,
+"stmt": "consulate -> device",
+"path": [
+"consulate",
+"office",
+"position",
+"post"
+]
+},
+{
+"no": 32,
+"stmt": "starling -> vegetable",
+"path": [
+"starling",
+"pile",
+"group",
+"set"
+]
+},
+{
+"no": 33,
+"stmt": "finch -> material",
+"path": [
+"finch",
+"goldfinch",
+"sovereign",
+"monarch"
+]
+},
+{
+"no": 34,
+"stmt": "obstetrician -> person",
+"path": [
+"obstetrician",
+"physician",
+"practitioner"
+]
+},
+{
+"no": 35,
+"stmt": "firearm -> man-made object",
+"path": [
+"firearm",
+"weapon",
+"instrument",
+"device"
+]
+},
+{
+"no": 36,
+"stmt": "synchrotron -> device",
+"path": [
+"synchrotron",
+"cyclotron",
+"accelerator"
+]
+},
+{
+"no": 37,
+"stmt": "milkman -> living thing",
+"path": [
+"milkman",
+"man",
+"human"
+]
+},
+{
+"no": 38,
+"stmt": "perfectionist -> living thing",
+"path": [
+"perfectionist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 39,
+"stmt": "harmonica -> equipment",
+"path": [
+"harmonica",
+"instrument",
+"device"
+]
+},
+{
+"no": 40,
+"stmt": "pauper -> living thing",
+"path": [
+"pauper",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 41,
+"stmt": "applicant -> living thing",
+"path": [
+"applicant",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 42,
+"stmt": "tripod -> equipment",
+"path": [
+"tripod",
+"stand",
+"device"
+]
+},
+{
+"no": 43,
+"stmt": "juggler -> living thing",
+"path": [
+"juggler",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 44,
+"stmt": "sultan -> organ",
+"path": [
+"sultan",
+"ruler",
+"person"
+]
+},
+{
+"no": 45,
+"stmt": "curate -> living thing",
+"path": [
+"curate",
+"barman",
+"man",
+"human"
+]
+},
+{
+"no": 46,
+"stmt": "cowgirl -> animal",
+"path": [
+"cowgirl",
+"woman",
+"human",
+"ape"
+]
+},
+{
+"no": 47,
+"stmt": "sectional -> man-made object",
+"path": [
+"sectional",
+"tournament",
+"digraph",
+"sequence"
+]
+},
+{
+"no": 48,
+"stmt": "cleric -> plant",
+"path": [
+"cleric",
+"class",
+"group",
+"set"
+]
+},
+{
+"no": 49,
+"stmt": "prowler -> animal",
+"path": [
+"prowler",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 50,
+"stmt": "grocer -> living thing",
+"path": [
+"grocer",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 51,
+"stmt": "greenhouse -> container",
+"path": [
+"greenhouse",
+"toilet",
+"room"
+]
+},
+{
+"no": 52,
+"stmt": "senna -> man-made object",
+"path": [
+"senna",
+"leaf",
+"sheet",
+"cloth"
+]
+},
+{
+"no": 53,
+"stmt": "mater -> material",
+"path": [
+"mater",
+"meninx",
+"membrane"
+]
+},
+{
+"no": 54,
+"stmt": "eunuch -> living thing",
+"path": [
+"eunuch",
+"man",
+"human"
+]
+},
+{
+"no": 55,
+"stmt": "cowgirl -> animal",
+"path": [
+"cowgirl",
+"woman",
+"human",
+"hominid"
+]
+},
+{
+"no": 56,
+"stmt": "ecologist -> worker",
+"path": [
+"ecologist",
+"scholar",
+"specialist"
+]
+},
+{
+"no": 57,
+"stmt": "purveyor -> living thing",
+"path": [
+"purveyor",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 58,
+"stmt": "anesthesiologist -> worker",
+"path": [
+"anesthesiologist",
+"physician",
+"doctor"
+]
+},
+{
+"no": 59,
+"stmt": "bathrobe -> metal",
+"path": [
+"bathrobe",
+"robe",
+"leaf",
+"sheet"
+]
+},
+{
+"no": 60,
+"stmt": "plenipotentiary -> equipment",
+"path": [
+"plenipotentiary",
+"person",
+"genitalia",
+"organ"
+]
+},
+{
+"no": 61,
+"stmt": "juggler -> living thing",
+"path": [
+"juggler",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 62,
+"stmt": "condor -> animal",
+"path": [
+"condor",
+"vulture",
+"bird"
+]
+},
+{
+"no": 63,
+"stmt": "condom -> equipment",
+"path": [
+"condom",
+"sleeve",
+"jacket"
+]
+},
+{
+"no": 64,
+"stmt": "tripod -> equipment",
+"path": [
+"tripod",
+"machine",
+"device"
+]
+},
+{
+"no": 65,
+"stmt": "locator -> tool",
+"path": [
+"locator",
+"person",
+"genitalia",
+"organ"
+]
+},
+{
+"no": 66,
+"stmt": "limiter -> man-made object",
+"path": [
+"limiter",
+"friar",
+"patch"
+]
+},
+{
+"no": 67,
+"stmt": "curate -> living thing",
+"path": [
+"curate",
+"barman",
+"man"
+]
+},
+{
+"no": 68,
+"stmt": "expressionist -> game",
+"path": [
+"expressionist",
+"painter",
+"chain",
+"series"
+]
+},
+{
+"no": 69,
+"stmt": "steed -> animal",
+"path": [
+"steed",
+"stallion",
+"horse"
+]
+},
+{
+"no": 70,
+"stmt": "perfectionist -> living thing",
+"path": [
+"perfectionist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 71,
+"stmt": "socialite -> living thing",
+"path": [
+"socialite",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 72,
+"stmt": "mediator -> living thing",
+"path": [
+"mediator",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 73,
+"stmt": "mantis -> animal",
+"path": [
+"mantis",
+"insect",
+"arthropod"
+]
+},
+{
+"no": 74,
+"stmt": "haggis -> organ",
+"path": [
+"haggis",
+"dish",
+"vessel",
+"person"
+]
+},
+{
+"no": 75,
+"stmt": "earl -> animal",
+"path": [
+"earl",
+"butterfly",
+"insect",
+"arthropod"
+]
+},
+{
+"no": 76,
+"stmt": "athlete -> living thing",
+"path": [
+"athlete",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 77,
+"stmt": "anti -> living thing",
+"path": [
+"anti",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 78,
+"stmt": "bodybuilder -> animal",
+"path": [
+"bodybuilder",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 79,
+"stmt": "caveman -> living thing",
+"path": [
+"caveman",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 80,
+"stmt": "detainee -> living thing",
+"path": [
+"detainee",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 81,
+"stmt": "isolationist -> living thing",
+"path": [
+"isolationist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 82,
+"stmt": "newlywed -> living thing",
+"path": [
+"newlywed",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 83,
+"stmt": "drunkard -> living thing",
+"path": [
+"drunkard",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 84,
+"stmt": "corrective -> man-made object",
+"path": [
+"corrective",
+"limitation",
+"act"
+]
+},
+{
+"no": 85,
+"stmt": "rheumatic -> living thing",
+"path": [
+"rheumatic",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 86,
+"stmt": "anti -> living thing",
+"path": [
+"anti",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 87,
+"stmt": "caveman -> living thing",
+"path": [
+"caveman",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 88,
+"stmt": "bandit -> device",
+"path": [
+"bandit",
+"aircraft",
+"vehicle"
+]
+},
+{
+"no": 89,
+"stmt": "detainee -> living thing",
+"path": [
+"detainee",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 90,
+"stmt": "bookkeeper -> living thing",
+"path": [
+"bookkeeper",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 91,
+"stmt": "dominatrix -> living thing",
+"path": [
+"dominatrix",
+"woman",
+"human"
+]
+},
+{
+"no": 92,
+"stmt": "mantis -> animal",
+"path": [
+"mantis",
+"insect",
+"arthropod"
+]
+},
+{
+"no": 93,
+"stmt": "suitor -> living thing",
+"path": [
+"suitor",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 94,
+"stmt": "retriever -> game",
+"path": [
+"retriever",
+"breed",
+"race"
+]
+},
+{
+"no": 95,
+"stmt": "suitor -> living thing",
+"path": [
+"suitor",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 96,
+"stmt": "condor -> animal",
+"path": [
+"condor",
+"vulture",
+"bird"
+]
+},
+{
+"no": 97,
+"stmt": "perfectionist -> living thing",
+"path": [
+"perfectionist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 98,
+"stmt": "harmonica -> equipment",
+"path": [
+"harmonica",
+"instrument",
+"device"
+]
+},
+{
+"no": 99,
+"stmt": "harmonica -> equipment",
+"path": [
+"harmonica",
+"instrument",
+"device"
+]
+},
+{
+"no": 100,
+"stmt": "bandit -> device",
+"path": [
+"bandit",
+"aircraft",
+"vehicle"
+]
+},
+{
+"no": 101,
+"stmt": "earl -> animal",
+"path": [
+"earl",
+"butterfly",
+"insect",
+"arthropod"
+]
+},
+{
+"no": 102,
+"stmt": "zoologist -> living thing",
+"path": [
+"zoologist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 103,
+"stmt": "macho -> animal",
+"path": [
+"macho",
+"mullet",
+"fish"
+]
+},
+{
+"no": 104,
+"stmt": "rifle -> animal",
+"path": [
+"rifle",
+"rifleman",
+"bird"
+]
+},
+{
+"no": 105,
+"stmt": "urologist -> person",
+"path": [
+"urologist",
+"doctor",
+"physician",
+"practitioner"
+]
+},
+{
+"no": 106,
+"stmt": "villager -> living thing",
+"path": [
+"villager",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 107,
+"stmt": "oppressor -> device",
+"path": [
+"oppressor",
+"person",
+"genitalia",
+"organ"
+]
+},
+{
+"no": 108,
+"stmt": "curate -> living thing",
+"path": [
+"curate",
+"barman",
+"man"
+]
+},
+{
+"no": 109,
+"stmt": "socialite -> living thing",
+"path": [
+"socialite",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 110,
+"stmt": "obstetrician -> person",
+"path": [
+"obstetrician",
+"physician",
+"doctor"
+]
+},
+{
+"no": 111,
+"stmt": "pauper -> living thing",
+"path": [
+"pauper",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 112,
+"stmt": "bandit -> device",
+"path": [
+"bandit",
+"aircraft",
+"vehicle"
+]
+},
+{
+"no": 113,
+"stmt": "condor -> animal",
+"path": [
+"condor",
+"vulture",
+"bird"
+]
+},
+{
+"no": 114,
+"stmt": "lobbyist -> living thing",
+"path": [
+"lobbyist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 115,
+"stmt": "purveyor -> living thing",
+"path": [
+"purveyor",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 116,
+"stmt": "cadet -> dish",
+"path": [
+"cadet",
+"man",
+"homo",
+"milk"
+]
+},
+{
+"no": 117,
+"stmt": "ecologist -> worker",
+"path": [
+"ecologist",
+"scholar",
+"specialist"
+]
+},
+{
+"no": 118,
+"stmt": "converter -> equipment",
+"path": [
+"converter",
+"person",
+"genitalia",
+"organ"
+]
+},
+{
+"no": 119,
+"stmt": "clamp -> musical instrument",
+"path": [
+"clamp",
+"instrument",
+"mean"
+]
+},
+{
+"no": 120,
+"stmt": "pauper -> living thing",
+"path": [
+"pauper",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 121,
+"stmt": "mater -> material",
+"path": [
+"mater",
+"meninx",
+"membrane"
+]
+},
+{
+"no": 122,
+"stmt": "overseer -> living thing",
+"path": [
+"overseer",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 123,
+"stmt": "corrective -> man-made object",
+"path": [
+"corrective",
+"limitation",
+"restriction",
+"regulation"
+]
+},
+{
+"no": 124,
+"stmt": "macho -> animal",
+"path": [
+"macho",
+"mullet",
+"fish"
+]
+},
+{
+"no": 125,
+"stmt": "purveyor -> living thing",
+"path": [
+"purveyor",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 126,
+"stmt": "loner -> living thing",
+"path": [
+"loner",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 127,
+"stmt": "godmother -> material",
+"path": [
+"godmother",
+"woman",
+"person",
+"body"
+]
+},
+{
+"no": 128,
+"stmt": "hillbilly -> living thing",
+"path": [
+"hillbilly",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 129,
+"stmt": "drunkard -> living thing",
+"path": [
+"drunkard",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 130,
+"stmt": "loudspeaker -> man-made object",
+"path": [
+"loudspeaker",
+"transducer",
+"device"
+]
+},
+{
+"no": 131,
+"stmt": "illiterate -> living thing",
+"path": [
+"illiterate",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 132,
+"stmt": "villager -> living thing",
+"path": [
+"villager",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 133,
+"stmt": "communicator -> living thing",
+"path": [
+"communicator",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 134,
+"stmt": "tripod -> equipment",
+"path": [
+"tripod",
+"stand",
+"device"
+]
+},
+{
+"no": 135,
+"stmt": "prefect -> living thing",
+"path": [
+"prefect",
+"pupil",
+"orphan"
+]
+},
+{
+"no": 136,
+"stmt": "applicant -> living thing",
+"path": [
+"applicant",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 137,
+"stmt": "implant -> body part",
+"path": [
+"implant",
+"representative",
+"delegate",
+"person"
+]
+},
+{
+"no": 138,
+"stmt": "applicant -> living thing",
+"path": [
+"applicant",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 139,
+"stmt": "zebra -> vegetable",
+"path": [
+"zebra",
+"crossing",
+"intersection",
+"set"
+]
+},
+{
+"no": 140,
+"stmt": "steed -> animal",
+"path": [
+"steed",
+"stallion",
+"horse"
+]
+},
+{
+"no": 141,
+"stmt": "coupe -> container",
+"path": [
+"coupe",
+"dish",
+"vessel"
+]
+},
+{
+"no": 142,
+"stmt": "wanton -> living thing",
+"path": [
+"wanton",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 143,
+"stmt": "therapist -> living thing",
+"path": [
+"therapist",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 144,
+"stmt": "rugby -> equipment",
+"path": [
+"rugby",
+"cement",
+"material",
+"apparatus"
+]
+},
+{
+"no": 145,
+"stmt": "grocer -> living thing",
+"path": [
+"grocer",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 146,
+"stmt": "wanton -> living thing",
+"path": [
+"wanton",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 147,
+"stmt": "illiterate -> living thing",
+"path": [
+"illiterate",
+"person",
+"individual",
+"human"
+]
+},
+{
+"no": 148,
+"stmt": "alternator -> vehicle",
+"path": [
+"alternator",
+"generator",
+"apparatus",
+"machine"
+]
+},
+{
+"no": 149,
+"stmt": "helicopter -> man-made object",
+"path": [
+"helicopter",
+"machine",
+"device"
+]
+},
+{
+"no": 150,
+"stmt": "housemate -> musical instrument",
+"path": [
+"housemate",
+"person",
+"genitalia",
+"organ"
+]
+},
+{
+"no": 151,
+"stmt": "anesthesiologist -> worker",
+"path": [
+"anesthesiologist",
+"physician",
+"doctor"
+]
+},
+{
+"no": 152,
+"stmt": "undercarriage -> man-made object",
+"path": [
+"undercarriage",
+"gear",
+"wheel",
+"device"
+]
+},
+{
+"no": 153,
+"stmt": "houseboat -> device",
+"path": [
+"houseboat",
+"vessel",
+"craft"
+]
+},
+{
+"no": 154,
+"stmt": "loner -> living thing",
+"path": [
+"loner",
+"person",
+"individual",
+"human"
+]
+}
+]
