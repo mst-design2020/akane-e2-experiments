@@ -1,0 +1,4916 @@
+[
+{
+"part": "item",
+"idx": 893,
+"stmt": "Freeman-Sheldon syndrome is a viral infection.",
+"no": 1,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2364,
+"stmt": "Lung carcinoma is a thoracic disease.",
+"no": 2,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 35,
+"stmt": "Cobalt allergic asthma is a thoracic disease.",
+"no": 3,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3104,
+"stmt": "Bacterial pneumonia is a thoracic disease.",
+"no": 4,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 29,
+"stmt": "Nickel allergic asthma is a thoracic disease.",
+"no": 5,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2963,
+"stmt": "Renal infectious disease is a mental disorder.",
+"no": 6,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 140,
+"stmt": "Arts syndrome is a genetic disease.",
+"no": 7,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1319,
+"stmt": "Factor VIII deficiency is a cardiovascular system disease.",
+"no": 8,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2672,
+"stmt": "Sleep disorder is a nervous system disease.",
+"no": 9,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2391,
+"stmt": "Mouth disease is a gastrointestinal system disease.",
+"no": 10,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 832,
+"stmt": "Bladder fermentation syndrome is a cancer or other tumor.",
+"no": 11,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 111,
+"stmt": "No disease is both a fungal infection and a genetic disease.",
+"no": 12,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3118,
+"stmt": "Learning disability is a viral infection.",
+"no": 13,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2693,
+"stmt": "Kidney disease is an immune system disease.",
+"no": 14,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 217,
+"stmt": "Artery disease is an immune system disease.",
+"no": 15,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2726,
+"stmt": "Werner syndrome is a metabolic disease.",
+"no": 16,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1365,
+"stmt": "Malaria is a gastrointestinal system disease.",
+"no": 17,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2439,
+"stmt": "Primary syphilis is an immune system disease.",
+"no": 18,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 928,
+"stmt": "Thyroid lymphoma is a blood disease.",
+"no": 19,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1042,
+"stmt": "Chronic tic disorder is a mental disorder.",
+"no": 20,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3043,
+"stmt": "Scarlet fever is a respiratory system disease.",
+"no": 21,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 144,
+"stmt": "No disease is both a gastrointestinal system disease and a musculoskeletal system disease.",
+"no": 22,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1236,
+"stmt": "Heart cancer is a cardiovascular system disease.",
+"no": 23,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 152,
+"stmt": "Female breast cancer is a cancer or other tumor.",
+"no": 24,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 78,
+"stmt": "No disease is both a thoracic disease and an endocrine system disease.",
+"no": 25,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 761,
+"stmt": "Thunderstorm triggered asthma is an immune system disease.",
+"no": 26,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1888,
+"stmt": "B cell deficiency is a reproductive system disease.",
+"no": 27,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1443,
+"stmt": "Protein-deficiency anemia is a metabolic disease.",
+"no": 28,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2411,
+"stmt": "Muscle cancer is a parasitic infection.",
+"no": 29,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 167,
+"stmt": "No disease is both an infectious disease and a musculoskeletal system disease.",
+"no": 30,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 565,
+"stmt": "White-Sutton syndrome is a mental disorder.",
+"no": 31,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 523,
+"stmt": "Char syndrome is a genetic disease.",
+"no": 32,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3122,
+"stmt": "Metal metabolism disorder is a genetic disease.",
+"no": 33,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3215,
+"stmt": "Plasma cell leukemia is a cancer or other tumor.",
+"no": 34,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 40,
+"stmt": "Mineral metabolism disease is an endocrine system disease.",
+"no": 35,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 263,
+"stmt": "Specific developmental disorder is a mental disorder.",
+"no": 36,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2986,
+"stmt": "Auditory system cancer is a nervous system disease.",
+"no": 37,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 779,
+"stmt": "Hot water epilepsy is a reproductive system disease.",
+"no": 38,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 297,
+"stmt": "Gluten allergy is a blood disease.",
+"no": 39,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 528,
+"stmt": "Spinal disease is an endocrine system disease.",
+"no": 40,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1930,
+"stmt": "Factor X deficiency is a cancer or other tumor.",
+"no": 41,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 224,
+"stmt": "No disease is both a respiratory system disease and a viral infection.",
+"no": 42,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2595,
+"stmt": "Bone marrow cancer is a skin disease.",
+"no": 43,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3221,
+"stmt": "Vascular skin disease is a blood disease.",
+"no": 44,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 332,
+"stmt": "Alpha chain disease is a nervous system disease.",
+"no": 45,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1259,
+"stmt": "Protein-energy malnutrition is a metabolic disease.",
+"no": 46,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1134,
+"stmt": "Tongue disease is an immune system disease.",
+"no": 47,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 536,
+"stmt": "Abdominal obesity-metabolic syndrome is a cardiovascular system disease.",
+"no": 48,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2298,
+"stmt": "Wheat allergy is an infectious disease.",
+"no": 49,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2296,
+"stmt": "Wheat allergy is an immune system disease.",
+"no": 50,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 606,
+"stmt": "Alcohol-associated liver disease is a gastrointestinal system disease.",
+"no": 51,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3189,
+"stmt": "Intrinsic asthma is a genetic disease.",
+"no": 52,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 489,
+"stmt": "Atlantic salmon allergy is a genetic disease.",
+"no": 53,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 171,
+"stmt": "No disease is both an infectious disease and a respiratory system disease.",
+"no": 54,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2766,
+"stmt": "Childhood lymphoma is a parasitic infection.",
+"no": 55,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2708,
+"stmt": "Eye disease is a nervous system disease.",
+"no": 56,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 795,
+"stmt": "Breast implant illness is an immune system disease.",
+"no": 57,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2803,
+"stmt": "AIDS phobia is a reproductive system disease.",
+"no": 58,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1658,
+"stmt": "Dumping syndrome is a gastrointestinal system disease.",
+"no": 59,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3107,
+"stmt": "Lower lip cancer is a blood disease.",
+"no": 60,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1025,
+"stmt": "Beach ear is a nervous system disease.",
+"no": 61,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2848,
+"stmt": "Migraine is a thoracic disease.",
+"no": 62,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 810,
+"stmt": "Semantic dementia is a metabolic disease.",
+"no": 63,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1581,
+"stmt": "Toxic shock syndrome is a reproductive system disease.",
+"no": 64,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 382,
+"stmt": "Cardiac arrest is a bacterial infection.",
+"no": 65,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 98,
+"stmt": "No disease is both an endocrine system disease and an immune system disease.",
+"no": 66,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2001,
+"stmt": "Reflex epilepsy is a nervous system disease.",
+"no": 67,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 101,
+"stmt": "No disease is both an endocrine system disease and a metabolic disease.",
+"no": 68,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 414,
+"stmt": "Shellfish allergy is a breast disease.",
+"no": 69,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 46,
+"stmt": "No disease is both a breast disease and a gastrointestinal system disease.",
+"no": 70,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 220,
+"stmt": "No disease is both a reproductive system disease and a viral infection.",
+"no": 71,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 162,
+"stmt": "Small cell carcinoma is a cancer or other tumor.",
+"no": 72,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2273,
+"stmt": "Liver cancer is a gastrointestinal system disease.",
+"no": 73,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2375,
+"stmt": "Urinary system cancer is a thoracic disease.",
+"no": 74,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2034,
+"stmt": "Mushroom workers' lung is a musculoskeletal system disease.",
+"no": 75,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2603,
+"stmt": "Neurotic disorder is a mental disorder.",
+"no": 76,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1966,
+"stmt": "Renal artery disease is a blood disease.",
+"no": 77,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 898,
+"stmt": "DOORS syndrome is a parasitic infection.",
+"no": 78,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2968,
+"stmt": "Chronic kidney disease is a respiratory system disease.",
+"no": 79,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 43,
+"stmt": "No disease is both a breast disease and an endocrine system disease.",
+"no": 80,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1161,
+"stmt": "Secondary hypertension is a reproductive system disease.",
+"no": 81,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1664,
+"stmt": "Foster-Kennedy syndrome is a viral infection.",
+"no": 82,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1884,
+"stmt": "B cell deficiency is an immune system disease.",
+"no": 83,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1170,
+"stmt": "Pulp degeneration is a gastrointestinal system disease.",
+"no": 84,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1652,
+"stmt": "Farmer's lung is a musculoskeletal system disease.",
+"no": 85,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 230,
+"stmt": "No disease is both a urinary system disease and a viral infection.",
+"no": 86,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2335,
+"stmt": "Pulmonary fibrosis is a breast disease.",
+"no": 87,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 87,
+"stmt": "Costello syndrome is a respiratory system disease.",
+"no": 88,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2615,
+"stmt": "Thyroid gland disease is a metabolic disease.",
+"no": 89,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 366,
+"stmt": "Specific language impairment is a nervous system disease.",
+"no": 90,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1889,
+"stmt": "Ovarian lymphoma is a blood disease.",
+"no": 91,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 532,
+"stmt": "Abdominal obesity-metabolic syndrome is a genetic disease.",
+"no": 92,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2940,
+"stmt": "Retina lymphoma is a blood disease.",
+"no": 93,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 424,
+"stmt": "Pollen allergy is a skin disease.",
+"no": 94,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2580,
+"stmt": "Middle ear carcinoma is a nervous system disease.",
+"no": 95,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 169,
+"stmt": "Cell type cancer is a genetic disease.",
+"no": 96,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 699,
+"stmt": "Sweet syndrome is a skin disease.",
+"no": 97,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2037,
+"stmt": "Mushroom workers' lung is a fungal infection.",
+"no": 98,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1532,
+"stmt": "Red color blindness is a nervous system disease.",
+"no": 99,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1194,
+"stmt": "Cat-scratch disease is a skin disease.",
+"no": 100,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1310,
+"stmt": "Vaginal disease is a reproductive system disease.",
+"no": 101,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 130,
+"stmt": "No disease is both a genetic disease and a metabolic disease.",
+"no": 102,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3097,
+"stmt": "Vascular dementia is a cancer or other tumor.",
+"no": 103,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 60,
+"stmt": "Pontiac fever is a bacterial infection.",
+"no": 104,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 524,
+"stmt": "Char syndrome is a gastrointestinal system disease.",
+"no": 105,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2333,
+"stmt": "Pulmonary fibrosis is a musculoskeletal system disease.",
+"no": 106,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3254,
+"stmt": "Eye degenerative disease is a nervous system disease.",
+"no": 107,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1825,
+"stmt": "Melanoma is a cancer or other tumor.",
+"no": 108,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3095,
+"stmt": "Vascular dementia is a nervous system disease.",
+"no": 109,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2112,
+"stmt": "Pulmonary tuberculosis is a bacterial infection.",
+"no": 110,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2540,
+"stmt": "Dyslexia is a respiratory system disease.",
+"no": 111,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 7,
+"stmt": "A viral infection is a kind of reproductive system disease.",
+"no": 112,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1757,
+"stmt": "Facial nerve disease is a skin disease.",
+"no": 113,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1735,
+"stmt": "Congenital heart disease is a thoracic disease.",
+"no": 114,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1606,
+"stmt": "Spinal cord lymphoma is a urinary system disease.",
+"no": 115,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 859,
+"stmt": "Scalp-ear-nipple syndrome is a genetic disease.",
+"no": 116,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 968,
+"stmt": "Leprosy is a nervous system disease.",
+"no": 117,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 121,
+"stmt": "No disease is both a fungal infection and a respiratory system disease.",
+"no": 118,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3080,
+"stmt": "Vein disease is a cancer or other tumor.",
+"no": 119,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2302,
+"stmt": "Olfactory nerve disease is a breast disease.",
+"no": 120,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2792,
+"stmt": "Appendix disease is a respiratory system disease.",
+"no": 121,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2487,
+"stmt": "Anal margin carcinoma is a gastrointestinal system disease.",
+"no": 122,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3105,
+"stmt": "Lower lip cancer is a gastrointestinal system disease.",
+"no": 123,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1480,
+"stmt": "Intestinal tuberculosis is a skin disease.",
+"no": 124,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 175,
+"stmt": "No disease is both an infectious disease and a viral infection.",
+"no": 125,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2117,
+"stmt": "Pulmonary tuberculosis is a thoracic disease.",
+"no": 126,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1260,
+"stmt": "Protein-energy malnutrition is a thoracic disease.",
+"no": 127,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1991,
+"stmt": "Enamel erosion is a gastrointestinal system disease.",
+"no": 128,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3067,
+"stmt": "Substance-induced psychosis is a thoracic disease.",
+"no": 129,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1131,
+"stmt": "Tongue disease is a gastrointestinal system disease.",
+"no": 130,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1285,
+"stmt": "Visual epilepsy is an infectious disease.",
+"no": 131,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2826,
+"stmt": "Aortic valve disease is a blood disease.",
+"no": 132,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2256,
+"stmt": "Iris cancer is a nervous system disease.",
+"no": 133,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1171,
+"stmt": "Pulp degeneration is a musculoskeletal system disease.",
+"no": 134,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 785,
+"stmt": "Injection anthrax is a reproductive system disease.",
+"no": 135,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 992,
+"stmt": "Viral meningitis is a skin disease.",
+"no": 136,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 54,
+"stmt": "Japanese spotted fever is a skin disease.",
+"no": 137,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 619,
+"stmt": "Davis-Wells syndrome is a bacterial infection.",
+"no": 138,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3048,
+"stmt": "Upper gum cancer is a gastrointestinal system disease.",
+"no": 139,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1561,
+"stmt": "Chronic orbital inflammation is a cancer or other tumor.",
+"no": 140,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2425,
+"stmt": "Nail disease is a skin disease.",
+"no": 141,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 639,
+"stmt": "Bone disease is a metabolic disease.",
+"no": 142,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 138,
+"stmt": "No disease is both a genetic disease and a urinary system disease.",
+"no": 143,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2184,
+"stmt": "Lipid metabolism disorder is an endocrine system disease.",
+"no": 144,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3170,
+"stmt": "Orbital disease is a musculoskeletal system disease.",
+"no": 145,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 624,
+"stmt": "HELIX syndrome is a metabolic disease.",
+"no": 146,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2685,
+"stmt": "Stomach carcinoma is a reproductive system disease.",
+"no": 147,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3154,
+"stmt": "Mast-cell leukemia is a blood disease.",
+"no": 148,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 190,
+"stmt": "Marginal zone lymphoma is a blood disease.",
+"no": 149,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1854,
+"stmt": "Hepatitis B is a musculoskeletal system disease.",
+"no": 150,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1750,
+"stmt": "Vascular cancer is a cardiovascular system disease.",
+"no": 151,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 772,
+"stmt": "Long COVID is an infectious disease.",
+"no": 152,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1681,
+"stmt": "Weaver syndrome is a reproductive system disease.",
+"no": 153,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1407,
+"stmt": "Thyroid crisis is an immune system disease.",
+"no": 154,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1938,
+"stmt": "Factor XI deficiency is a thoracic disease.",
+"no": 155,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 150,
+"stmt": "Fetal alcohol syndrome is a viral infection.",
+"no": 156,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 481,
+"stmt": "Atlantic cod allergy is an immune system disease.",
+"no": 157,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2763,
+"stmt": "Childhood lymphoma is a urinary system disease.",
+"no": 158,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2599,
+"stmt": "Bone marrow disease is a cancer or other tumor.",
+"no": 159,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3302,
+"stmt": "Orbit lymphoma is an endocrine system disease.",
+"no": 160,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1799,
+"stmt": "Bone cancer is an immune system disease.",
+"no": 161,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 8,
+"stmt": "No disease is both a bacterial infection and an immune system disease.",
+"no": 162,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2885,
+"stmt": "Compartment syndrome is a cardiovascular system disease.",
+"no": 163,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3074,
+"stmt": "Tongue cancer is a parasitic infection.",
+"no": 164,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 168,
+"stmt": "No disease is both an infectious disease and a nervous system disease.",
+"no": 165,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2196,
+"stmt": "Bipolar disorder is a thoracic disease.",
+"no": 166,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2790,
+"stmt": "Appendix disease is a gastrointestinal system disease.",
+"no": 167,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2202,
+"stmt": "Mood disorder is a genetic disease.",
+"no": 168,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2481,
+"stmt": "Smooth muscle cancer is a musculoskeletal system disease.",
+"no": 169,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2576,
+"stmt": "Colorado tick fever is a blood disease.",
+"no": 170,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 5,
+"stmt": "No disease is both a bacterial infection and a fungal infection.",
+"no": 171,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 714,
+"stmt": "Intermittent asthma is an immune system disease.",
+"no": 172,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 682,
+"stmt": "Tongue carcinoma is a gastrointestinal system disease.",
+"no": 173,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2865,
+"stmt": "Spleen cancer is an immune system disease.",
+"no": 174,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2556,
+"stmt": "Prostate disease is a cancer or other tumor.",
+"no": 175,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3014,
+"stmt": "Night blindness is a nervous system disease.",
+"no": 176,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 767,
+"stmt": "Mild cognitive impairment is a mental disorder.",
+"no": 177,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2459,
+"stmt": "Articulation disorder is a mental disorder.",
+"no": 178,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2213,
+"stmt": "Bone inflammation disease is a musculoskeletal system disease.",
+"no": 179,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 128,
+"stmt": "No disease is both a genetic disease and an infectious disease.",
+"no": 180,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 181,
+"stmt": "No disease is both a mental disorder and a respiratory system disease.",
+"no": 181,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1469,
+"stmt": "Lung cancer is a thoracic disease.",
+"no": 182,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2171,
+"stmt": "Gastrointestinal system cancer is a fungal infection.",
+"no": 183,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2692,
+"stmt": "Kidney disease is a cardiovascular system disease.",
+"no": 184,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 86,
+"stmt": "No disease is both a thoracic disease and a musculoskeletal system disease.",
+"no": 185,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2745,
+"stmt": "Cerebral lymphoma is a blood disease.",
+"no": 186,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2936,
+"stmt": "Retinal cell cancer is a respiratory system disease.",
+"no": 187,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2976,
+"stmt": "Sporadic breast cancer is a cancer or other tumor.",
+"no": 188,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3297,
+"stmt": "Orbit lymphoma is an immune system disease.",
+"no": 189,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1215,
+"stmt": "Heart disease is a thoracic disease.",
+"no": 190,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2876,
+"stmt": "Bilateral breast cancer is an endocrine system disease.",
+"no": 191,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 66,
+"stmt": "Sensory system disease is a nervous system disease.",
+"no": 192,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2067,
+"stmt": "Dandy-Walker syndrome is a genetic disease.",
+"no": 193,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 526,
+"stmt": "Char syndrome is a nervous system disease.",
+"no": 194,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 119,
+"stmt": "ADULT syndrome is a genetic disease.",
+"no": 195,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2823,
+"stmt": "Aortic valve disease is a thoracic disease.",
+"no": 196,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 124,
+"stmt": "No disease is both a fungal infection and a urinary system disease.",
+"no": 197,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 374,
+"stmt": "Mast syndrome is a musculoskeletal system disease.",
+"no": 198,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2934,
+"stmt": "Retinal cell cancer is a nervous system disease.",
+"no": 199,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1169,
+"stmt": "Respiratory failure is a blood disease.",
+"no": 200,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2788,
+"stmt": "Animal phobia is an endocrine system disease.",
+"no": 201,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2877,
+"stmt": "Bone lymphoma is a blood disease.",
+"no": 202,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1142,
+"stmt": "Urinary bladder cancer is a cancer or other tumor.",
+"no": 203,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 842,
+"stmt": "African iron overload is a blood disease.",
+"no": 204,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 860,
+"stmt": "Scalp-ear-nipple syndrome is a mental disorder.",
+"no": 205,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2633,
+"stmt": "Middle ear disease is a fungal infection.",
+"no": 206,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2735,
+"stmt": "Nerve compression syndrome is a fungal infection.",
+"no": 207,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 75,
+"stmt": "No disease is both a cardiovascular system disease and a cancer or other tumor.",
+"no": 208,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3016,
+"stmt": "Night blindness is a musculoskeletal system disease.",
+"no": 209,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 45,
+"stmt": "No disease is both a breast disease and a genetic disease.",
+"no": 210,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 286,
+"stmt": "Sexual health disorder is a thoracic disease.",
+"no": 211,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 22,
+"stmt": "Aspirin allergy is a gastrointestinal system disease.",
+"no": 212,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 50,
+"stmt": "No disease is both a breast disease and a metabolic disease.",
+"no": 213,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2664,
+"stmt": "Dental pulp disease is a gastrointestinal system disease.",
+"no": 214,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 777,
+"stmt": "Long COVID is a respiratory system disease.",
+"no": 215,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 730,
+"stmt": "Childhood-onset asthma is a genetic disease.",
+"no": 216,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 204,
+"stmt": "ARC syndrome is a genetic disease.",
+"no": 217,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1477,
+"stmt": "Intestinal tuberculosis is a gastrointestinal system disease.",
+"no": 218,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 137,
+"stmt": "Rh deficiency syndrome is an endocrine system disease.",
+"no": 219,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2365,
+"stmt": "Lung carcinoma is a reproductive system disease.",
+"no": 220,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3093,
+"stmt": "Vascular dementia is a mental disorder.",
+"no": 221,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 971,
+"stmt": "Prostate cancer is a urinary system disease.",
+"no": 222,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3102,
+"stmt": "Bacterial pneumonia is a genetic disease.",
+"no": 223,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3054,
+"stmt": "Oral cavity cancer is a gastrointestinal system disease.",
+"no": 224,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 843,
+"stmt": "African iron overload is a fungal infection.",
+"no": 225,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 519,
+"stmt": "Latex allergy is a nervous system disease.",
+"no": 226,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1446,
+"stmt": "Protein-deficiency anemia is a cardiovascular system disease.",
+"no": 227,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1763,
+"stmt": "Cardiovascular cancer is a skin disease.",
+"no": 228,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2925,
+"stmt": "Bladder tuberculosis is an immune system disease.",
+"no": 229,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1630,
+"stmt": "Generalized anxiety disorder is a nervous system disease.",
+"no": 230,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2238,
+"stmt": "Penis carcinoma is an endocrine system disease.",
+"no": 231,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1393,
+"stmt": "Acute leukemia is a respiratory system disease.",
+"no": 232,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 370,
+"stmt": "Mast syndrome is a nervous system disease.",
+"no": 233,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 89,
+"stmt": "No disease is both a thoracic disease and a reproductive system disease.",
+"no": 234,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1908,
+"stmt": "Ascending colon cancer is a fungal infection.",
+"no": 235,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2895,
+"stmt": "Liver carcinoma is a thoracic disease.",
+"no": 236,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1190,
+"stmt": "Social phobia is a nervous system disease.",
+"no": 237,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1657,
+"stmt": "Farmer's lung is a fungal infection.",
+"no": 238,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 74,
+"stmt": "No disease is both a cardiovascular system disease and a skin disease.",
+"no": 239,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 202,
+"stmt": "Peripheral T-cell lymphoma is an infectious disease.",
+"no": 240,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2605,
+"stmt": "Neurotic disorder is a skin disease.",
+"no": 241,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 53,
+"stmt": "Japanese spotted fever is a viral infection.",
+"no": 242,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2833,
+"stmt": "Complement deficiency is an immune system disease.",
+"no": 243,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2667,
+"stmt": "Dental pulp disease is a genetic disease.",
+"no": 244,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 158,
+"stmt": "No disease is both an immune system disease and a parasitic infection.",
+"no": 245,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1557,
+"stmt": "Chronic orbital inflammation is a musculoskeletal system disease.",
+"no": 246,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3289,
+"stmt": "Drug dependence is a nervous system disease.",
+"no": 247,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 225,
+"stmt": "Sleep apnea is a mental disorder.",
+"no": 248,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1610,
+"stmt": "Spinal cord melanoma is a fungal infection.",
+"no": 249,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1053,
+"stmt": "Blind loop syndrome is a gastrointestinal system disease.",
+"no": 250,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1526,
+"stmt": "Sick sinus syndrome is a thoracic disease.",
+"no": 251,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 586,
+"stmt": "Watson syndrome is a mental disorder.",
+"no": 252,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 876,
+"stmt": "C syndrome is a nervous system disease.",
+"no": 253,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1665,
+"stmt": "Foster-Kennedy syndrome is an endocrine system disease.",
+"no": 254,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 117,
+"stmt": "No disease is both a fungal infection and a musculoskeletal system disease.",
+"no": 255,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3041,
+"stmt": "Scarlet fever is a bacterial infection.",
+"no": 256,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2131,
+"stmt": "Carbohydrate metabolic disorder is an endocrine system disease.",
+"no": 257,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 236,
+"stmt": "Ovarian melanoma is a reproductive system disease.",
+"no": 258,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 197,
+"stmt": "Peripheral T-cell lymphoma is a blood disease.",
+"no": 259,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 147,
+"stmt": "No disease is both a gastrointestinal system disease and a reproductive system disease.",
+"no": 260,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 100,
+"stmt": "No disease is both an endocrine system disease and a mental disorder.",
+"no": 261,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 169,
+"stmt": "No disease is both an infectious disease and a parasitic infection.",
+"no": 262,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1768,
+"stmt": "Conversion disorder is a urinary system disease.",
+"no": 263,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3175,
+"stmt": "Taylor's syndrome is a reproductive system disease.",
+"no": 264,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2704,
+"stmt": "Spinal cancer is a urinary system disease.",
+"no": 265,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2559,
+"stmt": "Mongolian spot is a skin disease.",
+"no": 266,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 848,
+"stmt": "Scott syndrome is a nervous system disease.",
+"no": 267,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1179,
+"stmt": "Opioid abuse is a metabolic disease.",
+"no": 268,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 229,
+"stmt": "Sleep apnea is a breast disease.",
+"no": 269,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3129,
+"stmt": "Liver lymphoma is a gastrointestinal system disease.",
+"no": 270,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2563,
+"stmt": "Mongolian spot is a genetic disease.",
+"no": 271,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2575,
+"stmt": "Colorado tick fever is a viral infection.",
+"no": 272,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2991,
+"stmt": "Auditory system cancer is a reproductive system disease.",
+"no": 273,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 662,
+"stmt": "Worth syndrome is a musculoskeletal system disease.",
+"no": 274,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2042,
+"stmt": "Sick building syndrome is a respiratory system disease.",
+"no": 275,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 979,
+"stmt": "Prostate carcinoma is an endocrine system disease.",
+"no": 276,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2143,
+"stmt": "Substance abuse is a nervous system disease.",
+"no": 277,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2933,
+"stmt": "Stomach disease is a parasitic infection.",
+"no": 278,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 14,
+"stmt": "A parasitic infection is a kind of genetic disease.",
+"no": 279,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 948,
+"stmt": "Sleeping sickness is a fungal infection.",
+"no": 280,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 381,
+"stmt": "Cardiac arrest is a thoracic disease.",
+"no": 281,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 61,
+"stmt": "Pontiac fever is an infectious disease.",
+"no": 282,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2524,
+"stmt": "Peanut allergy is a cancer or other tumor.",
+"no": 283,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2893,
+"stmt": "Liver carcinoma is an infectious disease.",
+"no": 284,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 935,
+"stmt": "Thyroid lymphoma is an infectious disease.",
+"no": 285,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2414,
+"stmt": "Liver disease is a gastrointestinal system disease.",
+"no": 286,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1416,
+"stmt": "Miller Fisher syndrome is an immune system disease.",
+"no": 287,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 816,
+"stmt": "Large B-cell lymphoma is a blood disease.",
+"no": 288,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2896,
+"stmt": "Skin tag is a skin disease.",
+"no": 289,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2072,
+"stmt": "Middle lobe syndrome is a viral infection.",
+"no": 290,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1527,
+"stmt": "Sick sinus syndrome is a musculoskeletal system disease.",
+"no": 291,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 757,
+"stmt": "Persistent severe asthma is a mental disorder.",
+"no": 292,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1620,
+"stmt": "Fragile X syndrome is an endocrine system disease.",
+"no": 293,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2187,
+"stmt": "Lipid metabolism disorder is a cancer or other tumor.",
+"no": 294,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1286,
+"stmt": "Visual epilepsy is a gastrointestinal system disease.",
+"no": 295,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 459,
+"stmt": "Orange allergy is a respiratory system disease.",
+"no": 296,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 69,
+"stmt": "Sensory system disease is a musculoskeletal system disease.",
+"no": 297,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1858,
+"stmt": "Drug-induced hepatitis is a gastrointestinal system disease.",
+"no": 298,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2980,
+"stmt": "Sporadic breast cancer is a gastrointestinal system disease.",
+"no": 299,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1012,
+"stmt": "Chronic leukemia is a viral infection.",
+"no": 300,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 208,
+"stmt": "No disease is both a nervous system disease and a urinary system disease.",
+"no": 301,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2847,
+"stmt": "Migraine is an infectious disease.",
+"no": 302,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2344,
+"stmt": "External ear disease is a nervous system disease.",
+"no": 303,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 981,
+"stmt": "Prostate lymphoma is a blood disease.",
+"no": 304,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1047,
+"stmt": "Glucose intolerance is a genetic disease.",
+"no": 305,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2945,
+"stmt": "Retina lymphoma is a musculoskeletal system disease.",
+"no": 306,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1114,
+"stmt": "Benign essential hypertension is a fungal infection.",
+"no": 307,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1811,
+"stmt": "Hepatitis C is a gastrointestinal system disease.",
+"no": 308,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1957,
+"stmt": "Anemia is a parasitic infection.",
+"no": 309,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 551,
+"stmt": "Wilson-Turner syndrome is an endocrine system disease.",
+"no": 310,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2791,
+"stmt": "Appendix disease is an immune system disease.",
+"no": 311,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 306,
+"stmt": "Pearson syndrome is a metabolic disease.",
+"no": 312,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2080,
+"stmt": "Asthma is a bacterial infection.",
+"no": 313,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1183,
+"stmt": "Plethora of newborn is a gastrointestinal system disease.",
+"no": 314,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1370,
+"stmt": "Complex partial epilepsy is a bacterial infection.",
+"no": 315,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 103,
+"stmt": "No disease is both an endocrine system disease and a nervous system disease.",
+"no": 316,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2558,
+"stmt": "Prostate disease is a mental disorder.",
+"no": 317,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1668,
+"stmt": "Binder syndrome is a respiratory system disease.",
+"no": 318,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 21,
+"stmt": "No disease is both a blood disease and a breast disease.",
+"no": 319,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 253,
+"stmt": "Good syndrome is an immune system disease.",
+"no": 320,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1181,
+"stmt": "Plethora of newborn is a blood disease.",
+"no": 321,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 107,
+"stmt": "No disease is both an endocrine system disease and a skin disease.",
+"no": 322,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2394,
+"stmt": "Mouth disease is an infectious disease.",
+"no": 323,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1819,
+"stmt": "Viral hepatitis is an infectious disease.",
+"no": 324,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3160,
+"stmt": "Lip disease is a gastrointestinal system disease.",
+"no": 325,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1744,
+"stmt": "Glaucoma is a parasitic infection.",
+"no": 326,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3277,
+"stmt": "Obesity is a cardiovascular system disease.",
+"no": 327,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2269,
+"stmt": "Chronic wasting disease is an immune system disease.",
+"no": 328,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2890,
+"stmt": "Liver carcinoma is a gastrointestinal system disease.",
+"no": 329,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1699,
+"stmt": "Pulmonary systemic sclerosis is a musculoskeletal system disease.",
+"no": 330,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1541,
+"stmt": "Acquired color blindness is a fungal infection.",
+"no": 331,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2532,
+"stmt": "Hepatitis E is an infectious disease.",
+"no": 332,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 734,
+"stmt": "Adult-onset severe asthma is an endocrine system disease.",
+"no": 333,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 399,
+"stmt": "Perry syndrome is a metabolic disease.",
+"no": 334,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1562,
+"stmt": "POEMS syndrome is a blood disease.",
+"no": 335,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2017,
+"stmt": "Transverse colon cancer is a cancer or other tumor.",
+"no": 336,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 389,
+"stmt": "Cole-Carpenter syndrome is an endocrine system disease.",
+"no": 337,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1640,
+"stmt": "Parkinson's disease is a nervous system disease.",
+"no": 338,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2578,
+"stmt": "Colorado tick fever is a bacterial infection.",
+"no": 339,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3265,
+"stmt": "Developmental coordination disorder is a mental disorder.",
+"no": 340,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2456,
+"stmt": "Autoimmune disease is a thoracic disease.",
+"no": 341,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2007,
+"stmt": "Morphine dependence is a cardiovascular system disease.",
+"no": 342,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2484,
+"stmt": "Smooth muscle cancer is an infectious disease.",
+"no": 343,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 62,
+"stmt": "No disease is both a cardiovascular system disease and a fungal infection.",
+"no": 344,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 102,
+"stmt": "Spinal polio is an endocrine system disease.",
+"no": 345,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3091,
+"stmt": "Genital herpes is a reproductive system disease.",
+"no": 346,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 950,
+"stmt": "Sleeping sickness is a urinary system disease.",
+"no": 347,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1497,
+"stmt": "Hairy tongue is a parasitic infection.",
+"no": 348,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1500,
+"stmt": "Twin-to-twin transfusion syndrome is a reproductive system disease.",
+"no": 349,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 222,
+"stmt": "No disease is both a respiratory system disease and a cancer or other tumor.",
+"no": 350,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1448,
+"stmt": "Benign secondary hypertension is a cardiovascular system disease.",
+"no": 351,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 988,
+"stmt": "Prostate lymphoma is an endocrine system disease.",
+"no": 352,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 710,
+"stmt": "Urinary tract infection is a skin disease.",
+"no": 353,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 689,
+"stmt": "NK cell deficiency is a blood disease.",
+"no": 354,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 626,
+"stmt": "Lung-brain developmental disorder is a genetic disease.",
+"no": 355,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1040,
+"stmt": "Calcium metabolism disease is a fungal infection.",
+"no": 356,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2012,
+"stmt": "Pancreas disease is a musculoskeletal system disease.",
+"no": 357,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3136,
+"stmt": "Hard palate cancer is a gastrointestinal system disease.",
+"no": 358,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 54,
+"stmt": "No disease is both a breast disease and a reproductive system disease.",
+"no": 359,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3296,
+"stmt": "Orbit lymphoma is a blood disease.",
+"no": 360,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 274,
+"stmt": "Autism spectrum disorder is a nervous system disease.",
+"no": 361,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1941,
+"stmt": "Focal epilepsy is a bacterial infection.",
+"no": 362,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 548,
+"stmt": "Wilson-Turner syndrome is a mental disorder.",
+"no": 363,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1204,
+"stmt": "Bladder calculus is a urinary system disease.",
+"no": 364,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1619,
+"stmt": "Fragile X syndrome is a genetic disease.",
+"no": 365,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2796,
+"stmt": "Pulmonary artery disease is a respiratory system disease.",
+"no": 366,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1586,
+"stmt": "Blue toe syndrome is a musculoskeletal system disease.",
+"no": 367,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1437,
+"stmt": "Dementia is a mental disorder.",
+"no": 368,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3244,
+"stmt": "Heart aneurysm is a thoracic disease.",
+"no": 369,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3298,
+"stmt": "Orbit lymphoma is a musculoskeletal system disease.",
+"no": 370,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2651,
+"stmt": "Intestinal disease is a mental disorder.",
+"no": 371,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2758,
+"stmt": "Gray zone lymphoma is a genetic disease.",
+"no": 372,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 172,
+"stmt": "No disease is both an infectious disease and a skin disease.",
+"no": 373,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 826,
+"stmt": "Auto-brewery syndrome is a gastrointestinal system disease.",
+"no": 374,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 228,
+"stmt": "Sleep apnea is a blood disease.",
+"no": 375,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 615,
+"stmt": "Alpha-gal syndrome is a viral infection.",
+"no": 376,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2695,
+"stmt": "Kidney disease is an infectious disease.",
+"no": 377,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 91,
+"stmt": "No disease is both a thoracic disease and a skin disease.",
+"no": 378,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 411,
+"stmt": "Shellfish allergy is an immune system disease.",
+"no": 379,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2586,
+"stmt": "Anal carcinoma is a gastrointestinal system disease.",
+"no": 380,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1959,
+"stmt": "Pupil disease is a nervous system disease.",
+"no": 381,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 48,
+"stmt": "No disease is both a breast disease and an infectious disease.",
+"no": 382,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 854,
+"stmt": "Floating-Harbor syndrome is a genetic disease.",
+"no": 383,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1946,
+"stmt": "Motor neuron disease is a breast disease.",
+"no": 384,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 895,
+"stmt": "DOORS syndrome is a genetic disease.",
+"no": 385,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3009,
+"stmt": "Hereditary night blindness is a nervous system disease.",
+"no": 386,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 298,
+"stmt": "Lymphoma is a blood disease.",
+"no": 387,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 124,
+"stmt": "Triple-A syndrome is a genetic disease.",
+"no": 388,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2629,
+"stmt": "Middle ear disease is a nervous system disease.",
+"no": 389,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 458,
+"stmt": "Orange allergy is a thoracic disease.",
+"no": 390,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2354,
+"stmt": "Skull base cancer is a viral infection.",
+"no": 391,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 227,
+"stmt": "Sleep apnea is a nervous system disease.",
+"no": 392,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 34,
+"stmt": "No disease is both a blood disease and a parasitic infection.",
+"no": 393,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2045,
+"stmt": "Sick building syndrome is a genetic disease.",
+"no": 394,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 183,
+"stmt": "Mantle cell lymphoma is a blood disease.",
+"no": 395,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3149,
+"stmt": "Ramsay Hunt syndrome is a viral infection.",
+"no": 396,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2066,
+"stmt": "Dandy-Walker syndrome is a gastrointestinal system disease.",
+"no": 397,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1600,
+"stmt": "Spinal cord lymphoma is a blood disease.",
+"no": 398,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 173,
+"stmt": "No disease is both an infectious disease and a cancer or other tumor.",
+"no": 399,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1160,
+"stmt": "Secondary hypertension is a cardiovascular system disease.",
+"no": 400,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 575,
+"stmt": "Drug-induced hearing loss is a nervous system disease.",
+"no": 401,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2427,
+"stmt": "Nail disease is a musculoskeletal system disease.",
+"no": 402,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 119,
+"stmt": "No disease is both a fungal infection and a parasitic infection.",
+"no": 403,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3072,
+"stmt": "Tongue cancer is a cancer or other tumor.",
+"no": 404,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1814,
+"stmt": "Hepatitis C is a parasitic infection.",
+"no": 405,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2517,
+"stmt": "Egg allergy is a musculoskeletal system disease.",
+"no": 406,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 144,
+"stmt": "Arts syndrome is a skin disease.",
+"no": 407,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2623,
+"stmt": "Middle ear cancer is a nervous system disease.",
+"no": 408,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1583,
+"stmt": "Toxic shock syndrome is a thoracic disease.",
+"no": 409,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2894,
+"stmt": "Liver carcinoma is an immune system disease.",
+"no": 410,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1216,
+"stmt": "Heart disease is a metabolic disease.",
+"no": 411,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1326,
+"stmt": "Descending colon cancer is a gastrointestinal system disease.",
+"no": 412,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3089,
+"stmt": "Genital herpes is a metabolic disease.",
+"no": 413,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1198,
+"stmt": "Tick paralysis is an infectious disease.",
+"no": 414,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2725,
+"stmt": "Werner syndrome is a respiratory system disease.",
+"no": 415,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3210,
+"stmt": "Cannabis abuse is a nervous system disease.",
+"no": 416,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2076,
+"stmt": "Nose disease is an infectious disease.",
+"no": 417,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1800,
+"stmt": "Jaw cancer is a musculoskeletal system disease.",
+"no": 418,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 270,
+"stmt": "Pervasive developmental disorder is a nervous system disease.",
+"no": 419,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2917,
+"stmt": "Inhibited female orgasm is a reproductive system disease.",
+"no": 420,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1926,
+"stmt": "Factor V deficiency is a cardiovascular system disease.",
+"no": 421,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1240,
+"stmt": "Heart cancer is a skin disease.",
+"no": 422,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 266,
+"stmt": "Specific developmental disorder is a breast disease.",
+"no": 423,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 96,
+"stmt": "Spinal polio is an infectious disease.",
+"no": 424,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 873,
+"stmt": "Gillespie syndrome is an immune system disease.",
+"no": 425,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1950,
+"stmt": "Iron metabolism disease is a blood disease.",
+"no": 426,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 116,
+"stmt": "No disease is both a fungal infection and a metabolic disease.",
+"no": 427,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 952,
+"stmt": "Dry eye syndrome is a nervous system disease.",
+"no": 428,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1020,
+"stmt": "Diaphragm disease is a musculoskeletal system disease.",
+"no": 429,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1851,
+"stmt": "Hepatitis B is a gastrointestinal system disease.",
+"no": 430,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 45,
+"stmt": "African tick-bite fever is a urinary system disease.",
+"no": 431,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1094,
+"stmt": "Essential hypertension is a genetic disease.",
+"no": 432,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 182,
+"stmt": "Alcohol dependence is a blood disease.",
+"no": 433,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1597,
+"stmt": "Pulp erosion is a skin disease.",
+"no": 434,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 94,
+"stmt": "No disease is both a thoracic disease and a viral infection.",
+"no": 435,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 141,
+"stmt": "Arts syndrome is a mental disorder.",
+"no": 436,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 478,
+"stmt": "Fish allergy is a bacterial infection.",
+"no": 437,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2942,
+"stmt": "Retina lymphoma is a nervous system disease.",
+"no": 438,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 273,
+"stmt": "Autism spectrum disorder is a mental disorder.",
+"no": 439,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2461,
+"stmt": "Articulation disorder is a blood disease.",
+"no": 440,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 184,
+"stmt": "Mantle cell lymphoma is an immune system disease.",
+"no": 441,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3271,
+"stmt": "Null-cell leukemia is a cancer or other tumor.",
+"no": 442,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 35,
+"stmt": "No disease is both a blood disease and a reproductive system disease.",
+"no": 443,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 106,
+"stmt": "No disease is both an endocrine system disease and a respiratory system disease.",
+"no": 444,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2711,
+"stmt": "Eye disease is a reproductive system disease.",
+"no": 445,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2500,
+"stmt": "Burning mouth syndrome is a gastrointestinal system disease.",
+"no": 446,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1965,
+"stmt": "Renal artery disease is a bacterial infection.",
+"no": 447,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3268,
+"stmt": "Developmental coordination disorder is a musculoskeletal system disease.",
+"no": 448,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1158,
+"stmt": "Spotted fever is a cardiovascular system disease.",
+"no": 449,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1584,
+"stmt": "Blue toe syndrome is a cardiovascular system disease.",
+"no": 450,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2098,
+"stmt": "Eye carcinoma is an infectious disease.",
+"no": 451,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2139,
+"stmt": "Germ cell cancer is a reproductive system disease.",
+"no": 452,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2083,
+"stmt": "Hairy cell leukemia is a blood disease.",
+"no": 453,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1228,
+"stmt": "Frey syndrome is a viral infection.",
+"no": 454,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 880,
+"stmt": "COACH syndrome is a genetic disease.",
+"no": 455,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 189,
+"stmt": "No disease is both a metabolic disease and a reproductive system disease.",
+"no": 456,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 732,
+"stmt": "Adult-onset severe asthma is a viral infection.",
+"no": 457,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 42,
+"stmt": "No disease is both a breast disease and a thoracic disease.",
+"no": 458,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1928,
+"stmt": "Factor X deficiency is a genetic disease.",
+"no": 459,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1445,
+"stmt": "Protein-deficiency anemia is a urinary system disease.",
+"no": 460,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 477,
+"stmt": "Fish allergy is a gastrointestinal system disease.",
+"no": 461,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2429,
+"stmt": "Nail disease is a reproductive system disease.",
+"no": 462,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 404,
+"stmt": "Pitt-Hopkins syndrome is a mental disorder.",
+"no": 463,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 797,
+"stmt": "Breast implant illness is an endocrine system disease.",
+"no": 464,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2133,
+"stmt": "Carbohydrate metabolic disorder is a skin disease.",
+"no": 465,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 142,
+"stmt": "No disease is both a gastrointestinal system disease and a mental disorder.",
+"no": 466,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1740,
+"stmt": "Glaucoma is a nervous system disease.",
+"no": 467,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2419,
+"stmt": "Tick infestation is an infectious disease.",
+"no": 468,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1815,
+"stmt": "Hepatitis C is a blood disease.",
+"no": 469,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1649,
+"stmt": "Estrogen excess is a urinary system disease.",
+"no": 470,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1145,
+"stmt": "Urinary bladder cancer is a gastrointestinal system disease.",
+"no": 471,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3264,
+"stmt": "Cardiovascular syphilis is a breast disease.",
+"no": 472,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 738,
+"stmt": "Environmentally induced asthma is an endocrine system disease.",
+"no": 473,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2096,
+"stmt": "Eye carcinoma is a nervous system disease.",
+"no": 474,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3214,
+"stmt": "Plasma cell leukemia is an immune system disease.",
+"no": 475,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1969,
+"stmt": "Ovarian cancer is an endocrine system disease.",
+"no": 476,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2041,
+"stmt": "Sick building syndrome is a musculoskeletal system disease.",
+"no": 477,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 192,
+"stmt": "No disease is both a metabolic disease and a cancer or other tumor.",
+"no": 478,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 780,
+"stmt": "Hot water epilepsy is a musculoskeletal system disease.",
+"no": 479,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 219,
+"stmt": "Artery disease is a viral infection.",
+"no": 480,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2979,
+"stmt": "Sporadic breast cancer is a genetic disease.",
+"no": 481,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 521,
+"stmt": "Char syndrome is a cardiovascular system disease.",
+"no": 482,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 6,
+"stmt": "No disease is both a bacterial infection and a genetic disease.",
+"no": 483,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2937,
+"stmt": "Retinal cell cancer is a musculoskeletal system disease.",
+"no": 484,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2707,
+"stmt": "Spinal cancer is a viral infection.",
+"no": 485,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2779,
+"stmt": "Panic disorder is a genetic disease.",
+"no": 486,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1513,
+"stmt": "Prostate calculus is a mental disorder.",
+"no": 487,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 95,
+"stmt": "No disease is both an endocrine system disease and a fungal infection.",
+"no": 488,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 416,
+"stmt": "Respiratory allergy is an immune system disease.",
+"no": 489,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2948,
+"stmt": "Coats disease is a cardiovascular system disease.",
+"no": 490,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 275,
+"stmt": "Autism spectrum disorder is a gastrointestinal system disease.",
+"no": 491,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2340,
+"stmt": "Coffin-Lowry syndrome is an endocrine system disease.",
+"no": 492,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3090,
+"stmt": "Genital herpes is an immune system disease.",
+"no": 493,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2919,
+"stmt": "Inhibited female orgasm is a viral infection.",
+"no": 494,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1722,
+"stmt": "Cancer is a cancer or other tumor.",
+"no": 495,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 909,
+"stmt": "MEND syndrome is a thoracic disease.",
+"no": 496,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 88,
+"stmt": "Costello syndrome is a fungal infection.",
+"no": 497,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1475,
+"stmt": "Rift Valley fever is a parasitic infection.",
+"no": 498,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 49,
+"stmt": "Japanese spotted fever is a bacterial infection.",
+"no": 499,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2107,
+"stmt": "Inner ear disease is a nervous system disease.",
+"no": 500,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 207,
+"stmt": "No disease is both a nervous system disease and a cancer or other tumor.",
+"no": 501,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 158,
+"stmt": "Mixed cerebral palsy is a gastrointestinal system disease.",
+"no": 502,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2994,
+"stmt": "Intestinal obstruction is a respiratory system disease.",
+"no": 503,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1292,
+"stmt": "Coronary artery anomaly is a fungal infection.",
+"no": 504,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 921,
+"stmt": "CHIME syndrome is a breast disease.",
+"no": 505,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2816,
+"stmt": "Anal canal carcinoma is a gastrointestinal system disease.",
+"no": 506,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 378,
+"stmt": "Cold-induced sweating syndrome is a mental disorder.",
+"no": 507,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 474,
+"stmt": "Tomato allergy is a urinary system disease.",
+"no": 508,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3088,
+"stmt": "Genital herpes is a viral infection.",
+"no": 509,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1805,
+"stmt": "Jaw cancer is a metabolic disease.",
+"no": 510,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2798,
+"stmt": "Pulmonary artery disease is a blood disease.",
+"no": 511,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 591,
+"stmt": "Mitchell syndrome is a metabolic disease.",
+"no": 512,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1984,
+"stmt": "Psychotic disorder is a nervous system disease.",
+"no": 513,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 110,
+"stmt": "No disease is both an endocrine system disease and a viral infection.",
+"no": 514,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 742,
+"stmt": "Occupational asthma is a viral infection.",
+"no": 515,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2349,
+"stmt": "Skull base cancer is a musculoskeletal system disease.",
+"no": 516,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2318,
+"stmt": "Nutrition disease is a blood disease.",
+"no": 517,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1392,
+"stmt": "Acute leukemia is a musculoskeletal system disease.",
+"no": 518,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 466,
+"stmt": "Peach allergy is an immune system disease.",
+"no": 519,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 847,
+"stmt": "Scott syndrome is a cardiovascular system disease.",
+"no": 520,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2189,
+"stmt": "Lipid pneumonia is a parasitic infection.",
+"no": 521,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1671,
+"stmt": "Binder syndrome is a blood disease.",
+"no": 522,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1493,
+"stmt": "Hairy tongue is a gastrointestinal system disease.",
+"no": 523,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1148,
+"stmt": "Q fever is a bacterial infection.",
+"no": 524,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3035,
+"stmt": "Soft palate cancer is a gastrointestinal system disease.",
+"no": 525,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 350,
+"stmt": "Timothy syndrome is a metabolic disease.",
+"no": 526,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2753,
+"stmt": "Gray zone lymphoma is a blood disease.",
+"no": 527,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1048,
+"stmt": "Glucose intolerance is a metabolic disease.",
+"no": 528,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3029,
+"stmt": "Lip cancer is a gastrointestinal system disease.",
+"no": 529,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 37,
+"stmt": "No disease is both a blood disease and a skin disease.",
+"no": 530,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 201,
+"stmt": "No disease is both a musculoskeletal system disease and a urinary system disease.",
+"no": 531,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1721,
+"stmt": "Male breast cancer is an endocrine system disease.",
+"no": 532,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1998,
+"stmt": "Alcohol-induced mental disorder is a nervous system disease.",
+"no": 533,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2372,
+"stmt": "Urinary system cancer is a cancer or other tumor.",
+"no": 534,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2488,
+"stmt": "Anal margin carcinoma is a skin disease.",
+"no": 535,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1377,
+"stmt": "Pathological gambling is a reproductive system disease.",
+"no": 536,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 946,
+"stmt": "Sleeping sickness is an infectious disease.",
+"no": 537,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1803,
+"stmt": "Jaw cancer is a parasitic infection.",
+"no": 538,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1231,
+"stmt": "Blue color blindness is a nervous system disease.",
+"no": 539,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 397,
+"stmt": "Perry syndrome is a musculoskeletal system disease.",
+"no": 540,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2731,
+"stmt": "Visual cortex disease is a parasitic infection.",
+"no": 541,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 77,
+"stmt": "No disease is both a cardiovascular system disease and a viral infection.",
+"no": 542,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1624,
+"stmt": "Blindness is a nervous system disease.",
+"no": 543,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2177,
+"stmt": "Anus disease is a gastrointestinal system disease.",
+"no": 544,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2409,
+"stmt": "Muscle cancer is a cancer or other tumor.",
+"no": 545,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 22,
+"stmt": "No disease is both a blood disease and a cardiovascular system disease.",
+"no": 546,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 652,
+"stmt": "X-linked dominant disease is a reproductive system disease.",
+"no": 547,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2714,
+"stmt": "Large intestine cancer is a cancer or other tumor.",
+"no": 548,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 67,
+"stmt": "No disease is both a cardiovascular system disease and a mental disorder.",
+"no": 549,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3142,
+"stmt": "Speech disorder is a mental disorder.",
+"no": 550,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2551,
+"stmt": "Bile duct cancer is a genetic disease.",
+"no": 551,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1525,
+"stmt": "Sick sinus syndrome is a cardiovascular system disease.",
+"no": 552,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1685,
+"stmt": "Cholera is a gastrointestinal system disease.",
+"no": 553,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 53,
+"stmt": "No disease is both a breast disease and a parasitic infection.",
+"no": 554,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 581,
+"stmt": "Celery allergy is a gastrointestinal system disease.",
+"no": 555,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3282,
+"stmt": "Substance dependence is an endocrine system disease.",
+"no": 556,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2094,
+"stmt": "Newcastle disease is a respiratory system disease.",
+"no": 557,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2479,
+"stmt": "Hair disease is an immune system disease.",
+"no": 558,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1903,
+"stmt": "Ascending colon cancer is a gastrointestinal system disease.",
+"no": 559,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1881,
+"stmt": "Heel spur is an endocrine system disease.",
+"no": 560,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 84,
+"stmt": "Yellow nail syndrome is a genetic disease.",
+"no": 561,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 387,
+"stmt": "Cole-Carpenter syndrome is a reproductive system disease.",
+"no": 562,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 618,
+"stmt": "Davis-Wells syndrome is a urinary system disease.",
+"no": 563,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 131,
+"stmt": "Respiratory system cancer is a blood disease.",
+"no": 564,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 982,
+"stmt": "Prostate lymphoma is an immune system disease.",
+"no": 565,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3128,
+"stmt": "Liver lymphoma is a blood disease.",
+"no": 566,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2982,
+"stmt": "Septic arthritis is a respiratory system disease.",
+"no": 567,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 68,
+"stmt": "No disease is both a cardiovascular system disease and a metabolic disease.",
+"no": 568,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2830,
+"stmt": "Blood protein disease is a metabolic disease.",
+"no": 569,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 3237,
+"stmt": "Renal tuberculosis is an infectious disease.",
+"no": 570,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 840,
+"stmt": "African iron overload is an endocrine system disease.",
+"no": 571,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 853,
+"stmt": "Jackson-Weiss syndrome is a metabolic disease.",
+"no": 572,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2824,
+"stmt": "Aortic valve disease is a musculoskeletal system disease.",
+"no": 573,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 49,
+"stmt": "No disease is both a breast disease and a mental disorder.",
+"no": 574,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1590,
+"stmt": "Ovarian dysfunction is a reproductive system disease.",
+"no": 575,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1339,
+"stmt": "Paranoid schizophrenia is a skin disease.",
+"no": 576,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3186,
+"stmt": "Intrinsic asthma is an immune system disease.",
+"no": 577,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 156,
+"stmt": "Female breast cancer is an endocrine system disease.",
+"no": 578,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 52,
+"stmt": "Japanese spotted fever is a musculoskeletal system disease.",
+"no": 579,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2447,
+"stmt": "Secondary syphilis is a reproductive system disease.",
+"no": 580,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2618,
+"stmt": "Adjustment disorder is a mental disorder.",
+"no": 581,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2767,
+"stmt": "Breast lymphoma is a blood disease.",
+"no": 582,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 134,
+"stmt": "No disease is both a genetic disease and a reproductive system disease.",
+"no": 583,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3125,
+"stmt": "Metal metabolism disorder is a viral infection.",
+"no": 584,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1237,
+"stmt": "Heart cancer is a thoracic disease.",
+"no": 585,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 31,
+"stmt": "No disease is both a blood disease and a metabolic disease.",
+"no": 586,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1004,
+"stmt": "Aggressive NK-cell leukemia is a urinary system disease.",
+"no": 587,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 176,
+"stmt": "No disease is both a mental disorder and a metabolic disease.",
+"no": 588,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 26,
+"stmt": "No disease is both a blood disease and a genetic disease.",
+"no": 589,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2097,
+"stmt": "Eye carcinoma is a cancer or other tumor.",
+"no": 590,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 210,
+"stmt": "Short QT syndrome is a thoracic disease.",
+"no": 591,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2570,
+"stmt": "Movement disease is an infectious disease.",
+"no": 592,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2906,
+"stmt": "Pancreatic cholera is an endocrine system disease.",
+"no": 593,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3236,
+"stmt": "Renal tuberculosis is a bacterial infection.",
+"no": 594,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2985,
+"stmt": "Septic arthritis is a cancer or other tumor.",
+"no": 595,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1336,
+"stmt": "Cascade stomach is a reproductive system disease.",
+"no": 596,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 725,
+"stmt": "Persistent moderate asthma is a mental disorder.",
+"no": 597,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1648,
+"stmt": "Estrogen excess is a metabolic disease.",
+"no": 598,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2637,
+"stmt": "Nutritional deficiency disease is a gastrointestinal system disease.",
+"no": 599,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1596,
+"stmt": "Pulp erosion is a fungal infection.",
+"no": 600,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1979,
+"stmt": "Protein S deficiency is a urinary system disease.",
+"no": 601,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 93,
+"stmt": "Carney complex is a musculoskeletal system disease.",
+"no": 602,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1537,
+"stmt": "Acquired color blindness is a nervous system disease.",
+"no": 603,
+"claude": 2
+},
+{
+"part": "pair",
+"idx": 44,
+"stmt": "No disease is both a breast disease and a fungal infection.",
+"no": 604,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1311,
+"stmt": "Vaginal disease is an infectious disease.",
+"no": 605,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 170,
+"stmt": "No disease is both an infectious disease and a reproductive system disease.",
+"no": 606,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2284,
+"stmt": "Uterine cancer is a mental disorder.",
+"no": 607,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1138,
+"stmt": "Ovarian disease is a nervous system disease.",
+"no": 608,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1150,
+"stmt": "Q fever is a respiratory system disease.",
+"no": 609,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 803,
+"stmt": "Becker disease is a reproductive system disease.",
+"no": 610,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 815,
+"stmt": "Sickle cell disease is a cardiovascular system disease.",
+"no": 611,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 324,
+"stmt": "Cartilage cancer is a cancer or other tumor.",
+"no": 612,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2430,
+"stmt": "Orbital cancer is a musculoskeletal system disease.",
+"no": 613,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 161,
+"stmt": "No disease is both an immune system disease and a skin disease.",
+"no": 614,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2312,
+"stmt": "Skin disease is a skin disease.",
+"no": 615,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2665,
+"stmt": "Dental pulp disease is a musculoskeletal system disease.",
+"no": 616,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3131,
+"stmt": "Liver lymphoma is a cancer or other tumor.",
+"no": 617,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 172,
+"stmt": "Anal canal cancer is a gastrointestinal system disease.",
+"no": 618,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2182,
+"stmt": "Lipid metabolism disorder is a genetic disease.",
+"no": 619,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 47,
+"stmt": "African tick-bite fever is a viral infection.",
+"no": 620,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1595,
+"stmt": "Pulp erosion is a gastrointestinal system disease.",
+"no": 621,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2183,
+"stmt": "Lipid metabolism disorder is a metabolic disease.",
+"no": 622,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 164,
+"stmt": "No disease is both an immune system disease and a viral infection.",
+"no": 623,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 71,
+"stmt": "No disease is both a cardiovascular system disease and a parasitic infection.",
+"no": 624,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 139,
+"stmt": "No disease is both a genetic disease and a viral infection.",
+"no": 625,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1184,
+"stmt": "Plethora of newborn is a bacterial infection.",
+"no": 626,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 735,
+"stmt": "Adult-onset severe asthma is an immune system disease.",
+"no": 627,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2469,
+"stmt": "Glucose metabolism disease is a parasitic infection.",
+"no": 628,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2699,
+"stmt": "Ferguson-Smith tumor is a genetic disease.",
+"no": 629,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 364,
+"stmt": "UV-sensitive syndrome is a cancer or other tumor.",
+"no": 630,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3294,
+"stmt": "Heroin dependence is a breast disease.",
+"no": 631,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1098,
+"stmt": "Edwards syndrome is a thoracic disease.",
+"no": 632,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2306,
+"stmt": "Childhood kidney cancer is a cancer or other tumor.",
+"no": 633,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2188,
+"stmt": "Lipid pneumonia is a respiratory system disease.",
+"no": 634,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1219,
+"stmt": "Heart disease is a nervous system disease.",
+"no": 635,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2789,
+"stmt": "Animal phobia is a reproductive system disease.",
+"no": 636,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2880,
+"stmt": "Bone lymphoma is a cancer or other tumor.",
+"no": 637,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 814,
+"stmt": "Sickle cell disease is a genetic disease.",
+"no": 638,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1917,
+"stmt": "Factor VII deficiency is a cardiovascular system disease.",
+"no": 639,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 844,
+"stmt": "Scott syndrome is a blood disease.",
+"no": 640,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2085,
+"stmt": "Hairy cell leukemia is a cancer or other tumor.",
+"no": 641,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1213,
+"stmt": "Functional diarrhea is a blood disease.",
+"no": 642,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2613,
+"stmt": "Thyroid gland disease is an endocrine system disease.",
+"no": 643,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1391,
+"stmt": "Acute leukemia is a cancer or other tumor.",
+"no": 644,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2453,
+"stmt": "Syphilis is a nervous system disease.",
+"no": 645,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 449,
+"stmt": "Cherry allergy is an infectious disease.",
+"no": 646,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2341,
+"stmt": "Coffin-Lowry syndrome is a nervous system disease.",
+"no": 647,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2157,
+"stmt": "Carcinoma is a gastrointestinal system disease.",
+"no": 648,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2357,
+"stmt": "Lynch syndrome is a reproductive system disease.",
+"no": 649,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1225,
+"stmt": "Frey syndrome is a nervous system disease.",
+"no": 650,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 3197,
+"stmt": "Bacterial meningitis is an infectious disease.",
+"no": 651,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 715,
+"stmt": "Intermittent asthma is a fungal infection.",
+"no": 652,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1277,
+"stmt": "Bladder lymphoma is an immune system disease.",
+"no": 653,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 123,
+"stmt": "ADULT syndrome is a thoracic disease.",
+"no": 654,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1797,
+"stmt": "Bone cancer is a fungal infection.",
+"no": 655,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1427,
+"stmt": "Shipyard eye is a nervous system disease.",
+"no": 656,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1806,
+"stmt": "Sexual dysfunction is a reproductive system disease.",
+"no": 657,
+"claude": 1
+},
+{
+"part": "pair",
+"idx": 56,
+"stmt": "No disease is both a breast disease and a skin disease.",
+"no": 658,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1818,
+"stmt": "Viral hepatitis is a gastrointestinal system disease.",
+"no": 659,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2385,
+"stmt": "Oral tuberculosis is a gastrointestinal system disease.",
+"no": 660,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2351,
+"stmt": "Skull base cancer is a respiratory system disease.",
+"no": 661,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1878,
+"stmt": "Sweat gland cancer is an endocrine system disease.",
+"no": 662,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2696,
+"stmt": "Ferguson-Smith tumor is a skin disease.",
+"no": 663,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 247,
+"stmt": "Stroke is a fungal infection.",
+"no": 664,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 588,
+"stmt": "Watson syndrome is a nervous system disease.",
+"no": 665,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1276,
+"stmt": "Bladder lymphoma is a blood disease.",
+"no": 666,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2197,
+"stmt": "Bipolar disorder is a nervous system disease.",
+"no": 667,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2851,
+"stmt": "Pulmonary hypertension is a thoracic disease.",
+"no": 668,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 594,
+"stmt": "Mitchell syndrome is a cardiovascular system disease.",
+"no": 669,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3176,
+"stmt": "Taylor's syndrome is a genetic disease.",
+"no": 670,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1783,
+"stmt": "Pancreatic cancer is an endocrine system disease.",
+"no": 671,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2129,
+"stmt": "Carbohydrate metabolic disorder is a genetic disease.",
+"no": 672,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2431,
+"stmt": "Orbital cancer is a cancer or other tumor.",
+"no": 673,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 681,
+"stmt": "Sweeney-Cox syndrome is a skin disease.",
+"no": 674,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1350,
+"stmt": "Male infertility is a mental disorder.",
+"no": 675,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2051,
+"stmt": "Bloom syndrome is a respiratory system disease.",
+"no": 676,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3008,
+"stmt": "Arthritis is an immune system disease.",
+"no": 677,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 864,
+"stmt": "Stiff skin syndrome is a genetic disease.",
+"no": 678,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1890,
+"stmt": "Ovarian lymphoma is an endocrine system disease.",
+"no": 679,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 235,
+"stmt": "Ovarian melanoma is an endocrine system disease.",
+"no": 680,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 250,
+"stmt": "Withdrawal disorder is a skin disease.",
+"no": 681,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2719,
+"stmt": "Retinal disease is a nervous system disease.",
+"no": 682,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2741,
+"stmt": "Lung clear cell-sugar-tumor is a thoracic disease.",
+"no": 683,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 773,
+"stmt": "Long COVID is a viral infection.",
+"no": 684,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2621,
+"stmt": "Adjustment disorder is a reproductive system disease.",
+"no": 685,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2952,
+"stmt": "Coats disease is a metabolic disease.",
+"no": 686,
+"claude": 0
+},
+{
+"part": "pair",
+"idx": 120,
+"stmt": "No disease is both a fungal infection and a reproductive system disease.",
+"no": 687,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1352,
+"stmt": "Alcoholic hepatitis is a gastrointestinal system disease.",
+"no": 688,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 1293,
+"stmt": "Coronary artery anomaly is a thoracic disease.",
+"no": 689,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1570,
+"stmt": "Bipolar I disorder is a genetic disease.",
+"no": 690,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 943,
+"stmt": "Eye accommodation disease is a genetic disease.",
+"no": 691,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1332,
+"stmt": "Cascade stomach is a gastrointestinal system disease.",
+"no": 692,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2040,
+"stmt": "Sick building syndrome is an immune system disease.",
+"no": 693,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 3071,
+"stmt": "Tongue cancer is a gastrointestinal system disease.",
+"no": 694,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2464,
+"stmt": "Glucose metabolism disease is a genetic disease.",
+"no": 695,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 1899,
+"stmt": "Nasal cavity disease is an immune system disease.",
+"no": 696,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 2678,
+"stmt": "Schizophrenia is a nervous system disease.",
+"no": 697,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 2781,
+"stmt": "Specific phobia is a nervous system disease.",
+"no": 698,
+"claude": 2
+},
+{
+"part": "item",
+"idx": 375,
+"stmt": "Cold-induced sweating syndrome is a genetic disease.",
+"no": 699,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 81,
+"stmt": "Yellow nail syndrome is a skin disease.",
+"no": 700,
+"claude": 1
+},
+{
+"part": "item",
+"idx": 2452,
+"stmt": "Syphilis is a cardiovascular system disease.",
+"no": 701,
+"claude": 0
+},
+{
+"part": "item",
+"idx": 1111,
+"stmt": "Benign essential hypertension is a cardiovascular system disease.",
+"no": 702,
+"claude": 1
+}
+]
