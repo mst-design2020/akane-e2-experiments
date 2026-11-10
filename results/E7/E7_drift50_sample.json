@@ -1,0 +1,402 @@
+[
+{
+"id": 250,
+"type": "H",
+"label_claude": 0,
+"stmt": "Aviator is a type of man-made object.",
+"score": 0.95,
+"path": "aviator → pilot → book → ⇒C"
+},
+{
+"id": 456,
+"type": "G",
+"label_claude": 2,
+"stmt": "Wife is a type of mammal.",
+"score": 0.83,
+"path": "wife → woman → human → ape → ⇒C"
+},
+{
+"id": 12,
+"type": "T",
+"label_claude": 1,
+"stmt": "Isolationist is a type of living thing.",
+"score": 0.96,
+"path": "isolationist → person → individual → human → ⇒C"
+},
+{
+"id": 221,
+"type": "T",
+"label_claude": 1,
+"stmt": "Carbine is a type of man-made object.",
+"score": 0.98,
+"path": "carbine → rifle → ⇒C"
+},
+{
+"id": 253,
+"type": "T",
+"label_claude": 1,
+"stmt": "Synchrotron is a type of device.",
+"score": 0.99,
+"path": "synchrotron → cyclotron → ⇒C"
+},
+{
+"id": 670,
+"type": "G",
+"label_claude": 0,
+"stmt": "Candlestick is a type of tool.",
+"score": 0.89,
+"path": "candlestick → tube → system → method → ⇒C"
+},
+{
+"id": 34,
+"type": "T",
+"label_claude": 1,
+"stmt": "Locomotive is a type of man-made object.",
+"score": 0.96,
+"path": "locomotive → engine → device → ⇒C"
+},
+{
+"id": 168,
+"type": "G",
+"label_claude": 0,
+"stmt": "Houseboat is a type of device.",
+"score": 0.97,
+"path": "houseboat → vessel → craft → ⇒C"
+},
+{
+"id": 539,
+"type": "H",
+"label_claude": 0,
+"stmt": "Hillbilly is a type of material.",
+"score": 0.86,
+"path": "hillbilly → person → body → section → ⇒C"
+},
+{
+"id": 541,
+"type": "T",
+"label_claude": 1,
+"stmt": "Caveman is a type of living thing.",
+"score": 0.96,
+"path": "caveman → person → individual → human → ⇒C"
+},
+{
+"id": 101,
+"type": "G",
+"label_claude": 1,
+"stmt": "Jukebox is a type of equipment.",
+"score": 0.97,
+"path": "jukebox → carousel → ⇒C"
+},
+{
+"id": 567,
+"type": "G",
+"label_claude": 0,
+"stmt": "Haggis is a type of organ.",
+"score": 0.85,
+"path": "haggis → dish → vessel → person → ⇒C"
+},
+{
+"id": 155,
+"type": "T",
+"label_claude": 1,
+"stmt": "Newlywed is a type of living thing.",
+"score": 0.97,
+"path": "newlywed → person → individual → human → ⇒C"
+},
+{
+"id": 137,
+"type": "E",
+"label_claude": 0,
+"stmt": "Rugby is a type of equipment.",
+"score": 0.77,
+"path": "rugby → cement → material → apparatus → ⇒C"
+},
+{
+"id": 622,
+"type": "T",
+"label_claude": 1,
+"stmt": "Preteen is a type of person.",
+"score": 0.99,
+"path": "preteen → child → ⇒C"
+},
+{
+"id": 698,
+"type": "G",
+"label_claude": 1,
+"stmt": "Anesthesiologist is a type of worker.",
+"score": 0.98,
+"path": "anesthesiologist → physician → doctor → ⇒C"
+},
+{
+"id": 484,
+"type": "G",
+"label_claude": 0,
+"stmt": "Rapporteur is a type of organ.",
+"score": 0.98,
+"path": "rapporteur → person → ⇒C"
+},
+{
+"id": 311,
+"type": "E",
+"label_claude": 0,
+"stmt": "Rancher is a type of body part.",
+"score": 0.98,
+"path": "rancher → person → ⇒C"
+},
+{
+"id": 141,
+"type": "E",
+"label_claude": 0,
+"stmt": "Auctioneer is a type of material.",
+"score": 0.8,
+"path": "auctioneer → individual → person → body → ⇒C"
+},
+{
+"id": 467,
+"type": "T",
+"label_claude": 1,
+"stmt": "Communicator is a type of person.",
+"score": 0.99,
+"path": "communicator → device → project → recruit → ⇒C"
+},
+{
+"id": 292,
+"type": "T",
+"label_claude": 1,
+"stmt": "Juggler is a type of living thing.",
+"score": 0.97,
+"path": "juggler → person → individual → human → ⇒C"
+},
+{
+"id": 643,
+"type": "E",
+"label_claude": 0,
+"stmt": "Dredge is a type of animal.",
+"score": 0.96,
+"path": "dredge → shaker → ⇒C"
+},
+{
+"id": 212,
+"type": "T",
+"label_claude": 1,
+"stmt": "Athlete is a type of living thing.",
+"score": 0.97,
+"path": "athlete → person → individual → human → ⇒C"
+},
+{
+"id": 503,
+"type": "E",
+"label_claude": 0,
+"stmt": "Rifle is a type of animal.",
+"score": 0.9,
+"path": "rifle → rifleman → bird → ⇒C"
+},
+{
+"id": 5,
+"type": "T",
+"label_claude": 1,
+"stmt": "Grocer is a type of living thing.",
+"score": 0.97,
+"path": "grocer → person → individual → human → ⇒C"
+},
+{
+"id": 441,
+"type": "E",
+"label_claude": 0,
+"stmt": "Chime is a type of organ.",
+"score": 0.92,
+"path": "chime → instrument → device → equipment → ⇒C"
+},
+{
+"id": 377,
+"type": "T",
+"label_claude": 1,
+"stmt": "Dominatrix is a type of living thing.",
+"score": 0.98,
+"path": "dominatrix → woman → human → ⇒C"
+},
+{
+"id": 434,
+"type": "H",
+"label_claude": 0,
+"stmt": "Contrarian is a type of animal.",
+"score": 0.88,
+"path": "contrarian → person → individual → human → ⇒C"
+},
+{
+"id": 23,
+"type": "G",
+"label_claude": 1,
+"stmt": "Actuator is a type of machine.",
+"score": 0.91,
+"path": "actuator → relay → set → ⇒C"
+},
+{
+"id": 194,
+"type": "T",
+"label_claude": 1,
+"stmt": "Freelancer is a type of living thing.",
+"score": 0.96,
+"path": "freelancer → person → individual → human → ⇒C"
+},
+{
+"id": 401,
+"type": "E",
+"label_claude": 0,
+"stmt": "Toddler is a type of tool.",
+"score": 0.84,
+"path": "toddler → child → card → resource → ⇒C"
+},
+{
+"id": 320,
+"type": "H",
+"label_claude": 0,
+"stmt": "Crustacean is a type of body part.",
+"score": 0.94,
+"path": "crustacean → arthropod → animal → person → ⇒C"
+},
+{
+"id": 661,
+"type": "H",
+"label_claude": 0,
+"stmt": "Retriever is a type of game.",
+"score": 0.65,
+"path": "retriever → breed → race → ⇒C"
+},
+{
+"id": 542,
+"type": "E",
+"label_claude": 0,
+"stmt": "Battleship is a type of person.",
+"score": 0.96,
+"path": "battleship → stage → device → project → ⇒C"
+},
+{
+"id": 368,
+"type": "H",
+"label_claude": 0,
+"stmt": "Convener is a type of material.",
+"score": 0.85,
+"path": "convener → person → body → section → ⇒C"
+},
+{
+"id": 519,
+"type": "T",
+"label_claude": 1,
+"stmt": "Statesman is a type of living thing.",
+"score": 0.98,
+"path": "statesman → man → ⇒C"
+},
+{
+"id": 312,
+"type": "H",
+"label_claude": 0,
+"stmt": "Clary is a type of body part.",
+"score": 0.98,
+"path": "clary → sage → person → ⇒C"
+},
+{
+"id": 162,
+"type": "H",
+"label_claude": 0,
+"stmt": "Billionaire is a type of body part.",
+"score": 0.99,
+"path": "billionaire → person → ⇒C"
+},
+{
+"id": 121,
+"type": "H",
+"label_claude": 0,
+"stmt": "Alternator is a type of vehicle.",
+"score": 0.86,
+"path": "alternator → generator → apparatus → machine → ⇒C"
+},
+{
+"id": 208,
+"type": "E",
+"label_claude": 0,
+"stmt": "Bethel is a type of body part.",
+"score": 0.84,
+"path": "bethel → place → area → region → ⇒C"
+},
+{
+"id": 647,
+"type": "H",
+"label_claude": 0,
+"stmt": "Earl is a type of animal.",
+"score": 0.99,
+"path": "earl → butterfly → insect → arthropod → ⇒C"
+},
+{
+"id": 150,
+"type": "T",
+"label_claude": 1,
+"stmt": "Steed is a type of animal.",
+"score": 0.98,
+"path": "steed → stallion → horse → ⇒C"
+},
+{
+"id": 206,
+"type": "E",
+"label_claude": 0,
+"stmt": "Sieve is a type of body part.",
+"score": 0.99,
+"path": "sieve → person → ⇒C"
+},
+{
+"id": 125,
+"type": "T",
+"label_claude": 0,
+"stmt": "Spitfire is a type of living thing.",
+"score": 0.98,
+"path": "spitfire → larva → ⇒C"
+},
+{
+"id": 479,
+"type": "T",
+"label_claude": 1,
+"stmt": "Hillbilly is a type of living thing.",
+"score": 0.97,
+"path": "hillbilly → person → individual → human → ⇒C"
+},
+{
+"id": 354,
+"type": "G",
+"label_claude": 0,
+"stmt": "Electrode is a type of equipment.",
+"score": 0.71,
+"path": "electrode → terminal → facility → ⇒C"
+},
+{
+"id": 599,
+"type": "T",
+"label_claude": 1,
+"stmt": "Loner is a type of living thing.",
+"score": 0.95,
+"path": "loner → person → individual → human → ⇒C"
+},
+{
+"id": 553,
+"type": "H",
+"label_claude": 0,
+"stmt": "Crocodile is a type of body part.",
+"score": 0.98,
+"path": "crocodile → person → ⇒C"
+},
+{
+"id": 113,
+"type": "T",
+"label_claude": 1,
+"stmt": "Helicopter is a type of man-made object.",
+"score": 0.96,
+"path": "helicopter → machine → device → ⇒C"
+},
+{
+"id": 394,
+"type": "H",
+"label_claude": 0,
+"stmt": "Inventor is a type of body part.",
+"score": 0.98,
+"path": "inventor → person → ⇒C"
+}
+]
