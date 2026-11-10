@@ -1,6 +1,6 @@
 # AKANE Architecture 実験：小さいAIの答えを、外から確かめる
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24045800.svg)](https://doi.org/10.5281/zenodo.24045800)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24045799.svg)](https://doi.org/10.5281/zenodo.24045799)
 
 [English](README.md) | 日本語
 
@@ -28,7 +28,7 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 - 記事7（E4、AIの答えから学んだ大きな網） https://note.com/mst_design2020/n/nd323ba54cf92
 - 記事8（E4後半・E5、正解表の見直しと、AIが作ったルールの外れの損） https://note.com/mst_design2020/n/n222a0ecf386d
 
-著者：加藤雅也（M.S.T.デザイン代表・大分県佐伯市） https://mst-design.jp/ ・ ORCID https://orcid.org/0009-0001-6803-654X ・ DOI https://doi.org/10.5281/zenodo.24045800
+著者：加藤雅也（M.S.T.デザイン代表・大分県佐伯市） https://mst-design.jp/ ・ ORCID https://orcid.org/0009-0001-6803-654X ・ DOI https://doi.org/10.5281/zenodo.24045799
 
 ## AKANE Architectureとは（短く）
 
