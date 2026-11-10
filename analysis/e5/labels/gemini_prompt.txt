@@ -1,0 +1,806 @@
+You are checking English statements about categories. For each statement "X is a type of Y" (or "A is a type of B"), judge it by ordinary common sense: is it true for at least one normal, everyday meaning of X?
+Answer 1 = true, 0 = false, 2 = could go either way / depends on meaning.
+Do not explain. Reply with only a CSV with the header "no,label" and one row per statement, for all 802 statements, in the same order.
+
+1	Rhinoceros is a type of person.
+2	Traveler is a type of game.
+3	Flower is a type of body part.
+4	Juvenile is a type of boat.
+5	Alumnus is a type of plant.
+6	Headdress is a type of flower.
+7	Dubbing is a type of device.
+8	Primrose is a type of flower.
+9	Cuttlefish is a type of artist.
+10	Dragonfly is a type of fish.
+11	Lally is a type of tool.
+12	Dredge is a type of man-made object.
+13	Priestess is a type of dog.
+14	Granddaughter is a type of mammal.
+15	Stewardess is a type of equipment.
+16	Pendulum is a type of device.
+17	Cadet is a type of dish.
+18	Manger is a type of worker.
+19	Ski is a type of device.
+20	Financier is a type of worker.
+21	Dish is a type of tool.
+22	Mosquito is a type of weapon.
+23	Impressionist is a type of fabric.
+24	Claimant is a type of disease.
+25	Headliner is a type of equipment.
+26	Bock is a type of vegetable.
+27	Vizier is a type of athlete.
+28	Yarrow is a type of flower.
+29	Alternator is a type of vehicle.
+30	Crusher is a type of machine.
+31	Phytoplankton is a type of plant.
+32	Person is a type of worker.
+33	Erotic is a type of living thing.
+34	Hoarder is a type of mammal.
+35	Rapporteur is a type of person.
+36	Room is a type of building.
+37	Man-made object is a type of device.
+38	Contemplative is a type of footwear.
+39	Aircraft is a type of machine.
+40	Game is a type of tool.
+41	Drummer is a type of worker.
+42	Wife is a type of mammal.
+43	Man-made object is a type of weapon.
+44	Toy is a type of game.
+45	Vegetable is a type of plant.
+46	Chalet is a type of building.
+47	Boat is a type of device.
+48	Messenger is a type of person.
+49	Equipment is a type of tool.
+50	Skater is a type of person.
+51	Game is a type of sport.
+52	Blouse is a type of fish.
+53	Libertine is a type of fish.
+54	Coupe is a type of container.
+55	Juggler is a type of living thing.
+56	Beret is a type of toy.
+57	Tool is a type of device.
+58	Snob is a type of vegetable.
+59	Earl is a type of animal.
+60	Doorbell is a type of boat.
+61	Billionaire is a type of body part.
+62	Car is a type of machine.
+63	Taster is a type of worker.
+64	Helmsman is a type of boat.
+65	Tenement is a type of building.
+66	Boardroom is a type of room.
+67	Alderman is a type of boat.
+68	Ashtray is a type of metal.
+69	Cultivar is a type of material.
+70	Lodger is a type of plant.
+71	Freeman is a type of worker.
+72	Grader is a type of sport.
+73	Cutthroat is a type of plant.
+74	Hater is a type of dog.
+75	Preteen is a type of person.
+76	Hiker is a type of athlete.
+77	Razor is a type of weapon.
+78	Athlete is a type of mammal.
+79	Metal is a type of material.
+80	Car is a type of device.
+81	Coffin is a type of footwear.
+82	Everlasting is a type of plant.
+83	Plumber is a type of bird.
+84	Princess is a type of person.
+85	Ship is a type of tool.
+86	Clarence is a type of vehicle.
+87	Man-made object is a type of musical instrument.
+88	Chalet is a type of car.
+89	Footwear is a type of device.
+90	Tongs is a type of tool.
+91	Aircraft is a type of sport.
+92	Schoolgirl is a type of metal.
+93	Geranium is a type of living thing.
+94	Landlady is a type of flower.
+95	Spitfire is a type of living thing.
+96	Biographer is a type of disease.
+97	Gazelle is a type of food.
+98	Assistant is a type of person.
+99	Battleship is a type of person.
+100	Tool is a type of equipment.
+101	Wrestler is a type of athlete.
+102	Individualist is a type of person.
+103	Slipknot is a type of material.
+104	Galleon is a type of boat.
+105	Transvestite is a type of sport.
+106	Mathematician is a type of worker.
+107	Handyman is a type of weapon.
+108	Atheist is a type of dog.
+109	Blazer is a type of man-made object.
+110	Ladybug is a type of equipment.
+111	Escapist is a type of game.
+112	Harmonica is a type of equipment.
+113	Dish is a type of man-made object.
+114	Buddy is a type of man-made object.
+115	Neurotic is a type of metal.
+116	Neurosurgeon is a type of footwear.
+117	Calender is a type of tool.
+118	Landlady is a type of game.
+119	Geisha is a type of plant.
+120	Undercarriage is a type of device.
+121	Container is a type of boat.
+122	Fabric is a type of material.
+123	Sphincter is a type of disease.
+124	Minion is a type of living thing.
+125	Clary is a type of weapon.
+126	Accordion is a type of fish.
+127	Detainee is a type of living thing.
+128	Macadamia is a type of living thing.
+129	Suitor is a type of game.
+130	Workman is a type of footwear.
+131	Milkman is a type of vegetable.
+132	Sheeting is a type of food.
+133	Peshmerga is a type of living thing.
+134	Legislator is a type of worker.
+135	Freelancer is a type of living thing.
+136	Shrine is a type of vehicle.
+137	Fruit is a type of plant.
+138	Blazer is a type of weapon.
+139	Greenhouse is a type of device.
+140	Microphone is a type of sport.
+141	Opportunist is a type of person.
+142	Meatball is a type of food.
+143	Synchrotron is a type of device.
+144	Wally is a type of sport.
+145	Obstetrician is a type of person.
+146	Athlete is a type of living thing.
+147	Womanizer is a type of body part.
+148	Informer is a type of fruit.
+149	Bobbin is a type of fruit.
+150	Candlestick is a type of device.
+151	Hearse is a type of man-made object.
+152	Invalid is a type of game.
+153	Airship is a type of body part.
+154	Thermometer is a type of tool.
+155	Musket is a type of vehicle.
+156	Tomahawk is a type of man-made object.
+157	Marlin is a type of living thing.
+158	Footwear is a type of tool.
+159	Bison is a type of mammal.
+160	Hornet is a type of worker.
+161	Mariner is a type of metal.
+162	Preacher is a type of person.
+163	Impala is a type of sport.
+164	Orchid is a type of artist.
+165	Corrective is a type of man-made object.
+166	Traveler is a type of reptile.
+167	Deflector is a type of equipment.
+168	Weapon is a type of machine.
+169	Suitor is a type of living thing.
+170	Ratchet is a type of tool.
+171	Briefcase is a type of vegetable.
+172	Furniture is a type of equipment.
+173	Kitchen is a type of equipment.
+174	Kimono is a type of fish.
+175	Strainer is a type of game.
+176	Hooch is a type of artist.
+177	Vehicle is a type of device.
+178	Sibling is a type of mammal.
+179	Searchlight is a type of metal.
+180	Plenipotentiary is a type of equipment.
+181	Webcam is a type of man-made object.
+182	Synagogue is a type of vegetable.
+183	Sport is a type of game.
+184	Thwart is a type of device.
+185	Houseboat is a type of device.
+186	Terrier is a type of bird.
+187	Marlin is a type of drink.
+188	Blacksmith is a type of artist.
+189	Private is a type of fruit.
+190	Advertiser is a type of metal.
+191	Statesman is a type of living thing.
+192	Chime is a type of organ.
+193	Storeroom is a type of vegetable.
+194	Pigeon is a type of person.
+195	Falconer is a type of sport.
+196	Canoe is a type of vehicle.
+197	Caterer is a type of sport.
+198	Emir is a type of boat.
+199	Apparel is a type of clothing.
+200	Bethel is a type of body part.
+201	Raglan is a type of furniture.
+202	Aircraft is a type of equipment.
+203	Watchman is a type of body part.
+204	Congressman is a type of flower.
+205	Chronicler is a type of artist.
+206	Preteen is a type of metal.
+207	Hitchhiker is a type of worker.
+208	Buyer is a type of material.
+209	Exporter is a type of material.
+210	Poodle is a type of disease.
+211	Groundhog is a type of man-made object.
+212	Coordinator is a type of person.
+213	Game is a type of toy.
+214	Nacho is a type of material.
+215	Firearm is a type of man-made object.
+216	Bankrupt is a type of man-made object.
+217	Grandparent is a type of food.
+218	Bulldozer is a type of machine.
+219	Stepmother is a type of person.
+220	Mercenary is a type of worker.
+221	Propeller is a type of reptile.
+222	Psychologist is a type of worker.
+223	Kitten is a type of mammal.
+224	Milkman is a type of living thing.
+225	Protectionist is a type of plant.
+226	Dish is a type of equipment.
+227	Accelerometer is a type of sport.
+228	Minnow is a type of disease.
+229	Biter is a type of living thing.
+230	Educator is a type of worker.
+231	Aircraft is a type of weapon.
+232	Salesman is a type of fish.
+233	Apologist is a type of worker.
+234	Ripper is a type of plant.
+235	Sovereign is a type of game.
+236	Homeowner is a type of person.
+237	Consulate is a type of device.
+238	Schizophrenic is a type of sport.
+239	Fabric is a type of clothing.
+240	Shook is a type of body part.
+241	Pensioner is a type of sport.
+242	Beekeeper is a type of person.
+243	Locomotive is a type of man-made object.
+244	Musical instrument is a type of equipment.
+245	Empty is a type of container.
+246	Copywriter is a type of clothing.
+247	Room is a type of container.
+248	Propagandist is a type of person.
+249	Interceptor is a type of aircraft.
+250	Peripheral is a type of animal.
+251	Mongoose is a type of living thing.
+252	Man-made object is a type of machine.
+253	Crustacean is a type of body part.
+254	Circuitry is a type of sport.
+255	Machine is a type of worker.
+256	Stingray is a type of living thing.
+257	Man-made object is a type of tool.
+258	Patriot is a type of aircraft.
+259	Recliner is a type of body part.
+260	Brazier is a type of drink.
+261	Sectional is a type of man-made object.
+262	Implant is a type of body part.
+263	Hostage is a type of game.
+264	Antelope is a type of footwear.
+265	Dominatrix is a type of vehicle.
+266	Notary is a type of person.
+267	Dispensary is a type of man-made object.
+268	Missus is a type of person.
+269	Footwear is a type of weapon.
+270	Convener is a type of material.
+271	Termite is a type of mammal.
+272	Kingfisher is a type of insect.
+273	Building is a type of container.
+274	Kangaroo is a type of athlete.
+275	Prince is a type of person.
+276	Hillbilly is a type of material.
+277	Worker is a type of living thing.
+278	Mensch is a type of person.
+279	Tequila is a type of plant.
+280	Sarcophagus is a type of man-made object.
+281	Orator is a type of footwear.
+282	Jogger is a type of food.
+283	Vise is a type of tool.
+284	Cowgirl is a type of animal.
+285	Banjo is a type of fish.
+286	Composer is a type of person.
+287	Antelope is a type of living thing.
+288	Toolbox is a type of tool.
+289	Immigrant is a type of game.
+290	Candlestick is a type of tool.
+291	Electric is a type of car.
+292	Aloe is a type of room.
+293	Parachute is a type of device.
+294	Sauerkraut is a type of fruit.
+295	Wildflower is a type of living thing.
+296	Cheeseburger is a type of man-made object.
+297	Legate is a type of game.
+298	Organ is a type of container.
+299	Poppy is a type of sport.
+300	Epileptic is a type of disease.
+301	Communicator is a type of person.
+302	Brandy is a type of food.
+303	Authoritarian is a type of sport.
+304	Stagecoach is a type of vehicle.
+305	Gazebo is a type of fish.
+306	Accomplice is a type of athlete.
+307	Fife is a type of fabric.
+308	Dunce is a type of flower.
+309	Ax is a type of man-made object.
+310	Inpatient is a type of fruit.
+311	Biologist is a type of worker.
+312	Retriever is a type of game.
+313	Fabric is a type of man-made object.
+314	Bandicoot is a type of disease.
+315	Moll is a type of person.
+316	Tool is a type of machine.
+317	Athlete is a type of worker.
+318	Restaurateur is a type of athlete.
+319	Proletarian is a type of worker.
+320	Lyre is a type of man-made object.
+321	Loudspeaker is a type of man-made object.
+322	Uterus is a type of container.
+323	Biochemist is a type of worker.
+324	Protege is a type of vegetable.
+325	Subcontractor is a type of food.
+326	Sleuth is a type of metal.
+327	Vehicle is a type of machine.
+328	Motorcyclist is a type of sport.
+329	Camcorder is a type of room.
+330	Dinghy is a type of boat.
+331	Macho is a type of animal.
+332	Jasmine is a type of vegetable.
+333	Cactus is a type of weapon.
+334	Commodore is a type of machine.
+335	Equipment is a type of material.
+336	Motorcyclist is a type of footwear.
+337	Oppressor is a type of device.
+338	Grocer is a type of living thing.
+339	Mangrove is a type of weapon.
+340	Narrator is a type of clothing.
+341	Drink is a type of food.
+342	Velvet is a type of man-made object.
+343	Parsonage is a type of man-made object.
+344	Innocent is a type of man-made object.
+345	Aircraft is a type of device.
+346	Bloodhound is a type of vegetable.
+347	Amputee is a type of person.
+348	Kea is a type of living thing.
+349	Tam is a type of dish.
+350	Landowner is a type of person.
+351	Hamster is a type of athlete.
+352	Socialist is a type of person.
+353	Robber is a type of living thing.
+354	Optimist is a type of body part.
+355	Satirist is a type of artist.
+356	Wheelchair is a type of game.
+357	Equipment is a type of device.
+358	Carbine is a type of man-made object.
+359	Rickey is a type of tree.
+360	Cyborg is a type of body part.
+361	Moray is a type of disease.
+362	Autofocus is a type of man-made object.
+363	Copycat is a type of body part.
+364	Sarcophagus is a type of tool.
+365	Mantel is a type of device.
+366	Musical instrument is a type of tool.
+367	Delegate is a type of person.
+368	Pedophile is a type of food.
+369	Survivalist is a type of fish.
+370	Theorist is a type of person.
+371	Clinician is a type of person.
+372	Clubhouse is a type of machine.
+373	Earl is a type of boat.
+374	Golf is a type of metal.
+375	Sunflower is a type of living thing.
+376	Playmate is a type of mammal.
+377	Missus is a type of boat.
+378	Meatball is a type of game.
+379	Flashlight is a type of tool.
+380	Worker is a type of mammal.
+381	Orangutan is a type of fruit.
+382	Easel is a type of sport.
+383	Aquarium is a type of boat.
+384	Person is a type of mammal.
+385	Hater is a type of person.
+386	Soloist is a type of metal.
+387	Ecologist is a type of worker.
+388	Paramedic is a type of dish.
+389	Heathen is a type of flower.
+390	Uniform is a type of equipment.
+391	Vigilante is a type of person.
+392	Leaker is a type of person.
+393	Machine is a type of tool.
+394	Vehicle is a type of car.
+395	Paramedic is a type of worker.
+396	Airliner is a type of boat.
+397	Lobbyist is a type of boat.
+398	Haggis is a type of organ.
+399	Lobbyist is a type of living thing.
+400	Geranium is a type of animal.
+401	Helmsman is a type of athlete.
+402	Piglet is a type of mammal.
+403	Doge is a type of living thing.
+404	Tactician is a type of food.
+405	Sultan is a type of organ.
+406	Hyena is a type of plant.
+407	Flatmate is a type of organ.
+408	Beloved is a type of insect.
+409	Equipment is a type of machine.
+410	Cleric is a type of plant.
+411	Trader is a type of worker.
+412	Spaniel is a type of dog.
+413	Swot is a type of sport.
+414	Bonsai is a type of animal.
+415	Anti is a type of living thing.
+416	Greenhouse is a type of container.
+417	Man-made object is a type of container.
+418	Artist is a type of worker.
+419	Transistor is a type of fish.
+420	Footwear is a type of equipment.
+421	Athlete is a type of worker.
+422	Ivy is a type of car.
+423	Loom is a type of man-made object.
+424	Swimsuit is a type of equipment.
+425	Jammer is a type of body part.
+426	Modernist is a type of person.
+427	Pensioner is a type of person.
+428	Locket is a type of device.
+429	Molester is a type of mammal.
+430	Clubhouse is a type of room.
+431	Dominatrix is a type of living thing.
+432	Barbell is a type of mammal.
+433	Monastery is a type of container.
+434	Moa is a type of animal.
+435	Artist is a type of fish.
+436	Assistant is a type of dish.
+437	Car is a type of equipment.
+438	Rickey is a type of man-made object.
+439	Weapon is a type of equipment.
+440	Kilt is a type of boat.
+441	Bereaved is a type of living thing.
+442	Notary is a type of game.
+443	Adolescent is a type of mammal.
+444	Crustacean is a type of food.
+445	Container is a type of device.
+446	Abolitionist is a type of artist.
+447	Buttercup is a type of man-made object.
+448	Jeep is a type of container.
+449	Limousine is a type of clothing.
+450	Benefactor is a type of person.
+451	Wanton is a type of living thing.
+452	Rapporteur is a type of organ.
+453	Denture is a type of man-made object.
+454	Limiter is a type of man-made object.
+455	Heifer is a type of living thing.
+456	Coauthor is a type of vegetable.
+457	Accountant is a type of game.
+458	Parachute is a type of equipment.
+459	Cafe is a type of man-made object.
+460	Pew is a type of man-made object.
+461	Animal is a type of mammal.
+462	Wearer is a type of mammal.
+463	Rival is a type of weapon.
+464	Revisionist is a type of artist.
+465	Plenipotentiary is a type of mammal.
+466	Mockingbird is a type of person.
+467	Rugby is a type of equipment.
+468	Bobcat is a type of mammal.
+469	Dahlia is a type of plant.
+470	Motorboat is a type of machine.
+471	Maxi is a type of room.
+472	Matchbox is a type of toy.
+473	Loner is a type of living thing.
+474	Dongle is a type of metal.
+475	Surgeon is a type of worker.
+476	Everlasting is a type of game.
+477	Homophobe is a type of sport.
+478	Clock is a type of machine.
+479	Margarita is a type of dish.
+480	Handkerchief is a type of device.
+481	Finalist is a type of athlete.
+482	Housekeeper is a type of flower.
+483	Sophomore is a type of boat.
+484	Device is a type of machine.
+485	Bandit is a type of device.
+486	Device is a type of equipment.
+487	Nawab is a type of clothing.
+488	Alderman is a type of athlete.
+489	Hater is a type of boat.
+490	Loudspeaker is a type of disease.
+491	Dieter is a type of fish.
+492	Brogan is a type of food.
+493	Shogun is a type of fabric.
+494	Finch is a type of bird.
+495	Manatee is a type of vehicle.
+496	Individualist is a type of worker.
+497	Conch is a type of living thing.
+498	Chalet is a type of game.
+499	Skewer is a type of game.
+500	Stole is a type of weapon.
+501	Golf is a type of equipment.
+502	Plumber is a type of tree.
+503	Inventor is a type of drink.
+504	Tortoise is a type of reptile.
+505	Tabor is a type of boat.
+506	Berk is a type of living thing.
+507	Receptionist is a type of worker.
+508	Brogan is a type of man-made object.
+509	Georgette is a type of clothing.
+510	Consulate is a type of building.
+511	Passerby is a type of organ.
+512	Lemur is a type of animal.
+513	Electrode is a type of equipment.
+514	Bodybuilder is a type of animal.
+515	Peony is a type of car.
+516	Vehicle is a type of equipment.
+517	Steed is a type of animal.
+518	Basset is a type of dog.
+519	Minnow is a type of game.
+520	Niqab is a type of reptile.
+521	Parsonage is a type of boat.
+522	Reporter is a type of worker.
+523	Madame is a type of insect.
+524	Chrysalis is a type of body part.
+525	Drosophila is a type of food.
+526	Jukebox is a type of equipment.
+527	Food is a type of weapon.
+528	Machine is a type of equipment.
+529	Dish is a type of device.
+530	Menial is a type of plant.
+531	Kylie is a type of aircraft.
+532	Caribou is a type of game.
+533	Houseboat is a type of vehicle.
+534	Cuppa is a type of container.
+535	Agitator is a type of vegetable.
+536	Bookkeeper is a type of living thing.
+537	Winch is a type of musical instrument.
+538	Takin is a type of fish.
+539	Headscarf is a type of clothing.
+540	Idealist is a type of disease.
+541	Wallaby is a type of plant.
+542	Spastic is a type of reptile.
+543	Temp is a type of worker.
+544	Councilman is a type of worker.
+545	Isolationist is a type of living thing.
+546	Songbird is a type of room.
+547	Trusty is a type of game.
+548	Carbine is a type of equipment.
+549	Beloved is a type of fabric.
+550	Bookkeeper is a type of reptile.
+551	Ibis is a type of footwear.
+552	Satchel is a type of man-made object.
+553	Gynecologist is a type of living thing.
+554	Stepson is a type of mammal.
+555	Basset is a type of animal.
+556	Snapdragon is a type of living thing.
+557	Handkerchief is a type of man-made object.
+558	Palmetto is a type of musical instrument.
+559	Minster is a type of boat.
+560	Betel is a type of tree.
+561	Ombudsman is a type of living thing.
+562	Hummingbird is a type of animal.
+563	Conformist is a type of artist.
+564	Footwear is a type of clothing.
+565	Tugboat is a type of disease.
+566	Drunkard is a type of living thing.
+567	Abbess is a type of building.
+568	Moray is a type of insect.
+569	Cubby is a type of living thing.
+570	Perpetrator is a type of insect.
+571	Searchlight is a type of equipment.
+572	Restaurant is a type of building.
+573	Cattle is a type of animal.
+574	Pleaser is a type of game.
+575	Jodhpur is a type of vehicle.
+576	Ani is a type of animal.
+577	Dildo is a type of equipment.
+578	Flea is a type of animal.
+579	Porpoise is a type of athlete.
+580	Pacifist is a type of insect.
+581	Clothing is a type of tool.
+582	Murine is a type of food.
+583	Warship is a type of fruit.
+584	Barbell is a type of tool.
+585	Cutthroat is a type of game.
+586	Caveman is a type of living thing.
+587	Fruit is a type of food.
+588	Spokeswoman is a type of body part.
+589	Goldilocks is a type of flower.
+590	Suitor is a type of person.
+591	Bonsai is a type of plant.
+592	Anesthesiologist is a type of worker.
+593	Confessional is a type of toy.
+594	Freelancer is a type of fish.
+595	Rink is a type of sport.
+596	Materiel is a type of equipment.
+597	Confidante is a type of person.
+598	Disease is a type of weapon.
+599	Dubbing is a type of game.
+600	Rifle is a type of animal.
+601	Wraparound is a type of metal.
+602	Quartermaster is a type of person.
+603	Cuttlefish is a type of animal.
+604	Wombat is a type of tree.
+605	Eft is a type of aircraft.
+606	Critter is a type of equipment.
+607	Felt is a type of material.
+608	Celibate is a type of person.
+609	Winger is a type of aircraft.
+610	Scraper is a type of device.
+611	Cutler is a type of living thing.
+612	Flea is a type of vegetable.
+613	Calico is a type of fabric.
+614	Mockingbird is a type of bird.
+615	Toddler is a type of mammal.
+616	Headmistress is a type of worker.
+617	Prankster is a type of person.
+618	Vegetable is a type of food.
+619	Detonator is a type of furniture.
+620	Paleontologist is a type of worker.
+621	Fruit is a type of living thing.
+622	Sieve is a type of body part.
+623	Dingo is a type of animal.
+624	Car is a type of container.
+625	Senna is a type of man-made object.
+626	Marten is a type of living thing.
+627	Itinerant is a type of artist.
+628	Fetus is a type of man-made object.
+629	Container is a type of man-made object.
+630	Pulley is a type of footwear.
+631	Boat is a type of equipment.
+632	Container is a type of equipment.
+633	Timepiece is a type of tool.
+634	Clothing is a type of weapon.
+635	Greenhouse is a type of man-made object.
+636	Bathrobe is a type of metal.
+637	Entrepreneur is a type of food.
+638	Person is a type of animal.
+639	Sailboat is a type of machine.
+640	Interviewee is a type of worker.
+641	Hoist is a type of car.
+642	Underdog is a type of tree.
+643	Lender is a type of bird.
+644	Erotic is a type of flower.
+645	Extremist is a type of fruit.
+646	Wombat is a type of building.
+647	Stockbroker is a type of footwear.
+648	Vermouth is a type of plant.
+649	Auctioneer is a type of material.
+650	Dredge is a type of animal.
+651	Shrine is a type of container.
+652	Stupid is a type of person.
+653	Airship is a type of dog.
+654	Bovine is a type of toy.
+655	Avenger is a type of vegetable.
+656	Simulator is a type of game.
+657	Wallaby is a type of living thing.
+658	Longhorn is a type of tree.
+659	National is a type of boat.
+660	Marc is a type of fruit.
+661	Audiovisual is a type of material.
+662	Exporter is a type of drink.
+663	Toddler is a type of tool.
+664	Organ is a type of living thing.
+665	Aristocrat is a type of fruit.
+666	Secessionist is a type of metal.
+667	Roadhouse is a type of game.
+668	Artist is a type of living thing.
+669	Firearm is a type of weapon.
+670	Stowaway is a type of vegetable.
+671	Helicopter is a type of man-made object.
+672	Robber is a type of game.
+673	Primrose is a type of living thing.
+674	Rancher is a type of body part.
+675	Dish is a type of container.
+676	Marksman is a type of game.
+677	Stickler is a type of person.
+678	Snob is a type of person.
+679	Roebuck is a type of animal.
+680	Cantilever is a type of body part.
+681	Bilingual is a type of person.
+682	Gasket is a type of game.
+683	Device is a type of tool.
+684	Fish is a type of food.
+685	Microphone is a type of equipment.
+686	Dandelion is a type of mammal.
+687	Paintbrush is a type of tool.
+688	Tripod is a type of equipment.
+689	Newlywed is a type of living thing.
+690	Finch is a type of material.
+691	Perfectionist is a type of living thing.
+692	Actuator is a type of machine.
+693	Expressionist is a type of game.
+694	Food is a type of material.
+695	Surrealist is a type of fish.
+696	Letterman is a type of reptile.
+697	Loom is a type of car.
+698	Aircraft is a type of tool.
+699	Crocodile is a type of body part.
+700	Prince is a type of artist.
+701	Theologian is a type of reptile.
+702	Curate is a type of living thing.
+703	Vehicle is a type of tool.
+704	Strategist is a type of person.
+705	Huntress is a type of worker.
+706	Harlequin is a type of reptile.
+707	Underpants is a type of man-made object.
+708	Bartender is a type of game.
+709	Gyroscope is a type of machine.
+710	Vase is a type of container.
+711	Weapon is a type of tool.
+712	Waterfowl is a type of game.
+713	Modernist is a type of building.
+714	Zoologist is a type of living thing.
+715	Stoner is a type of bird.
+716	Repairman is a type of fruit.
+717	Waitress is a type of food.
+718	Juvenile is a type of person.
+719	Librarian is a type of food.
+720	Burglar is a type of body part.
+721	Man-made object is a type of vehicle.
+722	Genitalia is a type of vegetable.
+723	Grubby is a type of toy.
+724	Violin is a type of musical instrument.
+725	Dinky is a type of artist.
+726	Gramophone is a type of game.
+727	Purveyor is a type of living thing.
+728	Snob is a type of game.
+729	Aviator is a type of man-made object.
+730	Beagle is a type of sport.
+731	Alcoholic is a type of drink.
+732	Expert is a type of person.
+733	Commoner is a type of worker.
+734	Communicator is a type of living thing.
+735	Stapler is a type of boat.
+736	Flower is a type of organ.
+737	Rheumatic is a type of living thing.
+738	Usurper is a type of game.
+739	Narc is a type of person.
+740	Guerrilla is a type of weapon.
+741	Camcorder is a type of device.
+742	Clary is a type of body part.
+743	Clothing is a type of equipment.
+744	Tights is a type of vegetable.
+745	Musical instrument is a type of machine.
+746	Mosquito is a type of mammal.
+747	Mimic is a type of reptile.
+748	Decadent is a type of dish.
+749	Electrode is a type of car.
+750	Underwear is a type of clothing.
+751	Neurologist is a type of worker.
+752	Facilitator is a type of vegetable.
+753	Contrarian is a type of animal.
+754	Lingerie is a type of equipment.
+755	Apparel is a type of weapon.
+756	Ladybug is a type of insect.
+757	Man-made object is a type of equipment.
+758	Customer is a type of weapon.
+759	Plover is a type of bird.
+760	Applicator is a type of device.
+761	Manatee is a type of food.
+762	Contrarian is a type of metal.
+763	Spacecraft is a type of vehicle.
+764	Stockholder is a type of furniture.
+765	Erica is a type of game.
+766	Stiletto is a type of footwear.
+767	Songwriter is a type of dish.
+768	Clamp is a type of musical instrument.
+769	Communicator is a type of sport.
+770	Bedroom is a type of building.
+771	Firstborn is a type of sport.
+772	Bereaved is a type of game.
+773	Thermos is a type of plant.
+774	Spacecraft is a type of machine.
+775	Stork is a type of aircraft.
+776	Undercarriage is a type of man-made object.
+777	Wingman is a type of game.
+778	Android is a type of worker.
+779	Therapist is a type of living thing.
+780	Eunuch is a type of living thing.
+781	Toy is a type of equipment.
+782	Detonator is a type of man-made object.
+783	Clamp is a type of tool.
+784	Brill is a type of animal.
+785	Cornerback is a type of athlete.
+786	Inventor is a type of body part.
+787	Porpoise is a type of dog.
+788	Achiever is a type of fruit.
+789	Fruit is a type of organ.
+790	Corgi is a type of clothing.
+791	Sauna is a type of animal.
+792	Hillbilly is a type of living thing.
+793	Bankrupt is a type of person.
+794	Mod is a type of metal.
+795	Building is a type of weapon.
+796	Ballroom is a type of sport.
+797	Vole is a type of worker.
+798	Tool is a type of weapon.
+799	Outhouse is a type of container.
+800	Sagebrush is a type of weapon.
+801	Introvert is a type of worker.
+802	Caveman is a type of person.
