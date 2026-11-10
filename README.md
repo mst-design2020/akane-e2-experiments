@@ -1,6 +1,6 @@
 # AKANE Architecture experiments: checking a small LLM's answers from the outside
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24045800.svg)](https://doi.org/10.5281/zenodo.24045800)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24045799.svg)](https://doi.org/10.5281/zenodo.24045799)
 
 English | [日本語](README_ja.md)
 
@@ -28,7 +28,7 @@ Every number in the articles below comes from files in this repository. Articles
 - Article 7: E4, a large network learned from the model's answers. https://note.com/mst_design2020/n/nd323ba54cf92
 - Article 8: E4 (second half) and E5, re-checking the answer key and the cost of the model's own rules. https://note.com/mst_design2020/n/n222a0ecf386d
 
-Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X · DOI https://doi.org/10.5281/zenodo.24045800
+Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X · DOI https://doi.org/10.5281/zenodo.24045799
 
 ## AKANE Architecture in short
 
