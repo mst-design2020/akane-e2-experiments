@@ -294,7 +294,27 @@ Setup: the 700 items from E6/E7 plus 300 new items from E4-2 claims whose nouns 
 
 These formulas describe what the code computes. `analysis/e8/check_formulas_e8.py` checks the E8 code against them (end of this section).
 
-**Claims and the outside judge.** Each claim is "X is a type of C." (X is a noun, C one of the 46 categories). Gemma's answer is the Yes−No logit $\ell$ with the same prompt as E4. The outside judge is an NLI model (DeBERTa-v3-large-mnli-fever-anli-ling-wanli); $e(p \Rightarrow h)$ is its entailment probability for premise $p$ and hypothesis $h$. Premises are always `"w" means: <definition>` and hypotheses `W is a type of <word>.`
+**Symbols.**
+
+| Symbol | Meaning |
+|---|---|
+| $X$, $C$ | The noun and the category of the claim ("X is a type of C.") |
+| $\ell$ | Gemma's Yes−No logit. $\sigma$ is the sigmoid, $\mathrm{logit}(x)=\log\frac{x}{1-x}$ |
+| $e(\text{premise} \Rightarrow \text{hypothesis})$ | NLI entailment probability |
+| $d_k$, $K$ | Definition of the $k$-th sense of $X$, and the number of senses (at most 8) |
+| $e_k$, $c_k$ | Entailment and contradiction probabilities from $d_k$ to "X is a type of C." |
+| $n=(w,j)$ | Chain node: sense $j$ of word $w$, with definition $d_n$ and genus $g(n)$ |
+| $q_n$ | Step strength: entailment from $d_n$ to "W is a type of $g(n)$." |
+| $a_n$ | Arrival: entailment from $d_n$ to "W is a type of C." (1 if $w$ is C itself) |
+| $\mathrm{ch}(n)$, $j^*$ | Next nodes of $n$, and the sense index chosen by B, C or D |
+| $S(n,t)$, $s_1$, $s_6$ | Strongest-path value with $t$ steps left, one-step score, strongest-path score |
+| $z_n$, $z_R$ | Network variables: "$w$ in this sense is a type of C", "X is a type of C" (0 or 1) |
+| $u_n$, $w_{pc}$ | Node evidence, and the weight of the link from parent $p$ to child $c$ |
+| $\beta$, $b$, $\varepsilon$, $\gamma$ | Network strengths (arrival scale, bias, link strength, negative-evidence strength), chosen on the training folds |
+| $\nu_n$, $G$ | Negative evidence: largest entailment to a group $G$ disjoint from C |
+| $\hat p$, $r_j$, $N$ | A method's probability of "correct", error rate among the $j$ most confident answers, number of items |
+
+**Claims and the outside judge.** Each claim is "X is a type of C." (X is a noun, C one of the 46 categories). Gemma's answer is the Yes−No logit $\ell$ with the same prompt as E4. The outside judge is an NLI model (DeBERTa-v3-large-mnli-fever-anli-ling-wanli); $e(\text{premise} \Rightarrow \text{hypothesis})$ is its entailment probability. Premises are always `"w" means: <definition>` and hypotheses `W is a type of <word>.`
 
 **One step (E6 ③).** With the Wiktionary noun senses of X written $d_1,\dots,d_K$ (at most 8),
 
@@ -304,7 +324,7 @@ and $s_1 = \sigma(\ell)$ when no definition was found. E6 ② (in the prompt) is
 
 **Chain nodes.** A node $n = (w, j)$ is "sense $j$ of word $w$", with definition $d_n$ and genus $g(n)$ (head of the first noun chunk from spaCy, plus a few rules).
 
-- Step strength: $\;\epsilon_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } g(n).)$
+- Step strength: $\;q_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } g(n).)$
 - Arrival: $\;a_n = 1$ if $w$ is C itself, otherwise $a_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of C.})$
 - Next nodes $\mathrm{ch}(n)$: A takes all of the first 4 senses of $g(n)$. B, C and D pick one sense $j^*$ of $g(n)$ ($j^* = 1$ if $g(n)$ has one sense).
   - B: the first sense without a label such as obsolete, archaic, rare or slang (sense 1 if all are labelled)
@@ -313,27 +333,60 @@ and $s_1 = \sigma(\ell)$ when no definition was found. E6 ② (in the prompt) is
 
 **Strongest path (⑥).** The best product of step strengths times arrival over paths of up to 3 steps:
 
-$$ S(n, t) = \begin{cases} a_n & a_n = 1 \text{ or } t = 0 \\ \max\big(a_n,\; \epsilon_n \cdot \max_{c \in \mathrm{ch}(n)} S(c, t-1)\big) & \text{otherwise} \end{cases} \qquad s_6 = \max_k S\big((X,k), 3\big) $$
+$$ S(n, t) = \begin{cases} a_n & a_n = 1 \text{ or } t = 0 \\ \max\big(a_n,\; q_n \cdot \max_{c \in \mathrm{ch}(n)} S(c, t-1)\big) & \text{otherwise} \end{cases} \qquad s_6 = \max_k S\big((X,k), 3\big) $$
 
-i.e. the maximum of $\epsilon_{n_0}\cdots\epsilon_{n_{t-1}}\, a_{n_t}$ over paths $(X,k)=n_0 \to n_1 \to \dots \to n_t$ with $t \le 3$. ⑥b (OR over paths) says yes if any path has every step $\epsilon > 0.5$ and arrival $a > 0.5$.
+i.e. the maximum of $q_{n_0}\cdots q_{n_{t-1}}\, a_{n_t}$ over paths $(X,k)=n_0 \to n_1 \to \dots \to n_t$ with $t \le 3$. ⑥b (OR over paths) says yes if any path has every step $q > 0.5$ and arrival $a > 0.5$.
 
 **Network (⑦; with negative evidence in E8).** Each chain node gets $z_n \in \{0,1\}$ ("$w$ in this sense is a type of C"), and a root $z_R$ ("X is a type of C").
 
 $$ P(z) \;\propto\; \exp\Big( b\, z_R + \sum_n u_n z_n \Big) \prod_{(p \to c)} (1 - \varepsilon\, w_{pc})^{[z_p = 0,\; z_c = 1]}, \qquad u_n = \beta\,\mathrm{logit}(a_n) + b - \gamma\, \nu_n $$
 
-- Links $(p \to c)$ are root → each sense of X ($w = 1$) and the chain steps ($w = \epsilon_p$). A link only lowers the probability when the child is a type of C but the parent is not.
+- Links $(p \to c)$ are root → each sense of X ($w = 1$) and the chain steps ($w = q_p$). A link only lowers the probability when the child is a type of C but the parent is not.
 - Nodes with $a_n = 1$ get $u_n = 30$ (nearly clamped).
 - Negative evidence: $\nu_n = \max_{G} e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } G.)$, where $G$ runs over the broad groups disjoint from C (animal, plant, food, man-made object, material, body part, disease, activity; disjointness from a hand-made common-sense table). $\gamma = 0$ gives the E7 form.
 - The output is $P(z_R = 1)$ from damped loopy BP (synchronous, damping 0.5, 40 iterations). $(\beta, b, \varepsilon) \in \{0.25,0.5,1\} \times \{-1,0,1,2\} \times \{0.8,0.95,0.99\}$ is chosen by log loss on the training folds, then $\gamma \in \{0,1,2,4,8\}$.
-- In E7 the nodes are words, not senses: the node evidence uses the best arrival over the word's senses, and steps between the same two words are merged as $\prod_k (1 - \varepsilon\,\epsilon_k)$ (noisy-OR).
+- In E7 the nodes are words, not senses: the node evidence uses the best arrival over the word's senses, and steps between the same two words are merged as $\prod_k (1 - \varepsilon\,q_k)$ (noisy-OR).
 
 **Learned combiners (⑤, ⑧).** ⑤ is logistic regression on the E6 features ($\ell$, $\max_k e_k$, $\max_k c_k$, $\mathrm{mean}_k e_k$, $\mathrm{mean}_k c_k$, $1-\prod_k(1-e_k)$, $K$, whether definitions exist; $c_k$ is the contradiction probability). ⑧ adds $s_6$, ⑥b, the number of steps on the strongest path, the network value, $\max_k \nu_{(X,k)}$, the number of senses of the first genus on the strongest path, and whether any chain exists.
 
-**Metric.** Every method gives $p = P(\text{correct})$; answer $=[p > 0.5]$, confidence $= \max(p, 1-p)$. Sorting by confidence and writing $r_j$ for the error rate among the top $j$,
+**Metric.** Every method gives $\hat p = P(\text{correct})$; answer $=[\hat p > 0.5]$, confidence $= \max(\hat p, 1-\hat p)$. Sorting by confidence and writing $r_j$ for the error rate among the top $j$,
 
 $$ \mathrm{AURC} = \frac{1}{N} \sum_{j=1}^{N} r_j $$
 
 (lower is better). Items are split by noun into 5 folds (seeds 600–604); 4 folds choose and train, the fifth is scored.
+
+**Formulas and code.**
+
+| Formula | Code |
+|---|---|
+| NLI premise and hypothesis texts | `premise`, `hyp` in `analysis/e8/e8_core.py`. NLI values are computed in Colab and stored in `data/E8_chains_nli.json` as `steps` ($q_n$) and `arrive` (source of $a_n$ and $\nu_n$) |
+| $s_1$ | `x_feats` (first column) and `s3` in `run`, `analysis/e8/e8_analyze.py`. For E6: `nli_feats` and `3_nli_S2` in `analysis/e6/e6_analyze.py` |
+| E6 ②, ④ | `run` in `e6_analyze.py` (`2_in_prompt_*`, `4_net_*`; candidates for $w$ in `W_GRID`) |
+| $g(n)$ | `genus` in `e8_core.py` |
+| $\mathrm{ch}(n)$ (A, B) | `chain_nodes`, `first_good` in `e8_core.py` (label list `BAD_LABELS`) |
+| $j^*$ (C, D) | cell "3." in `analysis/e8/build_notebook_E8.py` (`CHOICE_C`, `CHOICE_D`); the D prompt is `choice_prompt` in `e8_core.py` |
+| $a_n$, $\nu_n$, $G$ | `Item.__init__` in `e8_analyze.py` (`self.arr`, `self.neg`); groups in `GW`, `CG`, `COMPAT`, `disjoint_groups` |
+| $S(n,t)$, $s_6$, ⑥b | `Item.maxprod` in `e8_analyze.py` |
+| Network $P(z)$ and $P(z_R=1)$ | `Item.bp` in `e8_analyze.py` (E7: `Item.bp` in `analysis/e6/e7_analyze.py`) |
+| Candidates and selection of $\beta, b, \varepsilon, \gamma$ | `GRID`, `GAMMAS` and `run` in `e8_analyze.py` |
+| Features of ⑤, ⑧ | `X5` in `run`, and `feats`, in `e8_analyze.py` |
+| AURC | `aurc` in `analysis/e6/e6_analyze.py` |
+
+**What comes from prior work and what is our own design.**
+
+| Part | Borrowed idea (source) | Our own choices |
+|---|---|---|
+| Judging "is a type of" from definitions with NLI | Definitions help hypernym judgement (TaxoLLaMA 2024 and others); NLI used to check model answers (ConCoRD 2022) | Premise/hypothesis templates; taking the maximum over senses |
+| Following the genus of definitions | Chodorow et al. 1985, MindNet 1998, OntoLearn Reloaded 2013 | Genus extraction with spaCy plus a few rules; up to 3 steps |
+| Product of step strengths (⑥) | Multiplying step scores of a proof (Entailer 2022) | Nodes as (word, sense); maximum over paths; handling of arrival $a_n$ |
+| Sense choice B | First sense without rare/obsolete-type labels (Kovács et al. 2023) | The label list `BAD_LABELS` |
+| Sense choice C | Choosing senses by similarity (McIntosh & Curran 2009, OntoLearn 2013) | Cosine of all-mpnet-base-v2 sentence embeddings |
+| Sense choice D | LLM picks a sense from candidate definitions (Meconi et al. 2025, ConSeC 2021) | The prompt; not showing the category C; choosing by number-token logits |
+| Network and BP (⑦) | Taxonomy induction with BP (Bansal et al. 2014); loopy BP (Murphy et al. 1999) | Factor form (penalise only "child is a type of C, parent is not"); the root; the negative-evidence term $\gamma\nu_n$ |
+| Negative evidence | Disjointness rules in the network (Jiang et al. 2012) | The 8 groups and the compatibility table (hand-made common sense) |
+| Chain values as learned features (⑧) | Path values as features (PRA, Lao & Cohen 2010; Liang et al. 2017) | Choice of features |
+| AURC | Risk–coverage (El-Yaniv & Wiener 2010); AURC (Geifman et al. 2019) | — |
+| Decision rules | — | ≥0.02 in ≥4 of 5 runs, 10 points for rates (fixed before the experiment) |
 
 **Checking the E8 code against these formulas.** `cd analysis/e8; python check_formulas_e8.py ../../data/E8_chains_nli.json` (about 15 seconds on a CPU). Result: the strongest path matches a brute-force enumeration of all paths on all 4,000 cases (1,000 items × A–D; difference $10^{-16}$). For the network, items with at most 13 nodes are compared with exact probabilities from enumerating every assignment: exact on 60 tree-shaped items (difference $10^{-14}$), at most 0.015 off on 31 items with loops (loopy BP is an approximation, as expected).
 

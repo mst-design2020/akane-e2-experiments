@@ -294,7 +294,27 @@ E7の鎖はよく途中で意味を取り違えました（50本中30本）。E8
 
 コードが実際に何を計算しているかを、式で書きます。E8のコードがこの式どおりかは `analysis/e8/check_formulas_e8.py` で確かめられます（この節の最後）。
 
-**問いと、外の判定。** 問いは「X is a type of C.」です（X は物の語、C は46分類のどれか）。Gemmaの答えは、E4と同じ聞き方での Yes−No のロジット $\ell$ です。外の判定には NLI（DeBERTa-v3-large-mnli-fever-anli-ling-wanli）を使い、前提 $p$ から仮説 $h$ が言える確率（entailment の確率）を $e(p \Rightarrow h)$ と書きます。前提はいつも `"w" means: <説明文>`、仮説は `W is a type of <語>.` の形です。
+**記号の一覧。**
+
+| 記号 | 意味 |
+|---|---|
+| $X$、$C$ | 問いの物の語と分類（「X is a type of C.」） |
+| $\ell$ | Gemmaの Yes−No のロジット。$\sigma$ はシグモイド、$\mathrm{logit}(x)=\log\frac{x}{1-x}$ |
+| $e(\text{前提} \Rightarrow \text{仮説})$ | NLIが出す「言える（entailment）」の確率 |
+| $d_k$、$K$ | $X$ の $k$ 番目の意味の説明文と、意味の数（最大8） |
+| $e_k$、$c_k$ | $d_k$ から「X is a type of C.」への entailment と contradiction の確率 |
+| $n=(w,j)$ | 鎖の点：語 $w$ の $j$ 番目の意味。説明文 $d_n$、頭の名詞 $g(n)$ |
+| $q_n$ | 段の確かさ：$d_n$ から「W is a type of $g(n)$.」への entailment |
+| $a_n$ | 着き：$d_n$ から「W is a type of C.」への entailment（$w$ が C そのものなら1） |
+| $\mathrm{ch}(n)$、$j^*$ | 点 $n$ の次の点の集まりと、B・C・Dで選んだ意味の番号 |
+| $S(n,t)$、$s_1$、$s_6$ | 残り $t$ 段で一番強い道の値、1段だけの値、一番強い道の値 |
+| $z_n$、$z_R$ | 網の変数：「この意味の $w$ は C の一種」、「X は C の一種」（0か1） |
+| $u_n$、$w_{pc}$ | 点の手がかりの強さ、親 $p$ から子 $c$ へのつながりの重み |
+| $\beta$、$b$、$\varepsilon$、$\gamma$ | 網の強さ（着きの倍率、ずれ、つながりの強さ、打ち消しの強さ）。学習用の分で選ぶ |
+| $\nu_n$、$G$ | 打ち消し：C と両立しないまとまり $G$ への entailment の最大 |
+| $\hat p$、$r_j$、$N$ | 方法が出す「正しい」の確率、確かな順に $j$ 個答えたときの誤り率、問いの数 |
+
+**問いと、外の判定。** 問いは「X is a type of C.」です（X は物の語、C は46分類のどれか）。Gemmaの答えは、E4と同じ聞き方での Yes−No のロジット $\ell$ です。外の判定には NLI（DeBERTa-v3-large-mnli-fever-anli-ling-wanli）を使い、前提の文から仮説の文が言える確率（entailment の確率）を $e(\text{前提} \Rightarrow \text{仮説})$ と書きます。前提はいつも `"w" means: <説明文>`、仮説は `W is a type of <語>.` の形です。
 
 **1段だけ（E6の③）。** 物の語 X の Wiktionary の名詞の意味を $d_1,\dots,d_K$（最大8つ）とすると
 
@@ -304,7 +324,7 @@ $$ s_1 = \max_{k} \; e\big(\text{"X" means: } d_k \;\Rightarrow\; \text{X is a t
 
 **鎖の点。** 点 $n = (w, j)$ は「語 $w$ の $j$ 番目の意味」で、その説明文を $d_n$、頭の名詞（spaCy の最初の名詞句の主辞と少しの決まり）を $g(n)$ とします。
 
-- 段の確かさ：$\;\epsilon_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } g(n).)$
+- 段の確かさ：$\;q_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } g(n).)$
 - 着き：$\;a_n = 1$（$w$ が C そのもの）、それ以外は $a_n = e(\text{"w" means: } d_n \Rightarrow \text{W is a type of C.})$
 - 次の点 $\mathrm{ch}(n)$：A は $g(n)$ の最初の4つの意味ぜんぶ。B・C・D は $g(n)$ の意味を1つ $j^*$ に決めます（$g(n)$ の意味が1つなら $j^* = 1$）。
   - B：$j^* =$ 「obsolete・archaic・rare・slang などの印がない」最初の意味（全部に印があれば1番目）
@@ -313,27 +333,60 @@ $$ s_1 = \max_{k} \; e\big(\text{"X" means: } d_k \;\Rightarrow\; \text{X is a t
 
 **一番強い道（⑥）。** 3段までの道の、段の確かさの掛け算と着きの最大です。
 
-$$ S(n, t) = \begin{cases} a_n & a_n = 1 \text{ または } t = 0 \\ \max\big(a_n,\; \epsilon_n \cdot \max_{c \in \mathrm{ch}(n)} S(c, t-1)\big) & \text{それ以外} \end{cases} \qquad s_6 = \max_k S\big((X,k), 3\big) $$
+$$ S(n, t) = \begin{cases} a_n & a_n = 1 \text{ または } t = 0 \\ \max\big(a_n,\; q_n \cdot \max_{c \in \mathrm{ch}(n)} S(c, t-1)\big) & \text{それ以外} \end{cases} \qquad s_6 = \max_k S\big((X,k), 3\big) $$
 
-つまり、道 $(X,k)=n_0 \to n_1 \to \dots \to n_t$（$t \le 3$）ごとの $\epsilon_{n_0}\cdots\epsilon_{n_{t-1}}\, a_{n_t}$ の最大です。⑥b（道の「または」）は、全部の段が $\epsilon > 0.5$ で着きが $a > 0.5$ の道が1本でもあれば「はい」とします。
+つまり、道 $(X,k)=n_0 \to n_1 \to \dots \to n_t$（$t \le 3$）ごとの $q_{n_0}\cdots q_{n_{t-1}}\, a_{n_t}$ の最大です。⑥b（道の「または」）は、全部の段が $q > 0.5$ で着きが $a > 0.5$ の道が1本でもあれば「はい」とします。
 
 **網（⑦、E8の打ち消し入り）。** 鎖の点ごとに $z_n \in \{0,1\}$（「この意味の $w$ は C の一種」）と、根 $z_R$（「X は C の一種」）を置きます。
 
 $$ P(z) \;\propto\; \exp\Big( b\, z_R + \sum_n u_n z_n \Big) \prod_{(p \to c)} (1 - \varepsilon\, w_{pc})^{[z_p = 0,\; z_c = 1]}, \qquad u_n = \beta\,\mathrm{logit}(a_n) + b - \gamma\, \nu_n $$
 
-- つながり $(p \to c)$ は、根から物の語の各意味（$w = 1$）と、鎖の段（$w = \epsilon_p$）です。「子が C の一種なのに親がそうでない」ときだけ確率を弱めます。
+- つながり $(p \to c)$ は、根から物の語の各意味（$w = 1$）と、鎖の段（$w = q_p$）です。「子が C の一種なのに親がそうでない」ときだけ確率を弱めます。
 - $a_n = 1$ の点は $u_n = 30$（ほぼ固定）にします。
 - 打ち消し：$\nu_n = \max_{G} e(\text{"w" means: } d_n \Rightarrow \text{W is a type of } G.)$。$G$ は、C と両立しない大きなまとまり（animal・plant・food・man-made object・material・body part・disease・activity のうち、常識で決めた表で C と重ならないもの）です。$\gamma = 0$ なら E7 と同じ形です。
 - 出すのは $P(z_R = 1)$ で、輪のある確率伝搬（同時に更新、ダンピング0.5、40回）で求めます。$(\beta, b, \varepsilon) \in \{0.25,0.5,1\} \times \{-1,0,1,2\} \times \{0.8,0.95,0.99\}$ を学習用の分の対数損失で選び、そのうえで $\gamma \in \{0,1,2,4,8\}$ を選びます。
-- E7の網は、点が「語」で意味に分けていません。点の手がかりは意味の中で一番高い着き、同じ2語の間の段は $\prod_k (1 - \varepsilon\,\epsilon_k)$ にまとめています（noisy-OR）。
+- E7の網は、点が「語」で意味に分けていません。点の手がかりは意味の中で一番高い着き、同じ2語の間の段は $\prod_k (1 - \varepsilon\,q_k)$ にまとめています（noisy-OR）。
 
 **学習（⑤・⑧）。** ⑤は E6 の特徴（$\ell$、$\max_k e_k$、$\max_k c_k$、$\mathrm{mean}_k e_k$、$\mathrm{mean}_k c_k$、$1-\prod_k(1-e_k)$、$K$、説明文の有無。$c_k$ は矛盾の確率）でのロジスティック回帰。⑧はそれに $s_6$、⑥b、一番強い道の段の数、網の値、$\max_k \nu_{(X,k)}$、一番強い道の最初の頭の名詞の意味の数、鎖があるか、を足したものです。
 
-**物差し。** どの方法も $p = P(\text{正しい})$ を出し、答え $=[p > 0.5]$、確かさ $= \max(p, 1-p)$ です。確かな順に並べて上から $j$ 個答えたときの誤り率を $r_j$ として
+**物差し。** どの方法も $\hat p = P(\text{正しい})$ を出し、答え $=[\hat p > 0.5]$、確かさ $= \max(\hat p, 1-\hat p)$ です。確かな順に並べて上から $j$ 個答えたときの誤り率を $r_j$ として
 
 $$ \mathrm{AURC} = \frac{1}{N} \sum_{j=1}^{N} r_j $$
 
 （小さいほど良い）。物の語ごとに5つに分け（seed 600〜604）、4つで選び・学習して残り1つで測ります。
+
+**式とコードの対応。**
+
+| 式 | コード |
+|---|---|
+| NLIの前提・仮説の文 | `analysis/e8/e8_core.py` の `premise`・`hyp`。NLIの値はColabで計算し、`data/E8_chains_nli.json` の `steps`（$q_n$）と `arrive`（$a_n$、$\nu_n$ のもと）に保存 |
+| $s_1$ | `analysis/e8/e8_analyze.py` の `x_feats`（1列目）と `run` の `s3`。E6では `analysis/e6/e6_analyze.py` の `nli_feats` と `3_nli_S2` |
+| E6の②・④ | `e6_analyze.py` の `run`（`2_in_prompt_*`、`4_net_*`。$w$ の候補は `W_GRID`） |
+| $g(n)$ | `e8_core.py` の `genus` |
+| $\mathrm{ch}(n)$（A・B） | `e8_core.py` の `chain_nodes`・`first_good`（印の一覧は `BAD_LABELS`） |
+| $j^*$（C・D） | `analysis/e8/build_notebook_E8.py` の「3.」のセル（`CHOICE_C`・`CHOICE_D`）。Dの聞き方は `e8_core.py` の `choice_prompt` |
+| $a_n$、$\nu_n$、$G$ | `e8_analyze.py` の `Item.__init__`（`self.arr`・`self.neg`）。まとまりは `GW`・`CG`・`COMPAT`・`disjoint_groups` |
+| $S(n,t)$、$s_6$、⑥b | `e8_analyze.py` の `Item.maxprod` |
+| 網 $P(z)$ と $P(z_R=1)$ | `e8_analyze.py` の `Item.bp`（E7は `analysis/e6/e7_analyze.py` の `Item.bp`） |
+| $\beta, b, \varepsilon, \gamma$ の候補と選び方 | `e8_analyze.py` の `GRID`・`GAMMAS` と `run` |
+| ⑤・⑧ の特徴 | `e8_analyze.py` の `run`（`X5`）と `feats` |
+| AURC | `analysis/e6/e6_analyze.py` の `aurc` |
+
+**既存研究から借りた所と、自分で決めた所。**
+
+| 部分 | 借りた考え（出典） | 自分で決めた所 |
+|---|---|---|
+| 説明文とNLIで「一種か」を判定 | 説明文があると上位語の判定が良くなる（TaxoLLaMA 2024 ほか）。答えの確かめにNLIを使う（ConCoRD 2022） | 前提・仮説の文の形、意味ごとの値の最大を取ること |
+| 説明文の頭の名詞をたどる | Chodorow ほか 1985、MindNet 1998、OntoLearn Reloaded 2013 | spaCyと少しの決まりで頭の名詞を取る実装、3段まで |
+| 段の確かさの掛け算（⑥） | 証明の段の点を掛ける（Entailer 2022） | 点を「語＋意味」にすること、道ごとの最大、着き $a_n$ の扱い |
+| 意味の選び方 B | まれ・古い等の印のない最初の意味（Kovács ほか 2023） | 印の一覧 `BAD_LABELS` |
+| 意味の選び方 C | 近さで意味を選ぶ（McIntosh・Curran 2009、OntoLearn 2013） | 文のベクトル（all-mpnet-base-v2）のcosを使うこと |
+| 意味の選び方 D | AIに説明文の候補から意味を選ばせる（Meconi ほか 2025、ConSeC 2021） | 聞き方、分類 C を見せないこと、番号のロジットで選ぶこと |
+| 網とBP（⑦） | 分類の木を網とBPで推す（Bansal ほか 2014）、輪のあるBP（Murphy ほか 1999） | 因子の形（親が違うのに子が一種のときだけ弱める）、根の置き方、打ち消しの項 $\gamma\nu_n$ |
+| 打ち消し | 両立しないのルールを網に入れる（Jiang ほか 2012） | 8つのまとまりと、両立する組の表（常識で決めた） |
+| 鎖の値を学習に足す（⑧） | 道の値を特徴にする（Lao・Cohen 2010 の PRA、Liang ほか 2017） | 特徴の選び方 |
+| AURC | risk–coverage（El-Yaniv・Wiener 2010）、AURC（Geifman ほか 2019） | ― |
+| 判定の決まり | ― | 差0.02以上を5回中4回、率は10ポイント（実験前に固定） |
 
 **コードが式どおりかの確かめ（E8）。** `cd analysis/e8; python check_formulas_e8.py ../../data/E8_chains_nli.json`（CPUで十数秒）。結果：一番強い道は、道を全部数え上げた式と、4,000組（1,000問×A〜D）で一致（ずれ $10^{-16}$）。網は、点が13個以下の問いで全部の組み合わせを数え上げた確率と比べ、木の形の60問で一致（ずれ $10^{-14}$）、輪のある31問で最大0.015のずれ（輪のある確率伝搬は近似なので想定どおり）。
 
