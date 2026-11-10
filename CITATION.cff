@@ -1,13 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite it as below."
 type: software
-title: "AKANE Architecture E2: Finding an LLM's mistakes from how its answers connect"
+title: "AKANE Architecture experiments: checking a small LLM's answers from the outside"
 abstract: >-
   Code, data, and results for small experiments in which a small language model
-  (Gemma-2 2B) answers many true/false statements and writes its own consistency
-  rules, some of them wrong. A network checks the model's answers against those
-  rules while also doubting each rule, using belief propagation, and the signals
-  are compared with the model's confidence and with counting rule violations.
+  (Gemma-2 2B) answers true/false and "X is a type of Y" questions and its
+  answers are checked by parts placed outside it: the model's own consistency
+  rules with belief propagation, retrieved evidence, dictionary definitions with
+  an NLI model, and definition chains in which the model only picks word senses.
+  Plans were fixed before results; ties and losses are reported.
 authors:
   - family-names: Kato
     given-names: Masaya
@@ -24,3 +25,7 @@ keywords:
   - probabilistic graphical models
   - energy-based models
   - p-bit
+  - selective prediction
+  - natural language inference
+  - word sense disambiguation
+  - dictionary definitions
