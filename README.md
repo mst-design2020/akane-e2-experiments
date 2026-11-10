@@ -15,6 +15,16 @@ English | [日本語](README_ja.md)
 
 ![Checking a small model's "X is a type of Y" answers from outside (E6–E8)](figures/E8/overview_en.png)
 
+**Try it in 5 minutes (CPU only, no GPU).** This reproduces the E8 results from the model answers and NLI scores already saved in `data/`; running Gemma itself needs the Colab notebooks in `colab/`.
+
+```bash
+git clone https://github.com/mst-design2020/akane-e2-experiments.git && cd akane-e2-experiments/analysis/e8
+pip install numpy scipy scikit-learn
+python e8_analyze.py ../../data/E8_chains_nli.json out.json   # about 5 minutes; prints the AURC table, e.g. 0.037 for the learned chain check
+```
+
+`python check_formulas_e8.py ../../data/E8_chains_nli.json` (about 5 seconds) checks the code against the formulas below. Tested in a fresh Python 3.13 environment.
+
 All experiments in one table: [Results at a glance](#results-at-a-glance). Each experiment's plan and results are in `plans/` (Japanese).
 
 Every number in the articles below comes from files in this repository. Articles (Japanese):

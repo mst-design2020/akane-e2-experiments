@@ -15,6 +15,16 @@
 
 ![小さいAIの「XはYの一種」という答えを外から確かめる（E6〜E8）](figures/E8/overview_ja.png)
 
+**5分で試す（CPUだけ、GPU不要）。** `data/` に保存済みのモデルの答えとNLIの値から、E8の結果を作り直します。Gemma自体を動かすには `colab/` のノートブックが要ります。
+
+```bash
+git clone https://github.com/mst-design2020/akane-e2-experiments.git && cd akane-e2-experiments/analysis/e8
+pip install numpy scipy scikit-learn
+python e8_analyze.py ../../data/E8_chains_nli.json out.json   # 約5分。AURCの表が出ます（例：学習した鎖の確かめ 0.037）
+```
+
+`python check_formulas_e8.py ../../data/E8_chains_nli.json`（約5秒）で、コードが下の式どおりかを確かめられます。まっさらなPython 3.13の環境で確かめ済みです。
+
 すべての実験を1つの表で：[結果の一覧](#結果の一覧)。各実験の計画と結果は `plans/` にあります。
 
 note記事の数字は、すべてこのリポジトリのファイルから出ています。
