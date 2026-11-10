@@ -1,0 +1,4 @@
+{"what":"40 random steps where a sense had to be chosen (seed 77). Claude chose the acceptable sense(s) from the previous definition and the candidate list, before looking at any method's choice. 3 cases with no fitting sense were dropped (15 acacia->light, 20 drink->body, 39 principle->beginning).",
+ "gold":{"0":[5],"1":[0],"2":[1,2],"3":[0],"4":[6],"5":[1,5],"6":[0],"7":[0],"8":[0,2],"9":[0],"10":[0,4],"11":[0],"12":[0],"13":[1],"14":[0],"16":[5],"17":[0],"18":[1,2],"19":[0,1],"21":[0],"22":[2],"23":[0],"24":[0],"25":[1],"26":[1],"27":[0],"28":[0,1],"29":[0],"30":[0],"31":[0,1],"32":[0,5],"33":[0],"34":[0],"35":[0,1],"36":[3],"37":[5],"38":[4]},
+ "correct_of_37":{"D_gemma":35,"C_embedding":24,"B_first_good":24,"first_sense":24},
+ "key_columns":["word","sense","genus","C","D","B"]}
