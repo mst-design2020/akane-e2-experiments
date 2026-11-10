@@ -1,0 +1,708 @@
+You are checking English statements about diseases. Judge each by ordinary medical common sense.
+- "X is a Y." : is X a kind of Y (or a disease of that body system / that type) in the usual medical meaning? 
+- "No disease is both a Y and a Z." : is it true that no disease belongs to both categories?
+Answer 1 = true, 0 = false, 2 = could go either way / depends on meaning.
+Do not explain. Reply with only a CSV with the header "no,label" and one row per statement, for all 702 statements, in the same order. If you cannot fit all rows, stop at a row boundary; I will ask you to continue.
+
+1	Freeman-Sheldon syndrome is a viral infection.
+2	Lung carcinoma is a thoracic disease.
+3	Cobalt allergic asthma is a thoracic disease.
+4	Bacterial pneumonia is a thoracic disease.
+5	Nickel allergic asthma is a thoracic disease.
+6	Renal infectious disease is a mental disorder.
+7	Arts syndrome is a genetic disease.
+8	Factor VIII deficiency is a cardiovascular system disease.
+9	Sleep disorder is a nervous system disease.
+10	Mouth disease is a gastrointestinal system disease.
+11	Bladder fermentation syndrome is a cancer or other tumor.
+12	No disease is both a fungal infection and a genetic disease.
+13	Learning disability is a viral infection.
+14	Kidney disease is an immune system disease.
+15	Artery disease is an immune system disease.
+16	Werner syndrome is a metabolic disease.
+17	Malaria is a gastrointestinal system disease.
+18	Primary syphilis is an immune system disease.
+19	Thyroid lymphoma is a blood disease.
+20	Chronic tic disorder is a mental disorder.
+21	Scarlet fever is a respiratory system disease.
+22	No disease is both a gastrointestinal system disease and a musculoskeletal system disease.
+23	Heart cancer is a cardiovascular system disease.
+24	Female breast cancer is a cancer or other tumor.
+25	No disease is both a thoracic disease and an endocrine system disease.
+26	Thunderstorm triggered asthma is an immune system disease.
+27	B cell deficiency is a reproductive system disease.
+28	Protein-deficiency anemia is a metabolic disease.
+29	Muscle cancer is a parasitic infection.
+30	No disease is both an infectious disease and a musculoskeletal system disease.
+31	White-Sutton syndrome is a mental disorder.
+32	Char syndrome is a genetic disease.
+33	Metal metabolism disorder is a genetic disease.
+34	Plasma cell leukemia is a cancer or other tumor.
+35	Mineral metabolism disease is an endocrine system disease.
+36	Specific developmental disorder is a mental disorder.
+37	Auditory system cancer is a nervous system disease.
+38	Hot water epilepsy is a reproductive system disease.
+39	Gluten allergy is a blood disease.
+40	Spinal disease is an endocrine system disease.
+41	Factor X deficiency is a cancer or other tumor.
+42	No disease is both a respiratory system disease and a viral infection.
+43	Bone marrow cancer is a skin disease.
+44	Vascular skin disease is a blood disease.
+45	Alpha chain disease is a nervous system disease.
+46	Protein-energy malnutrition is a metabolic disease.
+47	Tongue disease is an immune system disease.
+48	Abdominal obesity-metabolic syndrome is a cardiovascular system disease.
+49	Wheat allergy is an infectious disease.
+50	Wheat allergy is an immune system disease.
+51	Alcohol-associated liver disease is a gastrointestinal system disease.
+52	Intrinsic asthma is a genetic disease.
+53	Atlantic salmon allergy is a genetic disease.
+54	No disease is both an infectious disease and a respiratory system disease.
+55	Childhood lymphoma is a parasitic infection.
+56	Eye disease is a nervous system disease.
+57	Breast implant illness is an immune system disease.
+58	AIDS phobia is a reproductive system disease.
+59	Dumping syndrome is a gastrointestinal system disease.
+60	Lower lip cancer is a blood disease.
+61	Beach ear is a nervous system disease.
+62	Migraine is a thoracic disease.
+63	Semantic dementia is a metabolic disease.
+64	Toxic shock syndrome is a reproductive system disease.
+65	Cardiac arrest is a bacterial infection.
+66	No disease is both an endocrine system disease and an immune system disease.
+67	Reflex epilepsy is a nervous system disease.
+68	No disease is both an endocrine system disease and a metabolic disease.
+69	Shellfish allergy is a breast disease.
+70	No disease is both a breast disease and a gastrointestinal system disease.
+71	No disease is both a reproductive system disease and a viral infection.
+72	Small cell carcinoma is a cancer or other tumor.
+73	Liver cancer is a gastrointestinal system disease.
+74	Urinary system cancer is a thoracic disease.
+75	Mushroom workers' lung is a musculoskeletal system disease.
+76	Neurotic disorder is a mental disorder.
+77	Renal artery disease is a blood disease.
+78	DOORS syndrome is a parasitic infection.
+79	Chronic kidney disease is a respiratory system disease.
+80	No disease is both a breast disease and an endocrine system disease.
+81	Secondary hypertension is a reproductive system disease.
+82	Foster-Kennedy syndrome is a viral infection.
+83	B cell deficiency is an immune system disease.
+84	Pulp degeneration is a gastrointestinal system disease.
+85	Farmer's lung is a musculoskeletal system disease.
+86	No disease is both a urinary system disease and a viral infection.
+87	Pulmonary fibrosis is a breast disease.
+88	Costello syndrome is a respiratory system disease.
+89	Thyroid gland disease is a metabolic disease.
+90	Specific language impairment is a nervous system disease.
+91	Ovarian lymphoma is a blood disease.
+92	Abdominal obesity-metabolic syndrome is a genetic disease.
+93	Retina lymphoma is a blood disease.
+94	Pollen allergy is a skin disease.
+95	Middle ear carcinoma is a nervous system disease.
+96	Cell type cancer is a genetic disease.
+97	Sweet syndrome is a skin disease.
+98	Mushroom workers' lung is a fungal infection.
+99	Red color blindness is a nervous system disease.
+100	Cat-scratch disease is a skin disease.
+101	Vaginal disease is a reproductive system disease.
+102	No disease is both a genetic disease and a metabolic disease.
+103	Vascular dementia is a cancer or other tumor.
+104	Pontiac fever is a bacterial infection.
+105	Char syndrome is a gastrointestinal system disease.
+106	Pulmonary fibrosis is a musculoskeletal system disease.
+107	Eye degenerative disease is a nervous system disease.
+108	Melanoma is a cancer or other tumor.
+109	Vascular dementia is a nervous system disease.
+110	Pulmonary tuberculosis is a bacterial infection.
+111	Dyslexia is a respiratory system disease.
+112	A viral infection is a kind of reproductive system disease.
+113	Facial nerve disease is a skin disease.
+114	Congenital heart disease is a thoracic disease.
+115	Spinal cord lymphoma is a urinary system disease.
+116	Scalp-ear-nipple syndrome is a genetic disease.
+117	Leprosy is a nervous system disease.
+118	No disease is both a fungal infection and a respiratory system disease.
+119	Vein disease is a cancer or other tumor.
+120	Olfactory nerve disease is a breast disease.
+121	Appendix disease is a respiratory system disease.
+122	Anal margin carcinoma is a gastrointestinal system disease.
+123	Lower lip cancer is a gastrointestinal system disease.
+124	Intestinal tuberculosis is a skin disease.
+125	No disease is both an infectious disease and a viral infection.
+126	Pulmonary tuberculosis is a thoracic disease.
+127	Protein-energy malnutrition is a thoracic disease.
+128	Enamel erosion is a gastrointestinal system disease.
+129	Substance-induced psychosis is a thoracic disease.
+130	Tongue disease is a gastrointestinal system disease.
+131	Visual epilepsy is an infectious disease.
+132	Aortic valve disease is a blood disease.
+133	Iris cancer is a nervous system disease.
+134	Pulp degeneration is a musculoskeletal system disease.
+135	Injection anthrax is a reproductive system disease.
+136	Viral meningitis is a skin disease.
+137	Japanese spotted fever is a skin disease.
+138	Davis-Wells syndrome is a bacterial infection.
+139	Upper gum cancer is a gastrointestinal system disease.
+140	Chronic orbital inflammation is a cancer or other tumor.
+141	Nail disease is a skin disease.
+142	Bone disease is a metabolic disease.
+143	No disease is both a genetic disease and a urinary system disease.
+144	Lipid metabolism disorder is an endocrine system disease.
+145	Orbital disease is a musculoskeletal system disease.
+146	HELIX syndrome is a metabolic disease.
+147	Stomach carcinoma is a reproductive system disease.
+148	Mast-cell leukemia is a blood disease.
+149	Marginal zone lymphoma is a blood disease.
+150	Hepatitis B is a musculoskeletal system disease.
+151	Vascular cancer is a cardiovascular system disease.
+152	Long COVID is an infectious disease.
+153	Weaver syndrome is a reproductive system disease.
+154	Thyroid crisis is an immune system disease.
+155	Factor XI deficiency is a thoracic disease.
+156	Fetal alcohol syndrome is a viral infection.
+157	Atlantic cod allergy is an immune system disease.
+158	Childhood lymphoma is a urinary system disease.
+159	Bone marrow disease is a cancer or other tumor.
+160	Orbit lymphoma is an endocrine system disease.
+161	Bone cancer is an immune system disease.
+162	No disease is both a bacterial infection and an immune system disease.
+163	Compartment syndrome is a cardiovascular system disease.
+164	Tongue cancer is a parasitic infection.
+165	No disease is both an infectious disease and a nervous system disease.
+166	Bipolar disorder is a thoracic disease.
+167	Appendix disease is a gastrointestinal system disease.
+168	Mood disorder is a genetic disease.
+169	Smooth muscle cancer is a musculoskeletal system disease.
+170	Colorado tick fever is a blood disease.
+171	No disease is both a bacterial infection and a fungal infection.
+172	Intermittent asthma is an immune system disease.
+173	Tongue carcinoma is a gastrointestinal system disease.
+174	Spleen cancer is an immune system disease.
+175	Prostate disease is a cancer or other tumor.
+176	Night blindness is a nervous system disease.
+177	Mild cognitive impairment is a mental disorder.
+178	Articulation disorder is a mental disorder.
+179	Bone inflammation disease is a musculoskeletal system disease.
+180	No disease is both a genetic disease and an infectious disease.
+181	No disease is both a mental disorder and a respiratory system disease.
+182	Lung cancer is a thoracic disease.
+183	Gastrointestinal system cancer is a fungal infection.
+184	Kidney disease is a cardiovascular system disease.
+185	No disease is both a thoracic disease and a musculoskeletal system disease.
+186	Cerebral lymphoma is a blood disease.
+187	Retinal cell cancer is a respiratory system disease.
+188	Sporadic breast cancer is a cancer or other tumor.
+189	Orbit lymphoma is an immune system disease.
+190	Heart disease is a thoracic disease.
+191	Bilateral breast cancer is an endocrine system disease.
+192	Sensory system disease is a nervous system disease.
+193	Dandy-Walker syndrome is a genetic disease.
+194	Char syndrome is a nervous system disease.
+195	ADULT syndrome is a genetic disease.
+196	Aortic valve disease is a thoracic disease.
+197	No disease is both a fungal infection and a urinary system disease.
+198	Mast syndrome is a musculoskeletal system disease.
+199	Retinal cell cancer is a nervous system disease.
+200	Respiratory failure is a blood disease.
+201	Animal phobia is an endocrine system disease.
+202	Bone lymphoma is a blood disease.
+203	Urinary bladder cancer is a cancer or other tumor.
+204	African iron overload is a blood disease.
+205	Scalp-ear-nipple syndrome is a mental disorder.
+206	Middle ear disease is a fungal infection.
+207	Nerve compression syndrome is a fungal infection.
+208	No disease is both a cardiovascular system disease and a cancer or other tumor.
+209	Night blindness is a musculoskeletal system disease.
+210	No disease is both a breast disease and a genetic disease.
+211	Sexual health disorder is a thoracic disease.
+212	Aspirin allergy is a gastrointestinal system disease.
+213	No disease is both a breast disease and a metabolic disease.
+214	Dental pulp disease is a gastrointestinal system disease.
+215	Long COVID is a respiratory system disease.
+216	Childhood-onset asthma is a genetic disease.
+217	ARC syndrome is a genetic disease.
+218	Intestinal tuberculosis is a gastrointestinal system disease.
+219	Rh deficiency syndrome is an endocrine system disease.
+220	Lung carcinoma is a reproductive system disease.
+221	Vascular dementia is a mental disorder.
+222	Prostate cancer is a urinary system disease.
+223	Bacterial pneumonia is a genetic disease.
+224	Oral cavity cancer is a gastrointestinal system disease.
+225	African iron overload is a fungal infection.
+226	Latex allergy is a nervous system disease.
+227	Protein-deficiency anemia is a cardiovascular system disease.
+228	Cardiovascular cancer is a skin disease.
+229	Bladder tuberculosis is an immune system disease.
+230	Generalized anxiety disorder is a nervous system disease.
+231	Penis carcinoma is an endocrine system disease.
+232	Acute leukemia is a respiratory system disease.
+233	Mast syndrome is a nervous system disease.
+234	No disease is both a thoracic disease and a reproductive system disease.
+235	Ascending colon cancer is a fungal infection.
+236	Liver carcinoma is a thoracic disease.
+237	Social phobia is a nervous system disease.
+238	Farmer's lung is a fungal infection.
+239	No disease is both a cardiovascular system disease and a skin disease.
+240	Peripheral T-cell lymphoma is an infectious disease.
+241	Neurotic disorder is a skin disease.
+242	Japanese spotted fever is a viral infection.
+243	Complement deficiency is an immune system disease.
+244	Dental pulp disease is a genetic disease.
+245	No disease is both an immune system disease and a parasitic infection.
+246	Chronic orbital inflammation is a musculoskeletal system disease.
+247	Drug dependence is a nervous system disease.
+248	Sleep apnea is a mental disorder.
+249	Spinal cord melanoma is a fungal infection.
+250	Blind loop syndrome is a gastrointestinal system disease.
+251	Sick sinus syndrome is a thoracic disease.
+252	Watson syndrome is a mental disorder.
+253	C syndrome is a nervous system disease.
+254	Foster-Kennedy syndrome is an endocrine system disease.
+255	No disease is both a fungal infection and a musculoskeletal system disease.
+256	Scarlet fever is a bacterial infection.
+257	Carbohydrate metabolic disorder is an endocrine system disease.
+258	Ovarian melanoma is a reproductive system disease.
+259	Peripheral T-cell lymphoma is a blood disease.
+260	No disease is both a gastrointestinal system disease and a reproductive system disease.
+261	No disease is both an endocrine system disease and a mental disorder.
+262	No disease is both an infectious disease and a parasitic infection.
+263	Conversion disorder is a urinary system disease.
+264	Taylor's syndrome is a reproductive system disease.
+265	Spinal cancer is a urinary system disease.
+266	Mongolian spot is a skin disease.
+267	Scott syndrome is a nervous system disease.
+268	Opioid abuse is a metabolic disease.
+269	Sleep apnea is a breast disease.
+270	Liver lymphoma is a gastrointestinal system disease.
+271	Mongolian spot is a genetic disease.
+272	Colorado tick fever is a viral infection.
+273	Auditory system cancer is a reproductive system disease.
+274	Worth syndrome is a musculoskeletal system disease.
+275	Sick building syndrome is a respiratory system disease.
+276	Prostate carcinoma is an endocrine system disease.
+277	Substance abuse is a nervous system disease.
+278	Stomach disease is a parasitic infection.
+279	A parasitic infection is a kind of genetic disease.
+280	Sleeping sickness is a fungal infection.
+281	Cardiac arrest is a thoracic disease.
+282	Pontiac fever is an infectious disease.
+283	Peanut allergy is a cancer or other tumor.
+284	Liver carcinoma is an infectious disease.
+285	Thyroid lymphoma is an infectious disease.
+286	Liver disease is a gastrointestinal system disease.
+287	Miller Fisher syndrome is an immune system disease.
+288	Large B-cell lymphoma is a blood disease.
+289	Skin tag is a skin disease.
+290	Middle lobe syndrome is a viral infection.
+291	Sick sinus syndrome is a musculoskeletal system disease.
+292	Persistent severe asthma is a mental disorder.
+293	Fragile X syndrome is an endocrine system disease.
+294	Lipid metabolism disorder is a cancer or other tumor.
+295	Visual epilepsy is a gastrointestinal system disease.
+296	Orange allergy is a respiratory system disease.
+297	Sensory system disease is a musculoskeletal system disease.
+298	Drug-induced hepatitis is a gastrointestinal system disease.
+299	Sporadic breast cancer is a gastrointestinal system disease.
+300	Chronic leukemia is a viral infection.
+301	No disease is both a nervous system disease and a urinary system disease.
+302	Migraine is an infectious disease.
+303	External ear disease is a nervous system disease.
+304	Prostate lymphoma is a blood disease.
+305	Glucose intolerance is a genetic disease.
+306	Retina lymphoma is a musculoskeletal system disease.
+307	Benign essential hypertension is a fungal infection.
+308	Hepatitis C is a gastrointestinal system disease.
+309	Anemia is a parasitic infection.
+310	Wilson-Turner syndrome is an endocrine system disease.
+311	Appendix disease is an immune system disease.
+312	Pearson syndrome is a metabolic disease.
+313	Asthma is a bacterial infection.
+314	Plethora of newborn is a gastrointestinal system disease.
+315	Complex partial epilepsy is a bacterial infection.
+316	No disease is both an endocrine system disease and a nervous system disease.
+317	Prostate disease is a mental disorder.
+318	Binder syndrome is a respiratory system disease.
+319	No disease is both a blood disease and a breast disease.
+320	Good syndrome is an immune system disease.
+321	Plethora of newborn is a blood disease.
+322	No disease is both an endocrine system disease and a skin disease.
+323	Mouth disease is an infectious disease.
+324	Viral hepatitis is an infectious disease.
+325	Lip disease is a gastrointestinal system disease.
+326	Glaucoma is a parasitic infection.
+327	Obesity is a cardiovascular system disease.
+328	Chronic wasting disease is an immune system disease.
+329	Liver carcinoma is a gastrointestinal system disease.
+330	Pulmonary systemic sclerosis is a musculoskeletal system disease.
+331	Acquired color blindness is a fungal infection.
+332	Hepatitis E is an infectious disease.
+333	Adult-onset severe asthma is an endocrine system disease.
+334	Perry syndrome is a metabolic disease.
+335	POEMS syndrome is a blood disease.
+336	Transverse colon cancer is a cancer or other tumor.
+337	Cole-Carpenter syndrome is an endocrine system disease.
+338	Parkinson's disease is a nervous system disease.
+339	Colorado tick fever is a bacterial infection.
+340	Developmental coordination disorder is a mental disorder.
+341	Autoimmune disease is a thoracic disease.
+342	Morphine dependence is a cardiovascular system disease.
+343	Smooth muscle cancer is an infectious disease.
+344	No disease is both a cardiovascular system disease and a fungal infection.
+345	Spinal polio is an endocrine system disease.
+346	Genital herpes is a reproductive system disease.
+347	Sleeping sickness is a urinary system disease.
+348	Hairy tongue is a parasitic infection.
+349	Twin-to-twin transfusion syndrome is a reproductive system disease.
+350	No disease is both a respiratory system disease and a cancer or other tumor.
+351	Benign secondary hypertension is a cardiovascular system disease.
+352	Prostate lymphoma is an endocrine system disease.
+353	Urinary tract infection is a skin disease.
+354	NK cell deficiency is a blood disease.
+355	Lung-brain developmental disorder is a genetic disease.
+356	Calcium metabolism disease is a fungal infection.
+357	Pancreas disease is a musculoskeletal system disease.
+358	Hard palate cancer is a gastrointestinal system disease.
+359	No disease is both a breast disease and a reproductive system disease.
+360	Orbit lymphoma is a blood disease.
+361	Autism spectrum disorder is a nervous system disease.
+362	Focal epilepsy is a bacterial infection.
+363	Wilson-Turner syndrome is a mental disorder.
+364	Bladder calculus is a urinary system disease.
+365	Fragile X syndrome is a genetic disease.
+366	Pulmonary artery disease is a respiratory system disease.
+367	Blue toe syndrome is a musculoskeletal system disease.
+368	Dementia is a mental disorder.
+369	Heart aneurysm is a thoracic disease.
+370	Orbit lymphoma is a musculoskeletal system disease.
+371	Intestinal disease is a mental disorder.
+372	Gray zone lymphoma is a genetic disease.
+373	No disease is both an infectious disease and a skin disease.
+374	Auto-brewery syndrome is a gastrointestinal system disease.
+375	Sleep apnea is a blood disease.
+376	Alpha-gal syndrome is a viral infection.
+377	Kidney disease is an infectious disease.
+378	No disease is both a thoracic disease and a skin disease.
+379	Shellfish allergy is an immune system disease.
+380	Anal carcinoma is a gastrointestinal system disease.
+381	Pupil disease is a nervous system disease.
+382	No disease is both a breast disease and an infectious disease.
+383	Floating-Harbor syndrome is a genetic disease.
+384	Motor neuron disease is a breast disease.
+385	DOORS syndrome is a genetic disease.
+386	Hereditary night blindness is a nervous system disease.
+387	Lymphoma is a blood disease.
+388	Triple-A syndrome is a genetic disease.
+389	Middle ear disease is a nervous system disease.
+390	Orange allergy is a thoracic disease.
+391	Skull base cancer is a viral infection.
+392	Sleep apnea is a nervous system disease.
+393	No disease is both a blood disease and a parasitic infection.
+394	Sick building syndrome is a genetic disease.
+395	Mantle cell lymphoma is a blood disease.
+396	Ramsay Hunt syndrome is a viral infection.
+397	Dandy-Walker syndrome is a gastrointestinal system disease.
+398	Spinal cord lymphoma is a blood disease.
+399	No disease is both an infectious disease and a cancer or other tumor.
+400	Secondary hypertension is a cardiovascular system disease.
+401	Drug-induced hearing loss is a nervous system disease.
+402	Nail disease is a musculoskeletal system disease.
+403	No disease is both a fungal infection and a parasitic infection.
+404	Tongue cancer is a cancer or other tumor.
+405	Hepatitis C is a parasitic infection.
+406	Egg allergy is a musculoskeletal system disease.
+407	Arts syndrome is a skin disease.
+408	Middle ear cancer is a nervous system disease.
+409	Toxic shock syndrome is a thoracic disease.
+410	Liver carcinoma is an immune system disease.
+411	Heart disease is a metabolic disease.
+412	Descending colon cancer is a gastrointestinal system disease.
+413	Genital herpes is a metabolic disease.
+414	Tick paralysis is an infectious disease.
+415	Werner syndrome is a respiratory system disease.
+416	Cannabis abuse is a nervous system disease.
+417	Nose disease is an infectious disease.
+418	Jaw cancer is a musculoskeletal system disease.
+419	Pervasive developmental disorder is a nervous system disease.
+420	Inhibited female orgasm is a reproductive system disease.
+421	Factor V deficiency is a cardiovascular system disease.
+422	Heart cancer is a skin disease.
+423	Specific developmental disorder is a breast disease.
+424	Spinal polio is an infectious disease.
+425	Gillespie syndrome is an immune system disease.
+426	Iron metabolism disease is a blood disease.
+427	No disease is both a fungal infection and a metabolic disease.
+428	Dry eye syndrome is a nervous system disease.
+429	Diaphragm disease is a musculoskeletal system disease.
+430	Hepatitis B is a gastrointestinal system disease.
+431	African tick-bite fever is a urinary system disease.
+432	Essential hypertension is a genetic disease.
+433	Alcohol dependence is a blood disease.
+434	Pulp erosion is a skin disease.
+435	No disease is both a thoracic disease and a viral infection.
+436	Arts syndrome is a mental disorder.
+437	Fish allergy is a bacterial infection.
+438	Retina lymphoma is a nervous system disease.
+439	Autism spectrum disorder is a mental disorder.
+440	Articulation disorder is a blood disease.
+441	Mantle cell lymphoma is an immune system disease.
+442	Null-cell leukemia is a cancer or other tumor.
+443	No disease is both a blood disease and a reproductive system disease.
+444	No disease is both an endocrine system disease and a respiratory system disease.
+445	Eye disease is a reproductive system disease.
+446	Burning mouth syndrome is a gastrointestinal system disease.
+447	Renal artery disease is a bacterial infection.
+448	Developmental coordination disorder is a musculoskeletal system disease.
+449	Spotted fever is a cardiovascular system disease.
+450	Blue toe syndrome is a cardiovascular system disease.
+451	Eye carcinoma is an infectious disease.
+452	Germ cell cancer is a reproductive system disease.
+453	Hairy cell leukemia is a blood disease.
+454	Frey syndrome is a viral infection.
+455	COACH syndrome is a genetic disease.
+456	No disease is both a metabolic disease and a reproductive system disease.
+457	Adult-onset severe asthma is a viral infection.
+458	No disease is both a breast disease and a thoracic disease.
+459	Factor X deficiency is a genetic disease.
+460	Protein-deficiency anemia is a urinary system disease.
+461	Fish allergy is a gastrointestinal system disease.
+462	Nail disease is a reproductive system disease.
+463	Pitt-Hopkins syndrome is a mental disorder.
+464	Breast implant illness is an endocrine system disease.
+465	Carbohydrate metabolic disorder is a skin disease.
+466	No disease is both a gastrointestinal system disease and a mental disorder.
+467	Glaucoma is a nervous system disease.
+468	Tick infestation is an infectious disease.
+469	Hepatitis C is a blood disease.
+470	Estrogen excess is a urinary system disease.
+471	Urinary bladder cancer is a gastrointestinal system disease.
+472	Cardiovascular syphilis is a breast disease.
+473	Environmentally induced asthma is an endocrine system disease.
+474	Eye carcinoma is a nervous system disease.
+475	Plasma cell leukemia is an immune system disease.
+476	Ovarian cancer is an endocrine system disease.
+477	Sick building syndrome is a musculoskeletal system disease.
+478	No disease is both a metabolic disease and a cancer or other tumor.
+479	Hot water epilepsy is a musculoskeletal system disease.
+480	Artery disease is a viral infection.
+481	Sporadic breast cancer is a genetic disease.
+482	Char syndrome is a cardiovascular system disease.
+483	No disease is both a bacterial infection and a genetic disease.
+484	Retinal cell cancer is a musculoskeletal system disease.
+485	Spinal cancer is a viral infection.
+486	Panic disorder is a genetic disease.
+487	Prostate calculus is a mental disorder.
+488	No disease is both an endocrine system disease and a fungal infection.
+489	Respiratory allergy is an immune system disease.
+490	Coats disease is a cardiovascular system disease.
+491	Autism spectrum disorder is a gastrointestinal system disease.
+492	Coffin-Lowry syndrome is an endocrine system disease.
+493	Genital herpes is an immune system disease.
+494	Inhibited female orgasm is a viral infection.
+495	Cancer is a cancer or other tumor.
+496	MEND syndrome is a thoracic disease.
+497	Costello syndrome is a fungal infection.
+498	Rift Valley fever is a parasitic infection.
+499	Japanese spotted fever is a bacterial infection.
+500	Inner ear disease is a nervous system disease.
+501	No disease is both a nervous system disease and a cancer or other tumor.
+502	Mixed cerebral palsy is a gastrointestinal system disease.
+503	Intestinal obstruction is a respiratory system disease.
+504	Coronary artery anomaly is a fungal infection.
+505	CHIME syndrome is a breast disease.
+506	Anal canal carcinoma is a gastrointestinal system disease.
+507	Cold-induced sweating syndrome is a mental disorder.
+508	Tomato allergy is a urinary system disease.
+509	Genital herpes is a viral infection.
+510	Jaw cancer is a metabolic disease.
+511	Pulmonary artery disease is a blood disease.
+512	Mitchell syndrome is a metabolic disease.
+513	Psychotic disorder is a nervous system disease.
+514	No disease is both an endocrine system disease and a viral infection.
+515	Occupational asthma is a viral infection.
+516	Skull base cancer is a musculoskeletal system disease.
+517	Nutrition disease is a blood disease.
+518	Acute leukemia is a musculoskeletal system disease.
+519	Peach allergy is an immune system disease.
+520	Scott syndrome is a cardiovascular system disease.
+521	Lipid pneumonia is a parasitic infection.
+522	Binder syndrome is a blood disease.
+523	Hairy tongue is a gastrointestinal system disease.
+524	Q fever is a bacterial infection.
+525	Soft palate cancer is a gastrointestinal system disease.
+526	Timothy syndrome is a metabolic disease.
+527	Gray zone lymphoma is a blood disease.
+528	Glucose intolerance is a metabolic disease.
+529	Lip cancer is a gastrointestinal system disease.
+530	No disease is both a blood disease and a skin disease.
+531	No disease is both a musculoskeletal system disease and a urinary system disease.
+532	Male breast cancer is an endocrine system disease.
+533	Alcohol-induced mental disorder is a nervous system disease.
+534	Urinary system cancer is a cancer or other tumor.
+535	Anal margin carcinoma is a skin disease.
+536	Pathological gambling is a reproductive system disease.
+537	Sleeping sickness is an infectious disease.
+538	Jaw cancer is a parasitic infection.
+539	Blue color blindness is a nervous system disease.
+540	Perry syndrome is a musculoskeletal system disease.
+541	Visual cortex disease is a parasitic infection.
+542	No disease is both a cardiovascular system disease and a viral infection.
+543	Blindness is a nervous system disease.
+544	Anus disease is a gastrointestinal system disease.
+545	Muscle cancer is a cancer or other tumor.
+546	No disease is both a blood disease and a cardiovascular system disease.
+547	X-linked dominant disease is a reproductive system disease.
+548	Large intestine cancer is a cancer or other tumor.
+549	No disease is both a cardiovascular system disease and a mental disorder.
+550	Speech disorder is a mental disorder.
+551	Bile duct cancer is a genetic disease.
+552	Sick sinus syndrome is a cardiovascular system disease.
+553	Cholera is a gastrointestinal system disease.
+554	No disease is both a breast disease and a parasitic infection.
+555	Celery allergy is a gastrointestinal system disease.
+556	Substance dependence is an endocrine system disease.
+557	Newcastle disease is a respiratory system disease.
+558	Hair disease is an immune system disease.
+559	Ascending colon cancer is a gastrointestinal system disease.
+560	Heel spur is an endocrine system disease.
+561	Yellow nail syndrome is a genetic disease.
+562	Cole-Carpenter syndrome is a reproductive system disease.
+563	Davis-Wells syndrome is a urinary system disease.
+564	Respiratory system cancer is a blood disease.
+565	Prostate lymphoma is an immune system disease.
+566	Liver lymphoma is a blood disease.
+567	Septic arthritis is a respiratory system disease.
+568	No disease is both a cardiovascular system disease and a metabolic disease.
+569	Blood protein disease is a metabolic disease.
+570	Renal tuberculosis is an infectious disease.
+571	African iron overload is an endocrine system disease.
+572	Jackson-Weiss syndrome is a metabolic disease.
+573	Aortic valve disease is a musculoskeletal system disease.
+574	No disease is both a breast disease and a mental disorder.
+575	Ovarian dysfunction is a reproductive system disease.
+576	Paranoid schizophrenia is a skin disease.
+577	Intrinsic asthma is an immune system disease.
+578	Female breast cancer is an endocrine system disease.
+579	Japanese spotted fever is a musculoskeletal system disease.
+580	Secondary syphilis is a reproductive system disease.
+581	Adjustment disorder is a mental disorder.
+582	Breast lymphoma is a blood disease.
+583	No disease is both a genetic disease and a reproductive system disease.
+584	Metal metabolism disorder is a viral infection.
+585	Heart cancer is a thoracic disease.
+586	No disease is both a blood disease and a metabolic disease.
+587	Aggressive NK-cell leukemia is a urinary system disease.
+588	No disease is both a mental disorder and a metabolic disease.
+589	No disease is both a blood disease and a genetic disease.
+590	Eye carcinoma is a cancer or other tumor.
+591	Short QT syndrome is a thoracic disease.
+592	Movement disease is an infectious disease.
+593	Pancreatic cholera is an endocrine system disease.
+594	Renal tuberculosis is a bacterial infection.
+595	Septic arthritis is a cancer or other tumor.
+596	Cascade stomach is a reproductive system disease.
+597	Persistent moderate asthma is a mental disorder.
+598	Estrogen excess is a metabolic disease.
+599	Nutritional deficiency disease is a gastrointestinal system disease.
+600	Pulp erosion is a fungal infection.
+601	Protein S deficiency is a urinary system disease.
+602	Carney complex is a musculoskeletal system disease.
+603	Acquired color blindness is a nervous system disease.
+604	No disease is both a breast disease and a fungal infection.
+605	Vaginal disease is an infectious disease.
+606	No disease is both an infectious disease and a reproductive system disease.
+607	Uterine cancer is a mental disorder.
+608	Ovarian disease is a nervous system disease.
+609	Q fever is a respiratory system disease.
+610	Becker disease is a reproductive system disease.
+611	Sickle cell disease is a cardiovascular system disease.
+612	Cartilage cancer is a cancer or other tumor.
+613	Orbital cancer is a musculoskeletal system disease.
+614	No disease is both an immune system disease and a skin disease.
+615	Skin disease is a skin disease.
+616	Dental pulp disease is a musculoskeletal system disease.
+617	Liver lymphoma is a cancer or other tumor.
+618	Anal canal cancer is a gastrointestinal system disease.
+619	Lipid metabolism disorder is a genetic disease.
+620	African tick-bite fever is a viral infection.
+621	Pulp erosion is a gastrointestinal system disease.
+622	Lipid metabolism disorder is a metabolic disease.
+623	No disease is both an immune system disease and a viral infection.
+624	No disease is both a cardiovascular system disease and a parasitic infection.
+625	No disease is both a genetic disease and a viral infection.
+626	Plethora of newborn is a bacterial infection.
+627	Adult-onset severe asthma is an immune system disease.
+628	Glucose metabolism disease is a parasitic infection.
+629	Ferguson-Smith tumor is a genetic disease.
+630	UV-sensitive syndrome is a cancer or other tumor.
+631	Heroin dependence is a breast disease.
+632	Edwards syndrome is a thoracic disease.
+633	Childhood kidney cancer is a cancer or other tumor.
+634	Lipid pneumonia is a respiratory system disease.
+635	Heart disease is a nervous system disease.
+636	Animal phobia is a reproductive system disease.
+637	Bone lymphoma is a cancer or other tumor.
+638	Sickle cell disease is a genetic disease.
+639	Factor VII deficiency is a cardiovascular system disease.
+640	Scott syndrome is a blood disease.
+641	Hairy cell leukemia is a cancer or other tumor.
+642	Functional diarrhea is a blood disease.
+643	Thyroid gland disease is an endocrine system disease.
+644	Acute leukemia is a cancer or other tumor.
+645	Syphilis is a nervous system disease.
+646	Cherry allergy is an infectious disease.
+647	Coffin-Lowry syndrome is a nervous system disease.
+648	Carcinoma is a gastrointestinal system disease.
+649	Lynch syndrome is a reproductive system disease.
+650	Frey syndrome is a nervous system disease.
+651	Bacterial meningitis is an infectious disease.
+652	Intermittent asthma is a fungal infection.
+653	Bladder lymphoma is an immune system disease.
+654	ADULT syndrome is a thoracic disease.
+655	Bone cancer is a fungal infection.
+656	Shipyard eye is a nervous system disease.
+657	Sexual dysfunction is a reproductive system disease.
+658	No disease is both a breast disease and a skin disease.
+659	Viral hepatitis is a gastrointestinal system disease.
+660	Oral tuberculosis is a gastrointestinal system disease.
+661	Skull base cancer is a respiratory system disease.
+662	Sweat gland cancer is an endocrine system disease.
+663	Ferguson-Smith tumor is a skin disease.
+664	Stroke is a fungal infection.
+665	Watson syndrome is a nervous system disease.
+666	Bladder lymphoma is a blood disease.
+667	Bipolar disorder is a nervous system disease.
+668	Pulmonary hypertension is a thoracic disease.
+669	Mitchell syndrome is a cardiovascular system disease.
+670	Taylor's syndrome is a genetic disease.
+671	Pancreatic cancer is an endocrine system disease.
+672	Carbohydrate metabolic disorder is a genetic disease.
+673	Orbital cancer is a cancer or other tumor.
+674	Sweeney-Cox syndrome is a skin disease.
+675	Male infertility is a mental disorder.
+676	Bloom syndrome is a respiratory system disease.
+677	Arthritis is an immune system disease.
+678	Stiff skin syndrome is a genetic disease.
+679	Ovarian lymphoma is an endocrine system disease.
+680	Ovarian melanoma is an endocrine system disease.
+681	Withdrawal disorder is a skin disease.
+682	Retinal disease is a nervous system disease.
+683	Lung clear cell-sugar-tumor is a thoracic disease.
+684	Long COVID is a viral infection.
+685	Adjustment disorder is a reproductive system disease.
+686	Coats disease is a metabolic disease.
+687	No disease is both a fungal infection and a reproductive system disease.
+688	Alcoholic hepatitis is a gastrointestinal system disease.
+689	Coronary artery anomaly is a thoracic disease.
+690	Bipolar I disorder is a genetic disease.
+691	Eye accommodation disease is a genetic disease.
+692	Cascade stomach is a gastrointestinal system disease.
+693	Sick building syndrome is an immune system disease.
+694	Tongue cancer is a gastrointestinal system disease.
+695	Glucose metabolism disease is a genetic disease.
+696	Nasal cavity disease is an immune system disease.
+697	Schizophrenia is a nervous system disease.
+698	Specific phobia is a nervous system disease.
+699	Cold-induced sweating syndrome is a genetic disease.
+700	Yellow nail syndrome is a skin disease.
+701	Syphilis is a cardiovascular system disease.
+702	Benign essential hypertension is a cardiovascular system disease.
