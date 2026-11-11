@@ -1,6 +1,7 @@
 """E9-3：候補を選ばない 1,681語×46分類（77,326主張）で、網と強い学習を比べ直す。計画: PLAN_E9-3.md（固定）
 網のルールは Gemma の答えだけ（「一種」はい・「両立しない」はい）。WordNet の階層は網にも学習にも入れない。
 使い方: python3 e93.py [quick]   環境変数 E93_SPLITS=0,1,...  → E93_results(_sN).json
+一覧なしの辞書の確かめ（2026-11-11、plans/E9n_nolist_recheck.md）: E93_CHECKER=../../data/E9n_checker_scores.json
 """
 import json, sys, os, time
 import numpy as np
@@ -21,7 +22,7 @@ t0 = time.time()
 # ---------------- データ ----------------
 D = json.load(open(os.path.join(HERE, '..', 'e4', 'e42_data.json')))
 LALL = np.array(json.load(open(os.path.join(HERE, '..', '..', 'data', 'E4-2_answers_gemma-2-2b-it.json')))['logit'])
-CK = json.load(open(os.path.join(HERE, '..', '..', 'data', 'E9-1_checker_scores.json')))
+CK = json.load(open(os.environ.get('E93_CHECKER') or os.path.join(HERE, '..', '..', 'data', 'E9-1_checker_scores.json')))   # 一覧なし版: E93_CHECKER=../../data/E9n_checker_scores.json
 cl = D['claims']; syn = list(D['cats']); name = D['cats']
 ENTS = CK['ents']; CATN = CK['cats']; NE, NC = len(ENTS), len(CATN)
 cidx = {name[s]: s for s in syn}                     # 名前 → synset

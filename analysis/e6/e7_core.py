@@ -2,6 +2,10 @@
 import re
 
 MAX_DEFS_ENT, MAX_DEFS_MID, DEPTH = 8, 4, 3
+# Note (2026-11-11): PERSON_HEADS, OF_HEADS and META below are hand-written word lists used to pick the head noun.
+# The published E7/E8/E9 results were made with them. A version without any hand-written list is in analysis/nolist/
+# (e8n_core.py); the recheck and the corrections are in plans/E8n_nolist_recheck.md and plans/E9n_nolist_recheck.md.
+# 注（2026-11-11）：下の PERSON_HEADS・OF_HEADS・META は頭の名詞を取るための手書きの語の一覧。一覧なしの版は analysis/nolist/。
 PERSON_HEADS = ("one who", "someone who", "somebody who", "a person who", "person who", "one that", "anyone who",
                 "a person", "someone", "somebody")
 OF_HEADS = {"kind", "type", "sort", "variety", "species", "form", "member", "one", "any", "piece", "item", "genus",
