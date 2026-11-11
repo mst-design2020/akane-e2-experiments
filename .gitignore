@@ -5,3 +5,7 @@ __pycache__/
 
 # BTProp comparison work folder
 analysis/btprop/work/
+
+# E9: built locally
+analysis/e4/e42_data.json
+analysis/e9/E91_checker.json

@@ -1,0 +1,4205 @@
+{
+"note": "Claude、2026-11-11、WordNetの正解・Gemma・辞書を見ずに語と分類だけで判定。1=正しい 2=どちらとも 0=違う",
+"items": [
+{
+"id": 24189,
+"ent": "equatorial",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 9414,
+"ent": "brandy",
+"cat": "toy",
+"group": "random",
+"mine": 0
+},
+{
+"id": 49188,
+"ent": "overlord",
+"cat": "dish",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 42999,
+"ent": "matador",
+"cat": "worker",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 9782,
+"ent": "briefcase",
+"cat": "toy",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75732,
+"ent": "welder",
+"cat": "man-made object",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 27635,
+"ent": "gasket",
+"cat": "worker",
+"group": "random",
+"mine": 0
+},
+{
+"id": 66192,
+"ent": "steamboat",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 75502,
+"ent": "waveguide",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 2388,
+"ent": "anarchist",
+"cat": "organ",
+"group": "random",
+"mine": 0
+},
+{
+"id": 42505,
+"ent": "mariposa",
+"cat": "animal",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 3118,
+"ent": "aquarium",
+"cat": "artist",
+"group": "random",
+"mine": 0
+},
+{
+"id": 69570,
+"ent": "telegraph",
+"cat": "device",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 61089,
+"ent": "senna",
+"cat": "animal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 24242,
+"ent": "erica",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 42642,
+"ent": "married",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 70306,
+"ent": "thermos",
+"cat": "device",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 72470,
+"ent": "turbine",
+"cat": "equipment",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 42977,
+"ent": "matador",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 12086,
+"ent": "carbine",
+"cat": "person",
+"group": "random",
+"mine": 0
+},
+{
+"id": 68772,
+"ent": "syringe",
+"cat": "mammal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 42336,
+"ent": "margarita",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 63022,
+"ent": "skiff",
+"cat": "mammal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 22151,
+"ent": "dragoon",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 22055,
+"ent": "dowager",
+"cat": "vehicle",
+"group": "random",
+"mine": 0
+},
+{
+"id": 22745,
+"ent": "dug",
+"cat": "vehicle",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 52211,
+"ent": "piglet",
+"cat": "animal",
+"group": "random",
+"mine": 1
+},
+{
+"id": 13125,
+"ent": "chateau",
+"cat": "drink",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 14925,
+"ent": "coachman",
+"cat": "vehicle",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 56302,
+"ent": "quitter",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 39396,
+"ent": "liberator",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 16304,
+"ent": "condor",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 31902,
+"ent": "helicopter",
+"cat": "aircraft",
+"group": "random",
+"mine": 1
+},
+{
+"id": 65458,
+"ent": "sprinter",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 41561,
+"ent": "mahatma",
+"cat": "boat",
+"group": "random",
+"mine": 0
+},
+{
+"id": 53261,
+"ent": "poi",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 49694,
+"ent": "palmyra",
+"cat": "dish",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 63933,
+"ent": "socialist",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 6828,
+"ent": "belting",
+"cat": "equipment",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 19271,
+"ent": "curry",
+"cat": "disease",
+"group": "random",
+"mine": 0
+},
+{
+"id": 31140,
+"ent": "harmonica",
+"cat": "game",
+"group": "random",
+"mine": 0
+},
+{
+"id": 72842,
+"ent": "undergraduate",
+"cat": "aircraft",
+"group": "random",
+"mine": 0
+},
+{
+"id": 15963,
+"ent": "composer",
+"cat": "animal",
+"group": "random",
+"mine": 2
+},
+{
+"id": 50412,
+"ent": "pasha",
+"cat": "organ",
+"group": "random",
+"mine": 0
+},
+{
+"id": 35400,
+"ent": "interceptor",
+"cat": "container",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 72430,
+"ent": "tun",
+"cat": "container",
+"group": "random",
+"mine": 1
+},
+{
+"id": 33053,
+"ent": "houseboat",
+"cat": "weapon",
+"group": "random",
+"mine": 0
+},
+{
+"id": 30836,
+"ent": "handcuff",
+"cat": "man-made object",
+"group": "random",
+"mine": 1
+},
+{
+"id": 14403,
+"ent": "clary",
+"cat": "insect",
+"group": "random",
+"mine": 0
+},
+{
+"id": 74773,
+"ent": "voyeur",
+"cat": "boat",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 72945,
+"ent": "undersecretary",
+"cat": "worker",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 56513,
+"ent": "raglan",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 41091,
+"ent": "macho",
+"cat": "food",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 30992,
+"ent": "handyman",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 43630,
+"ent": "mensch",
+"cat": "car",
+"group": "random",
+"mine": 0
+},
+{
+"id": 28357,
+"ent": "georgette",
+"cat": "vehicle",
+"group": "random",
+"mine": 0
+},
+{
+"id": 53812,
+"ent": "portable",
+"cat": "material",
+"group": "random",
+"mine": 0
+},
+{
+"id": 59997,
+"ent": "scapegoat",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 45882,
+"ent": "motorcycle",
+"cat": "equipment",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 15463,
+"ent": "collie",
+"cat": "dog",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 59487,
+"ent": "sarcophagus",
+"cat": "tree",
+"group": "random",
+"mine": 0
+},
+{
+"id": 9338,
+"ent": "bramble",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 17146,
+"ent": "convalescent",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 76500,
+"ent": "wombat",
+"cat": "mammal",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 69014,
+"ent": "takin",
+"cat": "dish",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 46458,
+"ent": "narc",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 16530,
+"ent": "conger",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 73245,
+"ent": "untouchable",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 27206,
+"ent": "fuchsia",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 63712,
+"ent": "snoop",
+"cat": "mammal",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 21459,
+"ent": "dinky",
+"cat": "boat",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 13892,
+"ent": "churn",
+"cat": "living thing",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 35385,
+"ent": "interceptor",
+"cat": "fruit",
+"group": "random",
+"mine": 0
+},
+{
+"id": 13586,
+"ent": "choreographer",
+"cat": "man-made object",
+"group": "random",
+"mine": 0
+},
+{
+"id": 41783,
+"ent": "mamba",
+"cat": "drink",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 50824,
+"ent": "pelican",
+"cat": "metal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 55875,
+"ent": "pulley",
+"cat": "musical instrument",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61752,
+"ent": "shim",
+"cat": "equipment",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 8970,
+"ent": "bot",
+"cat": "living thing",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 28200,
+"ent": "genitalia",
+"cat": "mammal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 51704,
+"ent": "philanthropist",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 47764,
+"ent": "notary",
+"cat": "man-made object",
+"group": "random",
+"mine": 0
+},
+{
+"id": 70482,
+"ent": "thwart",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 3479,
+"ent": "aristocrat",
+"cat": "footwear",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 36599,
+"ent": "jester",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 44666,
+"ent": "minion",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 60851,
+"ent": "sectional",
+"cat": "fabric",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 60598,
+"ent": "scythe",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 58253,
+"ent": "rifle",
+"cat": "tool",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 947,
+"ent": "adjuster",
+"cat": "furniture",
+"group": "random",
+"mine": 0
+},
+{
+"id": 62364,
+"ent": "sieve",
+"cat": "person",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 36781,
+"ent": "juggler",
+"cat": "furniture",
+"group": "random",
+"mine": 0
+},
+{
+"id": 7140,
+"ent": "betrothed",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 72848,
+"ent": "undergraduate",
+"cat": "toy",
+"group": "random",
+"mine": 0
+},
+{
+"id": 52092,
+"ent": "piccolo",
+"cat": "equipment",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 67602,
+"ent": "suiting",
+"cat": "clothing",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 46275,
+"ent": "mustang",
+"cat": "sport",
+"group": "random",
+"mine": 0
+},
+{
+"id": 65443,
+"ent": "sprinkler",
+"cat": "musical instrument",
+"group": "random",
+"mine": 0
+},
+{
+"id": 36516,
+"ent": "jasmine",
+"cat": "material",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 32777,
+"ent": "hooch",
+"cat": "weapon",
+"group": "random",
+"mine": 0
+},
+{
+"id": 66693,
+"ent": "stingray",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75315,
+"ent": "washroom",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 70750,
+"ent": "toddler",
+"cat": "mammal",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 4290,
+"ent": "atheist",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 66909,
+"ent": "stoner",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 14944,
+"ent": "coachman",
+"cat": "metal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 59466,
+"ent": "sandwich",
+"cat": "person",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 33093,
+"ent": "housekeeper",
+"cat": "machine",
+"group": "random",
+"mine": 0
+},
+{
+"id": 18040,
+"ent": "countess",
+"cat": "plant",
+"group": "random",
+"mine": 0
+},
+{
+"id": 74486,
+"ent": "visitor",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 47150,
+"ent": "neutral",
+"cat": "living thing",
+"group": "random",
+"mine": 2
+},
+{
+"id": 67973,
+"ent": "supremacist",
+"cat": "musical instrument",
+"group": "random",
+"mine": 0
+},
+{
+"id": 59340,
+"ent": "salesperson",
+"cat": "living thing",
+"group": "random",
+"mine": 1
+},
+{
+"id": 49570,
+"ent": "paisley",
+"cat": "clothing",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 74016,
+"ent": "veronica",
+"cat": "mammal",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 24396,
+"ent": "espresso",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 10011,
+"ent": "brogan",
+"cat": "footwear",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 50592,
+"ent": "patriot",
+"cat": "material",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 56688,
+"ent": "rapier",
+"cat": "man-made object",
+"group": "random",
+"mine": 1
+},
+{
+"id": 11900,
+"ent": "capacitor",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 72070,
+"ent": "trident",
+"cat": "person",
+"group": "random",
+"mine": 0
+},
+{
+"id": 45836,
+"ent": "motorboat",
+"cat": "equipment",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 71639,
+"ent": "transponder",
+"cat": "tool",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 59579,
+"ent": "sarin",
+"cat": "tree",
+"group": "random",
+"mine": 0
+},
+{
+"id": 45355,
+"ent": "moll",
+"cat": "sport",
+"group": "random",
+"mine": 0
+},
+{
+"id": 73313,
+"ent": "urchin",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 35153,
+"ent": "insider",
+"cat": "tree",
+"group": "random",
+"mine": 0
+},
+{
+"id": 42802,
+"ent": "masjid",
+"cat": "car",
+"group": "random",
+"mine": 0
+},
+{
+"id": 4263,
+"ent": "astrophysicist",
+"cat": "musical instrument",
+"group": "random",
+"mine": 0
+},
+{
+"id": 50773,
+"ent": "pedophile",
+"cat": "worker",
+"group": "random",
+"mine": 0
+},
+{
+"id": 10154,
+"ent": "buggy",
+"cat": "person",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 64696,
+"ent": "spandex",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 7241,
+"ent": "bicycle",
+"cat": "machine",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 44921,
+"ent": "misfit",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 14157,
+"ent": "claimant",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 71924,
+"ent": "treasurer",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 632,
+"ent": "accountant",
+"cat": "person",
+"group": "random",
+"mine": 1
+},
+{
+"id": 42276,
+"ent": "marc",
+"cat": "mammal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 74444,
+"ent": "vise",
+"cat": "man-made object",
+"group": "random",
+"mine": 1
+},
+{
+"id": 45349,
+"ent": "moll",
+"cat": "fabric",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 7513,
+"ent": "bimbo",
+"cat": "drink",
+"group": "random",
+"mine": 0
+},
+{
+"id": 65913,
+"ent": "starfish",
+"cat": "body part",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 34574,
+"ent": "incurable",
+"cat": "clothing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 41769,
+"ent": "mamba",
+"cat": "animal",
+"group": "random",
+"mine": 1
+},
+{
+"id": 66346,
+"ent": "stepfather",
+"cat": "dish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 17222,
+"ent": "convert",
+"cat": "device",
+"group": "random",
+"mine": 0
+},
+{
+"id": 31207,
+"ent": "harrow",
+"cat": "machine",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 45513,
+"ent": "moped",
+"cat": "machine",
+"group": "random",
+"mine": 2
+},
+{
+"id": 9606,
+"ent": "breeder",
+"cat": "material",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 25153,
+"ent": "extrovert",
+"cat": "athlete",
+"group": "random",
+"mine": 0
+},
+{
+"id": 71247,
+"ent": "towel",
+"cat": "fabric",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 16444,
+"ent": "confidante",
+"cat": "car",
+"group": "random",
+"mine": 0
+},
+{
+"id": 44758,
+"ent": "minnow",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 56476,
+"ent": "radiologist",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 76535,
+"ent": "wombat",
+"cat": "athlete",
+"group": "random",
+"mine": 0
+},
+{
+"id": 65068,
+"ent": "spitfire",
+"cat": "aircraft",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 9797,
+"ent": "briefcase",
+"cat": "sport",
+"group": "random",
+"mine": 0
+},
+{
+"id": 43902,
+"ent": "messenger",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 44997,
+"ent": "missus",
+"cat": "tree",
+"group": "random",
+"mine": 0
+},
+{
+"id": 7844,
+"ent": "bistro",
+"cat": "aircraft",
+"group": "random",
+"mine": 0
+},
+{
+"id": 62296,
+"ent": "sickle",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 3189,
+"ent": "archbishop",
+"cat": "drink",
+"group": "random",
+"mine": 0
+},
+{
+"id": 29864,
+"ent": "grocer",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 44674,
+"ent": "minion",
+"cat": "plant",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 39707,
+"ent": "lilac",
+"cat": "tree",
+"group": "random",
+"mine": 2
+},
+{
+"id": 4956,
+"ent": "baboon",
+"cat": "person",
+"group": "random",
+"mine": 0
+},
+{
+"id": 8643,
+"ent": "bodybuilder",
+"cat": "body part",
+"group": "random",
+"mine": 0
+},
+{
+"id": 46659,
+"ent": "necktie",
+"cat": "drink",
+"group": "random",
+"mine": 0
+},
+{
+"id": 40478,
+"ent": "lodger",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 6456,
+"ent": "beanie",
+"cat": "man-made object",
+"group": "random",
+"mine": 1
+},
+{
+"id": 29653,
+"ent": "greenhouse",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 68090,
+"ent": "surrealist",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 25451,
+"ent": "fancier",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 44347,
+"ent": "migrant",
+"cat": "bird",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 60397,
+"ent": "scion",
+"cat": "sport",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 14275,
+"ent": "clarence",
+"cat": "drink",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61057,
+"ent": "senator",
+"cat": "drink",
+"group": "random",
+"mine": 0
+},
+{
+"id": 24874,
+"ent": "exhibitor",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 10626,
+"ent": "businesswoman",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 24955,
+"ent": "exporter",
+"cat": "boat",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 11654,
+"ent": "candlestick",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 29336,
+"ent": "granddaughter",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 3488,
+"ent": "aristocrat",
+"cat": "material",
+"group": "random",
+"mine": 0
+},
+{
+"id": 27763,
+"ent": "gavel",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 53478,
+"ent": "pontifical",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 2393,
+"ent": "ancestor",
+"cat": "animal",
+"group": "random",
+"mine": 2
+},
+{
+"id": 361,
+"ent": "absentee",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 35788,
+"ent": "invalid",
+"cat": "living thing",
+"group": "random",
+"mine": 1
+},
+{
+"id": 47000,
+"ent": "neurologist",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 53889,
+"ent": "potion",
+"cat": "boat",
+"group": "random",
+"mine": 0
+},
+{
+"id": 43838,
+"ent": "mesquite",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 32785,
+"ent": "hooch",
+"cat": "room",
+"group": "random",
+"mine": 0
+},
+{
+"id": 2062,
+"ent": "alumnus",
+"cat": "material",
+"group": "random",
+"mine": 0
+},
+{
+"id": 54416,
+"ent": "princess",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 42062,
+"ent": "mangrove",
+"cat": "device",
+"group": "random",
+"mine": 0
+},
+{
+"id": 69618,
+"ent": "telescope",
+"cat": "equipment",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 70948,
+"ent": "tongs",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 29557,
+"ent": "grandson",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 51928,
+"ent": "physiologist",
+"cat": "metal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 65845,
+"ent": "stapler",
+"cat": "machine",
+"group": "random",
+"mine": 2
+},
+{
+"id": 34022,
+"ent": "immigrant",
+"cat": "clothing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 22883,
+"ent": "dynamo",
+"cat": "vehicle",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 28546,
+"ent": "gland",
+"cat": "container",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 13814,
+"ent": "chub",
+"cat": "dish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 72562,
+"ent": "tweeter",
+"cat": "equipment",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 32645,
+"ent": "homophobe",
+"cat": "musical instrument",
+"group": "random",
+"mine": 0
+},
+{
+"id": 13706,
+"ent": "chronicler",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 49928,
+"ent": "panzer",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 7314,
+"ent": "biennial",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 29137,
+"ent": "grabber",
+"cat": "machine",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 28600,
+"ent": "glider",
+"cat": "person",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 53118,
+"ent": "plumber",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 66170,
+"ent": "steamboat",
+"cat": "car",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75910,
+"ent": "whiskey",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 22354,
+"ent": "dredge",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 70230,
+"ent": "therapist",
+"cat": "person",
+"group": "random",
+"mine": 1
+},
+{
+"id": 33534,
+"ent": "hyena",
+"cat": "living thing",
+"group": "random",
+"mine": 1
+},
+{
+"id": 42874,
+"ent": "mastiff",
+"cat": "mammal",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 6482,
+"ent": "beanie",
+"cat": "organ",
+"group": "random",
+"mine": 0
+},
+{
+"id": 65229,
+"ent": "spokeswoman",
+"cat": "animal",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 25573,
+"ent": "fascist",
+"cat": "disease",
+"group": "random",
+"mine": 0
+},
+{
+"id": 42024,
+"ent": "manger",
+"cat": "container",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 20772,
+"ent": "denture",
+"cat": "container",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 2523,
+"ent": "anesthesiologist",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61934,
+"ent": "shogun",
+"cat": "device",
+"group": "random",
+"mine": 0
+},
+{
+"id": 72545,
+"ent": "tweeter",
+"cat": "bird",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 29734,
+"ent": "greyhound",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 54192,
+"ent": "preteen",
+"cat": "fish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 34793,
+"ent": "informer",
+"cat": "tool",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 12912,
+"ent": "cesspool",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 50183,
+"ent": "paranoid",
+"cat": "disease",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 69355,
+"ent": "tavern",
+"cat": "room",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61772,
+"ent": "shim",
+"cat": "metal",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 49456,
+"ent": "pagoda",
+"cat": "reptile",
+"group": "random",
+"mine": 0
+},
+{
+"id": 22287,
+"ent": "dreadnought",
+"cat": "boat",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 302,
+"ent": "abolitionist",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 14276,
+"ent": "clarence",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 10554,
+"ent": "burrito",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 51877,
+"ent": "physicist",
+"cat": "worker",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 12191,
+"ent": "caribou",
+"cat": "animal",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 13202,
+"ent": "cheetah",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 11241,
+"ent": "calender",
+"cat": "tool",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 77117,
+"ent": "yacht",
+"cat": "vehicle",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 11256,
+"ent": "calender",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 70728,
+"ent": "toby",
+"cat": "container",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 67725,
+"ent": "sunflower",
+"cat": "food",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 73690,
+"ent": "valet",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 68476,
+"ent": "swine",
+"cat": "clothing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 68649,
+"ent": "swot",
+"cat": "tool",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 60465,
+"ent": "scraper",
+"cat": "vehicle",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 64113,
+"ent": "sofa",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 60845,
+"ent": "sectional",
+"cat": "room",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 28688,
+"ent": "godmother",
+"cat": "toy",
+"group": "random",
+"mine": 0
+},
+{
+"id": 7502,
+"ent": "bimbo",
+"cat": "fish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 58484,
+"ent": "rival",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 20779,
+"ent": "denture",
+"cat": "room",
+"group": "random",
+"mine": 0
+},
+{
+"id": 58710,
+"ent": "rogue",
+"cat": "dish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 7051,
+"ent": "betel",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 40361,
+"ent": "locksmith",
+"cat": "machine",
+"group": "random",
+"mine": 0
+},
+{
+"id": 26818,
+"ent": "foal",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 2058,
+"ent": "alumnus",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 76615,
+"ent": "woodpecker",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 22394,
+"ent": "dropper",
+"cat": "material",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 61798,
+"ent": "ship",
+"cat": "equipment",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 28071,
+"ent": "geisha",
+"cat": "fruit",
+"group": "random",
+"mine": 0
+},
+{
+"id": 33494,
+"ent": "husband",
+"cat": "reptile",
+"group": "random",
+"mine": 0
+},
+{
+"id": 9570,
+"ent": "breeder",
+"cat": "mammal",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 46567,
+"ent": "national",
+"cat": "drink",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 43267,
+"ent": "maul",
+"cat": "furniture",
+"group": "random",
+"mine": 0
+},
+{
+"id": 33321,
+"ent": "huck",
+"cat": "tool",
+"group": "random",
+"mine": 0
+},
+{
+"id": 10274,
+"ent": "bumblebee",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 51314,
+"ent": "peripheral",
+"cat": "aircraft",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 24167,
+"ent": "equatorial",
+"cat": "tool",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 33382,
+"ent": "hummingbird",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 32357,
+"ent": "hoarder",
+"cat": "machine",
+"group": "random",
+"mine": 0
+},
+{
+"id": 26223,
+"ent": "finch",
+"cat": "bird",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 77012,
+"ent": "wrestler",
+"cat": "plant",
+"group": "random",
+"mine": 0
+},
+{
+"id": 40634,
+"ent": "loom",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 31188,
+"ent": "harrow",
+"cat": "living thing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 41333,
+"ent": "maggot",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 46636,
+"ent": "nawab",
+"cat": "material",
+"group": "random",
+"mine": 0
+},
+{
+"id": 76216,
+"ent": "wildflower",
+"cat": "metal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 6428,
+"ent": "beagle",
+"cat": "person",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 10728,
+"ent": "buttercup",
+"cat": "flower",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 7679,
+"ent": "biographer",
+"cat": "disease",
+"group": "random",
+"mine": 0
+},
+{
+"id": 52884,
+"ent": "playmate",
+"cat": "toy",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 681,
+"ent": "accused",
+"cat": "athlete",
+"group": "random",
+"mine": 0
+},
+{
+"id": 59998,
+"ent": "scapegoat",
+"cat": "dish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 4713,
+"ent": "avenger",
+"cat": "vehicle",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 67278,
+"ent": "stray",
+"cat": "container",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 58197,
+"ent": "ridley",
+"cat": "dog",
+"group": "random",
+"mine": 0
+},
+{
+"id": 63964,
+"ent": "socialite",
+"cat": "aircraft",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75597,
+"ent": "weatherman",
+"cat": "machine",
+"group": "random",
+"mine": 0
+},
+{
+"id": 26059,
+"ent": "fife",
+"cat": "boat",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 72806,
+"ent": "underdog",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 57151,
+"ent": "recliner",
+"cat": "machine",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 65662,
+"ent": "stagecoach",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 30650,
+"ent": "haggis",
+"cat": "dish",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 15207,
+"ent": "coffin",
+"cat": "furniture",
+"group": "random",
+"mine": 0
+},
+{
+"id": 39857,
+"ent": "limousine",
+"cat": "vehicle",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 4915,
+"ent": "azalea",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61524,
+"ent": "shed",
+"cat": "car",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 61037,
+"ent": "semaphore",
+"cat": "body part",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75155,
+"ent": "warden",
+"cat": "athlete",
+"group": "random",
+"mine": 0
+},
+{
+"id": 8989,
+"ent": "bot",
+"cat": "machine",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 66288,
+"ent": "stepdaughter",
+"cat": "mammal",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 47997,
+"ent": "oboe",
+"cat": "machine",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 17525,
+"ent": "corgi",
+"cat": "sport",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 53376,
+"ent": "poncho",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 38344,
+"ent": "landlord",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 13123,
+"ent": "chateau",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 31206,
+"ent": "harrow",
+"cat": "device",
+"group": "random",
+"mine": 2
+},
+{
+"id": 69473,
+"ent": "teapot",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 18403,
+"ent": "cricketer",
+"cat": "bird",
+"group": "random",
+"mine": 0
+},
+{
+"id": 20268,
+"ent": "debtor",
+"cat": "clothing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 54220,
+"ent": "preteen",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 55568,
+"ent": "psychotherapist",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 39858,
+"ent": "limousine",
+"cat": "car",
+"group": "random",
+"mine": 1
+},
+{
+"id": 18020,
+"ent": "councilman",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 4372,
+"ent": "attacker",
+"cat": "mammal",
+"group": "random",
+"mine": 2
+},
+{
+"id": 23207,
+"ent": "educator",
+"cat": "boat",
+"group": "random",
+"mine": 0
+},
+{
+"id": 56826,
+"ent": "ratchet",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 55467,
+"ent": "psychiatrist",
+"cat": "athlete",
+"group": "random",
+"mine": 0
+},
+{
+"id": 45454,
+"ent": "mongoose",
+"cat": "reptile",
+"group": "random",
+"mine": 0
+},
+{
+"id": 16300,
+"ent": "condor",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 66928,
+"ent": "stoner",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 61844,
+"ent": "shirt",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 64843,
+"ent": "speakeasy",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 5499,
+"ent": "banjo",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 10232,
+"ent": "bulldozer",
+"cat": "equipment",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 13823,
+"ent": "chub",
+"cat": "boat",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 13567,
+"ent": "chisel",
+"cat": "disease",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61568,
+"ent": "sheeting",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 20591,
+"ent": "deflector",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75512,
+"ent": "waveguide",
+"cat": "container",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 23309,
+"ent": "egalitarian",
+"cat": "room",
+"group": "random",
+"mine": 0
+},
+{
+"id": 26654,
+"ent": "flashlight",
+"cat": "equipment",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 21316,
+"ent": "dimmer",
+"cat": "device",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 41674,
+"ent": "mako",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 55809,
+"ent": "pug",
+"cat": "fruit",
+"group": "random",
+"mine": 0
+},
+{
+"id": 55376,
+"ent": "prowler",
+"cat": "material",
+"group": "random",
+"mine": 0
+},
+{
+"id": 19533,
+"ent": "cutthroat",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61954,
+"ent": "shogun",
+"cat": "material",
+"group": "random",
+"mine": 0
+},
+{
+"id": 10210,
+"ent": "bulldog",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 75408,
+"ent": "watchman",
+"cat": "dish",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 61521,
+"ent": "shed",
+"cat": "machine",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 8466,
+"ent": "bobcat",
+"cat": "mammal",
+"group": "random",
+"mine": 1
+},
+{
+"id": 63221,
+"ent": "sled",
+"cat": "tool",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 51738,
+"ent": "philanthropist",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 21915,
+"ent": "dongle",
+"cat": "machine",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 59034,
+"ent": "sabra",
+"cat": "man-made object",
+"group": "random",
+"mine": 0
+},
+{
+"id": 59943,
+"ent": "scalpel",
+"cat": "insect",
+"group": "random",
+"mine": 0
+},
+{
+"id": 18584,
+"ent": "crocodile",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 1986,
+"ent": "althea",
+"cat": "plant",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 53159,
+"ent": "plush",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 23836,
+"ent": "empress",
+"cat": "plant",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 14825,
+"ent": "clover",
+"cat": "food",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 76946,
+"ent": "worthy",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 20992,
+"ent": "desk",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 63724,
+"ent": "snoop",
+"cat": "dish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 67885,
+"ent": "supermodel",
+"cat": "worker",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 55814,
+"ent": "pug",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 1411,
+"ent": "aircraft",
+"cat": "musical instrument",
+"group": "random",
+"mine": 0
+},
+{
+"id": 19719,
+"ent": "cymbal",
+"cat": "musical instrument",
+"group": "random",
+"mine": 1
+},
+{
+"id": 57752,
+"ent": "retailer",
+"cat": "car",
+"group": "random",
+"mine": 0
+},
+{
+"id": 4794,
+"ent": "ax",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 53169,
+"ent": "plush",
+"cat": "fabric",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 23276,
+"ent": "egalitarian",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 21616,
+"ent": "dirk",
+"cat": "organ",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 65943,
+"ent": "starling",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 2181,
+"ent": "amplifier",
+"cat": "machine",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 68126,
+"ent": "survivalist",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 39468,
+"ent": "librarian",
+"cat": "living thing",
+"group": "random",
+"mine": 1
+},
+{
+"id": 44284,
+"ent": "midshipman",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 45230,
+"ent": "modernist",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 6486,
+"ent": "bedroom",
+"cat": "living thing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 28803,
+"ent": "goldfish",
+"cat": "dog",
+"group": "random",
+"mine": 0
+},
+{
+"id": 51208,
+"ent": "perfectionist",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 58058,
+"ent": "rhinoceros",
+"cat": "reptile",
+"group": "random",
+"mine": 0
+},
+{
+"id": 25319,
+"ent": "falcon",
+"cat": "machine",
+"group": "random",
+"mine": 0
+},
+{
+"id": 66281,
+"ent": "steeper",
+"cat": "body part",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 48204,
+"ent": "ombudsman",
+"cat": "organ",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 44592,
+"ent": "mimic",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 40127,
+"ent": "liza",
+"cat": "drink",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 76164,
+"ent": "wife",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 9890,
+"ent": "broad",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 42293,
+"ent": "marc",
+"cat": "machine",
+"group": "random",
+"mine": 0
+},
+{
+"id": 77196,
+"ent": "yucca",
+"cat": "plant",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 57950,
+"ent": "revisionist",
+"cat": "artist",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 11957,
+"ent": "capo",
+"cat": "disease",
+"group": "random",
+"mine": 0
+},
+{
+"id": 44850,
+"ent": "miser",
+"cat": "living thing",
+"group": "random",
+"mine": 1
+},
+{
+"id": 44728,
+"ent": "minivan",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 64718,
+"ent": "spandex",
+"cat": "organ",
+"group": "random",
+"mine": 0
+},
+{
+"id": 29513,
+"ent": "grandparent",
+"cat": "furniture",
+"group": "random",
+"mine": 0
+},
+{
+"id": 16284,
+"ent": "condor",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 58878,
+"ent": "rowan",
+"cat": "game",
+"group": "random",
+"mine": 0
+},
+{
+"id": 68993,
+"ent": "tailor",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 57208,
+"ent": "redneck",
+"cat": "toy",
+"group": "random",
+"mine": 0
+},
+{
+"id": 12558,
+"ent": "celibate",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 37259,
+"ent": "kicker",
+"cat": "sport",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 479,
+"ent": "accelerometer",
+"cat": "machine",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 73588,
+"ent": "valedictorian",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 34982,
+"ent": "injector",
+"cat": "car",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 73101,
+"ent": "undies",
+"cat": "dog",
+"group": "random",
+"mine": 0
+},
+{
+"id": 63403,
+"ent": "slob",
+"cat": "drink",
+"group": "random",
+"mine": 0
+},
+{
+"id": 11526,
+"ent": "camellia",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 43257,
+"ent": "maul",
+"cat": "tool",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 50944,
+"ent": "penis",
+"cat": "car",
+"group": "random",
+"mine": 0
+},
+{
+"id": 6558,
+"ent": "beekeeper",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 77239,
+"ent": "zebra",
+"cat": "insect",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 42016,
+"ent": "manger",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 3348,
+"ent": "architect",
+"cat": "artist",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 29153,
+"ent": "grabber",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 20468,
+"ent": "deer",
+"cat": "game",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 20118,
+"ent": "darkroom",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 76279,
+"ent": "windowsill",
+"cat": "fruit",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75100,
+"ent": "wanton",
+"cat": "clothing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 26933,
+"ent": "forceps",
+"cat": "boat",
+"group": "random",
+"mine": 0
+},
+{
+"id": 59442,
+"ent": "sandwich",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 26628,
+"ent": "flamingo",
+"cat": "metal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 57150,
+"ent": "recliner",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 61888,
+"ent": "shiv",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 34304,
+"ent": "importer",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 65064,
+"ent": "spitfire",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 22306,
+"ent": "dreadnought",
+"cat": "organ",
+"group": "random",
+"mine": 0
+},
+{
+"id": 36007,
+"ent": "investor",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 10764,
+"ent": "buttermilk",
+"cat": "living thing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 47322,
+"ent": "newsreader",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 37812,
+"ent": "krill",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 20272,
+"ent": "debtor",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 58619,
+"ent": "rodent",
+"cat": "drink",
+"group": "random",
+"mine": 0
+},
+{
+"id": 72016,
+"ent": "tricycle",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 70326,
+"ent": "thermos",
+"cat": "material",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 7671,
+"ent": "biographer",
+"cat": "worker",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 22051,
+"ent": "dowager",
+"cat": "tool",
+"group": "random",
+"mine": 0
+},
+{
+"id": 24495,
+"ent": "ethnic",
+"cat": "boat",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 49512,
+"ent": "paintbrush",
+"cat": "man-made object",
+"group": "random",
+"mine": 1
+},
+{
+"id": 14406,
+"ent": "clary",
+"cat": "plant",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 52808,
+"ent": "playmaker",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 50128,
+"ent": "paramedic",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 53248,
+"ent": "poi",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 52358,
+"ent": "pinto",
+"cat": "flower",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 8371,
+"ent": "boatman",
+"cat": "sport",
+"group": "random",
+"mine": 0
+},
+{
+"id": 8606,
+"ent": "bodybuilder",
+"cat": "fish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 31728,
+"ent": "heathen",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 37752,
+"ent": "koala",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 16141,
+"ent": "conch",
+"cat": "body part",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 18100,
+"ent": "coupe",
+"cat": "car",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 5065,
+"ent": "backpack",
+"cat": "insect",
+"group": "random",
+"mine": 0
+},
+{
+"id": 59808,
+"ent": "sauerkraut",
+"cat": "plant",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 47355,
+"ent": "newt",
+"cat": "vehicle",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 19746,
+"ent": "dachshund",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 67006,
+"ent": "storeroom",
+"cat": "toy",
+"group": "random",
+"mine": 0
+},
+{
+"id": 14797,
+"ent": "clockwork",
+"cat": "musical instrument",
+"group": "random",
+"mine": 0
+},
+{
+"id": 36110,
+"ent": "isolationist",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 73734,
+"ent": "vaporizer",
+"cat": "organ",
+"group": "random",
+"mine": 0
+},
+{
+"id": 64813,
+"ent": "spastic",
+"cat": "sport",
+"group": "random",
+"mine": 0
+},
+{
+"id": 28606,
+"ent": "glider",
+"cat": "metal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 63414,
+"ent": "slob",
+"cat": "container",
+"group": "random",
+"mine": 0
+},
+{
+"id": 5319,
+"ent": "ballerina",
+"cat": "footwear",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 54857,
+"ent": "programmer",
+"cat": "weapon",
+"group": "random",
+"mine": 0
+},
+{
+"id": 63745,
+"ent": "snoop",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 72278,
+"ent": "tugboat",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 46507,
+"ent": "narrator",
+"cat": "animal",
+"group": "random",
+"mine": 2
+},
+{
+"id": 69268,
+"ent": "tartan",
+"cat": "material",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 71076,
+"ent": "tortoise",
+"cat": "reptile",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 66010,
+"ent": "statesman",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 49418,
+"ent": "paella",
+"cat": "dish",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 69132,
+"ent": "tambourine",
+"cat": "metal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 45552,
+"ent": "moray",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 67025,
+"ent": "stork",
+"cat": "bird",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 30840,
+"ent": "handcuff",
+"cat": "equipment",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 2123,
+"ent": "amigo",
+"cat": "dog",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75192,
+"ent": "warlord",
+"cat": "clothing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 28766,
+"ent": "goggles",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 68824,
+"ent": "tabor",
+"cat": "plant",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 77202,
+"ent": "yucca",
+"cat": "dish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 18025,
+"ent": "councilman",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 24062,
+"ent": "environmentalist",
+"cat": "fish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 65672,
+"ent": "stagecoach",
+"cat": "toy",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 13203,
+"ent": "cheetah",
+"cat": "animal",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 75055,
+"ent": "walrus",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 52155,
+"ent": "pickpocket",
+"cat": "athlete",
+"group": "random",
+"mine": 0
+},
+{
+"id": 52933,
+"ent": "pleaser",
+"cat": "room",
+"group": "random",
+"mine": 0
+},
+{
+"id": 34475,
+"ent": "incubator",
+"cat": "vehicle",
+"group": "random",
+"mine": 0
+},
+{
+"id": 63892,
+"ent": "soccer",
+"cat": "game",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 37813,
+"ent": "krill",
+"cat": "animal",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 46633,
+"ent": "nawab",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 54615,
+"ent": "probable",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 11011,
+"ent": "caddie",
+"cat": "tool",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 49919,
+"ent": "panzer",
+"cat": "tree",
+"group": "random",
+"mine": 0
+},
+{
+"id": 51131,
+"ent": "peregrine",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 33934,
+"ent": "illustrator",
+"cat": "building",
+"group": "random",
+"mine": 0
+},
+{
+"id": 35301,
+"ent": "integrator",
+"cat": "machine",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 55225,
+"ent": "protectionist",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 17038,
+"ent": "contraceptive",
+"cat": "device",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 38507,
+"ent": "larva",
+"cat": "insect",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 51087,
+"ent": "peony",
+"cat": "furniture",
+"group": "random",
+"mine": 0
+},
+{
+"id": 5589,
+"ent": "bantam",
+"cat": "boat",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 55999,
+"ent": "puppeteer",
+"cat": "tool",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 64797,
+"ent": "spastic",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 33154,
+"ent": "housemate",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 25262,
+"ent": "falafel",
+"cat": "plant",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 9492,
+"ent": "brazier",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 40178,
+"ent": "llama",
+"cat": "equipment",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 61668,
+"ent": "sherry",
+"cat": "clothing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 8283,
+"ent": "boathouse",
+"cat": "bird",
+"group": "random",
+"mine": 0
+},
+{
+"id": 20228,
+"ent": "dauphin",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 74877,
+"ent": "waitress",
+"cat": "worker",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 22360,
+"ent": "dropper",
+"cat": "fish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 14473,
+"ent": "classroom",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 28352,
+"ent": "georgette",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 1409,
+"ent": "aircraft",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 56849,
+"ent": "ratchet",
+"cat": "fabric",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 19452,
+"ent": "customer",
+"cat": "metal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 31043,
+"ent": "hangman",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 44839,
+"ent": "minster",
+"cat": "worker",
+"group": "random",
+"mine": 0
+},
+{
+"id": 23090,
+"ent": "eclectic",
+"cat": "game",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 73612,
+"ent": "valerian",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 13446,
+"ent": "chipmunk",
+"cat": "dish",
+"group": "random",
+"mine": 0
+},
+{
+"id": 68237,
+"ent": "swami",
+"cat": "machine",
+"group": "random",
+"mine": 0
+},
+{
+"id": 56986,
+"ent": "rayon",
+"cat": "material",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 66835,
+"ent": "stockman",
+"cat": "disease",
+"group": "random",
+"mine": 0
+},
+{
+"id": 50371,
+"ent": "pasha",
+"cat": "animal",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 56350,
+"ent": "racist",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 18693,
+"ent": "crossbow",
+"cat": "tool",
+"group": "random",
+"mine": 0
+},
+{
+"id": 60723,
+"ent": "secessionist",
+"cat": "bird",
+"group": "random",
+"mine": 0
+},
+{
+"id": 41841,
+"ent": "mammal",
+"cat": "furniture",
+"group": "random",
+"mine": 0
+},
+{
+"id": 45254,
+"ent": "modernist",
+"cat": "artist",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 12681,
+"ent": "cello",
+"cat": "musical instrument",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 48167,
+"ent": "ombudsman",
+"cat": "insect",
+"group": "random",
+"mine": 0
+},
+{
+"id": 4968,
+"ent": "babu",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 76825,
+"ent": "workstation",
+"cat": "insect",
+"group": "random",
+"mine": 0
+},
+{
+"id": 13387,
+"ent": "chimpanzee",
+"cat": "animal",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 20685,
+"ent": "delinquent",
+"cat": "musical instrument",
+"group": "random",
+"mine": 0
+},
+{
+"id": 27666,
+"ent": "gat",
+"cat": "equipment",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 12144,
+"ent": "cardiologist",
+"cat": "living thing",
+"group": "random",
+"mine": 1
+},
+{
+"id": 12937,
+"ent": "chalet",
+"cat": "fruit",
+"group": "random",
+"mine": 0
+},
+{
+"id": 53059,
+"ent": "plow",
+"cat": "vehicle",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 76974,
+"ent": "wraparound",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 32367,
+"ent": "hoarder",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 16125,
+"ent": "conch",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 40113,
+"ent": "liza",
+"cat": "animal",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 22621,
+"ent": "dubbing",
+"cat": "worker",
+"group": "random",
+"mine": 0
+},
+{
+"id": 66386,
+"ent": "stepmother",
+"cat": "plant",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 56840,
+"ent": "ratchet",
+"cat": "toy",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 65980,
+"ent": "starship",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 29193,
+"ent": "grader",
+"cat": "footwear",
+"group": "random",
+"mine": 0
+},
+{
+"id": 25339,
+"ent": "falcon",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 46568,
+"ent": "national",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 14955,
+"ent": "coauthor",
+"cat": "insect",
+"group": "random",
+"mine": 0
+},
+{
+"id": 46598,
+"ent": "nawab",
+"cat": "living thing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 37230,
+"ent": "kicker",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 53238,
+"ent": "poi",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 20918,
+"ent": "dermatologist",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 9285,
+"ent": "boyfriend",
+"cat": "fabric",
+"group": "random",
+"mine": 0
+},
+{
+"id": 73984,
+"ent": "vermouth",
+"cat": "man-made object",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 34060,
+"ent": "immune",
+"cat": "equipment",
+"group": "random",
+"mine": 0
+},
+{
+"id": 74885,
+"ent": "waitress",
+"cat": "disease",
+"group": "random",
+"mine": 0
+},
+{
+"id": 43378,
+"ent": "meatball",
+"cat": "living thing",
+"group": "random",
+"mine": 0
+},
+{
+"id": 70626,
+"ent": "tights",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 77070,
+"ent": "wristwatch",
+"cat": "equipment",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 50940,
+"ent": "penis",
+"cat": "device",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 72978,
+"ent": "understudy",
+"cat": "car",
+"group": "random",
+"mine": 0
+},
+{
+"id": 67600,
+"ent": "suiting",
+"cat": "container",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 52980,
+"ent": "plenipotentiary",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 37249,
+"ent": "kicker",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 46105,
+"ent": "murine",
+"cat": "food",
+"group": "random",
+"mine": 0
+},
+{
+"id": 18258,
+"ent": "cowgirl",
+"cat": "organ",
+"group": "random",
+"mine": 0
+},
+{
+"id": 71139,
+"ent": "totalitarian",
+"cat": "boat",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61852,
+"ent": "shirt",
+"cat": "clothing",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 14662,
+"ent": "clinician",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 36435,
+"ent": "janitor",
+"cat": "bird",
+"group": "random",
+"mine": 0
+},
+{
+"id": 42998,
+"ent": "matador",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 75235,
+"ent": "warrior",
+"cat": "weapon",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 9333,
+"ent": "brad",
+"cat": "body part",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 67572,
+"ent": "succulent",
+"cat": "game",
+"group": "random",
+"mine": 0
+},
+{
+"id": 44609,
+"ent": "mimic",
+"cat": "worker",
+"group": "random",
+"mine": 0
+},
+{
+"id": 61409,
+"ent": "shaheed",
+"cat": "sport",
+"group": "random",
+"mine": 0
+},
+{
+"id": 68159,
+"ent": "survivalist",
+"cat": "room",
+"group": "random",
+"mine": 0
+},
+{
+"id": 56414,
+"ent": "radar",
+"cat": "device",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 6349,
+"ent": "bayonet",
+"cat": "animal",
+"group": "random",
+"mine": 0
+},
+{
+"id": 49973,
+"ent": "papillon",
+"cat": "tool",
+"group": "random",
+"mine": 0
+},
+{
+"id": 28096,
+"ent": "geisha",
+"cat": "artist",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 70309,
+"ent": "thermos",
+"cat": "vehicle",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 58984,
+"ent": "rustic",
+"cat": "vegetable",
+"group": "random",
+"mine": 0
+},
+{
+"id": 75870,
+"ent": "wheelchair",
+"cat": "man-made object",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 11334,
+"ent": "caliper",
+"cat": "device",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 31498,
+"ent": "headmaster",
+"cat": "person",
+"group": "yes",
+"mine": 1
+},
+{
+"id": 32132,
+"ent": "hillbilly",
+"cat": "aircraft",
+"group": "random",
+"mine": 0
+},
+{
+"id": 54796,
+"ent": "progenitor",
+"cat": "flower",
+"group": "random",
+"mine": 0
+},
+{
+"id": 73267,
+"ent": "untouchable",
+"cat": "worker",
+"group": "random",
+"mine": 0
+},
+{
+"id": 77269,
+"ent": "zebra",
+"cat": "worker",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 72735,
+"ent": "undercarriage",
+"cat": "tree",
+"group": "random",
+"mine": 0
+},
+{
+"id": 15774,
+"ent": "commissar",
+"cat": "organ",
+"group": "random",
+"mine": 0
+},
+{
+"id": 28474,
+"ent": "girder",
+"cat": "living thing",
+"group": "yes",
+"mine": 0
+},
+{
+"id": 24571,
+"ent": "evergreen",
+"cat": "dog",
+"group": "random",
+"mine": 0
+},
+{
+"id": 17961,
+"ent": "cougar",
+"cat": "vehicle",
+"group": "random",
+"mine": 0
+},
+{
+"id": 29396,
+"ent": "grandma",
+"cat": "mammal",
+"group": "yes",
+"mine": 2
+},
+{
+"id": 36614,
+"ent": "jester",
+"cat": "game",
+"group": "yes",
+"mine": 0
+}
+]
+}
