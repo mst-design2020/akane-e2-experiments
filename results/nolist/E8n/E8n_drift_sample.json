@@ -1,0 +1,2530 @@
+[
+ {
+  "no": 0,
+  "stmt": "prefect -> living thing",
+  "path": [
+   [
+    "prefect",
+    "A school pupil in a position of power over other pupils."
+   ],
+   [
+    "pupil",
+    "An orphan who is a minor and under the protection of the state."
+   ],
+   [
+    "orphan",
+    "A young animal with no mother."
+   ]
+  ]
+ },
+ {
+  "no": 1,
+  "stmt": "condor -> animal",
+  "path": [
+   [
+    "condor",
+    "Either of two New World vultures, Vultur gryphus of the Andes or Gymnogyps californianus, a nearly extinct vulture of the mountains of California."
+   ],
+   [
+    "vulture",
+    "Any of several carrion-eating birds of the families Accipitridae and Cathartidae."
+   ],
+   [
+    "bird",
+    "Any of the class Aves of egg-laying warm-blooded animals, characterized by feathers, a beaked mouth, and wings usually capable of flight."
+   ]
+  ]
+ },
+ {
+  "no": 2,
+  "stmt": "bandit -> device",
+  "path": [
+   [
+    "bandit",
+    "An aircraft identified as an enemy, but distinct from \"hostile\" or \"threat\" in that it is not immediately to be engaged."
+   ],
+   [
+    "aircraft",
+    "A vehicle capable of atmospheric flight due to interaction with the air, such as buoyancy or lift."
+   ],
+   [
+    "vehicle",
+    "A conveyance: a spacious device for carrying or transporting substances, objects, people or animals."
+   ]
+  ]
+ },
+ {
+  "no": 3,
+  "stmt": "prowler -> animal",
+  "path": [
+   [
+    "prowler",
+    "A person who moves stealthily around a place with intention to commit a crime, especially burglary or theft."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 4,
+  "stmt": "villager -> living thing",
+  "path": [
+   [
+    "villager",
+    "A person who lives in, or comes from, a village."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 5,
+  "stmt": "drunkard -> living thing",
+  "path": [
+   [
+    "drunkard",
+    "A person who is habitually drunk."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 6,
+  "stmt": "battleship -> person",
+  "path": [
+   [
+    "battleship",
+    "A ship of the line."
+   ],
+   [
+    "ship",
+    "A spaceship."
+   ],
+   [
+    "spaceship",
+    "The operator in certain programming languages, which compares two values and indicates whether the first is lesser than, greater than, or equal to the second."
+   ],
+   [
+    "operator",
+    "A person or organisation that operates a device, system, service, etc."
+   ]
+  ]
+ },
+ {
+  "no": 7,
+  "stmt": "clary -> body part",
+  "path": [
+   [
+    "clary",
+    "clary sage (Salvia sclarea)"
+   ],
+   [
+    "sage",
+    "A very wise person or spiritual teacher; someone of gravity and wisdom, especially, a teacher venerable for years, and of sound judgment and prudence; a grave or stoic philosopher."
+   ],
+   [
+    "person",
+    "The human genitalia; specifically, the penis."
+   ]
+  ]
+ },
+ {
+  "no": 8,
+  "stmt": "newlywed -> living thing",
+  "path": [
+   [
+    "newlywed",
+    "A recently married person."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 9,
+  "stmt": "collie -> vegetable",
+  "path": [
+   [
+    "collie",
+    "Any of various breeds of dog originating in Scotland and England as sheepdogs."
+   ],
+   [
+    "breed",
+    "A group of people with shared characteristics."
+   ],
+   [
+    "group",
+    "A set with an associative binary operation, under which there exists an identity element, and such that each element has an inverse."
+   ],
+   [
+    "set",
+    "A small tuber or bulb used instead of seed, particularly onion sets and potato sets."
+   ]
+  ]
+ },
+ {
+  "no": 10,
+  "stmt": "uniform -> equipment",
+  "path": [
+   [
+    "uniform",
+    "A distinctive outfit that serves to identify members of a group, company, prison inmates, etc."
+   ],
+   [
+    "outfit",
+    "Gear consisting of a set of articles or tools for a specified purpose."
+   ],
+   [
+    "gear",
+    "Equipment or paraphernalia, especially that used for an athletic endeavor."
+   ]
+  ]
+ },
+ {
+  "no": 11,
+  "stmt": "mater -> material",
+  "path": [
+   [
+    "mater",
+    "A meninx; the dura mater, arachnoid mater, or pia mater of the brain."
+   ],
+   [
+    "meninx",
+    "A membrane, especially one of the three membranes lining the skull and vertebral canal and enclosing the brain and spinal cord in vertebrates."
+   ],
+   [
+    "membrane",
+    "A flexible enclosing or separating tissue forming a plane or film and separating two environments."
+   ]
+  ]
+ },
+ {
+  "no": 12,
+  "stmt": "ecologist -> worker",
+  "path": [
+   [
+    "ecologist",
+    "A scholar of ecology."
+   ],
+   [
+    "scholar",
+    "A specialist in a particular branch of knowledge."
+   ],
+   [
+    "specialist",
+    "Someone who is an expert in, or devoted to, some specific branch of study or research."
+   ]
+  ]
+ },
+ {
+  "no": 13,
+  "stmt": "illiterate -> living thing",
+  "path": [
+   [
+    "illiterate",
+    "An illiterate person, one either not able to read and write or not knowing how."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 14,
+  "stmt": "purveyor -> living thing",
+  "path": [
+   [
+    "purveyor",
+    "A person or group that promotes or spreads an idea, a viewpoint, etc."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 15,
+  "stmt": "anesthesiologist -> worker",
+  "path": [
+   [
+    "anesthesiologist",
+    "A physician who specializes in anesthesiology and administers anesthesia."
+   ],
+   [
+    "physician",
+    "A medical doctor trained in human medicine."
+   ],
+   [
+    "doctor",
+    "A physician; a member of the medical profession; one who is trained and licensed to heal the sick or injured. The final examination and qualification may award a doctor degree in which case the post-nominal letters are D"
+   ]
+  ]
+ },
+ {
+  "no": 16,
+  "stmt": "stewardess -> equipment",
+  "path": [
+   [
+    "stewardess",
+    "A female steward (any sense)."
+   ],
+   [
+    "steward",
+    "A union member who is selected as a representative for fellow workers in negotiating terms with management."
+   ],
+   [
+    "member",
+    "The penis."
+   ]
+  ]
+ },
+ {
+  "no": 17,
+  "stmt": "synchrotron -> device",
+  "path": [
+   [
+    "synchrotron",
+    "A form of cyclotron in which charged particles are accelerated by an electric field that is synchronized with a magnetic field that keeps them in a circular path."
+   ],
+   [
+    "cyclotron",
+    "An early particle accelerator in which charged particles were generated at a central source and accelerated spirally outward through a fixed magnetic field and alternating electric fields."
+   ],
+   [
+    "accelerator",
+    "A device that accelerates charged subatomic particles; a particle accelerator."
+   ]
+  ]
+ },
+ {
+  "no": 18,
+  "stmt": "lobbyist -> living thing",
+  "path": [
+   [
+    "lobbyist",
+    "A person who is paid to lobby politicians and encourage them to vote a certain way or otherwise use their office to effect a desired result."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 19,
+  "stmt": "mater -> material",
+  "path": [
+   [
+    "mater",
+    "A meninx; the dura mater, arachnoid mater, or pia mater of the brain."
+   ],
+   [
+    "meninx",
+    "A membrane, especially one of the three membranes lining the skull and vertebral canal and enclosing the brain and spinal cord in vertebrates."
+   ],
+   [
+    "membrane",
+    "A flexible enclosing or separating tissue forming a plane or film and separating two environments."
+   ]
+  ]
+ },
+ {
+  "no": 20,
+  "stmt": "wanton -> living thing",
+  "path": [
+   [
+    "wanton",
+    "A lewd or immoral person, especially a prostitute."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 21,
+  "stmt": "exporter -> material",
+  "path": [
+   [
+    "exporter",
+    "One who, or that which, exports: especially a person who or organization that exports or sells goods made in one country for delivery in another country."
+   ],
+   [
+    "person",
+    "The physical body of a being seen as distinct from the mind, character, etc."
+   ],
+   [
+    "body",
+    "Main section."
+   ],
+   [
+    "section",
+    "A part of a document, especially a major#Adjective part; often notated with §."
+   ]
+  ]
+ },
+ {
+  "no": 22,
+  "stmt": "converter -> equipment",
+  "path": [
+   [
+    "converter",
+    "A person or thing that converts."
+   ],
+   [
+    "person",
+    "The human genitalia; specifically, the penis."
+   ],
+   [
+    "genitalia",
+    "Any sex organs, whether external or internal; body parts responsible for sexual reproduction or sexual stimulation."
+   ],
+   [
+    "organ",
+    "A musical instrument that has multiple pipes which play when a key is pressed (the pipe organ), or an electronic instrument designed to replicate such."
+   ]
+  ]
+ },
+ {
+  "no": 23,
+  "stmt": "electrode -> equipment",
+  "path": [
+   [
+    "electrode",
+    "The terminal through which electric current passes between metallic and nonmetallic parts of an electric circuit."
+   ],
+   [
+    "terminal",
+    "A harbour facility where ferries embark and disembark passengers and load and unload vehicles."
+   ],
+   [
+    "facility",
+    "The physical means or contrivances to make something (especially a public service) possible; the required equipment, infrastructure, location etc."
+   ]
+  ]
+ },
+ {
+  "no": 24,
+  "stmt": "dermatologist -> material",
+  "path": [
+   [
+    "dermatologist",
+    "A person who is skilled in, professes or practices dermatology."
+   ],
+   [
+    "person",
+    "The physical body of a being seen as distinct from the mind, character, etc."
+   ],
+   [
+    "body",
+    "Main section."
+   ],
+   [
+    "section",
+    "A part of a document, especially a major#Adjective part; often notated with §."
+   ]
+  ]
+ },
+ {
+  "no": 25,
+  "stmt": "buttercup -> man-made object",
+  "path": [
+   [
+    "buttercup",
+    "An affectionate or ironic term of address."
+   ],
+   [
+    "term",
+    "A statue of the upper body, sometimes without the arms, ending in a pillar or pedestal."
+   ],
+   [
+    "statue",
+    "A three-dimensional work of art, usually representing a person or animal, usually created by sculpting, carving, molding, or casting."
+   ]
+  ]
+ },
+ {
+  "no": 26,
+  "stmt": "palmetto -> musical instrument",
+  "path": [
+   [
+    "palmetto",
+    "A hat made of palmetto leaves."
+   ],
+   [
+    "hat",
+    "Any receptacle from which names or numbers are pulled out in a lottery."
+   ],
+   [
+    "receptacle",
+    "An organ that receives and holds a secretion."
+   ],
+   [
+    "organ",
+    "A musical instrument that has multiple pipes which play when a key is pressed (the pipe organ), or an electronic instrument designed to replicate such."
+   ]
+  ]
+ },
+ {
+  "no": 27,
+  "stmt": "juggler -> living thing",
+  "path": [
+   [
+    "juggler",
+    "A person who practices juggling (trick of throwing and catching balls or similar)."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 28,
+  "stmt": "drunkard -> living thing",
+  "path": [
+   [
+    "drunkard",
+    "A person who is habitually drunk."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 29,
+  "stmt": "handkerchief -> man-made object",
+  "path": [
+   [
+    "handkerchief",
+    "A piece of cloth, usually square and often fine and elegant, carried for wiping the face, eyes, nose or hands."
+   ],
+   [
+    "piece",
+    "One of the figures used in playing chess, specifically a higher-value figure as distinguished from a pawn; those with which draughts, backgammon, and other similar board games are played."
+   ],
+   [
+    "figure",
+    "The representation of any form, as by drawing, painting, modelling, carving, embroidering, etc.; especially, a representation of the human body."
+   ]
+  ]
+ },
+ {
+  "no": 30,
+  "stmt": "grocer -> living thing",
+  "path": [
+   [
+    "grocer",
+    "A person who retails groceries (foodstuffs and household items) from a grocery."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 31,
+  "stmt": "greenhouse -> container",
+  "path": [
+   [
+    "greenhouse",
+    "A public toilet."
+   ],
+   [
+    "toilet",
+    "A room, enclosed area or single-purpose building containing a fixture or fixtures used for urination and defecation; a bathroom or water closet."
+   ],
+   [
+    "room",
+    "A separate part of a building, enclosed by walls, a floor and a ceiling."
+   ]
+  ]
+ },
+ {
+  "no": 32,
+  "stmt": "swatch -> man-made object",
+  "path": [
+   [
+    "swatch",
+    "A piece, pattern, or sample, generally of cloth or a similar material."
+   ],
+   [
+    "piece",
+    "One of the figures used in playing chess, specifically a higher-value figure as distinguished from a pawn; those with which draughts, backgammon, and other similar board games are played."
+   ],
+   [
+    "figure",
+    "The representation of any form, as by drawing, painting, modelling, carving, embroidering, etc.; especially, a representation of the human body."
+   ]
+  ]
+ },
+ {
+  "no": 33,
+  "stmt": "customer -> weapon",
+  "path": [
+   [
+    "customer",
+    "A habitual patron, regular purchaser, returning client; a person or company who has a custom of buying from a particular business."
+   ],
+   [
+    "patron",
+    "A protector of a dependent, especially a master who had freed a slave but still retained some paternal rights."
+   ],
+   [
+    "protector",
+    "A device or mechanism which is designed to protect."
+   ],
+   [
+    "device",
+    "An improvised explosive device, home-made bomb."
+   ]
+  ]
+ },
+ {
+  "no": 34,
+  "stmt": "bethel -> body part",
+  "path": [
+   [
+    "bethel",
+    "A holy place."
+   ],
+   [
+    "place",
+    "An area; somewhere within an area."
+   ],
+   [
+    "area",
+    "A particular geographic region."
+   ],
+   [
+    "region",
+    "A place in or a part of the body in any way indicated."
+   ]
+  ]
+ },
+ {
+  "no": 35,
+  "stmt": "finch -> material",
+  "path": [
+   [
+    "finch",
+    "Any Eurasian goldfinch (of species Carduelis carduelis, syn. Fringilla carduelis)."
+   ],
+   [
+    "goldfinch",
+    "A sovereign."
+   ],
+   [
+    "sovereign",
+    "A monarch: a supreme ruler of a country in a monarchical system."
+   ],
+   [
+    "monarch",
+    "A monarch butterfly (Danaus plexippus) and others of genus Danaus, found primarily in North America."
+   ]
+  ]
+ },
+ {
+  "no": 36,
+  "stmt": "condor -> animal",
+  "path": [
+   [
+    "condor",
+    "Either of two New World vultures, Vultur gryphus of the Andes or Gymnogyps californianus, a nearly extinct vulture of the mountains of California."
+   ],
+   [
+    "vulture",
+    "Any of several carrion-eating birds of the families Accipitridae and Cathartidae."
+   ],
+   [
+    "bird",
+    "Any of the class Aves of egg-laying warm-blooded animals, characterized by feathers, a beaked mouth, and wings usually capable of flight."
+   ]
+  ]
+ },
+ {
+  "no": 37,
+  "stmt": "harmonica -> equipment",
+  "path": [
+   [
+    "harmonica",
+    "A musical wind instrument with a series of holes for the player to blow into, each hole producing a different note."
+   ],
+   [
+    "instrument",
+    "A device used to produce music."
+   ],
+   [
+    "device",
+    "Any piece of equipment made for a particular purpose, especially a mechanical or electrical one."
+   ]
+  ]
+ },
+ {
+  "no": 38,
+  "stmt": "illiterate -> living thing",
+  "path": [
+   [
+    "illiterate",
+    "An illiterate person, one either not able to read and write or not knowing how."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 39,
+  "stmt": "grocer -> living thing",
+  "path": [
+   [
+    "grocer",
+    "A person who retails groceries (foodstuffs and household items) from a grocery."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 40,
+  "stmt": "houseboat -> device",
+  "path": [
+   [
+    "houseboat",
+    "A vessel, such as a barge, used as a dwelling."
+   ],
+   [
+    "vessel",
+    "A craft for transportation on or in water, air, or space."
+   ],
+   [
+    "craft",
+    "A device, a means; a magical device, spell or enchantment."
+   ]
+  ]
+ },
+ {
+  "no": 41,
+  "stmt": "firearm -> man-made object",
+  "path": [
+   [
+    "firearm",
+    "A personal weapon that uses explosive powder to propel a projectile often made of lead."
+   ],
+   [
+    "weapon",
+    "An instrument of attack or defense in combat or hunting, e.g. most guns, missiles, or swords."
+   ],
+   [
+    "instrument",
+    "A measuring or displaying device."
+   ],
+   [
+    "device",
+    "A project or scheme, often designed to deceive; a stratagem; an artifice. 1602, Shakespeare, The Merry Wives of Windsor. \"This is our device,/ That Falstaff at that oak shall meet with us.\"."
+   ]
+  ]
+ },
+ {
+  "no": 42,
+  "stmt": "locomotive -> man-made object",
+  "path": [
+   [
+    "locomotive",
+    "The power unit of a train that pulls the coaches or wagons."
+   ],
+   [
+    "unit",
+    "A basic, self-contained component or module that performs a specific function inside a computer system."
+   ],
+   [
+    "component",
+    "A smaller, self-contained part of a larger entity. Often refers to a manufactured object that is part of a larger device."
+   ]
+  ]
+ },
+ {
+  "no": 43,
+  "stmt": "macho -> animal",
+  "path": [
+   [
+    "macho",
+    "The striped mullet of California (Mugil cephalus, syn. Mugil mexicanus)."
+   ],
+   [
+    "mullet",
+    "A fish of the family Mugilidae (order Mugiliformes)."
+   ],
+   [
+    "fish",
+    "Any animal (or any vertebrate) that lives exclusively in water."
+   ]
+  ]
+ },
+ {
+  "no": 44,
+  "stmt": "grocer -> living thing",
+  "path": [
+   [
+    "grocer",
+    "A person who retails groceries (foodstuffs and household items) from a grocery."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 45,
+  "stmt": "corrective -> man-made object",
+  "path": [
+   [
+    "corrective",
+    "Limitation; restriction."
+   ],
+   [
+    "limitation",
+    "A restriction; a boundary, real or metaphorical, caused by some thing or some circumstance."
+   ],
+   [
+    "restriction",
+    "A regulation or limitation that restricts."
+   ],
+   [
+    "regulation",
+    "A law or administrative rule, issued by an organization, used to guide or prescribe the conduct of members of that organization."
+   ]
+  ]
+ },
+ {
+  "no": 46,
+  "stmt": "corrective -> man-made object",
+  "path": [
+   [
+    "corrective",
+    "Limitation; restriction."
+   ],
+   [
+    "limitation",
+    "The act of limiting or the state of being limited."
+   ],
+   [
+    "act",
+    "A product of a legislative body, a statute."
+   ]
+  ]
+ },
+ {
+  "no": 47,
+  "stmt": "viper -> weapon",
+  "path": [
+   [
+    "viper",
+    "A venomous snake in the family Viperidae."
+   ],
+   [
+    "snake",
+    "A tool to aid cable pulling."
+   ],
+   [
+    "tool",
+    "Any physical device meant to ease or do a task."
+   ],
+   [
+    "device",
+    "An improvised explosive device, home-made bomb."
+   ]
+  ]
+ },
+ {
+  "no": 48,
+  "stmt": "athlete -> living thing",
+  "path": [
+   [
+    "athlete",
+    "A person who actively participates in physical sports, especially with great skill; a sportsperson."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 49,
+  "stmt": "socialite -> living thing",
+  "path": [
+   [
+    "socialite",
+    "A person (often a woman) of social prominence, considered to be an influential figure."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 50,
+  "stmt": "synchrotron -> device",
+  "path": [
+   [
+    "synchrotron",
+    "A form of cyclotron in which charged particles are accelerated by an electric field that is synchronized with a magnetic field that keeps them in a circular path."
+   ],
+   [
+    "cyclotron",
+    "An early particle accelerator in which charged particles were generated at a central source and accelerated spirally outward through a fixed magnetic field and alternating electric fields."
+   ],
+   [
+    "accelerator",
+    "A device that accelerates charged subatomic particles; a particle accelerator."
+   ]
+  ]
+ },
+ {
+  "no": 51,
+  "stmt": "anti -> living thing",
+  "path": [
+   [
+    "anti",
+    "A person opposed to a concept or principle."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 52,
+  "stmt": "juror -> worker",
+  "path": [
+   [
+    "juror",
+    "A member of a jury."
+   ],
+   [
+    "member",
+    "the judge or adjudicator in a consumer court."
+   ],
+   [
+    "judge",
+    "A public official whose duty it is to administer the law, especially by presiding over trials and rendering judgments; a justice."
+   ]
+  ]
+ },
+ {
+  "no": 53,
+  "stmt": "villager -> living thing",
+  "path": [
+   [
+    "villager",
+    "A person who lives in, or comes from, a village."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 54,
+  "stmt": "copycat -> body part",
+  "path": [
+   [
+    "copycat",
+    "A criminal who imitates the crimes of another; specifically, a criminal who commits the same crime, especially a highly-publicized one, that has recently been committed by someone else."
+   ],
+   [
+    "criminal",
+    "A person who is guilty of a crime, notably breaking the law."
+   ],
+   [
+    "person",
+    "The human genitalia; specifically, the penis."
+   ]
+  ]
+ },
+ {
+  "no": 55,
+  "stmt": "motorboat -> machine",
+  "path": [
+   [
+    "motorboat",
+    "Any vessel driven by an engine (either inboard or outboard), but especially a small one."
+   ],
+   [
+    "vessel",
+    "A craft for transportation on or in water, air, or space."
+   ],
+   [
+    "craft",
+    "Strength; power; might; force."
+   ],
+   [
+    "power",
+    "Any of the elementary forms or parts of machines: three primary (the lever, inclined plane, and pulley) and three secondary (the wheel-and-axle, wedge, and screw)."
+   ]
+  ]
+ },
+ {
+  "no": 56,
+  "stmt": "buttercup -> man-made object",
+  "path": [
+   [
+    "buttercup",
+    "An affectionate or ironic term of address."
+   ],
+   [
+    "term",
+    "A unit or component with a certain meaning."
+   ],
+   [
+    "unit",
+    "A basic, self-contained component or module that performs a specific function inside a computer system."
+   ],
+   [
+    "component",
+    "A smaller, self-contained part of a larger entity. Often refers to a manufactured object that is part of a larger device."
+   ]
+  ]
+ },
+ {
+  "no": 57,
+  "stmt": "freeman -> worker",
+  "path": [
+   [
+    "freeman",
+    "A burgher with full freedom of a city, as opposed to nobles, outsiders, bondsmen, and others."
+   ],
+   [
+    "burgher",
+    "A citizen of a borough or town, especially one belonging to the middle class."
+   ],
+   [
+    "citizen",
+    "A resident of a city or town, especially one with legally recognized rights or duties."
+   ],
+   [
+    "resident",
+    "A physician receiving postgraduate medical training in a hospital or clinic."
+   ]
+  ]
+ },
+ {
+  "no": 58,
+  "stmt": "consulate -> device",
+  "path": [
+   [
+    "consulate",
+    "The business office of a consul; a minor embassy."
+   ],
+   [
+    "office",
+    "A duty, particularly owing to one's position or station; a charge, trust, or role; moral duty."
+   ],
+   [
+    "duty",
+    "An excise tax; especially, one on imports or exports."
+   ]
+  ]
+ },
+ {
+  "no": 59,
+  "stmt": "juggler -> living thing",
+  "path": [
+   [
+    "juggler",
+    "A person who practices juggling (trick of throwing and catching balls or similar)."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 60,
+  "stmt": "macho -> animal",
+  "path": [
+   [
+    "macho",
+    "The striped mullet of California (Mugil cephalus, syn. Mugil mexicanus)."
+   ],
+   [
+    "mullet",
+    "A fish of the family Mugilidae (order Mugiliformes)."
+   ],
+   [
+    "fish",
+    "A typically cold-blooded vertebrate animal that lives in water, moving with the help of fins and breathing with gills; any vertebrate that is not a tetrapod."
+   ]
+  ]
+ },
+ {
+  "no": 61,
+  "stmt": "jammer -> body part",
+  "path": [
+   [
+    "jammer",
+    "A player who attempts to score points by making their way past other players."
+   ],
+   [
+    "player",
+    "A person who plays the field rather than having a long-term sexual relationship."
+   ],
+   [
+    "person",
+    "The human genitalia; specifically, the penis."
+   ]
+  ]
+ },
+ {
+  "no": 62,
+  "stmt": "obstetrician -> person",
+  "path": [
+   [
+    "obstetrician",
+    "A physician who specializes in childbirth."
+   ],
+   [
+    "physician",
+    "A medical doctor trained in human medicine."
+   ],
+   [
+    "doctor",
+    "A physician; a member of the medical profession; one who is trained and licensed to heal the sick or injured. The final examination and qualification may award a doctor degree in which case the post-nominal letters are D"
+   ]
+  ]
+ },
+ {
+  "no": 63,
+  "stmt": "panelist -> living thing",
+  "path": [
+   [
+    "panelist",
+    "A person who is a member of a panel."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 64,
+  "stmt": "lobbyist -> living thing",
+  "path": [
+   [
+    "lobbyist",
+    "A person who is paid to lobby politicians and encourage them to vote a certain way or otherwise use their office to effect a desired result."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 65,
+  "stmt": "steed -> animal",
+  "path": [
+   [
+    "steed",
+    "A stallion, especially one used for riding."
+   ],
+   [
+    "stallion",
+    "An adult male horse."
+   ],
+   [
+    "horse",
+    "A hoofed mammal, Equus ferus caballus, often used throughout history for riding and draft work."
+   ]
+  ]
+ },
+ {
+  "no": 66,
+  "stmt": "jeep -> container",
+  "path": [
+   [
+    "jeep",
+    "A covered shopping cart, also called a \"shopping stroller\"."
+   ],
+   [
+    "cart",
+    "A tape cartridge used for pre-recorded material such as jingles and advertisements."
+   ],
+   [
+    "cartridge",
+    "A vessel which contains the ink or toner for a computer printer and can be easily replaced with another."
+   ],
+   [
+    "vessel",
+    "A container of liquid or other substance, such as a glass, goblet, cup, bottle, bowl, or pitcher."
+   ]
+  ]
+ },
+ {
+  "no": 67,
+  "stmt": "anesthesiologist -> worker",
+  "path": [
+   [
+    "anesthesiologist",
+    "A physician who specializes in anesthesiology and administers anesthesia."
+   ],
+   [
+    "physician",
+    "A medical doctor trained in human medicine."
+   ],
+   [
+    "doctor",
+    "A physician; a member of the medical profession; one who is trained and licensed to heal the sick or injured. The final examination and qualification may award a doctor degree in which case the post-nominal letters are D"
+   ]
+  ]
+ },
+ {
+  "no": 68,
+  "stmt": "macho -> animal",
+  "path": [
+   [
+    "macho",
+    "The striped mullet of California (Mugil cephalus, syn. Mugil mexicanus)."
+   ],
+   [
+    "mullet",
+    "Any of several species of freshwater fish in the sucker family."
+   ],
+   [
+    "fish",
+    "A typically cold-blooded vertebrate animal that lives in water, moving with the help of fins and breathing with gills; any vertebrate that is not a tetrapod."
+   ]
+  ]
+ },
+ {
+  "no": 69,
+  "stmt": "shook -> body part",
+  "path": [
+   [
+    "shook",
+    "A set of pieces for making a cask or box, usually wood."
+   ],
+   [
+    "set",
+    "A small tuber or bulb used instead of seed, particularly onion sets and potato sets."
+   ],
+   [
+    "tuber",
+    "A fleshy, thickened underground stem of a plant, usually containing stored starch, for example a potato or arrowroot."
+   ],
+   [
+    "stem",
+    "The above-ground stalk (technically axis) of a vascular plant, and certain anatomically similar, below-ground organs such as rhizomes, bulbs, tubers, and corms."
+   ]
+  ]
+ },
+ {
+  "no": 70,
+  "stmt": "hillbilly -> living thing",
+  "path": [
+   [
+    "hillbilly",
+    "A white person from the rural southern part of the United States, especially the Southeastern states."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 71,
+  "stmt": "underpants -> man-made object",
+  "path": [
+   [
+    "underpants",
+    "Underwear covering the genitalia and often buttocks as well as adjacent areas, usually going no higher than the navel."
+   ],
+   [
+    "underwear",
+    "Clothes worn next to the skin, underneath outer clothing."
+   ],
+   [
+    "clothes",
+    "Items of clothing; apparel."
+   ]
+  ]
+ },
+ {
+  "no": 72,
+  "stmt": "coupe -> container",
+  "path": [
+   [
+    "coupe",
+    "A shallow glass or glass dish, usually with a stem, in which sparkling wine or desserts are served."
+   ],
+   [
+    "dish",
+    "A vessel such as a plate for holding or serving food, often flat with a depressed region in the middle."
+   ],
+   [
+    "vessel",
+    "A container of liquid or other substance, such as a glass, goblet, cup, bottle, bowl, or pitcher."
+   ]
+  ]
+ },
+ {
+  "no": 73,
+  "stmt": "fanatic -> material",
+  "path": [
+   [
+    "fanatic",
+    "A person who is zealously enthusiastic for some cause."
+   ],
+   [
+    "person",
+    "The physical body of a being seen as distinct from the mind, character, etc."
+   ],
+   [
+    "body",
+    "Main section."
+   ],
+   [
+    "section",
+    "A part of a document, especially a major#Adjective part; often notated with §."
+   ]
+  ]
+ },
+ {
+  "no": 74,
+  "stmt": "socialite -> living thing",
+  "path": [
+   [
+    "socialite",
+    "A person (often a woman) of social prominence, considered to be an influential figure."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 75,
+  "stmt": "weevil -> person",
+  "path": [
+   [
+    "weevil",
+    "Any of many similar, but more distantly related, beetles such as the biscuit weevil (Stegobium paniceum)."
+   ],
+   [
+    "beetle",
+    "A type of mallet with a large wooden head, used to drive wedges, beat pavements, etc."
+   ],
+   [
+    "mallet",
+    "A weapon resembling the tool, but typically much larger."
+   ],
+   [
+    "weapon",
+    "An idiot, an oaf, a fool, a tool; a contemptible or incompetent person."
+   ]
+  ]
+ },
+ {
+  "no": 76,
+  "stmt": "padlock -> tool",
+  "path": [
+   [
+    "padlock",
+    "A detachable lock that can be used to secure something by means of a sliding or hinged shackle."
+   ],
+   [
+    "lock",
+    "Something used for fastening, which can only be opened with a key or combination."
+   ],
+   [
+    "fastening",
+    "A hook or similar restraint used to fasten things together; fastener."
+   ]
+  ]
+ },
+ {
+  "no": 77,
+  "stmt": "lemur -> animal",
+  "path": [
+   [
+    "lemur",
+    "Any strepsirrhine primate of the superfamily Lemuroidea, native only to Madagascar and some surrounding islands."
+   ],
+   [
+    "primate",
+    "Any of the order Primates of mammals characterized by relatively large brains, grasping hands or feet, and forward-facing eyes, including apes, monkeys, lemurs, tarsiers, lorises, galagos, etc."
+   ],
+   [
+    "mammal",
+    "A vertebrate animal of the class Mammalia, characterized by being warm-blooded, having fur or hair and producing milk with which to feed their young."
+   ]
+  ]
+ },
+ {
+  "no": 78,
+  "stmt": "rheumatic -> living thing",
+  "path": [
+   [
+    "rheumatic",
+    "A person suffering from rheumatism"
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 79,
+  "stmt": "ecologist -> worker",
+  "path": [
+   [
+    "ecologist",
+    "A scholar of ecology."
+   ],
+   [
+    "scholar",
+    "A specialist in a particular branch of knowledge."
+   ],
+   [
+    "specialist",
+    "Someone who is an expert in, or devoted to, some specific branch of study or research."
+   ]
+  ]
+ },
+ {
+  "no": 80,
+  "stmt": "mantel -> device",
+  "path": [
+   [
+    "mantel",
+    "A maneuver to surmount a ledge, involving pushing down on the ledge to bring up the body."
+   ],
+   [
+    "maneuver",
+    "A movement of the body, or with an implement, instrument etc., especially one performed with skill or dexterity."
+   ],
+   [
+    "movement",
+    "A system or mechanism for transmitting motion of a definite character, or for transforming motion, such as the wheelwork of a watch."
+   ]
+  ]
+ },
+ {
+  "no": 81,
+  "stmt": "prowler -> animal",
+  "path": [
+   [
+    "prowler",
+    "A person who moves stealthily around a place with intention to commit a crime, especially burglary or theft."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 82,
+  "stmt": "steed -> animal",
+  "path": [
+   [
+    "steed",
+    "A stallion, especially one used for riding."
+   ],
+   [
+    "stallion",
+    "An adult male horse."
+   ],
+   [
+    "horse",
+    "A hoofed mammal, Equus ferus caballus, often used throughout history for riding and draft work."
+   ]
+  ]
+ },
+ {
+  "no": 83,
+  "stmt": "obstetrician -> person",
+  "path": [
+   [
+    "obstetrician",
+    "A physician who specializes in childbirth."
+   ],
+   [
+    "physician",
+    "A medical doctor trained in human medicine."
+   ],
+   [
+    "doctor",
+    "A physician; a member of the medical profession; one who is trained and licensed to heal the sick or injured. The final examination and qualification may award a doctor degree in which case the post-nominal letters are D"
+   ]
+  ]
+ },
+ {
+  "no": 84,
+  "stmt": "serviceman -> material",
+  "path": [
+   [
+    "serviceman",
+    "A person, especially a man, employed in service and maintenance of equipment."
+   ],
+   [
+    "person",
+    "The physical body of a being seen as distinct from the mind, character, etc."
+   ],
+   [
+    "body",
+    "Main section."
+   ],
+   [
+    "section",
+    "A part of a document, especially a major#Adjective part; often notated with §."
+   ]
+  ]
+ },
+ {
+  "no": 85,
+  "stmt": "crocodile -> body part",
+  "path": [
+   [
+    "crocodile",
+    "Any of the predatory amphibious reptiles of the family Crocodylidae; a crocodilian, any species of the order Crocodilia, which also includes the alligators, caimans and gavials."
+   ],
+   [
+    "reptile",
+    "A (typically scaly and egg-laying) cold-blooded vertebrate tetrapod animal, of the class Reptilia (excluding birds), such as a lizard, turtle, snake, crocodile, alligator, etc."
+   ],
+   [
+    "animal",
+    "Any member of the kingdom Animalia other than a human."
+   ],
+   [
+    "member",
+    "Part of an animal capable of performing a distinct office; an organ; a limb."
+   ]
+  ]
+ },
+ {
+  "no": 86,
+  "stmt": "steed -> animal",
+  "path": [
+   [
+    "steed",
+    "A stallion, especially one used for riding."
+   ],
+   [
+    "stallion",
+    "An adult male horse."
+   ],
+   [
+    "horse",
+    "A hoofed mammal, Equus ferus caballus, often used throughout history for riding and draft work."
+   ]
+  ]
+ },
+ {
+  "no": 87,
+  "stmt": "mantis -> animal",
+  "path": [
+   [
+    "mantis",
+    "Any of various large insects of the order Mantodea that catch insects or other small animals with their powerful forelegs."
+   ],
+   [
+    "insect",
+    "An arthropod (in the Insecta class) characterized by six legs, up to four wings, and a chitinous exoskeleton."
+   ],
+   [
+    "arthropod",
+    "An invertebrate animal of the phylum Arthropoda, characterized by a chitinous exoskeleton and multiple jointed appendages."
+   ]
+  ]
+ },
+ {
+  "no": 88,
+  "stmt": "harmonica -> equipment",
+  "path": [
+   [
+    "harmonica",
+    "A musical wind instrument with a series of holes for the player to blow into, each hole producing a different note."
+   ],
+   [
+    "instrument",
+    "A device used to produce music."
+   ],
+   [
+    "device",
+    "Any piece of equipment made for a particular purpose, especially a mechanical or electrical one."
+   ]
+  ]
+ },
+ {
+  "no": 89,
+  "stmt": "lemur -> animal",
+  "path": [
+   [
+    "lemur",
+    "Any strepsirrhine primate of the superfamily Lemuroidea, native only to Madagascar and some surrounding islands."
+   ],
+   [
+    "primate",
+    "Any of the order Primates of mammals characterized by relatively large brains, grasping hands or feet, and forward-facing eyes, including apes, monkeys, lemurs, tarsiers, lorises, galagos, etc."
+   ],
+   [
+    "mammal",
+    "A vertebrate animal of the class Mammalia, characterized by being warm-blooded, having fur or hair and producing milk with which to feed their young."
+   ]
+  ]
+ },
+ {
+  "no": 90,
+  "stmt": "coupe -> container",
+  "path": [
+   [
+    "coupe",
+    "A shallow glass or glass dish, usually with a stem, in which sparkling wine or desserts are served."
+   ],
+   [
+    "dish",
+    "A vessel such as a plate for holding or serving food, often flat with a depressed region in the middle."
+   ],
+   [
+    "vessel",
+    "A container of liquid or other substance, such as a glass, goblet, cup, bottle, bowl, or pitcher."
+   ]
+  ]
+ },
+ {
+  "no": 91,
+  "stmt": "liza -> person",
+  "path": [
+   [
+    "liza",
+    "The white mullet (Mugil curema), of the subtropical Americas."
+   ],
+   [
+    "mullet",
+    "Any of several species of freshwater fish in the sucker family."
+   ],
+   [
+    "fish",
+    "A typically cold-blooded vertebrate animal that lives in water, moving with the help of fins and breathing with gills; any vertebrate that is not a tetrapod."
+   ],
+   [
+    "animal",
+    "A person who behaves wildly; a bestial, brutal, brutish, cruel, or inhuman person."
+   ]
+  ]
+ },
+ {
+  "no": 92,
+  "stmt": "suitor -> living thing",
+  "path": [
+   [
+    "suitor",
+    "A person or organization that expresses an interest in working with, or taking over, another."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 93,
+  "stmt": "curate -> living thing",
+  "path": [
+   [
+    "curate",
+    "An assistant barman."
+   ],
+   [
+    "barman",
+    "A man who works in a bar."
+   ],
+   [
+    "man",
+    "An adult male human."
+   ]
+  ]
+ },
+ {
+  "no": 94,
+  "stmt": "panelist -> living thing",
+  "path": [
+   [
+    "panelist",
+    "A person who is a member of a panel."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 95,
+  "stmt": "bandit -> device",
+  "path": [
+   [
+    "bandit",
+    "An aircraft identified as an enemy, but distinct from \"hostile\" or \"threat\" in that it is not immediately to be engaged."
+   ],
+   [
+    "aircraft",
+    "A vehicle capable of atmospheric flight due to interaction with the air, such as buoyancy or lift."
+   ],
+   [
+    "vehicle",
+    "A guided or aimed mobile object or apparatus, especially if intended or used as a weapon."
+   ]
+  ]
+ },
+ {
+  "no": 96,
+  "stmt": "consul -> tool",
+  "path": [
+   [
+    "consul",
+    "A councillor, particularly:."
+   ],
+   [
+    "councillor",
+    "A member of a council."
+   ],
+   [
+    "member",
+    "The penis."
+   ]
+  ]
+ },
+ {
+  "no": 97,
+  "stmt": "tripod -> equipment",
+  "path": [
+   [
+    "tripod",
+    "A three-legged stand or mount."
+   ],
+   [
+    "stand",
+    "A device to hold something upright or aloft."
+   ],
+   [
+    "device",
+    "Any piece of equipment made for a particular purpose, especially a mechanical or electrical one."
+   ]
+  ]
+ },
+ {
+  "no": 98,
+  "stmt": "hillbilly -> living thing",
+  "path": [
+   [
+    "hillbilly",
+    "A white person from the rural southern part of the United States, especially the Southeastern states."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 99,
+  "stmt": "purveyor -> living thing",
+  "path": [
+   [
+    "purveyor",
+    "A person or group that promotes or spreads an idea, a viewpoint, etc."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 100,
+  "stmt": "underpants -> man-made object",
+  "path": [
+   [
+    "underpants",
+    "Underwear covering the genitalia and often buttocks as well as adjacent areas, usually going no higher than the navel."
+   ],
+   [
+    "underwear",
+    "Clothes worn next to the skin, underneath outer clothing."
+   ],
+   [
+    "clothes",
+    "Items of clothing; apparel."
+   ]
+  ]
+ },
+ {
+  "no": 101,
+  "stmt": "rhinoceros -> person",
+  "path": [
+   [
+    "rhinoceros",
+    "Any large herbivorous ungulate mammal native to Africa and Asia of the family Rhinocerotidae, with thick, gray skin and one or two horns on their snouts."
+   ],
+   [
+    "ungulate",
+    "An ungulate animal; a hooved mammal of the clade Euungulata."
+   ],
+   [
+    "animal",
+    "A person who behaves wildly; a bestial, brutal, brutish, cruel, or inhuman person."
+   ]
+  ]
+ },
+ {
+  "no": 102,
+  "stmt": "earl -> animal",
+  "path": [
+   [
+    "earl",
+    "Any of various nymphalid butterflies of the genus Tanaecia. Other butterflies in this genus are called counts and viscounts."
+   ],
+   [
+    "butterfly",
+    "A flying insect of the order Lepidoptera, distinguished from moths by their diurnal activity and generally brighter colouring."
+   ],
+   [
+    "insect",
+    "An arthropod (in the Insecta class) characterized by six legs, up to four wings, and a chitinous exoskeleton."
+   ],
+   [
+    "arthropod",
+    "An invertebrate animal of the phylum Arthropoda, characterized by a chitinous exoskeleton and multiple jointed appendages."
+   ]
+  ]
+ },
+ {
+  "no": 103,
+  "stmt": "curate -> living thing",
+  "path": [
+   [
+    "curate",
+    "An assistant barman."
+   ],
+   [
+    "barman",
+    "A man who works in a bar."
+   ],
+   [
+    "man",
+    "An adult male human."
+   ]
+  ]
+ },
+ {
+  "no": 104,
+  "stmt": "padlock -> tool",
+  "path": [
+   [
+    "padlock",
+    "A detachable lock that can be used to secure something by means of a sliding or hinged shackle."
+   ],
+   [
+    "lock",
+    "Something used for fastening, which can only be opened with a key or combination."
+   ],
+   [
+    "fastening",
+    "A hook or similar restraint used to fasten things together; fastener."
+   ]
+  ]
+ },
+ {
+  "no": 105,
+  "stmt": "toddler -> tool",
+  "path": [
+   [
+    "toddler",
+    "A young child (typically between one and three years old) who has started walking but not fully mastered it."
+   ],
+   [
+    "child",
+    "The thirteenth Lenormand card."
+   ],
+   [
+    "card",
+    "A resource or argument, used to achieve a purpose."
+   ],
+   [
+    "resource",
+    "Something that can be used to help achieve an aim, especially a book, equipment, etc. that provides information for teachers and students."
+   ]
+  ]
+ },
+ {
+  "no": 106,
+  "stmt": "buddy -> man-made object",
+  "path": [
+   [
+    "buddy",
+    "A partner for a particular activity."
+   ],
+   [
+    "partner",
+    "One of the pieces of wood comprising the framework which strengthens the deck of a wooden ship around the holes through which the mast and other fittings pass."
+   ],
+   [
+    "piece",
+    "One of the figures used in playing chess, specifically a higher-value figure as distinguished from a pawn; those with which draughts, backgammon, and other similar board games are played."
+   ],
+   [
+    "figure",
+    "The representation of any form, as by drawing, painting, modelling, carving, embroidering, etc.; especially, a representation of the human body."
+   ]
+  ]
+ },
+ {
+  "no": 107,
+  "stmt": "wanton -> living thing",
+  "path": [
+   [
+    "wanton",
+    "A lewd or immoral person, especially a prostitute."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 108,
+  "stmt": "limiter -> man-made object",
+  "path": [
+   [
+    "limiter",
+    "A friar who had a license to beg within certain bounds."
+   ],
+   [
+    "friar",
+    "A white or pale patch on a printed page caused by poor inking."
+   ],
+   [
+    "patch",
+    "A piece of cloth, or other suitable material, sewed or otherwise fixed upon a garment to repair or strengthen it, especially upon an old garment to cover a hole."
+   ]
+  ]
+ },
+ {
+  "no": 109,
+  "stmt": "haggis -> organ",
+  "path": [
+   [
+    "haggis",
+    "A traditional Scottish dish made from minced sheep offal with oatmeal and spices, etc., originally boiled in the stomach of a sheep but now often in an artificial casing, and usually served with neeps and tatties (mashed"
+   ],
+   [
+    "dish",
+    "A vessel such as a plate for holding or serving food, often flat with a depressed region in the middle."
+   ],
+   [
+    "vessel",
+    "A person as a container of qualities or feelings."
+   ],
+   [
+    "person",
+    "The human genitalia; specifically, the penis."
+   ]
+  ]
+ },
+ {
+  "no": 110,
+  "stmt": "newlywed -> living thing",
+  "path": [
+   [
+    "newlywed",
+    "A recently married person."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 111,
+  "stmt": "hillbilly -> living thing",
+  "path": [
+   [
+    "hillbilly",
+    "A white person from the rural southern part of the United States, especially the Southeastern states."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 112,
+  "stmt": "athlete -> living thing",
+  "path": [
+   [
+    "athlete",
+    "A person who actively participates in physical sports, especially with great skill; a sportsperson."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 113,
+  "stmt": "mantis -> animal",
+  "path": [
+   [
+    "mantis",
+    "Any of various large insects of the order Mantodea that catch insects or other small animals with their powerful forelegs."
+   ],
+   [
+    "insect",
+    "An arthropod (in the Insecta class) characterized by six legs, up to four wings, and a chitinous exoskeleton."
+   ],
+   [
+    "arthropod",
+    "An invertebrate animal of the phylum Arthropoda, characterized by a chitinous exoskeleton and multiple jointed appendages."
+   ]
+  ]
+ },
+ {
+  "no": 114,
+  "stmt": "huntress -> worker",
+  "path": [
+   [
+    "huntress",
+    "A female hunter."
+   ],
+   [
+    "hunter",
+    "A horse used in hunting, especially a thoroughbred, bred and trained for hunting."
+   ],
+   [
+    "horse",
+    "A hoofed mammal, Equus ferus caballus, often used throughout history for riding and draft work."
+   ]
+  ]
+ },
+ {
+  "no": 115,
+  "stmt": "earl -> animal",
+  "path": [
+   [
+    "earl",
+    "Any of various nymphalid butterflies of the genus Tanaecia. Other butterflies in this genus are called counts and viscounts."
+   ],
+   [
+    "butterfly",
+    "A flying insect of the order Lepidoptera, distinguished from moths by their diurnal activity and generally brighter colouring."
+   ],
+   [
+    "insect",
+    "An arthropod (in the Insecta class) characterized by six legs, up to four wings, and a chitinous exoskeleton."
+   ],
+   [
+    "arthropod",
+    "An invertebrate animal of the phylum Arthropoda, characterized by a chitinous exoskeleton and multiple jointed appendages."
+   ]
+  ]
+ },
+ {
+  "no": 116,
+  "stmt": "anti -> living thing",
+  "path": [
+   [
+    "anti",
+    "A person opposed to a concept or principle."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 117,
+  "stmt": "rifle -> animal",
+  "path": [
+   [
+    "rifle",
+    "A rifleman."
+   ],
+   [
+    "rifleman",
+    "A small wrenlike insectivorous passerine bird endemic to New Zealand, Acanthisitta chloris, the titipounamu."
+   ],
+   [
+    "bird",
+    "Any of the class Aves of egg-laying warm-blooded animals, characterized by feathers, a beaked mouth, and wings usually capable of flight."
+   ]
+  ]
+ },
+ {
+  "no": 118,
+  "stmt": "jukebox -> equipment",
+  "path": [
+   [
+    "jukebox",
+    "A coin-operated machine that plays recorded music, with push-buttons to make selections. .mw-parser-output .defdate{font-size:smaller}"
+   ],
+   [
+    "machine",
+    "A device that directs and controls energy, often in the form of movement or electricity, to produce a certain effect."
+   ],
+   [
+    "device",
+    "Any piece of equipment made for a particular purpose, especially a mechanical or electrical one."
+   ]
+  ]
+ },
+ {
+  "no": 119,
+  "stmt": "apologist -> worker",
+  "path": [
+   [
+    "apologist",
+    "Synonym of apologizer."
+   ],
+   [
+    "synonym",
+    "An alternative (often shorter) name defined for an object in a database."
+   ],
+   [
+    "name",
+    "A person (or legal person)."
+   ]
+  ]
+ },
+ {
+  "no": 120,
+  "stmt": "tripod -> equipment",
+  "path": [
+   [
+    "tripod",
+    "A three-legged stand or mount."
+   ],
+   [
+    "stand",
+    "A device to hold something upright or aloft."
+   ],
+   [
+    "device",
+    "Any piece of equipment made for a particular purpose, especially a mechanical or electrical one."
+   ]
+  ]
+ },
+ {
+  "no": 121,
+  "stmt": "illiterate -> living thing",
+  "path": [
+   [
+    "illiterate",
+    "An illiterate person, one either not able to read and write or not knowing how."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ },
+ {
+  "no": 122,
+  "stmt": "bookkeeper -> living thing",
+  "path": [
+   [
+    "bookkeeper",
+    "A person responsible for keeping records or documents, such as of a business."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ]
+  ]
+ },
+ {
+  "no": 123,
+  "stmt": "lemur -> animal",
+  "path": [
+   [
+    "lemur",
+    "Any strepsirrhine primate of the superfamily Lemuroidea, native only to Madagascar and some surrounding islands."
+   ],
+   [
+    "primate",
+    "Any of the order Primates of mammals characterized by relatively large brains, grasping hands or feet, and forward-facing eyes, including apes, monkeys, lemurs, tarsiers, lorises, galagos, etc."
+   ],
+   [
+    "mammal",
+    "A vertebrate animal of the class Mammalia, characterized by being warm-blooded, having fur or hair and producing milk with which to feed their young."
+   ]
+  ]
+ },
+ {
+  "no": 124,
+  "stmt": "cowgirl -> animal",
+  "path": [
+   [
+    "cowgirl",
+    "A woman who identifies with cowboy culture, including clothing such as the cowboy hat."
+   ],
+   [
+    "woman",
+    "An adult female human."
+   ],
+   [
+    "human",
+    "Any hominid of the genus Homo."
+   ],
+   [
+    "hominid",
+    "Any anthropoid of the taxonomic family Hominidae, which includes all the great apes (chimpanzees, gorillas, orangutans) as well as humans."
+   ]
+  ]
+ },
+ {
+  "no": 125,
+  "stmt": "bodybuilder -> animal",
+  "path": [
+   [
+    "bodybuilder",
+    "A person who uses diet and exercise to build an aesthetically muscular physique, in order to compete in bodybuilding."
+   ],
+   [
+    "person",
+    "An individual who has been granted personhood; usually a human being."
+   ],
+   [
+    "individual",
+    "A single physical human being as a legal subject, as opposed to a legal person such as a corporation."
+   ],
+   [
+    "human",
+    "A highly intelligent ape with fine and short body hair; the most abundant species of primate, with members found on every continent (Homo sapiens)."
+   ]
+  ]
+ }
+]

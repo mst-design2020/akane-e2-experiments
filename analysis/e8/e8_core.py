@@ -11,11 +11,16 @@ E7との違い：
 import re
 
 MAX_DEFS_ENT, MAX_DEFS_MID, A_MID, DEPTH = 8, 8, 4, 3
+# Note (2026-11-11): hand-written list of sense labels, used only by method B (reference). Dropped in analysis/nolist/.
 BAD_LABELS = {"obsolete", "archaic", "dated", "rare", "slang", "vulgar", "offensive", "derogatory", "historical",
               "humorous", "euphemistic", "nonstandard", "pejorative", "ethnic slur", "slur", "obsolete outside dialects",
               "rare outside dialects", "nonce word", "jocular", "informal euphemism"}
 
 # 頭の名詞（E7と同じ）
+# Note (2026-11-11): PERSON_HEADS, OF_HEADS and META below are hand-written word lists used to pick the head noun.
+# The published E7/E8/E9 results were made with them. A version without any hand-written list is in analysis/nolist/
+# (e8n_core.py); the recheck and the corrections are in plans/E8n_nolist_recheck.md and plans/E9n_nolist_recheck.md.
+# 注（2026-11-11）：下の PERSON_HEADS・OF_HEADS・META は頭の名詞を取るための手書きの語の一覧。一覧なしの版は analysis/nolist/。
 PERSON_HEADS = ("one who", "someone who", "somebody who", "a person who", "person who", "one that", "anyone who",
                 "a person", "someone", "somebody")
 OF_HEADS = {"kind", "type", "sort", "variety", "species", "form", "member", "one", "any", "piece", "item", "genus",
@@ -217,6 +222,7 @@ def hyp(w, c):
     return f"{w[:1].upper() + w[1:]} is a type of {c}."
 
 
+# Note (2026-11-11): hand-written broad groups for the negative evidence (a negative result). Dropped in analysis/nolist/.
 GROUP_WORDS = ["animal", "plant", "food", "man-made object", "material", "body part", "disease", "activity"]
 
 

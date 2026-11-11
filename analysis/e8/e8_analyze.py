@@ -14,6 +14,8 @@ GRID = list(itertools.product([0.25, 0.5, 1.0], [-1.0, 0.0, 1.0, 2.0], [0.8, 0.9
 GAMMAS = [0.0, 1.0, 2.0, 4.0, 8.0]  # 打ち消しの強さ（0＝打ち消しなし＝⑦）
 
 # 分類の大きなまとまり（常識で決めた、結果を見る前）。まとまりが重ならず、両立の組でもなければ「両立しない」。
+# Note (2026-11-11): GW, CG and COMPAT are hand-written groups and compatible pairs for the negative evidence
+# (fixed before the results; the result was negative). The recheck in analysis/nolist/ does not use them.
 GW = {"ANIMAL": "animal", "PLANT": "plant", "FOOD": "food", "ARTIFACT": "man-made object", "MATERIAL": "material",
       "BODY": "body part", "DISEASE": "disease", "ACTIVITY": "activity"}
 CG = {"living thing": {"ANIMAL", "PLANT"}, "plant": {"PLANT"}, "tree": {"PLANT"}, "flower": {"PLANT"},
