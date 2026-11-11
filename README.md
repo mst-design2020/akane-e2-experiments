@@ -13,6 +13,7 @@ English | [日本語](README_ja.md)
 - **On 300 new items** not used for any choice, the checker is clearly better than the model's own confidence (0.039 vs 0.118). Its gain over a one-step dictionary check (0.055) is not shown with 300 items.
 - **Where the network (BP) helps, and where it does not.** BP that also doubts the model's own rules beats simply counting violations in taxonomy and disease tests (E2-6, E2-8). It did not beat simpler learned combinations with evidence (E3), large many-loop networks (E4) or dictionary chains (E7, E8). The p-bit method and BP never differed in accuracy (E4).
 - **Correction (2026-11-11): the learned baselines were all linear.** Every "features + learning" baseline in E2 to E8 was logistic regression. Redoing them with a tree-based learner (gradient boosting, `analysis/audit_gb/`) changes three statements: E2-7 (taxonomy: BP's win becomes a tie; geography: BP now loses to the learned combination), E4-2 (the cautious network loses under WordNet labels) and E7 (adding chain scores is no longer clearly best). E8's result holds. Details are marked "Audit (2026-11-11)" below.
+- **Even when only a few answers can be checked, the network does not beat a strong learner (E9).** Checking 2–10% of the claims with the dictionary and spreading the checks along the model's rules with BP first looked better than logistic regression (E9-1), but against gradient boosting, and on all 77,326 claims with no candidate selection, the network lost in every condition (E9-3). Its remaining role is small: finishing a learner's answers with the rules gave 5–20% lower AURC, below the threshold set in advance.
 
 ![Checking a small model's "X is a type of Y" answers from outside (E6–E8)](figures/E8/overview_en.png)
 
@@ -117,6 +118,8 @@ The network that fully trusts the rules (E2-2 to E2-5, and the "trusting BP" in 
 | E6 | Dictionary definitions + NLI against the model's confident errors (700 items) | 75% of confident errors fixed; AURC 0.154 → 0.069; but 40% of right two-step answers broken | `plans/E6_dictionary.md` |
 | E7 | Chain definitions up to three steps | Fewer right answers broken (40% → 29%), but 30 of 50 chains go through a wrong sense; BP ties the path product | `plans/E7_chain_definitions.md` |
 | E8 | The model picks each word's sense along the chain; negative evidence; 300 new items | Wrong-sense chains 64% → 4%; AURC 0.047 without training, 0.037 learned; network loses; new items 0.039 vs 0.118 for confidence | `plans/E8_sense_choice.md` |
+| E9 | Only a few claims can be checked by the dictionary; does the network spread the checks better than learning? (simulated checker, then the real one) | Beat logistic regression on the nouns that received a check (E9-1: 2% 0.072 vs 0.032), but tied gradient boosting (E9-2) | `plans/E9-1_real_dictionary.md`, `plans/E9-2_strong_learner.md` |
+| E9-3 | Same question on all 1,681 nouns × 46 categories (77,326 claims), rules only from the model's answers | Network loses to gradient boosting in all 13 conditions (10%: 0.0029 vs 0.0018); boosting finished by the network 0.0014, a tie by the rule | `plans/E9-3_all_categories.md` |
 
 ## E3: Can evidence let the model say "I don't know"?
 
@@ -406,6 +409,35 @@ $$ \mathrm{AURC} = \frac{1}{N} \sum_{j=1}^{N} r_j $$
 
 **Checking the E8 code against these formulas.** `cd analysis/e8; python check_formulas_e8.py ../../data/E8_chains_nli.json` (about 15 seconds on a CPU). Result: the strongest path matches a brute-force enumeration of all paths on all 4,000 cases (1,000 items × A–D; difference $10^{-16}$). For the network, items with at most 13 nodes are compared with exact probabilities from enumerating every assignment: exact on 60 tree-shaped items (difference $10^{-14}$), at most 0.015 off on 31 items with loops (loopy BP is an approximation, as expected).
 
+## E9: Does the network help when only a few answers can be checked?
+
+Up to E8 the network (BP) never beat simpler methods, and in every test all claims had the same kind of evidence. E9 asks a setting where a network might help: an outside checker (the dictionary) can check only a small share of the claims, and the network spreads those checks along the rules ("a beagle is a dog" checked → "a beagle is an animal" and "a beagle is not a sport" follow). Close work: collective classification and active inference (Sen et al. 2008; Bilgic and Getoor 2008/2010), Macskassy and Provost (JMLR 2007), Correct and Smooth (ICLR 2021). Prior work: `plans/E9_prior_work.md` (Japanese). Plans and results: `plans/E9_net_role.md`, `plans/E9-1_real_dictionary.md`, `plans/E9-2_strong_learner.md`, `plans/E9-3_all_categories.md`.
+
+Setup: Gemma's answers from E4-2. 1%, 2%, 5%, 10% (and 20%) of the claims are checked and held at the checker's answer; checks are chosen at random, where Gemma is least sure, or one per noun ordered by the network's uncertainty ("net"). Methods: (A) Gemma's confidence, (C) features + logistic regression with features of the checks in the same noun, (C++) the same features with gradient boosting (from E9-2), (D) the network with the checks fixed (BP, rule weights learned as in E4-2), (F++) gradient boosting finished with the network (Correct and Smooth style). AURC, lower is better; nouns split 20% tuning / 80% evaluation, 5 splits.
+
+| Step | Checker and claims | Main result |
+|---|---|---|
+| E9 | Simulated checker with the error rates of E6's dictionary check; E4-2 candidates (11,864 claims) | All 45 conditions tie overall. Looking afterwards only at the unchecked claims of nouns that received a check, the network had about half the error of logistic regression (2% net: 0.081 vs 0.040, 5/5). This view was chosen after seeing results, so E9-1 fixed it in advance |
+| E9-1 | Real dictionary check (E8's chain with Gemma choosing senses, ⑥D; true → yes 88%, false → no 96%) | With the score fixed beforehand, the network beat logistic regression: 2% 0.072 vs 0.032 (5/5), 5% 0.050 vs 0.029 (3/5), 10% 0.074 vs 0.047 (5/5). Overall still a tie |
+| E9-2 | Same, with stronger learners | Gradient boosting: 2% 0.030 vs network 0.032, 5% 0.020 vs 0.029, 10% 0.025 vs 0.047. A tie by the rule; **the network's win does not survive**. Gradient boosting reaches 0.038 even with no checks, largely by picking up how the E4-2 candidates were built (see the audit, `analysis/audit_gb/`) |
+| E9-3 | All 1,681 nouns × 46 categories (77,326 claims, no candidate selection); network rules only from Gemma's answers (144 is-a, 941 disjointness), no WordNet hierarchy anywhere | Network loses to gradient boosting in all 13 conditions; gradient boosting finished with the network is slightly better than gradient boosting (5–20%) but below the threshold. **No win for the network** |
+
+E9-3 in more detail (`analysis/e9/e93.py`). Only 4.9% of the claims are true, so AURC values are small (Gemma's confidence 0.017) and the earlier rule (difference ≥ 0.02) cannot work; the rule fixed before running was a difference of at least 20% of the opponent's value in 4 of 5 splits. Before any method was run, Claude labeled 600 sampled claims by common sense without seeing WordNet (300 random, 300 where Gemma or the dictionary said yes; 126 true, 42 debatable, 432 false). The dictionary's "yes" over all claims is right only 52% of the time (it is right 88% on true claims, but false claims are many). Before the code was written, the dictionary score was removed from the learners' features for unchecked claims, since that would amount to checking everything (logged in the plan).
+
+| Checked, chosen by "net" | A confidence | C logistic | C++ boosting | D network | F++ boosting + network | All claims checked by the dictionary (reference) |
+|---|---|---|---|---|---|---|
+| 2% | 0.0147 | 0.0038 | 0.0026 | 0.0044 | 0.0023 | 0.0019 |
+| 5% | 0.0160 | 0.0025 | 0.0019 | 0.0038 | 0.0017 | 0.0014 |
+| 10% | 0.0157 | 0.0018 | 0.0018 | 0.0029 | 0.0014 | 0.0010 |
+
+(AURC on the unchecked claims of nouns that received a check, mean of 5 splits.)
+
+- Scored on the 600 common-sense labels the direction is the same (10%, net: boosting 0.028, network 0.038, boosting + network 0.024, all-dictionary 0.027).
+- Without any checks, gradient boosting finds 59% of the true categories (precision 79%), Gemma's confidence 40%, the dictionary on all claims 68%.
+- Predictions: "the network ties the strong learner" was wrong (it loses); "boosting + network is slightly better, below the threshold" held.
+
+**Summary of E9.** The network's win in E9-1 came from a weak opponent and a test set with construction regularities. With a stronger learner and no candidate selection, spreading a few checks with the network did not beat learning; the rules help, but as features for a learner rather than inside a network. A network may still be useful as a small finishing step after a learner, without labels, or as a hedge against wrong rules (E2-9, E2-11). The dictionary check itself (E8) remained the strongest signal.
+
 ## Layout
 
 - `colab/`: Google Colab notebooks (T4 GPU). They ask Gemma the questions and save the answers. The E2-2 and E2-3 notebooks also run the analysis and draw the figures.
@@ -428,7 +460,9 @@ $$ \mathrm{AURC} = \frac{1}{N} \sum_{j=1}^{N} r_j $$
 - `colab/E6_dictionary_gemma.ipynb`: E6 (fetches Wiktionary, asks Gemma, runs NLI; L4 GPU). `data/E6_answers_gemma-2-2b-it.json`: its output without the Wiktionary texts (CC BY-SA; the notebook refetches them)
 - `colab/E7_chain_definitions.ipynb`: E7 (reads the Wiktionary dump, follows head nouns, runs NLI; L4 GPU, about 40 minutes). `data/E7_chains_nli.json`: its output (head nouns and NLI scores; definition texts removed). Code in `analysis/e6/` (`e7_core.py`, `build_notebook_E7.py`, `e7_analyze.py`)
 - `colab/E8_sense_choice.ipynb`: E8 (reads the dump with sense labels, picks senses with embeddings and with Gemma, runs NLI; L4 GPU, about 1.5 hours). `data/E8_chains_nli.json`: its output (sense labels, head nouns, sense choices, chains and NLI scores; definition texts removed). Code and the 300 new items in `analysis/e8/`
-- `results/`: result JSON files and figures (`results/E3/E3_main_analysis.json` for E3, `results/E4/` for E4, `results/E5/` for E5, `results/E6/` for E6, `results/E7/` for E7, `results/E8/` for E8)
+- `analysis/e9/`: E9 code. `e9.py` (E9 with a simulated checker; `real` for E9-1/E9-2 with the dictionary check), `e93.py` (E9-3), `e9*_analyze.py` (summaries and the decision rules), `e91_checker.py`/`e91_from_small.py` (turn the Colab output into checker scores), notebook builders, and `labels/E9-3_sample_labeled_claude.json` (600 claims labeled by Claude by common sense, not by a person)
+- `colab/E9-1_dictionary_check.ipynb`: runs E8's dictionary check (Gemma chooses senses) on every E4-2 claim (L4 GPU). `colab/E9-1b_small_output.ipynb` shrinks its output. `data/E9-1_checker_scores.json`: the resulting dictionary yes/no for each claim
+- `results/`: result JSON files and figures (`results/E3/E3_main_analysis.json` for E3, `results/E4/` for E4, `results/E5/` for E5, `results/E6/` for E6, `results/E7/` for E7, `results/E8/` for E8, `results/E9/` for E9)
 - `plans/`: plans and results for each experiment (Japanese)
 
 ## Rerunning the analysis
@@ -486,6 +520,8 @@ E4: in `analysis/e4/`, `python e40.py` (CPU, about 20 minutes). For E4-1/E4-2, b
 E5: build `e42_data.json` as above (in `analysis/e4/`), then in `analysis/e5/`: `python e5.py ../e4/e42_data.json ../../data/E4-2_answers_gemma-2-2b-it.json labels/sample_labeled.json out.json` (CPU, under a minute). Use `labels/sample_gemini.json` or `labels/sample_gemini_strict.json` to score with Gemini's labels. E5-2: `python e52.py ../../data/E2-8_answers_gemma-2-2b-it.json labels_E5-2/E5-2_labels_claude.json out.json` (CPU, under a minute; it rebuilds the E2-8 questions with `analysis/data_dis.py`, which downloads the disease ontology).
 
 E6: in `analysis/e6/`: `python e6_analyze.py ../../data/E6_answers_gemma-2-2b-it.json out.json` (CPU, seconds; uses `../e5/labels/` for Gemini's labels). E7: `python e7_analyze.py ../../data/E7_chains_nli.json ../../data/E6_answers_gemma-2-2b-it.json out.json` (CPU, about 10 minutes for the BP grid). E8: in `analysis/e8/`, `python e8_analyze.py ../../data/E8_chains_nli.json out.json` (CPU, about 5 minutes).
+E9: build `e42_data.json` as above (in `analysis/e4/`), then in `analysis/e9/`: `python e91_from_small.py ../../data/E9-1_checker_scores.json` (makes `E91_checker.json`). E9: `python e9.py`; E9-1: `python e9.py real`; E9-2: `E9_STRONG=1 E9_CHECKERS=e8D python e9.py real`; E9-3: `python e93.py` (CPU, about 10 minutes for 5 splits). Then `python e9_analyze.py`, `e91_analyze.py`, `e92_analyze.py`, `e93_analyze.py` apply the decision rules. `E9_SPLITS`/`E93_SPLITS` choose the splits.
+
 ## Related work and what is different
 
 The closest work we know is BTProp (Hou et al., NAACL 2025, https://arxiv.org/abs/2406.06950). It builds links between statements with a separate model (NLI) and uses belief propagation to detect an LLM's hallucinations. Here, the model also writes the exclusion rules itself, and the network also estimates whether each rule is true (E2-6). In E2-10 we ran BTProp on its own released trees: with the links as given, BTProp is better on WikiBio and tied on FactCheckGPT, so we do not claim our method is better. When a share of the links is deliberately flipped (E2-11), BTProp, which treats the links as certain, degrades sharply, while the rule-doubting BP does not. With links labeled by real models (E2-12), however, BTProp barely degrades: natural labeling errors seem far less harmful than random flips. The model's own confidence (P(True)), which the BTProp paper treats as a strong baseline, is included here as a baseline. Other related work: Crum et al. 2024 (asking LLMs for disjointness axioms), Xu et al. 2026 (neighbor-consistency belief), Jiang, Lowd and Dou 2012 (cleaning an extracted knowledge base with Markov logic), Maieutic prompting (Jung et al. 2022), BeliefBank (Kassner et al. 2021). The E2-9 pattern (doubting the rules costs a little when the rules are right and helps when many are wrong) matches the analysis in Snorkel (Ratner et al., VLDB 2017, https://arxiv.org/abs/1711.10160): learning how accurate each source is helps most when source accuracies vary. Here we see the same tendency when a model checks its own answers.
