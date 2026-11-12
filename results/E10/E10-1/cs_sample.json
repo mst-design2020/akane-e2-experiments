@@ -1,0 +1,7208 @@
+{
+"P": [
+{
+"id": 2645,
+"stmt": "Crossing is a part of a cat."
+},
+{
+"id": 9608,
+"stmt": "Widening is a part of a clock."
+},
+{
+"id": 2427,
+"stmt": "Corpus is a part of a shook."
+},
+{
+"id": 7078,
+"stmt": "Rod is a part of a tank."
+},
+{
+"id": 2215,
+"stmt": "Contact is a part of a shark."
+},
+{
+"id": 5968,
+"stmt": "Orb is a part of a tank."
+},
+{
+"id": 9477,
+"stmt": "Wave is a part of a shook."
+},
+{
+"id": 5707,
+"stmt": "Nail is a part of a chick."
+},
+{
+"id": 7586,
+"stmt": "Shank is a part of a sheep."
+},
+{
+"id": 4040,
+"stmt": "Gum is a part of a receiver."
+},
+{
+"id": 9558,
+"stmt": "Weeds is a part of a marijuana."
+},
+{
+"id": 5168,
+"stmt": "Lid is a part of a clock."
+},
+{
+"id": 1099,
+"stmt": "Breast is a part of a puppy."
+},
+{
+"id": 5860,
+"stmt": "Nucleus is a part of a dog."
+},
+{
+"id": 5823,
+"stmt": "Nose is a part of a bridge."
+},
+{
+"id": 8586,
+"stmt": "Temple is a part of a chapel."
+},
+{
+"id": 9003,
+"stmt": "Tube is a part of a bridge."
+},
+{
+"id": 3467,
+"stmt": "Fin is a part of a male."
+},
+{
+"id": 3155,
+"stmt": "Elevator is a part of a cat."
+},
+{
+"id": 8576,
+"stmt": "Teeth is a part of a sheep."
+},
+{
+"id": 5348,
+"stmt": "Lock is a part of a clock."
+},
+{
+"id": 6846,
+"stmt": "Resistance is a part of a chapel."
+},
+{
+"id": 4089,
+"stmt": "Hair is a part of a deer."
+},
+{
+"id": 8895,
+"stmt": "Track is a part of a kidney."
+},
+{
+"id": 5257,
+"stmt": "Lip is a part of a chick."
+},
+{
+"id": 3669,
+"stmt": "Forehead is a part of a deer."
+},
+{
+"id": 5152,
+"stmt": "Level is a part of a rifle."
+},
+{
+"id": 7795,
+"stmt": "Skeleton is a part of a shark."
+},
+{
+"id": 4233,
+"stmt": "Heading is a part of a bridge."
+},
+{
+"id": 2910,
+"stmt": "Door is a part of an architecture."
+},
+{
+"id": 6689,
+"stmt": "Punch is a part of a wheat."
+},
+{
+"id": 9712,
+"stmt": "Wire is a part of a rifle."
+},
+{
+"id": 3917,
+"stmt": "Goose is a part of a male."
+},
+{
+"id": 387,
+"stmt": "Axle is a part of a shook."
+},
+{
+"id": 9336,
+"stmt": "Vertical is a part of a chapel."
+},
+{
+"id": 8441,
+"stmt": "Tail is a part of an elephant."
+},
+{
+"id": 4831,
+"stmt": "Jewel is a part of a bacteria."
+},
+{
+"id": 2214,
+"stmt": "Contact is a part of a salmon."
+},
+{
+"id": 4119,
+"stmt": "Half-moon is a part of a deer."
+},
+{
+"id": 8668,
+"stmt": "Threshold is a part of a tank."
+},
+{
+"id": 3500,
+"stmt": "Finder is a part of a receiver."
+},
+{
+"id": 7907,
+"stmt": "Snout is a part of a male."
+},
+{
+"id": 3392,
+"stmt": "Feature is a part of a beef."
+},
+{
+"id": 7478,
+"stmt": "Segment is a part of a clock."
+},
+{
+"id": 3700,
+"stmt": "Foundation is a part of a dog."
+},
+{
+"id": 6816,
+"stmt": "Relay is a part of a chapel."
+},
+{
+"id": 8048,
+"stmt": "Staircase is a part of a clock."
+},
+{
+"id": 5382,
+"stmt": "Lounge is a part of an embassy."
+},
+{
+"id": 6144,
+"stmt": "Panther is a part of a salmon."
+},
+{
+"id": 78,
+"stmt": "Annex is a part of a marijuana."
+},
+{
+"id": 5800,
+"stmt": "Nook is a part of a dog."
+},
+{
+"id": 7548,
+"stmt": "Shaft is a part of a marijuana."
+},
+{
+"id": 6191,
+"stmt": "Paw is a part of an elephant."
+},
+{
+"id": 1972,
+"stmt": "Cleaner is a part of a rifle."
+},
+{
+"id": 2243,
+"stmt": "Cope is a part of a road."
+},
+{
+"id": 3047,
+"stmt": "Duct is a part of a male."
+},
+{
+"id": 5063,
+"stmt": "Lash is a part of a road."
+},
+{
+"id": 5956,
+"stmt": "Orb is a part of a lamb."
+},
+{
+"id": 7283,
+"stmt": "Ruin is a part of a road."
+},
+{
+"id": 7328,
+"stmt": "Saddle is a part of a clock."
+},
+{
+"id": 8027,
+"stmt": "Stair is a part of a male."
+},
+{
+"id": 1879,
+"stmt": "Chromosome is a part of a puppy."
+},
+{
+"id": 9259,
+"stmt": "Variation is a part of a puppy."
+},
+{
+"id": 3980,
+"stmt": "Grid is a part of a receiver."
+},
+{
+"id": 7651,
+"stmt": "Shoot is a part of a bacteria."
+},
+{
+"id": 2210,
+"stmt": "Contact is a part of a receiver."
+},
+{
+"id": 4985,
+"stmt": "Lag is a part of a cat."
+},
+{
+"id": 3000,
+"stmt": "Driver is a part of an architecture."
+},
+{
+"id": 3608,
+"stmt": "Foil is a part of a clock."
+},
+{
+"id": 2200,
+"stmt": "Contact is a part of a dog."
+},
+{
+"id": 6020,
+"stmt": "Pad is a part of a receiver."
+},
+{
+"id": 2897,
+"stmt": "Dock is a part of a male."
+},
+{
+"id": 4852,
+"stmt": "Jewel is a part of a rifle."
+},
+{
+"id": 6786,
+"stmt": "Ray is a part of a chapel."
+},
+{
+"id": 268,
+"stmt": "Approach is a part of a tank."
+},
+{
+"id": 419,
+"stmt": "Balance is a part of a wheat."
+},
+{
+"id": 3703,
+"stmt": "Foundation is a part of a garage."
+},
+{
+"id": 5154,
+"stmt": "Level is a part of a salmon."
+},
+{
+"id": 3582,
+"stmt": "Flooring is a part of an embassy."
+},
+{
+"id": 2403,
+"stmt": "Corpus is a part of a bridge."
+},
+{
+"id": 3959,
+"stmt": "Graphic is a part of a wheat."
+},
+{
+"id": 250,
+"stmt": "Approach is a part of a dog."
+},
+{
+"id": 8702,
+"stmt": "Toe is a part of a beef."
+},
+{
+"id": 3553,
+"stmt": "Floor is a part of a garage."
+},
+{
+"id": 3001,
+"stmt": "Driver is a part of a bacteria."
+},
+{
+"id": 6926,
+"stmt": "Retina is a part of a sheep."
+},
+{
+"id": 9705,
+"stmt": "Wire is a part of a kidney."
+},
+{
+"id": 9540,
+"stmt": "Weeds is a part of an architecture."
+},
+{
+"id": 5670,
+"stmt": "Muzzle is a part of an architecture."
+},
+{
+"id": 7992,
+"stmt": "Springer is a part of an embassy."
+},
+{
+"id": 8918,
+"stmt": "Tread is a part of a clock."
+},
+{
+"id": 4810,
+"stmt": "Jersey is a part of a dog."
+},
+{
+"id": 3734,
+"stmt": "Foyer is a part of a highway."
+},
+{
+"id": 7058,
+"stmt": "Rod is a part of a clock."
+},
+{
+"id": 1809,
+"stmt": "Chin is a part of a deer."
+},
+{
+"id": 2444,
+"stmt": "Cortex is a part of a highway."
+},
+{
+"id": 3736,
+"stmt": "Foyer is a part of a lamb."
+},
+{
+"id": 2696,
+"stmt": "Crown is a part of a sheep."
+},
+{
+"id": 4398,
+"stmt": "Hind is a part of a marijuana."
+},
+{
+"id": 740,
+"stmt": "Bend is a part of a receiver."
+},
+{
+"id": 4385,
+"stmt": "Hind is a part of a cat."
+},
+{
+"id": 7916,
+"stmt": "Snout is a part of a sheep."
+},
+{
+"id": 5150,
+"stmt": "Level is a part of a receiver."
+},
+{
+"id": 6006,
+"stmt": "Pad is a part of a chapel."
+},
+{
+"id": 318,
+"stmt": "Ash is a part of a marijuana."
+},
+{
+"id": 8932,
+"stmt": "Tread is a part of a rifle."
+},
+{
+"id": 5336,
+"stmt": "Lobe is a part of a sheep."
+},
+{
+"id": 2286,
+"stmt": "Corner is a part of a chapel."
+},
+{
+"id": 2194,
+"stmt": "Contact is a part of a bud."
+},
+{
+"id": 3307,
+"stmt": "Facial is a part of a chick."
+},
+{
+"id": 8395,
+"stmt": "Sucker is a part of a shark."
+},
+{
+"id": 3409,
+"stmt": "Feature is a part of a puppy."
+},
+{
+"id": 9622,
+"stmt": "Widening is a part of a rifle."
+},
+{
+"id": 3763,
+"stmt": "Frame is a part of a garage."
+},
+{
+"id": 794,
+"stmt": "Blood is a part of a highway."
+},
+{
+"id": 156,
+"stmt": "Antique is a part of a chapel."
+},
+{
+"id": 2202,
+"stmt": "Contact is a part of an embassy."
+},
+{
+"id": 6093,
+"stmt": "Pane is a part of a bridge."
+},
+{
+"id": 2033,
+"stmt": "Clone is a part of a road."
+},
+{
+"id": 2626,
+"stmt": "Crest is a part of a lamb."
+},
+{
+"id": 7580,
+"stmt": "Shank is a part of a receiver."
+},
+{
+"id": 2768,
+"stmt": "Dial is a part of a clock."
+},
+{
+"id": 4078,
+"stmt": "Gun-sight is a part of a tank."
+},
+{
+"id": 3726,
+"stmt": "Foyer is a part of a chapel."
+},
+{
+"id": 8880,
+"stmt": "Track is a part of an architecture."
+},
+{
+"id": 7825,
+"stmt": "Skull is a part of a shark."
+},
+{
+"id": 1090,
+"stmt": "Breast is a part of a dog."
+},
+{
+"id": 3872,
+"stmt": "God is a part of a beef."
+},
+{
+"id": 9143,
+"stmt": "Tyre is a part of a road."
+},
+{
+"id": 6437,
+"stmt": "Placenta is a part of a male."
+},
+{
+"id": 4225,
+"stmt": "Header is a part of a shark."
+},
+{
+"id": 1900,
+"stmt": "Circle is a part of a dog."
+},
+{
+"id": 1657,
+"stmt": "Ceiling is a part of a chick."
+},
+{
+"id": 559,
+"stmt": "Batting is a part of a puppy."
+},
+{
+"id": 3415,
+"stmt": "Feature is a part of a shark."
+},
+{
+"id": 4072,
+"stmt": "Gun-sight is a part of a rifle."
+},
+{
+"id": 7693,
+"stmt": "Short is a part of a garage."
+},
+{
+"id": 4820,
+"stmt": "Jersey is a part of a receiver."
+},
+{
+"id": 9031,
+"stmt": "Turnaround is a part of a bacteria."
+},
+{
+"id": 1912,
+"stmt": "Circle is a part of a rifle."
+},
+{
+"id": 3337,
+"stmt": "Factor is a part of a chick."
+},
+{
+"id": 8899,
+"stmt": "Track is a part of a puppy."
+},
+{
+"id": 1106,
+"stmt": "Breast is a part of a sheep."
+},
+{
+"id": 3162,
+"stmt": "Elevator is a part of an embassy."
+},
+{
+"id": 3757,
+"stmt": "Frame is a part of a chick."
+},
+{
+"id": 6985,
+"stmt": "Rim is a part of a shark."
+},
+{
+"id": 711,
+"stmt": "Belly is a part of a reed."
+},
+{
+"id": 4838,
+"stmt": "Jewel is a part of a clock."
+},
+{
+"id": 8648,
+"stmt": "Threshold is a part of a clock."
+},
+{
+"id": 5942,
+"stmt": "Orb is a part of a beef."
+},
+{
+"id": 465,
+"stmt": "Barb is a part of a kidney."
+},
+{
+"id": 4627,
+"stmt": "Iris is a part of a chick."
+},
+{
+"id": 1217,
+"stmt": "Bullet is a part of a male."
+},
+{
+"id": 1779,
+"stmt": "Chest is a part of a deer."
+},
+{
+"id": 7538,
+"stmt": "Shaft is a part of a clock."
+},
+{
+"id": 5295,
+"stmt": "Lobby is a part of a kidney."
+},
+{
+"id": 4765,
+"stmt": "Jaw is a part of a shark."
+},
+{
+"id": 6177,
+"stmt": "Part is a part of a shook."
+},
+{
+"id": 2570,
+"stmt": "Courtyard is a part of a receiver."
+},
+{
+"id": 9290,
+"stmt": "Vas is a part of a receiver."
+},
+{
+"id": 1825,
+"stmt": "Chin is a part of a shark."
+},
+{
+"id": 3828,
+"stmt": "Fungus is a part of a marijuana."
+},
+{
+"id": 3266,
+"stmt": "Eyebrow is a part of a sheep."
+},
+{
+"id": 9197,
+"stmt": "Vaccine is a part of a male."
+},
+{
+"id": 8120,
+"stmt": "Stave is a part of a receiver."
+},
+{
+"id": 3601,
+"stmt": "Foil is a part of a bacteria."
+},
+{
+"id": 7951,
+"stmt": "Spit is a part of a bacteria."
+},
+{
+"id": 2250,
+"stmt": "Coping is a part of an architecture."
+},
+{
+"id": 328,
+"stmt": "Ash is a part of a tank."
+},
+{
+"id": 6909,
+"stmt": "Retina is a part of a deer."
+},
+{
+"id": 5165,
+"stmt": "Lid is a part of a cat."
+},
+{
+"id": 5637,
+"stmt": "Movement is a part of a shook."
+},
+{
+"id": 883,
+"stmt": "Bolt is a part of a garage."
+},
+{
+"id": 5484,
+"stmt": "Matrix is a part of a salmon."
+},
+{
+"id": 6446,
+"stmt": "Placenta is a part of a sheep."
+},
+{
+"id": 7977,
+"stmt": "Spit is a part of a shook."
+},
+{
+"id": 2192,
+"stmt": "Contact is a part of a beef."
+},
+{
+"id": 3655,
+"stmt": "Food is a part of a shark."
+},
+{
+"id": 9697,
+"stmt": "Wire is a part of a chick."
+},
+{
+"id": 4162,
+"stmt": "Hall is a part of a rifle."
+},
+{
+"id": 5301,
+"stmt": "Lobby is a part of a reed."
+},
+{
+"id": 19,
+"stmt": "Action is a part of a puppy."
+},
+{
+"id": 5334,
+"stmt": "Lobe is a part of a salmon."
+},
+{
+"id": 4892,
+"stmt": "John is a part of a beef."
+},
+{
+"id": 5446,
+"stmt": "Mast is a part of a lamb."
+},
+{
+"id": 7442,
+"stmt": "Section is a part of a beef."
+},
+{
+"id": 7898,
+"stmt": "Snout is a part of a clock."
+},
+{
+"id": 8972,
+"stmt": "Trunk is a part of a beef."
+},
+{
+"id": 5437,
+"stmt": "Mast is a part of a chick."
+},
+{
+"id": 5062,
+"stmt": "Lash is a part of a rifle."
+},
+{
+"id": 4926,
+"stmt": "Key is a part of a chapel."
+},
+{
+"id": 8061,
+"stmt": "Staircase is a part of a reed."
+},
+{
+"id": 6034,
+"stmt": "Palate is a part of a bud."
+},
+{
+"id": 6700,
+"stmt": "Pupil is a part of a dog."
+},
+{
+"id": 9366,
+"stmt": "Vessel is a part of a chapel."
+},
+{
+"id": 7650,
+"stmt": "Shoot is a part of an architecture."
+},
+{
+"id": 8024,
+"stmt": "Stair is a part of a highway."
+},
+{
+"id": 6959,
+"stmt": "Rib is a part of a wheat."
+},
+{
+"id": 1179,
+"stmt": "Bulb is a part of a deer."
+},
+{
+"id": 762,
+"stmt": "Bill is a part of an embassy."
+},
+{
+"id": 802,
+"stmt": "Blood is a part of a rifle."
+},
+{
+"id": 1500,
+"stmt": "Carpet is a part of an architecture."
+},
+{
+"id": 4564,
+"stmt": "Interchange is a part of a bud."
+},
+{
+"id": 5253,
+"stmt": "Lip is a part of a bridge."
+},
+{
+"id": 9674,
+"stmt": "Wing is a part of a highway."
+},
+{
+"id": 4171,
+"stmt": "Hammer is a part of a bacteria."
+},
+{
+"id": 6930,
+"stmt": "Rib is a part of an architecture."
+},
+{
+"id": 640,
+"stmt": "Beetle is a part of a dog."
+},
+{
+"id": 5948,
+"stmt": "Orb is a part of a clock."
+},
+{
+"id": 1138,
+"stmt": "Brim is a part of a tank."
+},
+{
+"id": 9229,
+"stmt": "Vane is a part of a puppy."
+},
+{
+"id": 8644,
+"stmt": "Threshold is a part of a bud."
+},
+{
+"id": 8440,
+"stmt": "Tail is a part of a dog."
+},
+{
+"id": 4793,
+"stmt": "Jelly is a part of a road."
+},
+{
+"id": 2799,
+"stmt": "Dice is a part of a deer."
+},
+{
+"id": 6905,
+"stmt": "Retina is a part of a cat."
+},
+{
+"id": 7558,
+"stmt": "Shaft is a part of a tank."
+},
+{
+"id": 7457,
+"stmt": "Section is a part of a male."
+},
+{
+"id": 6052,
+"stmt": "Palate is a part of a rifle."
+},
+{
+"id": 2208,
+"stmt": "Contact is a part of a marijuana."
+},
+{
+"id": 478,
+"stmt": "Barb is a part of a tank."
+},
+{
+"id": 6271,
+"stmt": "Pelvis is a part of a bacteria."
+},
+{
+"id": 7250,
+"stmt": "Row is a part of a receiver."
+},
+{
+"id": 757,
+"stmt": "Bill is a part of a chick."
+},
+{
+"id": 7797,
+"stmt": "Skeleton is a part of a shook."
+},
+{
+"id": 8150,
+"stmt": "Step is a part of a receiver."
+},
+{
+"id": 243,
+"stmt": "Approach is a part of a bridge."
+},
+{
+"id": 8855,
+"stmt": "Total is a part of a cat."
+},
+{
+"id": 742,
+"stmt": "Bend is a part of a rifle."
+},
+{
+"id": 2510,
+"stmt": "Course is a part of a receiver."
+},
+{
+"id": 1802,
+"stmt": "Chin is a part of a beef."
+},
+{
+"id": 1663,
+"stmt": "Ceiling is a part of a garage."
+},
+{
+"id": 5452,
+"stmt": "Mast is a part of a rifle."
+},
+{
+"id": 5781,
+"stmt": "Nib is a part of a reed."
+},
+{
+"id": 5089,
+"stmt": "Left is a part of a puppy."
+},
+{
+"id": 4418,
+"stmt": "Hinge is a part of a clock."
+},
+{
+"id": 1653,
+"stmt": "Ceiling is a part of a bridge."
+},
+{
+"id": 9077,
+"stmt": "Turnout is a part of a male."
+},
+{
+"id": 7140,
+"stmt": "Room is a part of an architecture."
+},
+{
+"id": 1434,
+"stmt": "Capacitor is a part of a salmon."
+},
+{
+"id": 1507,
+"stmt": "Carpet is a part of a chick."
+},
+{
+"id": 3213,
+"stmt": "Eyeball is a part of a bridge."
+},
+{
+"id": 360,
+"stmt": "Axle is a part of an architecture."
+},
+{
+"id": 8446,
+"stmt": "Tail is a part of a lamb."
+},
+{
+"id": 8224,
+"stmt": "Storey is a part of a bud."
+},
+{
+"id": 1285,
+"stmt": "Bypass is a part of a shark."
+},
+{
+"id": 8999,
+"stmt": "Trunk is a part of a wheat."
+},
+{
+"id": 5378,
+"stmt": "Lounge is a part of a clock."
+},
+{
+"id": 8646,
+"stmt": "Threshold is a part of a chapel."
+},
+{
+"id": 141,
+"stmt": "Anterior is a part of a reed."
+},
+{
+"id": 9627,
+"stmt": "Widening is a part of a shook."
+},
+{
+"id": 5001,
+"stmt": "Lag is a part of a reed."
+},
+{
+"id": 8312,
+"stmt": "Stud is a part of a beef."
+},
+{
+"id": 593,
+"stmt": "Beak is a part of a road."
+},
+{
+"id": 7089,
+"stmt": "Roe is a part of a deer."
+},
+{
+"id": 5558,
+"stmt": "Moss is a part of a clock."
+},
+{
+"id": 3222,
+"stmt": "Eyeball is a part of an embassy."
+},
+{
+"id": 8026,
+"stmt": "Stair is a part of a lamb."
+},
+{
+"id": 4049,
+"stmt": "Gum is a part of a wheat."
+},
+{
+"id": 8039,
+"stmt": "Stair is a part of a wheat."
+},
+{
+"id": 4964,
+"stmt": "Keystone is a part of a highway."
+},
+{
+"id": 2586,
+"stmt": "Cradle is a part of a chapel."
+},
+{
+"id": 1640,
+"stmt": "Cathode is a part of a receiver."
+},
+{
+"id": 5187,
+"stmt": "Lid is a part of a shook."
+},
+{
+"id": 1113,
+"stmt": "Brim is a part of a bridge."
+},
+{
+"id": 3235,
+"stmt": "Eyeball is a part of a shark."
+},
+{
+"id": 4380,
+"stmt": "Hind is a part of an architecture."
+},
+{
+"id": 2889,
+"stmt": "Dock is a part of a deer."
+},
+{
+"id": 7498,
+"stmt": "Segment is a part of a tank."
+},
+{
+"id": 6147,
+"stmt": "Panther is a part of a shook."
+},
+{
+"id": 1145,
+"stmt": "Brow is a part of a cat."
+},
+{
+"id": 8327,
+"stmt": "Stud is a part of a male."
+},
+{
+"id": 4322,
+"stmt": "Hemisphere is a part of a beef."
+},
+{
+"id": 5139,
+"stmt": "Level is a part of a deer."
+},
+{
+"id": 3704,
+"stmt": "Foundation is a part of a highway."
+},
+{
+"id": 3697,
+"stmt": "Foundation is a part of a chick."
+},
+{
+"id": 6003,
+"stmt": "Pad is a part of a bridge."
+},
+{
+"id": 2803,
+"stmt": "Dice is a part of a garage."
+},
+{
+"id": 4988,
+"stmt": "Lag is a part of a clock."
+},
+{
+"id": 7518,
+"stmt": "Serum is a part of a marijuana."
+},
+{
+"id": 7067,
+"stmt": "Rod is a part of a male."
+},
+{
+"id": 4983,
+"stmt": "Lag is a part of a bridge."
+},
+{
+"id": 9348,
+"stmt": "Vertical is a part of a marijuana."
+},
+{
+"id": 1149,
+"stmt": "Brow is a part of a deer."
+},
+{
+"id": 1826,
+"stmt": "Chin is a part of a sheep."
+},
+{
+"id": 5846,
+"stmt": "Nose is a part of a sheep."
+},
+{
+"id": 2861,
+"stmt": "Digit is a part of an elephant."
+},
+{
+"id": 4782,
+"stmt": "Jelly is a part of an embassy."
+},
+{
+"id": 2614,
+"stmt": "Crest is a part of a bud."
+},
+{
+"id": 8124,
+"stmt": "Stave is a part of a salmon."
+},
+{
+"id": 8187,
+"stmt": "Stigma is a part of a shook."
+},
+{
+"id": 2008,
+"stmt": "Clip is a part of a tank."
+},
+{
+"id": 406,
+"stmt": "Balance is a part of a lamb."
+},
+{
+"id": 9352,
+"stmt": "Vertical is a part of a rifle."
+},
+{
+"id": 6297,
+"stmt": "Pelvis is a part of a shook."
+},
+{
+"id": 5667,
+"stmt": "Mustache is a part of a shook."
+},
+{
+"id": 8340,
+"stmt": "Style is a part of an architecture."
+},
+{
+"id": 8726,
+"stmt": "Toe is a part of a sheep."
+},
+{
+"id": 6748,
+"stmt": "Quill is a part of a tank."
+},
+{
+"id": 8494,
+"stmt": "Tap is a part of a bud."
+},
+{
+"id": 5254,
+"stmt": "Lip is a part of a bud."
+},
+{
+"id": 4582,
+"stmt": "Interchange is a part of a rifle."
+},
+{
+"id": 9020,
+"stmt": "Tube is a part of a receiver."
+},
+{
+"id": 2344,
+"stmt": "Corolla is a part of a bud."
+},
+{
+"id": 3693,
+"stmt": "Foundation is a part of a bridge."
+},
+{
+"id": 5180,
+"stmt": "Lid is a part of a receiver."
+},
+{
+"id": 5940,
+"stmt": "Orb is a part of an architecture."
+},
+{
+"id": 154,
+"stmt": "Antique is a part of a bud."
+},
+{
+"id": 1856,
+"stmt": "Choke is a part of a sheep."
+},
+{
+"id": 2206,
+"stmt": "Contact is a part of a lamb."
+},
+{
+"id": 1950,
+"stmt": "Cleaner is a part of an architecture."
+},
+{
+"id": 846,
+"stmt": "Boiler is a part of a chapel."
+},
+{
+"id": 793,
+"stmt": "Blood is a part of a garage."
+},
+{
+"id": 7146,
+"stmt": "Room is a part of a chapel."
+},
+{
+"id": 6917,
+"stmt": "Retina is a part of a male."
+},
+{
+"id": 2594,
+"stmt": "Cradle is a part of a highway."
+},
+{
+"id": 7955,
+"stmt": "Spit is a part of a cat."
+},
+{
+"id": 3698,
+"stmt": "Foundation is a part of a clock."
+},
+{
+"id": 8186,
+"stmt": "Stigma is a part of a sheep."
+},
+{
+"id": 7255,
+"stmt": "Row is a part of a shark."
+},
+{
+"id": 3574,
+"stmt": "Flooring is a part of a bud."
+},
+{
+"id": 6162,
+"stmt": "Part is a part of an embassy."
+},
+{
+"id": 3827,
+"stmt": "Fungus is a part of a male."
+},
+{
+"id": 5136,
+"stmt": "Level is a part of a chapel."
+},
+{
+"id": 2843,
+"stmt": "Differential is a part of a road."
+},
+{
+"id": 7867,
+"stmt": "Smoke is a part of a chick."
+},
+{
+"id": 9378,
+"stmt": "Vessel is a part of a marijuana."
+},
+{
+"id": 6355,
+"stmt": "Photograph is a part of a shark."
+},
+{
+"id": 798,
+"stmt": "Blood is a part of a marijuana."
+},
+{
+"id": 1665,
+"stmt": "Ceiling is a part of a kidney."
+},
+{
+"id": 8383,
+"stmt": "Sucker is a part of a garage."
+},
+{
+"id": 5447,
+"stmt": "Mast is a part of a male."
+},
+{
+"id": 8618,
+"stmt": "Thick-knee is a part of a clock."
+},
+{
+"id": 3754,
+"stmt": "Frame is a part of a bud."
+},
+{
+"id": 891,
+"stmt": "Bolt is a part of a reed."
+},
+{
+"id": 6336,
+"stmt": "Photograph is a part of a chapel."
+},
+{
+"id": 2167,
+"stmt": "Cone is a part of a chick."
+},
+{
+"id": 9325,
+"stmt": "Vent-hole is a part of a shark."
+},
+{
+"id": 50,
+"stmt": "Aerial is a part of a receiver."
+},
+{
+"id": 709,
+"stmt": "Belly is a part of a puppy."
+},
+{
+"id": 3215,
+"stmt": "Eyeball is a part of a cat."
+},
+{
+"id": 6844,
+"stmt": "Resistance is a part of a bud."
+},
+{
+"id": 3183,
+"stmt": "Extension is a part of a bridge."
+},
+{
+"id": 4421,
+"stmt": "Hinge is a part of an elephant."
+},
+{
+"id": 3457,
+"stmt": "Fin is a part of a chick."
+},
+{
+"id": 7539,
+"stmt": "Shaft is a part of a deer."
+},
+{
+"id": 2121,
+"stmt": "Cock is a part of a reed."
+},
+{
+"id": 5509,
+"stmt": "Mock-up is a part of a puppy."
+},
+{
+"id": 6715,
+"stmt": "Pupil is a part of a shark."
+},
+{
+"id": 9345,
+"stmt": "Vertical is a part of a kidney."
+},
+{
+"id": 4278,
+"stmt": "Heat is a part of a marijuana."
+},
+{
+"id": 7698,
+"stmt": "Short is a part of a marijuana."
+},
+{
+"id": 4160,
+"stmt": "Hall is a part of a receiver."
+},
+{
+"id": 1811,
+"stmt": "Chin is a part of an elephant."
+},
+{
+"id": 5109,
+"stmt": "Lens is a part of a deer."
+},
+{
+"id": 3988,
+"stmt": "Grid is a part of a tank."
+},
+{
+"id": 7423,
+"stmt": "Scum is a part of a garage."
+},
+{
+"id": 8721,
+"stmt": "Toe is a part of a reed."
+},
+{
+"id": 7210,
+"stmt": "Roundabout is a part of a dog."
+},
+{
+"id": 2428,
+"stmt": "Corpus is a part of a tank."
+},
+{
+"id": 7557,
+"stmt": "Shaft is a part of a shook."
+},
+{
+"id": 3367,
+"stmt": "Feather is a part of a chick."
+},
+{
+"id": 5782,
+"stmt": "Nib is a part of a rifle."
+},
+{
+"id": 7369,
+"stmt": "Saliva is a part of a puppy."
+},
+{
+"id": 7574,
+"stmt": "Shank is a part of a highway."
+},
+{
+"id": 6411,
+"stmt": "Pineapple is a part of a reed."
+},
+{
+"id": 9703,
+"stmt": "Wire is a part of a garage."
+},
+{
+"id": 9034,
+"stmt": "Turnaround is a part of a bud."
+},
+{
+"id": 4083,
+"stmt": "Hair is a part of a bridge."
+},
+{
+"id": 7339,
+"stmt": "Saddle is a part of a puppy."
+},
+{
+"id": 6518,
+"stmt": "Plume is a part of a clock."
+},
+{
+"id": 2723,
+"stmt": "Curve is a part of a road."
+},
+{
+"id": 274,
+"stmt": "Arch is a part of a bud."
+},
+{
+"id": 2850,
+"stmt": "Digit is a part of an architecture."
+},
+{
+"id": 3384,
+"stmt": "Feather is a part of a salmon."
+},
+{
+"id": 8898,
+"stmt": "Track is a part of a marijuana."
+},
+{
+"id": 4798,
+"stmt": "Jelly is a part of a tank."
+},
+{
+"id": 1034,
+"stmt": "Brain-stem is a part of a highway."
+},
+{
+"id": 63,
+"stmt": "Annex is a part of a bridge."
+},
+{
+"id": 4563,
+"stmt": "Interchange is a part of a bridge."
+},
+{
+"id": 5839,
+"stmt": "Nose is a part of a puppy."
+},
+{
+"id": 5255,
+"stmt": "Lip is a part of a cat."
+},
+{
+"id": 7976,
+"stmt": "Spit is a part of a sheep."
+},
+{
+"id": 6185,
+"stmt": "Paw is a part of a cat."
+},
+{
+"id": 6274,
+"stmt": "Pelvis is a part of a bud."
+},
+{
+"id": 8398,
+"stmt": "Sucker is a part of a tank."
+},
+{
+"id": 7444,
+"stmt": "Section is a part of a bud."
+},
+{
+"id": 1777,
+"stmt": "Chest is a part of a chick."
+},
+{
+"id": 1388,
+"stmt": "Cap is a part of a clock."
+},
+{
+"id": 2904,
+"stmt": "Dock is a part of a salmon."
+},
+{
+"id": 5335,
+"stmt": "Lobe is a part of a shark."
+},
+{
+"id": 6159,
+"stmt": "Part is a part of a deer."
+},
+{
+"id": 7385,
+"stmt": "Sash is a part of a cat."
+},
+{
+"id": 5618,
+"stmt": "Movement is a part of a clock."
+},
+{
+"id": 4202,
+"stmt": "Header is a part of a beef."
+},
+{
+"id": 8473,
+"stmt": "Tandem is a part of a garage."
+},
+{
+"id": 3386,
+"stmt": "Feather is a part of a sheep."
+},
+{
+"id": 7020,
+"stmt": "Roadside is a part of an architecture."
+},
+{
+"id": 4632,
+"stmt": "Iris is a part of an embassy."
+},
+{
+"id": 9038,
+"stmt": "Turnaround is a part of a clock."
+},
+{
+"id": 1050,
+"stmt": "Brake is a part of an architecture."
+},
+{
+"id": 472,
+"stmt": "Barb is a part of a rifle."
+},
+{
+"id": 8560,
+"stmt": "Teeth is a part of a dog."
+},
+{
+"id": 8018,
+"stmt": "Stair is a part of a clock."
+},
+{
+"id": 2160,
+"stmt": "Cone is a part of an architecture."
+},
+{
+"id": 1598,
+"stmt": "Casing is a part of a clock."
+},
+{
+"id": 5130,
+"stmt": "Level is a part of an architecture."
+},
+{
+"id": 7787,
+"stmt": "Skeleton is a part of a male."
+},
+{
+"id": 3594,
+"stmt": "Flooring is a part of a salmon."
+},
+{
+"id": 7267,
+"stmt": "Ruin is a part of a chick."
+},
+{
+"id": 6161,
+"stmt": "Part is a part of an elephant."
+},
+{
+"id": 7700,
+"stmt": "Short is a part of a receiver."
+},
+{
+"id": 115,
+"stmt": "Antenna is a part of a shark."
+},
+{
+"id": 7721,
+"stmt": "Shoulder is a part of an elephant."
+},
+{
+"id": 1353,
+"stmt": "Cannon is a part of a bridge."
+},
+{
+"id": 437,
+"stmt": "Bang is a part of a male."
+},
+{
+"id": 6828,
+"stmt": "Relay is a part of a marijuana."
+},
+{
+"id": 9153,
+"stmt": "Upstairs is a part of a bridge."
+},
+{
+"id": 6908,
+"stmt": "Retina is a part of a clock."
+},
+{
+"id": 391,
+"stmt": "Balance is a part of a bacteria."
+},
+{
+"id": 8466,
+"stmt": "Tandem is a part of a chapel."
+},
+{
+"id": 8323,
+"stmt": "Stud is a part of a garage."
+},
+{
+"id": 8375,
+"stmt": "Sucker is a part of a cat."
+},
+{
+"id": 8903,
+"stmt": "Track is a part of a road."
+},
+{
+"id": 2580,
+"stmt": "Cradle is a part of an architecture."
+},
+{
+"id": 7727,
+"stmt": "Shoulder is a part of a male."
+},
+{
+"id": 5985,
+"stmt": "Orbit is a part of a kidney."
+},
+{
+"id": 6156,
+"stmt": "Part is a part of a chapel."
+},
+{
+"id": 6103,
+"stmt": "Pane is a part of a garage."
+},
+{
+"id": 9358,
+"stmt": "Vertical is a part of a tank."
+},
+{
+"id": 2954,
+"stmt": "Doorstep is a part of a highway."
+},
+{
+"id": 6439,
+"stmt": "Placenta is a part of a puppy."
+},
+{
+"id": 8642,
+"stmt": "Threshold is a part of a beef."
+},
+{
+"id": 2708,
+"stmt": "Curve is a part of a clock."
+},
+{
+"id": 6867,
+"stmt": "Resistance is a part of a shook."
+},
+{
+"id": 1011,
+"stmt": "Brain is a part of a reed."
+},
+{
+"id": 1772,
+"stmt": "Chest is a part of a beef."
+},
+{
+"id": 3068,
+"stmt": "Ear is a part of a clock."
+},
+{
+"id": 6197,
+"stmt": "Paw is a part of a male."
+},
+{
+"id": 7811,
+"stmt": "Skull is a part of an elephant."
+},
+{
+"id": 25,
+"stmt": "Action is a part of a shark."
+},
+{
+"id": 747,
+"stmt": "Bend is a part of a shook."
+},
+{
+"id": 3352,
+"stmt": "Factor is a part of a rifle."
+},
+{
+"id": 9102,
+"stmt": "Turret is a part of an embassy."
+},
+{
+"id": 1007,
+"stmt": "Brain is a part of a male."
+},
+{
+"id": 7804,
+"stmt": "Skull is a part of a bud."
+},
+{
+"id": 1436,
+"stmt": "Capacitor is a part of a sheep."
+},
+{
+"id": 5207,
+"stmt": "Lift is a part of a male."
+},
+{
+"id": 2982,
+"stmt": "Doorway is a part of an embassy."
+},
+{
+"id": 7259,
+"stmt": "Row is a part of a wheat."
+},
+{
+"id": 3249,
+"stmt": "Eyebrow is a part of a deer."
+},
+{
+"id": 7620,
+"stmt": "Shift is a part of an architecture."
+},
+{
+"id": 7484,
+"stmt": "Segment is a part of a highway."
+},
+{
+"id": 7873,
+"stmt": "Smoke is a part of a garage."
+},
+{
+"id": 6579,
+"stmt": "Portion is a part of a deer."
+},
+{
+"id": 1445,
+"stmt": "Capital is a part of a cat."
+},
+{
+"id": 6963,
+"stmt": "Rim is a part of a bridge."
+},
+{
+"id": 6368,
+"stmt": "Pier is a part of a clock."
+},
+{
+"id": 8258,
+"stmt": "Story is a part of a clock."
+},
+{
+"id": 7657,
+"stmt": "Shoot is a part of a chick."
+},
+{
+"id": 2820,
+"stmt": "Differential is a part of an architecture."
+},
+{
+"id": 5722,
+"stmt": "Nail is a part of a rifle."
+},
+{
+"id": 9167,
+"stmt": "Upstairs is a part of a male."
+},
+{
+"id": 9188,
+"stmt": "Vaccine is a part of a clock."
+},
+{
+"id": 4500,
+"stmt": "Hoop is a part of an architecture."
+},
+{
+"id": 8736,
+"stmt": "Tom-tom is a part of a chapel."
+},
+{
+"id": 7533,
+"stmt": "Shaft is a part of a bridge."
+},
+{
+"id": 4991,
+"stmt": "Lag is a part of an elephant."
+},
+{
+"id": 5629,
+"stmt": "Movement is a part of a puppy."
+},
+{
+"id": 7336,
+"stmt": "Saddle is a part of a lamb."
+},
+{
+"id": 209,
+"stmt": "Apartment is a part of a wheat."
+},
+{
+"id": 6279,
+"stmt": "Pelvis is a part of a deer."
+},
+{
+"id": 3932,
+"stmt": "Graphic is a part of a beef."
+},
+{
+"id": 2550,
+"stmt": "Courtyard is a part of an architecture."
+},
+{
+"id": 2703,
+"stmt": "Curve is a part of a bridge."
+},
+{
+"id": 6416,
+"stmt": "Pineapple is a part of a sheep."
+},
+{
+"id": 9458,
+"stmt": "Wave is a part of a clock."
+},
+{
+"id": 8610,
+"stmt": "Thick-knee is a part of an architecture."
+},
+{
+"id": 1536,
+"stmt": "Carving is a part of a chapel."
+},
+{
+"id": 694,
+"stmt": "Belly is a part of a bud."
+},
+{
+"id": 1140,
+"stmt": "Brow is a part of an architecture."
+},
+{
+"id": 1416,
+"stmt": "Capacitor is a part of a chapel."
+},
+{
+"id": 7935,
+"stmt": "Soldier-fish is a part of a kidney."
+},
+{
+"id": 5915,
+"stmt": "Optic is a part of a cat."
+},
+{
+"id": 5692,
+"stmt": "Muzzle is a part of a rifle."
+},
+{
+"id": 8636,
+"stmt": "Thick-knee is a part of a sheep."
+},
+{
+"id": 3654,
+"stmt": "Food is a part of a salmon."
+},
+{
+"id": 9630,
+"stmt": "Window is a part of an architecture."
+},
+{
+"id": 6548,
+"stmt": "Poison-berry is a part of a clock."
+},
+{
+"id": 9323,
+"stmt": "Vent-hole is a part of a road."
+},
+{
+"id": 1997,
+"stmt": "Clip is a part of a male."
+},
+{
+"id": 1610,
+"stmt": "Casing is a part of a receiver."
+},
+{
+"id": 9722,
+"stmt": "Work-clothing is a part of a beef."
+},
+{
+"id": 6711,
+"stmt": "Pupil is a part of a reed."
+},
+{
+"id": 7617,
+"stmt": "Sheep-tick is a part of a shook."
+},
+{
+"id": 7564,
+"stmt": "Shank is a part of a bud."
+},
+{
+"id": 9381,
+"stmt": "Vessel is a part of a reed."
+},
+{
+"id": 463,
+"stmt": "Barb is a part of a garage."
+},
+{
+"id": 8996,
+"stmt": "Trunk is a part of a sheep."
+},
+{
+"id": 4551,
+"stmt": "Horse-trail is a part of a reed."
+},
+{
+"id": 6014,
+"stmt": "Pad is a part of a highway."
+},
+{
+"id": 396,
+"stmt": "Balance is a part of a chapel."
+},
+{
+"id": 4014,
+"stmt": "Groundwork is a part of a salmon."
+},
+{
+"id": 9664,
+"stmt": "Wing is a part of a bud."
+},
+{
+"id": 6196,
+"stmt": "Paw is a part of a lamb."
+},
+{
+"id": 6782,
+"stmt": "Ray is a part of a beef."
+},
+{
+"id": 5056,
+"stmt": "Lash is a part of a lamb."
+},
+{
+"id": 8940,
+"stmt": "Trigger is a part of an architecture."
+},
+{
+"id": 8864,
+"stmt": "Total is a part of a highway."
+},
+{
+"id": 4027,
+"stmt": "Gum is a part of a chick."
+},
+{
+"id": 3573,
+"stmt": "Flooring is a part of a bridge."
+},
+{
+"id": 284,
+"stmt": "Arch is a part of a highway."
+},
+{
+"id": 7329,
+"stmt": "Saddle is a part of a deer."
+},
+{
+"id": 3131,
+"stmt": "Electrode is a part of an elephant."
+},
+{
+"id": 799,
+"stmt": "Blood is a part of a puppy."
+},
+{
+"id": 6300,
+"stmt": "Petal is a part of an architecture."
+},
+{
+"id": 5741,
+"stmt": "Nasal is a part of an elephant."
+},
+{
+"id": 7742,
+"stmt": "Sights is a part of a beef."
+},
+{
+"id": 4328,
+"stmt": "Hemisphere is a part of a clock."
+},
+{
+"id": 1348,
+"stmt": "Cannabis is a part of a tank."
+},
+{
+"id": 9162,
+"stmt": "Upstairs is a part of an embassy."
+},
+{
+"id": 2252,
+"stmt": "Coping is a part of a beef."
+},
+{
+"id": 7402,
+"stmt": "Sash is a part of a rifle."
+},
+{
+"id": 1085,
+"stmt": "Breast is a part of a cat."
+},
+{
+"id": 6964,
+"stmt": "Rim is a part of a bud."
+},
+{
+"id": 5456,
+"stmt": "Mast is a part of a sheep."
+},
+{
+"id": 5777,
+"stmt": "Nib is a part of a male."
+},
+{
+"id": 6532,
+"stmt": "Plume is a part of a rifle."
+},
+{
+"id": 8046,
+"stmt": "Staircase is a part of a chapel."
+},
+{
+"id": 1378,
+"stmt": "Cannon is a part of a tank."
+},
+{
+"id": 6488,
+"stmt": "Plate is a part of a clock."
+},
+{
+"id": 3542,
+"stmt": "Floor is a part of a beef."
+},
+{
+"id": 1437,
+"stmt": "Capacitor is a part of a shook."
+},
+{
+"id": 4759,
+"stmt": "Jaw is a part of a puppy."
+},
+{
+"id": 6860,
+"stmt": "Resistance is a part of a receiver."
+},
+{
+"id": 1847,
+"stmt": "Choke is a part of a male."
+},
+{
+"id": 1274,
+"stmt": "Bypass is a part of a highway."
+},
+{
+"id": 1808,
+"stmt": "Chin is a part of a clock."
+},
+{
+"id": 9062,
+"stmt": "Turnout is a part of a beef."
+},
+{
+"id": 8090,
+"stmt": "Stairway is a part of a receiver."
+},
+{
+"id": 869,
+"stmt": "Boiler is a part of a wheat."
+},
+{
+"id": 1151,
+"stmt": "Brow is a part of an elephant."
+},
+{
+"id": 8997,
+"stmt": "Trunk is a part of a shook."
+},
+{
+"id": 497,
+"stmt": "Barrel is a part of a male."
+},
+{
+"id": 1209,
+"stmt": "Bullet is a part of a deer."
+},
+{
+"id": 3474,
+"stmt": "Fin is a part of a salmon."
+},
+{
+"id": 4307,
+"stmt": "Heating is a part of a male."
+},
+{
+"id": 6710,
+"stmt": "Pupil is a part of a receiver."
+},
+{
+"id": 1764,
+"stmt": "Cheek is a part of a salmon."
+},
+{
+"id": 457,
+"stmt": "Barb is a part of a chick."
+},
+{
+"id": 8394,
+"stmt": "Sucker is a part of a salmon."
+},
+{
+"id": 4011,
+"stmt": "Groundwork is a part of a reed."
+},
+{
+"id": 6697,
+"stmt": "Pupil is a part of a chick."
+},
+{
+"id": 8337,
+"stmt": "Stud is a part of a shook."
+},
+{
+"id": 8717,
+"stmt": "Toe is a part of a male."
+},
+{
+"id": 8497,
+"stmt": "Tap is a part of a chick."
+},
+{
+"id": 2518,
+"stmt": "Course is a part of a tank."
+},
+{
+"id": 5040,
+"stmt": "Lash is a part of an architecture."
+},
+{
+"id": 3645,
+"stmt": "Food is a part of a kidney."
+},
+{
+"id": 5141,
+"stmt": "Level is a part of an elephant."
+},
+{
+"id": 4942,
+"stmt": "Key is a part of a rifle."
+},
+{
+"id": 3037,
+"stmt": "Duct is a part of a chick."
+},
+{
+"id": 5050,
+"stmt": "Lash is a part of a dog."
+},
+{
+"id": 1587,
+"stmt": "Case is a part of a shook."
+},
+{
+"id": 5340,
+"stmt": "Lock is a part of an architecture."
+},
+{
+"id": 3358,
+"stmt": "Factor is a part of a tank."
+},
+{
+"id": 3023,
+"stmt": "Driver is a part of a road."
+},
+{
+"id": 4466,
+"stmt": "Hood is a part of a sheep."
+},
+{
+"id": 6868,
+"stmt": "Resistance is a part of a tank."
+},
+{
+"id": 9322,
+"stmt": "Vent-hole is a part of a rifle."
+},
+{
+"id": 6349,
+"stmt": "Photograph is a part of a puppy."
+},
+{
+"id": 4954,
+"stmt": "Keystone is a part of a bud."
+},
+{
+"id": 2635,
+"stmt": "Crest is a part of a shark."
+},
+{
+"id": 646,
+"stmt": "Beetle is a part of a lamb."
+},
+{
+"id": 5478,
+"stmt": "Matrix is a part of a marijuana."
+},
+{
+"id": 2711,
+"stmt": "Curve is a part of an elephant."
+},
+{
+"id": 5319,
+"stmt": "Lobe is a part of a deer."
+},
+{
+"id": 6012,
+"stmt": "Pad is a part of an embassy."
+},
+{
+"id": 5250,
+"stmt": "Lip is a part of an architecture."
+},
+{
+"id": 9117,
+"stmt": "Turret is a part of a shook."
+},
+{
+"id": 3310,
+"stmt": "Facial is a part of a dog."
+},
+{
+"id": 8532,
+"stmt": "Target is a part of an embassy."
+},
+{
+"id": 9665,
+"stmt": "Wing is a part of a cat."
+},
+{
+"id": 7556,
+"stmt": "Shaft is a part of a sheep."
+},
+{
+"id": 2107,
+"stmt": "Cock is a part of a chick."
+},
+{
+"id": 5147,
+"stmt": "Level is a part of a male."
+},
+{
+"id": 8919,
+"stmt": "Tread is a part of a deer."
+},
+{
+"id": 9329,
+"stmt": "Vent-hole is a part of a wheat."
+},
+{
+"id": 5066,
+"stmt": "Lash is a part of a sheep."
+},
+{
+"id": 1367,
+"stmt": "Cannon is a part of a male."
+},
+{
+"id": 7712,
+"stmt": "Shoulder is a part of a beef."
+},
+{
+"id": 1628,
+"stmt": "Cathode is a part of a clock."
+},
+{
+"id": 1150,
+"stmt": "Brow is a part of a dog."
+},
+{
+"id": 8332,
+"stmt": "Stud is a part of a rifle."
+},
+{
+"id": 7702,
+"stmt": "Short is a part of a rifle."
+},
+{
+"id": 6221,
+"stmt": "Peak is a part of an elephant."
+},
+{
+"id": 6848,
+"stmt": "Resistance is a part of a clock."
+},
+{
+"id": 8352,
+"stmt": "Style is a part of an embassy."
+},
+{
+"id": 2313,
+"stmt": "Cornerstone is a part of a bridge."
+},
+{
+"id": 5687,
+"stmt": "Muzzle is a part of a male."
+}
+],
+"D": [
+{
+"id": 10159,
+"stmt": "Stuttering is a metabolic disease."
+},
+{
+"id": 13175,
+"stmt": "Lung lymphoma is a cancer or other tumor."
+},
+{
+"id": 10441,
+"stmt": "Vascular-type bleeding disorder is a blood disease."
+},
+{
+"id": 12819,
+"stmt": "Nelson syndrome is a breast disease."
+},
+{
+"id": 11004,
+"stmt": "Premature menopause is a cardiovascular system disease."
+},
+{
+"id": 11887,
+"stmt": "FG syndrome is a nervous system disease."
+},
+{
+"id": 10158,
+"stmt": "Stuttering is a thoracic disease."
+},
+{
+"id": 11871,
+"stmt": "Primary pulmonary hypertension is a blood disease."
+},
+{
+"id": 11828,
+"stmt": "Cerebral degeneration is a reproductive system disease."
+},
+{
+"id": 10737,
+"stmt": "SHORT syndrome is a viral infection."
+},
+{
+"id": 12900,
+"stmt": "Simple partial epilepsy is a skin disease."
+},
+{
+"id": 12494,
+"stmt": "Narcissistic personality disorder is a mental disorder."
+},
+{
+"id": 13042,
+"stmt": "Adult lymphoma is an infectious disease."
+},
+{
+"id": 11014,
+"stmt": "Premature menopause is a reproductive system disease."
+},
+{
+"id": 12016,
+"stmt": "Childhood absence epilepsy is a cardiovascular system disease."
+},
+{
+"id": 11286,
+"stmt": "Acute orbital inflammation is a bacterial infection."
+},
+{
+"id": 11733,
+"stmt": "Cerebral malaria is a nervous system disease."
+},
+{
+"id": 9820,
+"stmt": "Stevens-Johnson syndrome is a skin disease."
+},
+{
+"id": 9970,
+"stmt": "Nicotine dependence is a cardiovascular system disease."
+},
+{
+"id": 11882,
+"stmt": "Primary pulmonary hypertension is a fungal infection."
+},
+{
+"id": 11091,
+"stmt": "Borderline personality disorder is a parasitic infection."
+},
+{
+"id": 11012,
+"stmt": "Premature menopause is an immune system disease."
+},
+{
+"id": 10394,
+"stmt": "Vegetable allergy is a urinary system disease."
+},
+{
+"id": 13241,
+"stmt": "B-cell lymphoma is a cancer or other tumor."
+},
+{
+"id": 11056,
+"stmt": "Tooth disease is an immune system disease."
+},
+{
+"id": 12067,
+"stmt": "Cannabis dependence is an endocrine system disease."
+},
+{
+"id": 13088,
+"stmt": "Reactive arthritis is a mental disorder."
+},
+{
+"id": 10244,
+"stmt": "Plum allergy is a reproductive system disease."
+},
+{
+"id": 13292,
+"stmt": "Cocaine abuse is a cardiovascular system disease."
+},
+{
+"id": 12880,
+"stmt": "Inner ear cancer is a urinary system disease."
+},
+{
+"id": 11916,
+"stmt": "Larsen syndrome is a reproductive system disease."
+},
+{
+"id": 13086,
+"stmt": "Reactive arthritis is an infectious disease."
+},
+{
+"id": 11571,
+"stmt": "Diarrhea is a genetic disease."
+},
+{
+"id": 10334,
+"stmt": "Cardiac tuberculosis is a thoracic disease."
+},
+{
+"id": 10264,
+"stmt": "Carp allergy is an immune system disease."
+},
+{
+"id": 10576,
+"stmt": "Nocturnal asthma is a thoracic disease."
+},
+{
+"id": 13167,
+"stmt": "Lung lymphoma is an endocrine system disease."
+},
+{
+"id": 10557,
+"stmt": "Acute asthma is a cancer or other tumor."
+},
+{
+"id": 13043,
+"stmt": "Adult lymphoma is a cancer or other tumor."
+},
+{
+"id": 11799,
+"stmt": "Machado-Joseph disease is a nervous system disease."
+},
+{
+"id": 10044,
+"stmt": "Heavy chain disease is an immune system disease."
+},
+{
+"id": 11976,
+"stmt": "Alcohol use disorder is a skin disease."
+},
+{
+"id": 13625,
+"stmt": "Cocaine dependence is a nervous system disease."
+},
+{
+"id": 12728,
+"stmt": "Alexander disease is an immune system disease."
+},
+{
+"id": 11030,
+"stmt": "Malignant hypertension is a skin disease."
+},
+{
+"id": 10735,
+"stmt": "SHORT syndrome is a genetic disease."
+},
+{
+"id": 11534,
+"stmt": "Hepatitis A is a gastrointestinal system disease."
+},
+{
+"id": 9813,
+"stmt": "Swine influenza is a viral infection."
+},
+{
+"id": 10618,
+"stmt": "Parsley allergy is a reproductive system disease."
+},
+{
+"id": 12602,
+"stmt": "Plague is an infectious disease."
+},
+{
+"id": 12849,
+"stmt": "Thoracic cancer is a viral infection."
+},
+{
+"id": 10108,
+"stmt": "Kennedy's disease is a urinary system disease."
+},
+{
+"id": 11891,
+"stmt": "FG syndrome is an endocrine system disease."
+},
+{
+"id": 12530,
+"stmt": "Familial Mediterranean fever is an immune system disease."
+},
+{
+"id": 11003,
+"stmt": "Kidney failure is a parasitic infection."
+},
+{
+"id": 11321,
+"stmt": "Appendix lymphoma is a blood disease."
+},
+{
+"id": 10825,
+"stmt": "Pelvic inflammatory disease is a viral infection."
+},
+{
+"id": 11342,
+"stmt": "Rabies is an immune system disease."
+},
+{
+"id": 10952,
+"stmt": "Separation anxiety disorder is an infectious disease."
+},
+{
+"id": 11382,
+"stmt": "Acquired night blindness is a skin disease."
+},
+{
+"id": 13399,
+"stmt": "Smallpox is a viral infection."
+},
+{
+"id": 12702,
+"stmt": "Skin cancer is a skin disease."
+},
+{
+"id": 11379,
+"stmt": "Acquired night blindness is a respiratory system disease."
+},
+{
+"id": 9862,
+"stmt": "Abdominal tuberculosis is a gastrointestinal system disease."
+},
+{
+"id": 12681,
+"stmt": "Bile duct disease is a musculoskeletal system disease."
+},
+{
+"id": 13622,
+"stmt": "Cocaine dependence is a cardiovascular system disease."
+},
+{
+"id": 13516,
+"stmt": "Sheehan syndrome is a skin disease."
+},
+{
+"id": 10745,
+"stmt": "Gordon Holmes syndrome is a musculoskeletal system disease."
+},
+{
+"id": 11493,
+"stmt": "Cartilage disease is a musculoskeletal system disease."
+},
+{
+"id": 12097,
+"stmt": "Skull cancer is a cancer or other tumor."
+},
+{
+"id": 13197,
+"stmt": "Eye lymphoma is a cancer or other tumor."
+},
+{
+"id": 11813,
+"stmt": "Machado-Joseph disease is a genetic disease."
+},
+{
+"id": 13277,
+"stmt": "Placenta disease is an endocrine system disease."
+},
+{
+"id": 11320,
+"stmt": "Appendix lymphoma is an immune system disease."
+},
+{
+"id": 12267,
+"stmt": "Hepatitis is a blood disease."
+},
+{
+"id": 10918,
+"stmt": "Short bowel syndrome is a gastrointestinal system disease."
+},
+{
+"id": 10286,
+"stmt": "White shrimp allergy is an immune system disease."
+},
+{
+"id": 9814,
+"stmt": "Swine influenza is a fungal infection."
+},
+{
+"id": 11886,
+"stmt": "FG syndrome is a gastrointestinal system disease."
+},
+{
+"id": 11347,
+"stmt": "Rabies is a metabolic disease."
+},
+{
+"id": 11213,
+"stmt": "Trench fever is a breast disease."
+},
+{
+"id": 10213,
+"stmt": "Apple allergy is a respiratory system disease."
+},
+{
+"id": 12022,
+"stmt": "Childhood absence epilepsy is a urinary system disease."
+},
+{
+"id": 12245,
+"stmt": "Factor XII deficiency is a blood disease."
+},
+{
+"id": 9824,
+"stmt": "Stevens-Johnson syndrome is an immune system disease."
+},
+{
+"id": 10659,
+"stmt": "Fraser syndrome is an endocrine system disease."
+},
+{
+"id": 12829,
+"stmt": "Nelson syndrome is a parasitic infection."
+},
+{
+"id": 9847,
+"stmt": "Adult T-cell leukemia/lymphoma is a blood disease."
+},
+{
+"id": 12206,
+"stmt": "Autoimmune hepatitis is an infectious disease."
+},
+{
+"id": 11760,
+"stmt": "Masters-Allen syndrome is an immune system disease."
+},
+{
+"id": 12033,
+"stmt": "Childhood absence epilepsy is a genetic disease."
+},
+{
+"id": 10956,
+"stmt": "Separation anxiety disorder is a bacterial infection."
+},
+{
+"id": 10583,
+"stmt": "Nocturnal asthma is a viral infection."
+},
+{
+"id": 11084,
+"stmt": "Borderline personality disorder is an infectious disease."
+},
+{
+"id": 12200,
+"stmt": "Autoimmune hepatitis is an immune system disease."
+},
+{
+"id": 12991,
+"stmt": "Pulmonary valve disease is an endocrine system disease."
+},
+{
+"id": 9784,
+"stmt": "Aspiration pneumonia is a thoracic disease."
+},
+{
+"id": 13124,
+"stmt": "Heart lymphoma is an immune system disease."
+},
+{
+"id": 11353,
+"stmt": "Rabies is a viral infection."
+},
+{
+"id": 10110,
+"stmt": "Kennedy's disease is an immune system disease."
+},
+{
+"id": 12166,
+"stmt": "Communication disorder is a bacterial infection."
+},
+{
+"id": 10787,
+"stmt": "CK syndrome is a nervous system disease."
+},
+{
+"id": 10982,
+"stmt": "Kidney failure is a cardiovascular system disease."
+},
+{
+"id": 13150,
+"stmt": "Chest wall lymphoma is a thoracic disease."
+},
+{
+"id": 11985,
+"stmt": "Alcohol use disorder is a metabolic disease."
+},
+{
+"id": 10107,
+"stmt": "Kennedy's disease is a musculoskeletal system disease."
+},
+{
+"id": 12272,
+"stmt": "Hepatitis is an infectious disease."
+},
+{
+"id": 13486,
+"stmt": "Lower gum cancer is a bacterial infection."
+},
+{
+"id": 11965,
+"stmt": "Colon lymphoma is a cancer or other tumor."
+},
+{
+"id": 11752,
+"stmt": "Masters-Allen syndrome is a cardiovascular system disease."
+},
+{
+"id": 11912,
+"stmt": "Larsen syndrome is a urinary system disease."
+},
+{
+"id": 11761,
+"stmt": "Masters-Allen syndrome is a blood disease."
+},
+{
+"id": 11564,
+"stmt": "Diarrhea is a reproductive system disease."
+},
+{
+"id": 11398,
+"stmt": "Acquired night blindness is a fungal infection."
+},
+{
+"id": 11795,
+"stmt": "Frozen shoulder is a parasitic infection."
+},
+{
+"id": 10185,
+"stmt": "Peeling skin syndrome is a genetic disease."
+},
+{
+"id": 12765,
+"stmt": "Smooth muscle tumor is a respiratory system disease."
+},
+{
+"id": 11612,
+"stmt": "Stiff-Person syndrome is an infectious disease."
+},
+{
+"id": 10279,
+"stmt": "White shrimp allergy is a respiratory system disease."
+},
+{
+"id": 13494,
+"stmt": "Allergic asthma is a skin disease."
+},
+{
+"id": 11809,
+"stmt": "Machado-Joseph disease is a metabolic disease."
+},
+{
+"id": 13376,
+"stmt": "Upper lip cancer is a bacterial infection."
+},
+{
+"id": 12889,
+"stmt": "Inner ear cancer is a cancer or other tumor."
+},
+{
+"id": 10715,
+"stmt": "Ballard syndrome is a viral infection."
+},
+{
+"id": 13252,
+"stmt": "Childhood leukemia is a skin disease."
+},
+{
+"id": 13305,
+"stmt": "Cocaine abuse is a metabolic disease."
+},
+{
+"id": 11738,
+"stmt": "Cerebral malaria is an immune system disease."
+},
+{
+"id": 11553,
+"stmt": "Hepatitis A is a parasitic infection."
+},
+{
+"id": 12147,
+"stmt": "Placenta cancer is a parasitic infection."
+},
+{
+"id": 11556,
+"stmt": "Diarrhea is a gastrointestinal system disease."
+},
+{
+"id": 12569,
+"stmt": "Spinal cord disease is a nervous system disease."
+},
+{
+"id": 9897,
+"stmt": "Alcohol-related birth defects is a cancer or other tumor."
+},
+{
+"id": 13482,
+"stmt": "Lower gum cancer is an infectious disease."
+},
+{
+"id": 13391,
+"stmt": "Smallpox is a breast disease."
+},
+{
+"id": 10674,
+"stmt": "Enhanced S-cone syndrome is a cardiovascular system disease."
+},
+{
+"id": 10613,
+"stmt": "Parsley allergy is a musculoskeletal system disease."
+},
+{
+"id": 10299,
+"stmt": "White shrimp allergy is a parasitic infection."
+},
+{
+"id": 12333,
+"stmt": "West Nile fever is a blood disease."
+},
+{
+"id": 10477,
+"stmt": "Coronavirus infectious disease is a respiratory system disease."
+},
+{
+"id": 12559,
+"stmt": "Substance-related disorder is a cancer or other tumor."
+},
+{
+"id": 11169,
+"stmt": "Impulse control disorder is a breast disease."
+},
+{
+"id": 10220,
+"stmt": "Apple allergy is an immune system disease."
+},
+{
+"id": 9786,
+"stmt": "Aspiration pneumonia is an infectious disease."
+},
+{
+"id": 11327,
+"stmt": "Appendix lymphoma is a cancer or other tumor."
+},
+{
+"id": 11298,
+"stmt": "Appendix cancer is an immune system disease."
+},
+{
+"id": 9852,
+"stmt": "Adult T-cell leukemia/lymphoma is an infectious disease."
+},
+{
+"id": 11434,
+"stmt": "Functional gastric disease is a thoracic disease."
+},
+{
+"id": 12218,
+"stmt": "Factor XIII deficiency is a skin disease."
+},
+{
+"id": 10427,
+"stmt": "Mitochondrial Parkinson's disease is a genetic disease."
+},
+{
+"id": 10396,
+"stmt": "Vegetable allergy is an immune system disease."
+},
+{
+"id": 10816,
+"stmt": "Pelvic inflammatory disease is a reproductive system disease."
+},
+{
+"id": 13549,
+"stmt": "Blue drum syndrome is a cancer or other tumor."
+},
+{
+"id": 10717,
+"stmt": "Ballard syndrome is a parasitic infection."
+},
+{
+"id": 13040,
+"stmt": "Adult lymphoma is a thoracic disease."
+},
+{
+"id": 9752,
+"stmt": "Acute diarrhea is a gastrointestinal system disease."
+},
+{
+"id": 12906,
+"stmt": "Simple partial epilepsy is a reproductive system disease."
+},
+{
+"id": 11708,
+"stmt": "Red-green color blindness is a cardiovascular system disease."
+},
+{
+"id": 9815,
+"stmt": "Swine influenza is a parasitic infection."
+},
+{
+"id": 13472,
+"stmt": "Lower gum cancer is a skin disease."
+},
+{
+"id": 12654,
+"stmt": "Heart valve disease is a cardiovascular system disease."
+},
+{
+"id": 13576,
+"stmt": "Peripheral vertigo is a fungal infection."
+},
+{
+"id": 10156,
+"stmt": "Stuttering is a reproductive system disease."
+},
+{
+"id": 12619,
+"stmt": "Cerebral arterial disease is a blood disease."
+},
+{
+"id": 12211,
+"stmt": "Autoimmune hepatitis is a viral infection."
+},
+{
+"id": 11725,
+"stmt": "Red-green color blindness is a genetic disease."
+},
+{
+"id": 10665,
+"stmt": "Fraser syndrome is a metabolic disease."
+},
+{
+"id": 11823,
+"stmt": "Cerebral degeneration is a musculoskeletal system disease."
+},
+{
+"id": 10115,
+"stmt": "Kennedy's disease is a metabolic disease."
+},
+{
+"id": 11489,
+"stmt": "Cartilage disease is a respiratory system disease."
+},
+{
+"id": 11832,
+"stmt": "Cerebral degeneration is an infectious disease."
+},
+{
+"id": 12678,
+"stmt": "Bile duct disease is a gastrointestinal system disease."
+},
+{
+"id": 11865,
+"stmt": "Primary pulmonary hypertension is a nervous system disease."
+},
+{
+"id": 9950,
+"stmt": "Vitamin metabolic disorder is a gastrointestinal system disease."
+},
+{
+"id": 11908,
+"stmt": "Larsen syndrome is a gastrointestinal system disease."
+},
+{
+"id": 13077,
+"stmt": "Reactive arthritis is a musculoskeletal system disease."
+},
+{
+"id": 12275,
+"stmt": "Hepatitis is a genetic disease."
+},
+{
+"id": 10554,
+"stmt": "Acute asthma is a thoracic disease."
+},
+{
+"id": 11524,
+"stmt": "Globe disease is an infectious disease."
+},
+{
+"id": 11037,
+"stmt": "Malignant hypertension is a breast disease."
+},
+{
+"id": 13402,
+"stmt": "Intermediate coronary syndrome is a cardiovascular system disease."
+},
+{
+"id": 13172,
+"stmt": "Lung lymphoma is a thoracic disease."
+},
+{
+"id": 10429,
+"stmt": "Mitochondrial Parkinson's disease is a viral infection."
+},
+{
+"id": 9892,
+"stmt": "Alcohol-related birth defects is a reproductive system disease."
+},
+{
+"id": 10233,
+"stmt": "Apple allergy is a parasitic infection."
+},
+{
+"id": 12240,
+"stmt": "Factor XII deficiency is a skin disease."
+},
+{
+"id": 9993,
+"stmt": "Ogden syndrome is a respiratory system disease."
+},
+{
+"id": 11546,
+"stmt": "Hepatitis A is an infectious disease."
+},
+{
+"id": 11730,
+"stmt": "Cerebral malaria is a cardiovascular system disease."
+},
+{
+"id": 11578,
+"stmt": "Reading disorder is a gastrointestinal system disease."
+},
+{
+"id": 13511,
+"stmt": "Allergic asthma is a parasitic infection."
+},
+{
+"id": 12606,
+"stmt": "Plague is a bacterial infection."
+},
+{
+"id": 10797,
+"stmt": "CK syndrome is a metabolic disease."
+},
+{
+"id": 10941,
+"stmt": "Separation anxiety disorder is a nervous system disease."
+},
+{
+"id": 10045,
+"stmt": "Heavy chain disease is a blood disease."
+},
+{
+"id": 11901,
+"stmt": "FG syndrome is a genetic disease."
+},
+{
+"id": 11114,
+"stmt": "Obsessive-compulsive disorder is a cardiovascular system disease."
+},
+{
+"id": 12201,
+"stmt": "Autoimmune hepatitis is a blood disease."
+},
+{
+"id": 10994,
+"stmt": "Kidney failure is a thoracic disease."
+},
+{
+"id": 10505,
+"stmt": "Kidney cortex disease is an endocrine system disease."
+},
+{
+"id": 13184,
+"stmt": "Eye lymphoma is a gastrointestinal system disease."
+},
+{
+"id": 11254,
+"stmt": "T cell deficiency is an immune system disease."
+},
+{
+"id": 11082,
+"stmt": "Borderline personality disorder is a thoracic disease."
+},
+{
+"id": 13555,
+"stmt": "Blue drum syndrome is a parasitic infection."
+},
+{
+"id": 10662,
+"stmt": "Fraser syndrome is a reproductive system disease."
+},
+{
+"id": 12073,
+"stmt": "Cannabis dependence is a metabolic disease."
+},
+{
+"id": 13235,
+"stmt": "B-cell lymphoma is a blood disease."
+},
+{
+"id": 9973,
+"stmt": "Nicotine dependence is a nervous system disease."
+},
+{
+"id": 11889,
+"stmt": "FG syndrome is a musculoskeletal system disease."
+},
+{
+"id": 10725,
+"stmt": "SHORT syndrome is an endocrine system disease."
+},
+{
+"id": 13372,
+"stmt": "Upper lip cancer is an infectious disease."
+},
+{
+"id": 11873,
+"stmt": "Primary pulmonary hypertension is a breast disease."
+},
+{
+"id": 11097,
+"stmt": "Dependent personality disorder is a musculoskeletal system disease."
+},
+{
+"id": 12556,
+"stmt": "Substance-related disorder is a thoracic disease."
+},
+{
+"id": 10835,
+"stmt": "Small intestine cancer is an endocrine system disease."
+},
+{
+"id": 10861,
+"stmt": "Breast cyst is a breast disease."
+},
+{
+"id": 12899,
+"stmt": "Simple partial epilepsy is a nervous system disease."
+},
+{
+"id": 11637,
+"stmt": "Color blindness is a genetic disease."
+},
+{
+"id": 11152,
+"stmt": "Multiple personality disorder is a mental disorder."
+},
+{
+"id": 12845,
+"stmt": "Thoracic cancer is a cancer or other tumor."
+},
+{
+"id": 11346,
+"stmt": "Rabies is a thoracic disease."
+},
+{
+"id": 10004,
+"stmt": "Ogden syndrome is a thoracic disease."
+},
+{
+"id": 10020,
+"stmt": "Sensory system cancer is a urinary system disease."
+},
+{
+"id": 10069,
+"stmt": "Delta chain disease is a breast disease."
+},
+{
+"id": 12578,
+"stmt": "Spinal cord disease is a thoracic disease."
+},
+{
+"id": 11603,
+"stmt": "Stiff-Person syndrome is a musculoskeletal system disease."
+},
+{
+"id": 11560,
+"stmt": "Diarrhea is a urinary system disease."
+},
+{
+"id": 13247,
+"stmt": "B-cell lymphoma is a parasitic infection."
+},
+{
+"id": 12866,
+"stmt": "Ear cancer is an infectious disease."
+},
+{
+"id": 10765,
+"stmt": "CHILD syndrome is a nervous system disease."
+},
+{
+"id": 12613,
+"stmt": "Cerebral arterial disease is a nervous system disease."
+},
+{
+"id": 11755,
+"stmt": "Masters-Allen syndrome is a nervous system disease."
+},
+{
+"id": 12663,
+"stmt": "Heart valve disease is a blood disease."
+},
+{
+"id": 13168,
+"stmt": "Lung lymphoma is an immune system disease."
+},
+{
+"id": 13384,
+"stmt": "Smallpox is a skin disease."
+},
+{
+"id": 10192,
+"stmt": "Gastrointestinal allergy is a gastrointestinal system disease."
+},
+{
+"id": 11930,
+"stmt": "Colon carcinoma is a gastrointestinal system disease."
+},
+{
+"id": 9918,
+"stmt": "Organ system cancer is an infectious disease."
+},
+{
+"id": 12816,
+"stmt": "Nelson syndrome is an immune system disease."
+},
+{
+"id": 13333,
+"stmt": "Cork-handlers' disease is a viral infection."
+},
+{
+"id": 12041,
+"stmt": "Epilepsy is a nervous system disease."
+},
+{
+"id": 9943,
+"stmt": "Dent disease is a genetic disease."
+},
+{
+"id": 11769,
+"stmt": "Masters-Allen syndrome is a genetic disease."
+},
+{
+"id": 10769,
+"stmt": "CHILD syndrome is an endocrine system disease."
+},
+{
+"id": 11223,
+"stmt": "Trench fever is a parasitic infection."
+},
+{
+"id": 12996,
+"stmt": "Pulmonary valve disease is a thoracic disease."
+},
+{
+"id": 13128,
+"stmt": "Heart lymphoma is a thoracic disease."
+},
+{
+"id": 9998,
+"stmt": "Ogden syndrome is a urinary system disease."
+},
+{
+"id": 11259,
+"stmt": "T cell deficiency is a metabolic disease."
+},
+{
+"id": 10234,
+"stmt": "Plum allergy is a cardiovascular system disease."
+},
+{
+"id": 9826,
+"stmt": "Stevens-Johnson syndrome is a reproductive system disease."
+},
+{
+"id": 13459,
+"stmt": "Evans' syndrome is a metabolic disease."
+},
+{
+"id": 11744,
+"stmt": "Cerebral malaria is an infectious disease."
+},
+{
+"id": 11757,
+"stmt": "Masters-Allen syndrome is a musculoskeletal system disease."
+},
+{
+"id": 10543,
+"stmt": "Acute asthma is a respiratory system disease."
+},
+{
+"id": 12391,
+"stmt": "Tooth erosion is a respiratory system disease."
+},
+{
+"id": 10730,
+"stmt": "SHORT syndrome is a thoracic disease."
+},
+{
+"id": 10255,
+"stmt": "Plum allergy is a parasitic infection."
+},
+{
+"id": 13638,
+"stmt": "Cocaine dependence is a mental disorder."
+},
+{
+"id": 12076,
+"stmt": "Cannabis dependence is a mental disorder."
+},
+{
+"id": 11211,
+"stmt": "Trench fever is a blood disease."
+},
+{
+"id": 13454,
+"stmt": "Evans' syndrome is an immune system disease."
+},
+{
+"id": 11305,
+"stmt": "Appendix cancer is a cancer or other tumor."
+},
+{
+"id": 9855,
+"stmt": "Adult T-cell leukemia/lymphoma is a genetic disease."
+},
+{
+"id": 11821,
+"stmt": "Cerebral degeneration is a nervous system disease."
+},
+{
+"id": 13036,
+"stmt": "Adult lymphoma is an immune system disease."
+},
+{
+"id": 13268,
+"stmt": "Childhood leukemia is a fungal infection."
+},
+{
+"id": 12104,
+"stmt": "Optic nerve disease is a cardiovascular system disease."
+},
+{
+"id": 11863,
+"stmt": "Primary pulmonary hypertension is a respiratory system disease."
+},
+{
+"id": 13280,
+"stmt": "Placenta disease is a reproductive system disease."
+},
+{
+"id": 9961,
+"stmt": "Vitamin metabolic disorder is a metabolic disease."
+},
+{
+"id": 13447,
+"stmt": "Evans' syndrome is a respiratory system disease."
+},
+{
+"id": 11762,
+"stmt": "Masters-Allen syndrome is a reproductive system disease."
+},
+{
+"id": 11591,
+"stmt": "Reading disorder is a cancer or other tumor."
+},
+{
+"id": 13080,
+"stmt": "Reactive arthritis is an immune system disease."
+},
+{
+"id": 11751,
+"stmt": "Cerebral malaria is a parasitic infection."
+},
+{
+"id": 10548,
+"stmt": "Acute asthma is a urinary system disease."
+},
+{
+"id": 10105,
+"stmt": "Kennedy's disease is a nervous system disease."
+},
+{
+"id": 11202,
+"stmt": "Trench fever is a cardiovascular system disease."
+},
+{
+"id": 10963,
+"stmt": "Renal hypertension is a nervous system disease."
+},
+{
+"id": 11866,
+"stmt": "Primary pulmonary hypertension is a skin disease."
+},
+{
+"id": 13000,
+"stmt": "Pulmonary valve disease is a mental disorder."
+},
+{
+"id": 9882,
+"stmt": "Alcohol-related birth defects is a cardiovascular system disease."
+},
+{
+"id": 11943,
+"stmt": "Colon carcinoma is a cancer or other tumor."
+},
+{
+"id": 9796,
+"stmt": "Swine influenza is a gastrointestinal system disease."
+},
+{
+"id": 10140,
+"stmt": "Juvenile absence epilepsy is a mental disorder."
+},
+{
+"id": 12750,
+"stmt": "External ear carcinoma is an immune system disease."
+},
+{
+"id": 11601,
+"stmt": "Stiff-Person syndrome is a nervous system disease."
+},
+{
+"id": 13451,
+"stmt": "Evans' syndrome is a musculoskeletal system disease."
+},
+{
+"id": 11847,
+"stmt": "Geographic tongue is an endocrine system disease."
+},
+{
+"id": 10719,
+"stmt": "SHORT syndrome is a respiratory system disease."
+},
+{
+"id": 13373,
+"stmt": "Upper lip cancer is a cancer or other tumor."
+},
+{
+"id": 13554,
+"stmt": "Blue drum syndrome is a fungal infection."
+},
+{
+"id": 12964,
+"stmt": "External ear cancer is a gastrointestinal system disease."
+},
+{
+"id": 13317,
+"stmt": "Cork-handlers' disease is a nervous system disease."
+},
+{
+"id": 11919,
+"stmt": "Larsen syndrome is a metabolic disease."
+},
+{
+"id": 11743,
+"stmt": "Cerebral malaria is a metabolic disease."
+},
+{
+"id": 13250,
+"stmt": "Childhood leukemia is a gastrointestinal system disease."
+},
+{
+"id": 10323,
+"stmt": "Cardiac tuberculosis is a respiratory system disease."
+},
+{
+"id": 11913,
+"stmt": "Larsen syndrome is an endocrine system disease."
+},
+{
+"id": 9790,
+"stmt": "Aspiration pneumonia is a bacterial infection."
+},
+{
+"id": 12737,
+"stmt": "Alexander disease is a genetic disease."
+},
+{
+"id": 11131,
+"stmt": "Obsessive-compulsive disorder is a genetic disease."
+},
+{
+"id": 12349,
+"stmt": "Multiple sclerosis is a nervous system disease."
+},
+{
+"id": 13162,
+"stmt": "Lung lymphoma is a gastrointestinal system disease."
+},
+{
+"id": 12669,
+"stmt": "Heart valve disease is a cancer or other tumor."
+},
+{
+"id": 10625,
+"stmt": "Parsley allergy is a genetic disease."
+},
+{
+"id": 13146,
+"stmt": "Chest wall lymphoma is an immune system disease."
+},
+{
+"id": 13446,
+"stmt": "Evans' syndrome is a cardiovascular system disease."
+},
+{
+"id": 10438,
+"stmt": "Vascular-type bleeding disorder is a urinary system disease."
+},
+{
+"id": 10345,
+"stmt": "Congenital diarrhea is a respiratory system disease."
+},
+{
+"id": 12823,
+"stmt": "Nelson syndrome is a cancer or other tumor."
+},
+{
+"id": 10384,
+"stmt": "Early-onset Parkinson's disease is a bacterial infection."
+},
+{
+"id": 11372,
+"stmt": "Expressive language disorder is a mental disorder."
+},
+{
+"id": 12867,
+"stmt": "Ear cancer is a cancer or other tumor."
+},
+{
+"id": 10738,
+"stmt": "SHORT syndrome is a fungal infection."
+},
+{
+"id": 12136,
+"stmt": "Placenta cancer is a reproductive system disease."
+},
+{
+"id": 11221,
+"stmt": "Trench fever is a viral infection."
+},
+{
+"id": 11843,
+"stmt": "Geographic tongue is a nervous system disease."
+},
+{
+"id": 12004,
+"stmt": "Acute chest syndrome is a reproductive system disease."
+},
+{
+"id": 10954,
+"stmt": "Separation anxiety disorder is a mental disorder."
+},
+{
+"id": 12801,
+"stmt": "Retinal cancer is a cancer or other tumor."
+},
+{
+"id": 11519,
+"stmt": "Globe disease is a blood disease."
+},
+{
+"id": 13499,
+"stmt": "Allergic asthma is a blood disease."
+},
+{
+"id": 10330,
+"stmt": "Cardiac tuberculosis is an immune system disease."
+},
+{
+"id": 10061,
+"stmt": "Delta chain disease is a nervous system disease."
+},
+{
+"id": 11086,
+"stmt": "Borderline personality disorder is a mental disorder."
+},
+{
+"id": 10635,
+"stmt": "Traumatic brain injury is a musculoskeletal system disease."
+},
+{
+"id": 12141,
+"stmt": "Placenta cancer is a cancer or other tumor."
+},
+{
+"id": 10562,
+"stmt": "Acute asthma is a fungal infection."
+},
+{
+"id": 12327,
+"stmt": "West Nile fever is a nervous system disease."
+},
+{
+"id": 9868,
+"stmt": "Abdominal tuberculosis is an immune system disease."
+},
+{
+"id": 12963,
+"stmt": "External ear cancer is a respiratory system disease."
+},
+{
+"id": 11337,
+"stmt": "Rabies is a nervous system disease."
+},
+{
+"id": 11225,
+"stmt": "Neonatal respiratory failure is a respiratory system disease."
+},
+{
+"id": 9995,
+"stmt": "Ogden syndrome is a nervous system disease."
+},
+{
+"id": 11636,
+"stmt": "Color blindness is a mental disorder."
+},
+{
+"id": 13525,
+"stmt": "Sheehan syndrome is a metabolic disease."
+},
+{
+"id": 10336,
+"stmt": "Cardiac tuberculosis is an infectious disease."
+},
+{
+"id": 13255,
+"stmt": "Childhood leukemia is an endocrine system disease."
+},
+{
+"id": 12008,
+"stmt": "Acute chest syndrome is an infectious disease."
+},
+{
+"id": 13234,
+"stmt": "B-cell lymphoma is an immune system disease."
+},
+{
+"id": 11405,
+"stmt": "Chandler syndrome is a musculoskeletal system disease."
+},
+{
+"id": 12820,
+"stmt": "Nelson syndrome is a thoracic disease."
+},
+{
+"id": 10726,
+"stmt": "SHORT syndrome is an immune system disease."
+},
+{
+"id": 11073,
+"stmt": "Borderline personality disorder is a nervous system disease."
+},
+{
+"id": 12757,
+"stmt": "External ear carcinoma is a cancer or other tumor."
+},
+{
+"id": 12382,
+"stmt": "Iris disease is an infectious disease."
+},
+{
+"id": 12873,
+"stmt": "Ear cancer is a parasitic infection."
+},
+{
+"id": 12806,
+"stmt": "Retinal cancer is a fungal infection."
+},
+{
+"id": 10801,
+"stmt": "CK syndrome is a genetic disease."
+},
+{
+"id": 12248,
+"stmt": "Factor XII deficiency is a thoracic disease."
+},
+{
+"id": 11626,
+"stmt": "Color blindness is a urinary system disease."
+},
+{
+"id": 10504,
+"stmt": "Kidney cortex disease is a urinary system disease."
+},
+{
+"id": 13614,
+"stmt": "Lymph node disease is an infectious disease."
+},
+{
+"id": 11427,
+"stmt": "Functional gastric disease is a musculoskeletal system disease."
+},
+{
+"id": 13256,
+"stmt": "Childhood leukemia is an immune system disease."
+},
+{
+"id": 12305,
+"stmt": "Lateral sclerosis is a nervous system disease."
+},
+{
+"id": 12398,
+"stmt": "Tooth erosion is an immune system disease."
+},
+{
+"id": 11216,
+"stmt": "Trench fever is an infectious disease."
+},
+{
+"id": 10633,
+"stmt": "Traumatic brain injury is a nervous system disease."
+},
+{
+"id": 11874,
+"stmt": "Primary pulmonary hypertension is a thoracic disease."
+},
+{
+"id": 10276,
+"stmt": "Carp allergy is a fungal infection."
+},
+{
+"id": 12745,
+"stmt": "External ear carcinoma is a nervous system disease."
+},
+{
+"id": 10537,
+"stmt": "Chronic asthma is a genetic disease."
+},
+{
+"id": 12939,
+"stmt": "Infertility is a parasitic infection."
+},
+{
+"id": 12277,
+"stmt": "Hepatitis is a viral infection."
+},
+{
+"id": 10523,
+"stmt": "Chronic asthma is a nervous system disease."
+},
+{
+"id": 13112,
+"stmt": "Acne is a bacterial infection."
+},
+{
+"id": 12811,
+"stmt": "Nelson syndrome is a nervous system disease."
+},
+{
+"id": 9979,
+"stmt": "Nicotine dependence is a blood disease."
+},
+{
+"id": 12539,
+"stmt": "Familial Mediterranean fever is a genetic disease."
+},
+{
+"id": 10788,
+"stmt": "CK syndrome is a skin disease."
+},
+{
+"id": 10449,
+"stmt": "Vascular-type bleeding disorder is a genetic disease."
+},
+{
+"id": 12307,
+"stmt": "Lateral sclerosis is a musculoskeletal system disease."
+},
+{
+"id": 13623,
+"stmt": "Cocaine dependence is a respiratory system disease."
+},
+{
+"id": 11407,
+"stmt": "Chandler syndrome is an endocrine system disease."
+},
+{
+"id": 10811,
+"stmt": "Pelvic inflammatory disease is a musculoskeletal system disease."
+},
+{
+"id": 12928,
+"stmt": "Infertility is a reproductive system disease."
+},
+{
+"id": 11624,
+"stmt": "Color blindness is a skin disease."
+},
+{
+"id": 12287,
+"stmt": "Cervix disease is an endocrine system disease."
+},
+{
+"id": 12464,
+"stmt": "Auditory system disease is an immune system disease."
+},
+{
+"id": 13364,
+"stmt": "Upper lip cancer is a urinary system disease."
+},
+{
+"id": 12489,
+"stmt": "Narcissistic personality disorder is a breast disease."
+},
+{
+"id": 12270,
+"stmt": "Hepatitis is a thoracic disease."
+},
+{
+"id": 10988,
+"stmt": "Kidney failure is a urinary system disease."
+},
+{
+"id": 13041,
+"stmt": "Adult lymphoma is a metabolic disease."
+},
+{
+"id": 12871,
+"stmt": "Ear cancer is a viral infection."
+},
+{
+"id": 12977,
+"stmt": "External ear cancer is a cancer or other tumor."
+},
+{
+"id": 13520,
+"stmt": "Sheehan syndrome is an immune system disease."
+},
+{
+"id": 10565,
+"stmt": "Nocturnal asthma is a respiratory system disease."
+},
+{
+"id": 10790,
+"stmt": "CK syndrome is a urinary system disease."
+},
+{
+"id": 13502,
+"stmt": "Allergic asthma is a thoracic disease."
+},
+{
+"id": 11288,
+"stmt": "Acute orbital inflammation is a fungal infection."
+},
+{
+"id": 10355,
+"stmt": "Congenital diarrhea is a breast disease."
+},
+{
+"id": 12107,
+"stmt": "Optic nerve disease is a nervous system disease."
+},
+{
+"id": 12415,
+"stmt": "Alcoholic psychosis is a nervous system disease."
+},
+{
+"id": 10176,
+"stmt": "Peeling skin syndrome is an immune system disease."
+},
+{
+"id": 13452,
+"stmt": "Evans' syndrome is a urinary system disease."
+},
+{
+"id": 10358,
+"stmt": "Congenital diarrhea is an infectious disease."
+},
+{
+"id": 12416,
+"stmt": "Alcoholic psychosis is a skin disease."
+},
+{
+"id": 10997,
+"stmt": "Kidney failure is a cancer or other tumor."
+},
+{
+"id": 10638,
+"stmt": "Traumatic brain injury is an immune system disease."
+},
+{
+"id": 13360,
+"stmt": "Upper lip cancer is a gastrointestinal system disease."
+},
+{
+"id": 11660,
+"stmt": "Secondary Parkinson disease is a bacterial infection."
+},
+{
+"id": 11772,
+"stmt": "Masters-Allen syndrome is a fungal infection."
+},
+{
+"id": 10945,
+"stmt": "Separation anxiety disorder is an endocrine system disease."
+},
+{
+"id": 9861,
+"stmt": "Abdominal tuberculosis is a respiratory system disease."
+},
+{
+"id": 10731,
+"stmt": "SHORT syndrome is a metabolic disease."
+},
+{
+"id": 13161,
+"stmt": "Lung lymphoma is a respiratory system disease."
+},
+{
+"id": 10654,
+"stmt": "Fraser syndrome is a gastrointestinal system disease."
+},
+{
+"id": 10390,
+"stmt": "Vegetable allergy is a gastrointestinal system disease."
+},
+{
+"id": 11800,
+"stmt": "Machado-Joseph disease is a skin disease."
+},
+{
+"id": 12927,
+"stmt": "Infertility is a blood disease."
+},
+{
+"id": 12338,
+"stmt": "West Nile fever is an infectious disease."
+},
+{
+"id": 12459,
+"stmt": "Auditory system disease is a nervous system disease."
+},
+{
+"id": 12809,
+"stmt": "Nelson syndrome is a respiratory system disease."
+},
+{
+"id": 13448,
+"stmt": "Evans' syndrome is a gastrointestinal system disease."
+},
+{
+"id": 12842,
+"stmt": "Thoracic cancer is a thoracic disease."
+},
+{
+"id": 10899,
+"stmt": "Intellectual disability is a musculoskeletal system disease."
+},
+{
+"id": 11449,
+"stmt": "Pelvic muscle wasting is a musculoskeletal system disease."
+},
+{
+"id": 11778,
+"stmt": "Frozen shoulder is a skin disease."
+},
+{
+"id": 10669,
+"stmt": "Fraser syndrome is a genetic disease."
+},
+{
+"id": 12264,
+"stmt": "Hepatitis is a urinary system disease."
+},
+{
+"id": 10908,
+"stmt": "Intellectual disability is an infectious disease."
+},
+{
+"id": 11758,
+"stmt": "Masters-Allen syndrome is a urinary system disease."
+},
+{
+"id": 13507,
+"stmt": "Allergic asthma is a genetic disease."
+},
+{
+"id": 12231,
+"stmt": "Factor XIII deficiency is a genetic disease."
+},
+{
+"id": 12604,
+"stmt": "Plague is a mental disorder."
+},
+{
+"id": 9946,
+"stmt": "Dent disease is a fungal infection."
+},
+{
+"id": 13346,
+"stmt": "Gum cancer is a reproductive system disease."
+},
+{
+"id": 13110,
+"stmt": "Acne is a mental disorder."
+},
+{
+"id": 11897,
+"stmt": "FG syndrome is a metabolic disease."
+},
+{
+"id": 9971,
+"stmt": "Nicotine dependence is a respiratory system disease."
+},
+{
+"id": 11263,
+"stmt": "T cell deficiency is a genetic disease."
+},
+{
+"id": 9984,
+"stmt": "Nicotine dependence is an infectious disease."
+},
+{
+"id": 10295,
+"stmt": "White shrimp allergy is a genetic disease."
+},
+{
+"id": 11946,
+"stmt": "Colon carcinoma is a bacterial infection."
+},
+{
+"id": 9805,
+"stmt": "Swine influenza is a breast disease."
+},
+{
+"id": 10066,
+"stmt": "Delta chain disease is an immune system disease."
+},
+{
+"id": 12125,
+"stmt": "Optic nerve disease is a parasitic infection."
+},
+{
+"id": 10201,
+"stmt": "Gastrointestinal allergy is a breast disease."
+},
+{
+"id": 10747,
+"stmt": "Gordon Holmes syndrome is an endocrine system disease."
+},
+{
+"id": 12227,
+"stmt": "Factor XIII deficiency is a metabolic disease."
+},
+{
+"id": 9872,
+"stmt": "Abdominal tuberculosis is a thoracic disease."
+},
+{
+"id": 12149,
+"stmt": "Communication disorder is a respiratory system disease."
+},
+{
+"id": 11077,
+"stmt": "Borderline personality disorder is an endocrine system disease."
+},
+{
+"id": 12992,
+"stmt": "Pulmonary valve disease is an immune system disease."
+},
+{
+"id": 10761,
+"stmt": "Gordon Holmes syndrome is a parasitic infection."
+},
+{
+"id": 11911,
+"stmt": "Larsen syndrome is a musculoskeletal system disease."
+},
+{
+"id": 12428,
+"stmt": "Alcoholic psychosis is a mental disorder."
+},
+{
+"id": 10308,
+"stmt": "Snail allergy is an immune system disease."
+},
+{
+"id": 13455,
+"stmt": "Evans' syndrome is a blood disease."
+},
+{
+"id": 11592,
+"stmt": "Reading disorder is a mental disorder."
+},
+{
+"id": 12046,
+"stmt": "Epilepsy is an immune system disease."
+},
+{
+"id": 11161,
+"stmt": "Impulse control disorder is a nervous system disease."
+},
+{
+"id": 13294,
+"stmt": "Cocaine abuse is a gastrointestinal system disease."
+},
+{
+"id": 9997,
+"stmt": "Ogden syndrome is a musculoskeletal system disease."
+},
+{
+"id": 12546,
+"stmt": "Substance-related disorder is a gastrointestinal system disease."
+},
+{
+"id": 11241,
+"stmt": "Neonatal respiratory failure is a genetic disease."
+},
+{
+"id": 13217,
+"stmt": "Mitochondrial metabolism disease is a metabolic disease."
+},
+{
+"id": 13458,
+"stmt": "Evans' syndrome is a thoracic disease."
+},
+{
+"id": 13559,
+"stmt": "Peripheral vertigo is a nervous system disease."
+},
+{
+"id": 13351,
+"stmt": "Gum cancer is a cancer or other tumor."
+},
+{
+"id": 10240,
+"stmt": "Plum allergy is a urinary system disease."
+},
+{
+"id": 12006,
+"stmt": "Acute chest syndrome is a thoracic disease."
+},
+{
+"id": 12893,
+"stmt": "Inner ear cancer is a viral infection."
+},
+{
+"id": 9823,
+"stmt": "Stevens-Johnson syndrome is an endocrine system disease."
+},
+{
+"id": 12055,
+"stmt": "Epilepsy is a genetic disease."
+},
+{
+"id": 13295,
+"stmt": "Cocaine abuse is a nervous system disease."
+},
+{
+"id": 11482,
+"stmt": "Allergic disease is a mental disorder."
+},
+{
+"id": 9874,
+"stmt": "Abdominal tuberculosis is an infectious disease."
+},
+{
+"id": 12635,
+"stmt": "Anterior compartment syndrome is a nervous system disease."
+},
+{
+"id": 10248,
+"stmt": "Plum allergy is an infectious disease."
+},
+{
+"id": 12557,
+"stmt": "Substance-related disorder is a metabolic disease."
+},
+{
+"id": 11057,
+"stmt": "Tooth disease is a blood disease."
+},
+{
+"id": 10063,
+"stmt": "Delta chain disease is a musculoskeletal system disease."
+},
+{
+"id": 10855,
+"stmt": "Breast cyst is a musculoskeletal system disease."
+},
+{
+"id": 10616,
+"stmt": "Parsley allergy is an immune system disease."
+},
+{
+"id": 12752,
+"stmt": "External ear carcinoma is a reproductive system disease."
+},
+{
+"id": 10242,
+"stmt": "Plum allergy is an immune system disease."
+},
+{
+"id": 10677,
+"stmt": "Enhanced S-cone syndrome is a nervous system disease."
+},
+{
+"id": 13111,
+"stmt": "Acne is a genetic disease."
+},
+{
+"id": 13334,
+"stmt": "Cork-handlers' disease is a fungal infection."
+},
+{
+"id": 12932,
+"stmt": "Infertility is an infectious disease."
+},
+{
+"id": 11502,
+"stmt": "Cartilage disease is an infectious disease."
+},
+{
+"id": 13498,
+"stmt": "Allergic asthma is an immune system disease."
+},
+{
+"id": 12779,
+"stmt": "Smooth muscle tumor is a cancer or other tumor."
+},
+{
+"id": 12517,
+"stmt": "Long QT syndrome is a genetic disease."
+},
+{
+"id": 13583,
+"stmt": "Congenital heart block is a musculoskeletal system disease."
+},
+{
+"id": 9787,
+"stmt": "Aspiration pneumonia is a cancer or other tumor."
+},
+{
+"id": 12814,
+"stmt": "Nelson syndrome is a urinary system disease."
+},
+{
+"id": 9795,
+"stmt": "Swine influenza is a respiratory system disease."
+},
+{
+"id": 11050,
+"stmt": "Tooth disease is a gastrointestinal system disease."
+},
+{
+"id": 13263,
+"stmt": "Childhood leukemia is a cancer or other tumor."
+},
+{
+"id": 12661,
+"stmt": "Heart valve disease is an endocrine system disease."
+},
+{
+"id": 13439,
+"stmt": "Wilson disease is a cancer or other tumor."
+},
+{
+"id": 12723,
+"stmt": "Alexander disease is a nervous system disease."
+},
+{
+"id": 12641,
+"stmt": "Anterior compartment syndrome is a blood disease."
+},
+{
+"id": 10814,
+"stmt": "Pelvic inflammatory disease is an immune system disease."
+},
+{
+"id": 10029,
+"stmt": "Sensory system cancer is a cancer or other tumor."
+},
+{
+"id": 11759,
+"stmt": "Masters-Allen syndrome is an endocrine system disease."
+},
+{
+"id": 12926,
+"stmt": "Infertility is an immune system disease."
+},
+{
+"id": 13190,
+"stmt": "Eye lymphoma is an immune system disease."
+},
+{
+"id": 12343,
+"stmt": "West Nile fever is a viral infection."
+},
+{
+"id": 13105,
+"stmt": "Acne is a breast disease."
+},
+{
+"id": 9829,
+"stmt": "Stevens-Johnson syndrome is a metabolic disease."
+},
+{
+"id": 12886,
+"stmt": "Inner ear cancer is a thoracic disease."
+},
+{
+"id": 9880,
+"stmt": "Abdominal tuberculosis is a fungal infection."
+},
+{
+"id": 9986,
+"stmt": "Nicotine dependence is a mental disorder."
+},
+{
+"id": 13344,
+"stmt": "Gum cancer is an immune system disease."
+},
+{
+"id": 10772,
+"stmt": "CHILD syndrome is a reproductive system disease."
+},
+{
+"id": 9975,
+"stmt": "Nicotine dependence is a musculoskeletal system disease."
+},
+{
+"id": 12560,
+"stmt": "Substance-related disorder is a mental disorder."
+},
+{
+"id": 12077,
+"stmt": "Cannabis dependence is a genetic disease."
+},
+{
+"id": 13522,
+"stmt": "Sheehan syndrome is a reproductive system disease."
+},
+{
+"id": 9800,
+"stmt": "Swine influenza is a urinary system disease."
+},
+{
+"id": 12938,
+"stmt": "Infertility is a fungal infection."
+},
+{
+"id": 11531,
+"stmt": "Globe disease is a parasitic infection."
+},
+{
+"id": 11952,
+"stmt": "Colon lymphoma is a gastrointestinal system disease."
+},
+{
+"id": 10148,
+"stmt": "Stuttering is a gastrointestinal system disease."
+},
+{
+"id": 11060,
+"stmt": "Tooth disease is a thoracic disease."
+},
+{
+"id": 10544,
+"stmt": "Acute asthma is a gastrointestinal system disease."
+},
+{
+"id": 13519,
+"stmt": "Sheehan syndrome is an endocrine system disease."
+},
+{
+"id": 12925,
+"stmt": "Infertility is an endocrine system disease."
+},
+{
+"id": 10550,
+"stmt": "Acute asthma is an immune system disease."
+},
+{
+"id": 13098,
+"stmt": "Acne is a skin disease."
+},
+{
+"id": 10724,
+"stmt": "SHORT syndrome is a urinary system disease."
+},
+{
+"id": 13440,
+"stmt": "Wilson disease is a mental disorder."
+},
+{
+"id": 13072,
+"stmt": "Reactive arthritis is a cardiovascular system disease."
+},
+{
+"id": 12374,
+"stmt": "Iris disease is a urinary system disease."
+},
+{
+"id": 11739,
+"stmt": "Cerebral malaria is a blood disease."
+},
+{
+"id": 11551,
+"stmt": "Hepatitis A is a viral infection."
+},
+{
+"id": 13608,
+"stmt": "Lymph node disease is an immune system disease."
+},
+{
+"id": 11975,
+"stmt": "Alcohol use disorder is a nervous system disease."
+},
+{
+"id": 12495,
+"stmt": "Narcissistic personality disorder is a genetic disease."
+},
+{
+"id": 13580,
+"stmt": "Congenital heart block is a gastrointestinal system disease."
+},
+{
+"id": 13319,
+"stmt": "Cork-handlers' disease is a musculoskeletal system disease."
+},
+{
+"id": 11923,
+"stmt": "Larsen syndrome is a genetic disease."
+},
+{
+"id": 10369,
+"stmt": "Early-onset Parkinson's disease is a nervous system disease."
+},
+{
+"id": 11826,
+"stmt": "Cerebral degeneration is an immune system disease."
+},
+{
+"id": 13002,
+"stmt": "Pulmonary valve disease is a bacterial infection."
+},
+{
+"id": 12372,
+"stmt": "Iris disease is a skin disease."
+},
+{
+"id": 13591,
+"stmt": "Congenital heart block is a metabolic disease."
+},
+{
+"id": 11513,
+"stmt": "Globe disease is a nervous system disease."
+},
+{
+"id": 13153,
+"stmt": "Chest wall lymphoma is a cancer or other tumor."
+},
+{
+"id": 10597,
+"stmt": "Subjective cognitive decline is a breast disease."
+},
+{
+"id": 11102,
+"stmt": "Dependent personality disorder is a reproductive system disease."
+},
+{
+"id": 10229,
+"stmt": "Apple allergy is a genetic disease."
+},
+{
+"id": 10648,
+"stmt": "Traumatic brain injury is a bacterial infection."
+},
+{
+"id": 12831,
+"stmt": "Thoracic cancer is a respiratory system disease."
+},
+{
+"id": 10149,
+"stmt": "Stuttering is a nervous system disease."
+},
+{
+"id": 12898,
+"stmt": "Simple partial epilepsy is a gastrointestinal system disease."
+},
+{
+"id": 10820,
+"stmt": "Pelvic inflammatory disease is an infectious disease."
+},
+{
+"id": 11130,
+"stmt": "Obsessive-compulsive disorder is a mental disorder."
+},
+{
+"id": 10093,
+"stmt": "Acquired metabolic disease is a metabolic disease."
+},
+{
+"id": 10532,
+"stmt": "Chronic asthma is a thoracic disease."
+},
+{
+"id": 9764,
+"stmt": "Acute diarrhea is an infectious disease."
+},
+{
+"id": 13605,
+"stmt": "Lymph node disease is a musculoskeletal system disease."
+},
+{
+"id": 12815,
+"stmt": "Nelson syndrome is an endocrine system disease."
+},
+{
+"id": 13491,
+"stmt": "Allergic asthma is a respiratory system disease."
+},
+{
+"id": 12354,
+"stmt": "Multiple sclerosis is an immune system disease."
+},
+{
+"id": 11979,
+"stmt": "Alcohol use disorder is an endocrine system disease."
+},
+{
+"id": 11820,
+"stmt": "Cerebral degeneration is a gastrointestinal system disease."
+},
+{
+"id": 12713,
+"stmt": "Skin cancer is a cancer or other tumor."
+},
+{
+"id": 10413,
+"stmt": "Mitochondrial Parkinson's disease is a nervous system disease."
+},
+{
+"id": 13408,
+"stmt": "Intermediate coronary syndrome is a urinary system disease."
+},
+{
+"id": 10322,
+"stmt": "Cardiac tuberculosis is a cardiovascular system disease."
+},
+{
+"id": 10983,
+"stmt": "Kidney failure is a respiratory system disease."
+},
+{
+"id": 10722,
+"stmt": "SHORT syndrome is a skin disease."
+},
+{
+"id": 10572,
+"stmt": "Nocturnal asthma is an immune system disease."
+},
+{
+"id": 13595,
+"stmt": "Congenital heart block is a genetic disease."
+},
+{
+"id": 9948,
+"stmt": "Vitamin metabolic disorder is a cardiovascular system disease."
+},
+{
+"id": 13195,
+"stmt": "Eye lymphoma is a metabolic disease."
+},
+{
+"id": 12209,
+"stmt": "Autoimmune hepatitis is a genetic disease."
+},
+{
+"id": 13579,
+"stmt": "Congenital heart block is a respiratory system disease."
+},
+{
+"id": 12610,
+"stmt": "Cerebral arterial disease is a cardiovascular system disease."
+},
+{
+"id": 10721,
+"stmt": "SHORT syndrome is a nervous system disease."
+},
+{
+"id": 10120,
+"stmt": "Kennedy's disease is a bacterial infection."
+},
+{
+"id": 10365,
+"stmt": "Congenital diarrhea is a parasitic infection."
+},
+{
+"id": 12637,
+"stmt": "Anterior compartment syndrome is a musculoskeletal system disease."
+},
+{
+"id": 11529,
+"stmt": "Globe disease is a viral infection."
+},
+{
+"id": 10200,
+"stmt": "Gastrointestinal allergy is a reproductive system disease."
+},
+{
+"id": 11026,
+"stmt": "Malignant hypertension is a cardiovascular system disease."
+},
+{
+"id": 11711,
+"stmt": "Red-green color blindness is a nervous system disease."
+},
+{
+"id": 10119,
+"stmt": "Kennedy's disease is a genetic disease."
+},
+{
+"id": 10843,
+"stmt": "Small intestine cancer is a cancer or other tumor."
+},
+{
+"id": 13449,
+"stmt": "Evans' syndrome is a nervous system disease."
+},
+{
+"id": 10488,
+"stmt": "Coronavirus infectious disease is a thoracic disease."
+},
+{
+"id": 12214,
+"stmt": "Factor XIII deficiency is a cardiovascular system disease."
+},
+{
+"id": 10258,
+"stmt": "Carp allergy is a gastrointestinal system disease."
+},
+{
+"id": 10077,
+"stmt": "Delta chain disease is a viral infection."
+},
+{
+"id": 11474,
+"stmt": "Allergic disease is an immune system disease."
+},
+{
+"id": 11270,
+"stmt": "Acute orbital inflammation is a gastrointestinal system disease."
+},
+{
+"id": 12096,
+"stmt": "Skull cancer is an infectious disease."
+},
+{
+"id": 12001,
+"stmt": "Acute chest syndrome is an endocrine system disease."
+},
+{
+"id": 12813,
+"stmt": "Nelson syndrome is a musculoskeletal system disease."
+},
+{
+"id": 10198,
+"stmt": "Gastrointestinal allergy is an immune system disease."
+},
+{
+"id": 11605,
+"stmt": "Stiff-Person syndrome is an endocrine system disease."
+},
+{
+"id": 10700,
+"stmt": "Ballard syndrome is a skin disease."
+},
+{
+"id": 10658,
+"stmt": "Fraser syndrome is a urinary system disease."
+}
+],
+"G": [
+{
+"id": 19521,
+"stmt": "Tash-Kumyr is located in Central Asia."
+},
+{
+"id": 21085,
+"stmt": "Tsetserleg is located in Eastern Asia."
+},
+{
+"id": 24470,
+"stmt": "Santa Tecla is located in Central America."
+},
+{
+"id": 16569,
+"stmt": "Randers is located in Western Europe."
+},
+{
+"id": 25183,
+"stmt": "Arima is located in Northern America."
+},
+{
+"id": 16870,
+"stmt": "Ibarra is located in South America."
+},
+{
+"id": 14500,
+"stmt": "Watermael-Boitsfort is located in Western Asia."
+},
+{
+"id": 25887,
+"stmt": "Haiphong is located in Northern America."
+},
+{
+"id": 14971,
+"stmt": "Riberalta is located in Melanesia."
+},
+{
+"id": 19885,
+"stmt": "Sekong is located in South-Eastern Asia."
+},
+{
+"id": 16363,
+"stmt": "La Sierpe is located in Polynesia."
+},
+{
+"id": 18628,
+"stmt": "Balbriggan is located in Northern Europe."
+},
+{
+"id": 22113,
+"stmt": "Nesttun is located in Western Europe."
+},
+{
+"id": 26213,
+"stmt": "Chiengi is located in Melanesia."
+},
+{
+"id": 18358,
+"stmt": "Bjelovar is located in Eastern Europe."
+},
+{
+"id": 22197,
+"stmt": "Madhyapur Thimi is located in Southern Asia."
+},
+{
+"id": 23293,
+"stmt": "Gherla is located in Polynesia."
+},
+{
+"id": 19323,
+"stmt": "Yoshioka is located in Central Asia."
+},
+{
+"id": 13747,
+"stmt": "Khulm is located in South-Eastern Asia."
+},
+{
+"id": 18945,
+"stmt": "Kermanshah is located in Western Europe."
+},
+{
+"id": 15733,
+"stmt": "Yverdon-les-Bains is located in Western Europe."
+},
+{
+"id": 15233,
+"stmt": "Orsha is located in Eastern Asia."
+},
+{
+"id": 26228,
+"stmt": "Chegutu is located in Australia and New Zealand."
+},
+{
+"id": 25067,
+"stmt": "Gubadag is located in Eastern Asia."
+},
+{
+"id": 13960,
+"stmt": "Quipungo is located in Micronesia."
+},
+{
+"id": 20388,
+"stmt": "Valmiera is located in Northern Europe."
+},
+{
+"id": 18269,
+"stmt": "Macuelizo is located in Eastern Asia."
+},
+{
+"id": 23033,
+"stmt": "Surif City is located in Southern Asia."
+},
+{
+"id": 19934,
+"stmt": "Jounieh is located in Western Asia."
+},
+{
+"id": 24363,
+"stmt": "Tammenga is located in Eastern Asia."
+},
+{
+"id": 14037,
+"stmt": "Caleta Olivia is located in Western Africa."
+},
+{
+"id": 17251,
+"stmt": "Raahe is located in Western Europe."
+},
+{
+"id": 25426,
+"stmt": "Bakhmach is located in Northern Europe."
+},
+{
+"id": 20286,
+"stmt": "Eiguliai is located in Western Asia."
+},
+{
+"id": 13946,
+"stmt": "N'zeto is located in Southern Africa."
+},
+{
+"id": 14980,
+"stmt": "Riberalta is located in Southern Africa."
+},
+{
+"id": 19170,
+"stmt": "Half Way Tree is located in Eastern Africa."
+},
+{
+"id": 14618,
+"stmt": "Stara Zagora is located in Eastern Europe."
+},
+{
+"id": 14275,
+"stmt": "Banja Luka is located in South-Eastern Asia."
+},
+{
+"id": 17940,
+"stmt": "Neapoli is located in Eastern Europe."
+},
+{
+"id": 16414,
+"stmt": "Opava is located in Western Asia."
+},
+{
+"id": 20554,
+"stmt": "Ait Ourir is located in Central America."
+},
+{
+"id": 23822,
+"stmt": "Telok Blangah is located in South America."
+},
+{
+"id": 14013,
+"stmt": "Lomas de Zamora is located in Southern Asia."
+},
+{
+"id": 14749,
+"stmt": "Kayanza is located in Eastern Asia."
+},
+{
+"id": 15924,
+"stmt": "Angol is located in South America."
+},
+{
+"id": 25519,
+"stmt": "Iryango is located in Southern Asia."
+},
+{
+"id": 21930,
+"stmt": "Chinandega is located in South America."
+},
+{
+"id": 17471,
+"stmt": "Bicester is located in Western Europe."
+},
+{
+"id": 14305,
+"stmt": "Doboj is located in Caribbean."
+},
+{
+"id": 17031,
+"stmt": "Chipiona is located in Western Europe."
+},
+{
+"id": 20272,
+"stmt": "Eiguliai is located in Eastern Europe."
+},
+{
+"id": 19501,
+"stmt": "Iradan is located in Eastern Asia."
+},
+{
+"id": 24325,
+"stmt": "Rainville is located in Northern America."
+},
+{
+"id": 23111,
+"stmt": "Pontinha is located in Melanesia."
+},
+{
+"id": 22946,
+"stmt": "Barceloneta is located in Southern Europe."
+},
+{
+"id": 21989,
+"stmt": "Juigalpa is located in Melanesia."
+},
+{
+"id": 16039,
+"stmt": "Puqi is located in Western Africa."
+},
+{
+"id": 22945,
+"stmt": "Barceloneta is located in Southern Asia."
+},
+{
+"id": 16004,
+"stmt": "Makak is located in Eastern Europe."
+},
+{
+"id": 23228,
+"stmt": "Loma Plata is located in South America."
+},
+{
+"id": 21781,
+"stmt": "Nguigmi is located in Western Africa."
+},
+{
+"id": 24514,
+"stmt": "San Rafael Oriente is located in Central America."
+},
+{
+"id": 20645,
+"stmt": "Drochia is located in Eastern Asia."
+},
+{
+"id": 19557,
+"stmt": "Kampong Cham is located in Southern Asia."
+},
+{
+"id": 24494,
+"stmt": "Delgado is located in Eastern Africa."
+},
+{
+"id": 14841,
+"stmt": "Kpozoun is located in Middle Africa."
+},
+{
+"id": 20754,
+"stmt": "Amboanjo is located in Eastern Africa."
+},
+{
+"id": 24214,
+"stmt": "Berbera is located in Northern Africa."
+},
+{
+"id": 15948,
+"stmt": "Kribi is located in Southern Africa."
+},
+{
+"id": 18678,
+"stmt": "Ramat Gan is located in Southern Europe."
+},
+{
+"id": 16765,
+"stmt": "Djidiouia is located in Western Africa."
+},
+{
+"id": 19229,
+"stmt": "Irbid is located in Western Africa."
+},
+{
+"id": 22019,
+"stmt": "Nieuwegein is located in South-Eastern Asia."
+},
+{
+"id": 16491,
+"stmt": "Bad Kreuznach is located in Middle Africa."
+},
+{
+"id": 23320,
+"stmt": "Gura Humorului is located in Southern Europe."
+},
+{
+"id": 18702,
+"stmt": "Jaffa is located in Western Asia."
+},
+{
+"id": 17349,
+"stmt": "Oyem is located in Middle Africa."
+},
+{
+"id": 20226,
+"stmt": "Thaba-Tseka is located in Eastern Africa."
+},
+{
+"id": 14583,
+"stmt": "Korsimoro is located in South-Eastern Asia."
+},
+{
+"id": 16354,
+"stmt": "La Sierpe is located in Eastern Africa."
+},
+{
+"id": 25376,
+"stmt": "Debaltseve is located in Eastern Europe."
+},
+{
+"id": 24442,
+"stmt": "Aweil is located in Southern Europe."
+},
+{
+"id": 19373,
+"stmt": "Mombasa is located in Middle Africa."
+},
+{
+"id": 19213,
+"stmt": "Irbid is located in Central Asia."
+},
+{
+"id": 22420,
+"stmt": "Sur is located in Western Asia."
+},
+{
+"id": 16065,
+"stmt": "Shiqiaozi is located in Caribbean."
+},
+{
+"id": 25276,
+"stmt": "Mbuguni is located in Southern Africa."
+},
+{
+"id": 13757,
+"stmt": "Taloqan is located in Central Asia."
+},
+{
+"id": 15292,
+"stmt": "Novogrudok is located in Western Asia."
+},
+{
+"id": 20735,
+"stmt": "Didy is located in Melanesia."
+},
+{
+"id": 19097,
+"stmt": "Fossano is located in Western Africa."
+},
+{
+"id": 18034,
+"stmt": "Tiquisate is located in Northern Europe."
+},
+{
+"id": 21672,
+"stmt": "Rundu is located in Western Asia."
+},
+{
+"id": 22408,
+"stmt": "Sur is located in Micronesia."
+},
+{
+"id": 14581,
+"stmt": "Korsimoro is located in Polynesia."
+},
+{
+"id": 24035,
+"stmt": "Kenema is located in Melanesia."
+},
+{
+"id": 16232,
+"stmt": "Quesada is located in South America."
+},
+{
+"id": 25873,
+"stmt": "La Azulita is located in Western Africa."
+},
+{
+"id": 25301,
+"stmt": "Namanyere is located in Western Africa."
+},
+{
+"id": 17006,
+"stmt": "Rivas-Vaciamadrid is located in Southern Europe."
+},
+{
+"id": 17596,
+"stmt": "Nalerigu is located in South America."
+},
+{
+"id": 22349,
+"stmt": "Karori is located in South-Eastern Asia."
+},
+{
+"id": 19587,
+"stmt": "Lumphat is located in Central Asia."
+},
+{
+"id": 15474,
+"stmt": "Kabare is located in Eastern Africa."
+},
+{
+"id": 21949,
+"stmt": "Matagalpa is located in Northern America."
+},
+{
+"id": 21776,
+"stmt": "Nguigmi is located in South America."
+},
+{
+"id": 18517,
+"stmt": "Baja is located in Northern America."
+},
+{
+"id": 15256,
+"stmt": "Slonim is located in Eastern Europe."
+},
+{
+"id": 24885,
+"stmt": "Pran Buri is located in Western Europe."
+},
+{
+"id": 22170,
+"stmt": "Kongsberg is located in Northern Europe."
+},
+{
+"id": 16826,
+"stmt": "Ambato is located in South America."
+},
+{
+"id": 20194,
+"stmt": "Mohale's Hoek is located in Southern Africa."
+},
+{
+"id": 25138,
+"stmt": "Jendouba is located in Northern Africa."
+},
+{
+"id": 24857,
+"stmt": "Bangkok Yai is located in South-Eastern Asia."
+},
+{
+"id": 20854,
+"stmt": "Zelino is located in Southern Africa."
+},
+{
+"id": 19989,
+"stmt": "Jaffna is located in Middle Africa."
+},
+{
+"id": 23963,
+"stmt": "Michalovce is located in Caribbean."
+},
+{
+"id": 25664,
+"stmt": "Carmelo is located in Micronesia."
+},
+{
+"id": 24180,
+"stmt": "Kayar is located in Western Asia."
+},
+{
+"id": 19167,
+"stmt": "Half Way Tree is located in Caribbean."
+},
+{
+"id": 14235,
+"stmt": "Dandenong North is located in Western Africa."
+},
+{
+"id": 26068,
+"stmt": "Centurion is located in Southern Africa."
+},
+{
+"id": 14704,
+"stmt": "Ngozi is located in Eastern Africa."
+},
+{
+"id": 23771,
+"stmt": "Kangkar is located in Melanesia."
+},
+{
+"id": 15022,
+"stmt": "San Ignacio de Velasco is located in South America."
+},
+{
+"id": 18360,
+"stmt": "Bjelovar is located in Micronesia."
+},
+{
+"id": 13851,
+"stmt": "Berat is located in Middle Africa."
+},
+{
+"id": 17335,
+"stmt": "Le Pontet is located in Southern Asia."
+},
+{
+"id": 22352,
+"stmt": "Karori is located in Southern Europe."
+},
+{
+"id": 24736,
+"stmt": "Bassar is located in Eastern Africa."
+},
+{
+"id": 14600,
+"stmt": "Karankasso is located in Northern Africa."
+},
+{
+"id": 22694,
+"stmt": "Pililla is located in Micronesia."
+},
+{
+"id": 14525,
+"stmt": "Koudougou is located in Caribbean."
+},
+{
+"id": 23379,
+"stmt": "Sremska Mitrovica is located in Northern America."
+},
+{
+"id": 14859,
+"stmt": "Toukountouna is located in Eastern Asia."
+},
+{
+"id": 21804,
+"stmt": "Mayahi is located in Western Asia."
+},
+{
+"id": 18584,
+"stmt": "Letterkenny is located in Northern Europe."
+},
+{
+"id": 21373,
+"stmt": "Monkey Bay is located in Melanesia."
+},
+{
+"id": 13796,
+"stmt": "Eslam Qaleh is located in Western Asia."
+},
+{
+"id": 21272,
+"stmt": "Goodlands is located in Southern Africa."
+},
+{
+"id": 18080,
+"stmt": "Reino de Bandim is located in South America."
+},
+{
+"id": 22224,
+"stmt": "Siraha is located in Australia and New Zealand."
+},
+{
+"id": 21903,
+"stmt": "Ipoti is located in Middle Africa."
+},
+{
+"id": 15132,
+"stmt": "Campos Belos is located in South America."
+},
+{
+"id": 14022,
+"stmt": "Caleta Olivia is located in Eastern Africa."
+},
+{
+"id": 20009,
+"stmt": "Ambalangoda is located in Melanesia."
+},
+{
+"id": 13814,
+"stmt": "Karukh is located in Southern Africa."
+},
+{
+"id": 15626,
+"stmt": "Mouyondzi is located in Central America."
+},
+{
+"id": 18244,
+"stmt": "La Lima is located in Central America."
+},
+{
+"id": 20002,
+"stmt": "Ambalangoda is located in Australia and New Zealand."
+},
+{
+"id": 23036,
+"stmt": "Surif City is located in Western Asia."
+},
+{
+"id": 14802,
+"stmt": "Bassila is located in South America."
+},
+{
+"id": 19716,
+"stmt": "Hwaseong-si is located in Australia and New Zealand."
+},
+{
+"id": 26038,
+"stmt": "Mocha is located in Micronesia."
+},
+{
+"id": 15371,
+"stmt": "Willowridge-Martingrove-Richview is located in Northern America."
+},
+{
+"id": 19124,
+"stmt": "May Pen is located in Central America."
+},
+{
+"id": 24212,
+"stmt": "Berbera is located in Micronesia."
+},
+{
+"id": 15752,
+"stmt": "Wettingen is located in Southern Europe."
+},
+{
+"id": 20167,
+"stmt": "Maputsoe is located in Northern America."
+},
+{
+"id": 21310,
+"stmt": "Salima is located in Northern Africa."
+},
+{
+"id": 14867,
+"stmt": "Toukountouna is located in Polynesia."
+},
+{
+"id": 23821,
+"stmt": "Telok Blangah is located in Polynesia."
+},
+{
+"id": 15724,
+"stmt": "Yverdon-les-Bains is located in Northern Europe."
+},
+{
+"id": 25521,
+"stmt": "Iryango is located in Western Africa."
+},
+{
+"id": 15270,
+"stmt": "Slonim is located in Western Asia."
+},
+{
+"id": 21201,
+"stmt": "Tembedgha is located in Northern America."
+},
+{
+"id": 15907,
+"stmt": "Hacienda La Calera is located in Western Africa."
+},
+{
+"id": 23520,
+"stmt": "Madinah is located in Western Asia."
+},
+{
+"id": 22263,
+"stmt": "Dailekh is located in Southern Asia."
+},
+{
+"id": 21061,
+"stmt": "Khovd is located in Central Asia."
+},
+{
+"id": 14760,
+"stmt": "Kayanza is located in Southern Africa."
+},
+{
+"id": 25601,
+"stmt": "Carteret is located in Northern America."
+},
+{
+"id": 16788,
+"stmt": "Grarem is located in Western Asia."
+},
+{
+"id": 23920,
+"stmt": "Trbovlje is located in Central America."
+},
+{
+"id": 15006,
+"stmt": "Bermejo is located in Western Asia."
+},
+{
+"id": 24154,
+"stmt": "Mboro is located in Southern Africa."
+},
+{
+"id": 25717,
+"stmt": "Kogon Shahri is located in Southern Asia."
+},
+{
+"id": 21057,
+"stmt": "Nalayh is located in Western Europe."
+},
+{
+"id": 19787,
+"stmt": "Tallang-dong is located in Eastern Asia."
+},
+{
+"id": 23005,
+"stmt": "Old City is located in Northern America."
+},
+{
+"id": 17781,
+"stmt": "Le Gosier is located in Caribbean."
+},
+{
+"id": 17525,
+"stmt": "Sekondi-Takoradi is located in Middle Africa."
+},
+{
+"id": 20023,
+"stmt": "Ambalangoda is located in Western Europe."
+},
+{
+"id": 15773,
+"stmt": "Katiola is located in Southern Asia."
+},
+{
+"id": 18944,
+"stmt": "Kermanshah is located in Western Asia."
+},
+{
+"id": 23870,
+"stmt": "Maribor is located in Southern Europe."
+},
+{
+"id": 19591,
+"stmt": "Lumphat is located in Melanesia."
+},
+{
+"id": 13745,
+"stmt": "Khulm is located in Polynesia."
+},
+{
+"id": 15884,
+"stmt": "Renca is located in Southern Europe."
+},
+{
+"id": 16980,
+"stmt": "Viljandi is located in South America."
+},
+{
+"id": 17508,
+"stmt": "Belle Vale is located in South America."
+},
+{
+"id": 16744,
+"stmt": "Sedrata is located in Western Asia."
+},
+{
+"id": 19302,
+"stmt": "Maruobara is located in Eastern Africa."
+},
+{
+"id": 16347,
+"stmt": "Calimete is located in Western Africa."
+},
+{
+"id": 20430,
+"stmt": "Sirte is located in Northern Africa."
+},
+{
+"id": 19214,
+"stmt": "Irbid is located in Eastern Africa."
+},
+{
+"id": 20820,
+"stmt": "Lipkovo is located in Eastern Africa."
+},
+{
+"id": 16800,
+"stmt": "Charef is located in Northern Africa."
+},
+{
+"id": 18277,
+"stmt": "Macuelizo is located in Polynesia."
+},
+{
+"id": 22365,
+"stmt": "Rustaq is located in Middle Africa."
+},
+{
+"id": 22784,
+"stmt": "Harappa is located in Northern Africa."
+},
+{
+"id": 21083,
+"stmt": "Tsetserleg is located in Central Asia."
+},
+{
+"id": 21927,
+"stmt": "Chinandega is located in Northern America."
+},
+{
+"id": 15231,
+"stmt": "Orsha is located in Central Asia."
+},
+{
+"id": 15499,
+"stmt": "Bocaranga is located in Melanesia."
+},
+{
+"id": 18466,
+"stmt": "Lenbe is located in Eastern Africa."
+},
+{
+"id": 15849,
+"stmt": "La Serena is located in Eastern Asia."
+},
+{
+"id": 22817,
+"stmt": "Konin is located in Western Europe."
+},
+{
+"id": 24950,
+"stmt": "Norak is located in Western Asia."
+},
+{
+"id": 19434,
+"stmt": "Kimilili is located in Eastern Africa."
+},
+{
+"id": 14238,
+"stmt": "Hawthorn is located in Australia and New Zealand."
+},
+{
+"id": 21173,
+"stmt": "Aleg is located in Eastern Asia."
+},
+{
+"id": 18137,
+"stmt": "Whampoa is located in Eastern Asia."
+},
+{
+"id": 17931,
+"stmt": "Mytilene is located in Western Africa."
+},
+{
+"id": 20485,
+"stmt": "Ubari is located in Western Europe."
+},
+{
+"id": 19159,
+"stmt": "Ocho Rios is located in South-Eastern Asia."
+},
+{
+"id": 25354,
+"stmt": "Kryukiv is located in Eastern Europe."
+},
+{
+"id": 14851,
+"stmt": "Kpozoun is located in Western Africa."
+},
+{
+"id": 21543,
+"stmt": "Kampung Tanjung Karang is located in Caribbean."
+},
+{
+"id": 16157,
+"stmt": "Anaime is located in Eastern Asia."
+},
+{
+"id": 22703,
+"stmt": "Pililla is located in Southern Asia."
+},
+{
+"id": 15200,
+"stmt": "Thamaga is located in Southern Africa."
+},
+{
+"id": 25506,
+"stmt": "Iryango is located in Eastern Africa."
+},
+{
+"id": 17484,
+"stmt": "Bideford is located in Northern Europe."
+},
+{
+"id": 26288,
+"stmt": "Gokwe is located in Southern Africa."
+},
+{
+"id": 20195,
+"stmt": "Mohale's Hoek is located in Southern Asia."
+},
+{
+"id": 20906,
+"stmt": "Kouri is located in Central America."
+},
+{
+"id": 18369,
+"stmt": "Bjelovar is located in Southern Asia."
+},
+{
+"id": 19537,
+"stmt": "Tash-Kumyr is located in Western Africa."
+},
+{
+"id": 25398,
+"stmt": "Korostyshiv is located in Eastern Europe."
+},
+{
+"id": 14957,
+"stmt": "Liang is located in South-Eastern Asia."
+},
+{
+"id": 20410,
+"stmt": "Tukums is located in Northern Europe."
+},
+{
+"id": 14523,
+"stmt": "Oostkamp is located in Western Europe."
+},
+{
+"id": 19355,
+"stmt": "Makubetsu is located in Polynesia."
+},
+{
+"id": 19161,
+"stmt": "Ocho Rios is located in Southern Asia."
+},
+{
+"id": 19579,
+"stmt": "Pursat is located in Southern Asia."
+},
+{
+"id": 26018,
+"stmt": "Ma'rib is located in Northern Africa."
+},
+{
+"id": 23586,
+"stmt": "Afif is located in Western Asia."
+},
+{
+"id": 18512,
+"stmt": "Baja is located in Eastern Europe."
+},
+{
+"id": 26151,
+"stmt": "Mufulira is located in Northern America."
+},
+{
+"id": 14032,
+"stmt": "Caleta Olivia is located in South America."
+},
+{
+"id": 26165,
+"stmt": "Luwingu is located in Central Asia."
+},
+{
+"id": 23188,
+"stmt": "Villa Hayes is located in Southern Europe."
+},
+{
+"id": 22852,
+"stmt": "Krapkowice is located in Northern Europe."
+},
+{
+"id": 16676,
+"stmt": "Villa Francisca is located in Southern Europe."
+},
+{
+"id": 24691,
+"stmt": "Pala is located in Central Asia."
+},
+{
+"id": 18479,
+"stmt": "Lenbe is located in Southern Asia."
+},
+{
+"id": 15278,
+"stmt": "Novogrudok is located in Eastern Europe."
+},
+{
+"id": 17176,
+"stmt": "East Helsinki is located in Northern Europe."
+},
+{
+"id": 16109,
+"stmt": "Santa Marta is located in Caribbean."
+},
+{
+"id": 19477,
+"stmt": "Razzakov is located in Central Asia."
+},
+{
+"id": 17847,
+"stmt": "Basse-Terre is located in Caribbean."
+},
+{
+"id": 17802,
+"stmt": "Petit-Bourg is located in Australia and New Zealand."
+},
+{
+"id": 22413,
+"stmt": "Sur is located in Polynesia."
+},
+{
+"id": 24570,
+"stmt": "Homs is located in South America."
+},
+{
+"id": 21953,
+"stmt": "Matagalpa is located in South-Eastern Asia."
+},
+{
+"id": 22152,
+"stmt": "Harstad is located in Southern Africa."
+},
+{
+"id": 26243,
+"stmt": "Chegutu is located in South-Eastern Asia."
+},
+{
+"id": 25649,
+"stmt": "Treinta y Tres is located in South-Eastern Asia."
+},
+{
+"id": 16011,
+"stmt": "Makak is located in Polynesia."
+},
+{
+"id": 26276,
+"stmt": "Gokwe is located in Eastern Africa."
+},
+{
+"id": 25283,
+"stmt": "Namanyere is located in Caribbean."
+},
+{
+"id": 14626,
+"stmt": "Stara Zagora is located in South America."
+},
+{
+"id": 14095,
+"stmt": "Brigittenau is located in Northern America."
+},
+{
+"id": 23386,
+"stmt": "Sremska Mitrovica is located in Southern Europe."
+},
+{
+"id": 16952,
+"stmt": "Kristiine is located in Micronesia."
+},
+{
+"id": 16496,
+"stmt": "Bad Kreuznach is located in South America."
+},
+{
+"id": 19356,
+"stmt": "Makubetsu is located in South America."
+},
+{
+"id": 18638,
+"stmt": "Lucan is located in Australia and New Zealand."
+},
+{
+"id": 17886,
+"stmt": "Volos is located in Southern Europe."
+},
+{
+"id": 15338,
+"stmt": "Courtenay is located in Australia and New Zealand."
+},
+{
+"id": 19691,
+"stmt": "Chunghwa is located in Western Africa."
+},
+{
+"id": 19956,
+"stmt": "Ghazieh is located in Western Asia."
+},
+{
+"id": 16538,
+"stmt": "Vechelde is located in Northern Europe."
+},
+{
+"id": 24658,
+"stmt": "Kelo is located in South America."
+},
+{
+"id": 24384,
+"stmt": "Malakal is located in Eastern Africa."
+},
+{
+"id": 24290,
+"stmt": "Ceerigaabo is located in Western Asia."
+},
+{
+"id": 15555,
+"stmt": "Dekoa is located in Western Africa."
+},
+{
+"id": 18810,
+"stmt": "Palavakkam is located in Southern Europe."
+},
+{
+"id": 25792,
+"stmt": "Ciudad Guayana is located in Eastern Africa."
+},
+{
+"id": 20338,
+"stmt": "Daugavpils is located in Eastern Europe."
+},
+{
+"id": 14201,
+"stmt": "Randwick is located in Melanesia."
+},
+{
+"id": 24126,
+"stmt": "Kolda is located in Northern Africa."
+},
+{
+"id": 14055,
+"stmt": "Lobos is located in South-Eastern Asia."
+},
+{
+"id": 25591,
+"stmt": "Carteret is located in Caribbean."
+},
+{
+"id": 15708,
+"stmt": "Sitten is located in Southern Europe."
+},
+{
+"id": 17264,
+"stmt": "Troyes is located in Northern Europe."
+},
+{
+"id": 14206,
+"stmt": "Randwick is located in Northern Europe."
+},
+{
+"id": 23974,
+"stmt": "Michalovce is located in Northern Europe."
+},
+{
+"id": 20098,
+"stmt": "Ganta is located in Micronesia."
+},
+{
+"id": 19091,
+"stmt": "Fossano is located in Polynesia."
+},
+{
+"id": 19868,
+"stmt": "Pakxan is located in Western Asia."
+},
+{
+"id": 18878,
+"stmt": "Najaf is located in Western Asia."
+},
+{
+"id": 21535,
+"stmt": "Sungkai is located in South-Eastern Asia."
+},
+{
+"id": 25509,
+"stmt": "Iryango is located in Melanesia."
+},
+{
+"id": 20487,
+"stmt": "Brak is located in Caribbean."
+},
+{
+"id": 24655,
+"stmt": "Kelo is located in Northern America."
+},
+{
+"id": 21718,
+"stmt": "Ondangwa is located in Australia and New Zealand."
+},
+{
+"id": 25271,
+"stmt": "Mbuguni is located in Northern America."
+},
+{
+"id": 25264,
+"stmt": "Mbuguni is located in Eastern Africa."
+},
+{
+"id": 24501,
+"stmt": "Delgado is located in Northern America."
+},
+{
+"id": 26060,
+"stmt": "Centurion is located in Micronesia."
+},
+{
+"id": 23416,
+"stmt": "Cyangugu is located in Eastern Africa."
+},
+{
+"id": 19472,
+"stmt": "Balykchy is located in Western Asia."
+},
+{
+"id": 23396,
+"stmt": "Vrbas is located in Eastern Europe."
+},
+{
+"id": 22462,
+"stmt": "La Chorrera is located in Southern Europe."
+},
+{
+"id": 17976,
+"stmt": "Zacapa is located in Western Asia."
+},
+{
+"id": 19398,
+"stmt": "Eldoret is located in Northern Europe."
+},
+{
+"id": 16025,
+"stmt": "Puqi is located in Eastern Asia."
+},
+{
+"id": 19549,
+"stmt": "Kampong Cham is located in Middle Africa."
+},
+{
+"id": 13931,
+"stmt": "N'zeto is located in Caribbean."
+},
+{
+"id": 25802,
+"stmt": "Ciudad Guayana is located in South America."
+},
+{
+"id": 24057,
+"stmt": "Port Loko is located in Melanesia."
+},
+{
+"id": 23778,
+"stmt": "Kangkar is located in South America."
+},
+{
+"id": 26050,
+"stmt": "Mocha is located in Western Asia."
+},
+{
+"id": 21316,
+"stmt": "Salima is located in Southern Africa."
+},
+{
+"id": 22376,
+"stmt": "Rustaq is located in Western Asia."
+},
+{
+"id": 14088,
+"stmt": "Brigittenau is located in Eastern Africa."
+},
+{
+"id": 21959,
+"stmt": "Matagalpa is located in Western Europe."
+},
+{
+"id": 24703,
+"stmt": "Pala is located in South-Eastern Asia."
+},
+{
+"id": 18428,
+"stmt": "Jacmel is located in Northern Africa."
+},
+{
+"id": 25833,
+"stmt": "Carora is located in Caribbean."
+},
+{
+"id": 15793,
+"stmt": "Tanda is located in South-Eastern Asia."
+},
+{
+"id": 16682,
+"stmt": "Salcedo is located in Central America."
+},
+{
+"id": 24969,
+"stmt": "Istiqlol is located in Southern Asia."
+},
+{
+"id": 25725,
+"stmt": "Kitob is located in Central Asia."
+},
+{
+"id": 23626,
+"stmt": "El Geneina Fort is located in Southern Africa."
+},
+{
+"id": 21622,
+"stmt": "Namacurra is located in South America."
+},
+{
+"id": 23049,
+"stmt": "Jericho is located in Northern America."
+},
+{
+"id": 24164,
+"stmt": "Kayar is located in Eastern Africa."
+},
+{
+"id": 18600,
+"stmt": "Greystones is located in Eastern Europe."
+},
+{
+"id": 25872,
+"stmt": "La Azulita is located in Southern Europe."
+},
+{
+"id": 25484,
+"stmt": "Lwakyomba is located in Eastern Africa."
+},
+{
+"id": 18424,
+"stmt": "Jacmel is located in Eastern Europe."
+},
+{
+"id": 19708,
+"stmt": "Samho-rodongjagu is located in South America."
+},
+{
+"id": 20462,
+"stmt": "Zuwarah is located in Western Asia."
+},
+{
+"id": 14291,
+"stmt": "Bugojno is located in Middle Africa."
+},
+{
+"id": 15110,
+"stmt": "Nova Soure is located in South America."
+},
+{
+"id": 14572,
+"stmt": "Korsimoro is located in Eastern Africa."
+},
+{
+"id": 18606,
+"stmt": "Greystones is located in Northern Europe."
+},
+{
+"id": 13870,
+"stmt": "Fier is located in Eastern Europe."
+},
+{
+"id": 20763,
+"stmt": "Amboanjo is located in Polynesia."
+},
+{
+"id": 18782,
+"stmt": "Kotagiri is located in Northern Europe."
+},
+{
+"id": 15846,
+"stmt": "La Serena is located in Central America."
+},
+{
+"id": 23274,
+"stmt": "Lugoj is located in Southern Africa."
+},
+{
+"id": 16034,
+"stmt": "Puqi is located in South America."
+},
+{
+"id": 15394,
+"stmt": "Clarence-Rockland is located in Northern Europe."
+},
+{
+"id": 14738,
+"stmt": "Rumonge is located in Southern Africa."
+},
+{
+"id": 20668,
+"stmt": "Codru is located in Eastern Europe."
+},
+{
+"id": 24039,
+"stmt": "Kenema is located in Northern America."
+},
+{
+"id": 18016,
+"stmt": "Alotenango is located in Southern Africa."
+},
+{
+"id": 24313,
+"stmt": "Pontbuiten is located in Western Europe."
+},
+{
+"id": 13887,
+"stmt": "Peqin is located in Caribbean."
+},
+{
+"id": 23065,
+"stmt": "Vila Nova de Gaia is located in Eastern Asia."
+},
+{
+"id": 20404,
+"stmt": "Tukums is located in Eastern Europe."
+},
+{
+"id": 20628,
+"stmt": "Comrat is located in Northern Africa."
+},
+{
+"id": 15518,
+"stmt": "Batangafo is located in Eastern Africa."
+},
+{
+"id": 13848,
+"stmt": "Berat is located in Eastern Europe."
+},
+{
+"id": 18583,
+"stmt": "Letterkenny is located in Northern America."
+},
+{
+"id": 17072,
+"stmt": "Carlet is located in Southern Europe."
+},
+{
+"id": 24901,
+"stmt": "Bang Bon Nuea is located in South-Eastern Asia."
+},
+{
+"id": 25891,
+"stmt": "Haiphong is located in South-Eastern Asia."
+},
+{
+"id": 25014,
+"stmt": "Balkanabat is located in Southern Europe."
+},
+{
+"id": 15430,
+"stmt": "Mwene is located in Eastern Africa."
+},
+{
+"id": 25217,
+"stmt": "Point Fortin is located in Caribbean."
+},
+{
+"id": 26112,
+"stmt": "Harrismith is located in Southern Africa."
+},
+{
+"id": 19297,
+"stmt": "Tochigi is located in Western Europe."
+},
+{
+"id": 24069,
+"stmt": "Port Loko is located in Western Africa."
+},
+{
+"id": 24875,
+"stmt": "Pran Buri is located in Northern America."
+},
+{
+"id": 16400,
+"stmt": "Opava is located in Eastern Europe."
+},
+{
+"id": 23801,
+"stmt": "Senja is located in South-Eastern Asia."
+},
+{
+"id": 26214,
+"stmt": "Chiengi is located in Micronesia."
+},
+{
+"id": 23491,
+"stmt": "Umutara is located in Polynesia."
+},
+{
+"id": 20271,
+"stmt": "Eiguliai is located in Eastern Asia."
+},
+{
+"id": 20567,
+"stmt": "Ait Ourir is located in South-Eastern Asia."
+},
+{
+"id": 22951,
+"stmt": "Aguadilla is located in Caribbean."
+},
+{
+"id": 15350,
+"stmt": "Courtenay is located in Northern Europe."
+},
+{
+"id": 13838,
+"stmt": "Elbasan is located in Southern Europe."
+},
+{
+"id": 24822,
+"stmt": "Suan Luang is located in Central America."
+},
+{
+"id": 17559,
+"stmt": "Kade is located in Western Europe."
+},
+{
+"id": 23968,
+"stmt": "Michalovce is located in Eastern Europe."
+},
+{
+"id": 25625,
+"stmt": "Fray Bentos is located in Polynesia."
+},
+{
+"id": 13879,
+"stmt": "Fier is located in South-Eastern Asia."
+},
+{
+"id": 25989,
+"stmt": "Ataq is located in Central Asia."
+},
+{
+"id": 25471,
+"stmt": "Anaka is located in Polynesia."
+},
+{
+"id": 15213,
+"stmt": "Janeng is located in Melanesia."
+},
+{
+"id": 20624,
+"stmt": "Comrat is located in Eastern Europe."
+},
+{
+"id": 15467,
+"stmt": "Djugu is located in Western Africa."
+},
+{
+"id": 17173,
+"stmt": "East Helsinki is located in Middle Africa."
+},
+{
+"id": 16170,
+"stmt": "Anaime is located in Southern Europe."
+},
+{
+"id": 22612,
+"stmt": "Quillabamba is located in South America."
+},
+{
+"id": 24684,
+"stmt": "Doba is located in Southern Europe."
+},
+{
+"id": 22484,
+"stmt": "Chilibre is located in Southern Europe."
+},
+{
+"id": 20913,
+"stmt": "Kouri is located in Middle Africa."
+},
+{
+"id": 16124,
+"stmt": "Santa Marta is located in Southern Africa."
+},
+{
+"id": 25267,
+"stmt": "Mbuguni is located in Melanesia."
+},
+{
+"id": 25327,
+"stmt": "Kibara is located in Caribbean."
+},
+{
+"id": 21304,
+"stmt": "Salima is located in Eastern Africa."
+},
+{
+"id": 22794,
+"stmt": "Harappa is located in Western Asia."
+},
+{
+"id": 21615,
+"stmt": "Namacurra is located in Melanesia."
+},
+{
+"id": 17352,
+"stmt": "Oyem is located in Northern Europe."
+},
+{
+"id": 26266,
+"stmt": "Chiredzi is located in Southern Africa."
+},
+{
+"id": 23670,
+"stmt": "Al Hasaheisa is located in Southern Africa."
+},
+{
+"id": 26232,
+"stmt": "Chegutu is located in Eastern Africa."
+},
+{
+"id": 25084,
+"stmt": "Menzel Bourguiba is located in Australia and New Zealand."
+},
+{
+"id": 14054,
+"stmt": "Lobos is located in South America."
+},
+{
+"id": 21939,
+"stmt": "Matagalpa is located in Caribbean."
+},
+{
+"id": 21191,
+"stmt": "Tembedgha is located in Caribbean."
+},
+{
+"id": 23971,
+"stmt": "Michalovce is located in Middle Africa."
+},
+{
+"id": 24620,
+"stmt": "Al Qaryatayn is located in Western Asia."
+},
+{
+"id": 23779,
+"stmt": "Kangkar is located in South-Eastern Asia."
+},
+{
+"id": 18591,
+"stmt": "Letterkenny is located in Western Africa."
+},
+{
+"id": 17198,
+"stmt": "Kuopio is located in Northern Europe."
+},
+{
+"id": 17486,
+"stmt": "Bideford is located in South America."
+},
+{
+"id": 17388,
+"stmt": "Oyam is located in Eastern Africa."
+},
+{
+"id": 23206,
+"stmt": "Coronel Oviedo is located in South America."
+},
+{
+"id": 20922,
+"stmt": "Kouri is located in Southern Europe."
+},
+{
+"id": 19325,
+"stmt": "Yoshioka is located in Eastern Asia."
+},
+{
+"id": 21685,
+"stmt": "Swakopmund is located in Northern America."
+},
+{
+"id": 24110,
+"stmt": "Goderich is located in Southern Africa."
+},
+{
+"id": 22586,
+"stmt": "Picsi is located in Northern Africa."
+},
+{
+"id": 24370,
+"stmt": "Tammenga is located in Northern Europe."
+},
+{
+"id": 21968,
+"stmt": "Mateare is located in Micronesia."
+},
+{
+"id": 21481,
+"stmt": "Hulu Langat is located in Eastern Asia."
+},
+{
+"id": 23671,
+"stmt": "Al Hasaheisa is located in Southern Asia."
+},
+{
+"id": 13805,
+"stmt": "Karukh is located in Melanesia."
+},
+{
+"id": 21871,
+"stmt": "Agege is located in Western Europe."
+},
+{
+"id": 25285,
+"stmt": "Namanyere is located in Central Asia."
+},
+{
+"id": 17115,
+"stmt": "Tulu Bolo is located in Southern Asia."
+},
+{
+"id": 19690,
+"stmt": "Chunghwa is located in Southern Europe."
+},
+{
+"id": 25893,
+"stmt": "Haiphong is located in Southern Asia."
+},
+{
+"id": 18419,
+"stmt": "Jacmel is located in Caribbean."
+},
+{
+"id": 17245,
+"stmt": "Raahe is located in South-Eastern Asia."
+},
+{
+"id": 24148,
+"stmt": "Mboro is located in Northern Africa."
+},
+{
+"id": 26002,
+"stmt": "Ataq is located in Southern Africa."
+},
+{
+"id": 15113,
+"stmt": "Nova Soure is located in Southern Asia."
+},
+{
+"id": 23099,
+"stmt": "Arrentela is located in Southern Asia."
+},
+{
+"id": 14684,
+"stmt": "Dupnitsa is located in Eastern Europe."
+},
+{
+"id": 14680,
+"stmt": "Dupnitsa is located in Central America."
+},
+{
+"id": 25330,
+"stmt": "Kibara is located in Eastern Africa."
+},
+{
+"id": 14915,
+"stmt": "Seria is located in Southern Asia."
+},
+{
+"id": 14204,
+"stmt": "Randwick is located in Northern Africa."
+},
+{
+"id": 15068,
+"stmt": "Angra dos Reis is located in Southern Africa."
+},
+{
+"id": 17803,
+"stmt": "Petit-Bourg is located in Caribbean."
+},
+{
+"id": 17144,
+"stmt": "Adebaye is located in Central America."
+},
+{
+"id": 15385,
+"stmt": "Clarence-Rockland is located in Central Asia."
+},
+{
+"id": 25294,
+"stmt": "Namanyere is located in Northern Europe."
+},
+{
+"id": 26299,
+"stmt": "Gwanda is located in Eastern Asia."
+},
+{
+"id": 15419,
+"stmt": "Bukavu is located in South-Eastern Asia."
+},
+{
+"id": 20779,
+"stmt": "Tetovo is located in Melanesia."
+},
+{
+"id": 14575,
+"stmt": "Korsimoro is located in Melanesia."
+},
+{
+"id": 15011,
+"stmt": "San Ignacio de Velasco is located in Central Asia."
+},
+{
+"id": 21472,
+"stmt": "Libres is located in Southern Europe."
+},
+{
+"id": 15197,
+"stmt": "Thamaga is located in Polynesia."
+},
+{
+"id": 18409,
+"stmt": "Croix-des-Bouquets is located in Polynesia."
+},
+{
+"id": 23122,
+"stmt": "Pontinha is located in Southern Europe."
+},
+{
+"id": 24513,
+"stmt": "San Rafael Oriente is located in Caribbean."
+},
+{
+"id": 13710,
+"stmt": "Al Mizhar First is located in Australia and New Zealand."
+},
+{
+"id": 14227,
+"stmt": "Dandenong North is located in Northern America."
+},
+{
+"id": 17344,
+"stmt": "Oyem is located in Eastern Africa."
+},
+{
+"id": 20961,
+"stmt": "Kyimyindine is located in Polynesia."
+},
+{
+"id": 16582,
+"stmt": "Hedensted is located in Northern Europe."
+},
+{
+"id": 18191,
+"stmt": "Wo Che is located in South-Eastern Asia."
+},
+{
+"id": 25488,
+"stmt": "Lwakyomba is located in Micronesia."
+},
+{
+"id": 15795,
+"stmt": "Tanda is located in Southern Asia."
+},
+{
+"id": 19851,
+"stmt": "Pakxan is located in Central Asia."
+},
+{
+"id": 15643,
+"stmt": "Mouyondzi is located in Western Africa."
+},
+{
+"id": 25440,
+"stmt": "Butaleja is located in Eastern Africa."
+},
+{
+"id": 13735,
+"stmt": "Khulm is located in Central Asia."
+},
+{
+"id": 23050,
+"stmt": "Jericho is located in Northern Europe."
+},
+{
+"id": 24911,
+"stmt": "Boshkengash is located in Central Asia."
+},
+{
+"id": 24248,
+"stmt": "Dhabad is located in Australia and New Zealand."
+},
+{
+"id": 18859,
+"stmt": "Najaf is located in Caribbean."
+},
+{
+"id": 24210,
+"stmt": "Berbera is located in Eastern Europe."
+},
+{
+"id": 21313,
+"stmt": "Salima is located in Polynesia."
+},
+{
+"id": 18476,
+"stmt": "Lenbe is located in South America."
+},
+{
+"id": 17273,
+"stmt": "Troyes is located in Western Europe."
+},
+{
+"id": 26134,
+"stmt": "Burgersdorp is located in Southern Africa."
+},
+{
+"id": 20743,
+"stmt": "Didy is located in South-Eastern Asia."
+},
+{
+"id": 16906,
+"stmt": "Tartu is located in Eastern Europe."
+},
+{
+"id": 24239,
+"stmt": "Balanbale is located in Polynesia."
+},
+{
+"id": 17753,
+"stmt": "Mandiana is located in Southern Asia."
+},
+{
+"id": 14103,
+"stmt": "Brigittenau is located in Western Africa."
+},
+{
+"id": 21315,
+"stmt": "Salima is located in South-Eastern Asia."
+},
+{
+"id": 19839,
+"stmt": "Xam Nua is located in Polynesia."
+},
+{
+"id": 17439,
+"stmt": "Bath is located in Northern America."
+},
+{
+"id": 18211,
+"stmt": "Mid Levels is located in Polynesia."
+},
+{
+"id": 14630,
+"stmt": "Stara Zagora is located in Southern Europe."
+},
+{
+"id": 15940,
+"stmt": "Kribi is located in Micronesia."
+},
+{
+"id": 19940,
+"stmt": "Ghazieh is located in Eastern Africa."
+},
+{
+"id": 26047,
+"stmt": "Mocha is located in Southern Asia."
+},
+{
+"id": 24835,
+"stmt": "Suan Luang is located in South-Eastern Asia."
+},
+{
+"id": 20475,
+"stmt": "Ubari is located in Northern America."
+},
+{
+"id": 20019,
+"stmt": "Ambalangoda is located in Southern Asia."
+},
+{
+"id": 13813,
+"stmt": "Karukh is located in South-Eastern Asia."
+},
+{
+"id": 15596,
+"stmt": "Owando is located in Southern Africa."
+},
+{
+"id": 24708,
+"stmt": "Pala is located in Western Asia."
+},
+{
+"id": 26044,
+"stmt": "Mocha is located in South America."
+},
+{
+"id": 15880,
+"stmt": "Renca is located in South America."
+},
+{
+"id": 21330,
+"stmt": "Liwonde is located in Micronesia."
+},
+{
+"id": 22146,
+"stmt": "Harstad is located in Northern Africa."
+},
+{
+"id": 18468,
+"stmt": "Lenbe is located in Eastern Europe."
+},
+{
+"id": 14748,
+"stmt": "Kayanza is located in Eastern Africa."
+},
+{
+"id": 21822,
+"stmt": "Torodi is located in Southern Africa."
+},
+{
+"id": 24686,
+"stmt": "Doba is located in Western Asia."
+},
+{
+"id": 22490,
+"stmt": "Changuinola is located in Central America."
+},
+{
+"id": 20360,
+"stmt": "Ventspils is located in Eastern Europe."
+},
+{
+"id": 18632,
+"stmt": "Balbriggan is located in Southern Africa."
+},
+{
+"id": 22660,
+"stmt": "Itogon is located in Southern Europe."
+},
+{
+"id": 18485,
+"stmt": "Nagykanizsa is located in Caribbean."
+},
+{
+"id": 20467,
+"stmt": "Ubari is located in Central Asia."
+},
+{
+"id": 20281,
+"stmt": "Eiguliai is located in South-Eastern Asia."
+},
+{
+"id": 15929,
+"stmt": "Angol is located in Western Africa."
+},
+{
+"id": 15639,
+"stmt": "Mouyondzi is located in South-Eastern Asia."
+},
+{
+"id": 24489,
+"stmt": "Santa Tecla is located in Western Europe."
+},
+{
+"id": 14609,
+"stmt": "Karankasso is located in Western Africa."
+},
+{
+"id": 23990,
+"stmt": "Bardejov is located in Eastern Europe."
+},
+{
+"id": 20726,
+"stmt": "Hell-Ville is located in Western Asia."
+},
+{
+"id": 23880,
+"stmt": "Kranj is located in Eastern Europe."
+},
+{
+"id": 14862,
+"stmt": "Toukountouna is located in Micronesia."
+},
+{
+"id": 24972,
+"stmt": "Istiqlol is located in Western Asia."
+},
+{
+"id": 14429,
+"stmt": "Srimangal is located in South-Eastern Asia."
+},
+{
+"id": 25065,
+"stmt": "Gubadag is located in Central Asia."
+},
+{
+"id": 20540,
+"stmt": "Tinghir is located in Northern Africa."
+},
+{
+"id": 14434,
+"stmt": "Srimangal is located in Western Asia."
+},
+{
+"id": 14276,
+"stmt": "Banja Luka is located in Southern Africa."
+},
+{
+"id": 22992,
+"stmt": "Hebron is located in Western Asia."
+},
+{
+"id": 24208,
+"stmt": "Berbera is located in Eastern Africa."
+},
+{
+"id": 23893,
+"stmt": "Kranj is located in Western Africa."
+},
+{
+"id": 18336,
+"stmt": "Velika Gorica is located in Eastern Europe."
+},
+{
+"id": 25824,
+"stmt": "La Victoria is located in South America."
+},
+{
+"id": 25171,
+"stmt": "Borj Cedria is located in Western Europe."
+},
+{
+"id": 23953,
+"stmt": "Trnava is located in Polynesia."
+},
+{
+"id": 25856,
+"stmt": "La Azulita is located in Central America."
+},
+{
+"id": 15731,
+"stmt": "Yverdon-les-Bains is located in Western Africa."
+},
+{
+"id": 14447,
+"stmt": "Forest is located in Northern America."
+},
+{
+"id": 16956,
+"stmt": "Kristiine is located in Northern Europe."
+},
+{
+"id": 25913,
+"stmt": "Phu Quoc is located in South-Eastern Asia."
+},
+{
+"id": 15677,
+"stmt": "Sankt Gallen is located in Middle Africa."
+},
+{
+"id": 17543,
+"stmt": "Kade is located in Eastern Asia."
+},
+{
+"id": 24224,
+"stmt": "Berbera is located in Western Asia."
+},
+{
+"id": 18222,
+"stmt": "El Progreso is located in Central America."
+},
+{
+"id": 19677,
+"stmt": "Chunghwa is located in Eastern Asia."
+},
+{
+"id": 19733,
+"stmt": "Hwaseong-si is located in Southern Asia."
+},
+{
+"id": 22769,
+"stmt": "Sillanwali is located in Southern Asia."
+},
+{
+"id": 19389,
+"stmt": "Eldoret is located in Central Asia."
+},
+{
+"id": 16483,
+"stmt": "Bad Kreuznach is located in Caribbean."
+},
+{
+"id": 20238,
+"stmt": "Thaba-Tseka is located in Southern Africa."
+},
+{
+"id": 19592,
+"stmt": "Lumphat is located in Micronesia."
+},
+{
+"id": 20031,
+"stmt": "Kandana is located in Melanesia."
+},
+{
+"id": 17982,
+"stmt": "Yepocapa is located in Eastern Africa."
+},
+{
+"id": 19088,
+"stmt": "Fossano is located in Northern Africa."
+},
+{
+"id": 24215,
+"stmt": "Berbera is located in Northern America."
+},
+{
+"id": 23873,
+"stmt": "Maribor is located in Western Europe."
+},
+{
+"id": 20309,
+"stmt": "Naujininkai is located in Western Europe."
+},
+{
+"id": 17579,
+"stmt": "Begoro is located in Western Africa."
+},
+{
+"id": 21750,
+"stmt": "Agadez is located in Northern Africa."
+},
+{
+"id": 15264,
+"stmt": "Slonim is located in South America."
+},
+{
+"id": 16584,
+"stmt": "Hedensted is located in South America."
+},
+{
+"id": 22559,
+"stmt": "Abancay is located in Eastern Asia."
+},
+{
+"id": 14585,
+"stmt": "Korsimoro is located in Southern Asia."
+},
+{
+"id": 16535,
+"stmt": "Vechelde is located in Middle Africa."
+},
+{
+"id": 20917,
+"stmt": "Kouri is located in Polynesia."
+},
+{
+"id": 19797,
+"stmt": "Tallang-dong is located in South-Eastern Asia."
+},
+{
+"id": 22647,
+"stmt": "Itogon is located in Eastern Asia."
+},
+{
+"id": 16224,
+"stmt": "Quesada is located in Eastern Europe."
+},
+{
+"id": 17584,
+"stmt": "Nalerigu is located in Central America."
+},
+{
+"id": 20782,
+"stmt": "Tetovo is located in Northern Africa."
+},
+{
+"id": 14026,
+"stmt": "Caleta Olivia is located in Micronesia."
+},
+{
+"id": 21761,
+"stmt": "Agadez is located in Western Europe."
+},
+{
+"id": 14501,
+"stmt": "Watermael-Boitsfort is located in Western Europe."
+},
+{
+"id": 16604,
+"stmt": "Glostrup is located in Northern Europe."
+},
+{
+"id": 16047,
+"stmt": "Qiuji is located in Eastern Asia."
+},
+{
+"id": 21932,
+"stmt": "Chinandega is located in Southern Africa."
+},
+{
+"id": 21259,
+"stmt": "Goodlands is located in Central Asia."
+},
+{
+"id": 25298,
+"stmt": "Namanyere is located in Southern Africa."
+},
+{
+"id": 24894,
+"stmt": "Bang Bon Nuea is located in Micronesia."
+},
+{
+"id": 15438,
+"stmt": "Mwene is located in Northern Europe."
+},
+{
+"id": 24749,
+"stmt": "Bassar is located in Southern Asia."
+},
+{
+"id": 19645,
+"stmt": "Rajin is located in Southern Asia."
+},
+{
+"id": 22038,
+"stmt": "Hoogeveen is located in Northern Europe."
+},
+{
+"id": 14010,
+"stmt": "Lomas de Zamora is located in South America."
+},
+{
+"id": 24012,
+"stmt": "Malacky is located in Eastern Europe."
+},
+{
+"id": 25957,
+"stmt": "Mui Ne is located in South-Eastern Asia."
+},
+{
+"id": 22585,
+"stmt": "Picsi is located in Middle Africa."
+},
+{
+"id": 19412,
+"stmt": "Garissa is located in Eastern Africa."
+},
+{
+"id": 21719,
+"stmt": "Ondangwa is located in Caribbean."
+},
+{
+"id": 21557,
+"stmt": "Kampung Tanjung Karang is located in South-Eastern Asia."
+},
+{
+"id": 22691,
+"stmt": "Pililla is located in Eastern Asia."
+},
+{
+"id": 18966,
+"stmt": "Sirjan is located in Western Asia."
+},
+{
+"id": 15439,
+"stmt": "Mwene is located in Polynesia."
+},
+{
+"id": 18973,
+"stmt": "Hashtgerd is located in Eastern Asia."
+},
+{
+"id": 23781,
+"stmt": "Kangkar is located in Southern Asia."
+},
+{
+"id": 22824,
+"stmt": "Nysa is located in Eastern Europe."
+},
+{
+"id": 19719,
+"stmt": "Hwaseong-si is located in Central Asia."
+},
+{
+"id": 13912,
+"stmt": "Luquembo is located in Eastern Africa."
+},
+{
+"id": 16598,
+"stmt": "Glostrup is located in Eastern Europe."
+},
+{
+"id": 13884,
+"stmt": "Fier is located in Western Asia."
+},
+{
+"id": 14563,
+"stmt": "Orodara is located in Southern Asia."
+}
+]
+}

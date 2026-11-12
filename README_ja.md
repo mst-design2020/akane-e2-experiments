@@ -8,13 +8,14 @@
 
 **ここまでで分かったこと**（小さいAI 1つ・英語・ほぼ1分野。限界は下の「限界」に）：
 
-- **小さいAIは、判定役としては弱いが、手伝いとしては使える。** Gemma-2 2Bは「XはYの一種か」で自信を持って間違えることが多い。その答えを辞書の説明文とNLIで確かめると、誤りの指標（AURC）は0.154から0.069に下がった（E6）。
+- **小さいAIは、判定役としては弱いが、手伝いとしては使える。** Gemma-2 2Bは「XはYの一種か」で自信を持って間違えることが多い。その答えを辞書の説明文とNLIで確かめると、誤りの指標（AURC）は0.154から0.070に下がった（E6）。
 - **得意な狭い役目だけをさせる。** 説明文をつなぐ（孫娘→人→哺乳類）と、語を違う意味で読む取り違えで崩れる（道の64%、E7）。Gemmaには「この語はどの意味か」を選ぶことだけをさせると、確かめた37個中35個が正しく、取り違えは4%に減った。そのつなぎで確かめると、学習なしでAURC 0.047、学習で合わせると0.037（E8）。これらは頭の名詞を手書きの語の一覧で取った時の数字で、一覧なしでは10%・0.063・0.056です（下の2つ目の訂正）。
 - **決め方に使っていない新しい300個**でも、AIの自信よりはっきり良い（0.039対0.118。一覧なしでは0.046対0.118）。辞書1段だけの確かめ（0.055）より良いとは、300個では言い切れない。
 - **網（BP）が効く所と効かない所。** AIが作ったルールも疑うBPは、分類と病気のテストで違反を数えるだけの方法に勝った（E2-6、E2-8）。資料（E3）、輪の多い大きな網（E4）、辞書の鎖（E7・E8）では、より単純な学習の組み合わせに勝てなかった。p-bit方式とBPの正しさは一度も分かれなかった（E4）。
 - **訂正（2026-11-11）：比べた学習が全部、直線の学習でした。** E2〜E8の「特徴＋学習」はすべてロジスティック回帰でした。木の学習（勾配ブースティング、`analysis/audit_gb/`）で計算し直すと、3つの言い方が変わります。E2-7（分類はBPの勝ち→同着、地理は組み合わせと同着→BPの負け）、E4-2（WordNetで採点すると慎重な網の負け）、E7（鎖を足すのが一番とは言えない）。E8の結果は残りました。詳しくは下の「点検（2026-11-11）」の所に書きました。
 - **訂正（2026-11-11）：手書きの語の一覧を使っていました。** E7・E8と、E9-1〜E9-3の本物の辞書の確かめは、説明文の頭の名詞を取る時に手で書いた語の一覧（`PERSON_HEADS`・`OF_HEADS`・`META` と個別の直し2つ。例：「one who …」→ person、「a kind of X」→ X）を使っていました（点検：`plans/audit_hand_lists.md`）。一覧を一切使わずに流し直しました。頭の名詞の候補は文法だけで出し（最初の名詞のかたまりの頭と、それに付いた of の目的語）、どれを使うかはその段のNLIの値で決めます（`analysis/nolist/`）。「保てた」の決まりは流す前に固定しました。**保てた：** Gemmaに意味を選ばせると取り違えが減る（72%→10%）、新しい300個で鎖＋学習がAIの自信より良い（0.046対0.118）、つなぐと正しい答えを壊すのが減る（40%→31%）、E9の網についての結論すべて。**保てなかった：** 鎖の数字（学習なし0.047→0.063、学習あり0.037→0.056）、木の学習でE6の特徴よりはっきり良い（20%以上は5回中3回だけ）、本当の主張への辞書の当たり（88%→83%）、E9-3の「全部を辞書で確かめるのが一番」（12条件中1つだけ。木の学習の方が良い）。詳しくは[手書きの一覧なしでの確かめ直し](#手書きの一覧なしでの確かめ直し2026-11-11)。
 - **少しだけ確かめられる時でも、網は強い学習に勝てなかった（E9）。** 主張の2〜10%を辞書で確かめ、その結果をGemmaのルールに沿って網（BP）で広げると、最初は直線の学習より良く見えました（E9-1）。しかし木の学習を相手にし、候補を選ばない77,326の主張すべてで比べると、網はすべての条件で負けました（E9-3）。網に残る役目は小さく、学習の答えをルールで仕上げるとAURCが5〜20%下がる程度で、先に決めた基準には届きません。
+- **ほかの問い（E10）：答えを書いた文を見せると効く。どこから持ってきた文かは、あまり関係ない。** 部分と全体の問い（「A wheel is a part of a car.」）で、両方の語を含む GenericsKB の一般的な文を Gemma に見せると、AURC は0.068から0.039に下がりました。Gemma が自分で書いた文でもほぼ同じでした（0.044、同着）。辞書の説明文は効かず、「XはYの一種か」ではどの資料も Gemma の自信に勝てませんでした。部分と全体・地理での最初の E10 の良い結果は、手で選んだ物と手書きの一覧を使っていて、決まりで選んだ物では繰り返せませんでした（E10-1）。詳しくは [E10](#e10外から確かめるやり方はほかの問いでも効くか部分と全体病気地理)。
 
 ![小さいAIの「XはYの一種」という答えを外から確かめる（E6〜E8）](figures/E8/overview_ja.png)
 
@@ -39,7 +40,8 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 - 記事5（E2-12、つながりを実際のAIに付けさせる） https://note.com/mst_design2020/n/n1af3e4380f0c （Zenn https://zenn.dev/mst_design2020/articles/bc3e1c916a4baa ）
 - 記事6（E3、資料を根拠に「分からない」と言えるか） https://note.com/mst_design2020/n/nf427df9ee49d （Zenn https://zenn.dev/mst_design2020/articles/c1537032d8943c ）
 - 記事7（E4、AIの答えから学んだ大きな網） https://note.com/mst_design2020/n/nd323ba54cf92
-- 記事8（E4後半・E5、正解表の見直しと、AIが作ったルールの外れの損） https://note.com/mst_design2020/n/n222a0ecf386d
+- 記事8（E4後半・E5、正解表の見直しと、AIが作ったルールの外れの損） https://note.com/mst_design2020/n/n222a0ecf386d （Zenn、E4とE5 https://zenn.dev/mst_design2020/articles/545424bd00f46f ）
+- 記事9（E6〜E8、辞書の説明文と語の意味選び） https://note.com/mst_design2020/n/nde0fb5abc0aa （Zenn https://zenn.dev/mst_design2020/articles/5d3feab2c2fff8 ）
 
 著者：加藤雅也（M.S.T.デザイン代表・大分県佐伯市） https://mst-design.jp/ ・ ORCID https://orcid.org/0009-0001-6803-654X ・ DOI https://doi.org/10.5281/zenodo.24045799
 
@@ -76,7 +78,7 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 **網。** 問題ごとに $x_i \in \{0,1\}$（1＝正しい）を置きます。ルールも疑う網（E2-6〜E2-9）では、ラベルの組ごとに $u_k \in \{0,1\}$ も置きます。$u_k = 1$ は「この両立しないルールは成り立たない」という意味です。網は次の確率分布です。
 
 $$
-P(x,u) \propto \exp\Big( \lambda \sum_i \ell_i x_i \;-\; \lambda r \sum_k \zeta_k u_k \;-\; W \sum_{(a,b,c)\in C} x_a x_b (1-x_c) \;-\; W \sum_k \sum_{(a,b)\in I_k} x_a x_b (1-u_k) \Big)
+P(x,u) \propto \exp\Big( \lambda \sum_i \ell_i x_i - \lambda r \sum_k \zeta_k u_k - W \sum_{(a,b,c)\in C} x_a x_b (1-x_c) - W \sum_k \sum_{(a,b)\in I_k} x_a x_b (1-u_k) \Big)
 $$
 
 - $C$：人が書いたつながりのルール「$a$ と $b$ が正しければ $c$ も正しい」（例：「$w$ は $B$ の一種」と「$B$ は $Z$ の一種」なら「$w$ は $Z$ の一種」）。いつも正しいルールです。
@@ -116,11 +118,15 @@ $$
 | E3 | 資料（HoVer、3,952件）：資料を網でつなぐと、AIが「分からない」と控える判断が良くなるか | 網はAIの自信と同着、NLIの特徴＋学習に負け（AURC 0.225・0.207・0.177） | `plans/E3_evidence_abstain.md` |
 | E4 | WordNetの分類についてのAIの何千もの答えを、輪の多い1つの大きな網に。BP対p-bit方式 | 大きな網は崩れ、慎重な網は特徴＋学習と同着。BPとp-bit方式の正しさは一度も分かれない | `plans/E4-2_learned_net.md` |
 | E5 | AI自身が作ったルールの外れは、どれだけ損か | WordNetの正解では損あり（0.02〜0.04）、常識の正解ではほぼなし。ルールも疑う網＝全部信じる網 | `plans/E5_rule_errors.md` |
-| E6 | 辞書の説明文＋NLIで、AIの自信ある間違いを直す（700個） | 自信ある間違いの75%が直る。AURC 0.154→0.069。ただし2段先の正しい答えの40%を壊す | `plans/E6_dictionary.md` |
+| E6 | 辞書の説明文＋NLIで、AIの自信ある間違いを直す（700個） | 自信ある間違いの75%が直る。AURC 0.154→0.070。ただし2段先の正しい答えの40%を壊す | `plans/E6_dictionary.md` |
 | E7 | 説明文を3段までつなぐ | 正しい答えを壊すのが減る（40%→29%）が、50本中30本が途中で意味を取り違え。BPは掛け算と同着。一覧なしでは40%→31%で保てた（[確かめ直し](#手書きの一覧なしでの確かめ直し2026-11-11)） | `plans/E7_chain_definitions.md` |
 | E8 | 鎖の途中の語の意味をAIが選ぶ・打ち消し・新しい300個 | 取り違え64%→4%。学習なし0.047、学習0.037。網は負け。新しい300個で0.039（自信は0.118）。一覧なしでは72%→10%、0.063、0.056、新しい300個0.046（[確かめ直し](#手書きの一覧なしでの確かめ直し2026-11-11)） | `plans/E8_sense_choice.md` |
 | E9 | 辞書で確かめられるのは主張のごく一部。網で広げると学習より良いか（作り物の確かめ役→本物の辞書） | 確かめが入った物では直線の学習に勝ち（E9-1：2% 0.072対0.032）。木の学習とは同着（E9-2）。一覧なしでも保てた（[確かめ直し](#手書きの一覧なしでの確かめ直し2026-11-11)） | `plans/E9-1_real_dictionary.md`・`plans/E9-2_strong_learner.md` |
 | E9-3 | 同じ問いを、物1,681×46分類すべて（主張77,326）で。ルールはGemmaの答えだけ | 網は13条件すべてで木の学習に負け（10%：0.0029対0.0018）。木＋網の仕上げは0.0014で、決まりでは同着。一覧なしでも網の結果は保てたが、「全部を辞書で確かめるのが一番」は崩れた（[確かめ直し](#手書きの一覧なしでの確かめ直し2026-11-11)） | `plans/E9-3_all_categories.md` |
+| E10 | 辞書の確かめは、部分と全体・病気・地理の問いでも効くか | 部分と全体・地理では鎖が自信より良く、病気では悪い。ただし手で選んだ全体の語と手書きの一覧を使っていた（[E10](#e10外から確かめるやり方はほかの問いでも効くか部分と全体病気地理)） | `plans/E10_other_questions.md` |
+| E10-1 | 先に決めた直し方、手書きの一覧なし、決まりで選んだ新しい物 | 直し方は逆に悪くした。E10 の効き目は繰り返せず（1段対自信、部分と全体 0.076対0.068：同着） | `plans/E10-1_fixes_without_lists.md` |
+| E10-2 | 問いの前に辞書の説明文か GenericsKB の文を見せる | 部分と全体：文で 0.068→0.039（5/5）。説明文は 0.088（悪い）。効くのは身近な語だけ | `plans/E10-2_show_resources.md` |
+| E10-3 | Gemma が自分で書いた文／同じ資料を「一種か」でも／意味の合う文だけ残す | 自分の文 0.044 対 GenericsKB 0.039：同着。「一種か」ではどの資料も自信と同着。意味の確かめ：同着 | `plans/E10-3_self_text_and_isa.md` |
 
 ## E3：資料を根拠に「分からない」と言えるか
 
@@ -474,6 +480,42 @@ E7・E8と、E9-1〜E9-3の本物の辞書の確かめは、説明文の頭の�
 - 言えないこと：正解は公開の実験と同じ（Claudeの常識・Gemini・WordNet）。取り違えの判定はClaude 1人分。E9-3の常識600個の半分は、Gemmaか公開の辞書の確かめが「はい」と言った物から選んでいます。
 - 公開時の数字を作り直せるように、公開済みのコードとデータはそのまま残しています。確かめ直しのファイルは「ファイルの置き場所」にあります。
 
+## E10：外から確かめるやり方は、ほかの問いでも効くか（部分と全体・病気・地理）
+
+E10〜E10-3 では、「XはYの一種か」で効いた外からの確かめが、ほかの種類の問いでも効くかを調べました。あわせて、どんな外の文が本当に効くのかも見ました。
+- 計画（結果を見る前に固定、変えた所は記録）：`plans/E10_other_questions.md`、`plans/E10-1_fixes_without_lists.md`、`plans/E10-2_show_resources.md`、`plans/E10-3_self_text_and_isa.md`
+- 先行研究：`plans/E10_prior_work.md`、`plans/E10-2_prior_work.md`、`plans/E10-3_candidates_prior_work.md`
+- コード `analysis/e10/`、ノート `colab/E10*.ipynb`、Gemma・NLI の出力 `data/E10/`、分析の出力 `results/E10/`
+
+4つに共通のやり方：
+
+- AI：Gemma-2 2B（Yes−No の logit）。NLI：DeBERTa-v3-large（E6〜E8 と同じ）。辞書：英語版 Wiktionary のダンプ（2026-11-10、E7・E8 と同じ）。
+- 問いは3種類で、組は全部聞きます（候補を選びません）。
+  - **P 部分と全体**：「A wheel is a part of a car.」正解は WordNet の部品の関係。
+  - **D 病気の分類**：Human Disease Ontology、22分類。
+  - **G 地理**：市 × 国連 M49 の22地域。
+- 主な採点は常識です。どの方法の値も見る前に、Claude が問いの種類ごとに600個を判定しました。半分はでたらめに選び、半分は Gemma か辞書が「はい」と言った物から選んでいます。「どちらとも言えない」は除きます。
+  - E10-1 からは Gemini も同じ物を判定しました。どちらも「どちらとも言えない」にしなかった物での一致は、P 86%・D 99%・G 97%。
+  - WordNet・病気の分類・M49 の正解での採点は副です。
+- AURC（小さいほど良い）。物ごとに分け、2割で調整・8割で評価、5回。「差あり」は、相手の値の20%以上の差が5回中4回以上の時（E9-3 と同じ）。
+
+| 段階 | 問い | 主な結果（常識の採点、AURC） |
+|---|---|---|
+| E10 | E8 の辞書の鎖（意味は Gemma が選ぶ）は P・D・G でも効くか。Gemma の自信（①）、1段（③）、鎖（⑥D）、Gemma の答えだけの木の学習（C++）、辞書の特徴を足した木の学習（⑧D++）を比べる | 鎖は P（⑥D 0.033 対 0.047、5/5）と G（0.045 対 0.060、4/5）で ① より良い。D は ① が良い（0.025 対 0.033、4/5）。1段だけでは P 0.026・D 0.034・G 0.044。⑧D++ は3つとも C++ より良い（P 0.028 対 0.048、D 0.013 対 0.017、G 0.018 対 0.027）。鎖が1段より良くなる所はない。**ただし、この回は手書きの一覧**（たどる頭の名詞、外す部分の語、病気の部位名）**と、手で選んだ全体の語30個**（car・house・body など）を使っていた。E10-1 を参照 |
+| E10-1 | E10 で見つかった弱点3つを、結果を見る前に決めた直し方で直す。手書きの一覧は全部なくす。決まりで選んだ新しい物（新しい全体30個、残りの病気、新しい市）で確かめる | 一覧をなくしても変わらない（3つとも同着）。直し方は逆に悪くした（P・D、5/5）。**E10 の効き目は新しい物では繰り返せなかった**：③対① は P（0.076 対 0.068）・G で同着、D は ① が良い。辞書の特徴を足した木の学習も、3つとも木の学習だけと同着。理由の見込み（結果を見てから数えた、確かめてはいない）：決まりで選んだ全体では、部分の説明文が全体の語に届くのは正しい組の2%だけ。Gemini の判定でも同じ結論 |
+| E10-2 | 問いの前に文を見せる。⑩：両方の語の辞書の説明文。⑪g：両方の語を含む GenericsKB の一般的な文（最大5つ）。対照（⑩s・⑪s）：別の組の文を混ぜて見せる。⑪n：同じ文を NLI で判定 | E10-1 の問題の部分と全体：① 0.068、⑩ 0.088（① が良い 4/5）、**⑪g 0.039（① より良い 5/5、対照は 0.132）**、⑪n 0.097。これらを足した木の学習は C++ より良い（0.042 対 0.065、5/5）。効くのは身近な語だけ（身近な語 0.073→0.035、珍しい語 0.057→0.062。珍しい語は文がほとんど見つからない）。① に「文が見つかったか」だけを足すと 0.060 なので、効いたのは文の中身。E10 の問題でも同じ向き（0.047→0.035）。Gemini の判定では差12%で同着、WordNet の採点でも同着。病気と地理では文がほとんど見つからない |
+| E10-3 | (1) GenericsKB の代わりに、Gemma に自分で文を5つまで書かせる（⑫）。(2) 同じ資料を「一種か」でも試す（K：物501×分類46＝主張23,046、E9-3 の常識600で採点）。(3) 見つけた文のうち、問いと同じ意味で語が使われている文だけを Gemma に残させる（⑪f）、その文で NLI（⑪nf） | (1) ⑫ 0.044 対 ⑪g 0.039：**同着**。どちらも ① に 5/5 で良い。(2) K：① 0.095、⑩ 0.099、⑪g 0.106、⑫ 0.075（良いのは 2/5 だけ）、NLI 0.083：**どれも ① と同着**。珍しい語だけ、WordNet の採点では ⑫ が ① に 5/5 で良い（参考）。(3) ⑪f 0.045 対 ⑪g 0.039、⑪nf 0.089 対 ⑪n 0.097：同着。見つかった文で残ったのは24%だけ |
+
+**E10 で分かったこと。**
+
+- 部分と全体の問いでは、答えを書いた文を問いの前に置くと、小さいAIの答えが良くなります。AI が自分で書いた文でも、外から探した文とほぼ同じだけ効きます。Abdallah ほか（2025）が Gemma-2 2B の開かれた質問応答で見たのと同じ向きです。
+- 語の意味を書くだけで関係を書かない辞書の説明文は、効きませんでした。
+- 言えないことが3つあります。外の資料でないとダメ、問いの種類に合った資料を選ぶと効く（「一種か」ではどの資料も決まりで自信に勝てなかった）、意味のずれた文を除くと効く、のどれも言えません。E10-3 で確かめた全体の主張5つは、どれも成り立ちませんでした。
+- 最初の E10 の良い結果は、手で選んだ全体の語と手書きの一覧に頼っていて、決まりで選んだ物では繰り返せませんでした。成り立たなかった結果として載せています。
+- E6 では、問いに説明文を入れると「一種か」が良くなりました（AURC 0.154→0.124）。ただし E6 の700個は、自信ある間違いの多い難しい物でした。501語の全部の主張（E10-3 の K）では、Wiktionary の説明文を問いに入れても良くなりませんでした。
+
+**手書きの一覧。** E10 のコードには上の一覧がありました（点検：`plans/audit_hand_lists_E10.md`）。E10-1 からは、ノートを渡す前に毎回、方法のコードから文字列の一覧を機械で洗い出しました（`analysis/e10/e101/scan.py`）。どの計画にも「手で決めた所」の節があり、問いの文の形・先に決めた数値・聞き方の文だけを手で決めたと書いています。
+
 ## ファイルの置き場所
 
 - `colab/`：Google Colabで動かすノート（T4 GPU）。Gemmaに質問して答えを保存する。E2-2・E2-3はノートの中で計算と図まで行う。
@@ -497,6 +539,7 @@ E7・E8と、E9-1〜E9-3の本物の辞書の確かめは、説明文の頭の�
 - `colab/E7_chain_definitions.ipynb`：E7（Wiktionaryの全部入りファイルを読み、頭の名詞をたどり、NLIで判定。L4 GPU、約40分）。`data/E7_chains_nli.json`：その出力（頭の名詞とNLIの値。説明文は抜いた）。コードは `analysis/e6/`（`e7_core.py`・`build_notebook_E7.py`・`e7_analyze.py`）
 - `colab/E8_sense_choice.ipynb`：E8（全部入りファイルを印つきで読み、文の近さとGemmaで意味を選び、NLIで判定。L4 GPU、約1時間半）。`data/E8_chains_nli.json`：その出力（意味の印・頭の名詞・選んだ意味・鎖・NLIの値。説明文は抜いた）。コードと新しい300個は `analysis/e8/`
 - `analysis/nolist/`：手書きの一覧なしでの確かめ直し（一覧を外した `e8n_core.py`、E7・E8用の `e8n_analyze.py`・`e8n_analyze_gb.py`、ノートを作るコード）。`colab/E8n_nolist_recheck.ipynb`（E7・E8、L4 GPU、約1時間）、`colab/E9n_nolist_recheck.ipynb`（E9の辞書の確かめ、L4 GPU）。`data/E8n_chains_nli.json`（説明文の本文は除いた）・`data/E9n_checker_scores.json`。結果は `results/nolist/`
+- `analysis/e10/`：E10 のコード（`e10_data.py` 問いを作る、`e10_core.py` Colab の中身、`e10_analyze.py`、ノートを作るスクリプト）。`e101/`・`e102/`・`e103/`：E10-1・E10-2・E10-3（問いを作るスクリプト、Colab の中身、ノートを作るスクリプト、`*_analyze.py`、手書きの一覧を洗い出す `scan.py`、Gemini に渡した依頼文とその判定の `gemini/`。「一種か」の分は `e103/k_items.json`・`cs_K_claude.json`）。ノート：`colab/E10_dictionary_other_questions.ipynb`・`colab/E10-1_fixes_without_lists.ipynb`・`colab/E10-2_show_definitions_and_generics.ipynb`・`colab/E10-3_self_text_isa_sense_filter.ipynb`（L4 GPU、それぞれ1〜2時間、途中から続けられる）。`data/E10/`：正解入りの問いと、ノートの出力（Gemma の logit、意味の選択、NLI の値、見せた GenericsKB の文〈CC BY 4.0〉。辞書の説明文の本文は除いた〈CC BY-SA〉）。`results/E10/`：常識の判定と分析の出力
 - `results/`：計算結果のJSONと図（E3は `results/E3/E3_main_analysis.json`、E4は `results/E4/`、E5は `results/E5/`、E6は `results/E6/`、E7は `results/E7/`、E8は `results/E8/`、E9は `results/E9/`）
 - `analysis/e9/`：E9のコード。`e9.py`（作り物の確かめ役でのE9。`real` でE9-1・E9-2の本物の辞書）、`e93.py`（E9-3）、`e9*_analyze.py`（まとめと判定の決まり）、`e91_checker.py`・`e91_from_small.py`（Colabの出力を確かめの点にする）、ノートを作るコード、`labels/E9-3_sample_labeled_claude.json`（Claudeが常識で判定した600個。人の判定ではない）
 - `colab/E9-1_dictionary_check.ipynb`：E4-2のすべての主張に、E8の辞書の確かめ（Gemmaが意味を選ぶ）をかける（L4 GPU）。`colab/E9-1b_small_output.ipynb` はその出力を小さくする。`data/E9-1_checker_scores.json`：主張ごとの辞書の「はい／いいえ」
@@ -562,9 +605,13 @@ E6：`analysis/e6/` で `python e6_analyze.py ../../data/E6_answers_gemma-2-2b-i
 E9：上のとおり `analysis/e4/` で `e42_data.json` を作り、`analysis/e9/` で `python e91_from_small.py ../../data/E9-1_checker_scores.json`（`E91_checker.json` ができる）。E9：`python e9.py`、E9-1：`python e9.py real`、E9-2：`E9_STRONG=1 E9_CHECKERS=e8D python e9.py real`、E9-3：`python e93.py`（CPUで5回分約10分）。そのあと `python e9_analyze.py`・`e91_analyze.py`・`e92_analyze.py`・`e93_analyze.py` で判定の決まりをかけます。分け方は `E9_SPLITS`・`E93_SPLITS` で選べます。
 一覧なしでの確かめ直し：`analysis/nolist/` で `E8_DIR=../e8 python e8n_analyze.py ../../data/E8n_chains_nli.json out.json`（木の学習は `e8n_analyze_gb.py`）。E9は `analysis/e9/` で `python e91_from_small.py ../../data/E9n_checker_scores.json` のあと、`python e9.py real`・`E9_STRONG=1 E9_CHECKERS=e8D python e9.py real`・`E93_CHECKER=../../data/E9n_checker_scores.json python e93.py` と同じ `*_analyze.py`（`results/E9/` を上書きします。確かめ直しの出力は `results/nolist/E9n/`）。
 
+E10：`analysis/e10/` で `python e10_analyze.py ../../data/E10/E10/e10_items.json ../../data/E10/E10 out.json ../../results/E10/E10/cs.json`。E10-1：`python e101/e101_analyze.py run ../../data/E10/E10-1/e101_items.json ../../data/E10/E10-1 out.json ../../results/E10/E10-1/cs_labels_claude.json`（ほかの判定は `cs_labels_gemini.json`・`cs_labels_agree.json`）。E10-2：`python e102/e102_analyze.py ../../data/E10/E10-1/e101_items.json ../../data/E10/E10-1 ../../data/E10/E10/e10_items.json ../../data/E10/E10/E10_gemma.json.gz ../../data/E10/E10-2 out.json ../../results/E10/E10-1/cs_labels_claude.json ../../results/E10/E10/cs.json`。E10-3：`python e103/e103_analyze.py ../../data/E10/E10-1/e101_items.json ../../data/E10/E10-1 ../../data/E10/E10-2 ../../data/E10/E10-3 ../../data/E4-2_answers_gemma-2-2b-it.json out.json ../../results/E10/E10-1/cs_labels_claude.json`。どれもCPUだけで動きます（E10 は `wordfreq` も使います）。
+
 ## 近い研究と、違うところ
 
 一番近いのはBTProp（Hou ほか、NAACL 2025、https://arxiv.org/abs/2406.06950 ）です。問題どうしのつながりを別のAI（NLI）の判定で作り、確率伝搬でAIの間違いを見つけます。ここでは、両立しないというルールもAI自身に作らせ、そのルールが本当かどうかも網の中で疑わせました（E2-6）。E2-10でBTPropを、論文の作者が公開した木そのもので動かしました。つながりを元のまま使うと、WikiBioでBTPropが上、FactCheckGPTで同着なので、私たちの方法が優れているとは言えません。つながりの一部をわざと反対にすると（E2-11）、つながりを絶対に正しいとするBTPropは大きく崩れ、ルールも疑うBPは崩れませんでした。ただし、つながりを実際のAIに付けさせると（E2-12）、BTPropはほとんど崩れませんでした。本物の判定ミスは、くじで逆にしたミスより害が小さいようです。BTPropの論文で強い比べ相手とされる「AIの自信」（P(True)）は、ここでも比べ相手に入れています。ほかに近い研究：Crum ほか 2024（AIに両立しないかを聞いてルールを作る）、Xu ほか 2026（近所の答えとの一致）、Jiang・Lowd・Dou 2012（自動で集めた知識をルールで掃除）、Maieutic prompting（Jung ほか 2022）、BeliefBank（Kassner ほか 2021）。E2-9の「ルールを疑うと、ルールが正しいときは少し損で、外れが多いときに効く」という形は、Snorkel（Ratner ほか、VLDB 2017、https://arxiv.org/abs/1711.10160 ）の分析（ルールの当たり具合を学ぶ利点は、ルールの当たり外れがばらばらなときに大きい）と同じ傾向です。ここでは、それがAIが自分の答えを確かめる場面でも見えた、という位置づけです。
+
+E10 について：問いに答えるために探した文を見せるのは、検索で補う生成（RAG）です。答える前にAIに自分で文を書かせるのは GenRead（Yu ほか、ICLR 2023）や、知識を書かせてから答える方法（Liu ほか、ACL 2022）です。Abdallah ほか（2025、https://arxiv.org/abs/2502.20245 ）は、Gemma-2 2B が自分で書いた文を読むと、BM25 で探した文より開かれた質問応答が良くなると報告しています。E10-3 では、部分と全体の問いで、自分の文が探した一般的な文と同着でした。GenericsKB（Bhakthavatsalam ほか 2020）は一般的な文を集めたもので、hasPart KB（Bhakthavatsalam ほか 2021）はそこから部分と全体の組を取り出したものです。Mallen ほか（ACL 2023）は、珍しい物ほど検索が効くと報告しました。ここでは身近な語だけで効きました。珍しい語は文がほとんど見つからなかったためです。Proietti・Lenci（2025）は、LLM が部分と全体の向きを取り違えることを示しています。
 
 ## 言えないこと（弱点）
 
@@ -582,6 +629,7 @@ E9：上のとおり `analysis/e4/` で `e42_data.json` を作り、`analysis/e9
 - E7：E6と同じ700個。頭の名詞は簡単な決まりで取った。全部入りファイルの読み取りで落ちた意味がある（cat の多くの意味など）。意味のずれの判定はClaude 1人で50本。
 - E6：700個（自信ある間違い81個）、分野1つ、小さいAI1つ、判定はAI 2つ。説明文は物の語だけで分類の語はなし。Wiktionaryは変わっていくもので、使った意味は2026-11-10に取ったもの。
 - E5：E4-2と同じデータ・分野・AI。ルールの外れはWordNetで決めているので、直す向きもWordNet寄り。常識の判定は700個で、AI 2つ（Claude・Gemini）によるもので人ではない。E5-2はE2-8のデータの使い回し。医学の判定はAIによるもので専門家ではない。Geminiの組の判定は一律だったので、組の判定はClaude 1人分。
+- E10：小さいAI 1つ、方法ごとに聞き方1つ、英語だけ。常識の判定は Claude（E10-1 から Gemini も。E10-3 の「一種か」は Claude だけ）で、人の判定ではありません。600個の半分は、Gemma か辞書が「はい」と言った物から選びました。Gemini の判定では、GenericsKB の効き目は基準に届きません。GenericsKB の文が見つかったのは、部分と全体の主張の22%（正しい物の40%）だけで、病気と市ではほとんど見つかりませんでした。
 - p-bitはパソコンの中で真似たもの（ギブスサンプリング）。速さや電力については、この実験からは何も言えない。
 
 ## 作り方について
@@ -602,4 +650,7 @@ E9：上のとおり `analysis/e4/` で `e42_data.json` を作り、`analysis/e9
 - WikiBioの正解（Manakul ほか 2023） https://huggingface.co/datasets/potsawee/wiki_bio_gpt3_hallucination
 - HoVer（Jiang ほか、Findings of EMNLP 2020、CC BY-SA 4.0） https://hover-nlp.github.io/ 。正解の資料つきの dev は ProgramFC（Pan ほか、ACL 2023）の公開版 https://github.com/teacherpeterpan/ProgramFC
 - Gemma-2 9B（指示調整版） https://huggingface.co/google/gemma-2-9b-it と NLI https://huggingface.co/MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli （E3）
+- 英語版 Wiktionary（2026-11-10・11 のダンプ、CC BY-SA 4.0） https://dumps.wikimedia.org/enwiktionary/ （E6〜E10）。説明文の本文はここには置かず、ノートが取りに行きます
+- GenericsKB（Bhakthavatsalam ほか 2020、CC BY 4.0） https://huggingface.co/datasets/community-datasets/generics_kb （E10-2・E10-3）。Gemma に見せた文は `data/E10/` にあります
+- 国連 M49 の地域分け https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes （E10）
 - Gemma-2 2B（指示調整版） https://huggingface.co/google/gemma-2-2b-it 。`data/` のGemmaの答えは、Gemmaの利用規約に従って使っています。

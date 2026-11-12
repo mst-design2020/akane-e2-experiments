@@ -1,0 +1,604 @@
+You are checking English statements of the form "Disease X is a [category]". Judge each by ordinary medical knowledge: does disease X belong to that category? A disease can belong to several categories (for example an infection of the lungs is both an infectious disease and a respiratory system disease).
+Answer 1 = true, 0 = false, 2 = could go either way / depends on meaning / you do not know the place.
+Do not explain. Reply with only a CSV with the header "no,label" and one row per statement, for all 600 statements, in the same order.
+
+1	Peripheral vertigo is a fungal infection.
+2	Eye lymphoma is an immune system disease.
+3	Separation anxiety disorder is a nervous system disease.
+4	Obsessive-compulsive disorder is a genetic disease.
+5	B-cell lymphoma is an immune system disease.
+6	Hepatitis is an infectious disease.
+7	Borderline personality disorder is an endocrine system disease.
+8	Peripheral vertigo is a nervous system disease.
+9	Alcohol-related birth defects is a cancer or other tumor.
+10	Parsley allergy is a reproductive system disease.
+11	Gastrointestinal allergy is an immune system disease.
+12	Inner ear cancer is a thoracic disease.
+13	Red-green color blindness is a genetic disease.
+14	Heart valve disease is a cancer or other tumor.
+15	Congenital heart block is a gastrointestinal system disease.
+16	Cork-handlers' disease is a fungal infection.
+17	Ogden syndrome is a thoracic disease.
+18	Factor XII deficiency is a blood disease.
+19	Plum allergy is an immune system disease.
+20	Swine influenza is a parasitic infection.
+21	Masters-Allen syndrome is a musculoskeletal system disease.
+22	Mitochondrial Parkinson's disease is a nervous system disease.
+23	Diarrhea is a genetic disease.
+24	Sheehan syndrome is a metabolic disease.
+25	Nelson syndrome is a breast disease.
+26	Lateral sclerosis is a musculoskeletal system disease.
+27	Pelvic inflammatory disease is a reproductive system disease.
+28	Kidney failure is a parasitic infection.
+29	Blue drum syndrome is a fungal infection.
+30	Color blindness is a genetic disease.
+31	SHORT syndrome is a skin disease.
+32	Secondary Parkinson disease is a bacterial infection.
+33	Hepatitis A is a viral infection.
+34	Nicotine dependence is a respiratory system disease.
+35	West Nile fever is a viral infection.
+36	Alexander disease is a genetic disease.
+37	Hepatitis A is a gastrointestinal system disease.
+38	Alcohol use disorder is a nervous system disease.
+39	Cerebral degeneration is a reproductive system disease.
+40	Pulmonary valve disease is an endocrine system disease.
+41	Plague is a mental disorder.
+42	White shrimp allergy is an immune system disease.
+43	Stevens-Johnson syndrome is an endocrine system disease.
+44	Pelvic inflammatory disease is an infectious disease.
+45	Lymph node disease is a musculoskeletal system disease.
+46	Evans' syndrome is a gastrointestinal system disease.
+47	West Nile fever is an infectious disease.
+48	Acute diarrhea is a gastrointestinal system disease.
+49	Primary pulmonary hypertension is a nervous system disease.
+50	Nelson syndrome is a cancer or other tumor.
+51	External ear carcinoma is an immune system disease.
+52	Placenta disease is a reproductive system disease.
+53	Borderline personality disorder is an infectious disease.
+54	Ballard syndrome is a parasitic infection.
+55	Trench fever is a parasitic infection.
+56	Diarrhea is a gastrointestinal system disease.
+57	Vascular-type bleeding disorder is a genetic disease.
+58	Dependent personality disorder is a reproductive system disease.
+59	Cartilage disease is a respiratory system disease.
+60	Factor XIII deficiency is a skin disease.
+61	Stuttering is a gastrointestinal system disease.
+62	Allergic disease is a mental disorder.
+63	Upper lip cancer is a urinary system disease.
+64	Cannabis dependence is a genetic disease.
+65	Malignant hypertension is a cardiovascular system disease.
+66	Acne is a mental disorder.
+67	Intermediate coronary syndrome is a cardiovascular system disease.
+68	Cerebral malaria is a metabolic disease.
+69	Bile duct disease is a musculoskeletal system disease.
+70	Skull cancer is a cancer or other tumor.
+71	SHORT syndrome is a thoracic disease.
+72	Acquired night blindness is a skin disease.
+73	Optic nerve disease is a nervous system disease.
+74	Masters-Allen syndrome is an endocrine system disease.
+75	Smooth muscle tumor is a respiratory system disease.
+76	Autoimmune hepatitis is an infectious disease.
+77	Acne is a breast disease.
+78	Cerebral degeneration is an immune system disease.
+79	Nicotine dependence is a mental disorder.
+80	Cork-handlers' disease is a nervous system disease.
+81	Traumatic brain injury is an immune system disease.
+82	Childhood leukemia is an endocrine system disease.
+83	Childhood leukemia is a fungal infection.
+84	Mitochondrial metabolism disease is a metabolic disease.
+85	Retinal cancer is a fungal infection.
+86	Separation anxiety disorder is an endocrine system disease.
+87	West Nile fever is a nervous system disease.
+88	Lung lymphoma is a thoracic disease.
+89	Sheehan syndrome is a reproductive system disease.
+90	FG syndrome is a genetic disease.
+91	Infertility is an infectious disease.
+92	Congenital diarrhea is a breast disease.
+93	FG syndrome is a metabolic disease.
+94	Cardiac tuberculosis is a thoracic disease.
+95	Cerebral malaria is an infectious disease.
+96	Rabies is a nervous system disease.
+97	Rabies is a viral infection.
+98	Masters-Allen syndrome is a blood disease.
+99	Alexander disease is a nervous system disease.
+100	Heavy chain disease is a blood disease.
+101	Familial Mediterranean fever is an immune system disease.
+102	Dent disease is a fungal infection.
+103	Childhood leukemia is an immune system disease.
+104	Peeling skin syndrome is a genetic disease.
+105	Adult lymphoma is a metabolic disease.
+106	Autoimmune hepatitis is a blood disease.
+107	Appendix lymphoma is a cancer or other tumor.
+108	Lung lymphoma is a cancer or other tumor.
+109	Larsen syndrome is a reproductive system disease.
+110	Stevens-Johnson syndrome is an immune system disease.
+111	Reading disorder is a mental disorder.
+112	Pelvic muscle wasting is a musculoskeletal system disease.
+113	Nocturnal asthma is a thoracic disease.
+114	Gum cancer is a reproductive system disease.
+115	Alcoholic psychosis is a mental disorder.
+116	CK syndrome is a nervous system disease.
+117	Gordon Holmes syndrome is a musculoskeletal system disease.
+118	Congenital heart block is a metabolic disease.
+119	Acute diarrhea is an infectious disease.
+120	Kidney failure is a cardiovascular system disease.
+121	Stevens-Johnson syndrome is a skin disease.
+122	Upper lip cancer is a bacterial infection.
+123	Peeling skin syndrome is an immune system disease.
+124	Reactive arthritis is a cardiovascular system disease.
+125	Anterior compartment syndrome is a blood disease.
+126	Malignant hypertension is a breast disease.
+127	Tooth disease is a thoracic disease.
+128	Globe disease is a parasitic infection.
+129	Masters-Allen syndrome is a urinary system disease.
+130	Adult T-cell leukemia/lymphoma is a blood disease.
+131	Obsessive-compulsive disorder is a mental disorder.
+132	Cerebral degeneration is a nervous system disease.
+133	Sheehan syndrome is a skin disease.
+134	Early-onset Parkinson's disease is a nervous system disease.
+135	Stuttering is a nervous system disease.
+136	Aspiration pneumonia is a cancer or other tumor.
+137	Pulmonary valve disease is a bacterial infection.
+138	Evans' syndrome is a nervous system disease.
+139	Abdominal tuberculosis is a fungal infection.
+140	Reactive arthritis is an immune system disease.
+141	Rabies is an immune system disease.
+142	Spinal cord disease is a nervous system disease.
+143	Gastrointestinal allergy is a reproductive system disease.
+144	Colon carcinoma is a cancer or other tumor.
+145	Appendix lymphoma is a blood disease.
+146	Separation anxiety disorder is a bacterial infection.
+147	Swine influenza is a viral infection.
+148	Hepatitis is a urinary system disease.
+149	Gordon Holmes syndrome is an endocrine system disease.
+150	Tooth erosion is a respiratory system disease.
+151	SHORT syndrome is a viral infection.
+152	Ballard syndrome is a viral infection.
+153	Vegetable allergy is an immune system disease.
+154	Childhood leukemia is a gastrointestinal system disease.
+155	Nicotine dependence is a nervous system disease.
+156	Evans' syndrome is a urinary system disease.
+157	Plum allergy is a parasitic infection.
+158	Tooth disease is a gastrointestinal system disease.
+159	Borderline personality disorder is a mental disorder.
+160	Tooth disease is a blood disease.
+161	Acute asthma is a urinary system disease.
+162	Substance-related disorder is a gastrointestinal system disease.
+163	Intermediate coronary syndrome is a urinary system disease.
+164	CHILD syndrome is a nervous system disease.
+165	Hepatitis is a blood disease.
+166	Parsley allergy is a musculoskeletal system disease.
+167	Dent disease is a genetic disease.
+168	Colon lymphoma is a gastrointestinal system disease.
+169	Ear cancer is a parasitic infection.
+170	Alcoholic psychosis is a skin disease.
+171	Lung lymphoma is a gastrointestinal system disease.
+172	Intellectual disability is an infectious disease.
+173	Delta chain disease is a breast disease.
+174	External ear cancer is a gastrointestinal system disease.
+175	Allergic asthma is a thoracic disease.
+176	SHORT syndrome is an immune system disease.
+177	Globe disease is an infectious disease.
+178	Neonatal respiratory failure is a respiratory system disease.
+179	Cocaine abuse is a cardiovascular system disease.
+180	Vascular-type bleeding disorder is a blood disease.
+181	Nocturnal asthma is a viral infection.
+182	Evans' syndrome is a blood disease.
+183	Spinal cord disease is a thoracic disease.
+184	Nicotine dependence is an infectious disease.
+185	Lymph node disease is an infectious disease.
+186	White shrimp allergy is a respiratory system disease.
+187	Vegetable allergy is a urinary system disease.
+188	Aspiration pneumonia is a thoracic disease.
+189	Stuttering is a metabolic disease.
+190	Reading disorder is a cancer or other tumor.
+191	Bile duct disease is a gastrointestinal system disease.
+192	Kennedy's disease is a musculoskeletal system disease.
+193	Substance-related disorder is a mental disorder.
+194	Larsen syndrome is a metabolic disease.
+195	Primary pulmonary hypertension is a thoracic disease.
+196	Nicotine dependence is a cardiovascular system disease.
+197	Factor XII deficiency is a skin disease.
+198	Allergic disease is an immune system disease.
+199	Allergic asthma is a genetic disease.
+200	Cerebral malaria is an immune system disease.
+201	Carp allergy is an immune system disease.
+202	Vitamin metabolic disorder is a gastrointestinal system disease.
+203	Masters-Allen syndrome is a nervous system disease.
+204	Allergic asthma is a blood disease.
+205	Masters-Allen syndrome is an immune system disease.
+206	Traumatic brain injury is a nervous system disease.
+207	Acute asthma is a gastrointestinal system disease.
+208	Primary pulmonary hypertension is a breast disease.
+209	Cartilage disease is an infectious disease.
+210	Smallpox is a breast disease.
+211	Alcohol use disorder is an endocrine system disease.
+212	Congenital heart block is a respiratory system disease.
+213	Stevens-Johnson syndrome is a reproductive system disease.
+214	Abdominal tuberculosis is a respiratory system disease.
+215	Acquired night blindness is a respiratory system disease.
+216	Cork-handlers' disease is a viral infection.
+217	Acne is a genetic disease.
+218	Stiff-Person syndrome is an endocrine system disease.
+219	Plague is a bacterial infection.
+220	Tooth disease is an immune system disease.
+221	Lung lymphoma is an endocrine system disease.
+222	Juvenile absence epilepsy is a mental disorder.
+223	Cerebral malaria is a parasitic infection.
+224	Stuttering is a thoracic disease.
+225	Heart valve disease is a blood disease.
+226	Pulmonary valve disease is an immune system disease.
+227	SHORT syndrome is a metabolic disease.
+228	Appendix cancer is a cancer or other tumor.
+229	External ear cancer is a cancer or other tumor.
+230	Nicotine dependence is a blood disease.
+231	Fraser syndrome is an endocrine system disease.
+232	Larsen syndrome is a musculoskeletal system disease.
+233	Colon carcinoma is a gastrointestinal system disease.
+234	Borderline personality disorder is a thoracic disease.
+235	Geographic tongue is a nervous system disease.
+236	Cocaine abuse is a gastrointestinal system disease.
+237	SHORT syndrome is a fungal infection.
+238	Cerebral malaria is a nervous system disease.
+239	Colon lymphoma is a cancer or other tumor.
+240	SHORT syndrome is a nervous system disease.
+241	Anterior compartment syndrome is a nervous system disease.
+242	Placenta cancer is a reproductive system disease.
+243	Evans' syndrome is a metabolic disease.
+244	Short bowel syndrome is a gastrointestinal system disease.
+245	Neonatal respiratory failure is a genetic disease.
+246	Trench fever is a viral infection.
+247	Cocaine dependence is a respiratory system disease.
+248	Childhood absence epilepsy is a cardiovascular system disease.
+249	Lateral sclerosis is a nervous system disease.
+250	Pelvic inflammatory disease is a viral infection.
+251	FG syndrome is a nervous system disease.
+252	FG syndrome is a musculoskeletal system disease.
+253	Chest wall lymphoma is a cancer or other tumor.
+254	Early-onset Parkinson's disease is a bacterial infection.
+255	Ear cancer is a cancer or other tumor.
+256	Lung lymphoma is an immune system disease.
+257	SHORT syndrome is a genetic disease.
+258	Cannabis dependence is a mental disorder.
+259	Childhood absence epilepsy is a genetic disease.
+260	Infertility is an endocrine system disease.
+261	Retinal cancer is a cancer or other tumor.
+262	Acute chest syndrome is a reproductive system disease.
+263	Factor XIII deficiency is a cardiovascular system disease.
+264	Kidney cortex disease is an endocrine system disease.
+265	Blue drum syndrome is a parasitic infection.
+266	CK syndrome is a urinary system disease.
+267	Adult lymphoma is an infectious disease.
+268	Swine influenza is a gastrointestinal system disease.
+269	Traumatic brain injury is a bacterial infection.
+270	Alexander disease is an immune system disease.
+271	External ear carcinoma is a nervous system disease.
+272	Nelson syndrome is an endocrine system disease.
+273	Cocaine abuse is a nervous system disease.
+274	Iris disease is an infectious disease.
+275	Cerebral arterial disease is a blood disease.
+276	Gastrointestinal allergy is a gastrointestinal system disease.
+277	Red-green color blindness is a cardiovascular system disease.
+278	Congenital heart block is a musculoskeletal system disease.
+279	Stiff-Person syndrome is a musculoskeletal system disease.
+280	Borderline personality disorder is a nervous system disease.
+281	Diarrhea is a urinary system disease.
+282	Epilepsy is a genetic disease.
+283	Fraser syndrome is a gastrointestinal system disease.
+284	Inner ear cancer is a viral infection.
+285	Frozen shoulder is a skin disease.
+286	Pelvic inflammatory disease is a musculoskeletal system disease.
+287	Diarrhea is a reproductive system disease.
+288	Intellectual disability is a musculoskeletal system disease.
+289	Appendix cancer is an immune system disease.
+290	Kennedy's disease is a metabolic disease.
+291	Childhood leukemia is a cancer or other tumor.
+292	Simple partial epilepsy is a reproductive system disease.
+293	Kennedy's disease is a bacterial infection.
+294	Ogden syndrome is a musculoskeletal system disease.
+295	Vitamin metabolic disorder is a cardiovascular system disease.
+296	Acute asthma is a fungal infection.
+297	Functional gastric disease is a musculoskeletal system disease.
+298	Adult lymphoma is a thoracic disease.
+299	Cork-handlers' disease is a musculoskeletal system disease.
+300	Plum allergy is a cardiovascular system disease.
+301	Sensory system cancer is a cancer or other tumor.
+302	Geographic tongue is an endocrine system disease.
+303	Lymph node disease is an immune system disease.
+304	Cocaine dependence is a nervous system disease.
+305	Renal hypertension is a nervous system disease.
+306	Heavy chain disease is an immune system disease.
+307	Fraser syndrome is a metabolic disease.
+308	Organ system cancer is an infectious disease.
+309	Plague is an infectious disease.
+310	Kennedy's disease is a genetic disease.
+311	Subjective cognitive decline is a breast disease.
+312	Acne is a skin disease.
+313	Autoimmune hepatitis is an immune system disease.
+314	Pulmonary valve disease is a mental disorder.
+315	Factor XIII deficiency is a genetic disease.
+316	Cerebral degeneration is a musculoskeletal system disease.
+317	Delta chain disease is a musculoskeletal system disease.
+318	Iris disease is a urinary system disease.
+319	Fraser syndrome is a urinary system disease.
+320	Swine influenza is a fungal infection.
+321	Thoracic cancer is a respiratory system disease.
+322	Kidney cortex disease is a urinary system disease.
+323	Color blindness is a urinary system disease.
+324	Infertility is an immune system disease.
+325	Masters-Allen syndrome is a cardiovascular system disease.
+326	Trench fever is an infectious disease.
+327	Cerebral arterial disease is a nervous system disease.
+328	Skin cancer is a skin disease.
+329	Adult lymphoma is a cancer or other tumor.
+330	Cartilage disease is a musculoskeletal system disease.
+331	Plum allergy is an infectious disease.
+332	Hepatitis is a genetic disease.
+333	Larsen syndrome is a gastrointestinal system disease.
+334	Lower gum cancer is a bacterial infection.
+335	Mitochondrial Parkinson's disease is a viral infection.
+336	Heart lymphoma is a thoracic disease.
+337	Gum cancer is a cancer or other tumor.
+338	CK syndrome is a metabolic disease.
+339	Cardiac tuberculosis is an immune system disease.
+340	Machado-Joseph disease is a metabolic disease.
+341	Swine influenza is a respiratory system disease.
+342	Childhood absence epilepsy is a urinary system disease.
+343	Malignant hypertension is a skin disease.
+344	Pelvic inflammatory disease is an immune system disease.
+345	Hepatitis is a viral infection.
+346	Parsley allergy is an immune system disease.
+347	Acquired night blindness is a fungal infection.
+348	FG syndrome is an endocrine system disease.
+349	Primary pulmonary hypertension is a fungal infection.
+350	Infertility is a reproductive system disease.
+351	Epilepsy is an immune system disease.
+352	Multiple personality disorder is a mental disorder.
+353	CHILD syndrome is a reproductive system disease.
+354	Evans' syndrome is a thoracic disease.
+355	Premature menopause is a cardiovascular system disease.
+356	Reactive arthritis is an infectious disease.
+357	Globe disease is a blood disease.
+358	Borderline personality disorder is a parasitic infection.
+359	Acute orbital inflammation is a fungal infection.
+360	Nicotine dependence is a musculoskeletal system disease.
+361	Coronavirus infectious disease is a thoracic disease.
+362	Nocturnal asthma is a respiratory system disease.
+363	Hepatitis A is a parasitic infection.
+364	Acne is a bacterial infection.
+365	Optic nerve disease is a parasitic infection.
+366	Aspiration pneumonia is an infectious disease.
+367	Gordon Holmes syndrome is a parasitic infection.
+368	Kidney failure is a respiratory system disease.
+369	Multiple sclerosis is a nervous system disease.
+370	Tooth erosion is an immune system disease.
+371	Acute chest syndrome is an endocrine system disease.
+372	CK syndrome is a skin disease.
+373	Abdominal tuberculosis is a thoracic disease.
+374	Allergic asthma is an immune system disease.
+375	Substance-related disorder is a cancer or other tumor.
+376	Impulse control disorder is a breast disease.
+377	Apple allergy is a parasitic infection.
+378	Infertility is a blood disease.
+379	Trench fever is a blood disease.
+380	Lower gum cancer is a skin disease.
+381	Cocaine dependence is a mental disorder.
+382	Fraser syndrome is a genetic disease.
+383	Ogden syndrome is a urinary system disease.
+384	Cardiac tuberculosis is a cardiovascular system disease.
+385	Cocaine dependence is a cardiovascular system disease.
+386	Chandler syndrome is an endocrine system disease.
+387	Mitochondrial Parkinson's disease is a genetic disease.
+388	Eye lymphoma is a cancer or other tumor.
+389	Autoimmune hepatitis is a genetic disease.
+390	Auditory system disease is an immune system disease.
+391	Upper lip cancer is a gastrointestinal system disease.
+392	Breast cyst is a breast disease.
+393	Globe disease is a nervous system disease.
+394	Larsen syndrome is an endocrine system disease.
+395	Placenta cancer is a cancer or other tumor.
+396	Enhanced S-cone syndrome is a cardiovascular system disease.
+397	Evans' syndrome is a cardiovascular system disease.
+398	Vegetable allergy is a gastrointestinal system disease.
+399	Multiple sclerosis is an immune system disease.
+400	Chandler syndrome is a musculoskeletal system disease.
+401	Machado-Joseph disease is a genetic disease.
+402	B-cell lymphoma is a parasitic infection.
+403	Cerebral malaria is a blood disease.
+404	Acute orbital inflammation is a gastrointestinal system disease.
+405	Carp allergy is a gastrointestinal system disease.
+406	Evans' syndrome is a respiratory system disease.
+407	Alcohol-related birth defects is a reproductive system disease.
+408	Reactive arthritis is a mental disorder.
+409	Alcohol use disorder is a metabolic disease.
+410	Smallpox is a viral infection.
+411	Smallpox is a skin disease.
+412	Small intestine cancer is an endocrine system disease.
+413	Separation anxiety disorder is a mental disorder.
+414	Swine influenza is a breast disease.
+415	Separation anxiety disorder is an infectious disease.
+416	Carp allergy is a fungal infection.
+417	Congenital diarrhea is a respiratory system disease.
+418	Snail allergy is an immune system disease.
+419	Appendix lymphoma is an immune system disease.
+420	Epilepsy is a nervous system disease.
+421	White shrimp allergy is a genetic disease.
+422	Heart valve disease is an endocrine system disease.
+423	Larsen syndrome is a genetic disease.
+424	Primary pulmonary hypertension is a respiratory system disease.
+425	Long QT syndrome is a genetic disease.
+426	Childhood leukemia is a skin disease.
+427	Communication disorder is a respiratory system disease.
+428	SHORT syndrome is a urinary system disease.
+429	Pulmonary valve disease is a thoracic disease.
+430	Eye lymphoma is a metabolic disease.
+431	Delta chain disease is a viral infection.
+432	Frozen shoulder is a parasitic infection.
+433	Lung lymphoma is a respiratory system disease.
+434	Acute asthma is a cancer or other tumor.
+435	Chronic asthma is a thoracic disease.
+436	Familial Mediterranean fever is a genetic disease.
+437	Cardiac tuberculosis is a respiratory system disease.
+438	Cannabis dependence is an endocrine system disease.
+439	Fraser syndrome is a reproductive system disease.
+440	Hepatitis is a thoracic disease.
+441	Nelson syndrome is a musculoskeletal system disease.
+442	Plum allergy is a reproductive system disease.
+443	Nocturnal asthma is an immune system disease.
+444	Factor XII deficiency is a thoracic disease.
+445	Ear cancer is a viral infection.
+446	Upper lip cancer is an infectious disease.
+447	Trench fever is a breast disease.
+448	Delta chain disease is a nervous system disease.
+449	Premature menopause is an immune system disease.
+450	Aspiration pneumonia is a bacterial infection.
+451	Cocaine abuse is a metabolic disease.
+452	Alcoholic psychosis is a nervous system disease.
+453	Primary pulmonary hypertension is a blood disease.
+454	Congenital diarrhea is a parasitic infection.
+455	Blue drum syndrome is a cancer or other tumor.
+456	Anterior compartment syndrome is a musculoskeletal system disease.
+457	Chronic asthma is a nervous system disease.
+458	Acute chest syndrome is an infectious disease.
+459	Abdominal tuberculosis is an infectious disease.
+460	Evans' syndrome is a musculoskeletal system disease.
+461	Coronavirus infectious disease is a respiratory system disease.
+462	Color blindness is a mental disorder.
+463	T cell deficiency is a metabolic disease.
+464	Functional gastric disease is a thoracic disease.
+465	Masters-Allen syndrome is a reproductive system disease.
+466	Cerebral malaria is a cardiovascular system disease.
+467	Heart valve disease is a cardiovascular system disease.
+468	Narcissistic personality disorder is a genetic disease.
+469	Cannabis dependence is a metabolic disease.
+470	Vitamin metabolic disorder is a metabolic disease.
+471	Adult T-cell leukemia/lymphoma is an infectious disease.
+472	Globe disease is a viral infection.
+473	Small intestine cancer is a cancer or other tumor.
+474	Rabies is a thoracic disease.
+475	Inner ear cancer is a urinary system disease.
+476	Nelson syndrome is a urinary system disease.
+477	Expressive language disorder is a mental disorder.
+478	Trench fever is a cardiovascular system disease.
+479	Acute asthma is a respiratory system disease.
+480	Delta chain disease is an immune system disease.
+481	Skin cancer is a cancer or other tumor.
+482	Masters-Allen syndrome is a genetic disease.
+483	Smooth muscle tumor is a cancer or other tumor.
+484	Apple allergy is a respiratory system disease.
+485	Iris disease is a skin disease.
+486	Breast cyst is a musculoskeletal system disease.
+487	Kidney failure is a thoracic disease.
+488	Sheehan syndrome is an endocrine system disease.
+489	Sheehan syndrome is an immune system disease.
+490	Nelson syndrome is a thoracic disease.
+491	Parsley allergy is a genetic disease.
+492	Stevens-Johnson syndrome is a metabolic disease.
+493	Machado-Joseph disease is a nervous system disease.
+494	Abdominal tuberculosis is an immune system disease.
+495	Cerebral degeneration is a gastrointestinal system disease.
+496	Ear cancer is an infectious disease.
+497	Traumatic brain injury is a musculoskeletal system disease.
+498	Swine influenza is a urinary system disease.
+499	T cell deficiency is a genetic disease.
+500	Upper lip cancer is a cancer or other tumor.
+501	Optic nerve disease is a cardiovascular system disease.
+502	Wilson disease is a cancer or other tumor.
+503	Substance-related disorder is a thoracic disease.
+504	Evans' syndrome is an immune system disease.
+505	Kennedy's disease is a nervous system disease.
+506	Alcohol-related birth defects is a cardiovascular system disease.
+507	Reactive arthritis is a musculoskeletal system disease.
+508	Plum allergy is a urinary system disease.
+509	Apple allergy is an immune system disease.
+510	Placenta cancer is a parasitic infection.
+511	Lower gum cancer is an infectious disease.
+512	Communication disorder is a bacterial infection.
+513	Narcissistic personality disorder is a mental disorder.
+514	Kidney failure is a urinary system disease.
+515	T cell deficiency is an immune system disease.
+516	Kennedy's disease is a urinary system disease.
+517	Machado-Joseph disease is a skin disease.
+518	Impulse control disorder is a nervous system disease.
+519	Adult T-cell leukemia/lymphoma is a genetic disease.
+520	CHILD syndrome is an endocrine system disease.
+521	Larsen syndrome is a urinary system disease.
+522	Ballard syndrome is a skin disease.
+523	B-cell lymphoma is a cancer or other tumor.
+524	Masters-Allen syndrome is a fungal infection.
+525	Inner ear cancer is a cancer or other tumor.
+526	Thoracic cancer is a cancer or other tumor.
+527	Gum cancer is an immune system disease.
+528	Red-green color blindness is a nervous system disease.
+529	Congenital diarrhea is an infectious disease.
+530	FG syndrome is a gastrointestinal system disease.
+531	Hepatitis A is an infectious disease.
+532	Apple allergy is a genetic disease.
+533	Sensory system cancer is a urinary system disease.
+534	External ear carcinoma is a cancer or other tumor.
+535	Chest wall lymphoma is an immune system disease.
+536	Primary pulmonary hypertension is a skin disease.
+537	Nelson syndrome is an immune system disease.
+538	Thoracic cancer is a viral infection.
+539	Infertility is a parasitic infection.
+540	Simple partial epilepsy is a skin disease.
+541	Chest wall lymphoma is a thoracic disease.
+542	Enhanced S-cone syndrome is a nervous system disease.
+543	Vascular-type bleeding disorder is a urinary system disease.
+544	Allergic asthma is a respiratory system disease.
+545	Placenta disease is an endocrine system disease.
+546	Allergic asthma is a parasitic infection.
+547	Dependent personality disorder is a musculoskeletal system disease.
+548	Acquired metabolic disease is a metabolic disease.
+549	Cerebral arterial disease is a cardiovascular system disease.
+550	Factor XIII deficiency is a metabolic disease.
+551	Color blindness is a skin disease.
+552	Simple partial epilepsy is a gastrointestinal system disease.
+553	Cardiac tuberculosis is an infectious disease.
+554	White shrimp allergy is a parasitic infection.
+555	Congenital heart block is a genetic disease.
+556	Autoimmune hepatitis is a viral infection.
+557	Allergic asthma is a skin disease.
+558	Stiff-Person syndrome is a nervous system disease.
+559	Adult lymphoma is an immune system disease.
+560	CK syndrome is a genetic disease.
+561	Infertility is a fungal infection.
+562	Obsessive-compulsive disorder is a cardiovascular system disease.
+563	Auditory system disease is a nervous system disease.
+564	Nelson syndrome is a parasitic infection.
+565	External ear cancer is a respiratory system disease.
+566	Acute orbital inflammation is a bacterial infection.
+567	Acute asthma is an immune system disease.
+568	Skull cancer is an infectious disease.
+569	Cerebral degeneration is an infectious disease.
+570	Eye lymphoma is a gastrointestinal system disease.
+571	Nelson syndrome is a respiratory system disease.
+572	Cervix disease is an endocrine system disease.
+573	Nelson syndrome is a nervous system disease.
+574	Acute chest syndrome is a thoracic disease.
+575	Thoracic cancer is a thoracic disease.
+576	Ogden syndrome is a respiratory system disease.
+577	B-cell lymphoma is a blood disease.
+578	Alcohol use disorder is a skin disease.
+579	Premature menopause is a reproductive system disease.
+580	Narcissistic personality disorder is a breast disease.
+581	Simple partial epilepsy is a nervous system disease.
+582	Gastrointestinal allergy is a breast disease.
+583	Chronic asthma is a genetic disease.
+584	Wilson disease is a mental disorder.
+585	Colon carcinoma is a bacterial infection.
+586	External ear carcinoma is a reproductive system disease.
+587	Kidney failure is a cancer or other tumor.
+588	Ogden syndrome is a nervous system disease.
+589	Kennedy's disease is an immune system disease.
+590	Rabies is a metabolic disease.
+591	Substance-related disorder is a metabolic disease.
+592	West Nile fever is a blood disease.
+593	Abdominal tuberculosis is a gastrointestinal system disease.
+594	Heart lymphoma is an immune system disease.
+595	SHORT syndrome is a respiratory system disease.
+596	Stuttering is a reproductive system disease.
+597	Acute asthma is a thoracic disease.
+598	SHORT syndrome is an endocrine system disease.
+599	Stiff-Person syndrome is an infectious disease.
+600	Reading disorder is a gastrointestinal system disease.
