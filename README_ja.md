@@ -42,6 +42,7 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 - 記事7（E4、AIの答えから学んだ大きな網） https://note.com/mst_design2020/n/nd323ba54cf92
 - 記事8（E4後半・E5、正解表の見直しと、AIが作ったルールの外れの損） https://note.com/mst_design2020/n/n222a0ecf386d （Zenn、E4とE5 https://zenn.dev/mst_design2020/articles/545424bd00f46f ）
 - 記事9（E6〜E8、辞書の説明文と語の意味選び） https://note.com/mst_design2020/n/nde0fb5abc0aa （Zenn https://zenn.dev/mst_design2020/articles/5d3feab2c2fff8 ）
+- 記事10（E9〜E10、網の出番と、ほかの問いでの外からの確かめ） https://note.com/mst_design2020/n/ndb76756d6b3e （Zenn、E9 https://zenn.dev/mst_design2020/articles/804eba1639b569 ・E10 https://zenn.dev/mst_design2020/articles/50e211cbd882af ）
 
 著者：加藤雅也（M.S.T.デザイン代表・大分県佐伯市） https://mst-design.jp/ ・ ORCID https://orcid.org/0009-0001-6803-654X ・ DOI https://doi.org/10.5281/zenodo.24045799
 
@@ -453,6 +454,85 @@ E9-3の詳しいこと（`analysis/e9/e93.py`）：
 
 **訂正（2026-11-11）。** 最後の一文は、頭の名詞の手書きの一覧を使った時だけ成り立っていました。一覧なしでは、辞書だけで全部の主張を判定すると、12条件中11で木の学習より悪くなります（2%・網で選ぶ：0.0033対0.0026）。辞書は単独で一番強い手がかりではなく、学習に足す確かめとして効きます。網についての上の結論は保てました（[確かめ直し](#手書きの一覧なしでの確かめ直し2026-11-11)）。
 
+### E9の計算のしかた
+
+コードが実際に何を計算しているかを、式で書きます。結論を決めた E9-3（`analysis/e9/e93.py`）を主に書き、E9〜E9-2（`analysis/e9/e9.py`）の違いは最後にまとめます。網のコードが式どおりかは `analysis/e9/check_formulas_e9.py` で確かめられます（この節の最後）。
+
+**記号の一覧。**
+
+| 記号 | 意味 |
+|---|---|
+| $e$、$j$、$(e,j)$ | 物、分類、主張「$e$ は $j$ の一種」 |
+| $\ell_{ej}$、$y_{ej}$ | Gemma の Yes−No のロジット、正解（0か1） |
+| $z_{ej}$ | 網の変数（0か1） |
+| $\mathcal I$ | Gemma が「分類 $a$ は分類 $b$ の一種」に Yes と答えた組（E9-3 では144組） |
+| $\mathcal D$ | Gemma が「$a$ と $b$ は両立しない」に Yes と答えた組（941組） |
+| $S$、$h_{ej}$ | 確かめた主張の集まり、辞書の確かめの答え（0か1） |
+| $s^{t}_{ej}$、$s^{d}_{ej}$ | Gemma の答えのままで、$(e,j)$ を本当にすると破れる（−1ずつ）／うそにすると破れる（+1ずつ）$\mathcal I$・$\mathcal D$ のルールの数 |
+| $\lambda$、$W_t$、$W_d$、$b$ | ルールの重み（調整用の物で学ぶ） |
+| $m$ | 網の強さの倍率（$\{0.5,1,2,4\}$ から調整用の物で選ぶ） |
+| $\hat p$、$r_k$、$N$ | 方法が出す「本当」の確率、確かな順に $k$ 個答えたときの誤り率、主張の数 |
+
+**ルールの重み。** 調整用の物（2割）で
+
+$$ \Pr(y_{ej}=1) = \sigma\big(\lambda\,\ell_{ej} + W_t\, s^{t}_{ej} + W_d\, s^{d}_{ej} + b\big) $$
+
+をロジスティック回帰で当てはめ、$W_t, W_d$ は 0 未満なら 0 にします。
+
+**網（D）。** 物ごとに、46分類の変数の網を作ります（物どうしはつながりません）。
+
+$$ P(z_e) \;\propto\; \exp\Big(\sum_j u_{ej}\, z_{ej}\Big) \prod_{(a,b)\in\mathcal I} (1-c_t)^{[z_{ea}=1,\; z_{eb}=0]} \prod_{(a,b)\in\mathcal D} (1-c_d)^{[z_{ea}=1,\; z_{eb}=1]}, \qquad c_t = 1-e^{-mW_t},\; c_d = 1-e^{-mW_d} $$
+
+$$ u_{ej} = \begin{cases} \lambda\,\ell_{ej} + b & (e,j) \notin S \\ +\log 9 & (e,j)\in S,\ h_{ej}=1 \\ -\log 9 & (e,j)\in S,\ h_{ej}=0 \end{cases} $$
+
+- 確かめた主張は、辞書を9割信じる強さの場を持ち、まわりからの知らせは受け取りません（固定）。網の答えは $\hat p_{ej} = P(z_{ej}=1)$ で、輪のある確率伝搬（同時に更新、ダンピング0.5、最大100回）で求めます。
+- WordNet の階層は、網にも学習にも入れていません。
+
+**学習（C・C++）。** 主張ごとの特徴は次のとおりです。
+
+- Gemma の答え：$\ell_{ej}$、同じ物のほかの分類への $\ell$ の最大と平均、$s^{t}_{ej}$、$s^{d}_{ej}$
+- 確かめの隣：確かめた「はい」の分類 $a$ から $(a,j)\in\mathcal I$ で支えられる数、確かめた「はい」と $\mathcal D$ で両立しない数、確かめた「いいえ」の分類 $a$ について $(j,a)\in\mathcal I$ の数、同じ物の確かめた「はい」「いいえ」の数、確かめがあるか、と、最初の3つそれぞれが正のときの $\ell_{ej}$
+
+C は標準化してロジスティック回帰、C++ は勾配ブースティング（`HistGradientBoostingClassifier`、300回、学習率0.05）です。辞書の点は、確かめた主張の答え $h$ としてだけ使い、特徴には入れません（入れると全部を確かめたのと同じになるため）。
+
+**仕上げ（F++）。** 確かめていない主張の場を $u_{ej} = \mathrm{logit}\,\hat p^{\text{C++}}_{ej}$ にして、D と同じ網を解きます。
+
+**全部辞書（K、参考）。** 辞書の点 $k_{ej}$（取れなければ0）と「取れなかったか」の2つでロジスティック回帰。
+
+**確かめる主張の選び方。** $\hat p^{A}$ を、調整用の物でロジスティック回帰をかけた Gemma の自信とし、$H_{ej}$ をその2値エントロピーとします。「Gemma が迷う所」は $H$ の大きい順。「網で選ぶ」は、物ごとの $\sum_j H_{ej}$ が大きい物から順に1つずつ（その物で $H$ が一番大きい主張）、足りなければ2周目、です。
+
+**物差し。** 答え $[\hat p>0.5]$、確かさ $\max(\hat p, 1-\hat p)$ の順に上から $k$ 個答えたときの誤り率を $r_k$ として $\mathrm{AURC} = \frac1N\sum_{k=1}^N r_k$。主な採点は「確かめが入った物の、まだ確かめていない主張」です。
+
+**E9〜E9-2 の違い。** 網は E4-2 の慎重な網（`analysis/e4/e42.py` の `build`・`WNet`）です。物の主張だけでなく、分類どうしの主張（「$a$ は $b$ の一種」「$a$ と $b$ は両立しない」）も変数にして Gemma の答え $\sigma(\ell)$ で固定し、ルールは「破れる組み合わせ」のとき $e^{-mW}$ を掛けます（一種の受け継ぎ・両立しない・向きの逆・一種と両立しないの4種類。重みは同じ形の回帰で学び、後の2種類は $(W_t+W_d)/2$）。確かめた主張は $\pm\log 9$ で固定します。学習の特徴は E4-2 と同じ物に、確かめから1歩で決まる押しと「同じ物に確かめがあるか」を足し（C）、E9-2 では上の確かめの隣の特徴（Gemma の分類どうしの答えで重みを付けた版）も足しました（C+・C++）。E9 の作り物の確かめ役は、E6 の辞書の当たり方に合わせて、主張の種類ごとに決めた割合で答えを間違えます。
+
+**式とコードの対応。**
+
+| 式 | コード |
+|---|---|
+| $\mathcal I$、$\mathcal D$ | `analysis/e9/e93.py` の `IMP`・`DIS`（`rl` で Gemma の答えから） |
+| $s^{t}$、$s^{d}$ | `e93.py` の `signed` |
+| $\lambda, W_t, W_d, b$ | `e93.py` の主のくり返しの `lrw` |
+| 網 $P(z_e)$ と $\hat p$ | `e93.py` の `bp`（$u$ は `U`、確かめは `ansU`・`frozen`、$m$ は `WMUL`） |
+| 確かめの隣の特徴 | `e93.py` の `nb_feats`。Gemma の特徴は `BASEF` |
+| C・C++・F++・K | `e93.py` の `lrC`・`gb`・`cG`・`lrK` |
+| 選び方 | `e93.py` の `select` |
+| AURC と判定の決まり | `e93.py` の `aurc`（`analysis/e4/e41.py` の `selective`）、`e93_analyze.py` |
+| E9〜E9-2 | `e9.py`（網は `e42.WNet.bp`、作り物の確かめ役は `NOISES`、E9-2 の特徴は `nb_feats`） |
+
+**既存研究から借りた所と、自分で決めた所。**
+
+| 部分 | 借りた考え（出典） | 自分で決めた所 |
+|---|---|---|
+| 少し確かめて、つながりで広げる | 集団分類と、どれを確かめるか（Sen ほか 2008、Bilgic・Getoor 2008/2010、Macskassy・Provost 2007） | 確かめを辞書にすること、選び方「網で選ぶ」 |
+| 網と輪のある確率伝搬 | E4 と同じ（Murphy ほか 1999 ほか） | ルールを Gemma の答えだけから作ること、因子の形、確かめの強さ $\log 9$ |
+| 学習のあとにつながりで整える（F++） | Correct and Smooth（Huang ほか 2021） | 仕上げに網をそのまま使うこと |
+| 強い比べ相手 | 表の形の特徴では木の学習が強い（Grinsztajn ほか 2022） | 設定（300回、学習率0.05）は固定 |
+| 問題の作り方の癖 | Gururangan ほか 2018、Geirhos ほか 2020 | E9-3 で候補を選ばず全部の主張を使うこと |
+| AURC | Geifman ほか 2019 | ― |
+| 判定の決まり | ― | 相手の値の20%以上の差が5回中4回（E9-3、流す前に固定） |
+
+**コードが式どおりかの確かめ。** `cd analysis/e9; python check_formulas_e9.py`（数秒）は、小さな網を200個ずつくじで作り（変数3〜7、重み0.2〜3）、網のコードの答えを全部の組み合わせの数え上げと比べます。固定した主張は「ルールごとに場だけを持つ写し」として数えます（まわりからの知らせを受け取らないのと同じ）。結果：E9-3 の網（`e93.py` の `bp`）は木の形の120個で一致（ずれ $10^{-13}$）、輪のある80個で最大0.137のずれ。E9〜E9-2 の網（`e42.WNet.bp`、確かめを固定）は木の形の140個で一致（ずれ $10^{-14}$）、輪のある60個で最大0.074のずれ。輪のある確率伝搬は近似なので、輪のある形のずれは想定どおりです（この確かめの重みは実験の値より強めです）。
+
 ## 手書きの一覧なしでの確かめ直し（2026-11-11）
 
 E7・E8と、E9-1〜E9-3の本物の辞書の確かめは、説明文の頭の名詞を取る時に手書きの語の一覧を使っていました（`PERSON_HEADS` 10句・`OF_HEADS` 27語・`META` 22語と個別の直し2つ。`analysis/e6/e7_core.py`・`analysis/e8/e8_core.py`）。分野の知識ではなく英語の文法の語で、結果を見る前に決めた物ですが、人が書いた一覧に結果が頼るのは良くありません。E8の辞書では、説明文15,980のうち1,849（12%）で、この一覧が頭の名詞を person・human・「なし」にしていました。公開コード全体の点検：`plans/audit_hand_lists.md`。方法の中の他の一覧は、`BAD_LABELS`（E8の方法B、参考だけ）と、E8の打ち消しのまとまり（`GW`・`CG`・`COMPAT`・`GROUP_WORDS`、結果は負け）。問いそのもの（分類・文の形）、問題の作り方の絞り込み、Wiktionaryの書式の読み方は数えていません。
@@ -516,6 +596,80 @@ E10〜E10-3 では、「XはYの一種か」で効いた外からの確かめが
 
 **手書きの一覧。** E10 のコードには上の一覧がありました（点検：`plans/audit_hand_lists_E10.md`）。E10-1 からは、ノートを渡す前に毎回、方法のコードから文字列の一覧を機械で洗い出しました（`analysis/e10/e101/scan.py`）。どの計画にも「手で決めた所」の節があり、問いの文の形・先に決めた数値・聞き方の文だけを手で決めたと書いています。
 
+### E10の計算のしかた
+
+コードが実際に何を計算しているかを、式で書きます。主張を決めた E10-2・E10-3 を主に書き、E10・E10-1 の辞書の鎖は E8 の式（[E6〜E8の計算のしかた](#e6e8の計算のしかた)）との違いだけを書きます。
+
+**記号の一覧。**
+
+| 記号 | 意味 |
+|---|---|
+| $q$ | 問いの文（P「A wheel is a part of a car.」、D「X is a 〈分類〉.」、G「X is located in 〈地域〉.」、K「X is a type of C.」） |
+| $x$、$w$ | 物の語と、分類の側の語（P は全体の語、D は分類名、G は地域名、K は分類名） |
+| $\ell(\cdot)$ | 与えた文での Gemma の Yes−No のロジット。$\ell_{\text{①}}$ は文を置かずに聞いた値 |
+| $F_m(x,w)$ | 方法 $m$ で問いの前に置く文の並び（最大5つ） |
+| $e(\text{前提}\Rightarrow\text{仮説})$ | NLI の「言える」の確率（E6〜E8 と同じモデル） |
+| $\alpha_m$、$\beta_m$ | 方法 $m$ のロジットを確率に直す係数（調整用の2割で学ぶ） |
+| $\hat p$、$r_k$、$N$ | 方法が出す「正しい」の確率、確かな順に $k$ 個答えたときの誤り率、主張の数 |
+
+**文を前に置いて聞く（①・⑩・⑩s・⑪g・⑪s・⑫・⑪f）。** どれも同じ形で、文の並び $F_m$ だけが違います。
+
+$$ \ell_m = \ell\big(\texttt{Facts: } F_m(x,w)\ \texttt{Using these facts and your own knowledge, is the following statement true? Answer Yes or No only. Statement: } q\big), \qquad \hat p_m = \sigma(\alpha_m\,\ell_m + \beta_m) $$
+
+- ①：文を置かずに `Is the following statement true? Answer Yes or No only. Statement: q`（E4〜E10-1 と同じ）。
+- ⑩：$x$ と $w$ の Wiktionary の説明文を、ページの順に3つずつ（1つ220字まで）。形は `Dictionary definitions:` で、`Using these definitions and your own knowledge, …` と聞きます。
+- ⑪g：GenericsKB（約340万文）のうち、$x$ と $w$ の両方を含む文を、GenericsKB の点数の高い順に最大5つ。語の形（複数形など）は lemminflect で作り、手書きの語形の一覧は使いません。見つからなければ `(no facts found)`。
+- ⑩s・⑪s（対照）：同じ場面の別の物・別の主張の文に、種1で入れ替えて見せる。
+- ⑫：Gemma に `Write up to five short, general, factual sentences that mention both "x" and "w". Write one sentence per line and nothing else.` と頼み（100トークンまで）、3語以上の行を5つまで取って、⑪g と同じ形で見せる。
+- ⑪f：⑪g の文 $f$ ごとに `Statement: q / Sentence: f / In the sentence, are "x" and "w" used with the same meanings as in the statement? Answer Yes or No only.` と聞き、Yes の文だけを残す。
+
+**NLI で判定（⑪n・⑪nf）。**
+
+$$ \hat p_{\text{⑪n}} = \begin{cases} \max_{f \in F_{\text{⑪g}}} e(f \Rightarrow q) & F_{\text{⑪g}} \neq \emptyset \\ \hat p_{\text{①}} & \text{それ以外} \end{cases} $$
+
+⑪nf は $F_{\text{⑪g}}$ の代わりに $F_{\text{⑪f}}$ を使います。
+
+**学習（C++・X++）。** C++ は Gemma の答えだけの特徴、$\ell_{\text{①}}$、同じ物のほかの分類への $\ell_{\text{①}}$ の最大・平均・標準偏差、その中で自分より高い数、「はい」の数、物の語のよく使われる度合い（wordfreq）、分類（one-hot）で勾配ブースティング（300回、学習率0.05）。X++ はそれに $\ell_{\text{⑩}}$、$\ell_{\text{⑪g}}$、$\hat p_{\text{⑪n}}$、文が見つかったか、見つかった文の数、辞書1段の値を足したものです。
+
+**E10・E10-1 の辞書の鎖。** 点・段の確かさ $q_n$・着き $a_n$・一番強い道 $S(n,t)$ は E8 と同じ式で、仮説の文の形だけが場面で変わります。
+
+- 段：一種の段は `W is a type of g.`、一部・場所の段は P `W is a part of g.`、G `W is located in g.`、D `W affects the g.`
+- 着き：P `W is a part of 〈全体〉.`（$w$ が全体の語そのものなら1）、G `W is located in 〈地域〉.`、D `W is a 〈分類〉.` と、体の部位の分類なら `W is a part of the 〈器官系〉.` の大きい方
+- ③ は1段だけ、⑥D は3段までの一番強い道（語義は Gemma が選ぶ）。辞書に載っていない物は $\hat p_{\text{①}}$ のまま。⑧D++ は C++ の特徴に ③・⑥D などを足した勾配ブースティングです。
+- E10-1 の直した版 ⑨（P）は $\max(③, \text{直し1}, \text{直し2}) \times \text{向きの確かさ}$。向きの確かさは、Gemma に `Which statement is true? Answer A or B only. A: … B: …` と2つの文の順を入れ替えて2回聞いた平均です。D は病名が辞書にない時だけ、最後の語と残りに分けて引きます（直し4）。E10-1 では、頭の名詞の候補を文法だけで出し、NLI の値で選びます（手書きの一覧なし）。
+
+**物差し。** 答え $[\hat p>0.5]$、確かさ $\max(\hat p, 1-\hat p)$ の順に上から $k$ 個答えたときの誤り率を $r_k$ として $\mathrm{AURC} = \frac1N\sum_{k=1}^N r_k$。物ごとに5つに分け（種0）、1つで調整・学習、残りで評価、5回。
+
+**式とコードの対応。**
+
+| 式 | コード |
+|---|---|
+| ⑩・⑪g の聞き方、⑩ の説明文 | `analysis/e10/e102/e102_core.py` の `def_prompt`・`fact_prompt`・`defs_text` |
+| $F_{\text{⑪g}}$（文探し） | `e102_core.py` の `forms`・`term_hits`（両方の語の文の番号の重なりから点数の上位5つ。`build_notebook_E10-2.py` の文探しのセル） |
+| ⑫・⑪f の聞き方 | `analysis/e10/e103/e103_core.py` の `self_prompt`・`parse_lines`・`sense_prompt` |
+| $\hat p_m$、⑪n、C++、X++ | `analysis/e10/e102/e102_analyze.py` の `methods`（E10-3 は `e103/e103_analyze.py` が同じ関数を使う） |
+| 対照 ⑩s・⑪s | `analysis/e10/e102/build_notebook_E10-2.py`（`defS`・`genS` を作るセル） |
+| E10 の鎖（③・⑥D・⑧D++） | `analysis/e10/e10_core.py` の `step_hyp`・`arrive_hyps`、`e10_analyze.py` の `chain_scores`・`run` |
+| E10-1 の ⑨ | `analysis/e10/e101/e101_analyze.py` の `methods`、聞き方は `e101_core.py` の `dir_prompt`・`split_name` |
+| AURC と判定の決まり | `analysis/e10/e10_analyze.py` の `aurc`、`e101/e101_analyze.py` の `judge` |
+
+**既存研究から借りた所と、自分で決めた所。**
+
+| 部分 | 借りた考え（出典） | 自分で決めた所 |
+|---|---|---|
+| 文を問いの前に置いて答えさせる | 検索で補う生成（Lewis ほか 2020） | 聞き方の文、最大5つ |
+| 一般的な文の資料 | GenericsKB（Bhakthavatsalam ほか 2020）、部分の組は hasPart KB（同 2021） | 両方の語を含む文を点数順に選ぶこと |
+| AI 自身に文を書かせてから答えさせる（⑫） | GenRead（Yu ほか 2023）、Liu ほか 2022、Abdallah ほか 2025 | 頼み方の文、5つまで |
+| 文の NLI 判定（⑪n） | E6 と同じ（NLI で答えを確かめる、ConCoRD 2022） | 文ごとの最大、見つからない時は① |
+| 珍しい語で分けて見る | Mallen ほか 2023 | 線（wordfreq 3.5）は先に固定 |
+| 辞書の鎖（E10・E10-1） | E8 と同じ | 場面ごとの仮説の文、直し1〜4 |
+| 向きの2択（直し3） | 向きの取り違え（Proietti・Lenci 2025）、選ばせる形（Zhang ほか 2025） | 順を入れ替えて2回の平均 |
+| 対照（⑩s・⑪s） | ― | 別の物・主張の文に入れ替えること |
+| AURC | Geifman ほか 2019 | ― |
+| 判定の決まり | ― | 相手の値の20%以上の差が5回中4回（E9-3 と同じ、流す前に固定） |
+
+E10 の方法には網がないので、式の確かめは、公開ファイルから4本の分析を流し直して、保存した結果と一致することで確かめています（[計算をやり直す](#計算をやり直す)）。
+
 ## ファイルの置き場所
 
 - `colab/`：Google Colabで動かすノート（T4 GPU）。Gemmaに質問して答えを保存する。E2-2・E2-3はノートの中で計算と図まで行う。
@@ -541,7 +695,7 @@ E10〜E10-3 では、「XはYの一種か」で効いた外からの確かめが
 - `analysis/nolist/`：手書きの一覧なしでの確かめ直し（一覧を外した `e8n_core.py`、E7・E8用の `e8n_analyze.py`・`e8n_analyze_gb.py`、ノートを作るコード）。`colab/E8n_nolist_recheck.ipynb`（E7・E8、L4 GPU、約1時間）、`colab/E9n_nolist_recheck.ipynb`（E9の辞書の確かめ、L4 GPU）。`data/E8n_chains_nli.json`（説明文の本文は除いた）・`data/E9n_checker_scores.json`。結果は `results/nolist/`
 - `analysis/e10/`：E10 のコード（`e10_data.py` 問いを作る、`e10_core.py` Colab の中身、`e10_analyze.py`、ノートを作るスクリプト）。`e101/`・`e102/`・`e103/`：E10-1・E10-2・E10-3（問いを作るスクリプト、Colab の中身、ノートを作るスクリプト、`*_analyze.py`、手書きの一覧を洗い出す `scan.py`、Gemini に渡した依頼文とその判定の `gemini/`。「一種か」の分は `e103/k_items.json`・`cs_K_claude.json`）。ノート：`colab/E10_dictionary_other_questions.ipynb`・`colab/E10-1_fixes_without_lists.ipynb`・`colab/E10-2_show_definitions_and_generics.ipynb`・`colab/E10-3_self_text_isa_sense_filter.ipynb`（L4 GPU、それぞれ1〜2時間、途中から続けられる）。`data/E10/`：正解入りの問いと、ノートの出力（Gemma の logit、意味の選択、NLI の値、見せた GenericsKB の文〈CC BY 4.0〉。辞書の説明文の本文は除いた〈CC BY-SA〉）。`results/E10/`：常識の判定と分析の出力
 - `results/`：計算結果のJSONと図（E3は `results/E3/E3_main_analysis.json`、E4は `results/E4/`、E5は `results/E5/`、E6は `results/E6/`、E7は `results/E7/`、E8は `results/E8/`、E9は `results/E9/`）
-- `analysis/e9/`：E9のコード。`e9.py`（作り物の確かめ役でのE9。`real` でE9-1・E9-2の本物の辞書）、`e93.py`（E9-3）、`e9*_analyze.py`（まとめと判定の決まり）、`e91_checker.py`・`e91_from_small.py`（Colabの出力を確かめの点にする）、ノートを作るコード、`labels/E9-3_sample_labeled_claude.json`（Claudeが常識で判定した600個。人の判定ではない）
+- `analysis/e9/`：E9のコード。`e9.py`（作り物の確かめ役でのE9。`real` でE9-1・E9-2の本物の辞書）、`e93.py`（E9-3）、`e9*_analyze.py`（まとめと判定の決まり）、`e91_checker.py`・`e91_from_small.py`（Colabの出力を確かめの点にする）、`check_formulas_e9.py`（網のコードが式どおりかの確かめ）、ノートを作るコード、`labels/E9-3_sample_labeled_claude.json`（Claudeが常識で判定した600個。人の判定ではない）
 - `colab/E9-1_dictionary_check.ipynb`：E4-2のすべての主張に、E8の辞書の確かめ（Gemmaが意味を選ぶ）をかける（L4 GPU）。`colab/E9-1b_small_output.ipynb` はその出力を小さくする。`data/E9-1_checker_scores.json`：主張ごとの辞書の「はい／いいえ」
 - `plans/`：各実験の計画と結果
 
