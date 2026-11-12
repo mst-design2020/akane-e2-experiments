@@ -42,6 +42,7 @@ Every number in the articles below comes from files in this repository. Articles
 - Article 7: E4, a large network learned from the model's answers. https://note.com/mst_design2020/n/nd323ba54cf92
 - Article 8: E4 (second half) and E5, re-checking the answer key and the cost of the model's own rules. https://note.com/mst_design2020/n/n222a0ecf386d (Zenn, E4 and E5: https://zenn.dev/mst_design2020/articles/545424bd00f46f)
 - Article 9: E6 to E8, dictionary definitions and word senses. https://note.com/mst_design2020/n/nde0fb5abc0aa (Zenn: https://zenn.dev/mst_design2020/articles/5d3feab2c2fff8)
+- Article 10: E9 and E10, the network's role and outside checks on other questions. https://note.com/mst_design2020/n/ndb76756d6b3e (Zenn, E9: https://zenn.dev/mst_design2020/articles/804eba1639b569; E10: https://zenn.dev/mst_design2020/articles/50e211cbd882af)
 
 Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X · DOI https://doi.org/10.5281/zenodo.24045799
 
@@ -449,6 +450,85 @@ E9-3 in more detail (`analysis/e9/e93.py`). Only 4.9% of the claims are true, so
 
 **Correction (2026-11-11).** The last sentence held only with the hand-written head-noun lists. Without them, checking every claim with the dictionary alone is worse than gradient boosting in 11 of 12 conditions (2%, net: 0.0033 vs 0.0026); the dictionary helps as a check added to a learner, not as the best signal on its own. The network conclusions above hold ([recheck](#recheck-without-hand-written-word-lists-2026-11-11)).
 
+### E9: how the computation works
+
+This section writes out what the code computes. It covers E9-3 (`analysis/e9/e93.py`), which settled the conclusion, and ends with how E9 to E9-2 (`analysis/e9/e9.py`) differ. `analysis/e9/check_formulas_e9.py` checks the network code against these formulas (end of this section).
+
+**Symbols.**
+
+| Symbol | Meaning |
+|---|---|
+| $e$, $j$, $(e,j)$ | a noun, a category, the claim "$e$ is a type of $j$" |
+| $\ell_{ej}$, $y_{ej}$ | Gemma's Yes−No logit, the gold label (0 or 1) |
+| $z_{ej}$ | network variable (0 or 1) |
+| $\mathcal I$ | category pairs for which Gemma answered Yes to "$a$ is a type of $b$" (144 in E9-3) |
+| $\mathcal D$ | category pairs for which Gemma answered Yes to "$a$ and $b$ are disjoint" (941) |
+| $S$, $h_{ej}$ | the set of checked claims, the dictionary check's answer (0 or 1) |
+| $s^{t}_{ej}$, $s^{d}_{ej}$ | with Gemma's answers as they are, the number of $\mathcal I$ / $\mathcal D$ rules broken by making $(e,j)$ true (−1 each) or false (+1 each) |
+| $\lambda$, $W_t$, $W_d$, $b$ | rule weights, learned on the tuning nouns |
+| $m$ | network strength multiplier, chosen from $\{0.5,1,2,4\}$ on the tuning nouns |
+| $\hat p$, $r_k$, $N$ | a method's probability of "true", the error rate when answering the $k$ most confident claims, the number of claims |
+
+**Rule weights.** On the tuning nouns (20%), logistic regression fits
+
+$$ \Pr(y_{ej}=1) = \sigma\big(\lambda\,\ell_{ej} + W_t\, s^{t}_{ej} + W_d\, s^{d}_{ej} + b\big) $$
+
+and $W_t, W_d$ are clipped at 0.
+
+**Network (D).** One network over the 46 categories per noun (nouns are not connected).
+
+$$ P(z_e) \;\propto\; \exp\Big(\sum_j u_{ej}\, z_{ej}\Big) \prod_{(a,b)\in\mathcal I} (1-c_t)^{[z_{ea}=1,\; z_{eb}=0]} \prod_{(a,b)\in\mathcal D} (1-c_d)^{[z_{ea}=1,\; z_{eb}=1]}, \qquad c_t = 1-e^{-mW_t},\; c_d = 1-e^{-mW_d} $$
+
+$$ u_{ej} = \begin{cases} \lambda\,\ell_{ej} + b & (e,j) \notin S \\ +\log 9 & (e,j)\in S,\ h_{ej}=1 \\ -\log 9 & (e,j)\in S,\ h_{ej}=0 \end{cases} $$
+
+- A checked claim has a field that trusts the dictionary 90%, and receives no messages (it is clamped). The output is $\hat p_{ej} = P(z_{ej}=1)$ from loopy belief propagation (parallel updates, damping 0.5, at most 100 iterations).
+- The WordNet hierarchy is used neither in the network nor in the learners.
+
+**Learners (C, C++).** Features per claim:
+
+- Gemma's answers: $\ell_{ej}$, the max and mean of $\ell$ over the noun's other categories, $s^{t}_{ej}$, $s^{d}_{ej}$
+- neighbours of checks: the number of checked-yes categories $a$ with $(a,j)\in\mathcal I$, the number of checked-yes categories disjoint with $j$ in $\mathcal D$, the number of checked-no categories $a$ with $(j,a)\in\mathcal I$, the noun's numbers of checked yes and no, whether the noun has any check, and $\ell_{ej}$ times each of the first three being positive
+
+C is logistic regression on standardised features; C++ is gradient boosting (`HistGradientBoostingClassifier`, 300 iterations, learning rate 0.05). The dictionary score enters only as the answer $h$ of checked claims, never as a feature (that would amount to checking everything).
+
+**Finishing (F++).** The same network as D, with field $u_{ej} = \mathrm{logit}\,\hat p^{\text{C++}}_{ej}$ on unchecked claims.
+
+**Dictionary on everything (K, reference).** Logistic regression on the dictionary score $k_{ej}$ (0 when missing) and a missing flag.
+
+**Choosing what to check.** Let $\hat p^{A}$ be Gemma's confidence calibrated by logistic regression on the tuning nouns, and $H_{ej}$ its binary entropy. "Gemma least sure" takes the largest $H$. "Net" goes through nouns in order of $\sum_j H_{ej}$ and takes one claim per noun (the one with the largest $H$), with further rounds if needed.
+
+**Metric.** Answer $[\hat p>0.5]$, confidence $\max(\hat p, 1-\hat p)$; with $r_k$ the error rate of the $k$ most confident answers, $\mathrm{AURC} = \frac1N\sum_{k=1}^N r_k$. The main score is on the unchecked claims of nouns that received a check.
+
+**How E9 to E9-2 differ.** The network is E4-2's cautious network (`build` and `WNet` in `analysis/e4/e42.py`). Category-to-category claims ("$a$ is a type of $b$", "$a$ and $b$ are disjoint") are variables too, clamped at Gemma's $\sigma(\ell)$; each rule multiplies by $e^{-mW}$ when its violating assignment occurs (four kinds: inheritance, disjointness, antisymmetry, type-of vs disjoint; weights learned by the same regression, the last two at $(W_t+W_d)/2$). Checked claims are clamped at $\pm\log 9$. The learner C uses E4-2's features plus the one-step push from the checks and whether the noun has a check; E9-2 adds the neighbour-of-check features above, weighted by Gemma's category-pair answers (C+, C++). E9's simulated checker errs at fixed rates per claim kind, matched to how E6's dictionary check erred.
+
+**Formulas and code.**
+
+| Formula | Code |
+|---|---|
+| $\mathcal I$, $\mathcal D$ | `IMP`, `DIS` in `analysis/e9/e93.py` (from Gemma's answers via `rl`) |
+| $s^{t}$, $s^{d}$ | `signed` in `e93.py` |
+| $\lambda, W_t, W_d, b$ | `lrw` in the main loop of `e93.py` |
+| network $P(z_e)$ and $\hat p$ | `bp` in `e93.py` ($u$ is `U`; checks are `ansU`, `frozen`; $m$ is `WMUL`) |
+| neighbour-of-check features | `nb_feats` in `e93.py`; Gemma features are `BASEF` |
+| C, C++, F++, K | `lrC`, `gb`, `cG`, `lrK` in `e93.py` |
+| choosing checks | `select` in `e93.py` |
+| AURC and decision rule | `aurc` in `e93.py` (`selective` in `analysis/e4/e41.py`), `e93_analyze.py` |
+| E9 to E9-2 | `e9.py` (network `e42.WNet.bp`, simulated checker `NOISES`, E9-2 features `nb_feats`) |
+
+**Borrowed and our own.**
+
+| Part | Borrowed idea (source) | Our own choices |
+|---|---|---|
+| Check a few, spread along links | collective classification and choosing what to label (Sen et al. 2008; Bilgic & Getoor 2008/2010; Macskassy & Provost 2007) | the dictionary as checker; the "net" selection |
+| Network and loopy BP | as in E4 (Murphy et al. 1999 and others) | rules built only from Gemma's answers; factor form; check strength $\log 9$ |
+| Smoothing a learner's output along links (F++) | Correct and Smooth (Huang et al. 2021) | using the same network for the finish |
+| A strong baseline | tree models are strong on tabular features (Grinsztajn et al. 2022) | fixed settings (300 iterations, rate 0.05) |
+| Artifacts of how the problem is built | Gururangan et al. 2018; Geirhos et al. 2020 | E9-3 uses all claims, no candidate selection |
+| AURC | Geifman et al. 2019 | – |
+| Decision rule | – | a difference of at least 20% of the opponent's value in 4 of 5 splits (E9-3, fixed before running) |
+
+**Checking the code against the formulas.** `cd analysis/e9; python check_formulas_e9.py` (a few seconds) draws 200 small random networks per network type (3 to 7 variables, weights 0.2 to 3) and compares the code's output with exact enumeration. A clamped claim is counted as one copy per rule that carries only its field (the same as receiving no messages). Results: the E9-3 network (`bp` in `e93.py`) matches on the 120 tree-shaped networks (difference $10^{-13}$) and differs by at most 0.137 on the 80 with loops; the E9 to E9-2 network (`e42.WNet.bp` with clamped checks) matches on 140 trees (difference $10^{-14}$) and differs by at most 0.074 on 60 with loops. Loopy BP is an approximation, so differences on loops are expected (the weights in this check are stronger than in the experiments).
+
 ## Recheck without hand-written word lists (2026-11-11)
 
 E7, E8 and the real dictionary check of E9-1 to E9-3 used hand-written word lists to pick each definition's head noun (`PERSON_HEADS` 10 phrases, `OF_HEADS` 27 words, `META` 22 words, and two single fixes, in `analysis/e6/e7_core.py` and `analysis/e8/e8_core.py`). These are English grammar words, not domain knowledge, and they were fixed before the results, but a result should not depend on a list someone wrote. In E8's dictionary, 1,849 of 15,980 definitions (12%) had their head noun set to person, human or nothing by these lists. Audit of all published code: `plans/audit_hand_lists.md` (Japanese). Other lists in the methods: `BAD_LABELS` (E8 method B, reference only) and the groups for E8's negative evidence (`GW`, `CG`, `COMPAT`, `GROUP_WORDS`; negative result). The questions themselves (categories, sentence templates), filters on how items were built, and wikitext parsing were not counted.
@@ -509,6 +589,80 @@ Setup shared by all four steps:
 
 **Hand-written lists.** E10's code had the lists named above (audit: `plans/audit_hand_lists_E10.md`, Japanese). From E10-1 on, before each notebook was handed over, the method code was scanned mechanically for string lists (`analysis/e10/e101/scan.py`). Each plan has a section listing what was set by hand: question templates, fixed numbers and prompt wording.
 
+### E10: how the computation works
+
+This section writes out what the code computes. It covers E10-2 and E10-3, which settled the claims; for the dictionary chains of E10 and E10-1 it gives only the differences from E8's formulas ([E6–E8: how the computation works](#e6e8-how-the-computation-works)).
+
+**Symbols.**
+
+| Symbol | Meaning |
+|---|---|
+| $q$ | the question sentence (P "A wheel is a part of a car.", D "X is a ⟨class⟩.", G "X is located in ⟨region⟩.", K "X is a type of C.") |
+| $x$, $w$ | the item word and the class-side word (P: the whole; D: class name; G: region name; K: category name) |
+| $\ell(\cdot)$ | Gemma's Yes−No logit for a given prompt; $\ell_{\text{①}}$ is the plain question |
+| $F_m(x,w)$ | the sentences method $m$ puts before the question (at most 5) |
+| $e(\text{premise}\Rightarrow\text{hypothesis})$ | the NLI entailment probability (same model as E6–E8) |
+| $\alpha_m$, $\beta_m$ | coefficients that turn method $m$'s logit into a probability (learned on the tuning 20%) |
+| $\hat p$, $r_k$, $N$ | a method's probability of "true", the error rate of the $k$ most confident answers, the number of claims |
+
+**Asking with sentences in front (①, ⑩, ⑩s, ⑪g, ⑪s, ⑫, ⑪f).** All share one form; only the sentences $F_m$ differ.
+
+$$ \ell_m = \ell\big(\texttt{Facts: } F_m(x,w)\ \texttt{Using these facts and your own knowledge, is the following statement true? Answer Yes or No only. Statement: } q\big), \qquad \hat p_m = \sigma(\alpha_m\,\ell_m + \beta_m) $$
+
+- ①: no sentences, `Is the following statement true? Answer Yes or No only. Statement: q` (as in E4 to E10-1).
+- ⑩: the first three Wiktionary senses of $x$ and of $w$, in page order (220 characters each), under `Dictionary definitions:` and asked with `Using these definitions and your own knowledge, …`.
+- ⑪g: up to five GenericsKB sentences (about 3.4 million) that contain both $x$ and $w$, highest GenericsKB score first. Word forms (plurals etc.) come from lemminflect; there is no hand-written list of forms. `(no facts found)` when none.
+- ⑩s, ⑪s (controls): the sentences of a different item or claim from the same setting, shuffled with seed 1.
+- ⑫: Gemma is asked `Write up to five short, general, factual sentences that mention both "x" and "w". Write one sentence per line and nothing else.` (up to 100 tokens); up to five lines of at least 3 words are shown in the ⑪g form.
+- ⑪f: for each ⑪g sentence $f$, Gemma is asked `Statement: q / Sentence: f / In the sentence, are "x" and "w" used with the same meanings as in the statement? Answer Yes or No only.`; only Yes sentences are kept.
+
+**NLI on the sentences (⑪n, ⑪nf).**
+
+$$ \hat p_{\text{⑪n}} = \begin{cases} \max_{f \in F_{\text{⑪g}}} e(f \Rightarrow q) & F_{\text{⑪g}} \neq \emptyset \\ \hat p_{\text{①}} & \text{otherwise} \end{cases} $$
+
+⑪nf uses $F_{\text{⑪f}}$ instead of $F_{\text{⑪g}}$.
+
+**Learners (C++, X++).** C++ is gradient boosting (300 iterations, learning rate 0.05) on Gemma-only features: $\ell_{\text{①}}$; the max, mean and standard deviation of $\ell_{\text{①}}$ over the item's other classes; how many of them are higher; the number of Yes answers; the item word's frequency (wordfreq); the class (one-hot). X++ adds $\ell_{\text{⑩}}$, $\ell_{\text{⑪g}}$, $\hat p_{\text{⑪n}}$, whether sentences were found, how many, and the one-step dictionary value.
+
+**Dictionary chains in E10 and E10-1.** Nodes, step confidence $q_n$, arrival $a_n$ and the strongest path $S(n,t)$ follow E8; only the hypothesis sentences change with the setting.
+
+- Steps: type-of steps use `W is a type of g.`; part/location steps use P `W is a part of g.`, G `W is located in g.`, D `W affects the g.`
+- Arrival: P `W is a part of ⟨whole⟩.` (1 when $w$ is the whole itself), G `W is located in ⟨region⟩.`, D the larger of `W is a ⟨class⟩.` and, for body-system classes, `W is a part of the ⟨system⟩.`
+- ③ is one step; ⑥D is the strongest path of up to three steps (senses chosen by Gemma). Items missing from the dictionary keep $\hat p_{\text{①}}$. ⑧D++ is gradient boosting on C++'s features plus ③, ⑥D and related values.
+- E10-1's fixed version ⑨ (P) is $\max(③, \text{fix 1}, \text{fix 2}) \times$ direction confidence, the mean of two answers to `Which statement is true? Answer A or B only. A: … B: …` with the order swapped. For D, a disease name missing from the dictionary is split into its last word and the rest (fix 4). In E10-1, head-noun candidates come from grammar alone and are chosen by the NLI value (no hand-written lists).
+
+**Metric.** Answer $[\hat p>0.5]$, confidence $\max(\hat p, 1-\hat p)$; $\mathrm{AURC} = \frac1N\sum_{k=1}^N r_k$. Items are split into 5 folds (seed 0); one fold tunes and trains, the rest evaluates; 5 times.
+
+**Formulas and code.**
+
+| Formula | Code |
+|---|---|
+| ⑩ and ⑪g prompts, ⑩ definitions | `def_prompt`, `fact_prompt`, `defs_text` in `analysis/e10/e102/e102_core.py` |
+| $F_{\text{⑪g}}$ (finding sentences) | `forms`, `term_hits` in `e102_core.py` (top 5 by score among sentence ids shared by both words; the search cell of `build_notebook_E10-2.py`) |
+| ⑫ and ⑪f prompts | `self_prompt`, `parse_lines`, `sense_prompt` in `analysis/e10/e103/e103_core.py` |
+| $\hat p_m$, ⑪n, C++, X++ | `methods` in `analysis/e10/e102/e102_analyze.py` (E10-3's `e103/e103_analyze.py` reuses it) |
+| controls ⑩s, ⑪s | `analysis/e10/e102/build_notebook_E10-2.py` (the cell that builds `defS`, `genS`) |
+| E10 chains (③, ⑥D, ⑧D++) | `step_hyp`, `arrive_hyps` in `analysis/e10/e10_core.py`; `chain_scores`, `run` in `e10_analyze.py` |
+| E10-1's ⑨ | `methods` in `analysis/e10/e101/e101_analyze.py`; prompts `dir_prompt`, `split_name` in `e101_core.py` |
+| AURC and decision rule | `aurc` in `analysis/e10/e10_analyze.py`, `judge` in `e101/e101_analyze.py` |
+
+**Borrowed and our own.**
+
+| Part | Borrowed idea (source) | Our own choices |
+|---|---|---|
+| Putting text before the question | retrieval-augmented generation (Lewis et al. 2020) | the prompt; at most 5 sentences |
+| A resource of general sentences | GenericsKB (Bhakthavatsalam et al. 2020); part-whole pairs in hasPart KB (2021) | choosing sentences with both words, by score |
+| Letting the model write its own context (⑫) | GenRead (Yu et al. 2023); Liu et al. 2022; Abdallah et al. 2025 | the request; up to 5 sentences |
+| NLI on the sentences (⑪n) | as in E6 (NLI to check answers, ConCoRD 2022) | max over sentences; ① when none |
+| Splitting by rare words | Mallen et al. 2023 | the cut (wordfreq 3.5) fixed in advance |
+| Dictionary chains (E10, E10-1) | as in E8 | per-setting hypothesis sentences; fixes 1 to 4 |
+| Two-way direction question (fix 3) | direction errors (Proietti & Lenci 2025); asking to choose (Zhang et al. 2025) | averaging two swapped orders |
+| Controls (⑩s, ⑪s) | – | swapping in another item's or claim's text |
+| AURC | Geifman et al. 2019 | – |
+| Decision rule | – | a difference of at least 20% of the opponent's value in 4 of 5 splits (as E9-3, fixed in advance) |
+
+E10's methods have no network, so the check is that rerunning all four analyses from the published files reproduces the saved outputs ([Rerunning the analysis](#rerunning-the-analysis)).
+
 ## Layout
 
 - `colab/`: Google Colab notebooks (T4 GPU). They ask Gemma the questions and save the answers. The E2-2 and E2-3 notebooks also run the analysis and draw the figures.
@@ -531,7 +685,7 @@ Setup shared by all four steps:
 - `colab/E6_dictionary_gemma.ipynb`: E6 (fetches Wiktionary, asks Gemma, runs NLI; L4 GPU). `data/E6_answers_gemma-2-2b-it.json`: its output without the Wiktionary texts (CC BY-SA; the notebook refetches them)
 - `colab/E7_chain_definitions.ipynb`: E7 (reads the Wiktionary dump, follows head nouns, runs NLI; L4 GPU, about 40 minutes). `data/E7_chains_nli.json`: its output (head nouns and NLI scores; definition texts removed). Code in `analysis/e6/` (`e7_core.py`, `build_notebook_E7.py`, `e7_analyze.py`)
 - `colab/E8_sense_choice.ipynb`: E8 (reads the dump with sense labels, picks senses with embeddings and with Gemma, runs NLI; L4 GPU, about 1.5 hours). `data/E8_chains_nli.json`: its output (sense labels, head nouns, sense choices, chains and NLI scores; definition texts removed). Code and the 300 new items in `analysis/e8/`
-- `analysis/e9/`: E9 code. `e9.py` (E9 with a simulated checker; `real` for E9-1/E9-2 with the dictionary check), `e93.py` (E9-3), `e9*_analyze.py` (summaries and the decision rules), `e91_checker.py`/`e91_from_small.py` (turn the Colab output into checker scores), notebook builders, and `labels/E9-3_sample_labeled_claude.json` (600 claims labeled by Claude by common sense, not by a person)
+- `analysis/e9/`: E9 code. `e9.py` (E9 with a simulated checker; `real` for E9-1/E9-2 with the dictionary check), `e93.py` (E9-3), `e9*_analyze.py` (summaries and the decision rules), `e91_checker.py`/`e91_from_small.py` (turn the Colab output into checker scores), `check_formulas_e9.py` (checks the network code against the formulas), notebook builders, and `labels/E9-3_sample_labeled_claude.json` (600 claims labeled by Claude by common sense, not by a person)
 - `colab/E9-1_dictionary_check.ipynb`: runs E8's dictionary check (Gemma chooses senses) on every E4-2 claim (L4 GPU). `colab/E9-1b_small_output.ipynb` shrinks its output. `data/E9-1_checker_scores.json`: the resulting dictionary yes/no for each claim
 - `analysis/nolist/`: the recheck without hand-written word lists (`e8n_core.py` without the lists, `e8n_analyze.py`/`e8n_analyze_gb.py` for E7/E8, notebook builders). `colab/E8n_nolist_recheck.ipynb` (E7/E8, L4 GPU, about 1 hour) and `colab/E9n_nolist_recheck.ipynb` (E9 checker, L4 GPU). `data/E8n_chains_nli.json` (definition texts removed) and `data/E9n_checker_scores.json`. Results in `results/nolist/`
 - `analysis/e10/`: E10 code (`e10_data.py` builds the questions, `e10_core.py` is the Colab core, `e10_analyze.py`, notebook builder). `e101/`, `e102/`, `e103/`: E10-1, E10-2 and E10-3 (data builder, Colab cores, notebook builders, `*_analyze.py`, `scan.py` for the hand-written-list scan, `gemini/` with the prompts given to Gemini and its labels; `e103/k_items.json` and `cs_K_claude.json` for the "is a type of" part). Notebooks: `colab/E10_dictionary_other_questions.ipynb`, `colab/E10-1_fixes_without_lists.ipynb`, `colab/E10-2_show_definitions_and_generics.ipynb`, `colab/E10-3_self_text_isa_sense_filter.ipynb` (L4 GPU, 1 to 2 hours each; resumable). `data/E10/`: the items with answers and the notebooks' outputs (Gemma's logits, sense choices, NLI scores and the GenericsKB sentences shown, CC BY 4.0; dictionary definition texts removed, CC BY-SA). `results/E10/`: common-sense labels and analysis outputs
