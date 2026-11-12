@@ -1,0 +1,604 @@
+You are checking English statements of the form "Place X is located in [region]". The regions are the United Nations geographic sub-regions (for example "Northern Europe" includes Denmark, Finland, the Baltic states, the UK and Ireland; "Eastern Europe" includes Poland, Czechia, Hungary, Ukraine, Belarus, Bulgaria, Romania, Moldova, Slovakia). Judge whether the place is in that region.
+Answer 1 = true, 0 = false, 2 = could go either way / depends on meaning / you do not know the place.
+Do not explain. Reply with only a CSV with the header "no,label" and one row per statement, for all 600 statements, in the same order.
+
+1	Bjelovar is located in Micronesia.
+2	Belle Vale is located in South America.
+3	Begoro is located in Western Africa.
+4	Ataq is located in Southern Africa.
+5	Karankasso is located in Northern Africa.
+6	Balbriggan is located in Northern Europe.
+7	Orsha is located in Eastern Asia.
+8	Novogrudok is located in Western Asia.
+9	Brigittenau is located in Eastern Africa.
+10	Gokwe is located in Eastern Africa.
+11	Basse-Terre is located in Caribbean.
+12	Borj Cedria is located in Western Europe.
+13	Orsha is located in Central Asia.
+14	Delgado is located in Northern America.
+15	Kongsberg is located in Northern Europe.
+16	Ciudad Guayana is located in South America.
+17	Bad Kreuznach is located in Caribbean.
+18	Kelo is located in Northern America.
+19	Nagykanizsa is located in Caribbean.
+20	Salima is located in Polynesia.
+21	Hacienda La Calera is located in Western Africa.
+22	Haiphong is located in Southern Asia.
+23	Carteret is located in Caribbean.
+24	Nguigmi is located in South America.
+25	Kayar is located in Eastern Africa.
+26	Grarem is located in Western Asia.
+27	Slonim is located in Western Asia.
+28	Kibara is located in Eastern Africa.
+29	Ait Ourir is located in Central America.
+30	Lobos is located in South-Eastern Asia.
+31	Velika Gorica is located in Eastern Europe.
+32	Dupnitsa is located in Central America.
+33	Letterkenny is located in Northern America.
+34	Ipoti is located in Middle Africa.
+35	Berat is located in Eastern Europe.
+36	Port Loko is located in Western Africa.
+37	Bad Kreuznach is located in South America.
+38	Angra dos Reis is located in Southern Africa.
+39	Pala is located in South-Eastern Asia.
+40	Luwingu is located in Central Asia.
+41	Puqi is located in Eastern Asia.
+42	Berbera is located in Northern Africa.
+43	Khulm is located in Central Asia.
+44	Nalerigu is located in South America.
+45	Chinandega is located in South America.
+46	Mwene is located in Eastern Africa.
+47	Iryango is located in Melanesia.
+48	Quipungo is located in Micronesia.
+49	Hwaseong-si is located in Southern Asia.
+50	Namanyere is located in Caribbean.
+51	Liang is located in South-Eastern Asia.
+52	Tash-Kumyr is located in Western Africa.
+53	Rustaq is located in Western Asia.
+54	Kampung Tanjung Karang is located in Caribbean.
+55	Toukountouna is located in Eastern Asia.
+56	Vechelde is located in Northern Europe.
+57	Mbuguni is located in Southern Africa.
+58	Djidiouia is located in Western Africa.
+59	Toukountouna is located in Micronesia.
+60	Mocha is located in South America.
+61	Trbovlje is located in Central America.
+62	Agadez is located in Northern Africa.
+63	Sremska Mitrovica is located in Southern Europe.
+64	Balykchy is located in Western Asia.
+65	Brigittenau is located in Western Africa.
+66	Croix-des-Bouquets is located in Polynesia.
+67	Rajin is located in Southern Asia.
+68	Najaf is located in Caribbean.
+69	Mytilene is located in Western Africa.
+70	Santa Tecla is located in Central America.
+71	Pran Buri is located in Western Europe.
+72	Carlet is located in Southern Europe.
+73	Fier is located in South-Eastern Asia.
+74	Namanyere is located in Western Africa.
+75	Whampoa is located in Eastern Asia.
+76	Tanda is located in South-Eastern Asia.
+77	Doboj is located in Caribbean.
+78	Didy is located in South-Eastern Asia.
+79	Didy is located in Melanesia.
+80	Aweil is located in Southern Europe.
+81	Jericho is located in Northern Europe.
+82	Seria is located in Southern Asia.
+83	Letterkenny is located in Western Africa.
+84	Puqi is located in Western Africa.
+85	Stara Zagora is located in South America.
+86	Changuinola is located in Central America.
+87	Wettingen is located in Southern Europe.
+88	Kade is located in Western Europe.
+89	Jacmel is located in Northern Africa.
+90	Fier is located in Western Asia.
+91	Kouri is located in Middle Africa.
+92	Picsi is located in Northern Africa.
+93	Angol is located in Western Africa.
+94	Mid Levels is located in Polynesia.
+95	Chiengi is located in Micronesia.
+96	Raahe is located in Western Europe.
+97	Jericho is located in Northern America.
+98	Hwaseong-si is located in Central Asia.
+99	Salcedo is located in Central America.
+100	Watermael-Boitsfort is located in Western Asia.
+101	Chunghwa is located in Southern Europe.
+102	Dhabad is located in Australia and New Zealand.
+103	Bicester is located in Western Europe.
+104	Kranj is located in Eastern Europe.
+105	Tetovo is located in Melanesia.
+106	Brak is located in Caribbean.
+107	Renca is located in Southern Europe.
+108	Lumphat is located in Melanesia.
+109	Troyes is located in Western Europe.
+110	Itogon is located in Southern Europe.
+111	East Helsinki is located in Middle Africa.
+112	Nysa is located in Eastern Europe.
+113	Calimete is located in Western Africa.
+114	Bocaranga is located in Melanesia.
+115	Razzakov is located in Central Asia.
+116	N'zeto is located in Caribbean.
+117	Yverdon-les-Bains is located in Western Europe.
+118	Ibarra is located in South America.
+119	Bideford is located in South America.
+120	Thaba-Tseka is located in Eastern Africa.
+121	Charef is located in Northern Africa.
+122	Dandenong North is located in Western Africa.
+123	Madinah is located in Western Asia.
+124	Kitob is located in Central Asia.
+125	Clarence-Rockland is located in Central Asia.
+126	Tembedgha is located in Caribbean.
+127	Bang Bon Nuea is located in Micronesia.
+128	Bukavu is located in South-Eastern Asia.
+129	Clarence-Rockland is located in Northern Europe.
+130	Baja is located in Northern America.
+131	Hell-Ville is located in Western Asia.
+132	Makak is located in Polynesia.
+133	Kampong Cham is located in Southern Asia.
+134	Gura Humorului is located in Southern Europe.
+135	Mateare is located in Micronesia.
+136	Petit-Bourg is located in Australia and New Zealand.
+137	Berbera is located in Northern America.
+138	Old City is located in Northern America.
+139	Centurion is located in Micronesia.
+140	Jaffa is located in Western Asia.
+141	Matagalpa is located in Caribbean.
+142	Daugavpils is located in Eastern Europe.
+143	Opava is located in Eastern Europe.
+144	Pala is located in Central Asia.
+145	Kangkar is located in Southern Asia.
+146	La Chorrera is located in Southern Europe.
+147	Haiphong is located in South-Eastern Asia.
+148	Jacmel is located in Caribbean.
+149	Villa Francisca is located in Southern Europe.
+150	Greystones is located in Eastern Europe.
+151	Mohale's Hoek is located in Southern Asia.
+152	N'zeto is located in Southern Africa.
+153	Kouri is located in Polynesia.
+154	Chegutu is located in South-Eastern Asia.
+155	Tallang-dong is located in Eastern Asia.
+156	Barceloneta is located in Southern Europe.
+157	Sankt Gallen is located in Middle Africa.
+158	Kayar is located in Western Asia.
+159	Yepocapa is located in Eastern Africa.
+160	Kogon Shahri is located in Southern Asia.
+161	La Serena is located in Central America.
+162	Jaffna is located in Middle Africa.
+163	East Helsinki is located in Northern Europe.
+164	Kyimyindine is located in Polynesia.
+165	Kampong Cham is located in Middle Africa.
+166	Harrismith is located in Southern Africa.
+167	Salima is located in Eastern Africa.
+168	Mwene is located in Polynesia.
+169	Lomas de Zamora is located in Southern Asia.
+170	Bassar is located in Eastern Africa.
+171	Michalovce is located in Eastern Europe.
+172	Chegutu is located in Australia and New Zealand.
+173	Adebaye is located in Central America.
+174	Ambalangoda is located in Australia and New Zealand.
+175	Kranj is located in Western Africa.
+176	Al Mizhar First is located in Australia and New Zealand.
+177	Ventspils is located in Eastern Europe.
+178	La Sierpe is located in Eastern Africa.
+179	Nalayh is located in Western Europe.
+180	La Sierpe is located in Polynesia.
+181	Fossano is located in Northern Africa.
+182	Korsimoro is located in South-Eastern Asia.
+183	Namanyere is located in Central Asia.
+184	Kolda is located in Northern Africa.
+185	Maputsoe is located in Northern America.
+186	Iryango is located in Eastern Africa.
+187	Bideford is located in Northern Europe.
+188	Kryukiv is located in Eastern Europe.
+189	Anaime is located in Eastern Asia.
+190	Yverdon-les-Bains is located in Northern Europe.
+191	Ghazieh is located in Western Asia.
+192	Angol is located in South America.
+193	Tammenga is located in Eastern Asia.
+194	Hedensted is located in South America.
+195	Haiphong is located in Northern America.
+196	Hulu Langat is located in Eastern Asia.
+197	Kayanza is located in Eastern Africa.
+198	Ait Ourir is located in South-Eastern Asia.
+199	Ceerigaabo is located in Western Asia.
+200	Makubetsu is located in Polynesia.
+201	Ghazieh is located in Eastern Africa.
+202	Alotenango is located in Southern Africa.
+203	Arima is located in Northern America.
+204	Ocho Rios is located in Southern Asia.
+205	Banja Luka is located in South-Eastern Asia.
+206	Mombasa is located in Middle Africa.
+207	Mandiana is located in Southern Asia.
+208	Eldoret is located in Northern Europe.
+209	Ambalangoda is located in Melanesia.
+210	Chiengi is located in Melanesia.
+211	Chinandega is located in Southern Africa.
+212	Randwick is located in Northern Africa.
+213	Eiguliai is located in Eastern Europe.
+214	Sekong is located in South-Eastern Asia.
+215	Karukh is located in Melanesia.
+216	Lumphat is located in Micronesia.
+217	Torodi is located in Southern Africa.
+218	Mouyondzi is located in Central America.
+219	Kpozoun is located in Western Africa.
+220	Juigalpa is located in Melanesia.
+221	Rumonge is located in Southern Africa.
+222	Randwick is located in Melanesia.
+223	Tochigi is located in Western Europe.
+224	Oostkamp is located in Western Europe.
+225	Mbuguni is located in Melanesia.
+226	Anaka is located in Polynesia.
+227	Pililla is located in Eastern Asia.
+228	Yverdon-les-Bains is located in Western Africa.
+229	Bardejov is located in Eastern Europe.
+230	Afif is located in Western Asia.
+231	Salima is located in Southern Africa.
+232	Mohale's Hoek is located in Southern Africa.
+233	Port Loko is located in Melanesia.
+234	Lenbe is located in Eastern Europe.
+235	Ambato is located in South America.
+236	Willowridge-Martingrove-Richview is located in Northern America.
+237	Jounieh is located in Western Asia.
+238	Telok Blangah is located in South America.
+239	Pakxan is located in Central Asia.
+240	Macuelizo is located in Polynesia.
+241	Bassila is located in South America.
+242	Dekoa is located in Western Africa.
+243	Mayahi is located in Western Asia.
+244	Chilibre is located in Southern Europe.
+245	Ondangwa is located in Australia and New Zealand.
+246	Koudougou is located in Caribbean.
+247	Bermejo is located in Western Asia.
+248	Sillanwali is located in Southern Asia.
+249	Malakal is located in Eastern Africa.
+250	Hawthorn is located in Australia and New Zealand.
+251	Karori is located in Southern Europe.
+252	Namanyere is located in Northern Europe.
+253	Pililla is located in Micronesia.
+254	Libres is located in Southern Europe.
+255	Rustaq is located in Middle Africa.
+256	Lenbe is located in Southern Asia.
+257	Lobos is located in South America.
+258	Kampung Tanjung Karang is located in South-Eastern Asia.
+259	Doba is located in Southern Europe.
+260	Pakxan is located in Western Asia.
+261	Lwakyomba is located in Eastern Africa.
+262	Quesada is located in Eastern Europe.
+263	Tsetserleg is located in Eastern Asia.
+264	Irbid is located in Eastern Africa.
+265	Troyes is located in Northern Europe.
+266	Yoshioka is located in Central Asia.
+267	Oyem is located in Middle Africa.
+268	Liwonde is located in Micronesia.
+269	Bjelovar is located in Eastern Europe.
+270	Watermael-Boitsfort is located in Western Europe.
+271	Fossano is located in Western Africa.
+272	Mocha is located in Southern Asia.
+273	Quesada is located in South America.
+274	Suan Luang is located in Central America.
+275	Aguadilla is located in Caribbean.
+276	Kayanza is located in Eastern Asia.
+277	Ocho Rios is located in South-Eastern Asia.
+278	Le Pontet is located in Southern Asia.
+279	Point Fortin is located in Caribbean.
+280	Phu Quoc is located in South-Eastern Asia.
+281	Ubari is located in Central Asia.
+282	Puqi is located in South America.
+283	Dupnitsa is located in Eastern Europe.
+284	Picsi is located in Middle Africa.
+285	Mouyondzi is located in Western Africa.
+286	Vila Nova de Gaia is located in Eastern Asia.
+287	Owando is located in Southern Africa.
+288	Pursat is located in Southern Asia.
+289	Iryango is located in Southern Asia.
+290	Balbriggan is located in Southern Africa.
+291	Reino de Bandim is located in South America.
+292	Zelino is located in Southern Africa.
+293	Chiredzi is located in Southern Africa.
+294	Mocha is located in Micronesia.
+295	Michalovce is located in Caribbean.
+296	Brigittenau is located in Northern America.
+297	Makak is located in Eastern Europe.
+298	Goderich is located in Southern Africa.
+299	Viljandi is located in South America.
+300	La Victoria is located in South America.
+301	Jacmel is located in Eastern Europe.
+302	Matagalpa is located in South-Eastern Asia.
+303	Carora is located in Caribbean.
+304	Suan Luang is located in South-Eastern Asia.
+305	Letterkenny is located in Northern Europe.
+306	Fray Bentos is located in Polynesia.
+307	Nguigmi is located in Western Africa.
+308	Hebron is located in Western Asia.
+309	Bangkok Yai is located in South-Eastern Asia.
+310	Shiqiaozi is located in Caribbean.
+311	Opava is located in Western Asia.
+312	Aleg is located in Eastern Asia.
+313	Kouri is located in Central America.
+314	Kayanza is located in Southern Africa.
+315	Kribi is located in Southern Africa.
+316	Umutara is located in Polynesia.
+317	Goodlands is located in Southern Africa.
+318	Mouyondzi is located in South-Eastern Asia.
+319	Lugoj is located in Southern Africa.
+320	Pontinha is located in Melanesia.
+321	Valmiera is located in Northern Europe.
+322	La Azulita is located in Western Africa.
+323	Menzel Bourguiba is located in Australia and New Zealand.
+324	Glostrup is located in Northern Europe.
+325	Samho-rodongjagu is located in South America.
+326	Sitten is located in Southern Europe.
+327	Vechelde is located in Middle Africa.
+328	Comrat is located in Northern Africa.
+329	Srimangal is located in South-Eastern Asia.
+330	Stara Zagora is located in Southern Europe.
+331	Le Gosier is located in Caribbean.
+332	Toukountouna is located in Polynesia.
+333	Rivas-Vaciamadrid is located in Southern Europe.
+334	Caleta Olivia is located in Western Africa.
+335	Berbera is located in Western Asia.
+336	Lumphat is located in Central Asia.
+337	Eldoret is located in Central Asia.
+338	Caleta Olivia is located in South America.
+339	Butaleja is located in Eastern Africa.
+340	Homs is located in South America.
+341	Batangafo is located in Eastern Africa.
+342	Bath is located in Northern America.
+343	Bassar is located in Southern Asia.
+344	Balkanabat is located in Southern Europe.
+345	Tallang-dong is located in South-Eastern Asia.
+346	Xam Nua is located in Polynesia.
+347	Gubadag is located in Eastern Asia.
+348	Carmelo is located in Micronesia.
+349	Mbuguni is located in Northern America.
+350	Sekondi-Takoradi is located in Middle Africa.
+351	Irbid is located in Western Africa.
+352	Tetovo is located in Northern Africa.
+353	Courtenay is located in Australia and New Zealand.
+354	Korostyshiv is located in Eastern Europe.
+355	Gokwe is located in Southern Africa.
+356	Bakhmach is located in Northern Europe.
+357	Hedensted is located in Northern Europe.
+358	Tembedgha is located in Northern America.
+359	Orodara is located in Southern Asia.
+360	Hwaseong-si is located in Australia and New Zealand.
+361	Kibara is located in Caribbean.
+362	Kuopio is located in Northern Europe.
+363	Tash-Kumyr is located in Central Asia.
+364	Karukh is located in South-Eastern Asia.
+365	Sungkai is located in South-Eastern Asia.
+366	Kelo is located in South America.
+367	Harappa is located in Western Asia.
+368	Kpozoun is located in Middle Africa.
+369	Swakopmund is located in Northern America.
+370	Chipiona is located in Western Europe.
+371	Half Way Tree is located in Eastern Africa.
+372	San Rafael Oriente is located in Central America.
+373	Pontinha is located in Southern Europe.
+374	Elbasan is located in Southern Europe.
+375	La Azulita is located in Southern Europe.
+376	Jendouba is located in Northern Africa.
+377	Harstad is located in Northern Africa.
+378	Randwick is located in Northern Europe.
+379	Kouri is located in Southern Europe.
+380	Nova Soure is located in Southern Asia.
+381	Khulm is located in Polynesia.
+382	Thaba-Tseka is located in Southern Africa.
+383	Michalovce is located in Middle Africa.
+384	San Ignacio de Velasco is located in Central Asia.
+385	Half Way Tree is located in Caribbean.
+386	Trnava is located in Polynesia.
+387	Zuwarah is located in Western Asia.
+388	Gwanda is located in Eastern Asia.
+389	Palavakkam is located in Southern Europe.
+390	Centurion is located in Southern Africa.
+391	Forest is located in Northern America.
+392	Rainville is located in Northern America.
+393	Tukums is located in Eastern Europe.
+394	Villa Hayes is located in Southern Europe.
+395	Macuelizo is located in Eastern Asia.
+396	Chinandega is located in Northern America.
+397	Harstad is located in Southern Africa.
+398	Luquembo is located in Eastern Africa.
+399	Bjelovar is located in Southern Asia.
+400	Drochia is located in Eastern Asia.
+401	Kade is located in Eastern Asia.
+402	Riberalta is located in Southern Africa.
+403	Burgersdorp is located in Southern Africa.
+404	May Pen is located in Central America.
+405	Chegutu is located in Eastern Africa.
+406	Mboro is located in Northern Africa.
+407	Pala is located in Western Asia.
+408	Renca is located in South America.
+409	Sedrata is located in Western Asia.
+410	Eiguliai is located in Eastern Asia.
+411	Yoshioka is located in Eastern Asia.
+412	Mocha is located in Western Asia.
+413	Senja is located in South-Eastern Asia.
+414	Caleta Olivia is located in Micronesia.
+415	Thamaga is located in Polynesia.
+416	Iryango is located in Western Africa.
+417	Nesttun is located in Western Europe.
+418	Ubari is located in Western Europe.
+419	Pililla is located in Southern Asia.
+420	Oyem is located in Eastern Africa.
+421	Makubetsu is located in South America.
+422	Dailekh is located in Southern Asia.
+423	Lucan is located in Australia and New Zealand.
+424	Barceloneta is located in Southern Asia.
+425	Qiuji is located in Eastern Asia.
+426	Tanda is located in Southern Asia.
+427	Thamaga is located in Southern Africa.
+428	Itogon is located in Eastern Asia.
+429	Kandana is located in Melanesia.
+430	Peqin is located in Caribbean.
+431	Tulu Bolo is located in Southern Asia.
+432	Ma'rib is located in Northern Africa.
+433	Novogrudok is located in Eastern Europe.
+434	Hashtgerd is located in Eastern Asia.
+435	Ataq is located in Central Asia.
+436	Konin is located in Western Europe.
+437	Doba is located in Western Asia.
+438	Michalovce is located in Northern Europe.
+439	Pontbuiten is located in Western Europe.
+440	Matagalpa is located in Western Europe.
+441	Boshkengash is located in Central Asia.
+442	Mboro is located in Southern Africa.
+443	Mufulira is located in Northern America.
+444	Iradan is located in Eastern Asia.
+445	Zacapa is located in Western Asia.
+446	Sur is located in Polynesia.
+447	Ubari is located in Northern America.
+448	Goodlands is located in Central Asia.
+449	Al Hasaheisa is located in Southern Africa.
+450	Salima is located in South-Eastern Asia.
+451	Tinghir is located in Northern Africa.
+452	Kermanshah is located in Western Europe.
+453	Oyem is located in Northern Europe.
+454	Namacurra is located in South America.
+455	La Azulita is located in Central America.
+456	Khovd is located in Central Asia.
+457	Ganta is located in Micronesia.
+458	Kangkar is located in Melanesia.
+459	Sirjan is located in Western Asia.
+460	Amboanjo is located in Eastern Africa.
+461	Slonim is located in South America.
+462	Santa Tecla is located in Western Europe.
+463	Taloqan is located in Central Asia.
+464	La Serena is located in Eastern Asia.
+465	Fossano is located in Polynesia.
+466	Loma Plata is located in South America.
+467	Ondangwa is located in Caribbean.
+468	Karankasso is located in Western Africa.
+469	Nieuwegein is located in South-Eastern Asia.
+470	Nalerigu is located in Central America.
+471	Abancay is located in Eastern Asia.
+472	Agadez is located in Western Europe.
+473	Lomas de Zamora is located in South America.
+474	Debaltseve is located in Eastern Europe.
+475	Riberalta is located in Melanesia.
+476	Anaime is located in Southern Europe.
+477	Garissa is located in Eastern Africa.
+478	El Geneina Fort is located in Southern Africa.
+479	Cyangugu is located in Eastern Africa.
+480	Maribor is located in Western Europe.
+481	Sirte is located in Northern Africa.
+482	Lwakyomba is located in Micronesia.
+483	Courtenay is located in Northern Europe.
+484	Raahe is located in South-Eastern Asia.
+485	Kotagiri is located in Northern Europe.
+486	Comrat is located in Eastern Europe.
+487	Berbera is located in Micronesia.
+488	Ramat Gan is located in Southern Europe.
+489	Banja Luka is located in Southern Africa.
+490	Tartu is located in Eastern Europe.
+491	Lenbe is located in South America.
+492	Namacurra is located in Melanesia.
+493	Malacky is located in Eastern Europe.
+494	Lenbe is located in Eastern Africa.
+495	Gherla is located in Polynesia.
+496	Hoogeveen is located in Northern Europe.
+497	Neapoli is located in Eastern Europe.
+498	Oyam is located in Eastern Africa.
+499	Ciudad Guayana is located in Eastern Africa.
+500	Chunghwa is located in Eastern Asia.
+501	Korsimoro is located in Polynesia.
+502	Irbid is located in Central Asia.
+503	Al Hasaheisa is located in Southern Asia.
+504	Kermanshah is located in Western Asia.
+505	Najaf is located in Western Asia.
+506	Djugu is located in Western Africa.
+507	Ngozi is located in Eastern Africa.
+508	Maribor is located in Southern Europe.
+509	Dandenong North is located in Northern America.
+510	Naujininkai is located in Western Europe.
+511	Karukh is located in Southern Africa.
+512	Randers is located in Western Europe.
+513	San Ignacio de Velasco is located in South America.
+514	La Lima is located in Central America.
+515	Amboanjo is located in Polynesia.
+516	Carteret is located in Northern America.
+517	Volos is located in Southern Europe.
+518	Delgado is located in Eastern Africa.
+519	Krapkowice is located in Northern Europe.
+520	Monkey Bay is located in Melanesia.
+521	Wo Che is located in South-Eastern Asia.
+522	Mwene is located in Northern Europe.
+523	Mui Ne is located in South-Eastern Asia.
+524	Chunghwa is located in Western Africa.
+525	Pran Buri is located in Northern America.
+526	Rundu is located in Western Asia.
+527	Bugojno is located in Middle Africa.
+528	Fier is located in Eastern Europe.
+529	Agege is located in Western Europe.
+530	Kribi is located in Micronesia.
+531	Korsimoro is located in Southern Asia.
+532	Eslam Qaleh is located in Western Asia.
+533	Sur is located in Western Asia.
+534	Kristiine is located in Northern Europe.
+535	Surif City is located in Southern Asia.
+536	Harappa is located in Northern Africa.
+537	Berbera is located in Eastern Africa.
+538	Tsetserleg is located in Central Asia.
+539	Caleta Olivia is located in Eastern Africa.
+540	Srimangal is located in Western Asia.
+541	Eiguliai is located in South-Eastern Asia.
+542	Bang Bon Nuea is located in South-Eastern Asia.
+543	Baja is located in Eastern Europe.
+544	Vrbas is located in Eastern Europe.
+545	Treinta y Tres is located in South-Eastern Asia.
+546	Telok Blangah is located in Polynesia.
+547	Matagalpa is located in Northern America.
+548	Mbuguni is located in Eastern Africa.
+549	Greystones is located in Northern Europe.
+550	Istiqlol is located in Western Asia.
+551	Norak is located in Western Asia.
+552	Janeng is located in Melanesia.
+553	Slonim is located in Eastern Europe.
+554	Korsimoro is located in Melanesia.
+555	Kangkar is located in South America.
+556	Kenema is located in Northern America.
+557	Maruobara is located in Eastern Africa.
+558	Nova Soure is located in South America.
+559	Kristiine is located in Micronesia.
+560	Khulm is located in South-Eastern Asia.
+561	El Progreso is located in Central America.
+562	Santa Marta is located in Caribbean.
+563	Istiqlol is located in Southern Asia.
+564	Al Qaryatayn is located in Western Asia.
+565	Madhyapur Thimi is located in Southern Asia.
+566	Tammenga is located in Northern Europe.
+567	Glostrup is located in Eastern Europe.
+568	Ambalangoda is located in Southern Asia.
+569	Santa Marta is located in Southern Africa.
+570	Surif City is located in Western Asia.
+571	Kimilili is located in Eastern Africa.
+572	Siraha is located in Australia and New Zealand.
+573	Gubadag is located in Central Asia.
+574	Arrentela is located in Southern Asia.
+575	Codru is located in Eastern Europe.
+576	Bad Kreuznach is located in Middle Africa.
+577	Coronel Oviedo is located in South America.
+578	Petit-Bourg is located in Caribbean.
+579	Berat is located in Middle Africa.
+580	Salima is located in Northern Africa.
+581	Eiguliai is located in Western Asia.
+582	Tukums is located in Northern Europe.
+583	Karori is located in South-Eastern Asia.
+584	Tiquisate is located in Northern Europe.
+585	Berbera is located in Eastern Europe.
+586	Stara Zagora is located in Eastern Europe.
+587	Kangkar is located in South-Eastern Asia.
+588	Lipkovo is located in Eastern Africa.
+589	Katiola is located in Southern Asia.
+590	Ambalangoda is located in Western Europe.
+591	Sremska Mitrovica is located in Northern America.
+592	Kenema is located in Melanesia.
+593	Campos Belos is located in South America.
+594	Kabare is located in Eastern Africa.
+595	Sur is located in Micronesia.
+596	Quillabamba is located in South America.
+597	San Rafael Oriente is located in Caribbean.
+598	Korsimoro is located in Eastern Africa.
+599	Balanbale is located in Polynesia.
+600	Namanyere is located in Southern Africa.
