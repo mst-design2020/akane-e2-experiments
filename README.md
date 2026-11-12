@@ -16,6 +16,7 @@ English | [日本語](README_ja.md)
 - **Correction (2026-11-11): hand-written word lists.** E7, E8 and the real dictionary check used in E9-1 to E9-3 picked each definition's head noun with hand-written word lists (`PERSON_HEADS`, `OF_HEADS`, `META` and two fixes: for example "one who …" → person, "a kind of X" → X; audit: `plans/audit_hand_lists.md`). We reran them without any such list: head-noun candidates come from grammar only (the head of the first noun chunk and the object of its "of"), and the NLI score of the step chooses among them (`analysis/nolist/`). The rules for "holds" were fixed before the runs. **Held:** Gemma's sense choice cuts wrong-sense chains (72% → 10%), the chain + learner beats Gemma's confidence on the 300 new items (0.046 vs 0.118), chaining breaks fewer right answers (40% → 31%), and every E9 conclusion about the network. **Not held:** the chain scores (0.047 → 0.063 without training, 0.037 → 0.056 learned), the clear gain over E6's features with gradient boosting (only 3 of 5 splits by 20%), the dictionary's hit rate on true claims (88% → 83%), and E9-3's "checking every claim with the dictionary is best" (now best in 1 of 12 conditions; gradient boosting is better). Details: [Recheck without hand-written word lists](#recheck-without-hand-written-word-lists-2026-11-11).
 - **Even when only a few answers can be checked, the network does not beat a strong learner (E9).** Checking 2–10% of the claims with the dictionary and spreading the checks along the model's rules with BP first looked better than logistic regression (E9-1), but against gradient boosting, and on all 77,326 claims with no candidate selection, the network lost in every condition (E9-3). Its remaining role is small: finishing a learner's answers with the rules gave 5–20% lower AURC, below the threshold set in advance.
 - **Other questions (E10): showing sentences that state the answer helps; where they come from matters less.** On part-whole questions ("A wheel is a part of a car."), showing Gemma general sentences from GenericsKB that mention both words lowers AURC from 0.068 to 0.039, and sentences Gemma writes itself do about as well (0.044, a tie). Dictionary definitions do not help, and on "X is a type of Y" no resource beat Gemma's confidence. E10's first gains on part-whole and geography used hand-chosen items and hand-written lists and did not repeat on items chosen by rule (E10-1). Details: [E10](#e10-do-outside-checks-carry-over-to-other-questions-part-whole-disease-geography).
+- **Combining every signal in one learner helps; deeper chains and box embeddings alone do not (E11).** Giving Gemma's answers, the dictionary chain, the outside sentences and a box embedding to one gradient-boosting learner beats the learner on Gemma's answers alone on "is a type of" (AURC 0.017 → 0.004), part-whole (0.062 → 0.039) and disease (0.025 → 0.016), and ties on geography; on part-whole and disease it ties under Gemini's labels. The pieces are not new, and the box adds nothing outside "is a type of". Details: [E11](#e11-fixing-e8s-weak-points-and-combining-every-signal-2026-11-12).
 
 ![Checking a small model's "X is a type of Y" answers from outside (E6–E8)](figures/E8/overview_en.png)
 
@@ -128,6 +129,9 @@ The network that fully trusts the rules (E2-2 to E2-5, and the "trusting BP" in 
 | E10-1 | Fixes set in advance, no hand-written lists, new items chosen by rule | Fixes make things worse; E10's gains do not repeat (one step vs confidence, part-whole 0.076 vs 0.068: tie) | `plans/E10-1_fixes_without_lists.md` |
 | E10-2 | Show definitions or GenericsKB sentences in the prompt | Part-whole: sentences 0.068 → 0.039 (5/5); definitions 0.088 (worse); only common words gain | `plans/E10-2_show_resources.md` |
 | E10-3 | Gemma's own sentences; the same resources on "is a type of"; keep only sense-matched sentences | Own sentences 0.044 vs GenericsKB 0.039: tie. "Is a type of": every resource ties with confidence. Sense filter: tie | `plans/E10-3_self_text_and_isa.md` |
+| E11-1 | Gemma picks a noun's usual sense (2,000 WordNet nouns); E8's first step narrowed to that sense | Usual sense: Gemma 59% vs similarity 47%. Narrowing the first step: 0.056 vs 0.063, a tie; worse on the 300 new items | `plans/E11-1_usual_sense.md` |
+| E11-2 | Chains up to 6 steps; a box embedding learned from the chains; everything in one learner | Deeper: tie. Box alone or filling: worse. Combined learner 0.053 → 0.038 (5/5), new items 0.042 → 0.031 | `plans/E11-2_deep_chain_and_box.md` |
+| E11-3 | The combined learner on "is a type of", part-whole, disease and geography | Beats Gemma-only boosting on K (0.017 → 0.004), P (0.062 → 0.039) and D (0.025 → 0.016); G tie. Gemini's labels: P, D, G ties. Box adds nothing | `plans/E11-3_combine_on_other_questions.md` |
 
 ## E3: Can evidence let the model say "I don't know"?
 
@@ -663,6 +667,106 @@ $$ \hat p_{\text{⑪n}} = \begin{cases} \max_{f \in F_{\text{⑪g}}} e(f \Righta
 
 E10's methods have no network, so the check is that rerunning all four analyses from the published files reproduces the saved outputs ([Rerunning the analysis](#rerunning-the-analysis)).
 
+## E11: Fixing E8's weak points, and combining every signal (2026-11-12)
+
+E11-1 to E11-3 go back to E8's dictionary chain (without hand-written lists, E8n method D) and ask three things: can Gemma pick the usual sense of the item noun itself, does following the chain deeper or learning a box embedding from it fill the true answers it misses, and does giving every signal we have to one tree learner help, also on other question types. Plans (fixed before the results; changes logged at the end of each): `plans/E11-1_usual_sense.md`, `plans/E11-2_deep_chain_and_box.md`, `plans/E11-3_combine_on_other_questions.md`; prior work: `plans/E11_prior_work.md`, `plans/E11_box_dictionary_prior_work.md`, `plans/E11-2_prior_work.md`, `plans/E11-3_prior_work.md`; the count of E8n's errors that started E11: `plans/E11_count_E8_errors.md`; a plan put on hold (choosing two words' senses together): `plans/E11_choose_senses_together_on_hold.md` (all Japanese). Code: `analysis/e11/`; notebooks: `colab/E11-*.ipynb`; outputs: `data/E11/`; analysis outputs: `results/E11/`.
+
+Setup shared by the three steps:
+
+- Model Gemma-2 2B, NLI DeBERTa-v3-large and the Wiktionary dump, as in E8n. No hand-written word lists; the method code was scanned for string lists before each notebook was handed over (`analysis/e10/e101/scan.py`; only key and method names were found).
+- E11-1 and E11-2 use E8's 700 items (common-sense labels by Claude, Gemini as the second scoring) and the 300 new items (Claude only), with E8n's rules: a difference needs at least 20% of the opponent's AURC and a 95% bootstrap interval (resampling nouns, 1,000 times) that excludes 0; for learners, 20% in at least 4 of 5 runs. The 300 new items are used once, with the method chosen on the 700.
+- E11-3 uses the E10 setup (items split by entity, 20% train / 80% evaluate, 5 splits, 20% in at least 4 of 5).
+
+| Step | Question | Main result |
+|---|---|---|
+| E11-1 ① | Without context, can Gemma pick a noun's most common sense? 2,000 WordNet nouns with 2–8 senses; the answer is the sense most often tagged in SemCor; candidates shown in a shuffled order and its reverse | Gemma 59.2%, embedding similarity 47.1%, random 33.2% (Gemma better, interval excludes 0). But WordNet's first sense *is* the SemCor-frequency order, so with that order available Gemma is not needed |
+| E11-1 ② | E8n starts the chain from every sense of the item noun. Start from Wiktionary's first sense only (R1), Gemma's chosen sense (R2), or weight each sense's path by Gemma's probability (R3) | 700 items: R3 0.056 vs all senses (R0) 0.063, 12%, **a tie**; wrong "yes" 54 → 24, but "no" to true claims 52 → 72. 300 new items: R3 0.074, worse than R0 0.056. Gradient boosting with R3: 1 of 5 runs by 20%, a tie. **Narrowing the first step does not help** |
+| E11-2 | (1) Follow the chain up to 6 steps instead of 3. (2) A box embedding (Li et al. 2019) trained only on E8n's own steps and arrivals, no WordNet, no labels; fill the chain's "no" with the box (R0+BX). (3) Give everything to one gradient-boosting learner: E6's features, R0, the deep chain, the box and E11-1's R3 | (1) 4 steps 0.063 vs 3 steps 0.063: **a tie**. Of 32 new "yes" answers at 4–6 steps, 28 go through the same path (person → individual → human → hominid → anthropoid = animal), and 4 use a wrong sense. (2) Box alone 0.117; filling 0.091: **worse** under Claude's labels, ties under Gemini's. (3) **The combined learner wins**: 700 items 0.053 → 0.038 (5/5 runs by 20%); 300 new items 0.042 → 0.031, interval [0.0006, 0.022], just above 0 |
+| E11-3 | Does the combined learner repeat on other questions? K "is a type of" (E10-3's 23,046 claims, E9-3's 600 labels) and P part-whole (E10-1 items) were fixed as main; D disease and G geography as side questions. Gemma-only gradient boosting (C++, as in E10) vs everything (ALL): C++ features + dictionary chain + E10-1 fixes + the outside texts of E10-2/E10-3 + a box trained as in E11-2. "Repeated" was fixed as: ALL beats C++ on both K and P | **Repeated.** Common-sense labels (Claude): K 0.017 → 0.004 (5/5), P 0.062 → 0.039 (5/5), D 0.025 → 0.016 (4/5), G 0.034 → 0.032 (tie). Against the best earlier method: K beats C++ + chain (0.006, 4/5); P ties X++ (GenericsKB sentences, 0.037); D beats ⑧N++ (0.023, 4/5). Under Gemini's labels P, D and G are ties. Under the original labels (WordNet, ontology, M49) ALL wins on all four |
+
+**What E11 shows.**
+
+- Gemma can tell the usual sense of a noun better than embedding similarity, but narrowing E8's first step to that sense breaks more true answers than it saves.
+- Deeper chains add almost one path only; the box embedding, learned from the chain's own steps, is poor on its own.
+- Giving every signal to one tree learner was the only E11 result that passed its rule, and it repeated on "is a type of" and part-whole (and on disease). The pieces are not new; what is shown is how much the combination adds, for one small model.
+- Checked after the results, not part of the claims (drop one group at a time): in E11-2 the box helped the learner most (dropping it 0.037 → 0.046), although it is poor alone. In E11-3 the box added nothing (ALL without the box: P 0.038, D 0.016, G 0.032); P's gain comes from the outside texts (without them 0.052); in K both the chain (without it 0.009) and the outside texts (0.006) help.
+- What we cannot claim: that the combination helps on geography, that it helps under Gemini's labels on part-whole or disease, or that the box is needed.
+
+**Hand-set parts.** Prompts, the numbers of senses (at most 8), the depth (6), the box settings (32 dimensions, 200 epochs, learning rate 0.01, 5 negatives, 5 seeds) and the learner settings were fixed in the plans before the runs. The E9n checker scores used for K's chain features (`data/E9n_checker_scores.json`) do not store chain shapes, so K has no box.
+
+### E11: how the computation works
+
+This section writes out what the code computes, using the symbols of [E6–E8: how the computation works](#e6e8-how-the-computation-works) ($X$, $C$, $\ell$, $n=(w,j)$, $q_n$, $a_n$, $S(n,t)$) and of [E10: how the computation works](#e10-how-the-computation-works).
+
+**Symbols added in E11.**
+
+| Symbol | Meaning |
+|---|---|
+| $d_1,\dots,d_K$ | the senses of a noun (WordNet glosses in E11-1 ①; Wiktionary senses of $X$ in ② and E11-2), at most 8 |
+| $\pi_k$ | Gemma's probability that sense $k$ is the most common one (softmax over the number tokens, averaged over two orders) |
+| $f_k$ | the strongest-path value of E8n method D started only from sense $k$ of $X$: $f_k = S((X,k), T)$ |
+| $T$ | the number of chain steps (3 in E8n; 4 to 6 in E11-2) |
+| $B_v$ | the box of node $v$: corners $\mathbf{z}_v$ and $\mathbf{Z}_v = \mathbf{z}_v + \mathrm{softplus}(\boldsymbol{\delta}_v)$ in $\mathbb{R}^{32}$ |
+| $\mathcal{V}$, $\mathcal{E}$ | box nodes (chain nodes and class words), and training pairs with target weights |
+| $\mathbf{x}$ | the feature vector given to the gradient-boosting learner |
+
+**Usual sense (E11-1 ①).** Gemma sees `Here are the meanings of the English word "w": 1. … 2. … Which meaning is the most common one in everyday English? Answer with the number only.` With $\lambda_m$ the logit of number token $m$ at the first answer position and $o$ the shown order,
+
+$$ \pi_k = \tfrac12 \sum_{o \in \{o_1,\, \mathrm{rev}(o_1)\}} \mathrm{softmax}_m(\lambda_m)\big|_{m = o^{-1}(k)}, \qquad \hat k = \arg\max_k \pi_k $$
+
+where $o_1$ is a random order (seed 0). The answer is right when $\hat k$ is the sense with the most SemCor tags. The nouns are chosen by rule: lower-case alphabetic, at least 3 letters, 2–8 senses, the top SemCor count at least 3 and strictly larger than the second (2,606 nouns; 2,000 drawn with seed 0). S1 picks $\arg\max_k \cos(v(w), v(d_k))$ with all-mpnet-base-v2.
+
+**First step of the chain (E11-1 ②).** With $f_k$ above,
+
+$$ R0 = \max_k f_k, \quad R1 = f_1, \quad R2 = f_{\hat k}, \quad R3 = \sum_k \pi_k\, f_k $$
+
+R0 equals E8n's ⑥D (checked in `check_R0_equals_E8n_6D`).
+
+**Deeper chains (E11-2).** The same recursion as E8, with more steps: $D_T = \max_k S((X,k), T)$ for $T = 4, 5, 6$. At each new step, a node whose genus candidates had not been read gets them from the dump; the genus is the candidate with the largest NLI step value (as in E8n); Gemma chooses the genus's sense; arrival $a_n$ is computed for the item's category. $T$ is chosen on the 700 items ($T=4$). $D_3 = R0$ exactly (checked).
+
+**Box embedding (E11-2, E11-3).** Following Li et al. (2019, softbox), with $\mathrm{vol}(\mathbf{l},\mathbf{h}) = \prod_i \mathrm{softplus}(h_i - l_i)$,
+
+$$ P(u \sqsubseteq v) = \frac{\mathrm{vol}\big(\max(\mathbf{z}_u,\mathbf{z}_v),\ \min(\mathbf{Z}_u,\mathbf{Z}_v)\big)}{\mathrm{vol}(\mathbf{z}_u,\mathbf{Z}_u)} $$
+
+Training pairs come only from the chains: each step $n \to (g(n), j^*)$ with target $q_n$, and each arrival $n \to C$ with target $a_n$ (E11-3: every node × every class or whole, with the arrival NLI value). The loss is
+
+$$ \mathcal{L} = -\frac{1}{|\mathcal{E}|} \sum_{(u,v,t) \in \mathcal{E}} \Big[ t \log P(u \sqsubseteq v) + (1-t) \log\big(1 - P(u \sqsubseteq v)\big) \Big] \;-\; \frac{1}{|\mathcal{E}|\,5} \sum_{(u,\cdot,\cdot)} \sum_{r=1}^{5} \log\big(1 - P(u \sqsubseteq v_r)\big) $$
+
+with $v_r$ random nodes (5 negatives), Adam, learning rate 0.01, 200 epochs. Items are split into 5 folds by noun; for each fold, the arrivals that would give away the answer are removed before training: in E11-2 every sense of a test noun to its own category, in E11-3 every arrival from a node whose word is a test entity. The box never sees the pair it is scored on. The score is $BX = \max_k P((X,k) \sqsubseteq C)$, averaged over 5 seeds. Filling: $R0{+}BX = R0$ if $R0 > 0.5$, otherwise $BX$.
+
+**Combined learner.** Gradient boosting (scikit-learn `HistGradientBoostingClassifier`).
+
+- E11-2 (E8n's setting: 200 iterations, learning rate 0.05, at least 20 samples per leaf; 5 runs × 5 folds by noun, seeds 600–604): the opponent uses $\mathbf{x}_0 = (\ell,\ \text{E6's NLI features},\ \text{has definitions},\ R0,\ \text{steps of } R0)$, where E6's NLI features are $\max_k e_k$, $\max_k c_k$, $\mathrm{mean}_k e_k$, $\mathrm{mean}_k c_k$, $1-\prod_k(1-e_k)$ and $K$; ALL uses $\mathbf{x} = (\mathbf{x}_0,\ D_4,\ \text{steps of } D_4,\ BX,\ R3)$. For the 300 new items both are trained once on all 700.
+- E11-3 (E10's setting: 300 iterations, learning rate 0.05). Feature groups: **FG** (C++) $\ell_{\text{①}}$; its max, mean and standard deviation over the entity's other classes; how many are higher; the number of Yes answers; word frequency; the class one-hot (P, D, G also Gemma's logit for the question with the two words swapped, from E10-1). **chain**: E10-1's no-list chain values (one step, strongest path, path length, any arrival, has a chain); for K, the E9n checker scores. **fix**: E10-1's fixes (P: fixes 1, 2 and the direction value; D: fix 4; G: none). **res**: $\ell_{\text{⑩}}$, $\ell_{\text{⑪g}}$, $\hat p_{\text{⑪n}}$, whether sentences were found and how many (P and K also $\ell_{\text{⑫}}$). **box**: $BX$ (P, D, G). ALL is all groups; C++ is FG only.
+
+**Metric.** AURC as in E6–E8. The common-sense labels with "debatable" removed.
+
+**Formulas and code.**
+
+| Formula | Code |
+|---|---|
+| E11-1 prompt, two orders and $\pi_k$ | `prompt_usual`, `jobs_usual`, `merge` in `analysis/e11/e111_core.py`; noun choice `semcor_items` |
+| $f_k$, R0–R3 | `per_root`, `scores` in `analysis/e11/e111_analyze.py` (calls `Item.maxprod` of `analysis/nolist/e8n_analyze.py`) |
+| Deeper chains $D_T$ | `follow`, `extend`, `chains` in `analysis/e11/e112_core.py`; `deep_scores` in `e112_analyze.py` |
+| Box $P(u \sqsubseteq v)$, loss | `Box.logp`, `train`, `score` in `analysis/e11/e112_box.py` |
+| Box pairs and folds | `box_scores` in `e112_analyze.py` (E11-2); `main` in `e113_box.py` (E11-3) |
+| Filling, combined learner (E11-2) | `fill`, `gb_cv`, `run` in `e112_analyze.py`; after-the-fact drop-one in `e112_ablate.py` |
+| Feature groups, ALL vs C++ (E11-3) | `ent_feats`, `evaluate`, `pdg`, `part_K` in `analysis/e11/e113_analyze.py` |
+| Decision rules | `judge` in `e111_analyze.py` (bootstrap); `judge` in `analysis/e10/e101/e101_analyze.py` (4 of 5) |
+
+**Borrowed and our own.**
+
+| Part | Borrowed idea (source) | Our own choices |
+|---|---|---|
+| Asking an LLM to pick a sense from numbered definitions | Meconi et al. 2025; ConSeC 2021 | asking for the most common sense without context; two orders averaged |
+| SemCor frequency as the usual sense | Miller et al. 1993; the most-frequent-sense baseline in WSD | the rule for choosing nouns |
+| Weighting paths by sense probability (R3) | – | $\sum_k \pi_k f_k$ |
+| Following definitions deeper | Chodorow et al. 1985; Rigau et al. 1998 | up to 6 steps, genus chosen by NLI, sense by Gemma |
+| Box embeddings | Vilnis et al. 2018; Li et al. 2019 (softbox); Boratko et al. 2021 | training only on the chain's own pairs, with NLI values as targets; removing each fold's own arrivals |
+| Combining many signals in one learner | stacking (Wolpert 1992); learned uncertainty combiners (Chauhan et al. 2026) | the feature groups; the rule "K and P both" fixed before the run |
+| AURC | Geifman et al. 2019 | – |
+
+E11 has no network, so the check is that rerunning the analyses from the published files reproduces the saved outputs ([Rerunning the analysis](#rerunning-the-analysis)).
 ## Layout
 
 - `colab/`: Google Colab notebooks (T4 GPU). They ask Gemma the questions and save the answers. The E2-2 and E2-3 notebooks also run the analysis and draw the figures.
@@ -689,6 +793,7 @@ E10's methods have no network, so the check is that rerunning all four analyses 
 - `colab/E9-1_dictionary_check.ipynb`: runs E8's dictionary check (Gemma chooses senses) on every E4-2 claim (L4 GPU). `colab/E9-1b_small_output.ipynb` shrinks its output. `data/E9-1_checker_scores.json`: the resulting dictionary yes/no for each claim
 - `analysis/nolist/`: the recheck without hand-written word lists (`e8n_core.py` without the lists, `e8n_analyze.py`/`e8n_analyze_gb.py` for E7/E8, notebook builders). `colab/E8n_nolist_recheck.ipynb` (E7/E8, L4 GPU, about 1 hour) and `colab/E9n_nolist_recheck.ipynb` (E9 checker, L4 GPU). `data/E8n_chains_nli.json` (definition texts removed) and `data/E9n_checker_scores.json`. Results in `results/nolist/`
 - `analysis/e10/`: E10 code (`e10_data.py` builds the questions, `e10_core.py` is the Colab core, `e10_analyze.py`, notebook builder). `e101/`, `e102/`, `e103/`: E10-1, E10-2 and E10-3 (data builder, Colab cores, notebook builders, `*_analyze.py`, `scan.py` for the hand-written-list scan, `gemini/` with the prompts given to Gemini and its labels; `e103/k_items.json` and `cs_K_claude.json` for the "is a type of" part). Notebooks: `colab/E10_dictionary_other_questions.ipynb`, `colab/E10-1_fixes_without_lists.ipynb`, `colab/E10-2_show_definitions_and_generics.ipynb`, `colab/E10-3_self_text_isa_sense_filter.ipynb` (L4 GPU, 1 to 2 hours each; resumable). `data/E10/`: the items with answers and the notebooks' outputs (Gemma's logits, sense choices, NLI scores and the GenericsKB sentences shown, CC BY 4.0; dictionary definition texts removed, CC BY-SA). `results/E10/`: common-sense labels and analysis outputs
+- `analysis/e11/`: E11 code (`e111_core.py`, `e112_core.py` Colab cores; `e112_box.py` and `e113_box.py` box embeddings; `e111_analyze.py`, `e112_analyze.py`, `e112_ablate.py`, `e113_analyze.py`; notebook builders). Notebooks: `colab/E11-1_usual_sense.ipynb`, `colab/E11-2_deep_chain_box.ipynb` (L4 GPU, 20 to 35 minutes and 10 to 20 minutes), `colab/E11-3_box_gpu.ipynb` (trains the E11-3 boxes on a GPU). `data/E11/`: the notebooks' outputs (Gemma's sense probabilities with WordNet glosses; the deeper chains with Wiktionary definition texts removed, CC BY-SA; the E11-3 box values). `results/E11/`: analysis outputs (the drift sample keeps only the words on each path)
 - `results/`: result JSON files and figures (`results/E3/E3_main_analysis.json` for E3, `results/E4/` for E4, `results/E5/` for E5, `results/E6/` for E6, `results/E7/` for E7, `results/E8/` for E8, `results/E9/` for E9)
 - `plans/`: plans and results for each experiment (Japanese)
 
@@ -752,11 +857,15 @@ Recheck without hand-written lists: in `analysis/nolist/`, `E8_DIR=../e8 python 
 
 E10: in `analysis/e10/`, `python e10_analyze.py ../../data/E10/E10/e10_items.json ../../data/E10/E10 out.json ../../results/E10/E10/cs.json`. E10-1: `python e101/e101_analyze.py run ../../data/E10/E10-1/e101_items.json ../../data/E10/E10-1 out.json ../../results/E10/E10-1/cs_labels_claude.json` (`cs_labels_gemini.json` or `cs_labels_agree.json` for the other labels). E10-2: `python e102/e102_analyze.py ../../data/E10/E10-1/e101_items.json ../../data/E10/E10-1 ../../data/E10/E10/e10_items.json ../../data/E10/E10/E10_gemma.json.gz ../../data/E10/E10-2 out.json ../../results/E10/E10-1/cs_labels_claude.json ../../results/E10/E10/cs.json`. E10-3: `python e103/e103_analyze.py ../../data/E10/E10-1/e101_items.json ../../data/E10/E10-1 ../../data/E10/E10-2 ../../data/E10/E10-3 ../../data/E4-2_answers_gemma-2-2b-it.json out.json ../../results/E10/E10-1/cs_labels_claude.json`. All CPU only (E10 needs `wordfreq`).
 
+E11: in `analysis/`, E11-1: `python e11/e111_analyze.py ../data/E8n_chains_nli.json ../data/E11/E11-1_results.json out.json` (under a minute). E11-2: unzip `data/E11/E11-2_results.json.gz`, then `python e11/e112_analyze.py ../data/E8n_chains_nli.json ../data/E11/E11-1_results.json E11-2_results.json out.json drift.json` (needs `torch`; the box takes about 30 minutes on a CPU) and `python e11/e112_ablate.py` with the same three inputs and `out.json`. E11-3: `python e11/e113_analyze.py out.json` (about a minute; reads `data/E10/`, `results/E10/E10-1/`, `data/E4-2_answers_gemma-2-2b-it.json`, `data/E9n_checker_scores.json` and `data/E11/box_*.json`). The E11-3 boxes are retrained with `python e11/e113_box.py ../data/E10/E10-1 ../data/E10/E10-1/e101_items.json P box_P.json` (CPU, several hours for P; the notebook runs them on a GPU). Rerunning E11-1 and E11-3 from the files in this repository reproduces `results/E11/` exactly. E11-2 does not reproduce bit for bit, because the box training on a CPU differs slightly between runs (thread count); a rerun from these files (`results/E11/E11-2_analysis_rerun.json`) gave every decision unchanged (deep chain tie, box worse, combined learner 5/5 on the 700 items and better on the 300 new items: 0.042 → 0.027, interval [0.0045, 0.027], against 0.031 in the saved run). The after-the-fact drop-one check (`e112_ablate.py`) was not rerun.
+
 ## Related work and what is different
 
 The closest work we know is BTProp (Hou et al., NAACL 2025, https://arxiv.org/abs/2406.06950). It builds links between statements with a separate model (NLI) and uses belief propagation to detect an LLM's hallucinations. Here, the model also writes the exclusion rules itself, and the network also estimates whether each rule is true (E2-6). In E2-10 we ran BTProp on its own released trees: with the links as given, BTProp is better on WikiBio and tied on FactCheckGPT, so we do not claim our method is better. When a share of the links is deliberately flipped (E2-11), BTProp, which treats the links as certain, degrades sharply, while the rule-doubting BP does not. With links labeled by real models (E2-12), however, BTProp barely degrades: natural labeling errors seem far less harmful than random flips. The model's own confidence (P(True)), which the BTProp paper treats as a strong baseline, is included here as a baseline. Other related work: Crum et al. 2024 (asking LLMs for disjointness axioms), Xu et al. 2026 (neighbor-consistency belief), Jiang, Lowd and Dou 2012 (cleaning an extracted knowledge base with Markov logic), Maieutic prompting (Jung et al. 2022), BeliefBank (Kassner et al. 2021). The E2-9 pattern (doubting the rules costs a little when the rules are right and helps when many are wrong) matches the analysis in Snorkel (Ratner et al., VLDB 2017, https://arxiv.org/abs/1711.10160): learning how accurate each source is helps most when source accuracies vary. Here we see the same tendency when a model checks its own answers.
 
 For E10: showing retrieved text to answer a question is retrieval-augmented generation; having the model write its own context first is GenRead (Yu et al., ICLR 2023) and generated knowledge prompting (Liu et al., ACL 2022). Abdallah et al. (2025, https://arxiv.org/abs/2502.20245) found that Gemma-2 2B reading its own generated context beats BM25 retrieval in open-domain QA; on part-whole questions, E10-3 finds its own sentences tie with retrieved general sentences. GenericsKB (Bhakthavatsalam et al. 2020) collects general sentences, and hasPart KB (Bhakthavatsalam et al. 2021) part-whole pairs drawn from them. Mallen et al. (ACL 2023) found that retrieval helps most for rare entities; here it helped only common words, because sentences for rare words were rarely found. Proietti and Lenci (2025) show that LLMs confuse the direction of part-whole relations.
+
+For E11: asking an LLM to pick a word's sense from numbered definitions was measured on standard tests by Meconi et al. (EMNLP 2025, https://arxiv.org/abs/2509.13905; Gemma-2 2B 72.4, most frequent sense 65.2); E11-1 asks for the usual sense without a sentence. Disambiguating the genus word of dictionary definitions to build a taxonomy goes back to Rigau et al. (1998, without an LLM). Box embeddings of hierarchies: Vilnis et al. (2018), Li et al. (2019), Boratko et al. (2021); Ganea et al. (2018) found that embeddings trained only on direct edges recover distant pairs poorly, which matches the weak box alone in E11-2. Learning to combine several confidence signals with a few labels beats the best single signal in 30 of 32 settings in Chauhan et al. (2026, https://arxiv.org/abs/2608.24492); UniFact (Su et al., https://arxiv.org/abs/2512.02772) combines internal signals with outside checks, and its gain shrinks for another model. E11-3 finds the same kind of gain for one small model on three of four question types.
 
 ## Limitations
 
@@ -775,6 +884,7 @@ For E10: showing retrieved text to answer a question is retrieval-augmented gene
 - E6: 700 items (81 confident errors), one domain, one small model; labels from two AI models. Definitions of the noun only, not of the category. Wiktionary changes over time; the senses used were fetched on 2026-11-10.
 - E5: same data, domain and model as E4-2. Rule errors are defined by WordNet, so fixing errors moves the rules toward WordNet. The common-sense labels cover 700 items and come from two AI models (Claude, Gemini), not from people. E5-2 reuses the E2-8 data; medical judgments by AI models are not expert judgments, and Gemini's pair labels were uniform, so the pair judgments rest on Claude alone.
 - E10: one small model, one prompt per method, English. The common-sense labels are by Claude (with Gemini from E10-1 on; for "is a type of" in E10-3, Claude only), not by people. Half of each 600-item sample was taken where Gemma or the dictionary said yes. Under Gemini's labels the GenericsKB gain falls below the threshold. GenericsKB sentences were found for only 22% of the part-whole claims (40% of true ones), and almost none for diseases and cities.
+- E11: one small model, English. The labels are the same AI labels as E8 and E10 (Claude, with Gemini as the second), not people's. The E11-2 win on the 300 new items is just above the rule (interval lower end 0.0006). The combined learners need labeled items to train on (20% in E11-3, 4 folds of 700 in E11-2). In E11-3 the K errors are already small (0.017), and the part-whole gain comes mostly from E10-2's sentences. The drift count of the deeper chains is one annotator (Claude). Checks that drop one group at a time were done after the results.
 - The p-bits are simulated in software. These experiments say nothing about speed or energy.
 
 ## How this was made
