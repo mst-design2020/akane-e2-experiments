@@ -1,0 +1,403 @@
+[
+ {
+  "no": 0,
+  "id": 204,
+  "stmt": "bookkeeper -> living thing",
+  "path": [
+   "bookkeeper",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 1,
+  "id": 652,
+  "stmt": "cowgirl -> animal",
+  "path": [
+   "cowgirl",
+   "woman",
+   "human",
+   "hominid",
+   "anthropoid"
+  ]
+ },
+ {
+  "no": 2,
+  "id": 21,
+  "stmt": "suitor -> living thing",
+  "path": [
+   "suitor",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 3,
+  "id": 1280,
+  "stmt": "socialite -> living thing",
+  "path": [
+   "socialite",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 4,
+  "id": 1032,
+  "stmt": "villager -> living thing",
+  "path": [
+   "villager",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 5,
+  "id": 1107,
+  "stmt": "sprinter -> tool",
+  "path": [
+   "sprinter",
+   "car",
+   "vehicle",
+   "conveyance",
+   "means",
+   "instrument"
+  ]
+ },
+ {
+  "no": 6,
+  "id": 220,
+  "stmt": "purveyor -> living thing",
+  "path": [
+   "purveyor",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 7,
+  "id": 412,
+  "stmt": "anti -> living thing",
+  "path": [
+   "anti",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 8,
+  "id": 499,
+  "stmt": "ombudsman -> living thing",
+  "path": [
+   "ombudsman",
+   "official",
+   "holder",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 9,
+  "id": 434,
+  "stmt": "contrarian -> animal",
+  "path": [
+   "contrarian",
+   "person",
+   "individual",
+   "human",
+   "hominid",
+   "anthropoid"
+  ]
+ },
+ {
+  "no": 10,
+  "id": 116,
+  "stmt": "drunkard -> living thing",
+  "path": [
+   "drunkard",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 11,
+  "id": 292,
+  "stmt": "juggler -> living thing",
+  "path": [
+   "juggler",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 12,
+  "id": 643,
+  "stmt": "dredge -> animal",
+  "path": [
+   "dredge",
+   "shaker",
+   "person",
+   "individual",
+   "human",
+   "hominid",
+   "anthropoid"
+  ]
+ },
+ {
+  "no": 13,
+  "id": 1067,
+  "stmt": "magistrate -> living thing",
+  "path": [
+   "magistrate",
+   "official",
+   "holder",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 14,
+  "id": 1244,
+  "stmt": "duce -> living thing",
+  "path": [
+   "duce",
+   "leader",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 15,
+  "id": 457,
+  "stmt": "berk -> living thing",
+  "path": [
+   "berk",
+   "fool",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 16,
+  "id": 154,
+  "stmt": "bodybuilder -> animal",
+  "path": [
+   "bodybuilder",
+   "person",
+   "individual",
+   "human",
+   "hominid",
+   "anthropoid"
+  ]
+ },
+ {
+  "no": 17,
+  "id": 1256,
+  "stmt": "prowler -> animal",
+  "path": [
+   "prowler",
+   "person",
+   "individual",
+   "human",
+   "hominid",
+   "anthropoid"
+  ]
+ },
+ {
+  "no": 18,
+  "id": 641,
+  "stmt": "rheumatic -> living thing",
+  "path": [
+   "rheumatic",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 19,
+  "id": 589,
+  "stmt": "groundhog -> man-made object",
+  "path": [
+   "groundhog",
+   "synonym",
+   "term",
+   "unit",
+   "component"
+  ]
+ },
+ {
+  "no": 20,
+  "id": 155,
+  "stmt": "newlywed -> living thing",
+  "path": [
+   "newlywed",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 21,
+  "id": 1101,
+  "stmt": "illiterate -> living thing",
+  "path": [
+   "illiterate",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 22,
+  "id": 1233,
+  "stmt": "overseer -> living thing",
+  "path": [
+   "overseer",
+   "critic",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 23,
+  "id": 212,
+  "stmt": "athlete -> living thing",
+  "path": [
+   "athlete",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 24,
+  "id": 1183,
+  "stmt": "panelist -> living thing",
+  "path": [
+   "panelist",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 25,
+  "id": 1135,
+  "stmt": "prefect -> living thing",
+  "path": [
+   "prefect",
+   "official",
+   "holder",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 26,
+  "id": 318,
+  "stmt": "wanton -> living thing",
+  "path": [
+   "wanton",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 27,
+  "id": 479,
+  "stmt": "hillbilly -> living thing",
+  "path": [
+   "hillbilly",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 28,
+  "id": 35,
+  "stmt": "lobbyist -> living thing",
+  "path": [
+   "lobbyist",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 29,
+  "id": 1205,
+  "stmt": "colonel -> living thing",
+  "path": [
+   "colonel",
+   "leader",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 30,
+  "id": 5,
+  "stmt": "grocer -> living thing",
+  "path": [
+   "grocer",
+   "person",
+   "individual",
+   "human",
+   "hominid"
+  ]
+ },
+ {
+  "no": 31,
+  "id": 215,
+  "stmt": "undercarriage -> man-made object",
+  "path": [
+   "undercarriage",
+   "gear",
+   "combination",
+   "elements",
+   "tenet",
+   "opinion"
+  ]
+ }
+]
