@@ -118,7 +118,8 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 - 記事8（E4後半・E5、正解表の見直しと、AIが作ったルールの外れの損） https://note.com/mst_design2020/n/n222a0ecf386d （Zenn、E4とE5 https://zenn.dev/mst_design2020/articles/545424bd00f46f ）
 - 記事9（E6〜E8、辞書の説明文と語の意味選び） https://note.com/mst_design2020/n/nde0fb5abc0aa （Zenn https://zenn.dev/mst_design2020/articles/5d3feab2c2fff8 ）
 - 記事10（E9〜E10、網の出番と、ほかの問いでの外からの確かめ） https://note.com/mst_design2020/n/ndb76756d6b3e （Zenn、E9 https://zenn.dev/mst_design2020/articles/804eba1639b569 ・E10 https://zenn.dev/mst_design2020/articles/50e211cbd882af ）
-- 記事11（E11、手がかりを全部1つの学習にまとめる） https://note.com/mst_design2020/n/n8ca2afb0ac35
+- 記事11（E11、手がかりを全部1つの学習にまとめる） https://note.com/mst_design2020/n/n8ca2afb0ac35 （Zenn、E11〜E14 https://zenn.dev/mst_design2020/articles/8ac3114ae8cf58 ）
+- 記事12（E12〜E14、意味選びを3万4千問で、正解なしのまとめ方、行き止まりの穴埋め） https://note.com/mst_design2020/n/nd15d73345722 （Zenn は記事11と同じ）
 
 ## E2：AIが作ったルールで、確率伝搬を使って確かめる
 
