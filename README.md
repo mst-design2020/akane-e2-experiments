@@ -40,6 +40,8 @@ Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ �
 
 TADORI is the check that survived E2 to E15. The other parts we tried (a network with BP, the p-bit method, deeper chains, outside sentences added to the chain) tied or lost and were dropped. What remained got a name. This section is meant to be read on its own; the detailed numbers stay in each experiment's section.
 
+**Name.** TADORI is an acronym of **T**racing **A**long **D**efinitions, **O**pting for the **R**ight **I**nterpretation: follow the dictionary definitions and choose the right sense of each word on the way. It also reads as the Japanese word たどり (*tadori*, "tracing").
+
 ![TADORI schematic: dictionary (grey), the small model's only job, sense choice (blue), external NLI judge (green)](figures/TADORI/tadori_en.png)
 
 **In one paragraph.** TADORI checks a small model's answer to "Is X a type of C?" with a chain of dictionary definitions. The small model has exactly one job inside the chain: decide which sense of a word is meant in the definition it appears in. An external NLI model scores each step and whether the chain has arrived at C. The small model never judges "Is X a type of C?" itself.
@@ -119,7 +121,7 @@ All formulas and their code locations are in [E6–E8: how the computation works
 
 **Run it.** To run it from saved outputs on a CPU, use `cd analysis/nolist; E8_DIR=../e8 python e8n_analyze.py ../../data/E8n_chains_nli.json out.json`. Method D is TADORI, and it takes about 5 minutes. To run the large sense-choice test, use `cd analysis; python e12/e12_analyze.py ../data/E12/e12_items_all.json.gz ../data/E12/e12_local.json.gz ../data/E12/E12_results.json.gz out.json`, which takes a few seconds. The small model's sense choice itself is in `colab/E8_sense_choice.ipynb` and in `choice_prompt` in `analysis/e8/e8_core.py`. The figure above is drawn by `analysis/tadori/fig_tadori.py`; it is a schematic and shows no numbers.
 
-**Name and citation.** TADORI (たどり, Japanese for "tracing") stands for Tracing Along Definitions, Opting for the Right Interpretation. To cite it, please use this repository's DOI (https://doi.org/10.5281/zenodo.24045799, `CITATION.cff`).
+**Citation.** To cite it, please use this repository's DOI (https://doi.org/10.5281/zenodo.24045799, `CITATION.cff`).
 
 ## AKANE Architecture in short
 
