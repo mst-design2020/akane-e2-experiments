@@ -11,8 +11,10 @@
 - **小さいAIは、判定役としては弱いが、手伝いとしては使える。** Gemma-2 2Bは「XはYの一種か」で自信を持って間違えることが多い。その答えを辞書の説明文とNLIで確かめると、誤りの指標（AURC、小さいほど良い）は0.154から0.070に下がった（E6）。
 - **得意な狭い役目だけをさせる。** 説明文をつなぐ（孫娘→人→哺乳類）と、語を違う意味で読む取り違えで崩れる。Gemmaには「この語はどの意味か」を選ぶことだけをさせると、取り違えは72%から10%に減り、新しい300個でも、鎖＋学習の確かめがGemmaの自信より良かった（0.046対0.118）（E7・E8、手書きの一覧なしで確かめ直した数字）。
 - **手がかりを全部1つの学習にまとめると良くなる。深い鎖や箱の形のベクトルだけでは良くならない（E11）。** Gemmaの答え・辞書の鎖・外の文・箱の形のベクトルを1つの木の学習に渡すと、Gemmaの答えだけの学習より、「一種か」（0.017→0.004）、部分と全体（0.062→0.039）、病気（0.025→0.016）で良くなった。地理は同着で、部分と全体・病気はGeminiの採点では同着。
+- **Gemmaの狭い役目は、たくさんの問題でも保てた（E12）。** 人が意味を付けたWordNetの説明文34,402問で、Gemmaは頭の語の意味を80.9%当てた。WordNetの最初の意味は60.5%、文の近さは67.9%。E12-1の確かめでは、覚えていただけではなかった。
+- **鎖の行き止まりを外の文で埋めても、良くならなかった（E14）。** 一般的な文（GenericsKB）は抜けの多くを埋めるが、直す分より多くの間違いを足した（0.063→0.140）。Wikipediaはきれいだが埋まる数が少なく、同着。残った外れの多くは、鎖の最後の段の「Cの一種か」の判定で落ちている（E15で調べている所）。
 - **部分と全体の問いでは、答えを書いた文を見せると効く（E10）。** GenericsKBの文（0.068→0.039）でも、Gemmaが自分で書いた文（0.044、同着）でも。
-- **網（BP）は主役にならなかった。** ルールも疑うBPは、分類と病気のテストで違反を数えるだけの方法に勝った（E2-6・E2-8）が、正解付きのデータがある所では強い学習に勝てなかった（E3・E4・E9）。p-bit方式とBPの正しさは一度も分かれなかった（E4）。
+- **網（BP）は主役にならなかった。** ルールも疑うBPは、分類と病気のテストで違反を数えるだけの方法に勝った（E2-6・E2-8）が、正解付きのデータがある所では強い学習に勝てなかった（E3・E4・E9）。正解がまったくない時も、5つの手がかりを素直に平均する方が同じか良かった（E13）。p-bit方式とBPの正しさは一度も分かれなかった（E4・E13）。
 
 同着や負けも、各節にそのまま載せています。2026-11-11の2つの訂正で前の数字が変わりました。[訂正](#訂正2026-11-11)にまとめています。
 
@@ -140,6 +142,14 @@ $$
 | E11-1 | 名詞の普通の意味を Gemma が選ぶ（WordNet の2,000語）／E8 の1段目をその意味に絞る | 普通の意味：Gemma 59% 対 近さ 47%。1段目を絞る：0.056 対 0.063 で同着、新しい300問では悪い | `plans/E11-1_usual_sense.md` |
 | E11-2 | 鎖を6段まで／鎖から学んだ箱の形のベクトル／全部を1つの学習に | 深い鎖：同着。箱だけ・埋める：悪い。全部入りの学習 0.053→0.038（5/5）、新しい問題 0.042→0.031 | `plans/E11-2_deep_chain_and_box.md` |
 | E11-3 | 全部入りの学習を「一種か」・部分と全体・病気・地理で | Gemma の答えだけの学習に K（0.017→0.004）・P（0.062→0.039）・D（0.025→0.016）で勝ち、G は同着。Gemini の採点では P・D・G 同着。箱は何も足さない | `plans/E11-3_combine_on_other_questions.md` |
+| E12 | 人が意味を付けた WordNet の説明文34,402問で、Gemma が頭の語の意味を選ぶ | Gemma 80.9% 対 近さ 67.9%・最初の意味 60.5%・Lesk 35.9%（差あり） | `plans/E12_gloss_head_sense.md` |
+| E12-1 | 覚えていただけか。名前を隠す・言い換える・説明文の後半を言わせる | 名前を隠して 80.8%、言い換えて 69.3%（それでも最初の意味 59.3% より上）、覚えている度合いで正しさはほぼ平ら：覚えているだけではない | `plans/E12-1_memorized_or_not.md` |
+| E12-2 | 粗い意味、Gemma の自信で切り替える | 粗く見ると 88.9%、外れの41%は正解と同じまとまり。自信で切り替え：同着。鎖で（新しい300問）0.056 対 0.056：同着 | `plans/E12-2_coarse_senses_and_abstain.md` |
+| E13 | 正解なしで、食い違う5つの手がかりをまとめる（平均・多数決・Dawid–Skene・網） | 平均が一番（K 0.077、P 0.084、どの手がかり1つよりも良い）。網 0.091 は平均と同着：「網の役目は終わり」。Dawid–Skene は P で悪い | `plans/E13_combine_without_labels.md` |
+| E14 | 鎖の行き止まりを GenericsKB と Gemma が書いた文で埋める（判定は NLI） | 正しい「いいえ」52のうち41が埋まるが、間違った「はい」が127増える：0.140 対 0.063 で悪い | `plans/E14_fill_gaps.md` |
+| E14-1 | 同じ、判定を Gemma に | 0.124 対 0.063：悪い | `plans/E14-1_gemma_judge.md` |
+| E14-2 | Wikipedia の最初の1文、1つの道で1回まで | 0.063 対 0.063（300問 0.050 対 0.056）：同着。埋まったのは52のうち12 | `plans/E14-2_wikipedia_first_sentence.md` |
+| E14-3 | Wikipedia の冒頭の段落全部（10文） | 0.067 対 0.063（300問 0.049 対 0.056）：同着。埋まったのは52のうち14 | `plans/E14-3_wikipedia_lead.md` |
 
 ## E3：資料を根拠に「分からない」と言えるか
 
@@ -700,7 +710,7 @@ E11-1〜E11-3 では、E8 の辞書の鎖（手書きの一覧なしの版、E8n
 |---|---|---|
 | E11-1 ① | 文なしで、名詞の一番よく使う意味を Gemma が選べるか。意味が2〜8個の WordNet の名詞2,000語。正解は SemCor で一番多く付いた意味。候補はくじの順とその逆順で見せる | Gemma 59.2%、文の近さ 47.1%、でたらめ 33.2%（Gemma が良い、幅は0をまたがない）。ただし WordNet の最初の意味が SemCor の回数の順なので、その順があれば Gemma は要らない |
 | E11-1 ② | E8n は物の語の全部の意味から鎖を始める。Wiktionary の最初の意味だけ（R1）、Gemma が選んだ意味だけ（R2）、意味ごとの道の値を Gemma の確率で重み付け（R3）から始める | 700問：R3 0.056 対 全部の意味（R0）0.063、差12%で**同着**。間違った「はい」は54→24だが、正しい答えへの「いいえ」は52→72。新しい300問：R3 0.074 で R0 0.056 より悪い。R3 を足した木の学習：20%の差は5回中1回で同着。**1段目を絞っても良くならない** |
-| E11-2 | (1) 鎖を3段でなく6段までたどる。(2) E8n の段と着きだけで学んだ箱の形のベクトル（Li ほか 2019。WordNet も正解も使わない）。鎖の「いいえ」を箱で埋める（R0+BX）。(3) 全部を1つの木の学習に渡す：E6 の特徴、R0、深い鎖、箱、E11-1 の R3 | (1) 4段 0.063 対 3段 0.063：**同着**。4〜6段で新しく「はい」になった32本のうち28本は同じ道（person→individual→human→hominid→anthropoid＝動物）、意味の取り違えは4本。(2) 箱だけ 0.117、埋めると 0.091：Claude の採点では**悪い**、Gemini の採点では同着。(3) **全部入りの学習が勝った**：700問 0.053→0.038（5回中5回で20%以上）、新しい300問 0.042→0.031（幅 [0.0006, 0.022]、0のすぐ上） |
+| E11-2 | (1) 鎖を3段でなく6段までたどる。(2) E8n の段と着きだけで学んだ箱の形のベクトル（Li ほか 2019。WordNet も正解も使わない）。鎖の「いいえ」を箱で埋める（R0+BX）。(3) 全部を1つの木の学習に渡す：E6 の特徴、R0、深い鎖、箱、E11-1 の R3 | (1) 4段 0.063 対 3段 0.063：**同着**。4〜6段で新しく「はい」になった32本のうち28本は同じ道（person→individual→human→hominid→anthropoid＝動物）、意味の取り違えは4本（深くしても効かない理由は E14 で分かった：取りこぼした鎖の多くは、段の上限ではなく行き止まりで止まっている）。(2) 箱だけ 0.117、埋めると 0.091：Claude の採点では**悪い**、Gemini の採点では同着。(3) **全部入りの学習が勝った**：700問 0.053→0.038（5回中5回で20%以上）、新しい300問 0.042→0.031（幅 [0.0006, 0.022]、0のすぐ上） |
 | E11-3 | 全部入りの学習は、ほかの問いでも繰り返せるか。主は K「一種か」（E10-3 の23,046主張、E9-3 の常識600で採点）と P 部分と全体（E10-1 の問題）、副は D 病気と G 地理。Gemma の答えだけの木の学習（C++、E10 と同じ）と、全部入り（ALL：C++ の特徴＋辞書の鎖＋E10-1 の直し＋E10-2・E10-3 の外の文＋E11-2 と同じ作り方の箱）を比べる。「K と P の両方で ALL が C++ に勝つ」を繰り返せた、と先に決めた | **繰り返せた。** 常識の採点（Claude）：K 0.017→0.004（5/5）、P 0.062→0.039（5/5）、D 0.025→0.016（4/5）、G 0.034→0.032（同着）。今までの一番との比べ：K は C++＋鎖（0.006）に勝ち（4/5）、P は X++（GenericsKB の文、0.037）と同着、D は ⑧N++（0.023）に勝ち（4/5）。Gemini の採点では P・D・G とも同着。元の正解（WordNet・病気の分類・M49）の採点では4つとも ALL の勝ち |
 
 **E11 で分かったこと。**
@@ -786,6 +796,276 @@ $v_r$ はでたらめに選んだ点（負の例5つ）。Adam、学習率0.01�
 | AURC | Geifman ほか 2019 | ― |
 
 E11 の方法には網がないので、式の確かめは、公開ファイルから分析を流し直して、保存した結果と一致することで確かめています（[計算をやり直す](#計算をやり直す)）。
+## E12：Gemma の意味選びは、たくさんの問題でも保てるか（2026-11-12）
+
+E8 の芯は、説明文の頭の語（dog → animal）が「どの意味か」を Gemma に選ばせることです。E12 まではこれを37問（Gemma 35/37、最初の意味 24/37）でしか測っていませんでした。E12 では、人が意味を付けた正解で何万問も測ります。E12-1 では Gemma が辞書を覚えていただけではないかを確かめ、E12-2 では外れがどれだけ近い意味か、Gemma の自信が役に立つかを調べます。
+- 計画（結果を見る前に固定、変えた所は各計画の末尾に記録）：`plans/E12_gloss_head_sense.md`、`plans/E12-1_memorized_or_not.md`、`plans/E12-2_coarse_senses_and_abstain.md`
+- 先行研究：`plans/E12_prior_work.md`
+- コード `analysis/e12/`、ノート `colab/E12_gloss_head_sense.ipynb`・`colab/E12-1_memorized_or_not.ipynb`、出力 `data/E12/`、分析の出力 `results/E12/`
+
+やり方：
+
+- データ：Princeton WordNet 3.0 の説明文コーパス（Gloss Corpus。説明文の語に人が意味を付けた物。Princeton の元の置き場は2018年から切れているので、github.com/sgjimenezv/wordnet_3_0_glosstag の写しを使った）。名詞の説明文82,115から、頭の語＝spaCy で最初の名詞のかたまりの頭（E8n と同じ取り方）。
+- 問題：頭の語に人の印が1つだけ付いていて、1語の名詞で、WordNet の意味が2〜8個の物。**頭の語 34,402問**（頭の語の種類 4,035）。副に「〜の」の後ろの語（kind of X の X）7,855問。正解が WordNet の最初の意味である割合は頭の語で60.5%。
+- 方法：S0 でたらめ。S1 WordNet の最初の意味（WordNet はよく使う順に並ぶ。E8 の Wiktionary にはこの強い順はない）。S2 Lesk（説明文と候補の説明文の重なり、重みは全部の名詞の説明文から数えた IDF、飛ばす語の一覧なし）。S3 近さ（all-mpnet-base-v2、E8 の方法C）。**G Gemma-2 2B**（E8 の方法Dと同じ聞き方。WordNet の順で見せると最初の意味が先頭に来て答えが漏れるので、くじの順とその逆順で見せる）。参考T WordNet の木（定義される語の上位にある候補を選ぶ）は答えに近い情報を使うので、比べ相手ではなく目安。
+- 決まり：「差あり」＝5ポイント以上、かつ頭の語ごとに1,000回取り直した95%の幅が0をまたがない（E11-1 と同じ）。
+
+| 段階 | 問い | 主な結果 |
+|---|---|---|
+| E12 | WordNet の説明文 34,402問で、頭の語の意味を当てる正しさ | **Gemma 80.9%**、近さ 67.9%、最初の意味 60.5%、Lesk 35.9%、でたらめ 31.4%（参考 WordNet の木 82.5%）。Gemma − 最初の意味 +20.5ポイント [13.7, 28.2]、Gemma − 近さ +13.0 [10.3, 16.3]：**差あり**。頭の語ごとに平均すると 76.9% 対 51.4%（最初の意味）。正解が最初の意味でない13,602問でも Gemma 75.0%（近さ 65.9%）。「〜の」後ろ：73.9% 対 61.9% |
+| E12-1 | Gemma は WordNet の説明文を覚えていただけか。5,000問で、B 定義される語の名前を隠す、C 名前を隠し、説明文と候補を別のAI（Qwen2.5-1.5B-Instruct）で言い換える、D 説明文の前半を見せて後半を言わせる | A（E12 のまま）81.3%、B 80.8%、C 69.3%、最初の意味 59.3%。C − 最初の意味 +10.0 [3.4, 17.0]。後半をほぼ言えない問題（0.2未満、1,327問）でも A − 最初の意味 +23.8 [15.1, 33.7]。決まりの両方が成り立った：**覚えているだけではない**。覚えている度合いが違っても正しさはほぼ平ら（81.8 / 81.5 / 84.2%） |
+| E12-2 | (1) 外れはどれだけ近い意味か。粗い意味（CSI、Lacerra ほか 2020／WordNet の lexname）で数え直す。(3a) Gemma の自信が高い時だけ Gemma、低ければ最初の意味。(3b) E8n の鎖で、Gemma が迷う段は最初の4つの意味を全部たどる | (1) 粗い正しさ：Gemma 88.9%（CSI）・88.1%（lexname）。Gemma の外れのうち正解と同じまとまりは41%（CSI）で、外れの多くは近い意味の取り違えではない。(3a) 同着（+0.2ポイント）。(3b) 自信が0.9未満の段は全体の6.9%だけ。新しい300問 0.056 対 0.056：**同着** |
+
+**E12 で分かったこと。**
+
+- Gemma-2 2B は、人が意味を付けた34,402問で、説明文の頭の語の意味を約5問に4問当てました。WordNet の最初の意味と文の近さに、はっきり勝っています。E8 の 35/37（95%）は高すぎで、たくさんの問題では約8割です。
+- 名前を隠しても変わらず、説明文をどれだけ言えるか（覚えている度合い）で正しさが変わりませんでした。言い換えると12ポイント落ちますが、言い換えが荒く（頭の語が残ったのは24%だけ）、落ちた分には「覚えていた分」と「言い換えで崩れた分」が混ざっています。
+- Gemma の自信で切り替えても良くならず、E8n の鎖の間違いは意味選びの迷いからは来ていませんでした。
+- 言えないこと：Wiktionary（E8 の辞書）でも同じ正しさになる（WordNet と Wiktionary は意味の分け方が違う）、覚えている分がまったくない。
+
+**手で決めた所。** 意味の数2〜8、WordNet の順の確かめと E12-1 の5,000問（くじ seed 0）、差の基準5ポイント、覚えている度合いの区切り0.2と0.5、D は6語以上の説明文、言わせる長さ60と40、「同じ意味」の NLI 0.5、τ の候補 {0.5, 0.6, 0.7, 0.8, 0.9, 0.95}。語の一覧はなし（問題づくり・手元の方法・Colab の中身を目で点検）。
+
+### E12の計算のしかた
+
+**E12 で足す記号。**
+
+| 記号 | 意味 |
+|---|---|
+| $\eta$、$h$ | WordNet の名詞の説明文と、その頭の語 |
+| $d_1,\dots,d_K$ | $h$ の WordNet の名詞の意味（WordNet の順、$2 \le K \le 8$）。$d_1$ が最初の意味 |
+| $k^\dagger$ | 人が付けた意味（正解） |
+| $s_k$ | 方法が意味 $k$ に付けた値。$T = \{k : s_k = \max_m s_m\}$ は一番の値の意味（同点を含む） |
+| $\pi_k$ | Gemma の意味 $k$ の確率（2通りの順で平均、E11-1 と同じ） |
+| $c(\cdot)$ | 粗いまとまり（CSI のまとまり、または WordNet の lexname） |
+
+**Gemma の選び（G）。** 聞き方は E8 の方法Dと同じ：`Dictionary definition of "w": η … In this definition, which meaning of the word "h" is used? 1. … 2. … Answer with the number only.` 答えの最初の位置での数字 $m$ のロジットを $\lambda_m$、見せた順を $o$ として
+
+$$ \pi_k = \tfrac12 \sum_{o \in \{o_1,\, \mathrm{rev}(o_1)\}} \mathrm{softmax}_m(\lambda_m)\big|_{m = o^{-1}(k)}, \qquad s_k^{\mathrm G} = \pi_k $$
+
+$o_1$ はくじの順（seed 0）。E12-1 の B は同じ聞き方で冒頭を `Dictionary definition of a word:`（名前なし）にした物。C は $\eta$ と各 $d_k$ を Qwen が言い換えた文を見せる。
+
+**ほかの方法。** S1：$s_1 = 1$、ほかは0。S3：$s_k = \cos\big(v(\eta), v(d_k)\big)$（all-mpnet-base-v2）。S2（Lesk）は、$\mathrm{tok}(\cdot)$ を `[a-z][a-z-]*` に合う小文字の語の集まり、$N = 82{,}115$ を名詞の説明文の数、$\mathrm{df}(u)$ を $u$ を含む説明文の数として
+
+$$ s_k^{\mathrm{Lesk}} = \sum_{u \,\in\, \mathrm{tok}(\eta) \cap \mathrm{tok}(d_k)} \mathrm{idf}(u), \qquad \mathrm{idf}(u) = \log \frac{N}{\mathrm{df}(u)} \;\;（\text{見たことのない語は } \log N） $$
+
+**同点のある正しさと、幅。** 1問の当たりは $\mathrm{hit} = [k^\dagger \in T] / |T|$（同点は、その中からでたらめに選んだ扱い）。方法 $a$ と $b$ の差は、頭の語を戻しありで1,000回引き直し、1回ごとに $\sum_{i} (\mathrm{hit}^a_i - \mathrm{hit}^b_i) \big/ (\text{引いた問題の数})$ を出し、2.5〜97.5% を幅にする。
+
+**覚えている度合い（E12-1 の D）。** Gemma に `Complete the WordNet definition of the noun "w". … w: <前半>` と聞き、40トークンまで書かせる。本当の後半の語を $r$、書いた語を $\hat r$ として、度合い $= \mathrm{LCS}(r, \hat r)/|r|$（同じ順で出た語の割合。6語以上の説明文だけ）。
+
+**粗い正しさ（E12-2 の1）。** $\mathrm{hit}_c = \frac{1}{|T|}\sum_{k \in T} [c(d_k) = c(d_{k^\dagger})]$。でたらめは $\frac1K \sum_k [c(d_k) = c(d_{k^\dagger})]$。CSI の表に無い意味がある問題（10,509）は外す。
+
+**自信で切り替える（E12-2 の 3a・3b）。** 3a：$\max_k \pi_k \ge \tau$ なら $\arg\max_k \pi_k$、それ以外は意味1。$\tau$ は頭の語を半分に分けた片方（seed 0）で選び、もう片方で比べる。3b（方法 D′）：E8n の鎖で、点 $n$ から出る段は、$\max_j \pi_{n,j} \ge \tau$ なら Gemma の選んだ意味 $j^*$、それ以外は $g(n)$ の最初の4つの意味を全部（方法A）。$\tau$ は700問で選び、新しい300問で1回だけ使う（E8n の決まり：20%、物の語で取り直し）。
+
+**式とコード。**
+
+| 式 | コード |
+|---|---|
+| 問題（頭の語・候補・正解） | `analysis/e12/e12_items.py`（Gloss Corpus の `noun.xml` を読む） |
+| G の聞き方・2通りの順・$\pi_k$ | `analysis/e12/e12_core.py` の `choice_prompt`、`jobs`、`merge` |
+| Lesk、WordNet の木 | `analysis/e12/e12_local.py` の `idf_table`、`lesk`、`tree` |
+| 同点のある当たり、頭の語ごとの取り直し | `analysis/e12/e12_analyze.py` の `hit`、`boot_diff` |
+| E12-1 の聞き方・覚えている度合い・重なり | `analysis/e12/e121_core.py` の `choice_prompt_hidden`、`para_prompt`、`recall_prompt`、`lcs_recall`、`overlap`。分析は `e121_analyze.py` |
+| 粗い正しさ、3a | `analysis/e12/e122_coarse.py` の `labels_of`、`main` |
+| D′ | `analysis/e12/e122_chain.py` の `chains_mixed`、`main` |
+
+**借りた所と、自分で決めた所。**
+
+| 部分 | 借りた考え（出典） | 自分で決めた所 |
+|---|---|---|
+| WordNet の説明文の語の意味選び | Senseval-3 の説明文の意味選び課題（Litkowski 2004、一番 68.6%、全部の語）、Gloss Corpus（Princeton） | 頭の語だけ。人の印が1つで意味が2〜8個の問題 |
+| 辞書の頭の語の意味選び | Rigau ほか 1998（61〜64%） | ― |
+| 番号付きの説明文から AI が意味を選ぶ | Meconi ほか 2025（標準テストで Gemma-2 2B 72.4）、ConSeC 2021 | くじの順と逆順の平均 |
+| Lesk | Lesk 1986 | 全部の名詞の説明文から数えた IDF、飛ばす語の一覧なし |
+| 覚えているかの確かめ | Golchin & Surdeanu（Data Contamination Quiz、Time Travel）、Deng ほか 2024（TS-Guessing） | 名前を隠す、別のAIで言い換える、後半を言わせる |
+| 粗い意味 | Navigli 2006、Lacerra ほか 2020（CSI）、Ciaramita & Johnson 2003（supersense） | 外れのうち正解と同じまとまりの数え |
+| 自信が低い時は答えない | Geifman & El-Yaniv 2017 | 最初の意味への切り替え、鎖の D′ |
+
+E12 には網がないので、公開したファイルから分析をやり直すと保存した出力と同じになることで確かめています（[計算をやり直す](#計算をやり直す)）。
+
+## E13：正解がまったくない時、食い違う手がかりを網でまとめると良いか（2026-11-12）
+
+網（BP）は、正解が少しある所（E3・E4・E9）や、使い回すルールの外れが積み重なる所で負けてきました。まだ試していなかったのは、**正解がまったくなく**、食い違う手がかりが何種類もある場合です。E10-2・E10-3 で1つの主張に5種類の手がかりがもうあるので、新しい Colab なしで、まとめ方を比べました。
+- 計画（結果を見る前に固定）：`plans/E13_combine_without_labels.md`
+- 先行研究：`plans/E13_prior_work.md`
+- コード `analysis/e13/e13.py`、出力 `results/E13/E13_results.json`
+
+やり方：
+
+- 主張と手がかりは E10-3 と同じ。K「一種か」：501語×46分類＝23,046主張。P 部分と全体：9,750主張。手がかりは主張ごとに5つで、どれも Gemma-2 2B か NLI の物：① 何も見せない、⑩ 辞書の説明文を見せる、⑪g GenericsKB の文を見せる、⑫ 自分で書いた文を見せる、⑪n 文への NLI（文が見つかった時だけ）。
+- まとめるのに正解は使わない。正解は採点だけに使う：Claude の常識の採点（K 558問、P 532問。「微妙」は除く）、副は WordNet の正解。
+- K の分類どうしの決まり（「C なら D」）：E4-2 で Gemma に「C は D の一種か」を聞いた2,300問で、ロジットが0より大きい組（WordNet は使わない）。
+- 方法（正解なし）：M1 確率の平均、M2 多数決、M3 Dawid–Skene、M4 網（M3 の重みを場に、分類の決まりを入れて BP）、M4b 網（M1 の平均を場に）。参考：p-bit 方式（M4 と同じエネルギーをギブスで）、R1 WordNet の正解20問で一番良い手がかりを1つ選ぶ（くじ5回）。
+- 決まり：AURC、相手の20%以上の差があり、物の語で1,000回取り直した95%の幅が0をまたがない。主1：K で M4 が M1 と M2 の両方に勝てば「正解なしなら網に出番がある」。勝てなければ「網の役目は終わり」と書く。
+
+Claude の常識の採点での AURC（小さいほど良い）：
+
+| 方法 | K 一種か（558） | P 部分と全体（532） |
+|---|---|---|
+| ① 何も見せない | 0.124 | 0.199 |
+| ⑩ 辞書 / ⑪g 一般的な文 / ⑫ 自分の文 / ⑪n NLI | 0.097 / 0.107 / 0.148 / 0.130 | 0.089 / 0.130 / 0.271 / 0.145 |
+| **M1 平均** | **0.077** | **0.084** |
+| M2 多数決 | 0.078 | 0.088 |
+| M3 Dawid–Skene | 0.097 | 0.198 |
+| M4 網（DS＋分類の決まり、$w=2$） | 0.091 | ― |
+| M4b 網（平均から） | 0.089 | ― |
+| 参考 網 $w=1$ / $w=3$ | 0.078 / 0.105 | ― |
+| 参考 p-bit 方式（ギブス） | 0.111 | ― |
+| R1 正解20問で一番良い手がかり（5回平均） | 0.113 | 0.141 |
+
+**E13 で分かったこと。**
+
+- 主1 は成り立たなかった：網は平均（0.091 対 0.077）とも多数決（0.078）とも同着で、少し悪い向き。先に決めた決まりどおり、この研究の形では**網の役目は終わり**です。
+- P で Dawid–Skene は多数決より差ありで悪い（0.198 対 0.088）。⑩（めったに「はい」と言わない）を信じすぎました。5つの手がかりがみな同じ小さいAIから出ているので、間違いが似ています（Berti-Equille 2026 の指摘と同じ）。
+- 正解なしでも、5つの手がかりを素直に平均すると、どの手がかり1つよりも良い（K 0.124→0.077、P 0.199→0.084）。ただし P では、正解を2割使う E10-3 の学習（0.039）には届きません。
+- p-bit 方式と BP は同着（E4 と同じ）。WordNet の採点でも同じ順（平均 0.016 が一番、網 0.033、DS 0.057）。
+
+**手で決めた所。** 決まりの罰 $w = 2$（参考 1 と 3）、EM 50回、決まりの線（Gemma のロジット0）、正解20問×くじ5回、取り直し1,000回、20%。語の一覧はなし。
+
+### E13の計算のしかた
+
+**E13 で足す記号。**
+
+| 記号 | 意味 |
+|---|---|
+| $\ell_{i,s}$ | 主張 $i$ の手がかり $s \in \{①, ⑩, ⑪g, ⑫, ⑪n\}$（ロジット。⑪n は一番大きい含意の $\mathrm{logit}$）。資料が無い時は欠け |
+| $v_{i,s}$ | 票 $[\ell_{i,s} > 0]$ |
+| $S_i$ | 主張 $i$ にある手がかり |
+| $\pi$、$a_s$、$b_s$ | Dawid–Skene：正しい主張の割合、$P(v_s = 1 \mid \text{正しい})$、$P(v_s = 1 \mid \text{正しくない})$ |
+| $\mathcal R$ | 分類の決まり $(C, D)$：「C is a type of D.」への Gemma のロジットが正（E4-2） |
+| $y_{X,C}$ | 網の変数「X は C の一種」（0か1） |
+
+**平均と多数決。**
+
+$$ M1_i = \frac{1}{|S_i|}\sum_{s \in S_i} \sigma(\ell_{i,s}), \qquad M2_i = \frac{1}{|S_i|}\sum_{s \in S_i} v_{i,s} + 10^{-3}\,(M1_i - 0.5) $$
+
+（後ろの小さい項は同点を割るだけ）。
+
+**Dawid–Skene（M3）。** $q_i = M2_i$（[0.01, 0.99] に切る）から始めて50回くり返す：
+
+$$ \pi = \overline{q}, \quad a_s = \frac{\sum_i q_i v_{i,s}}{\sum_i q_i}, \quad b_s = \frac{\sum_i (1-q_i) v_{i,s}}{\sum_i (1-q_i)}, $$
+
+$$ z_i = \mathrm{logit}\,\pi + \sum_{s \in S_i} \Big[ v_{i,s} \log\frac{a_s}{b_s} + (1-v_{i,s}) \log\frac{1-a_s}{1-b_s} \Big], \qquad q_i = \sigma(z_i) $$
+
+（和は $s$ がある主張だけ。$a_s, b_s$ は [0.01, 0.99] に切る）。M3 $= q_i$。
+
+**網（M4、K だけ）。** 物の語 $X$ ごとに、分類1つに変数1つ：
+
+$$ P(y) \;\propto\; \exp\Big( \sum_C h_{X,C}\, y_{X,C} \;-\; w \sum_{(C,D) \in \mathcal R} [\,y_{X,C} = 1,\; y_{X,D} = 0\,] \Big) $$
+
+$h = z$（M3 から。M4b は $h = \mathrm{logit}(M1)$）、$w = 2$。答えは、なだらかにした BP（0.5、50回）の確からしさ。p-bit 方式は同じ $P(y)$ をギブスで引く（2,200回、最初の200回は捨てる）。
+
+**R1。** WordNet の正解付きの主張を20問引き（両方の答えが入るまで引き直す）、その20問で AURC が一番小さい手がかりを選んで採点。くじ5回（seed 13）。
+
+**式とコード。**
+
+| 式 | コード |
+|---|---|
+| 手がかりと決まり | `analysis/e13/e13.py` の `load_K`、`load_P` |
+| M1、M2 | `m_mean`、`m_major` |
+| M3 | `dawid_skene` |
+| M4、M4b、p-bit 方式 | `net`（`how="bp"` か `"gibbs"`） |
+| R1、決まり | `run`、`judge` |
+
+**借りた所と、自分で決めた所。**
+
+| 部分 | 借りた考え（出典） | 自分で決めた所 |
+|---|---|---|
+| 正解なしで資料の確かさを推し量る | Dawid & Skene 1979、Snorkel（Ratner ほか 2017）、Platanios ほか 2017 | 1つの小さいAIから出た5つの手がかり |
+| 少しの正解での真実の推し量り | Berti-Equille 2026（BP-TD：正解20問で一番良い資料を選ぶのが強い） | R1 を参考に置く |
+| 網に分類どうしの決まりを入れる | Pujara ほか 2013（知識グラフの同定）、E4-2 | 決まりは Gemma 自身の答えから、罰 $w$ |
+| AURC | Geifman ほか 2019 | ― |
+
+網のコードは E4 と同じ種類の2値の BP です。E13 では、p-bit 方式が同じ答えを出すかだけを確かめました（E4 と同じく同じになった）。
+
+## E14：鎖の行き止まりを、外の文で埋める（2026-11-12〜11-13）
+
+E8n の間違いを数えると（`plans/E14_count_gaps.md`）、鎖が正しい主張に「いいえ」と言った82問（700問で52、300問で30）のうち55問は点数がほぼ0でした。そのうち40問は人や動物 →「生き物」「哺乳類」です。止まる理由は、鎖の**行き止まり**（48。例 granddaughter → child → descendant → progeny のあと辞書の中で輪になる）と、物の語の説明文に頭の名詞がないこと（"One who studies zoology"、4）でした。E11-2 で鎖を6段に伸ばしても効かなかったのはこのためです。E14 では、鎖の点ごとに外の「AはBの一種」という文を継ぎ足して、鎖が分類まで着くようになるかを調べました。
+- 計画：`plans/E14_fill_gaps.md`、`plans/E14-1_gemma_judge.md`、`plans/E14-2_wikipedia_first_sentence.md`、`plans/E14-3_wikipedia_lead.md`
+- 先行研究：`plans/E14_prior_work.md`
+- コード `analysis/e14/`、ノート `colab/E14_fill_gaps.ipynb`・`colab/E14-1_gemma_judge.ipynb`・`colab/E14-2v2_wikipedia_first_sentence.ipynb`・`colab/E14-3_wikipedia_lead.ipynb`、出力 `data/E14/`、分析の出力 `results/E14/`
+
+4つに共通のやり方：
+
+- 土台は E11-2 の6段の鎖（E8n の方法Dを伸ばした物）。文を足さなければ E8n（3段）・E11-2（6段）と値がぴったり同じになることを毎回確かめた（ずれ 0.0）。
+- 鎖の全部の点に（行き止まりだけに限ると、答えを見て足す場所を選ぶことに近くなるので）、主語の頭がその語 $w$ である文を足す。文の中のほかの名詞のかたまりの頭が親の候補で、値が一番の候補を親にする。親の意味は Gemma が選ぶ（E8n の方法Dの聞き方で、説明文の代わりに文を見せる）。その先はまた Wiktionary をたどる。全部で6段まで。
+- 問題・正解・決まりは E8n と同じ：700問（Claude の常識の採点、副に Gemini）と新しい300問（Claude）、一番強い道の AURC、20%以上の差かつ物の語で取り直した95%の幅が0をまたがない。旗は700問と300問の両方で必要。
+- この1,000問は E8n・E11 で見た問題。勝っても「候補」止まりのはずでしたが、どれも同着か負けなので、後から選んだ偶然の勝ちはありません。
+
+| 段階 | 足す文の出どころと判定役 | 主な結果（AURC、700 / 300） |
+|---|---|---|
+| E14 | GenericsKB（全部の版 343万文。「Best」の版は WordNet・ConceptNet から作った文を含むので使わない）を1語3文まで、＋Gemma が書いた1文（`Write one short sentence saying what kind of thing a "w" is.`）。判定は NLI「文 ⇒ W is a type of P.」 | ⑭gs 0.140 / 0.085 対 ⑥N 0.063 / 0.056：700で**悪い**。正しい「いいえ」52のうち41が「はい」に変わったが、間違った「はい」が127増えた。E11-2 の全部入りの学習に ⑭gs を足すと、5回中0回（同着）。Gemma が書いた文だけ（⑭s）は 0.064 / 0.036 で700は同着（事後の見方、主張にはしない） |
+| E14-1 | 同じ文、判定は Gemma（`Sentence: … Does this sentence say that a "w" is a kind of "P"? Answer Yes or No only.`） | ⑭′gs 0.124 / 0.081：まだ**悪い**。間違った「はい」181→184。Gemma は明らかな雑音は落とすが、話のずれた「X is a Y」型の文は通す |
+| E14-2 | Wikipedia の記事の最初の1文（公式の API、1秒に1回、曖昧さ回避のページは使わない）、判定は Gemma、継ぎ足しは1つの道で1回まで | W1 0.063 / 0.050 対 N3 0.063 / 0.056：**同着**。きれい（新しい間違った「はい」5）だが、埋まったのは52のうち12だけ |
+| E14-3 | Wikipedia の冒頭の段落の最初の10文。代名詞の主語は、記事の見出しがその語そのものの時だけ認める。判定は Gemma | W1 0.067 / 0.049：**同着**。埋まったのは52のうち14、新しい間違った「はい」4 |
+
+**E14 で分かったこと。**
+
+- 行き止まりは埋められる：GenericsKB と Gemma の文で、正しい「いいえ」の8割が「はい」になりました。ただ一般的な文は雑音が多く（「Safety」という農薬の文で safety → 植物。「Granddaughters trump even a four-homer win」に NLI は「孫娘は勝利の一種」0.99 を付けた）、「X is a Y」の形の文は Gemma の判定も通ります。文を何度も継ぐ道は意味がずれていきます（breadwinner → support → price → mechanism → …）。全体では悪くなりました。
+- きれいな資料（Wikipedia）は悪くしませんが、埋まる数が少なすぎます。普通の名詞の多くは記事がなく（曖昧さ回避のページ：web、station、player）、文を増やして冒頭の段落全部を見ても、埋まったのは2つ増えただけでした。
+- E14-3 のあとも埋まらない38問を見ると（事後の見方）、多くは person・human・mammal・organism まで着いているのに、**最後の段**、NLI の「分類に着くか」で落ちていました（例「mammal ⇒ living thing」の値が低い）。ほかは文の中の親の選び違い（mathematician → work）や、正解そのものが微妙な物（athlete → worker）。外の文の量は詰まっている所ではありません。これを次の E15 で調べます。
+- 言えないこと：外の文が要る。E10-3・E14・E14-1 では、Gemma が自分で書いた文が取ってきた文と同じか良かった。
+
+**手で決めた所。** GenericsKB は1語3文（20文読む）、1文の親の候補6つ、Gemma の文は30語まで、6段、冒頭の段落10文、1つの道で継ぎ足し1回まで（E14-2・E14-3）、Wikipedia は1回20語・1秒に1回。語の一覧はなし：出どころで除くのは GenericsKB の source 欄の値、曖昧さ回避は API のページの属性で外す。ノートを渡す前に毎回 `analysis/e10/e101/scan.py` で洗った（見つかったのは鍵・方法・係り受けの名前だけ）。E14-2 の最初のノート（要約 API、8本並べ）は半分以上の語で Wikipedia に断られたので、比べる前にゆっくり取る v2 に替え、使っていません。
+
+### E14の計算のしかた
+
+[E6〜E8の計算のしかた](#e6e8の計算のしかた) の記号（$n = (w,j)$、$q_n$、$a_n$、$S(n,t)$、$j^*$）を使います。
+
+**E14 で足す記号。**
+
+| 記号 | 意味 |
+|---|---|
+| $\varphi_{w,i}$ | 語 $w$ について足した $i$ 番目の文（継ぎ足しの点 $(\mathrm g, w, i)$。辞書の点は $(\mathrm s, w, j)$） |
+| $P(\varphi)$ | 親の候補：$\varphi$ の中のほかの名詞のかたまりの頭（名詞、6つまで） |
+| $J(\varphi, w, p)$ | 「$\varphi$ は w が p の一種だと言っている」の判定値：NLI の含意 $\varphi \Rightarrow$ `W is a type of p.`（E14）、または上の聞き方への Gemma の $\sigma(\ell_{\text{Yes}} - \ell_{\text{No}})$（E14-1〜E14-3） |
+| $p^*(\varphi)$ | 選んだ親 $\arg\max_{p \in P(\varphi)} J(\varphi, w, p)$ |
+| $G$ | 1つの道で通れる継ぎ足しの点の数の上限（E14：上限なし、W1：1） |
+
+**どの文を使うか。** 主語の名詞のかたまり（係り受けが `nsubj` か `nsubjpass`）の頭が $w$（見出し形かそのまま）の文だけ。E14-3 では、Wikipedia の見出しが $w$ そのものの時だけ代名詞の主語も認める。GenericsKB は $w$ の score の高い20文を読み、$J(\varphi, w, p^*)$ の大きい3文を残す。Gemma の文は1つ。Wikipedia は最初の1文（E14-2）か冒頭の段落の最初の10文（E14-3）から、$J$ が一番大きい $(\varphi, p^*)$ を1つ残す。
+
+**つながり。**
+
+- $(\mathrm s, w, j) \to (\mathrm s, g, j^*)$：E8n と同じ辞書の段、強さ $q_{(w,j)}$、1段。
+- $(\mathrm s, w, j) \to (\mathrm g, w, i)$：同じ語の文、強さ1、0段。途中の語では、文の中の $w$ を Gemma が意味 $j$ と読んだ時だけ（`Sentence: φ … which meaning of the word "w" is used?`）。物の語は根から直接その文へ。
+- $(\mathrm g, w, i) \to (\mathrm s, p^*, j^*)$：強さ $J(\varphi_{w,i}, w, p^*)$、1段。$p^*$ の意味 $j^*$ は文の中で Gemma が選ぶ。
+
+**着き。** 辞書の点は E8n と同じ $a_n$。継ぎ足しの点は $a_{(\mathrm g,w,i)} = J(\varphi_{w,i}, w, C)$。
+
+**段の数と継ぎ足しの上限のある一番強い道。** 上のつながりの強さを $\omega(n \to m)$、段の数を $c(n \to m) \in \{0, 1\}$、まだ通れる継ぎ足しの数を $\kappa$ として
+
+$$ S(n, t, \kappa) = \max\Big( a_n,\; \max_{m \in \mathrm{ch}(n),\; c(n\to m) \le t,\; [m \text{ が継ぎ足し}] \le \kappa} \omega(n \to m)\; S\big(m,\, t - c(n \to m),\, \kappa - [m \text{ が継ぎ足し}]\big) \Big) $$
+
+（$a_n = 1$ なら $S = a_n$）。点数は $\max_{\text{根 } r} S\big(r, 6, G - [r \text{ が継ぎ足し}]\big)$（根が物の語の文のこともある）。N3・N6 は継ぎ足しの点を使わず $t = 3, 6$。
+
+**学習あり（E14）。** E11-2 の全部入りの学習（木の学習、物の語で5分割×5回）に、⑭gs の点数・その段の数・文を直接見せた値（⑪x）の3つを足す版と足さない版。
+
+**式とコード。**
+
+| 式 | コード |
+|---|---|
+| 主語の確かめと親の候補 $P(\varphi)$ | `analysis/e14/e14_core.py` の `subject_parents` |
+| Gemma の文、文の中の意味 | `e14_core.py` の `self_prompt`、`clean_self`、`sense_in_sentence_prompt` |
+| 鎖を伸ばす（文・$p^*$・$j^*$・着き） | `e14_core.py` の `grow`、`new_word`。Colab のセルは `analysis/e14/build_notebook_E14*.py`（Gemma の判定 `says_prompt`、Wikipedia の読み `wiki_sents`） |
+| つながりと $S(n,t)$ | `e14_core.py` の `follow`、`analysis/e14/e14_analyze.py` の `Graph` |
+| 継ぎ足しの上限 $G$ | `analysis/e14/e142_compare.py` の `GraphB` |
+| 学習あり、決まり | `e14_analyze.py` の `run`（E11-2 の `gb_cv`、`box_scores`）、`e141_compare.py`、`e142_compare.py` |
+| 公開用に本文を外す | `analysis/e14/strip_texts.py` |
+| E14 の前の数え、E14-3 の後の見立て | `analysis/e14/count_gaps.py`、`analysis/e14/e143_diag.py` |
+
+**借りた所と、自分で決めた所。**
+
+| 部分 | 借りた考え（出典） | 自分で決めた所 |
+|---|---|---|
+| 辞書を合わせて、説明文から作った分類の抜けを埋める | Véronis & Ide 1991（辞書5つで誤り55〜70%→6%）。中身のない頭（"one who…"）：Chodorow ほか 1985、Guthrie ほか 1990 | 鎖の全部の点に足す、親は判定役が選ぶ |
+| 一般的な文 | GenericsKB（Bhakthavatsalam ほか 2020） | 「Best」でなく全部の版 |
+| Wikipedia の最初の1文から上位語 | Kazama & Torisawa 2007、WiBi（Flati ほか 2014） | 語の一覧なし、親は Gemma が選ぶ、E14-3 で冒頭の段落全部 |
+| 「〜の一種」の文の型 | Hearst 1992、Snow ほか 2005 | 型は使わず主語の確かめだけ |
+| AI に自分で文を書かせる | GenRead（Yu ほか 2023）、Liu ほか 2022 | 1語1文 |
+| 一番強い道 | E8 と同じ | 段の数、継ぎ足しの上限 |
+| AURC | Geifman ほか 2019 | ― |
+
+E14 には網がないので、公開したファイルから分析をやり直すと保存した出力と同じになることで確かめています（[計算をやり直す](#計算をやり直す)）。
+
 ## ファイルの置き場所
 
 - `colab/`：Google Colabで動かすノート（T4 GPU）。Gemmaに質問して答えを保存する。E2-2・E2-3はノートの中で計算と図まで行う。
@@ -811,6 +1091,9 @@ E11 の方法には網がないので、式の確かめは、公開ファイル�
 - `analysis/nolist/`：手書きの一覧なしでの確かめ直し（一覧を外した `e8n_core.py`、E7・E8用の `e8n_analyze.py`・`e8n_analyze_gb.py`、ノートを作るコード）。`colab/E8n_nolist_recheck.ipynb`（E7・E8、L4 GPU、約1時間）、`colab/E9n_nolist_recheck.ipynb`（E9の辞書の確かめ、L4 GPU）。`data/E8n_chains_nli.json`（説明文の本文は除いた）・`data/E9n_checker_scores.json`。結果は `results/nolist/`
 - `analysis/e10/`：E10 のコード（`e10_data.py` 問いを作る、`e10_core.py` Colab の中身、`e10_analyze.py`、ノートを作るスクリプト）。`e101/`・`e102/`・`e103/`：E10-1・E10-2・E10-3（問いを作るスクリプト、Colab の中身、ノートを作るスクリプト、`*_analyze.py`、手書きの一覧を洗い出す `scan.py`、Gemini に渡した依頼文とその判定の `gemini/`。「一種か」の分は `e103/k_items.json`・`cs_K_claude.json`）。ノート：`colab/E10_dictionary_other_questions.ipynb`・`colab/E10-1_fixes_without_lists.ipynb`・`colab/E10-2_show_definitions_and_generics.ipynb`・`colab/E10-3_self_text_isa_sense_filter.ipynb`（L4 GPU、それぞれ1〜2時間、途中から続けられる）。`data/E10/`：正解入りの問いと、ノートの出力（Gemma の logit、意味の選択、NLI の値、見せた GenericsKB の文〈CC BY 4.0〉。辞書の説明文の本文は除いた〈CC BY-SA〉）。`results/E10/`：常識の判定と分析の出力
 - `analysis/e11/`：E11 のコード（`e111_core.py`・`e112_core.py` Colab の中身、`e112_box.py`・`e113_box.py` 箱の形のベクトル、`e111_analyze.py`・`e112_analyze.py`・`e112_ablate.py`・`e113_analyze.py`、ノートを作るスクリプト）。ノート：`colab/E11-1_usual_sense.ipynb`・`colab/E11-2_deep_chain_box.ipynb`（L4 GPU、20〜35分と10〜20分）、`colab/E11-3_box_gpu.ipynb`（E11-3 の箱を GPU で学ぶ）。`data/E11/`：ノートの出力（WordNet の説明文と Gemma の意味の確率、深い鎖（Wiktionary の説明文は外した、CC BY-SA）、E11-3 の箱の値）。`results/E11/`：分析の出力（意味の取り違えの見本は道の語だけ残した）
+- `analysis/e12/`：E12 のコード（`e12_items.py` Gloss Corpus から問題を作る、`e12_local.py` GPU なしの方法、`e12_core.py`・`e121_core.py` Colab の中身、`e12_analyze.py`・`e121_analyze.py`・`e122_coarse.py`・`e122_chain.py`、ノートを作るスクリプト）。ノート：`colab/E12_gloss_head_sense.ipynb`（L4 GPU、1時間以内）、`colab/E12-1_memorized_or_not.ipynb`（L4 GPU）。`data/E12/`：問題（WordNet の説明文と人の印）、手元の方法の値、ノートの出力（Gemma の意味の確率、文の近さ、Qwen の言い換え、覚えている度合い）。`results/E12/`：分析の出力
+- `analysis/e13/e13.py`：E13（CPU で約15分。`data/E10/`、`results/E10/E10-1/`、`analysis/e10/e103/`、`data/E4-2_answers_gemma-2-2b-it.json` を読む）。`results/E13/`：その出力
+- `analysis/e14/`：E14 のコード（`e14_core.py` Colab の中身、`e14_analyze.py` E14 の比べ、`e141_compare.py` E14-1、`e142_compare.py` E14-2・E14-3、`strip_texts.py`、`count_gaps.py`、`e143_diag.py`、ノートを作るスクリプト。前のノートを作り直すと後の `e14_core.py` が入るが、足した選択肢は E14〜E14-2 では切ってあり動きは同じ）。ノート：`colab/E14_fill_gaps.ipynb`・`colab/E14-1_gemma_judge.ipynb`・`colab/E14-2v2_wikipedia_first_sentence.ipynb`・`colab/E14-3_wikipedia_lead.ipynb`（L4 GPU、それぞれ10分〜1時間、途中から続けられる）。`data/E14/`：伸ばした鎖（Wiktionary の説明文と Wikipedia の文は外した、CC BY-SA。GenericsKB の文〈CC BY 4.0〉と Gemma が書いた文は残した）。`results/E14/`：分析の出力（意味のずれの見本は道の語と、GenericsKB・Gemma の文だけ残した）
 - `results/`：計算結果のJSONと図（E3は `results/E3/E3_main_analysis.json`、E4は `results/E4/`、E5は `results/E5/`、E6は `results/E6/`、E7は `results/E7/`、E8は `results/E8/`、E9は `results/E9/`）
 - `analysis/e9/`：E9のコード。`e9.py`（作り物の確かめ役でのE9。`real` でE9-1・E9-2の本物の辞書）、`e93.py`（E9-3）、`e9*_analyze.py`（まとめと判定の決まり）、`e91_checker.py`・`e91_from_small.py`（Colabの出力を確かめの点にする）、`check_formulas_e9.py`（網のコードが式どおりかの確かめ）、ノートを作るコード、`labels/E9-3_sample_labeled_claude.json`（Claudeが常識で判定した600個。人の判定ではない）
 - `colab/E9-1_dictionary_check.ipynb`：E4-2のすべての主張に、E8の辞書の確かめ（Gemmaが意味を選ぶ）をかける（L4 GPU）。`colab/E9-1b_small_output.ipynb` はその出力を小さくする。`data/E9-1_checker_scores.json`：主張ごとの辞書の「はい／いいえ」
@@ -880,6 +1163,14 @@ E10：`analysis/e10/` で `python e10_analyze.py ../../data/E10/E10/e10_items.js
 
 E11：`analysis/` で、E11-1：`python e11/e111_analyze.py ../data/E8n_chains_nli.json ../data/E11/E11-1_results.json out.json`（1分以内）。E11-2：`data/E11/E11-2_results.json.gz` を解いてから `python e11/e112_analyze.py ../data/E8n_chains_nli.json ../data/E11/E11-1_results.json E11-2_results.json out.json drift.json`（`torch` が要ります。箱は CPU で約30分）、同じ3つの入力と `out.json` で `python e11/e112_ablate.py`。E11-3：`python e11/e113_analyze.py out.json`（約1分。`data/E10/`、`results/E10/E10-1/`、`data/E4-2_answers_gemma-2-2b-it.json`、`data/E9n_checker_scores.json`、`data/E11/box_*.json` を読みます）。E11-3 の箱を作り直すには `python e11/e113_box.py ../data/E10/E10-1 ../data/E10/E10-1/e101_items.json P box_P.json`（CPU では P で数時間。ノートは GPU で流します）。このリポジトリのファイルから E11-1・E11-3 を流し直すと `results/E11/` とぴったり一致します。E11-2 は、CPU での箱の学習が回ごとに少しずれる（スレッドの数による）ので、ぴったりは一致しません。このファイルから流し直した結果（`results/E11/E11-2_analysis_rerun.json`）でも、判定は全部同じでした（深い鎖は同着、箱は悪い、全部入りの学習は700問で5/5、新しい300問でも良い：0.042→0.027、幅 [0.0045, 0.027]。保存した回では0.031）。結果の後の1つずつ抜く見方（`e112_ablate.py`）は流し直していません。
 
+E12：`analysis/` で `python e12/e12_analyze.py ../data/E12/e12_items_all.json.gz ../data/E12/e12_local.json.gz ../data/E12/E12_results.json.gz out.json`（数秒）。E12-1：`python e12/e121_analyze.py ../data/E12/e12_items_all.json.gz ../data/E12/E12_results.json.gz ../data/E12/E12-1_results.json.gz out.json`。E12-2：`python e12/e122_coarse.py ../data/E12/e12_items_all.json.gz ../data/E12/e12_local.json.gz ../data/E12/E12_results.json.gz sensekey2csi_complete.tsv out.json`（NLTK の WordNet と、https://github.com/SapienzaNLP/csi_code （commit ca30c2f）の `data/sensekey2csi_complete.tsv` が要ります。CC BY-NC-SA なのでここには入れていません）と `cd e12; python e122_chain.py ../../data/E8n_chains_nli.json out.json`。問題を作り直すには `python e12/e12_items.py noun.xml items.json`（Gloss Corpus の `merged/noun.xml`、spaCy の `en_core_web_sm`、約7分）と `python e12/e12_local.py items.json local.json`。
+
+E13：`cd analysis/e13; python e13.py out.json`（約15分。`wordfreq` が要ります）。
+
+E14：`analysis/e14/` で、`E8_DIR=../e8` を付けて。E14：`python e14_analyze.py ../../data/E8n_chains_nli.json ../../data/E11/E11-1_results.json ../../data/E11/E11-2_results.json.gz ../../data/E14/E14_results.json.gz out.json drift.json`（`torch` が要ります。時間の大半は学習の中の E11-2 の箱）。E14-1：`python e141_compare.py ../../data/E8n_chains_nli.json ../../data/E14/E14_results.json.gz ../../data/E14/E14-1_results.json.gz out.json`。E14-2・E14-3：`python e142_compare.py ../../data/E8n_chains_nli.json ../../data/E14/E14-2v2_results.json.gz out.json drift.json`（と `E14-3_results.json.gz`）。E14 の前の数え：`python count_gaps.py ../../data/E8n_chains_nli.json`。
+
+このリポジトリのファイルから E12・E12-1・E12-2・E13・E14-1・E14-2・E14-3 を流し直すと、`results/E12/`・`results/E13/`・`results/E14/` とぴったり一致します（E14-2・E14-3 は本文を外したデータから）。E14 は学習あり以外がぴったり一致します。学習の中の E11-2 の箱は CPU で回ごとに少しずれるので（E11-2 と同じ）、学習ありは少し違う数になります。流し直した結果（`results/E14/E14_analysis_rerun.json`）でも判定は同じでした（⑭gs を足した学習は5回中0回、新しい300問は 0.031→0.023。保存した回では 0.032→0.024。700問で通らないので勝ちとは数えない）。
+
 ## 近い研究と、違うところ
 
 一番近いのはBTProp（Hou ほか、NAACL 2025、https://arxiv.org/abs/2406.06950 ）です。問題どうしのつながりを別のAI（NLI）の判定で作り、確率伝搬でAIの間違いを見つけます。ここでは、両立しないというルールもAI自身に作らせ、そのルールが本当かどうかも網の中で疑わせました（E2-6）。E2-10でBTPropを、論文の作者が公開した木そのもので動かしました。つながりを元のまま使うと、WikiBioでBTPropが上、FactCheckGPTで同着なので、私たちの方法が優れているとは言えません。つながりの一部をわざと反対にすると（E2-11）、つながりを絶対に正しいとするBTPropは大きく崩れ、ルールも疑うBPは崩れませんでした。ただし、つながりを実際のAIに付けさせると（E2-12）、BTPropはほとんど崩れませんでした。本物の判定ミスは、くじで逆にしたミスより害が小さいようです。BTPropの論文で強い比べ相手とされる「AIの自信」（P(True)）は、ここでも比べ相手に入れています。ほかに近い研究：Crum ほか 2024（AIに両立しないかを聞いてルールを作る）、Xu ほか 2026（近所の答えとの一致）、Jiang・Lowd・Dou 2012（自動で集めた知識をルールで掃除）、Maieutic prompting（Jung ほか 2022）、BeliefBank（Kassner ほか 2021）。E2-9の「ルールを疑うと、ルールが正しいときは少し損で、外れが多いときに効く」という形は、Snorkel（Ratner ほか、VLDB 2017、https://arxiv.org/abs/1711.10160 ）の分析（ルールの当たり具合を学ぶ利点は、ルールの当たり外れがばらばらなときに大きい）と同じ傾向です。ここでは、それがAIが自分の答えを確かめる場面でも見えた、という位置づけです。
@@ -887,6 +1178,8 @@ E11：`analysis/` で、E11-1：`python e11/e111_analyze.py ../data/E8n_chains_n
 E10 について：問いに答えるために探した文を見せるのは、検索で補う生成（RAG）です。答える前にAIに自分で文を書かせるのは GenRead（Yu ほか、ICLR 2023）や、知識を書かせてから答える方法（Liu ほか、ACL 2022）です。Abdallah ほか（2025、https://arxiv.org/abs/2502.20245 ）は、Gemma-2 2B が自分で書いた文を読むと、BM25 で探した文より開かれた質問応答が良くなると報告しています。E10-3 では、部分と全体の問いで、自分の文が探した一般的な文と同着でした。GenericsKB（Bhakthavatsalam ほか 2020）は一般的な文を集めたもので、hasPart KB（Bhakthavatsalam ほか 2021）はそこから部分と全体の組を取り出したものです。Mallen ほか（ACL 2023）は、珍しい物ほど検索が効くと報告しました。ここでは身近な語だけで効きました。珍しい語は文がほとんど見つからなかったためです。Proietti・Lenci（2025）は、LLM が部分と全体の向きを取り違えることを示しています。
 
 E11 について：番号付きの説明文から AI に語の意味を選ばせる正しさは、Meconi ほか（EMNLP 2025、https://arxiv.org/abs/2509.13905 ）が標準のテストで測っています（Gemma-2 2B 72.4、一番多い意味 65.2）。E11-1 は文なしで普通の意味を聞いています。辞書の説明文の頭の語の意味を決めて分類の木を作る考えは、Rigau ほか（1998、AI なし）にあります。階層の箱の形のベクトルは Vilnis ほか（2018）、Li ほか（2019）、Boratko ほか（2021）。Ganea ほか（2018）は、直接の辺だけで学ぶと遠い組をうまく当てられないと報告していて、E11-2 で箱だけが弱かったのと合います。いくつもの自信の手がかりを少しの正解で学習してまとめると、一番良い1つより良くなることは、Chauhan ほか（2026、https://arxiv.org/abs/2608.24492 ）の32条件中30で示されています。UniFact（Su ほか、https://arxiv.org/abs/2512.02772 ）は AI の中の手がかりと外の確かめを足し、別のモデルでは効き目が小さくなりました。E11-3 は、小さいAI 1つで、4種類の問いのうち3つで同じ種類の効き目を見ています。
+
+E12 について：WordNet の説明文の語の意味選びは、Senseval-3 の課題（Litkowski 2004）が全部の語で行いました（一番 68.6%。WordNet の版も品詞も違うので、そのまま比べられない）。Rigau ほか（1998）は辞書の頭の語の意味選びで 61〜64% でした。E12 は頭の語だけを、学習なしの小さいAIで測っています。覚えているかの確かめは Golchin・Surdeanu（Data Contamination Quiz、Time Travel）と Deng ほか（NAACL 2024）の考え方です。E13 について：正解なしで資料の確かさを推し量るのは Dawid・Skene（1979）や Snorkel です。Berti-Equille（2026）は、正解20問で一番良い資料を選ぶ方が真実の推し量りの方法より強いこと、同じモデルから作った資料は間違いが似ることを示していて、E13 で見えたのと同じです。E14 について：辞書をいくつか合わせて、説明文から作った分類の抜けを埋めるのは Véronis・Ide（1991）、Wikipedia の最初の1文を上位語の資料にするのは Kazama・Torisawa（2007）と WiBi（Flati ほか、ACL 2014）にあります。E14 は、それを小さいAIの辞書の鎖への継ぎ足しとして、決まりを先に固定して試し、良くならないことを確かめました。
 
 ## 言えないこと（弱点）
 
@@ -906,6 +1199,9 @@ E11 について：番号付きの説明文から AI に語の意味を選ばせ
 - E5：E4-2と同じデータ・分野・AI。ルールの外れはWordNetで決めているので、直す向きもWordNet寄り。常識の判定は700個で、AI 2つ（Claude・Gemini）によるもので人ではない。E5-2はE2-8のデータの使い回し。医学の判定はAIによるもので専門家ではない。Geminiの組の判定は一律だったので、組の判定はClaude 1人分。
 - E10：小さいAI 1つ、方法ごとに聞き方1つ、英語だけ。常識の判定は Claude（E10-1 から Gemini も。E10-3 の「一種か」は Claude だけ）で、人の判定ではありません。600個の半分は、Gemma か辞書が「はい」と言った物から選びました。Gemini の判定では、GenericsKB の効き目は基準に届きません。GenericsKB の文が見つかったのは、部分と全体の主張の22%（正しい物の40%）だけで、病気と市ではほとんど見つかりませんでした。
 - E11：小さいAI 1つ、英語だけ。採点は E8・E10 と同じ AI の判定（Claude が主、Gemini が副）で、人の判定ではありません。E11-2 の新しい300問での勝ちは決まりのすぐ上です（幅の下 0.0006）。全部入りの学習には、学習用の正解付きの問題が要ります（E11-3 は2割、E11-2 は700問の4/5）。E11-3 の K はもともと誤りが小さく（0.017）、部分と全体の効き目はほとんど E10-2 の文から来ています。深い鎖の意味の取り違えの数えは Claude 1人です。1つずつ抜く比べは、結果を見てから行いました。
+- E12：WordNet の説明文と WordNet の意味で、E8 の辞書（Wiktionary）ではありません。人が付けた意味の印にも間違いや迷う物があります。E12-1 の言い換えは荒く、覚えている分の大きさは測れていません。
+- E13：5つの手がかりは1つの小さいAI（と NLI 1つ）から出た物です。網の決まりは「一種か」の分類どうしだけ。常識の採点は Claude です。
+- E14：1,000問は前に使った問題（E8n・E11）で、4通り試してどれも同着か負けでした。普通の名詞の多くは Wikipedia に記事がありません。伸ばした道50本を読んだのは Claude 1人です。E14-3 の後に残った物の見立ては、結果を見てから行いました。
 - p-bitはパソコンの中で真似たもの（ギブスサンプリング）。速さや電力については、この実験からは何も言えない。
 
 ## 作り方について
@@ -927,6 +1223,9 @@ E11 について：番号付きの説明文から AI に語の意味を選ばせ
 - HoVer（Jiang ほか、Findings of EMNLP 2020、CC BY-SA 4.0） https://hover-nlp.github.io/ 。正解の資料つきの dev は ProgramFC（Pan ほか、ACL 2023）の公開版 https://github.com/teacherpeterpan/ProgramFC
 - Gemma-2 9B（指示調整版） https://huggingface.co/google/gemma-2-9b-it と NLI https://huggingface.co/MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli （E3）
 - 英語版 Wiktionary（2026-11-10・11 のダンプ、CC BY-SA 4.0） https://dumps.wikimedia.org/enwiktionary/ （E6〜E10）。説明文の本文はここには置かず、ノートが取りに行きます
-- GenericsKB（Bhakthavatsalam ほか 2020、CC BY 4.0） https://huggingface.co/datasets/community-datasets/generics_kb （E10-2・E10-3）。Gemma に見せた文は `data/E10/` にあります
+- GenericsKB（Bhakthavatsalam ほか 2020、CC BY 4.0） https://huggingface.co/datasets/community-datasets/generics_kb （E10-2・E10-3・E14）。使った文は `data/E10/` と `data/E14/` にあります
+- Princeton WordNet 3.0 の説明文コーパス（WordNet のライセンス）、写し https://github.com/sgjimenezv/wordnet_3_0_glosstag （E12）。説明文と印は `data/E12/` にあります
+- Qwen2.5-1.5B-Instruct https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct と cross-encoder/nli-deberta-v3-base（E12-1）。CSI の粗い意味（Lacerra ほか 2020、CC BY-NC-SA、入れていない） https://github.com/SapienzaNLP/csi_code （E12-2）
+- 英語版 Wikipedia（CC BY-SA 4.0）、MediaWiki の API で 2026-11-13 に取得（E14-2・E14-3）。文はここに入れていません
 - 国連 M49 の地域分け https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes （E10）
 - Gemma-2 2B（指示調整版） https://huggingface.co/google/gemma-2-2b-it 。`data/` のGemmaの答えは、Gemmaの利用規約に従って使っています。

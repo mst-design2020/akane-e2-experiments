@@ -1,0 +1,1022 @@
+[
+ {
+  "no": 0,
+  "id": 607,
+  "stmt": "plenipotentiary -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "plenipotentiary",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 1,
+  "id": 1233,
+  "stmt": "overseer -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "overseer",
+    ""
+   ],
+   [
+    "critic",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 2,
+  "id": 396,
+  "stmt": "adolescent -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "adolescent",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 3,
+  "id": 194,
+  "stmt": "freelancer -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "freelancer",
+    "（文）"
+   ],
+   [
+    "worker",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 4,
+  "id": 1135,
+  "stmt": "prefect -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "prefect",
+    ""
+   ],
+   [
+    "official",
+    ""
+   ],
+   [
+    "holder",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 5,
+  "id": 1256,
+  "stmt": "prowler -> animal",
+  "y": 1,
+  "path": [
+   [
+    "prowler",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 6,
+  "id": 456,
+  "stmt": "wife -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "wife",
+    ""
+   ],
+   [
+    "woman",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 7,
+  "id": 599,
+  "stmt": "loner -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "loner",
+    "（文）"
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 8,
+  "id": 1016,
+  "stmt": "bassist -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "bassist",
+    ""
+   ],
+   [
+    "musician",
+    ""
+   ],
+   [
+    "musician",
+    "（文）"
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 9,
+  "id": 643,
+  "stmt": "dredge -> animal",
+  "y": 0,
+  "path": [
+   [
+    "dredge",
+    ""
+   ],
+   [
+    "shaker",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 10,
+  "id": 503,
+  "stmt": "rifle -> animal",
+  "y": 0,
+  "path": [
+   [
+    "rifle",
+    ""
+   ],
+   [
+    "rifleman",
+    ""
+   ],
+   [
+    "soldier",
+    ""
+   ],
+   [
+    "soldier",
+    "（文）"
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 11,
+  "id": 499,
+  "stmt": "ombudsman -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "ombudsman",
+    "（文）"
+   ],
+   [
+    "official",
+    ""
+   ],
+   [
+    "holder",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 12,
+  "id": 457,
+  "stmt": "berk -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "berk",
+    ""
+   ],
+   [
+    "fool",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 13,
+  "id": 92,
+  "stmt": "kitten -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "kitten",
+    ""
+   ],
+   [
+    "cat",
+    ""
+   ],
+   [
+    "cat",
+    "（文）"
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 14,
+  "id": 417,
+  "stmt": "detainee -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "detainee",
+    "（文）"
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 15,
+  "id": 1205,
+  "stmt": "colonel -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "colonel",
+    ""
+   ],
+   [
+    "leader",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 16,
+  "id": 1057,
+  "stmt": "islander -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "islander",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 17,
+  "id": 1232,
+  "stmt": "rani -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "rani",
+    ""
+   ],
+   [
+    "ruler",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 18,
+  "id": 189,
+  "stmt": "firearm -> man-made object",
+  "y": 1,
+  "path": [
+   [
+    "firearm",
+    "（文）"
+   ],
+   [
+    "gun",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 19,
+  "id": 1244,
+  "stmt": "duce -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "duce",
+    ""
+   ],
+   [
+    "leader",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 20,
+  "id": 672,
+  "stmt": "toddler -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "toddler",
+    ""
+   ],
+   [
+    "child",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 21,
+  "id": 215,
+  "stmt": "undercarriage -> man-made object",
+  "y": 1,
+  "path": [
+   [
+    "undercarriage",
+    ""
+   ],
+   [
+    "gear",
+    ""
+   ],
+   [
+    "combination",
+    ""
+   ],
+   [
+    "elements",
+    ""
+   ],
+   [
+    "tenet",
+    ""
+   ],
+   [
+    "opinion",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 22,
+  "id": 1221,
+  "stmt": "bookshelf -> furniture",
+  "y": 1,
+  "path": [
+   [
+    "bookshelf",
+    "（文）"
+   ],
+   [
+    "furniture",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 23,
+  "id": 154,
+  "stmt": "bodybuilder -> animal",
+  "y": 1,
+  "path": [
+   [
+    "bodybuilder",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 24,
+  "id": 1064,
+  "stmt": "investor -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "investor",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 25,
+  "id": 1067,
+  "stmt": "magistrate -> living thing",
+  "y": 1,
+  "path": [
+   [
+    "magistrate",
+    ""
+   ],
+   [
+    "official",
+    ""
+   ],
+   [
+    "holder",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 26,
+  "id": 589,
+  "stmt": "groundhog -> man-made object",
+  "y": 0,
+  "path": [
+   [
+    "groundhog",
+    ""
+   ],
+   [
+    "synonym",
+    ""
+   ],
+   [
+    "synonym",
+    "（文）"
+   ],
+   [
+    "word",
+    ""
+   ],
+   [
+    "unit",
+    ""
+   ],
+   [
+    "component",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 27,
+  "id": 434,
+  "stmt": "contrarian -> animal",
+  "y": 0,
+  "path": [
+   [
+    "contrarian",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 28,
+  "id": 507,
+  "stmt": "sibling -> mammal",
+  "y": 1,
+  "path": [
+   [
+    "sibling",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "human",
+    "（文）"
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 29,
+  "id": 1107,
+  "stmt": "sprinter -> tool",
+  "y": 0,
+  "path": [
+   [
+    "sprinter",
+    ""
+   ],
+   [
+    "car",
+    ""
+   ],
+   [
+    "vehicle",
+    ""
+   ],
+   [
+    "conveyance",
+    ""
+   ],
+   [
+    "means",
+    ""
+   ],
+   [
+    "instrument",
+    ""
+   ]
+  ]
+ }
+]
