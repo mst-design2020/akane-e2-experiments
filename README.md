@@ -11,8 +11,10 @@ English | [日本語](README_ja.md)
 - **A small model is a poor judge but a good helper.** Gemma-2 2B is often confidently wrong on "X is a type of Y". Checking its answer against dictionary definitions with an NLI model cuts the error measure (AURC, lower is better) from 0.154 to 0.070 (E6).
 - **Give it only the narrow job it is good at.** Chaining definitions (granddaughter → person → mammal) breaks when a word is read in the wrong sense. When Gemma only picks which sense of each word is meant, wrong-sense chains fall from 72% to 10%, and on 300 new items the chain check with a learner beats Gemma's own confidence (0.046 vs 0.118) (E7, E8, rechecked without hand-written lists).
 - **Combining every signal in one learner helps; deeper chains and box embeddings alone do not (E11).** Gemma's answers, the dictionary chain, outside sentences and a box embedding in one gradient-boosting learner beat the learner on Gemma's answers alone on "is a type of" (0.017 → 0.004), part-whole (0.062 → 0.039) and disease (0.025 → 0.016); geography ties, and part-whole and disease tie under Gemini's labels.
+- **Gemma's narrow job holds up at scale (E12).** On 34,402 WordNet definitions whose head word was sense-tagged by people, Gemma picks the meant sense 80.9% of the time, against 60.5% for WordNet's first sense and 67.9% for embedding similarity, and the checks in E12-1 say this is not only memory.
+- **Filling the chain's dead ends with outside sentences did not help (E14).** Generic sentences (GenericsKB) fill most of the gaps but add more wrong answers than they fix (0.063 → 0.140); Wikipedia is clean but fills too few (a tie). Most remaining misses fail at the chain's last step, the judgement "is this a kind of C" (E15, in progress).
 - **Showing sentences that state the answer helps on part-whole questions (E10)**, whether they come from GenericsKB (0.068 → 0.039) or Gemma writes them itself (0.044, a tie).
-- **The network (BP) did not become the main part.** BP that also doubts the model's rules beat counting violations in taxonomy and disease tests (E2-6, E2-8), but it did not beat a strong learner where labeled data existed (E3, E4, E9). The p-bit method and BP never differed in accuracy (E4).
+- **The network (BP) did not become the main part.** BP that also doubts the model's rules beat counting violations in taxonomy and disease tests (E2-6, E2-8), but it did not beat a strong learner where labeled data existed (E3, E4, E9), and with no labels at all a plain average of five signals was as good or better (E13). The p-bit method and BP never differed in accuracy (E4, E13).
 
 Ties and losses are reported in every section. Two corrections (2026-11-11) changed earlier numbers; they are listed in [Corrections](#corrections-2026-11-11).
 
@@ -140,6 +142,14 @@ The network that fully trusts the rules (E2-2 to E2-5, and the "trusting BP" in 
 | E11-1 | Gemma picks a noun's usual sense (2,000 WordNet nouns); E8's first step narrowed to that sense | Usual sense: Gemma 59% vs similarity 47%. Narrowing the first step: 0.056 vs 0.063, a tie; worse on the 300 new items | `plans/E11-1_usual_sense.md` |
 | E11-2 | Chains up to 6 steps; a box embedding learned from the chains; everything in one learner | Deeper: tie. Box alone or filling: worse. Combined learner 0.053 → 0.038 (5/5), new items 0.042 → 0.031 | `plans/E11-2_deep_chain_and_box.md` |
 | E11-3 | The combined learner on "is a type of", part-whole, disease and geography | Beats Gemma-only boosting on K (0.017 → 0.004), P (0.062 → 0.039) and D (0.025 → 0.016); G tie. Gemini's labels: P, D, G ties. Box adds nothing | `plans/E11-3_combine_on_other_questions.md` |
+| E12 | Gemma picks the sense of a definition's head word, on 34,402 human-tagged WordNet glosses | Gemma 80.9% vs similarity 67.9%, first sense 60.5%, Lesk 35.9% (differences) | `plans/E12_gloss_head_sense.md` |
+| E12-1 | Is that only memory? Hide the word, paraphrase, ask for the rest of the gloss | Hidden 80.8%, paraphrased 69.3% (still above first sense 59.3%); flat across recall levels: not only memory | `plans/E12-1_memorized_or_not.md` |
+| E12-2 | Coarse senses; switching on Gemma's confidence | Coarse 88.9%; 41% of misses in the answer's group. Confidence switch: tie; in the chain (300 new items) 0.056 vs 0.056: tie | `plans/E12-2_coarse_senses_and_abstain.md` |
+| E13 | No labels: combine five disagreeing signals (mean, vote, Dawid–Skene, network) | Mean best (K 0.077, P 0.084, better than any single signal); network 0.091, a tie with the mean: "the network's role is over". Dawid–Skene worse on P | `plans/E13_combine_without_labels.md` |
+| E14 | Fill the chain's dead ends with GenericsKB and Gemma's own sentences (NLI judge) | 41 of 52 wrong "no"s filled, but 127 wrong "yes"s added: 0.140 vs 0.063, worse | `plans/E14_fill_gaps.md` |
+| E14-1 | Same, Gemma as the judge | 0.124 vs 0.063: worse | `plans/E14-1_gemma_judge.md` |
+| E14-2 | Wikipedia's first sentence, at most one per path | 0.063 vs 0.063 (300: 0.050 vs 0.056): tie; fills 12 of 52 | `plans/E14-2_wikipedia_first_sentence.md` |
+| E14-3 | Wikipedia's whole lead (10 sentences) | 0.067 vs 0.063 (300: 0.049 vs 0.056): tie; fills 14 of 52 | `plans/E14-3_wikipedia_lead.md` |
 
 ## E3: Can evidence let the model say "I don't know"?
 
@@ -689,7 +699,7 @@ Setup shared by the three steps:
 |---|---|---|
 | E11-1 ① | Without context, can Gemma pick a noun's most common sense? 2,000 WordNet nouns with 2–8 senses; the answer is the sense most often tagged in SemCor; candidates shown in a shuffled order and its reverse | Gemma 59.2%, embedding similarity 47.1%, random 33.2% (Gemma better, interval excludes 0). But WordNet's first sense *is* the SemCor-frequency order, so with that order available Gemma is not needed |
 | E11-1 ② | E8n starts the chain from every sense of the item noun. Start from Wiktionary's first sense only (R1), Gemma's chosen sense (R2), or weight each sense's path by Gemma's probability (R3) | 700 items: R3 0.056 vs all senses (R0) 0.063, 12%, **a tie**; wrong "yes" 54 → 24, but "no" to true claims 52 → 72. 300 new items: R3 0.074, worse than R0 0.056. Gradient boosting with R3: 1 of 5 runs by 20%, a tie. **Narrowing the first step does not help** |
-| E11-2 | (1) Follow the chain up to 6 steps instead of 3. (2) A box embedding (Li et al. 2019) trained only on E8n's own steps and arrivals, no WordNet, no labels; fill the chain's "no" with the box (R0+BX). (3) Give everything to one gradient-boosting learner: E6's features, R0, the deep chain, the box and E11-1's R3 | (1) 4 steps 0.063 vs 3 steps 0.063: **a tie**. Of 32 new "yes" answers at 4–6 steps, 28 go through the same path (person → individual → human → hominid → anthropoid = animal), and 4 use a wrong sense. (2) Box alone 0.117; filling 0.091: **worse** under Claude's labels, ties under Gemini's. (3) **The combined learner wins**: 700 items 0.053 → 0.038 (5/5 runs by 20%); 300 new items 0.042 → 0.031, interval [0.0006, 0.022], just above 0 |
+| E11-2 | (1) Follow the chain up to 6 steps instead of 3. (2) A box embedding (Li et al. 2019) trained only on E8n's own steps and arrivals, no WordNet, no labels; fill the chain's "no" with the box (R0+BX). (3) Give everything to one gradient-boosting learner: E6's features, R0, the deep chain, the box and E11-1's R3 | (1) 4 steps 0.063 vs 3 steps 0.063: **a tie**. Of 32 new "yes" answers at 4–6 steps, 28 go through the same path (person → individual → human → hominid → anthropoid = animal), and 4 use a wrong sense. (Why deeper chains do not help was found in E14: most missed chains stop at a dead end, not at the step limit.) (2) Box alone 0.117; filling 0.091: **worse** under Claude's labels, ties under Gemini's. (3) **The combined learner wins**: 700 items 0.053 → 0.038 (5/5 runs by 20%); 300 new items 0.042 → 0.031, interval [0.0006, 0.022], just above 0 |
 | E11-3 | Does the combined learner repeat on other questions? K "is a type of" (E10-3's 23,046 claims, E9-3's 600 labels) and P part-whole (E10-1 items) were fixed as main; D disease and G geography as side questions. Gemma-only gradient boosting (C++, as in E10) vs everything (ALL): C++ features + dictionary chain + E10-1 fixes + the outside texts of E10-2/E10-3 + a box trained as in E11-2. "Repeated" was fixed as: ALL beats C++ on both K and P | **Repeated.** Common-sense labels (Claude): K 0.017 → 0.004 (5/5), P 0.062 → 0.039 (5/5), D 0.025 → 0.016 (4/5), G 0.034 → 0.032 (tie). Against the best earlier method: K beats C++ + chain (0.006, 4/5); P ties X++ (GenericsKB sentences, 0.037); D beats ⑧N++ (0.023, 4/5). Under Gemini's labels P, D and G are ties. Under the original labels (WordNet, ontology, M49) ALL wins on all four |
 
 **What E11 shows.**
@@ -775,6 +785,267 @@ with $v_r$ random nodes (5 negatives), Adam, learning rate 0.01, 200 epochs. Ite
 | AURC | Geifman et al. 2019 | – |
 
 E11 has no network, so the check is that rerunning the analyses from the published files reproduces the saved outputs ([Rerunning the analysis](#rerunning-the-analysis)).
+## E12: Does Gemma's sense choice hold up at scale? (2026-11-12)
+
+E8's core step is letting Gemma choose which sense of a definition's head word is meant (dog → "animal" in which sense?). Until E12 this had been measured on only 37 cases (Gemma 35/37, first sense 24/37). E12 measures it on tens of thousands of cases with sense labels made by people, then checks whether Gemma only remembers the dictionary (E12-1), and how far off its misses are and whether its confidence helps (E12-2). Plans (fixed before the results; changes logged at the end of each): `plans/E12_gloss_head_sense.md`, `plans/E12-1_memorized_or_not.md`, `plans/E12-2_coarse_senses_and_abstain.md`; prior work: `plans/E12_prior_work.md` (all Japanese). Code: `analysis/e12/`; notebooks: `colab/E12_gloss_head_sense.ipynb`, `colab/E12-1_memorized_or_not.ipynb`; outputs: `data/E12/`; analysis outputs: `results/E12/`.
+
+Setup:
+
+- Data: the Princeton WordNet 3.0 Gloss Corpus (glosses with manually tagged senses; the original Princeton download has been offline since 2018, we used the copy at github.com/sgjimenezv/wordnet_3_0_glosstag). From the 82,115 noun glosses, the head word is the head of the first noun chunk (spaCy), the same rule as E8n.
+- Items: the head word has exactly one manual sense tag, is a one-word noun, and has 2–8 WordNet senses: **34,402 items** (4,035 different head words). Side set: the object of "of" ("a kind of X"), 7,855 items. The tagged sense is WordNet's first sense in 60.5% of the head-word items.
+- Methods: S0 random; S1 WordNet's first sense (WordNet orders senses by frequency; Wiktionary, used in E8, has no such strong order); S2 Lesk (word overlap between the gloss and each candidate sense, weighted by IDF over all noun glosses, no stop-word list); S3 similarity (all-mpnet-base-v2, E8's method C); **G Gemma-2 2B** with E8 method D's prompt, the candidates shown in a random order and in its reverse (showing WordNet's order would put the first sense first). Reference T, WordNet's tree (pick the candidate that is an ancestor of the defined word), uses information close to the answer and is only a yardstick.
+- Rule: "a difference" is at least 5 points with a 95% bootstrap interval that excludes 0, resampling head words (1,000 times; same as E11-1).
+
+| Step | Question | Main result |
+|---|---|---|
+| E12 | Accuracy of the head word's sense on 34,402 WordNet glosses | **Gemma 80.9%**, similarity 67.9%, first sense 60.5%, Lesk 35.9%, random 31.4% (reference: WordNet's tree 82.5%). Gemma − first sense +20.5 points [13.7, 28.2], Gemma − similarity +13.0 [10.3, 16.3]: **differences**. Averaged per head word: 76.9% vs 51.4% (first sense). Where the answer is not the first sense (13,602 items) Gemma is right 75.0% (similarity 65.9%). "Of" objects: 73.9% vs 61.9% |
+| E12-1 | Does Gemma only remember WordNet's glosses? 5,000 items: B hide the defined word; C hide it and paraphrase the gloss and the candidates with another model (Qwen2.5-1.5B-Instruct); D show the first half of the gloss and ask Gemma to continue it | A (as in E12) 81.3%, B 80.8%, C 69.3%, first sense 59.3%. C − first sense +10.0 [3.4, 17.0]; on items whose second half Gemma cannot recall (overlap < 0.2, 1,327 items) A − first sense +23.8 [15.1, 33.7]. Both rules hold: **not only memory**. Accuracy is flat across recall levels (81.8 / 81.5 / 84.2%) |
+| E12-2 | (1) How far off are the misses? Count with coarse senses (CSI, Lacerra et al. 2020; WordNet lexnames). (3a) Use Gemma only when its confidence is high, else the first sense. (3b) In E8n's chain, follow the first 4 senses where Gemma is unsure | (1) Coarse accuracy: Gemma 88.9% (CSI), 88.1% (lexname); 41% (CSI) of Gemma's misses fall in the same coarse group as the answer, so most misses are not near-misses. (3a) Tie (+0.2 points). (3b) Only 6.9% of the chain's steps have confidence below 0.9; 300 new items 0.056 vs 0.056: **tie** |
+
+**What E12 shows.**
+
+- Gemma-2 2B picks the meant sense of a definition's head word in about 4 of 5 cases on 34,402 human-tagged items, clearly above WordNet's first sense and embedding similarity. E8's 35/37 (95%) was too high; at scale it is about 80%.
+- Hiding the word changes nothing, and accuracy does not depend on how much of the gloss Gemma can recall. Paraphrasing costs 12 points, but the paraphrases were rough (the head word survived in only 24%), so that drop mixes memory with damage from the paraphrase.
+- Gemma's confidence does not help as a switch, and the chain's errors in E8n do not come from unsure sense choices.
+- What we cannot claim: that the same accuracy holds on Wiktionary (E8's dictionary; WordNet and Wiktionary split senses differently), or that no part of the accuracy comes from memory.
+
+**Hand-set parts.** Senses per word 2–8, 5,000 items for the WordNet-order check and E12-1 (seed 0), the 5-point rule, recall cut-offs 0.2 and 0.5, glosses of at least 6 words for D, generation lengths 60 and 40, NLI 0.5 for "same meaning", the τ candidates {0.5, 0.6, 0.7, 0.8, 0.9, 0.95}. No word lists (the item builder, local methods and Colab core were checked by eye).
+
+### E12: how the computation works
+
+**Symbols added in E12.**
+
+| Symbol | Meaning |
+|---|---|
+| $\eta$, $h$ | a WordNet noun gloss and its head word |
+| $d_1,\dots,d_K$ | the WordNet noun senses of $h$ in WordNet's order ($2 \le K \le 8$); $d_1$ is the first sense |
+| $k^\dagger$ | the manually tagged sense (the answer) |
+| $s_k$ | a method's score for sense $k$; $T = \{k : s_k = \max_m s_m\}$ the tied top senses |
+| $\pi_k$ | Gemma's probability for sense $k$, averaged over two orders (as in E11-1) |
+| $c(\cdot)$ | a coarse group (CSI cluster or WordNet lexname) |
+
+**Gemma's choice (G).** The prompt is E8 method D's: `Dictionary definition of "w": η … In this definition, which meaning of the word "h" is used? 1. … 2. … Answer with the number only.` With $\lambda_m$ the logit of number token $m$ at the first answer position and $o$ the shown order,
+
+$$ \pi_k = \tfrac12 \sum_{o \in \{o_1,\, \mathrm{rev}(o_1)\}} \mathrm{softmax}_m(\lambda_m)\big|_{m = o^{-1}(k)}, \qquad s_k^{\mathrm G} = \pi_k $$
+
+with $o_1$ a random order (seed 0). E12-1 B uses the same prompt with `Dictionary definition of a word:` (no name); C shows Qwen's paraphrases of $\eta$ and of each $d_k$.
+
+**Other methods.** S1: $s_1 = 1$, others 0. S3: $s_k = \cos\big(v(\eta), v(d_k)\big)$ with all-mpnet-base-v2. S2 (Lesk), with $\mathrm{tok}(\cdot)$ the set of lower-case words matching `[a-z][a-z-]*`, $N = 82{,}115$ noun glosses and $\mathrm{df}(u)$ the number of glosses containing $u$:
+
+$$ s_k^{\mathrm{Lesk}} = \sum_{u \,\in\, \mathrm{tok}(\eta) \cap \mathrm{tok}(d_k)} \mathrm{idf}(u), \qquad \mathrm{idf}(u) = \log \frac{N}{\mathrm{df}(u)} \;\; (\log N \text{ if unseen}) $$
+
+**Accuracy with ties, and the interval.** One item scores $\mathrm{hit} = [k^\dagger \in T] / |T|$ (a tie counts as a random pick among the tied senses). For a difference between methods $a$ and $b$, head words $h$ are resampled with replacement (1,000 times) and each draw gives $\sum_{i \in \text{draw}} (\mathrm{hit}^a_i - \mathrm{hit}^b_i) \big/ |\text{draw}|$; the interval is the 2.5–97.5 percentiles.
+
+**Recall (E12-1 D).** Gemma sees `Complete the WordNet definition of the noun "w". … w: <first half>` and writes up to 40 tokens. With $r$ the words of the true second half and $\hat r$ the words written, recall $= \mathrm{LCS}(r, \hat r)/|r|$ (words in the same order; glosses of at least 6 words).
+
+**Coarse accuracy (E12-2 1).** $\mathrm{hit}_c = \frac{1}{|T|}\sum_{k \in T} [c(d_k) = c(d_{k^\dagger})]$; random is $\frac1K \sum_k [c(d_k) = c(d_{k^\dagger})]$. Items with a sense missing from the CSI table are left out (10,509).
+
+**Confidence switch (E12-2 3a, 3b).** 3a: answer $\arg\max_k \pi_k$ if $\max_k \pi_k \ge \tau$, else sense 1; $\tau$ is chosen on one half of the head words (seed 0) and compared on the other. 3b (method D′): in E8n's chain, a step out of node $n$ follows Gemma's sense $j^*$ if $\max_j \pi_{n,j} \ge \tau$, otherwise all of the first 4 senses of $g(n)$ (method A); $\tau$ is chosen on the 700 items and used once on the 300 new items, with E8n's rule (20% and bootstrap by noun).
+
+**Formulas and code.**
+
+| Formula | Code |
+|---|---|
+| Items (head word, candidates, answer) | `analysis/e12/e12_items.py` (reads the Gloss Corpus `noun.xml`) |
+| G prompt, two orders, $\pi_k$ | `choice_prompt`, `jobs`, `merge` in `analysis/e12/e12_core.py` |
+| Lesk, WordNet tree | `idf_table`, `lesk`, `tree` in `analysis/e12/e12_local.py` |
+| Hit with ties, bootstrap by head word | `hit`, `boot_diff` in `analysis/e12/e12_analyze.py` |
+| E12-1 prompts, recall, overlap | `choice_prompt_hidden`, `para_prompt`, `recall_prompt`, `lcs_recall`, `overlap` in `analysis/e12/e121_core.py`; analysis `e121_analyze.py` |
+| Coarse accuracy, 3a | `labels_of`, `main` in `analysis/e12/e122_coarse.py` |
+| D′ | `chains_mixed`, `main` in `analysis/e12/e122_chain.py` |
+
+**Borrowed and our own.**
+
+| Part | Borrowed idea (source) | Our own choices |
+|---|---|---|
+| Disambiguating the words of WordNet glosses | Senseval-3 gloss WSD task (Litkowski 2004; best 68.6%, all words); Gloss Corpus (Princeton) | only the head word; items with one manual tag and 2–8 senses |
+| Genus-word disambiguation in dictionaries | Rigau et al. 1998 (61–64%) | — |
+| LLM picks a sense from numbered definitions | Meconi et al. 2025 (Gemma-2 2B 72.4 on standard WSD); ConSeC 2021 | two shuffled orders averaged |
+| Lesk | Lesk 1986 | IDF over all noun glosses, no stop-word list |
+| Contamination checks | Golchin & Surdeanu (Data Contamination Quiz; Time Travel); Deng et al. 2024 (TS-Guessing) | hiding the word, paraphrasing with another model, recall of the second half |
+| Coarse senses | Navigli 2006; Lacerra et al. 2020 (CSI); Ciaramita & Johnson 2003 (supersenses) | counting how many misses stay in the answer's group |
+| Abstaining on low confidence | Geifman & El-Yaniv 2017 | the switch to the first sense; D′ in the chain |
+
+E12 has no network, so the check is that rerunning the analyses from the published files reproduces the saved outputs ([Rerunning the analysis](#rerunning-the-analysis)).
+
+## E13: Without any labels, does a network combine conflicting signals better? (2026-11-12)
+
+The network (BP) lost in E3, E4 and E9 where some labels existed, or where one reused rule set piled up errors. One case had not been tried: **no labels at all**, with several signals that disagree. E10-2 and E10-3 already give five signals for every claim, so E13 compares ways of combining them without any new Colab run. Plan (fixed before the results): `plans/E13_combine_without_labels.md`; prior work: `plans/E13_prior_work.md` (Japanese). Code: `analysis/e13/e13.py`; output: `results/E13/E13_results.json`.
+
+Setup:
+
+- Claims and signals are E10-3's. K "is a type of": 501 nouns × 46 categories = 23,046 claims. P part-whole: 9,750 claims. Five signals per claim, all from Gemma-2 2B or NLI: ① Gemma with nothing shown, ⑩ with dictionary definitions shown, ⑪g with GenericsKB sentences shown, ⑫ with its own written sentence shown, ⑪n NLI on the sentences (only when sentences were found).
+- No labels are used to combine. Labels only score: Claude's common-sense labels (K 558 items, P 532 items; "debatable" removed), with WordNet's labels as the second scoring.
+- K's category rules ("C ⇒ D"): the category pairs Gemma said "C is a type of D" with a positive logit in E4-2 (2,300 questions; WordNet not used).
+- Methods (no labels): M1 mean of probabilities; M2 majority vote; M3 Dawid–Skene; M4 the network (M3's weights as evidence + the category rules, BP); M4b the network with M1's mean as evidence. References: the p-bit method (Gibbs sampling of M4's energy); R1 choosing the best single signal on 20 WordNet-labeled claims (5 draws).
+- Rule: AURC, a difference of at least 20% of the opponent's value with a 95% bootstrap interval (by noun, 1,000 times) that excludes 0. Main 1: M4 beats both M1 and M2 on K → "the network has a role when there are no labels". If not, write "the network's role is over".
+
+AURC with Claude's labels (lower is better):
+
+| Method | K "is a type of" (558) | P part-whole (532) |
+|---|---|---|
+| ① nothing shown | 0.124 | 0.199 |
+| ⑩ definitions / ⑪g sentences / ⑫ own sentence / ⑪n NLI | 0.097 / 0.107 / 0.148 / 0.130 | 0.089 / 0.130 / 0.271 / 0.145 |
+| **M1 mean** | **0.077** | **0.084** |
+| M2 majority vote | 0.078 | 0.088 |
+| M3 Dawid–Skene | 0.097 | 0.198 |
+| M4 network (DS + category rules, $w=2$) | 0.091 | – |
+| M4b network (from the mean) | 0.089 | – |
+| reference: network $w=1$ / $w=3$ | 0.078 / 0.105 | – |
+| reference: p-bit method (Gibbs) | 0.111 | – |
+| R1 best single signal on 20 labels (5 draws) | 0.113 | 0.141 |
+
+**What E13 shows.**
+
+- Main 1 fails: the network ties the mean (0.091 vs 0.077) and the majority vote (0.078), slightly worse. By the rule fixed in advance, **the network's role is over** in this research form.
+- Dawid–Skene is worse than the vote on P (0.198 vs 0.088, a difference). It trusts ⑩ (rarely says yes) too much; all five signals come from the same small model, so their errors are alike (the point made by Berti-Equille 2026).
+- Without labels, the plain mean of five signals beats every single signal (K 0.124 → 0.077, P 0.199 → 0.084). It does not reach E10-3's learner that uses 20% labels on P (0.039).
+- The p-bit method and BP tie, as in E4. WordNet's labels give the same order (mean 0.016 best, network 0.033, DS 0.057).
+
+**Hand-set parts.** The rule penalty $w = 2$ (references 1 and 3), 50 EM iterations, the rule threshold (Gemma's logit 0), 20 labels × 5 draws, 1,000 resamples, 20%. No word lists.
+
+### E13: how the computation works
+
+**Symbols added in E13.**
+
+| Symbol | Meaning |
+|---|---|
+| $\ell_{i,s}$ | signal $s \in \{①, ⑩, ⑪g, ⑫, ⑪n\}$ for claim $i$, as a logit (⑪n: $\mathrm{logit}$ of the largest entailment); missing when a source has nothing |
+| $v_{i,s}$ | vote $[\ell_{i,s} > 0]$ |
+| $S_i$ | the signals available for claim $i$ |
+| $\pi$, $a_s$, $b_s$ | Dawid–Skene: share of true claims, $P(v_s = 1 \mid \text{true})$, $P(v_s = 1 \mid \text{false})$ |
+| $\mathcal R$ | category rules $(C, D)$: Gemma's logit for "C is a type of D." is positive (E4-2) |
+| $y_{X,C}$ | network variable "X is a type of C" (0 or 1) |
+
+**Mean and vote.**
+
+$$ M1_i = \frac{1}{|S_i|}\sum_{s \in S_i} \sigma(\ell_{i,s}), \qquad M2_i = \frac{1}{|S_i|}\sum_{s \in S_i} v_{i,s} + 10^{-3}\,(M1_i - 0.5) $$
+
+(the small second term only breaks ties).
+
+**Dawid–Skene (M3).** Start from $q_i = M2_i$ (clipped to [0.01, 0.99]) and repeat 50 times:
+
+$$ \pi = \overline{q}, \quad a_s = \frac{\sum_i q_i v_{i,s}}{\sum_i q_i}, \quad b_s = \frac{\sum_i (1-q_i) v_{i,s}}{\sum_i (1-q_i)}, $$
+
+$$ z_i = \mathrm{logit}\,\pi + \sum_{s \in S_i} \Big[ v_{i,s} \log\frac{a_s}{b_s} + (1-v_{i,s}) \log\frac{1-a_s}{1-b_s} \Big], \qquad q_i = \sigma(z_i) $$
+
+(sums over the claims where $s$ is available; $a_s, b_s$ clipped to [0.01, 0.99]). M3 $= q_i$.
+
+**Network (M4, K only).** For each noun $X$, one variable per category,
+
+$$ P(y) \;\propto\; \exp\Big( \sum_C h_{X,C}\, y_{X,C} \;-\; w \sum_{(C,D) \in \mathcal R} [\,y_{X,C} = 1,\; y_{X,D} = 0\,] \Big) $$
+
+with $h = z$ from M3 (M4b: $h = \mathrm{logit}(M1)$) and $w = 2$. The output is the belief from damped BP (damping 0.5, 50 iterations). The p-bit method samples the same $P(y)$ by Gibbs sweeps (2,200 sweeps, the first 200 dropped).
+
+**R1.** Draw 20 claims with WordNet labels (both classes present), pick the signal with the lowest AURC on them, score it; 5 draws (seed 13).
+
+**Formulas and code.**
+
+| Formula | Code |
+|---|---|
+| Signals and rules | `load_K`, `load_P` in `analysis/e13/e13.py` |
+| M1, M2 | `m_mean`, `m_major` |
+| M3 | `dawid_skene` |
+| M4, M4b, p-bit method | `net` (`how="bp"` or `"gibbs"`) |
+| R1, decision rules | `run`, `judge` |
+
+**Borrowed and our own.**
+
+| Part | Borrowed idea (source) | Our own choices |
+|---|---|---|
+| Estimating source accuracies without labels | Dawid & Skene 1979; Snorkel (Ratner et al. 2017); Platanios et al. 2017 | five signals from one small model |
+| Truth discovery with a few labels | Berti-Equille 2026 (BP-TD: picking the best source on 20 labels beats the rest) | R1 as the reference |
+| Rules between categories in the network | Pujara et al. 2013 (knowledge graph identification); E4-2 | the rule set from Gemma's own answers; penalty $w$ |
+| AURC | Geifman et al. 2019 | – |
+
+The network code is the same kind of binary BP as E4; E13 checks only that the p-bit method gives the same answers (it does, as in E4).
+
+## E14: Filling the chain's dead ends with outside sentences (2026-11-12 to 11-13)
+
+Counting E8n's errors (`plans/E14_count_gaps.md`): of the 82 true claims the chain answers "no" to (52 in the 700 items, 30 in the 300), 55 score almost 0. Forty of them are people or animals → "living thing" or "mammal". They stop because the chain hits a **dead end** (48; for example granddaughter → child → descendant → progeny, then a loop in the dictionary), or because the noun's definition has no head noun ("One who studies zoology", 4). This is why E11-2's longer chains (6 steps) did not help. E14 adds an outside "A is a kind of B" sentence at each chain node to see if the chain then reaches the category. Plans: `plans/E14_fill_gaps.md`, `plans/E14-1_gemma_judge.md`, `plans/E14-2_wikipedia_first_sentence.md`, `plans/E14-3_wikipedia_lead.md`; prior work: `plans/E14_prior_work.md` (all Japanese). Code: `analysis/e14/`; notebooks: `colab/E14_fill_gaps.ipynb`, `colab/E14-1_gemma_judge.ipynb`, `colab/E14-2v2_wikipedia_first_sentence.ipynb`, `colab/E14-3_wikipedia_lead.ipynb`; outputs: `data/E14/`; analysis outputs: `results/E14/`.
+
+Setup shared by the four steps:
+
+- The base is E11-2's 6-step chain (E8n method D extended); without added sentences it equals E8n (3 steps) and E11-2 (6 steps) exactly (checked in every run, difference 0.0).
+- At every chain node (not only at dead ends, so that the place to add is not chosen by looking at the answer), a sentence whose subject's head is the word $w$ is added; the other noun-chunk heads in the sentence are parent candidates; the parent is the best-scoring candidate; Gemma chooses the parent's sense (E8n method D's prompt, with the sentence in place of the definition); from there the chain follows Wiktionary again. Up to 6 steps in all.
+- Items, labels and rules are E8n's: the 700 items (Claude's common-sense labels; Gemini as the second scoring) and the 300 new items (Claude), AURC of the strongest path, a difference of at least 20% with a 95% interval by noun that excludes 0. The flag needs both the 700 and the 300.
+- These 1,000 items had been seen in E8n and E11. A win would only be a candidate; every step tied or lost, so there is no win chosen after the fact.
+
+| Step | Source of the added sentences, and the judge | Main result (AURC, 700 / 300) |
+|---|---|---|
+| E14 | GenericsKB (all 3.4M sentences; the "Best" set is avoided because it contains sentences made from WordNet and ConceptNet), up to 3 per word; plus one sentence Gemma writes (`Write one short sentence saying what kind of thing a "w" is.`). Judge: NLI "sentence ⇒ W is a type of P." | ⑭gs 0.140 / 0.085 vs ⑥N 0.063 / 0.056: **worse** on the 700. 41 of the 52 wrong "no"s turn into "yes", but 127 wrong "yes"s are added. Adding ⑭gs to E11-2's combined learner: better in 0 of 5 runs (a tie). Gemma's own sentence alone (⑭s): 0.064 / 0.036, a tie on the 700 (after the fact, not a claim) |
+| E14-1 | same sentences; judge: Gemma `Sentence: … Does this sentence say that a "w" is a kind of "P"? Answer Yes or No only.` | ⑭′gs 0.124 / 0.081: still **worse**; wrong "yes" 181 → 184. Gemma rejects obvious noise but passes "X is a Y" sentences that are off-topic |
+| E14-2 | Wikipedia: the first sentence of the noun's article (official API, one request per second; disambiguation pages left out); judge: Gemma; at most one added sentence per path | W1 0.063 / 0.050 vs N3 0.063 / 0.056: **tie**. Clean (5 new wrong "yes"s), but fills only 12 of 52 |
+| E14-3 | Wikipedia: the first 10 sentences of the lead; a pronoun subject counts only when the article's title is the word itself; judge: Gemma | W1 0.067 / 0.049: **tie**; fills 14 of 52, 4 new wrong "yes"s |
+
+**What E14 shows.**
+
+- The dead ends can be filled: with GenericsKB and Gemma's sentences, 80% of the wrong "no"s became "yes". But general sentences are noisy (a sentence about a pesticide named "Safety" made safety → plant; NLI gave "Granddaughters trump even a four-homer win" 0.99 for "a granddaughter is a type of win"), and sentences shaped "X is a Y" pass even Gemma's judge. Chains that add sentence after sentence drift (breadwinner → support → price → mechanism → …). Overall, worse.
+- Clean sources (Wikipedia) do not hurt, but fill too little: articles are missing for many common nouns (disambiguation pages: web, station, player), and more text (the whole lead) fills only 2 more.
+- Looking at the 38 still unfilled after E14-3 (after the fact): many chains already reach person, human, mammal or organism, and fail only at the **last step**, the NLI arrival (for example "mammal ⇒ living thing" gets a low value); others pick a wrong parent from the sentence (mathematician → work), or the answer itself is debatable (athlete → worker). The amount of outside text is not the bottleneck. This is what E15 tests next.
+- What we cannot claim: that outside text is needed. In E10-3, E14 and E14-1, Gemma's own sentences did at least as well as the retrieved ones.
+
+**Hand-set parts.** 3 GenericsKB sentences per word (20 read), 6 parent candidates per sentence, 30 words for Gemma's sentence, 6 steps, 10 lead sentences, at most 1 added sentence per path (E14-2/3), Wikipedia: 20 titles per request, one request per second. No word lists: the source filter uses GenericsKB's source field, disambiguation pages are dropped by the API's page properties; scanned with `analysis/e10/e101/scan.py` before each notebook was handed over (only key, method and dependency-label names were found). E14-2's first notebook (the summary API, 8 requests in parallel) was refused by Wikipedia for over half the words; it was replaced by the slower v2 before any comparison and is not used.
+
+### E14: how the computation works
+
+This uses the symbols of [E6–E8: how the computation works](#e6e8-how-the-computation-works) ($n = (w,j)$, $q_n$, $a_n$, $S(n,t)$, $j^*$).
+
+**Symbols added in E14.**
+
+| Symbol | Meaning |
+|---|---|
+| $\varphi_{w,i}$ | the $i$-th added sentence about word $w$ (a graft node $(\mathrm g, w, i)$; dictionary nodes are $(\mathrm s, w, j)$) |
+| $P(\varphi)$ | parent candidates: heads of the other noun chunks in $\varphi$ (nouns, at most 6) |
+| $J(\varphi, w, p)$ | the judge's value for "σ says a w is a kind of p": NLI entailment of $\varphi \Rightarrow$ `W is a type of p.` (E14), or Gemma's $\sigma(\ell_{\text{Yes}} - \ell_{\text{No}})$ for the prompt above (E14-1 to E14-3) |
+| $p^*(\varphi)$ | the chosen parent, $\arg\max_{p \in P(\varphi)} J(\varphi, w, p)$ |
+| $G$ | the largest number of graft nodes allowed on one path (E14: no limit; W1: 1) |
+
+**Which sentences.** $\varphi$ is used for $w$ only if the head of its subject noun chunk (dependency `nsubj` or `nsubjpass`) is $w$ (lemma or text); in E14-3 also a pronoun subject when the Wikipedia title is $w$ itself. GenericsKB: the 20 highest-scored sentences for $w$ are read, and the 3 with the largest $J(\varphi, w, p^*)$ kept. Gemma's sentence: one. Wikipedia: the first sentence (E14-2) or the first 10 lead sentences (E14-3), keeping the one $(\varphi, p^*)$ with the largest $J$.
+
+**Edges.**
+
+- $(\mathrm s, w, j) \to (\mathrm s, g, j^*)$: the dictionary step as in E8n, strength $q_{(w,j)}$, 1 step.
+- $(\mathrm s, w, j) \to (\mathrm g, w, i)$: the sentence about the same word, strength 1, 0 steps. For a middle word, only when Gemma reads $w$ in $\varphi$ in sense $j$ (`Sentence: φ … which meaning of the word "w" is used?`); the noun itself starts from its sentences directly.
+- $(\mathrm g, w, i) \to (\mathrm s, p^*, j^*)$: strength $J(\varphi_{w,i}, w, p^*)$, 1 step; Gemma chooses the sense $j^*$ of $p^*$ in $\varphi$.
+
+**Arrival.** Dictionary nodes: $a_n$ as in E8n. Graft nodes: $a_{(\mathrm g,w,i)} = J(\varphi_{w,i}, w, C)$.
+
+**Strongest path with step costs and a graft limit.** With $\omega(n \to m)$ the edge strength and $c(n \to m) \in \{0, 1\}$ the step cost above and $\kappa$ the grafts still allowed,
+
+$$ S(n, t, \kappa) = \max\Big( a_n,\; \max_{m \in \mathrm{ch}(n),\; c(n\to m) \le t,\; [m \text{ graft}] \le \kappa} \omega(n \to m)\; S\big(m,\, t - c(n \to m),\, \kappa - [m \text{ graft}]\big) \Big) $$
+
+($S = a_n$ when $a_n = 1$). The score is $\max_{\text{roots } r} S\big(r, 6, G - [r \text{ graft}]\big)$ (a root can be a sentence about $X$ itself); N3 and N6 use no graft nodes and $t = 3, 6$.
+
+**Learner (E14).** E11-2's combined learner (gradient boosting, 5 runs × 5 folds by noun) with and without three more features: the ⑭gs score, its number of steps and the score of showing the sentences directly (⑪x).
+
+**Formulas and code.**
+
+| Formula | Code |
+|---|---|
+| Subject test and parent candidates $P(\varphi)$ | `subject_parents` in `analysis/e14/e14_core.py` |
+| Gemma's sentence, sense in a sentence | `self_prompt`, `clean_self`, `sense_in_sentence_prompt` in `e14_core.py` |
+| Growing the chains (sentences, $p^*$, $j^*$, arrivals) | `grow`, `new_word` in `e14_core.py`; the Colab cells in `analysis/e14/build_notebook_E14*.py` (the Gemma judge `says_prompt`, Wikipedia reading `wiki_sents`) |
+| Edges and $S(n,t)$ | `follow` in `e14_core.py`; `Graph` in `analysis/e14/e14_analyze.py` |
+| Graft limit $G$ | `GraphB` in `analysis/e14/e142_compare.py` |
+| Learner, decision rules | `run` in `e14_analyze.py` (E11-2's `gb_cv`, `box_scores`); `e141_compare.py`, `e142_compare.py` |
+| Stripping texts for publication | `analysis/e14/strip_texts.py` |
+| The error count before E14, the look at what is left after E14-3 | `analysis/e14/count_gaps.py`, `analysis/e14/e143_diag.py` |
+
+**Borrowed and our own.**
+
+| Part | Borrowed idea (source) | Our own choices |
+|---|---|---|
+| Combining dictionaries to fill gaps in taxonomies built from definitions | Véronis & Ide 1991 (errors 55–70% → 6% with five dictionaries); empty heads ("one who…"): Chodorow et al. 1985, Guthrie et al. 1990 | adding at every chain node; a judge picks the parent |
+| Generic sentences | GenericsKB (Bhakthavatsalam et al. 2020) | using all of it, not "Best" |
+| Hypernyms from Wikipedia's first sentence | Kazama & Torisawa 2007; WiBi (Flati et al. 2014) | no word list; Gemma picks the parent; the whole lead in E14-3 |
+| Sentence patterns for "is a kind of" | Hearst 1992; Snow et al. 2005 | the subject test only, no patterns |
+| Having the model write its own context | GenRead (Yu et al. 2023); Liu et al. 2022 | one sentence per word |
+| Strongest path | as E8 | step costs, the graft limit |
+| AURC | Geifman et al. 2019 | – |
+
+E14 has no network, so the check is that rerunning the analyses from the published files reproduces the saved outputs ([Rerunning the analysis](#rerunning-the-analysis)).
+
 ## Layout
 
 - `colab/`: Google Colab notebooks (T4 GPU). They ask Gemma the questions and save the answers. The E2-2 and E2-3 notebooks also run the analysis and draw the figures.
@@ -802,6 +1073,9 @@ E11 has no network, so the check is that rerunning the analyses from the publish
 - `analysis/nolist/`: the recheck without hand-written word lists (`e8n_core.py` without the lists, `e8n_analyze.py`/`e8n_analyze_gb.py` for E7/E8, notebook builders). `colab/E8n_nolist_recheck.ipynb` (E7/E8, L4 GPU, about 1 hour) and `colab/E9n_nolist_recheck.ipynb` (E9 checker, L4 GPU). `data/E8n_chains_nli.json` (definition texts removed) and `data/E9n_checker_scores.json`. Results in `results/nolist/`
 - `analysis/e10/`: E10 code (`e10_data.py` builds the questions, `e10_core.py` is the Colab core, `e10_analyze.py`, notebook builder). `e101/`, `e102/`, `e103/`: E10-1, E10-2 and E10-3 (data builder, Colab cores, notebook builders, `*_analyze.py`, `scan.py` for the hand-written-list scan, `gemini/` with the prompts given to Gemini and its labels; `e103/k_items.json` and `cs_K_claude.json` for the "is a type of" part). Notebooks: `colab/E10_dictionary_other_questions.ipynb`, `colab/E10-1_fixes_without_lists.ipynb`, `colab/E10-2_show_definitions_and_generics.ipynb`, `colab/E10-3_self_text_isa_sense_filter.ipynb` (L4 GPU, 1 to 2 hours each; resumable). `data/E10/`: the items with answers and the notebooks' outputs (Gemma's logits, sense choices, NLI scores and the GenericsKB sentences shown, CC BY 4.0; dictionary definition texts removed, CC BY-SA). `results/E10/`: common-sense labels and analysis outputs
 - `analysis/e11/`: E11 code (`e111_core.py`, `e112_core.py` Colab cores; `e112_box.py` and `e113_box.py` box embeddings; `e111_analyze.py`, `e112_analyze.py`, `e112_ablate.py`, `e113_analyze.py`; notebook builders). Notebooks: `colab/E11-1_usual_sense.ipynb`, `colab/E11-2_deep_chain_box.ipynb` (L4 GPU, 20 to 35 minutes and 10 to 20 minutes), `colab/E11-3_box_gpu.ipynb` (trains the E11-3 boxes on a GPU). `data/E11/`: the notebooks' outputs (Gemma's sense probabilities with WordNet glosses; the deeper chains with Wiktionary definition texts removed, CC BY-SA; the E11-3 box values). `results/E11/`: analysis outputs (the drift sample keeps only the words on each path)
+- `analysis/e12/`: E12 code (`e12_items.py` builds the items from the Gloss Corpus, `e12_local.py` the methods without a GPU, `e12_core.py`/`e121_core.py` Colab cores, `e12_analyze.py`, `e121_analyze.py`, `e122_coarse.py`, `e122_chain.py`, notebook builders). Notebooks: `colab/E12_gloss_head_sense.ipynb` (L4 GPU, under an hour), `colab/E12-1_memorized_or_not.ipynb` (L4 GPU). `data/E12/`: the items (WordNet glosses and tags), the local methods' scores and the notebooks' outputs (Gemma's sense probabilities, similarities, Qwen's paraphrases, recall). `results/E12/`: analysis outputs
+- `analysis/e13/e13.py`: E13 (CPU, about 15 minutes; reads `data/E10/`, `results/E10/E10-1/`, `analysis/e10/e103/` and `data/E4-2_answers_gemma-2-2b-it.json`). `results/E13/`: its output
+- `analysis/e14/`: E14 code (`e14_core.py` Colab core, `e14_analyze.py` for E14, `e141_compare.py` for E14-1, `e142_compare.py` for E14-2 and E14-3, `strip_texts.py`, `count_gaps.py`, `e143_diag.py`, notebook builders; rebuilding the earlier notebooks gives the later `e14_core.py`, whose added options are off for E14 to E14-2). Notebooks: `colab/E14_fill_gaps.ipynb`, `colab/E14-1_gemma_judge.ipynb`, `colab/E14-2v2_wikipedia_first_sentence.ipynb`, `colab/E14-3_wikipedia_lead.ipynb` (L4 GPU, 10 minutes to 1 hour each; resumable). `data/E14/`: the grown chains with Wiktionary definitions and Wikipedia sentences removed (CC BY-SA); GenericsKB sentences (CC BY 4.0) and Gemma's sentences are kept. `results/E14/`: analysis outputs (the drift samples keep only the words on each path, plus GenericsKB and Gemma sentences)
 - `results/`: result JSON files and figures (`results/E3/E3_main_analysis.json` for E3, `results/E4/` for E4, `results/E5/` for E5, `results/E6/` for E6, `results/E7/` for E7, `results/E8/` for E8, `results/E9/` for E9)
 - `plans/`: plans and results for each experiment (Japanese)
 
@@ -867,6 +1141,14 @@ E10: in `analysis/e10/`, `python e10_analyze.py ../../data/E10/E10/e10_items.jso
 
 E11: in `analysis/`, E11-1: `python e11/e111_analyze.py ../data/E8n_chains_nli.json ../data/E11/E11-1_results.json out.json` (under a minute). E11-2: unzip `data/E11/E11-2_results.json.gz`, then `python e11/e112_analyze.py ../data/E8n_chains_nli.json ../data/E11/E11-1_results.json E11-2_results.json out.json drift.json` (needs `torch`; the box takes about 30 minutes on a CPU) and `python e11/e112_ablate.py` with the same three inputs and `out.json`. E11-3: `python e11/e113_analyze.py out.json` (about a minute; reads `data/E10/`, `results/E10/E10-1/`, `data/E4-2_answers_gemma-2-2b-it.json`, `data/E9n_checker_scores.json` and `data/E11/box_*.json`). The E11-3 boxes are retrained with `python e11/e113_box.py ../data/E10/E10-1 ../data/E10/E10-1/e101_items.json P box_P.json` (CPU, several hours for P; the notebook runs them on a GPU). Rerunning E11-1 and E11-3 from the files in this repository reproduces `results/E11/` exactly. E11-2 does not reproduce bit for bit, because the box training on a CPU differs slightly between runs (thread count); a rerun from these files (`results/E11/E11-2_analysis_rerun.json`) gave every decision unchanged (deep chain tie, box worse, combined learner 5/5 on the 700 items and better on the 300 new items: 0.042 → 0.027, interval [0.0045, 0.027], against 0.031 in the saved run). The after-the-fact drop-one check (`e112_ablate.py`) was not rerun.
 
+E12: in `analysis/`, `python e12/e12_analyze.py ../data/E12/e12_items_all.json.gz ../data/E12/e12_local.json.gz ../data/E12/E12_results.json.gz out.json` (seconds). E12-1: `python e12/e121_analyze.py ../data/E12/e12_items_all.json.gz ../data/E12/E12_results.json.gz ../data/E12/E12-1_results.json.gz out.json`. E12-2: `python e12/e122_coarse.py ../data/E12/e12_items_all.json.gz ../data/E12/e12_local.json.gz ../data/E12/E12_results.json.gz sensekey2csi_complete.tsv out.json` (needs the NLTK WordNet data and the CSI table from https://github.com/SapienzaNLP/csi_code, commit ca30c2f, `data/sensekey2csi_complete.tsv`; CC BY-NC-SA, not stored here) and `cd e12; python e122_chain.py ../../data/E8n_chains_nli.json out.json`. To rebuild the items: `python e12/e12_items.py noun.xml items.json` (Gloss Corpus `merged/noun.xml`, spaCy `en_core_web_sm`, about 7 minutes) and `python e12/e12_local.py items.json local.json`.
+
+E13: `cd analysis/e13; python e13.py out.json` (about 15 minutes; needs `wordfreq`).
+
+E14: in `analysis/e14/`, with `E8_DIR=../e8`: E14 `python e14_analyze.py ../../data/E8n_chains_nli.json ../../data/E11/E11-1_results.json ../../data/E11/E11-2_results.json.gz ../../data/E14/E14_results.json.gz out.json drift.json` (needs `torch`; the E11-2 box inside the learner takes most of the time). E14-1: `python e141_compare.py ../../data/E8n_chains_nli.json ../../data/E14/E14_results.json.gz ../../data/E14/E14-1_results.json.gz out.json`. E14-2 and E14-3: `python e142_compare.py ../../data/E8n_chains_nli.json ../../data/E14/E14-2v2_results.json.gz out.json drift.json` (and `E14-3_results.json.gz`). The error count before E14: `python count_gaps.py ../../data/E8n_chains_nli.json`.
+
+Rerunning E12, E12-1, E12-2, E13, E14-1, E14-2 and E14-3 from the files in this repository reproduces `results/E12/`, `results/E13/` and `results/E14/` exactly (E14-2 and E14-3 from the stripped data). E14 reproduces everything except the learner: the E11-2 box inside it is trained on a CPU and differs slightly between runs (as in E11-2). The rerun (`results/E14/E14_analysis_rerun.json`) gives the same decisions (the learner with ⑭gs better in 0 of 5 runs; on the 300 new items 0.031 → 0.023 against 0.032 → 0.024 in the saved run, not counted as a win because the 700 items failed).
+
 ## Related work and what is different
 
 The closest work we know is BTProp (Hou et al., NAACL 2025, https://arxiv.org/abs/2406.06950). It builds links between statements with a separate model (NLI) and uses belief propagation to detect an LLM's hallucinations. Here, the model also writes the exclusion rules itself, and the network also estimates whether each rule is true (E2-6). In E2-10 we ran BTProp on its own released trees: with the links as given, BTProp is better on WikiBio and tied on FactCheckGPT, so we do not claim our method is better. When a share of the links is deliberately flipped (E2-11), BTProp, which treats the links as certain, degrades sharply, while the rule-doubting BP does not. With links labeled by real models (E2-12), however, BTProp barely degrades: natural labeling errors seem far less harmful than random flips. The model's own confidence (P(True)), which the BTProp paper treats as a strong baseline, is included here as a baseline. Other related work: Crum et al. 2024 (asking LLMs for disjointness axioms), Xu et al. 2026 (neighbor-consistency belief), Jiang, Lowd and Dou 2012 (cleaning an extracted knowledge base with Markov logic), Maieutic prompting (Jung et al. 2022), BeliefBank (Kassner et al. 2021). The E2-9 pattern (doubting the rules costs a little when the rules are right and helps when many are wrong) matches the analysis in Snorkel (Ratner et al., VLDB 2017, https://arxiv.org/abs/1711.10160): learning how accurate each source is helps most when source accuracies vary. Here we see the same tendency when a model checks its own answers.
@@ -874,6 +1156,8 @@ The closest work we know is BTProp (Hou et al., NAACL 2025, https://arxiv.org/ab
 For E10: showing retrieved text to answer a question is retrieval-augmented generation; having the model write its own context first is GenRead (Yu et al., ICLR 2023) and generated knowledge prompting (Liu et al., ACL 2022). Abdallah et al. (2025, https://arxiv.org/abs/2502.20245) found that Gemma-2 2B reading its own generated context beats BM25 retrieval in open-domain QA; on part-whole questions, E10-3 finds its own sentences tie with retrieved general sentences. GenericsKB (Bhakthavatsalam et al. 2020) collects general sentences, and hasPart KB (Bhakthavatsalam et al. 2021) part-whole pairs drawn from them. Mallen et al. (ACL 2023) found that retrieval helps most for rare entities; here it helped only common words, because sentences for rare words were rarely found. Proietti and Lenci (2025) show that LLMs confuse the direction of part-whole relations.
 
 For E11: asking an LLM to pick a word's sense from numbered definitions was measured on standard tests by Meconi et al. (EMNLP 2025, https://arxiv.org/abs/2509.13905; Gemma-2 2B 72.4, most frequent sense 65.2); E11-1 asks for the usual sense without a sentence. Disambiguating the genus word of dictionary definitions to build a taxonomy goes back to Rigau et al. (1998, without an LLM). Box embeddings of hierarchies: Vilnis et al. (2018), Li et al. (2019), Boratko et al. (2021); Ganea et al. (2018) found that embeddings trained only on direct edges recover distant pairs poorly, which matches the weak box alone in E11-2. Learning to combine several confidence signals with a few labels beats the best single signal in 30 of 32 settings in Chauhan et al. (2026, https://arxiv.org/abs/2608.24492); UniFact (Su et al., https://arxiv.org/abs/2512.02772) combines internal signals with outside checks, and its gain shrinks for another model. E11-3 finds the same kind of gain for one small model on three of four question types.
+
+For E12: the Senseval-3 task on WordNet glosses (Litkowski 2004) disambiguated every word of the glosses (best 68.6%, a different WordNet version and all parts of speech, so not directly comparable); Rigau et al. (1998) disambiguated the genus words of a dictionary at 61–64%. E12 measures only the head word, with a small model and no training. Contamination checks follow Golchin and Surdeanu (Data Contamination Quiz, Time Travel) and Deng et al. (NAACL 2024). For E13: estimating source accuracies without labels is Dawid and Skene (1979) and Snorkel; Berti-Equille (2026) found that picking the best source with 20 labels beats truth-discovery methods, and that sources built on the same model share errors, which is what E13 sees. For E14: combining several dictionaries to fill the gaps of a definition taxonomy goes back to Véronis and Ide (1991), and Wikipedia's first sentence as a hypernym source to Kazama and Torisawa (2007) and WiBi (Flati et al., ACL 2014); E14 tests them as additions to a small model's dictionary chain, under a fixed rule, and finds no gain.
 
 ## Limitations
 
@@ -893,6 +1177,9 @@ For E11: asking an LLM to pick a word's sense from numbered definitions was meas
 - E5: same data, domain and model as E4-2. Rule errors are defined by WordNet, so fixing errors moves the rules toward WordNet. The common-sense labels cover 700 items and come from two AI models (Claude, Gemini), not from people. E5-2 reuses the E2-8 data; medical judgments by AI models are not expert judgments, and Gemini's pair labels were uniform, so the pair judgments rest on Claude alone.
 - E10: one small model, one prompt per method, English. The common-sense labels are by Claude (with Gemini from E10-1 on; for "is a type of" in E10-3, Claude only), not by people. Half of each 600-item sample was taken where Gemma or the dictionary said yes. Under Gemini's labels the GenericsKB gain falls below the threshold. GenericsKB sentences were found for only 22% of the part-whole claims (40% of true ones), and almost none for diseases and cities.
 - E11: one small model, English. The labels are the same AI labels as E8 and E10 (Claude, with Gemini as the second), not people's. The E11-2 win on the 300 new items is just above the rule (interval lower end 0.0006). The combined learners need labeled items to train on (20% in E11-3, 4 folds of 700 in E11-2). In E11-3 the K errors are already small (0.017), and the part-whole gain comes mostly from E10-2's sentences. The drift count of the deeper chains is one annotator (Claude). Checks that drop one group at a time were done after the results.
+- E12: WordNet glosses and WordNet senses, not Wiktionary (E8's dictionary). The human sense tags contain errors and close calls. The paraphrases in E12-1 were rough, so the size of any memory effect is not measured.
+- E13: five signals from one small model (and one NLI model); the network had rules only for "is a type of". The common-sense labels are Claude's.
+- E14: the 1,000 items had been used before (E8n, E11); four variants were tried on them, all tied or lost. Wikipedia lacks articles for many common nouns. The reading of 50 grown paths is one annotator (Claude). What is left after E14-3 was looked at after the results.
 - The p-bits are simulated in software. These experiments say nothing about speed or energy.
 
 ## How this was made
@@ -914,6 +1201,9 @@ Code: MIT License (see `LICENSE`). The data in `data/` are outputs of Gemma and 
 - HoVer (Jiang et al., Findings of EMNLP 2020, CC BY-SA 4.0) https://hover-nlp.github.io/ , dev claims with gold evidence as released by ProgramFC (Pan et al., ACL 2023) https://github.com/teacherpeterpan/ProgramFC
 - Gemma-2 9B instruction-tuned https://huggingface.co/google/gemma-2-9b-it and NLI model https://huggingface.co/MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli (E3)
 - English Wiktionary (dumps of 2026-11-10/11, CC BY-SA 4.0) https://dumps.wikimedia.org/enwiktionary/ (E6 to E10). Definition texts are not stored here; the notebooks fetch them
-- GenericsKB (Bhakthavatsalam et al. 2020, CC BY 4.0) through https://huggingface.co/datasets/community-datasets/generics_kb (E10-2, E10-3). The sentences shown to Gemma are in `data/E10/`
+- GenericsKB (Bhakthavatsalam et al. 2020, CC BY 4.0) through https://huggingface.co/datasets/community-datasets/generics_kb (E10-2, E10-3, E14). The sentences used are in `data/E10/` and `data/E14/`
+- Princeton WordNet 3.0 Gloss Corpus (WordNet license), copy at https://github.com/sgjimenezv/wordnet_3_0_glosstag (E12). Its glosses and tags are in `data/E12/`
+- Qwen2.5-1.5B-Instruct https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct and cross-encoder/nli-deberta-v3-base (E12-1); CSI coarse senses (Lacerra et al. 2020, CC BY-NC-SA, not stored) https://github.com/SapienzaNLP/csi_code (E12-2)
+- English Wikipedia (CC BY-SA 4.0) through the MediaWiki API, fetched 2026-11-13 (E14-2, E14-3). Sentences are not stored here
 - UN M49 regions through https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes (E10)
 - Gemma-2 2B instruction-tuned https://huggingface.co/google/gemma-2-2b-it . The Gemma outputs in `data/` are used under the Gemma Terms of Use.

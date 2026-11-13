@@ -1,0 +1,1444 @@
+[
+ {
+  "no": 0,
+  "id": 158,
+  "stmt": "betel -> tree",
+  "path": [
+   [
+    "betel",
+    ""
+   ],
+   [
+    "palm",
+    ""
+   ],
+   [
+    "palm",
+    "（文）A palm is a type of tree with a distinctive fan-shaped leaf."
+   ]
+  ]
+ },
+ {
+  "no": 1,
+  "id": 534,
+  "stmt": "agitator -> vegetable",
+  "path": [
+   [
+    "agitator",
+    ""
+   ],
+   [
+    "implement",
+    ""
+   ],
+   [
+    "implement",
+    "（文）Implements work flow and decision process."
+   ],
+   [
+    "process",
+    ""
+   ],
+   [
+    "process",
+    "（文）Process is a linear sequence of events that has a start and an end point."
+   ],
+   [
+    "sequence",
+    ""
+   ],
+   [
+    "sequence",
+    "（文）A sequence is a series of items arranged in a specific order."
+   ],
+   [
+    "series",
+    ""
+   ],
+   [
+    "series",
+    "（文）A series is a collection of related items presented in a specific order."
+   ],
+   [
+    "collection",
+    ""
+   ],
+   [
+    "set",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 2,
+  "id": 1219,
+  "stmt": "cappuccino -> person",
+  "path": [
+   [
+    "cappuccino",
+    ""
+   ],
+   [
+    "beverage",
+    ""
+   ],
+   [
+    "beverage",
+    "（文）Beverages add calories."
+   ],
+   [
+    "calorie",
+    ""
+   ],
+   [
+    "calorie",
+    "（文）Calories add up from the amounts of protein, carbohydrate and fat in foods."
+   ],
+   [
+    "amount",
+    ""
+   ],
+   [
+    "amount",
+    "（文）Amounts are in United States currency."
+   ],
+   [
+    "currency",
+    ""
+   ],
+   [
+    "currency",
+    "（文）A currency is a medium of exchange used to buy goods and services."
+   ],
+   [
+    "medium",
+    ""
+   ],
+   [
+    "medium",
+    "（文）Mediums are people who exhibit psychic abilities when aided by a nonphysical spirit entity."
+   ]
+  ]
+ },
+ {
+  "no": 3,
+  "id": 246,
+  "stmt": "uterus -> container",
+  "path": [
+   [
+    "uterus",
+    "（文）The uterus is a pear-shaped organ in the female reproductive system."
+   ],
+   [
+    "organ",
+    ""
+   ],
+   [
+    "part",
+    ""
+   ],
+   [
+    "part",
+    "（文）A part is a component or piece of something larger."
+   ],
+   [
+    "piece",
+    ""
+   ],
+   [
+    "piece",
+    "（文）Most pieces have amounts of cortex."
+   ],
+   [
+    "amount",
+    ""
+   ],
+   [
+    "amount",
+    "（文）An amount is a quantity or measure of something."
+   ],
+   [
+    "quantity",
+    ""
+   ],
+   [
+    "term",
+    ""
+   ],
+   [
+    "term",
+    "（文）Terms are strings that contain the printed representation of Prolog terms."
+   ]
+  ]
+ },
+ {
+  "no": 4,
+  "id": 1007,
+  "stmt": "crucible -> man-made object",
+  "path": [
+   [
+    "crucible",
+    "（文）Crucible is a highly advanced raster image to vector format conversion application ."
+   ],
+   [
+    "application",
+    ""
+   ],
+   [
+    "program",
+    ""
+   ],
+   [
+    "program",
+    "（文）Program is also the verb that means to create a program, and a programmer is one who programs."
+   ],
+   [
+    "verb",
+    ""
+   ],
+   [
+    "verb",
+    "（文）A verb is a word that describes an action or a state of being."
+   ],
+   [
+    "word",
+    ""
+   ],
+   [
+    "unit",
+    ""
+   ],
+   [
+    "component",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 5,
+  "id": 642,
+  "stmt": "margarita -> dish",
+  "path": [
+   [
+    "margarita",
+    ""
+   ],
+   [
+    "cocktail",
+    ""
+   ],
+   [
+    "cocktail",
+    "（文）A cocktail is a mixed drink typically made with alcohol and other ingredients."
+   ],
+   [
+    "drink",
+    ""
+   ],
+   [
+    "drink",
+    "（文）Drinks Pack a beverage that is nutrient dense."
+   ]
+  ]
+ },
+ {
+  "no": 6,
+  "id": 442,
+  "stmt": "hornet -> worker",
+  "path": [
+   [
+    "hornet",
+    ""
+   ],
+   [
+    "wasp",
+    ""
+   ],
+   [
+    "wasp",
+    "（文）Wasps perform valuable services."
+   ]
+  ]
+ },
+ {
+  "no": 7,
+  "id": 480,
+  "stmt": "stewardess -> equipment",
+  "path": [
+   [
+    "stewardess",
+    "（文）Stewardesses is the longest word typed using only the left hand."
+   ],
+   [
+    "word",
+    ""
+   ],
+   [
+    "unit",
+    ""
+   ],
+   [
+    "unit",
+    "（文）A unit is a basic, indivisible part of something larger."
+   ],
+   [
+    "part",
+    ""
+   ],
+   [
+    "part",
+    "（文）Parts are the backbone of any airplane."
+   ],
+   [
+    "backbone",
+    ""
+   ],
+   [
+    "backbone",
+    "（文）Backbones are major cables or other communications links between various points."
+   ]
+  ]
+ },
+ {
+  "no": 8,
+  "id": 667,
+  "stmt": "kitchen -> equipment",
+  "path": [
+   [
+    "kitchen",
+    "（文）Kitchens are a household component that everyone uses but generally takes for granted."
+   ],
+   [
+    "component",
+    ""
+   ],
+   [
+    "part",
+    ""
+   ],
+   [
+    "part",
+    "（文）Parts are the backbone of any airplane."
+   ],
+   [
+    "backbone",
+    ""
+   ],
+   [
+    "backbone",
+    "（文）Backbones are major cables or other communications links between various points."
+   ]
+  ]
+ },
+ {
+  "no": 9,
+  "id": 1175,
+  "stmt": "shrub -> game",
+  "path": [
+   [
+    "shrub",
+    "（文）Shrubs provide suitable shelter."
+   ],
+   [
+    "shelter",
+    ""
+   ],
+   [
+    "shelter",
+    "（文）A shelter is a place of safety and protection."
+   ],
+   [
+    "place",
+    ""
+   ],
+   [
+    "location",
+    ""
+   ],
+   [
+    "point",
+    ""
+   ],
+   [
+    "dot",
+    ""
+   ],
+   [
+    "dot",
+    "（文）Dots is a game with a grid of dots placed on the board."
+   ]
+  ]
+ },
+ {
+  "no": 10,
+  "id": 548,
+  "stmt": "greenhouse -> device",
+  "path": [
+   [
+    "greenhouse",
+    "（文）Greenhouses are structures designed to retain heat."
+   ],
+   [
+    "structure",
+    ""
+   ],
+   [
+    "structure",
+    "（文）A structure is a built or organized arrangement of parts."
+   ],
+   [
+    "arrangement",
+    ""
+   ],
+   [
+    "arrangement",
+    "（文）Arrangement is the most important factor in dwelling house architecture."
+   ],
+   [
+    "factor",
+    ""
+   ],
+   [
+    "factor",
+    "（文）A factor is a variable that influences or contributes to a particular outcome."
+   ],
+   [
+    "variable",
+    ""
+   ],
+   [
+    "variable",
+    "（文）Variables are expressions that return the value they represent."
+   ],
+   [
+    "expression",
+    ""
+   ],
+   [
+    "expression",
+    "（文）Expression is a freeware scientific graphing calculator."
+   ],
+   [
+    "calculator",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 11,
+  "id": 1291,
+  "stmt": "layman -> plant",
+  "path": [
+   [
+    "layman",
+    "（文）Laymen poke the suture through the loop."
+   ],
+   [
+    "suture",
+    ""
+   ],
+   [
+    "seam",
+    ""
+   ],
+   [
+    "seam",
+    "（文）Seams are one one of the first places to check."
+   ],
+   [
+    "place",
+    ""
+   ],
+   [
+    "place",
+    "（文）Places ensure safety."
+   ],
+   [
+    "safety",
+    ""
+   ],
+   [
+    "safety",
+    "（文）Safety is a crop that needs to be tended on a regular basis in order to flourish."
+   ],
+   [
+    "crop",
+    ""
+   ],
+   [
+    "crop",
+    "（文）A crop is a type of plant grown for food, fiber, or other products."
+   ]
+  ]
+ },
+ {
+  "no": 12,
+  "id": 1061,
+  "stmt": "sword -> man-made object",
+  "path": [
+   [
+    "sword",
+    "（文）Swords includes various longswords, swords, scimitars, blades, and foils."
+   ]
+  ]
+ },
+ {
+  "no": 13,
+  "id": 140,
+  "stmt": "everlasting -> game",
+  "path": [
+   [
+    "everlasting",
+    ""
+   ],
+   [
+    "god",
+    ""
+   ],
+   [
+    "deity",
+    ""
+   ],
+   [
+    "deity",
+    "（文）Deity is a free RPG game with a difference."
+   ]
+  ]
+ },
+ {
+  "no": 14,
+  "id": 1221,
+  "stmt": "bookshelf -> furniture",
+  "path": [
+   [
+    "bookshelf",
+    "（文）A bookshelf is a piece of furniture used to store books."
+   ]
+  ]
+ },
+ {
+  "no": 15,
+  "id": 164,
+  "stmt": "hater -> person",
+  "path": [
+   [
+    "hater",
+    "（文）Haters are usually cowards, and when they are confronted, they back down."
+   ]
+  ]
+ },
+ {
+  "no": 16,
+  "id": 396,
+  "stmt": "adolescent -> mammal",
+  "path": [
+   [
+    "adolescent",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ],
+   [
+    "hominid",
+    "（文）Hominids are primates with no tails, robust bodies and well-developed forearms."
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "primate",
+    "（文）A primate is a mammal that includes monkeys, apes, and humans."
+   ]
+  ]
+ },
+ {
+  "no": 17,
+  "id": 267,
+  "stmt": "sailboat -> machine",
+  "path": [
+   [
+    "sailboat",
+    "（文）Sailboats are another specimen of aerodynamic engineering."
+   ]
+  ]
+ },
+ {
+  "no": 18,
+  "id": 58,
+  "stmt": "bulldozer -> machine",
+  "path": [
+   [
+    "bulldozer",
+    "（文）A bulldozer is a heavy machine used for moving earth and debris."
+   ],
+   [
+    "machine",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 19,
+  "id": 1080,
+  "stmt": "badminton -> container",
+  "path": [
+   [
+    "badminton",
+    ""
+   ],
+   [
+    "sport",
+    ""
+   ],
+   [
+    "sport",
+    "（文）Sports is entertainment, and entertainment is driven by celebrities."
+   ],
+   [
+    "entertainment",
+    ""
+   ],
+   [
+    "entertainment",
+    "（文）Entertainment is anything designed to provide enjoyment and amusement."
+   ],
+   [
+    "enjoyment",
+    ""
+   ],
+   [
+    "enjoyment",
+    "（文）Enjoyment is a rather difficult term to define or use in a discussion though."
+   ],
+   [
+    "term",
+    ""
+   ],
+   [
+    "term",
+    "（文）Terms are strings that contain the printed representation of Prolog terms."
+   ]
+  ]
+ },
+ {
+  "no": 20,
+  "id": 280,
+  "stmt": "dispensary -> man-made object",
+  "path": [
+   [
+    "dispensary",
+    "（文）Dispensaries are centers of sanitary and medical instruction for local tuberculous persons."
+   ]
+  ]
+ },
+ {
+  "no": 21,
+  "id": 460,
+  "stmt": "interviewee -> worker",
+  "path": [
+   [
+    "interviewee",
+    "（文）An interviewee is a person being considered for a job or opportunity."
+   ]
+  ]
+ },
+ {
+  "no": 22,
+  "id": 92,
+  "stmt": "kitten -> mammal",
+  "path": [
+   [
+    "kitten",
+    "（文）A kitten is a small, playful cat."
+   ]
+  ]
+ },
+ {
+  "no": 23,
+  "id": 154,
+  "stmt": "bodybuilder -> animal",
+  "path": [
+   [
+    "bodybuilder",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ],
+   [
+    "hominid",
+    "（文）Hominids are primates with no tails, robust bodies and well-developed forearms."
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 24,
+  "id": 259,
+  "stmt": "consulate -> building",
+  "path": [
+   [
+    "consulate",
+    ""
+   ],
+   [
+    "office",
+    ""
+   ],
+   [
+    "position",
+    ""
+   ],
+   [
+    "employment",
+    ""
+   ],
+   [
+    "employment",
+    "（文）Employment is a profession which has few heroes, celebrations, or awards."
+   ],
+   [
+    "profession",
+    ""
+   ],
+   [
+    "profession",
+    "（文）A profession is a specialized occupation requiring training and expertise."
+   ],
+   [
+    "occupation",
+    ""
+   ],
+   [
+    "occupation",
+    "（文）An occupation is a job or role that someone does for a living."
+   ],
+   [
+    "role",
+    ""
+   ],
+   [
+    "role",
+    "（文）Roles involve development."
+   ]
+  ]
+ },
+ {
+  "no": 25,
+  "id": 423,
+  "stmt": "confidante -> person",
+  "path": [
+   [
+    "confidante",
+    "（文）A confidante is a trusted friend who shares your secrets and offers support."
+   ]
+  ]
+ },
+ {
+  "no": 26,
+  "id": 65,
+  "stmt": "amputee -> person",
+  "path": [
+   [
+    "amputee",
+    "（文）An amputee is a person who has had a limb or body part removed."
+   ]
+  ]
+ },
+ {
+  "no": 27,
+  "id": 281,
+  "stmt": "fetus -> man-made object",
+  "path": [
+   [
+    "fetus",
+    ""
+   ],
+   [
+    "animal",
+    ""
+   ],
+   [
+    "animal",
+    "（文）An animal is a living creature that breathes air and moves independently."
+   ],
+   [
+    "creature",
+    ""
+   ],
+   [
+    "creature",
+    "（文）Creatures show general resemblance."
+   ],
+   [
+    "resemblance",
+    ""
+   ],
+   [
+    "resemblance",
+    "（文）A resemblance is a similarity in appearance or character."
+   ],
+   [
+    "similarity",
+    ""
+   ],
+   [
+    "similarity",
+    "（文）Similarity is a continuous measure of imperfect symmetry."
+   ],
+   [
+    "measure",
+    ""
+   ],
+   [
+    "act",
+    ""
+   ],
+   [
+    "act",
+    "（文）Acts is a book about learning to get back up."
+   ]
+  ]
+ },
+ {
+  "no": 28,
+  "id": 402,
+  "stmt": "introvert -> worker",
+  "path": [
+   [
+    "introvert",
+    ""
+   ],
+   [
+    "organ",
+    ""
+   ],
+   [
+    "organ",
+    "（文）Organs serve purposes."
+   ]
+  ]
+ },
+ {
+  "no": 29,
+  "id": 1009,
+  "stmt": "dropper -> tool",
+  "path": [
+   [
+    "dropper",
+    "（文）A dropper is a tool used to carefully dispense liquids."
+   ]
+  ]
+ },
+ {
+  "no": 30,
+  "id": 168,
+  "stmt": "houseboat -> device",
+  "path": [
+   [
+    "houseboat",
+    "（文）Houseboats are often double dugout canoes."
+   ],
+   [
+    "canoe",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 31,
+  "id": 172,
+  "stmt": "tomahawk -> man-made object",
+  "path": [
+   [
+    "tomahawk",
+    "（文）Tomahawks are indian weapons that look a lot like axes."
+   ]
+  ]
+ },
+ {
+  "no": 32,
+  "id": 1168,
+  "stmt": "breeder -> room",
+  "path": [
+   [
+    "breeder",
+    ""
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "shoot",
+    ""
+   ],
+   [
+    "shoot",
+    "（文）Shoots form buds."
+   ],
+   [
+    "bud",
+    ""
+   ],
+   [
+    "bud",
+    "（文）Buds grow into potato plants."
+   ],
+   [
+    "plant",
+    ""
+   ],
+   [
+    "eukaryote",
+    ""
+   ],
+   [
+    "eukaryote",
+    "（文）A eukaryote is a type of cell that contains a nucleus and other membrane-bound organelles."
+   ],
+   [
+    "cell",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 33,
+  "id": 1064,
+  "stmt": "investor -> mammal",
+  "path": [
+   [
+    "investor",
+    "（文）Investors are risk averse individuals."
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ],
+   [
+    "hominid",
+    "（文）Hominids are primates with no tails, robust bodies and well-developed forearms."
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "primate",
+    "（文）A primate is a mammal that includes monkeys, apes, and humans."
+   ]
+  ]
+ },
+ {
+  "no": 34,
+  "id": 255,
+  "stmt": "skewer -> game",
+  "path": [
+   [
+    "skewer",
+    "（文）Skewers are a cheap place to save weight."
+   ],
+   [
+    "place",
+    ""
+   ],
+   [
+    "location",
+    ""
+   ],
+   [
+    "point",
+    ""
+   ],
+   [
+    "dot",
+    ""
+   ],
+   [
+    "dot",
+    "（文）Dots is a game with a grid of dots placed on the board."
+   ]
+  ]
+ },
+ {
+  "no": 35,
+  "id": 70,
+  "stmt": "paintbrush -> tool",
+  "path": [
+   [
+    "paintbrush",
+    "（文）Paintbrush varies with size thick brushes for big areas, tiny brushes for details."
+   ],
+   [
+    "brush",
+    ""
+   ],
+   [
+    "brush",
+    "（文）A brush is a tool used for applying paint or other substances."
+   ]
+  ]
+ },
+ {
+  "no": 36,
+  "id": 646,
+  "stmt": "locket -> device",
+  "path": [
+   [
+    "locket",
+    "（文）Lockets can hold photos, hair, a charm, or other small, precious object."
+   ]
+  ]
+ },
+ {
+  "no": 37,
+  "id": 138,
+  "stmt": "bedroom -> building",
+  "path": [
+   [
+    "bedroom",
+    "（文）Bedrooms are the worst hiding places."
+   ],
+   [
+    "place",
+    ""
+   ],
+   [
+    "place",
+    "（文）Places ensure safety."
+   ],
+   [
+    "safety",
+    ""
+   ],
+   [
+    "safety",
+    "（文）Safety is a crop that needs to be tended on a regular basis in order to flourish."
+   ],
+   [
+    "crop",
+    ""
+   ],
+   [
+    "crop",
+    "（文）Crops provide food."
+   ],
+   [
+    "food",
+    ""
+   ],
+   [
+    "food",
+    "（文）Food serves as energy sources."
+   ],
+   [
+    "source",
+    ""
+   ],
+   [
+    "source",
+    "（文）Sources include power plants."
+   ],
+   [
+    "plant",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 38,
+  "id": 426,
+  "stmt": "pacifist -> insect",
+  "path": [
+   [
+    "pacifist",
+    ""
+   ],
+   [
+    "player",
+    ""
+   ],
+   [
+    "participant",
+    ""
+   ],
+   [
+    "participant",
+    "（文）A participant is someone who takes part in an activity or event."
+   ],
+   [
+    "part",
+    ""
+   ],
+   [
+    "part",
+    "（文）A part is a component or piece of something larger."
+   ],
+   [
+    "piece",
+    ""
+   ],
+   [
+    "piece",
+    "（文）Some pieces show their use in group sex or in solitary female masturbation."
+   ],
+   [
+    "use",
+    ""
+   ],
+   [
+    "use",
+    "（文）Use leads to heart problems."
+   ],
+   [
+    "problem",
+    ""
+   ],
+   [
+    "problem",
+    "（文）Problems affect honey bee health."
+   ]
+  ]
+ },
+ {
+  "no": 39,
+  "id": 1177,
+  "stmt": "astrologer -> animal",
+  "path": [
+   [
+    "astrologer",
+    "（文）Astrologers determine tendancies and predispositions of characteristics of persons and events."
+   ],
+   [
+    "person",
+    ""
+   ],
+   [
+    "individual",
+    ""
+   ],
+   [
+    "human",
+    ""
+   ],
+   [
+    "hominid",
+    ""
+   ],
+   [
+    "hominid",
+    "（文）Hominids are primates with no tails, robust bodies and well-developed forearms."
+   ],
+   [
+    "primate",
+    ""
+   ],
+   [
+    "mammal",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 40,
+  "id": 266,
+  "stmt": "dingo -> animal",
+  "path": [
+   [
+    "dingo",
+    "（文）Dingos seek out sources."
+   ]
+  ]
+ },
+ {
+  "no": 41,
+  "id": 1136,
+  "stmt": "breadwinner -> vegetable",
+  "path": [
+   [
+    "breadwinner",
+    "（文）A breadwinner is someone who provides financial support for their family."
+   ],
+   [
+    "support",
+    ""
+   ],
+   [
+    "support",
+    "（文）Support is a price at which a stock tends to stop falling."
+   ],
+   [
+    "price",
+    ""
+   ],
+   [
+    "price",
+    "（文）Price is the mechanism that allocates scarce resources in any economic system."
+   ],
+   [
+    "mechanism",
+    ""
+   ],
+   [
+    "mechanism",
+    "（文）Mechanisms provide cope strategies."
+   ],
+   [
+    "strategy",
+    ""
+   ],
+   [
+    "strategy",
+    "（文）A strategy is a plan of action designed to achieve a specific goal."
+   ],
+   [
+    "plan",
+    ""
+   ],
+   [
+    "set",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 42,
+  "id": 112,
+  "stmt": "vise -> tool",
+  "path": [
+   [
+    "vise",
+    "（文）A vise is a tool used to hold objects securely."
+   ]
+  ]
+ },
+ {
+  "no": 43,
+  "id": 26,
+  "stmt": "pew -> man-made object",
+  "path": [
+   [
+    "pew",
+    "（文）Pews are a late medieval innovation in the west."
+   ],
+   [
+    "innovation",
+    ""
+   ],
+   [
+    "act",
+    ""
+   ],
+   [
+    "act",
+    "（文）Acts is a book about learning to get back up."
+   ]
+  ]
+ },
+ {
+  "no": 44,
+  "id": 350,
+  "stmt": "kingfisher -> insect",
+  "path": [
+   [
+    "kingfisher",
+    "（文）Kingfishers have size."
+   ],
+   [
+    "size",
+    ""
+   ],
+   [
+    "size",
+    "（文）A size is a measurement of the dimensions of something."
+   ],
+   [
+    "measurement",
+    ""
+   ],
+   [
+    "measurement",
+    "（文）Measurements show variation."
+   ],
+   [
+    "variation",
+    ""
+   ],
+   [
+    "variation",
+    "（文）Variation causes major problems."
+   ],
+   [
+    "problem",
+    ""
+   ],
+   [
+    "problem",
+    "（文）Problems affect honey bee health."
+   ]
+  ]
+ },
+ {
+  "no": 45,
+  "id": 1132,
+  "stmt": "condom -> device",
+  "path": [
+   [
+    "condom",
+    "（文）Condoms act as a barrier device to prevent mucous and blood to blood contact."
+   ]
+  ]
+ },
+ {
+  "no": 46,
+  "id": 482,
+  "stmt": "jasmine -> vegetable",
+  "path": [
+   [
+    "jasmine",
+    "（文）Jasmine has yellow flowers."
+   ],
+   [
+    "flower",
+    ""
+   ],
+   [
+    "flower",
+    "（文）Flowers stem foliage."
+   ],
+   [
+    "foliage",
+    ""
+   ],
+   [
+    "foliage",
+    "（文）Foliage creates barriers."
+   ],
+   [
+    "barrier",
+    ""
+   ],
+   [
+    "barrier",
+    "（文）Barriers act as deterrent."
+   ],
+   [
+    "deterrent",
+    ""
+   ],
+   [
+    "deterrent",
+    "（文）Deterrent is always the best policy when it comes to dryrot."
+   ],
+   [
+    "policy",
+    ""
+   ],
+   [
+    "policy",
+    "（文）A policy is a set of guidelines or rules that guide decision-making and actions."
+   ],
+   [
+    "set",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 47,
+  "id": 382,
+  "stmt": "stingray -> living thing",
+  "path": [
+   [
+    "stingray",
+    "（文）A stingray is a flat, cartilaginous fish with a whip-like tail."
+   ],
+   [
+    "fish",
+    ""
+   ]
+  ]
+ },
+ {
+  "no": 48,
+  "id": 1110,
+  "stmt": "sheriff -> worker",
+  "path": [
+   [
+    "sheriff",
+    "（文）Sheriffs provide security."
+   ]
+  ]
+ },
+ {
+  "no": 49,
+  "id": 1006,
+  "stmt": "electrician -> plant",
+  "path": [
+   [
+    "electrician",
+    "（文）Electricians take safety."
+   ],
+   [
+    "safety",
+    ""
+   ],
+   [
+    "safety",
+    "（文）Safety is a crop that needs to be tended on a regular basis in order to flourish."
+   ],
+   [
+    "crop",
+    ""
+   ],
+   [
+    "crop",
+    "（文）A crop is a type of plant grown for food, fiber, or other products."
+   ]
+  ]
+ }
+]
