@@ -6,17 +6,15 @@ English | [日本語](README_ja.md)
 
 **What this is:** experiments that keep a small language model (Gemma-2 2B) as the "mouth" and check its answers with parts placed outside it: rules, belief propagation (BP), retrieved evidence, dictionary definitions and a small NLI model. Each plan was fixed before its results, and ties and losses are reported as well.
 
-**Main findings so far** (one small model, English, mostly one domain; see Limitations):
+**Main findings so far** (one small model, English, mostly one domain; see [Limitations](#limitations)):
 
-- **A small model is a poor judge but a good helper.** Gemma-2 2B is often confidently wrong on "X is a type of Y" questions. Checking its answer against dictionary definitions with an NLI model cuts the error measure (AURC) from 0.154 to 0.070 (E6).
-- **Give it the narrow job it is good at.** Chaining definitions (granddaughter → person → mammal) fails when a word is read in the wrong sense (64% of chains, E7). When Gemma only picks which sense of each word is meant, it is right in 35 of 37 checked cases and wrong-sense chains fall to 4%. The chain check then reaches AURC 0.047 without training, 0.037 with a learned combination (E8). These figures used hand-written head-noun lists; without them they are 10%, 0.063 and 0.056 (see the second correction below).
-- **On 300 new items** not used for any choice, the checker is clearly better than the model's own confidence (0.039 vs 0.118; 0.046 vs 0.118 without hand-written lists). Its gain over a one-step dictionary check (0.055) is not shown with 300 items.
-- **Where the network (BP) helps, and where it does not.** BP that also doubts the model's own rules beats simply counting violations in taxonomy and disease tests (E2-6, E2-8). It did not beat simpler learned combinations with evidence (E3), large many-loop networks (E4) or dictionary chains (E7, E8). The p-bit method and BP never differed in accuracy (E4).
-- **Correction (2026-11-11): the learned baselines were all linear.** Every "features + learning" baseline in E2 to E8 was logistic regression. Redoing them with a tree-based learner (gradient boosting, `analysis/audit_gb/`) changes three statements: E2-7 (taxonomy: BP's win becomes a tie; geography: BP now loses to the learned combination), E4-2 (the cautious network loses under WordNet labels) and E7 (adding chain scores is no longer clearly best). E8's result holds. Details are marked "Audit (2026-11-11)" below.
-- **Correction (2026-11-11): hand-written word lists.** E7, E8 and the real dictionary check used in E9-1 to E9-3 picked each definition's head noun with hand-written word lists (`PERSON_HEADS`, `OF_HEADS`, `META` and two fixes: for example "one who …" → person, "a kind of X" → X; audit: `plans/audit_hand_lists.md`). We reran them without any such list: head-noun candidates come from grammar only (the head of the first noun chunk and the object of its "of"), and the NLI score of the step chooses among them (`analysis/nolist/`). The rules for "holds" were fixed before the runs. **Held:** Gemma's sense choice cuts wrong-sense chains (72% → 10%), the chain + learner beats Gemma's confidence on the 300 new items (0.046 vs 0.118), chaining breaks fewer right answers (40% → 31%), and every E9 conclusion about the network. **Not held:** the chain scores (0.047 → 0.063 without training, 0.037 → 0.056 learned), the clear gain over E6's features with gradient boosting (only 3 of 5 splits by 20%), the dictionary's hit rate on true claims (88% → 83%), and E9-3's "checking every claim with the dictionary is best" (now best in 1 of 12 conditions; gradient boosting is better). Details: [Recheck without hand-written word lists](#recheck-without-hand-written-word-lists-2026-11-11).
-- **Even when only a few answers can be checked, the network does not beat a strong learner (E9).** Checking 2–10% of the claims with the dictionary and spreading the checks along the model's rules with BP first looked better than logistic regression (E9-1), but against gradient boosting, and on all 77,326 claims with no candidate selection, the network lost in every condition (E9-3). Its remaining role is small: finishing a learner's answers with the rules gave 5–20% lower AURC, below the threshold set in advance.
-- **Other questions (E10): showing sentences that state the answer helps; where they come from matters less.** On part-whole questions ("A wheel is a part of a car."), showing Gemma general sentences from GenericsKB that mention both words lowers AURC from 0.068 to 0.039, and sentences Gemma writes itself do about as well (0.044, a tie). Dictionary definitions do not help, and on "X is a type of Y" no resource beat Gemma's confidence. E10's first gains on part-whole and geography used hand-chosen items and hand-written lists and did not repeat on items chosen by rule (E10-1). Details: [E10](#e10-do-outside-checks-carry-over-to-other-questions-part-whole-disease-geography).
-- **Combining every signal in one learner helps; deeper chains and box embeddings alone do not (E11).** Giving Gemma's answers, the dictionary chain, the outside sentences and a box embedding to one gradient-boosting learner beats the learner on Gemma's answers alone on "is a type of" (AURC 0.017 → 0.004), part-whole (0.062 → 0.039) and disease (0.025 → 0.016), and ties on geography; on part-whole and disease it ties under Gemini's labels. The pieces are not new, and the box adds nothing outside "is a type of". Details: [E11](#e11-fixing-e8s-weak-points-and-combining-every-signal-2026-11-12).
+- **A small model is a poor judge but a good helper.** Gemma-2 2B is often confidently wrong on "X is a type of Y". Checking its answer against dictionary definitions with an NLI model cuts the error measure (AURC, lower is better) from 0.154 to 0.070 (E6).
+- **Give it only the narrow job it is good at.** Chaining definitions (granddaughter → person → mammal) breaks when a word is read in the wrong sense. When Gemma only picks which sense of each word is meant, wrong-sense chains fall from 72% to 10%, and on 300 new items the chain check with a learner beats Gemma's own confidence (0.046 vs 0.118) (E7, E8, rechecked without hand-written lists).
+- **Combining every signal in one learner helps; deeper chains and box embeddings alone do not (E11).** Gemma's answers, the dictionary chain, outside sentences and a box embedding in one gradient-boosting learner beat the learner on Gemma's answers alone on "is a type of" (0.017 → 0.004), part-whole (0.062 → 0.039) and disease (0.025 → 0.016); geography ties, and part-whole and disease tie under Gemini's labels.
+- **Showing sentences that state the answer helps on part-whole questions (E10)**, whether they come from GenericsKB (0.068 → 0.039) or Gemma writes them itself (0.044, a tie).
+- **The network (BP) did not become the main part.** BP that also doubts the model's rules beat counting violations in taxonomy and disease tests (E2-6, E2-8), but it did not beat a strong learner where labeled data existed (E3, E4, E9). The p-bit method and BP never differed in accuracy (E4).
+
+Ties and losses are reported in every section. Two corrections (2026-11-11) changed earlier numbers; they are listed in [Corrections](#corrections-2026-11-11).
 
 ![Checking a small model's "X is a type of Y" answers from outside (E6–E8)](figures/E8/overview_en.png)
 
@@ -25,12 +23,28 @@ English | [日本語](README_ja.md)
 ```bash
 git clone https://github.com/mst-design2020/akane-e2-experiments.git && cd akane-e2-experiments/analysis/e8
 pip install numpy scipy scikit-learn
-python e8_analyze.py ../../data/E8_chains_nli.json out.json   # about 5 minutes; prints the AURC table, e.g. 0.037 for the learned chain check
+python e8_analyze.py ../../data/E8_chains_nli.json out.json   # about 5 minutes; prints the AURC table, e.g. 0.037 for the learned chain check (this saved run used the original hand-written lists; without them it is 0.056, see analysis/nolist/)
 ```
 
 `python check_formulas_e8.py ../../data/E8_chains_nli.json` (about 5 seconds) checks the code against the formulas below. Tested in a fresh Python 3.13 environment.
 
-All experiments in one table: [Results at a glance](#results-at-a-glance). Each experiment's plan and results are in `plans/` (Japanese).
+All experiments in one table: [Results at a glance](#results-at-a-glance). Each experiment's plan and results are in `plans/` (Japanese). Articles explaining each step (Japanese): [Articles](#articles-japanese).
+
+Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X · DOI https://doi.org/10.5281/zenodo.24045799
+
+## AKANE Architecture in short
+
+The idea is to use a language model as the "mouth" and to place the checking outside the model. The model answers first. Then an outside system checks whether the answers are consistent with a large memory and with rules. In the long run, we want to hand this checking computation to physical parts such as p-bits (probabilistic bits that flip between 0 and 1).
+The experiments here test the smallest version of that outside checker. More about the overall research: https://mst-design.jp/research/ (Japanese)
+
+## Corrections (2026-11-11)
+
+Both corrections were found by our own audit. The numbers in the findings above already use the corrected runs.
+
+- **Correction (2026-11-11): the learned baselines were all linear.** Every "features + learning" baseline in E2 to E8 was logistic regression. Redoing them with a tree-based learner (gradient boosting, `analysis/audit_gb/`) changes three statements: E2-7 (taxonomy: BP's win becomes a tie; geography: BP now loses to the learned combination), E4-2 (the cautious network loses under WordNet labels) and E7 (adding chain scores is no longer clearly best). E8's result holds. Details are marked "Audit (2026-11-11)" below.
+- **Correction (2026-11-11): hand-written word lists.** E7, E8 and the real dictionary check used in E9-1 to E9-3 picked each definition's head noun with hand-written word lists (`PERSON_HEADS`, `OF_HEADS`, `META` and two fixes: for example "one who …" → person, "a kind of X" → X; audit: `plans/audit_hand_lists.md`). We reran them without any such list: head-noun candidates come from grammar only (the head of the first noun chunk and the object of its "of"), and the NLI score of the step chooses among them (`analysis/nolist/`). The rules for "holds" were fixed before the runs. **Held:** Gemma's sense choice cuts wrong-sense chains (72% → 10%), the chain + learner beats Gemma's confidence on the 300 new items (0.046 vs 0.118), chaining breaks fewer right answers (40% → 31%), and every E9 conclusion about the network. **Not held:** the chain scores (0.047 → 0.063 without training, 0.037 → 0.056 learned), the clear gain over E6's features with gradient boosting (only 3 of 5 splits by 20%), the dictionary's hit rate on true claims (88% → 83%), and E9-3's "checking every claim with the dictionary is best" (now best in 1 of 12 conditions; gradient boosting is better). Details: [Recheck without hand-written word lists](#recheck-without-hand-written-word-lists-2026-11-11).
+
+## Articles (Japanese)
 
 Every number in the articles below comes from files in this repository. Articles (Japanese):
 
@@ -44,13 +58,7 @@ Every number in the articles below comes from files in this repository. Articles
 - Article 8: E4 (second half) and E5, re-checking the answer key and the cost of the model's own rules. https://note.com/mst_design2020/n/n222a0ecf386d (Zenn, E4 and E5: https://zenn.dev/mst_design2020/articles/545424bd00f46f)
 - Article 9: E6 to E8, dictionary definitions and word senses. https://note.com/mst_design2020/n/nde0fb5abc0aa (Zenn: https://zenn.dev/mst_design2020/articles/5d3feab2c2fff8)
 - Article 10: E9 and E10, the network's role and outside checks on other questions. https://note.com/mst_design2020/n/ndb76756d6b3e (Zenn, E9: https://zenn.dev/mst_design2020/articles/804eba1639b569; E10: https://zenn.dev/mst_design2020/articles/50e211cbd882af)
-
-Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X · DOI https://doi.org/10.5281/zenodo.24045799
-
-## AKANE Architecture in short
-
-The idea is to use a language model as the "mouth" and to place the checking outside the model. The model answers first. Then an outside system checks whether the answers are consistent with a large memory and with rules. In the long run, we want to hand this checking computation to physical parts such as p-bits (probabilistic bits that flip between 0 and 1).
-The experiments here test the smallest version of that outside checker. More about the overall research: https://mst-design.jp/research/ (Japanese)
+- Article 11: E11, combining every signal in one learner. https://note.com/mst_design2020/n/n8ca2afb0ac35
 
 ## E2: rules written by the model, checked with belief propagation
 
