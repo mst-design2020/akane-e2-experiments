@@ -55,22 +55,24 @@ TADORI is the check that survived E2 to E15. The other parts we tried (a network
 
 **Procedure** (method D in [E6–E8: how the computation works](#e6e8-how-the-computation-works)).
 
-1. Take the definition $d$ of each sense of X from the dictionary.
+1. Take the definition $d$ of each sense of X from the dictionary (in Wiktionary order, at most 8). From here on, $w$ is the word whose definition is being read: it starts as $w=X$ and becomes the chosen head word at each step. $W$ is $w$ with its first letter capitalised, as used in the hypothesis sentence.
 2. Take the head noun $g$ of the definition (the root of spaCy's first noun chunk).
-3. **Show the small model $d$ and the numbered definitions of $g$'s senses, and ask which sense of $g$ is meant in $d$.** C is not shown.
-4. With the external NLI model, compute the step score $q = e(d \Rightarrow \text{"W is a type of } g\text{."})$ and the arrival score $a = e(d \Rightarrow \text{"W is a type of C."})$. If $w$ is C itself, $a=1$.
+3. **Show the small model $d$ and the numbered definitions of $g$'s senses, and ask which sense of $g$ is meant in $d$.** C is not shown. The prompt is `Dictionary definition of "w": d` / `In this definition, which meaning of the word "g" is used?` / `1. … 2. …` (the senses of $g$ in dictionary order, at most 8) / `Answer with the number only.`, wrapped in Gemma's chat template. We take the logits of the tokens "1", "2", … at the first answer position, apply a softmax, and pick the highest. Nothing is generated.
+4. With the external NLI model, compute the step score $q = e(d \Rightarrow \text{"W is a type of } g\text{."})$ and the arrival score $a = e(d \Rightarrow \text{"W is a type of C."})$. If $w$ is C itself, $a=1$. Here $e(\cdot)$ is the NLI entailment probability, the premise is `"w" means: d` and the hypothesis is `W is a type of g.` (or `C.`). For example, with $w$ = kitten and $d$ = "A young cat.", the premise is `"kitten" means: A young cat.` and the hypothesis is `Kitten is a type of cat.`
 5. Repeat steps 2 to 4 from the definition of the chosen sense, up to 3 steps.
 6. The score $s_6$ is the maximum over paths of $q_{n_0} \cdots q_{n_{t-1}}\, a_{n_t}$.
 
 **What was shown.** Every result was judged by rules fixed before the run. Common-sense labels are by Claude; the main results were also labelled by Gemini.
 
-| Claim | Data and measure | TADORI | Baselines | Verdict | Section |
+AURC is the average error rate when the most confident answers are given first; **lower is better**.
+
+| Claim | Data and measure | TADORI | Baselines | Verdict (what improved) | Section |
 |---|---|---|---|---|---|
-| The small model is good at picking senses | Wrong-sense chains among paths of 2+ steps that reach C (Claude, blind to method) | 4/41 (10%) | No sense choice 36/50 (72%), embedding similarity 8/35 | Fewer | [E8](#e8-choosing-word-senses-along-the-chain-and-a-fresh-test-set) |
-| Sense choice holds up at scale | 34,402 head words in WordNet definitions, agreement with human sense tags (Princeton Gloss Corpus) | 80.9% | Similarity 67.9%, WordNet first sense 60.5% | Better (Gemma − similarity +13.0 points, 95% interval 10.3 to 16.3) | [E12](#e12-does-gemmas-sense-choice-hold-up-at-scale-2026-11-12) |
-| It is not only memory | 5,000 items with the defined word hidden or the text paraphrased | Hidden 80.8%, paraphrased 69.3% | First sense 59.3% | Better (paraphrased − first sense +10.0, 3.4 to 17.0) | [E12](#e12-does-gemmas-sense-choice-hold-up-at-scale-2026-11-12) |
-| It can check the small model's answers | 300 fresh items never used for any choice, AURC | 0.046 (chain + learner) | The small model's own confidence 0.118 | Better (95% interval 0.038 to 0.112) | [E8](#e8-choosing-word-senses-along-the-chain-and-a-fresh-test-set), [recheck](#recheck-without-hand-written-word-lists-2026-11-11) |
-| It helps as a feature with other signals | 700 items, AURC, gradient boosting | 0.038 (all signals) | Learner on the small model's answers only 0.053 | Better (5 of 5 runs) | [E11](#e11-fixing-e8s-weak-points-and-combining-every-signal-2026-11-12) |
+| The small model is good at picking senses | Wrong-sense chains among paths of 2+ steps that reach C (Claude, blind to method) | 4/41 (10%) | No sense choice 36/50 (72%), embedding similarity 8/35 | Fewer wrong-sense chains | [E8](#e8-choosing-word-senses-along-the-chain-and-a-fresh-test-set) |
+| Sense choice holds up at scale | 34,402 head words in WordNet definitions, agreement with human sense tags (Princeton Gloss Corpus) | 80.9% | Similarity 67.9%, WordNet first sense 60.5% | Higher sense-choice accuracy (Gemma − similarity +13.0 points, 95% interval 10.3 to 16.3) | [E12](#e12-does-gemmas-sense-choice-hold-up-at-scale-2026-11-12) |
+| It is not only memory | 5,000 items with the defined word hidden or the text paraphrased | Hidden 80.8%, paraphrased 69.3% | First sense 59.3% | Accuracy survives hiding and paraphrase (paraphrased − first sense +10.0, 3.4 to 17.0) | [E12](#e12-does-gemmas-sense-choice-hold-up-at-scale-2026-11-12) |
+| It can check the small model's answers | 300 fresh items never used for any choice, AURC (lower is better) | 0.046 (chain + learner) | The small model's own confidence 0.118 | Better at finding the small model's errors (95% interval 0.038 to 0.112) | [E8](#e8-choosing-word-senses-along-the-chain-and-a-fresh-test-set), [recheck](#recheck-without-hand-written-word-lists-2026-11-11) |
+| It helps as a feature with other signals | 700 items, AURC (lower is better), gradient boosting | 0.038 (all signals) | Learner on the small model's answers only 0.053 | Adding it to a learner finds errors better (5 of 5 runs) | [E11](#e11-fixing-e8s-weak-points-and-combining-every-signal-2026-11-12) |
 
 **What was not shown.**
 
@@ -99,6 +101,21 @@ E15 shows that a 2B model makes a poor final judge. It does not undo TADORI's di
 - checking a model's answers with an external judge (ConCoRD 2022, BTProp 2025).
 
 TADORI combines them and uses the small model only to choose senses along the way, not to judge. We did not find this combination in the work we surveyed, but we may have missed some. The difference from BTProp: BTProp links the model's own answers in a network, while TADORI follows an outside dictionary and uses no network.
+
+**Where to find the exact implementation.** The dictionary is the full Wiktionary dump (enwiktionary-latest-pages-articles, fetched 2026-11-10). Its text is CC BY-SA, so it is not stored here; the notebook downloads it again. The code is in these places:
+
+- the head noun: `genus` in `analysis/e8/e8_core.py`;
+- the prompt: `choice_prompt` in the same file;
+- the NLI sentences: `premise` and `hyp` in the same file;
+- the sense-choice cell: `analysis/nolist/build_notebook_E8n.py` (notebook `colab/E8n_nolist_recheck.ipynb`);
+- the chain score: `analysis/nolist/e8n_analyze.py`.
+
+All formulas and their code locations are in [E6–E8: how the computation works](#e6e8-how-the-computation-works).
+
+**Notes for reading these results.**
+
+- The common-sense labels come from two models (Claude and Gemini), not from people. The 300 fresh items were also labelled by Claude.
+- The 80.9% (E12) is sense choice on WordNet. It is not directly comparable with the accuracy of TADORI's answers, which uses Wiktionary.
 
 **Run it.** To run it from saved outputs on a CPU, use `cd analysis/nolist; E8_DIR=../e8 python e8n_analyze.py ../../data/E8n_chains_nli.json out.json`. Method D is TADORI, and it takes about 5 minutes. To run the large sense-choice test, use `cd analysis; python e12/e12_analyze.py ../data/E12/e12_items_all.json.gz ../data/E12/e12_local.json.gz ../data/E12/E12_results.json.gz out.json`, which takes a few seconds. The small model's sense choice itself is in `colab/E8_sense_choice.ipynb` and in `choice_prompt` in `analysis/e8/e8_core.py`. The figure above is drawn by `analysis/tadori/fig_tadori.py`; it is a schematic and shows no numbers.
 
