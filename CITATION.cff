@@ -7,7 +7,8 @@ abstract: >-
   (Gemma-2 2B) answers true/false and "X is a type of Y" questions and its
   answers are checked by parts placed outside it: the model's own consistency
   rules with belief propagation, retrieved evidence, dictionary definitions with
-  an NLI model, and definition chains in which the model only picks word senses.
+  an NLI model, and definition chains in which the model only picks word senses
+  (TADORI: Tracing Along Definitions, Opting for the Right Interpretation).
   Plans were fixed before results; ties and losses are reported.
 authors:
   - family-names: Kato
@@ -29,3 +30,4 @@ keywords:
   - natural language inference
   - word sense disambiguation
   - dictionary definitions
+  - TADORI
