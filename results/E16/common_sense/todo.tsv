@@ -1,0 +1,1667 @@
+0	mangrove	tree
+1	breeder	man-made object
+2	dongle	equipment
+3	rifle	tool
+4	bandit	vehicle
+5	pantry	room
+6	choreographer	person
+7	damsel	living thing
+8	brazier	device
+9	psychiatrist	person
+10	passenger	living thing
+11	scythe	weapon
+12	tern	living thing
+13	aspirant	person
+14	ratatouille	dish
+15	sailboat	vehicle
+16	steamboat	man-made object
+17	vizier	worker
+18	gazelle	mammal
+19	plush	fabric
+20	airplane	vehicle
+21	sari	fabric
+22	clock	tool
+23	biologist	person
+24	transducer	equipment
+25	obstetrician	worker
+26	inhaler	equipment
+27	empress	person
+28	ethnic	living thing
+29	agave	living thing
+30	radiologist	worker
+31	cosmopolitan	drink
+32	brazier	container
+33	telegraph	machine
+34	curler	device
+35	footman	worker
+36	salesperson	worker
+37	hippopotamus	mammal
+38	anaconda	tool
+39	stator	man-made object
+40	racehorse	person
+41	incubator	tool
+42	pistol	machine
+43	redneck	living thing
+44	poppy	flower
+45	transformer	device
+46	prowler	living thing
+47	capacitor	equipment
+48	sovereign	living thing
+49	guitarist	person
+50	prodigal	living thing
+51	cutthroat	man-made object
+52	stethoscope	tool
+53	daredevil	person
+54	switcher	machine
+55	dowager	living thing
+56	woodcock	animal
+57	moray	living thing
+58	immune	living thing
+59	locksmith	person
+60	poodle	mammal
+61	auctioneer	worker
+62	strainer	machine
+63	hawthorn	tree
+64	kayak	boat
+65	repairman	person
+66	cacao	tree
+67	jukebox	tool
+68	executioner	worker
+69	machinist	person
+70	sailboat	man-made object
+71	toothpick	equipment
+72	compatriot	person
+73	tern	animal
+74	magistrate	person
+75	panzer	equipment
+76	corvette	machine
+77	godmother	person
+78	bodice	clothing
+79	landlord	person
+80	mandolin	equipment
+81	lidar	equipment
+82	crucible	tool
+83	baroness	living thing
+84	valerian	plant
+85	moth	insect
+86	stingray	man-made object
+87	optimist	person
+88	mandolin	device
+89	ship	equipment
+90	sleuth	living thing
+91	murine	living thing
+92	shotgun	weapon
+93	porpoise	mammal
+94	prosecutor	person
+95	telegraph	equipment
+96	motorcycle	equipment
+97	industrialist	living thing
+98	impressionist	person
+99	moa	bird
+100	janitor	worker
+101	speedometer	equipment
+102	spacecraft	tool
+103	recliner	device
+104	hod	man-made object
+105	widow	living thing
+106	gymnast	athlete
+107	bobcat	animal
+108	wristwatch	machine
+109	aspen	material
+110	brew	man-made object
+111	rancher	worker
+112	thermostat	equipment
+113	borrower	person
+114	earner	worker
+115	velvet	material
+116	semaphore	equipment
+117	backpacker	man-made object
+118	wraparound	material
+119	gyroscope	tool
+120	bookcase	furniture
+121	spokeswoman	person
+122	abbess	person
+123	rudd	living thing
+124	nunnery	man-made object
+125	tartan	man-made object
+126	stockman	living thing
+127	rifle	equipment
+128	broad	man-made object
+129	provost	man-made object
+130	plumber	worker
+131	earner	person
+132	curator	person
+133	messenger	device
+134	vaporizer	machine
+135	bidet	tool
+136	khaki	clothing
+137	aunt	person
+138	inga	plant
+139	reporter	man-made object
+140	scarab	insect
+141	brigadier	person
+142	goldfish	living thing
+143	nigger	man-made object
+144	mathematician	person
+145	employee	worker
+146	contraceptive	device
+147	belle	living thing
+148	curry	dish
+149	sow	animal
+150	governess	worker
+151	passenger	person
+152	invader	person
+153	veterinarian	worker
+154	informer	person
+155	integrator	man-made object
+156	pontifical	man-made object
+157	sorcerer	living thing
+158	customer	living thing
+159	greyhound	mammal
+160	farmhouse	building
+161	groundhog	mammal
+162	cannonball	device
+163	gyroscope	device
+164	cafeteria	room
+165	scalpel	tool
+166	stoner	man-made object
+167	gangster	person
+168	caterer	person
+169	sagebrush	plant
+170	pharmacist	worker
+171	housekeeper	worker
+172	muslin	material
+173	skiff	device
+174	importer	person
+175	palmyra	material
+176	lifeboat	vehicle
+177	shed	building
+178	matchbox	device
+179	kidney	organ
+180	carpenter	living thing
+181	purifier	man-made object
+182	chisel	device
+183	nomad	worker
+184	accordion	equipment
+185	lily	flower
+186	clarinet	equipment
+187	reeve	living thing
+188	critter	animal
+189	spitz	living thing
+190	everyman	person
+191	claimant	person
+192	headlight	tool
+193	hiker	person
+194	ripper	living thing
+195	cleaver	tool
+196	alumnus	person
+197	mater	material
+198	hypocrite	person
+199	barometer	machine
+200	bronco	living thing
+201	geologist	worker
+202	bouncer	worker
+203	secessionist	person
+204	beggar	living thing
+205	blaster	device
+206	jeep	car
+207	locator	tool
+208	toothpick	weapon
+209	delinquent	living thing
+210	fitter	living thing
+211	swatch	body part
+212	lass	living thing
+213	spouse	person
+214	emitter	device
+215	sadist	person
+216	rani	living thing
+217	nudist	person
+218	periscope	machine
+219	capo	device
+220	thermometer	machine
+221	larva	animal
+222	serge	man-made object
+223	telegraph	tool
+224	telescope	machine
+225	binoculars	device
+226	clitoris	organ
+227	liana	plant
+228	pituitary	organ
+229	milkman	person
+230	vaporizer	tool
+231	bleacher	equipment
+232	cardiologist	worker
+233	grandparent	person
+234	mediator	tool
+235	collard	food
+236	employer	living thing
+237	chiffon	material
+238	calico	living thing
+239	limousine	device
+240	mockingbird	animal
+241	falconer	person
+242	burqa	clothing
+243	hacksaw	tool
+244	agitator	tool
+245	accountant	worker
+246	wombat	mammal
+247	singlet	material
+248	convert	living thing
+249	gosling	living thing
+250	landowner	living thing
+251	loudspeaker	machine
+252	bystander	person
+253	voyeur	living thing
+254	babysitter	person
+255	crustacean	animal
+256	assistant	worker
+257	steamboat	boat
+258	bloodhound	mammal
+259	sniffer	tool
+260	prospector	person
+261	professor	worker
+262	spandex	fabric
+263	centrist	living thing
+264	stethoscope	machine
+265	spastic	body part
+266	apologist	person
+267	hawthorn	plant
+268	pooch	mammal
+269	gramophone	musical instrument
+270	flamethrower	equipment
+271	babysitter	worker
+272	sonar	machine
+273	miser	person
+274	publicist	person
+275	laborer	person
+276	teapot	equipment
+277	inpatient	person
+278	springbok	mammal
+279	acacia	tree
+280	morgue	room
+281	cornet	musical instrument
+282	gelding	living thing
+283	scrim	device
+284	daredevil	living thing
+285	felt	fabric
+286	hairpin	man-made object
+287	misfit	living thing
+288	mercenary	person
+289	expressionist	person
+290	bathrobe	man-made object
+291	architect	person
+292	gavel	equipment
+293	accordion	musical instrument
+294	roommate	person
+295	jasmine	man-made object
+296	stable	man-made object
+297	sesame	food
+298	bartender	worker
+299	pancreas	organ
+300	serviceman	person
+301	waitress	person
+302	interferometer	machine
+303	poncho	material
+304	intern	person
+305	workstation	machine
+306	impala	mammal
+307	interceptor	device
+308	aircraft	vehicle
+309	wristwatch	equipment
+310	assemblyman	person
+311	astronomer	worker
+312	toby	animal
+313	stallion	mammal
+314	thief	person
+315	chef	worker
+316	airship	aircraft
+317	sovereign	man-made object
+318	tracker	tool
+319	astronaut	worker
+320	airliner	aircraft
+321	taxpayer	living thing
+322	hovercraft	tool
+323	bethel	man-made object
+324	senna	plant
+325	disciple	living thing
+326	captor	person
+327	ayatollah	person
+328	bantam	living thing
+329	armature	equipment
+330	plush	material
+331	pagoda	man-made object
+332	carpenter	worker
+333	princess	living thing
+334	clarinet	man-made object
+335	namesake	man-made object
+336	dinosaur	reptile
+337	crucible	material
+338	geisha	person
+339	schmuck	living thing
+340	racist	living thing
+341	wife	animal
+342	debutante	person
+343	cuddy	man-made object
+344	gasket	device
+345	forklift	equipment
+346	spouse	living thing
+347	schoolboy	living thing
+348	motel	building
+349	magnum	man-made object
+350	helicopter	equipment
+351	interceptor	container
+352	handset	machine
+353	performer	person
+354	villager	living thing
+355	midwife	living thing
+356	musket	equipment
+357	tiara	material
+358	registrant	person
+359	dredge	tool
+360	dirk	living thing
+361	pedophile	living thing
+362	janitor	person
+363	flea	insect
+364	nutter	food
+365	bailiff	worker
+366	stray	man-made object
+367	valedictorian	person
+368	publicist	worker
+369	athlete	person
+370	lifeguard	worker
+371	ani	living thing
+372	minion	man-made object
+373	forklift	machine
+374	survivalist	living thing
+375	typewriter	machine
+376	panzer	machine
+377	magneto	device
+378	expressionist	artist
+379	commissar	person
+380	warrior	living thing
+381	scraper	machine
+382	marksman	person
+383	spelt	food
+384	airliner	vehicle
+385	simulator	machine
+386	gelding	animal
+387	agave	material
+388	idealist	person
+389	hovercraft	equipment
+390	surgeon	person
+391	cultivar	living thing
+392	shredder	equipment
+393	senna	material
+394	android	machine
+395	locomotive	vehicle
+396	chalice	container
+397	candlestick	equipment
+398	informer	living thing
+399	sailboat	boat
+400	bobbin	equipment
+401	supercharger	machine
+402	polygraph	machine
+403	clairvoyant	person
+404	motorboat	vehicle
+405	falafel	dish
+406	bathtub	equipment
+407	mod	living thing
+408	urchin	man-made object
+409	searchlight	tool
+410	caddie	living thing
+411	paraplegic	living thing
+412	ombudsman	person
+413	georgette	fabric
+414	condor	bird
+415	soloist	artist
+416	clock	equipment
+417	lathe	tool
+418	eunuch	person
+419	visitor	living thing
+420	abdominal	body part
+421	terrorist	person
+422	skiff	equipment
+423	microfilm	material
+424	shim	tool
+425	condom	device
+426	missus	man-made object
+427	integrator	tool
+428	atheist	living thing
+429	crackpot	person
+430	satin	material
+431	galleon	vehicle
+432	boyfriend	person
+433	snob	living thing
+434	handyman	worker
+435	stowaway	living thing
+436	spandex	clothing
+437	bicycle	man-made object
+438	grandmaster	person
+439	meatball	dish
+440	hod	device
+441	erica	living thing
+442	backpack	device
+443	nunnery	building
+444	luge	vehicle
+445	schoolboy	person
+446	stockman	person
+447	lyricist	worker
+448	jogger	man-made object
+449	sickle	man-made object
+450	applicator	equipment
+451	sauna	container
+452	stakeholder	person
+453	laser	equipment
+454	cacao	living thing
+455	rhinoceros	mammal
+456	buggy	man-made object
+457	streetcar	equipment
+458	tomahawk	equipment
+459	circuitry	man-made object
+460	ladle	equipment
+461	warden	living thing
+462	ambulance	equipment
+463	sniffer	device
+464	cousin	living thing
+465	grabber	container
+466	panzer	vehicle
+467	scion	living thing
+468	matchbox	vehicle
+469	refugee	person
+470	syringe	equipment
+471	gland	organ
+472	bayonet	tool
+473	porcupine	mammal
+474	screenwriter	worker
+475	washroom	man-made object
+476	fancier	living thing
+477	filly	animal
+478	marauder	living thing
+479	tulle	man-made object
+480	limousine	car
+481	cello	device
+482	inverter	equipment
+483	perpetrator	person
+484	deer	mammal
+485	rapier	equipment
+486	synchrotron	equipment
+487	licensee	person
+488	toolbox	container
+489	hourglass	equipment
+490	chiropractor	person
+491	pulley	tool
+492	clarence	man-made object
+493	urologist	worker
+494	skewer	equipment
+495	wallet	container
+496	exporter	person
+497	nightshade	living thing
+498	veronica	living thing
+499	ship	boat
+500	winch	machine
+501	facilitator	person
+502	stockbroker	person
+503	armchair	device
+504	newsreader	worker
+505	misfit	clothing
+506	hairdresser	worker
+507	caddy	container
+508	sibling	living thing
+509	meteorologist	worker
+510	detainee	person
+511	paranoid	living thing
+512	mantel	container
+513	bock	man-made object
+514	fundamentalist	person
+515	tun	living thing
+516	ophthalmologist	person
+517	minster	building
+518	archbishop	person
+519	pooch	animal
+520	propagandist	living thing
+521	sputnik	equipment
+522	analyzer	machine
+523	worthy	living thing
+524	paramedic	person
+525	photographer	worker
+526	cuddy	room
+527	butch	living thing
+528	neurologist	person
+529	stingray	fish
+530	mammoth	living thing
+531	confidant	living thing
+532	insider	living thing
+533	chisel	man-made object
+534	cello	man-made object
+535	storeroom	room
+536	brazier	equipment
+537	theologian	living thing
+538	heckler	man-made object
+539	paralegal	person
+540	prude	person
+541	inhaler	machine
+542	airship	vehicle
+543	shiv	man-made object
+544	marlin	fish
+545	dildo	tool
+546	vine	living thing
+547	hornet	insect
+548	chump	living thing
+549	centipede	animal
+550	harrow	device
+551	theologian	person
+552	negotiator	worker
+553	cripple	man-made object
+554	stepmother	living thing
+555	trampoline	equipment
+556	councilman	person
+557	biennial	living thing
+558	entertainer	person
+559	salad	vegetable
+560	compressor	equipment
+561	pia	living thing
+562	aviator	device
+563	empress	living thing
+564	subcontractor	worker
+565	claimant	living thing
+566	biographer	worker
+567	canoe	equipment
+568	blaster	equipment
+569	dingo	dog
+570	portable	equipment
+571	millionaire	person
+572	refugee	living thing
+573	plush	man-made object
+574	flywheel	machine
+575	hippie	person
+576	integrator	equipment
+577	everyman	man-made object
+578	cockroach	insect
+579	collider	tool
+580	rancher	man-made object
+581	locksmith	worker
+582	flashlight	machine
+583	lobbyist	worker
+584	laser	man-made object
+585	desk	device
+586	insured	person
+587	emissary	person
+588	melancholic	living thing
+589	retiree	person
+590	tailor	living thing
+591	lawyer	person
+592	spaniel	mammal
+593	programmer	worker
+594	applicant	person
+595	islander	person
+596	ballerina	man-made object
+597	retriever	animal
+598	radiologist	person
+599	copywriter	worker
+600	dinky	man-made object
+601	sultan	living thing
+602	snowmobile	equipment
+603	drummer	person
+604	prude	living thing
+605	paintbrush	equipment
+606	agave	plant
+607	bulldozer	vehicle
+608	jaguar	mammal
+609	cellist	person
+610	godmother	living thing
+611	starship	equipment
+612	mod	man-made object
+613	combatant	living thing
+614	catamaran	device
+615	nightshade	plant
+616	jogger	living thing
+617	binoculars	man-made object
+618	fuchsia	living thing
+619	heterosexual	person
+620	oscillator	equipment
+621	aquarium	device
+622	dimmer	tool
+623	airbus	aircraft
+624	crossbow	tool
+625	balaclava	device
+626	musket	tool
+627	lifeboat	boat
+628	abalone	food
+629	attacker	person
+630	grader	worker
+631	kris	man-made object
+632	citizen	person
+633	mimic	living thing
+634	accountant	person
+635	outhouse	man-made object
+636	implant	device
+637	catamaran	vehicle
+638	kicker	man-made object
+639	mantis	insect
+640	lifeguard	person
+641	dongle	tool
+642	cassette	container
+643	mensch	living thing
+644	megaphone	machine
+645	godson	person
+646	ponderosa	living thing
+647	headmaster	person
+648	spokesperson	worker
+649	transponder	equipment
+650	schoolgirl	living thing
+651	entertainer	worker
+652	snowmobile	vehicle
+653	sniper	device
+654	osprey	bird
+655	fitter	person
+656	broad	living thing
+657	confessional	man-made object
+658	portable	device
+659	cassette	device
+660	guitar	equipment
+661	tray	device
+662	scythe	tool
+663	aircraft	equipment
+664	heiress	living thing
+665	clairvoyant	living thing
+666	lily	plant
+667	pancreas	living thing
+668	vegan	person
+669	sarin	weapon
+670	prosthesis	equipment
+671	poncho	clothing
+672	mamba	animal
+673	dreadnought	boat
+674	lyricist	person
+675	pug	mammal
+676	metronome	machine
+677	sauna	man-made object
+678	workman	living thing
+679	bobcat	man-made object
+680	bot	device
+681	motorboat	equipment
+682	bedroom	container
+683	merino	material
+684	adversary	person
+685	filly	living thing
+686	shawl	clothing
+687	ibis	bird
+688	concierge	worker
+689	whitey	living thing
+690	fetus	animal
+691	archivist	worker
+692	customer	person
+693	deflector	tool
+694	bridesmaid	living thing
+695	lodger	person
+696	forceps	tool
+697	houseboat	boat
+698	timepiece	machine
+699	freelancer	worker
+700	coauthor	person
+701	auctioneer	person
+702	jammer	equipment
+703	goggles	man-made object
+704	grog	man-made object
+705	aviator	vehicle
+706	martini	man-made object
+707	slingshot	equipment
+708	placental	living thing
+709	handset	tool
+710	gecko	reptile
+711	gelding	man-made object
+712	adolescent	person
+713	tricycle	equipment
+714	inga	living thing
+715	modem	man-made object
+716	soundtrack	man-made object
+717	landlord	living thing
+718	vulva	organ
+719	cowgirl	person
+720	grog	drink
+721	mammal	mammal
+722	bailiff	person
+723	freeman	person
+724	khaki	material
+725	condor	man-made object
+726	shim	device
+727	caliper	equipment
+728	pessimist	person
+729	puffin	bird
+730	toga	man-made object
+731	razor	equipment
+732	machinist	living thing
+733	sword	tool
+734	harpsichord	equipment
+735	interferometer	tool
+736	ophthalmologist	worker
+737	confidant	person
+738	curator	worker
+739	prospector	worker
+740	swivel	equipment
+741	guitar	musical instrument
+742	quitter	person
+743	guitar	device
+744	bot	tool
+745	geezer	living thing
+746	hypnotist	living thing
+747	sarcophagus	device
+748	brocade	man-made object
+749	corset	device
+750	battleship	man-made object
+751	longhorn	living thing
+752	toby	living thing
+753	guesthouse	man-made object
+754	hearse	equipment
+755	lender	person
+756	tactician	living thing
+757	ratchet	machine
+758	abbot	living thing
+759	sailboat	device
+760	merino	mammal
+761	brew	drink
+762	kitchen	room
+763	stockholder	person
+764	analyzer	equipment
+765	cleaver	equipment
+766	clarinet	device
+767	bulldog	dog
+768	albino	living thing
+769	urologist	person
+770	kinsman	person
+771	webcam	machine
+772	sheeting	material
+773	achiever	person
+774	palmyra	living thing
+775	strainer	tool
+776	scrim	material
+777	sleuth	worker
+778	vegetarian	person
+779	smuggler	person
+780	tequila	drink
+781	contrarian	person
+782	khaki	fabric
+783	solenoid	equipment
+784	bridesmaid	person
+785	ballerina	person
+786	trampoline	machine
+787	pedestrian	person
+788	taxpayer	person
+789	entomologist	worker
+790	heifer	mammal
+791	vine	plant
+792	ringleader	person
+793	merino	man-made object
+794	loudspeaker	equipment
+795	chub	man-made object
+796	psychiatrist	worker
+797	penguin	bird
+798	wormwood	living thing
+799	hearse	container
+800	dinghy	equipment
+801	coleslaw	dish
+802	tambourine	equipment
+803	ironclad	device
+804	cameraman	person
+805	sesame	material
+806	sectional	device
+807	hosiery	man-made object
+808	civilian	person
+809	jeep	device
+810	ale	drink
+811	proletarian	person
+812	pooch	dog
+813	skewer	device
+814	ironclad	vehicle
+815	tugboat	vehicle
+816	gavel	weapon
+817	shill	living thing
+818	terrorist	living thing
+819	collider	machine
+820	gasket	man-made object
+821	provost	person
+822	waitress	worker
+823	insured	living thing
+824	periscope	equipment
+825	scapegoat	living thing
+826	emeritus	living thing
+827	aquarium	container
+828	colonel	person
+829	matador	living thing
+830	kea	animal
+831	creditor	living thing
+832	scrim	equipment
+833	sword	equipment
+834	apprentice	worker
+835	infielder	athlete
+836	toolbox	device
+837	boudoir	room
+838	cactus	plant
+839	abolitionist	living thing
+840	catamaran	equipment
+841	alderman	person
+842	camcorder	machine
+843	skateboard	equipment
+844	nondescript	living thing
+845	speedometer	machine
+846	gallows	equipment
+847	geographer	person
+848	burglar	person
+849	itinerant	person
+850	papillon	mammal
+851	uterus	organ
+852	dachshund	dog
+853	merino	animal
+854	guarantor	living thing
+855	mastiff	mammal
+856	vermouth	drink
+857	yacht	boat
+858	heterosexual	living thing
+859	penis	organ
+860	colleen	person
+861	inventor	worker
+862	underpants	clothing
+863	debutante	living thing
+864	guesthouse	building
+865	slingshot	weapon
+866	attire	clothing
+867	ant	insect
+868	easel	device
+869	underwear	equipment
+870	supplier	person
+871	nematode	animal
+872	radar	equipment
+873	grader	device
+874	neutral	man-made object
+875	accelerometer	tool
+876	jukebox	machine
+877	mammoth	mammal
+878	bookkeeper	person
+879	hitchhiker	device
+880	custodian	person
+881	genitalia	organ
+882	laser	tool
+883	compressor	machine
+884	applicator	tool
+885	ladle	tool
+886	cheeseburger	dish
+887	grizzly	mammal
+888	scraper	tool
+889	abattoir	man-made object
+890	singlet	man-made object
+891	raglan	clothing
+892	librarian	worker
+893	corvette	device
+894	layman	living thing
+895	sashimi	dish
+896	tights	clothing
+897	cockatoo	bird
+898	fanatic	living thing
+899	workman	worker
+900	anarchist	person
+901	purifier	device
+902	althea	living thing
+903	consulate	man-made object
+904	yacht	vehicle
+905	lawyer	worker
+906	macho	living thing
+907	mamba	living thing
+908	helicopter	tool
+909	camcorder	tool
+910	nudist	living thing
+911	crossbow	equipment
+912	canoe	boat
+913	cowgirl	living thing
+914	watchman	living thing
+915	sociopath	person
+916	tomboy	person
+917	bicycle	vehicle
+918	orthodontist	person
+919	oppressor	person
+920	geranium	flower
+921	gynecologist	worker
+922	tabor	man-made object
+923	transponder	tool
+924	sow	man-made object
+925	cartoonist	person
+926	analyzer	device
+927	sprinter	man-made object
+928	backpacker	person
+929	armature	device
+930	separatist	living thing
+931	hibiscus	flower
+932	collider	equipment
+933	entrepreneur	person
+934	tights	man-made object
+935	airbus	vehicle
+936	clarion	tool
+937	prisoner	person
+938	gasket	material
+939	dildo	device
+940	optimist	living thing
+941	bathtub	device
+942	razor	device
+943	cassette	equipment
+944	clergyman	person
+945	analyzer	tool
+946	llama	mammal
+947	doorbell	machine
+948	maul	weapon
+949	carburetor	equipment
+950	tray	equipment
+951	cafe	building
+952	photojournalist	person
+953	rhododendron	flower
+954	repairman	worker
+955	moll	living thing
+956	consumer	living thing
+957	jammer	tool
+958	waterfowl	bird
+959	strategist	worker
+960	scapegoat	person
+961	macadamia	tree
+962	everlasting	man-made object
+963	socialite	living thing
+964	chrysalis	living thing
+965	plenipotentiary	living thing
+966	payer	man-made object
+967	descendant	man-made object
+968	parsonage	building
+969	microphone	tool
+970	hypnotist	worker
+971	cesspool	equipment
+972	bot	machine
+973	ballerina	artist
+974	satin	man-made object
+975	caddy	man-made object
+976	oscillator	device
+977	winger	person
+978	pantry	man-made object
+979	sesame	plant
+980	mamba	reptile
+981	poodle	dog
+982	dirk	man-made object
+983	crossbow	weapon
+984	catamaran	boat
+985	bookkeeper	worker
+986	crackpot	living thing
+987	menial	living thing
+988	wraparound	clothing
+989	groupie	man-made object
+990	housewife	person
+991	brant	animal
+992	midwife	person
+993	seaplane	machine
+994	stockbroker	worker
+995	traditionalist	living thing
+996	newt	reptile
+997	cougar	mammal
+998	petticoat	equipment
+999	grabber	equipment
+1000	preteen	living thing
+1001	husband	animal
+1002	guildhall	building
+1003	paratrooper	person
+1004	crusher	equipment
+1005	lathe	machine
+1006	airliner	equipment
+1007	duchess	living thing
+1008	skater	living thing
+1009	abbess	living thing
+1010	exporter	living thing
+1011	economist	person
+1012	nacho	dish
+1013	mongoose	animal
+1014	strainer	equipment
+1015	rattlesnake	reptile
+1016	transformer	equipment
+1017	typist	living thing
+1018	sieve	machine
+1019	architect	worker
+1020	freeman	living thing
+1021	wallaby	mammal
+1022	niqab	clothing
+1023	skinhead	person
+1024	penitent	person
+1025	workaholic	worker
+1026	hyena	mammal
+1027	narrator	living thing
+1028	microphone	machine
+1029	sofa	furniture
+1030	sahib	man-made object
+1031	desk	furniture
+1032	webcam	equipment
+1033	freelancer	person
+1034	spokesperson	person
+1035	doge	animal
+1036	radar	tool
+1037	performer	worker
+1038	scraper	equipment
+1039	exterminator	person
+1040	scrim	fabric
+1041	semaphore	device
+1042	swan	bird
+1043	dowager	person
+1044	campaigner	living thing
+1045	playmaker	person
+1046	speedboat	device
+1047	sled	equipment
+1048	oboe	device
+1049	wrestler	person
+1050	separatist	person
+1051	earl	living thing
+1052	robber	person
+1053	infielder	person
+1054	yacht	device
+1055	minion	worker
+1056	madder	plant
+1057	widow	person
+1058	bistro	man-made object
+1059	hygienist	worker
+1060	tomboy	living thing
+1061	pinto	living thing
+1062	skateboard	device
+1063	reset	tool
+1064	simulator	tool
+1065	cubby	device
+1066	workbench	equipment
+1067	footman	man-made object
+1068	hacksaw	equipment
+1069	headdress	man-made object
+1070	reptile	reptile
+1071	supercomputer	tool
+1072	gynecologist	person
+1073	husband	man-made object
+1074	skiff	vehicle
+1075	concubine	living thing
+1076	statesman	person
+1077	carburetor	man-made object
+1078	bouncer	living thing
+1079	warlord	person
+1080	shopkeeper	worker
+1081	laser	device
+1082	paintbrush	device
+1083	owl	bird
+1084	brandy	drink
+1085	cosmopolitan	man-made object
+1086	stepfather	person
+1087	typewriter	equipment
+1088	surfer	person
+1089	pika	mammal
+1090	extremist	person
+1091	kook	living thing
+1092	erotic	material
+1093	surfer	living thing
+1094	steakhouse	man-made object
+1095	cameraman	worker
+1096	jeep	machine
+1097	scarab	man-made object
+1098	detonator	equipment
+1099	taster	person
+1100	housekeeper	person
+1101	newsreader	man-made object
+1102	dandelion	flower
+1103	piglet	animal
+1104	disciple	person
+1105	maggot	insect
+1106	pupa	animal
+1107	collard	plant
+1108	bassist	person
+1109	agitator	equipment
+1110	banjo	musical instrument
+1111	thermos	vehicle
+1112	pullover	man-made object
+1113	hoe	man-made object
+1114	wildflower	flower
+1115	typewriter	tool
+1116	slingshot	tool
+1117	matchbox	container
+1118	chronicler	living thing
+1119	airliner	machine
+1120	coffin	container
+1121	dunce	living thing
+1122	trampoline	game
+1123	barge	vehicle
+1124	invertebrate	animal
+1125	cuddy	living thing
+1126	sectional	furniture
+1127	speakeasy	man-made object
+1128	surrealist	artist
+1129	bot	equipment
+1130	grenade	weapon
+1131	arsonist	person
+1132	curler	man-made object
+1133	restaurant	man-made object
+1134	detonator	weapon
+1135	billionaire	person
+1136	speedometer	tool
+1137	paleontologist	person
+1138	krill	animal
+1139	classroom	building
+1140	centrifuge	equipment
+1141	starling	man-made object
+1142	glider	equipment
+1143	contraceptive	tool
+1144	dinghy	device
+1145	clockwork	equipment
+1146	armchair	furniture
+1147	coupe	car
+1148	nigger	living thing
+1149	dredge	equipment
+1150	ancestor	living thing
+1151	peshmerga	person
+1152	chiffon	man-made object
+1153	boathouse	building
+1154	educator	person
+1155	oncologist	person
+1156	bimbo	living thing
+1157	switcher	equipment
+1158	simulator	man-made object
+1159	organist	person
+1160	shredder	device
+1161	boudoir	man-made object
+1162	rowan	living thing
+1163	jeep	man-made object
+1164	morgue	building
+1165	minster	man-made object
+1166	radar	device
+1167	geezer	man-made object
+1168	lass	man-made object
+1169	roebuck	living thing
+1170	wop	living thing
+1171	ringleader	living thing
+1172	sonar	device
+1173	lantern	container
+1174	golfer	person
+1175	latrine	device
+1176	battleship	game
+1177	bumblebee	insect
+1178	armadillo	mammal
+1179	countess	living thing
+1180	dropper	equipment
+1181	burlap	man-made object
+1182	intellectual	living thing
+1183	publican	living thing
+1184	psychotherapist	worker
+1185	peregrine	bird
+1186	bayonet	equipment
+1187	miser	living thing
+1188	transformer	man-made object
+1189	coot	bird
+1190	glider	vehicle
+1191	tugboat	boat
+1192	concubine	person
+1193	calender	device
+1194	adolescent	living thing
+1195	speakeasy	building
+1196	paisley	fabric
+1197	murine	mammal
+1198	trapeze	equipment
+1199	warship	vehicle
+1200	oboe	man-made object
+1201	heathen	living thing
+1202	tracker	device
+1203	brad	man-made object
+1204	housewife	living thing
+1205	racehorse	animal
+1206	governess	person
+1207	bandicoot	mammal
+1208	dieter	person
+1209	collard	vegetable
+1210	liza	living thing
+1211	techie	worker
+1212	jasmine	plant
+1213	polygraph	tool
+1214	lodger	living thing
+1215	moped	equipment
+1216	lingerie	clothing
+1217	motorcycle	device
+1218	tweeter	device
+1219	autofocus	device
+1220	longhorn	animal
+1221	stepfather	living thing
+1222	doge	person
+1223	sniper	man-made object
+1224	nawab	living thing
+1225	falcon	bird
+1226	bidet	equipment
+1227	guitarist	living thing
+1228	ripper	man-made object
+1229	dreadnought	device
+1230	sword	weapon
+1231	marksman	living thing
+1232	motorcycle	machine
+1233	collard	living thing
+1234	payer	living thing
+1235	stopwatch	machine
+1236	airplane	aircraft
+1237	hoist	equipment
+1238	economist	worker
+1239	polygraph	equipment
+1240	psychic	living thing
+1241	violin	device
+1242	simpleton	living thing
+1243	gnu	living thing
+1244	cardiologist	person
+1245	hoist	tool
+1246	bedroom	room
+1247	pervert	living thing
+1248	screenwriter	person
+1249	campaigner	worker
+1250	bilingual	man-made object
+1251	troublemaker	person
+1252	hostage	living thing
+1253	apprentice	person
+1254	dieter	living thing
+1255	misogynist	person
+1256	prince	living thing
+1257	headset	equipment
+1258	oncologist	worker
+1259	aloe	plant
+1260	voter	person
+1261	meteorologist	person
+1262	goldilocks	living thing
+1263	tailor	worker
+1264	salesman	worker
+1265	biter	device
+1266	surrealist	person
+1267	rogue	living thing
+1268	deflector	material
+1269	soloist	person
+1270	dropper	tool
+1271	militant	man-made object
+1272	neuroscientist	worker
+1273	carbine	device
+1274	rodent	mammal
+1275	kea	bird
+1276	exchanger	man-made object
+1277	weatherman	living thing
+1278	tartan	material
+1279	sniffer	equipment
+1280	dimmer	equipment
+1281	progenitor	living thing
+1282	bricklayer	person
+1283	literate	living thing
+1284	ascot	man-made object
+1285	flamethrower	tool
+1286	pulley	machine
+1287	chalice	equipment
+1288	programmer	person
+1289	patriot	man-made object
+1290	senator	person
+1291	private	man-made object
+1292	tidy	living thing
+1293	rowan	plant
+1294	murderer	person
+1295	metronome	tool
+1296	imam	person
+1297	hummingbird	bird
+1298	detonator	machine
+1299	kidnapper	living thing
+1300	ivy	material
+1301	latrine	container
+1302	papillon	dog
+1303	equatorial	man-made object
+1304	seller	person
+1305	warship	equipment
+1306	macadamia	food
+1307	racehorse	mammal
+1308	literate	person
+1309	lantern	equipment
+1310	geneticist	person
+1311	soloist	worker
+1312	sportswear	man-made object
+1313	keyboardist	person
+1314	beagle	mammal
+1315	trainee	worker
+1316	cartoonist	artist
+1317	beret	man-made object
+1318	headdress	device
+1319	neurosurgeon	worker
+1320	conger	fish
+1321	grandma	animal
+1322	washroom	building
+1323	actress	worker
+1324	compressor	tool
+1325	microscope	machine
+1326	fiduciary	person
+1327	breeder	person
+1328	adversary	living thing
+1329	caddy	device
+1330	classroom	room
+1331	biographer	person
+1332	dinosaur	animal
+1333	priestess	person
+1334	lemur	mammal
+1335	photographer	person
+1336	tongs	device
+1337	ornamental	living thing
+1338	delegate	living thing
+1339	cyborg	person
+1340	poncho	equipment
+1341	grandma	living thing
+1342	falcon	man-made object
+1343	tavern	building
+1344	sarin	material
+1345	accuser	person
+1346	importer	living thing
+1347	donna	person
+1348	silly	man-made object
+1349	aspen	plant
+1350	barge	equipment
+1351	helicopter	aircraft
+1352	vassal	person
+1353	takin	animal
+1354	buyer	person
+1355	wether	living thing
+1356	mediator	person
+1357	swivel	device
+1358	bouncer	person
+1359	dragonfly	insect
+1360	doorbell	equipment
+1361	sturgeon	fish
+1362	chiropractor	worker
+1363	bobby	person
+1364	astronaut	living thing
+1365	scapegoat	man-made object
+1366	guarantor	person
+1367	tugboat	equipment
+1368	dinghy	man-made object
+1369	kilt	clothing
+1370	cursor	man-made object
+1371	terrier	dog
+1372	schoolteacher	worker
+1373	intruder	person
+1374	warship	device
+1375	tartan	fabric
+1376	dreadnought	vehicle
+1377	cutthroat	living thing
+1378	emigrant	living thing
+1379	autofocus	equipment
+1380	retriever	mammal
+1381	piccolo	living thing
+1382	hosiery	clothing
+1383	timepiece	equipment
+1384	carpenter	man-made object
+1385	stupid	living thing
+1386	girder	device
+1387	violin	equipment
+1388	workman	person
+1389	immigrant	living thing
+1390	dragoon	living thing
+1391	custodian	worker
+1392	satchel	equipment
+1393	outcast	person
+1394	tavern	man-made object
+1395	lilac	plant
+1396	convener	person
+1397	absentee	living thing
+1398	valet	living thing
+1399	dominatrix	person
+1400	sociopath	living thing
+1401	helicopter	vehicle
+1402	daffodil	flower
+1403	coroner	person
+1404	alderman	man-made object
+1405	airliner	device
+1406	mantua	man-made object
+1407	tweeter	tool
+1408	chowder	dish
+1409	innocent	living thing
+1410	amplifier	equipment
+1411	welder	man-made object
+1412	propeller	equipment
+1413	swivel	tool
+1414	prospector	living thing
+1415	midwife	worker
+1416	syringe	tool
+1417	winch	tool
+1418	shredder	machine
+1419	converter	device
+1420	bureaucrat	worker
+1421	unfortunate	living thing
+1422	mosquito	animal
+1423	tracker	man-made object
+1424	marigold	flower
+1425	ratchet	equipment
+1426	mountaineer	living thing
+1427	hoist	device
+1428	lobbyist	person
+1429	centrifuge	tool
+1430	vise	equipment
+1431	salad	dish
+1432	stewardess	person
+1433	psychotherapist	person
+1434	handkerchief	material
+1435	toby	man-made object
+1436	cider	food
+1437	interviewee	person
+1438	piccolo	person
+1439	motorcyclist	person
+1440	bookshelf	container
+1441	stator	equipment
+1442	poi	material
+1443	neurotic	living thing
+1444	longhorn	mammal
+1445	trapper	worker
+1446	locket	container
+1447	haggis	dish
+1448	bigot	person
+1449	conformist	living thing
+1450	sinner	person
+1451	lancer	weapon
+1452	receptionist	person
+1453	starship	vehicle
+1454	landlady	person
+1455	wraparound	man-made object
+1456	interceptor	tool
+1457	incompetent	living thing
+1458	paraplegic	person
+1459	laptop	tool
+1460	wife	living thing
+1461	peripheral	equipment
+1462	speedboat	vehicle
+1463	forklift	tool
+1464	manatee	mammal
+1465	motorboat	boat
+1466	streetcar	vehicle
+1467	hostage	person
+1468	telegraph	device
+1469	murderer	living thing
+1470	alternator	machine
+1471	tweeter	equipment
+1472	metronome	equipment
+1473	congressman	person
+1474	wallet	device
+1475	necktie	clothing
+1476	sled	vehicle
+1477	citizen	living thing
+1478	therapist	worker
+1479	tetra	living thing
+1480	investor	living thing
+1481	headliner	man-made object
+1482	hobbyist	person
+1483	bobby	animal
+1484	wanton	man-made object
+1485	muslin	man-made object
+1486	abuser	person
+1487	scarab	living thing
+1488	moray	animal
+1489	gallows	device
+1490	prisoner	living thing
+1491	deflector	man-made object
+1492	husband	living thing
+1493	thistle	flower
+1494	cacao	plant
+1495	desperate	living thing
+1496	integrator	device
+1497	blacksmith	worker
+1498	matchmaker	tool
+1499	lyre	equipment
+1500	widower	person
+1501	supermodel	worker
+1502	visitor	person
+1503	aviator	equipment
+1504	thermos	equipment
+1505	legate	person
+1506	pupa	living thing
+1507	incumbent	person
+1508	sauerkraut	dish
+1509	veterinarian	person
+1510	doorbell	tool
+1511	newscaster	worker
+1512	liqueur	man-made object
+1513	maxi	clothing
+1514	warship	machine
+1515	bodybuilder	athlete
+1516	sonar	tool
+1517	socialite	person
+1518	caliph	person
+1519	priory	man-made object
+1520	lyricist	living thing
+1521	blogger	person
+1522	executioner	person
+1523	inhabitant	person
+1524	foal	mammal
+1525	amplifier	tool
+1526	breadwinner	person
+1527	gazebo	device
+1528	plumber	person
+1529	stapler	tool
+1530	sputnik	machine
+1531	skiff	boat
+1532	visitor	man-made object
+1533	kayak	vehicle
+1534	cornerback	person
+1535	spitz	dog
+1536	matchbox	equipment
+1537	apprentice	man-made object
+1538	aircraft	tool
+1539	ridley	living thing
+1540	kennel	equipment
+1541	faucet	machine
+1542	simulator	equipment
+1543	curry	man-made object
+1544	intern	worker
+1545	senna	living thing
+1546	cosmopolitan	living thing
+1547	simulator	device
+1548	vegetarian	living thing
+1549	whisperer	person
+1550	pistol	equipment
+1551	grenade	equipment
+1552	betel	plant
+1553	invalid	living thing
+1554	sputnik	vehicle
+1555	kangaroo	mammal
+1556	miser	man-made object
+1557	pug	animal
+1558	prostitute	worker
+1559	skater	athlete
+1560	modem	machine
+1561	valedictorian	living thing
+1562	peshmerga	man-made object
+1563	gyroscope	equipment
+1564	corkscrew	equipment
+1565	aquatic	living thing
+1566	bystander	living thing
+1567	shotgun	equipment
+1568	aspen	living thing
+1569	flatmate	person
+1570	ladle	container
+1571	eyewitness	person
+1572	letterman	man-made object
+1573	hourglass	tool
+1574	shill	person
+1575	falcon	animal
+1576	housemate	person
+1577	bloodhound	dog
+1578	tulle	material
+1579	grader	man-made object
+1580	bodice	man-made object
+1581	gorilla	mammal
+1582	slob	living thing
+1583	choreographer	worker
+1584	harrow	man-made object
+1585	ambulance	machine
+1586	trident	device
+1587	stewardess	worker
+1588	althea	material
+1589	shotgun	machine
+1590	cadet	living thing
+1591	kayak	device
+1592	prodigal	person
+1593	bodybuilder	living thing
+1594	caddy	equipment
+1595	cousin	person
+1596	modem	tool
+1597	loom	tool
+1598	caterer	worker
+1599	transponder	machine
+1600	tulle	fabric
+1601	hooch	man-made object
+1602	limousine	container
+1603	kicker	device
+1604	integrator	machine
+1605	mustang	living thing
+1606	extremist	living thing
+1607	great	living thing
+1608	freedman	living thing
+1609	weatherman	worker
+1610	poi	food
+1611	malik	person
+1612	pitchfork	equipment
+1613	messenger	living thing
+1614	propeller	tool
+1615	lilac	flower
+1616	secessionist	living thing
+1617	calico	man-made object
+1618	watchmaker	worker
+1619	friar	living thing
+1620	brant	bird
+1621	contrarian	living thing
+1622	donna	living thing
+1623	starling	bird
+1624	nudist	man-made object
+1625	calico	material
+1626	stakeholder	living thing
+1627	opportunist	living thing
+1628	belle	animal
+1629	paisley	material
+1630	ski	equipment
+1631	lung	organ
+1632	ship	device
+1633	beanie	clothing
+1634	dynamo	tool
+1635	towel	fabric
+1636	contraceptive	man-made object
+1637	limiter	device
+1638	perfectionist	person
+1639	songwriter	person
+1640	lidar	tool
+1641	luge	device
+1642	bisexual	living thing
+1643	beggar	person
+1644	kidnapper	person
+1645	sniper	living thing
+1646	steamboat	equipment
+1647	firearm	equipment
+1648	hairdresser	person
+1649	barbell	device
+1650	philanthropist	living thing
+1651	synchrotron	machine
+1652	chaplain	person
+1653	toddler	living thing
+1654	conch	animal
+1655	chime	device
+1656	portable	man-made object
+1657	incubator	equipment
+1658	hearse	device
+1659	clinician	worker
+1660	streetcar	device
+1661	webcam	tool
+1662	condom	tool
+1663	swami	man-made object
+1664	headlight	equipment
+1665	cymbal	musical instrument
+1666	handset	equipment

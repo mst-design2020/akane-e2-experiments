@@ -1,0 +1,48 @@
+{
+ "0.01": {
+  "n_only_i": 245,
+  "n_only_iii": 200,
+  "cs_net_only_i": 221,
+  "cs_net_only_iii": 176,
+  "cs_diff": 45,
+  "ci95": [
+   25.0,
+   65.0
+  ],
+  "wn_net_only_i": 145,
+  "wn_net_only_iii": 118,
+  "wn_diff": 27,
+  "agree_wn_cs": 0.8404494382022472
+ },
+ "0.025": {
+  "n_only_i": 318,
+  "n_only_iii": 408,
+  "cs_net_only_i": 226,
+  "cs_net_only_iii": 294,
+  "cs_diff": -68,
+  "ci95": [
+   -106.0,
+   -32.0
+  ],
+  "wn_net_only_i": 82,
+  "wn_net_only_iii": 52,
+  "wn_diff": 30,
+  "agree_wn_cs": 0.7038567493112947
+ },
+ "0.05": {
+  "n_only_i": 307,
+  "n_only_iii": 487,
+  "cs_net_only_i": 129,
+  "cs_net_only_iii": 189,
+  "cs_diff": -60,
+  "ci95": [
+   -110.05,
+   -10.0
+  ],
+  "wn_net_only_i": 77,
+  "wn_net_only_iii": -39,
+  "wn_diff": 116,
+  "agree_wn_cs": 0.7732997481108312
+ },
+ "verdict": "WordNetの癖による勝ちだった"
+}

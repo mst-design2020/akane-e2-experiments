@@ -1,0 +1,71 @@
+{
+ "seeds": {
+  "0": {
+   "net+violcal@0.01": 3059,
+   "gemma+violcal@0.01": 2816,
+   "net+conflict@0.01": 2702,
+   "net+violcal@0.025": 2658,
+   "gemma+violcal@0.025": 2599,
+   "net+conflict@0.025": 2381,
+   "net+violcal@0.05": 2459,
+   "gemma+violcal@0.05": 2444,
+   "net+conflict@0.05": 2147
+  },
+  "1": {
+   "net+violcal@0.01": 3065,
+   "gemma+violcal@0.01": 2820,
+   "net+conflict@0.01": 2719,
+   "net+violcal@0.025": 2673,
+   "gemma+violcal@0.025": 2606,
+   "net+conflict@0.025": 2370,
+   "net+violcal@0.05": 2460,
+   "gemma+violcal@0.05": 2446,
+   "net+conflict@0.05": 2152
+  },
+  "2": {
+   "net+violcal@0.01": 3066,
+   "gemma+violcal@0.01": 2821,
+   "net+conflict@0.01": 2718,
+   "net+violcal@0.025": 2669,
+   "gemma+violcal@0.025": 2603,
+   "net+conflict@0.025": 2380,
+   "net+violcal@0.05": 2462,
+   "gemma+violcal@0.05": 2447,
+   "net+conflict@0.05": 2157
+  },
+  "3": {
+   "net+violcal@0.01": 3060,
+   "gemma+violcal@0.01": 2816,
+   "net+conflict@0.01": 2712,
+   "net+violcal@0.025": 2655,
+   "gemma+violcal@0.025": 2600,
+   "net+conflict@0.025": 2373,
+   "net+violcal@0.05": 2454,
+   "gemma+violcal@0.05": 2443,
+   "net+conflict@0.05": 2149
+  },
+  "4": {
+   "net+violcal@0.01": 3063,
+   "gemma+violcal@0.01": 2820,
+   "net+conflict@0.01": 2712,
+   "net+violcal@0.025": 2661,
+   "gemma+violcal@0.025": 2603,
+   "net+conflict@0.025": 2397,
+   "net+violcal@0.05": 2457,
+   "gemma+violcal@0.05": 2445,
+   "net+conflict@0.05": 2147
+  }
+ },
+ "mean": {
+  "net+violcal@0.01": 3062.6,
+  "gemma+violcal@0.01": 2818.6,
+  "net+conflict@0.01": 2712.6,
+  "net+violcal@0.025": 2663.2,
+  "gemma+violcal@0.025": 2602.2,
+  "net+conflict@0.025": 2380.2,
+  "net+violcal@0.05": 2458.4,
+  "gemma+violcal@0.05": 2445.0,
+  "net+conflict@0.05": 2150.4
+ },
+ "note": "事後の参考：破りをキャリブレーション後の答え(U>0)で数える"
+}
