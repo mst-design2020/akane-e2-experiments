@@ -174,6 +174,14 @@ The network that fully trusts the rules (E2-2 to E2-5, and the "trusting BP" in 
 
 Split into five stages following the course of the work. Each stage starts with its rule for a "difference"; every rule was fixed in the plan before the run. 95% intervals come from resampling by item noun (or head word). AURC differences are "this method − the comparison", so negative is better.
 
+**Why the rules differ between experiments.** None of them is a formal statistical test; each is a practical rule fixed in the plan before the run, and it changed with the measure and the item set.
+- E2 to E9-2 use a fixed gap of 0.02. The measures there ranged from about 0.03 to 0.85, where 0.02 could separate methods.
+- From E9-3 on, true claims are rare (4.9%) and AURC values shrink to about 0.001–0.02, where a fixed 0.02 gap can never be met. The rule became "at least 20% of the other value" (the E9-3 section records that this was changed before the runs), and later experiments kept it.
+- From E11 on, many comparisons use no learner and so have no splits (chain scores, sense-choice accuracy). With no runs to count, a 95% interval from resampling takes the place of the count.
+- "Win" and "difference" mean the same thing.
+
+**What the 95% intervals cover.** The spread of the difference when the items (item nouns, or head words) are drawn again with replacement 1,000 times. Both methods are compared on the same draw each time (a paired bootstrap). Variation from data splits and random seeds is not in these intervals; that is what the "4 of 5 runs" rules check.
+
 ### Stage 1: rules written by the model, checked with belief propagation (E2-2 to E2-9)
 
 Rule: a "win" needs a mean AUROC gain of at least 0.02 over 10 runs and a higher score in at least 8 of 10.
