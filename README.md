@@ -6,12 +6,14 @@ English | [日本語](README_ja.md)
 
 **What this is:** experiments that keep a small language model (Gemma-2 2B) as the "mouth" and check its answers with parts placed outside it: rules, belief propagation (BP), retrieved evidence, dictionary definitions and a small NLI model. Each plan was fixed before its results, and ties and losses are reported as well.
 
+**For researchers:** the method that remained, TADORI, is summarised in one section (definition, procedure, what was and was not shown, what was dropped): [TADORI (summary for researchers)](#tadori-summary-for-researchers).
+
 **Main findings so far** (one small model, English, mostly one domain; see [Limitations](#limitations)):
 
 - **A small model is a poor judge but a good helper.** Gemma-2 2B is often confidently wrong on "X is a type of Y". Checking its answer against dictionary definitions with an NLI model cuts the error measure (AURC, lower is better) from 0.154 to 0.070 (E6).
 - **Give it only the narrow job it is good at (TADORI).** Chaining definitions (granddaughter → person → mammal) breaks when a word is read in the wrong sense. When Gemma only picks which sense of each word is meant, wrong-sense chains fall from 72% to 10%, and on 300 new items the chain check with a learner beats Gemma's own confidence (0.046 vs 0.118) (E7, E8, rechecked without hand-written lists). We call this check, following dictionary definitions and letting the small model pick only the sense of each word on the way, **TADORI** (Japanese for "tracing"; Tracing Along Definitions, Opting for the Right Interpretation). Following definitions and having a model pick word senses are both older ideas; what is new is how they are combined ([Related work](#related-work-and-what-is-different)).
 - **Combining every signal in one learner helps; deeper chains and box embeddings alone do not (E11).** Gemma's answers, the dictionary chain, outside sentences and a box embedding in one gradient-boosting learner beat the learner on Gemma's answers alone on "is a type of" (0.017 → 0.004), part-whole (0.062 → 0.039) and disease (0.025 → 0.016); geography ties, and part-whole and disease tie under Gemini's labels.
-- **Gemma's narrow job holds up at scale (E12).** On 34,402 WordNet definitions whose head word was sense-tagged by people, Gemma picks the meant sense 80.9% of the time, against 60.5% for WordNet's first sense and 67.9% for embedding similarity, and the checks in E12-1 say this is not only memory.
+- **Gemma's narrow job holds up at scale (E12).** On 34,402 WordNet definitions whose head word was sense-tagged by people, Gemma picks the meant sense 80.9% of the time (this is sense-choice accuracy, not the accuracy of TADORI's answers), against 60.5% for WordNet's first sense and 67.9% for embedding similarity, and the checks in E12-1 say this is not only memory.
 - **Filling the chain's dead ends with outside sentences did not help (E14).** Generic sentences (GenericsKB) fill most of the gaps but add more wrong answers than they fix (0.063 → 0.140); Wikipedia is clean but fills too few (a tie). Most remaining misses fail at the chain's last step, the judgement "is this a kind of C". Letting Gemma make that judgement, even with every definition on the path shown, is worse than the current NLI (E15: 0.060 → 0.109).
 - **Showing sentences that state the answer helps on part-whole questions (E10)**, whether they come from GenericsKB (0.068 → 0.039) or Gemma writes them itself (0.044, a tie).
 - **The network (BP) did not become the main part.** BP that also doubts the model's rules beat counting violations in taxonomy and disease tests (E2-6, E2-8), but it did not beat a strong learner where labeled data existed (E3, E4, E9), and with no labels at all a plain average of five signals was as good or better (E13). The p-bit method and BP never differed in accuracy (E4, E13).
@@ -33,6 +35,74 @@ python e8_analyze.py ../../data/E8_chains_nli.json out.json   # about 5 minutes;
 All experiments in one table: [Results at a glance](#results-at-a-glance). Each experiment's plan and results are in `plans/` (Japanese). Articles explaining each step (Japanese): [Articles](#articles-japanese).
 
 Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X · DOI https://doi.org/10.5281/zenodo.24045799
+
+## TADORI (summary for researchers)
+
+TADORI is the check that survived E2 to E15. The other parts we tried (a network with BP, the p-bit method, deeper chains, outside sentences added to the chain) tied or lost and were dropped. What remained got a name. This section is meant to be read on its own; the detailed numbers stay in each experiment's section.
+
+![TADORI schematic: dictionary (grey), the small model's only job, sense choice (blue), external NLI judge (green)](figures/TADORI/tadori_en.png)
+
+**In one paragraph.** TADORI checks a small model's answer to "Is X a type of C?" with a chain of dictionary definitions. The small model has exactly one job inside the chain: decide which sense of a word is meant in the definition it appears in. An external NLI model scores each step and whether the chain has arrived at C. The small model never judges "Is X a type of C?" itself.
+
+**Inputs and outputs.**
+
+| | Content |
+|---|---|
+| Input | The claim "X is a type of C." (X is a noun, C is one of 46 categories). The small model's own answer (its Yes−No logit $\ell$) is what gets checked; it is kept separately |
+| Uses | A dictionary (English noun definitions from Wiktionary), a small model (Gemma-2 2B-it, no fine-tuning), an NLI model (DeBERTa-v3-large-mnli-fever-anli-ling-wanli) |
+| Does not use | The WordNet hierarchy, hand-written word lists (none since 2026-11-11), or showing C to the small model |
+| Output | A score $s_6 \in [0,1]$ for how well the definition chain supports "X is a type of C". It can be used alone or as one feature for a learned combiner |
+
+**Procedure** (method D in [E6–E8: how the computation works](#e6e8-how-the-computation-works)).
+
+1. Take the definition $d$ of each sense of X from the dictionary.
+2. Take the head noun $g$ of the definition (the root of spaCy's first noun chunk).
+3. **Show the small model $d$ and the numbered definitions of $g$'s senses, and ask which sense of $g$ is meant in $d$.** C is not shown.
+4. With the external NLI model, compute the step score $q = e(d \Rightarrow \text{"W is a type of } g\text{."})$ and the arrival score $a = e(d \Rightarrow \text{"W is a type of C."})$. If $w$ is C itself, $a=1$.
+5. Repeat steps 2 to 4 from the definition of the chosen sense, up to 3 steps.
+6. The score $s_6$ is the maximum over paths of $q_{n_0} \cdots q_{n_{t-1}}\, a_{n_t}$.
+
+**What was shown.** Every result was judged by rules fixed before the run. Common-sense labels are by Claude; the main results were also labelled by Gemini.
+
+| Claim | Data and measure | TADORI | Baselines | Verdict | Section |
+|---|---|---|---|---|---|
+| The small model is good at picking senses | Wrong-sense chains among paths of 2+ steps that reach C (Claude, blind to method) | 4/41 (10%) | No sense choice 36/50 (72%), embedding similarity 8/35 | Fewer | [E8](#e8-choosing-word-senses-along-the-chain-and-a-fresh-test-set) |
+| Sense choice holds up at scale | 34,402 head words in WordNet definitions, agreement with human sense tags (Princeton Gloss Corpus) | 80.9% | Similarity 67.9%, WordNet first sense 60.5% | Better (Gemma − similarity +13.0 points, 95% interval 10.3 to 16.3) | [E12](#e12-does-gemmas-sense-choice-hold-up-at-scale-2026-11-12) |
+| It is not only memory | 5,000 items with the defined word hidden or the text paraphrased | Hidden 80.8%, paraphrased 69.3% | First sense 59.3% | Better (paraphrased − first sense +10.0, 3.4 to 17.0) | [E12](#e12-does-gemmas-sense-choice-hold-up-at-scale-2026-11-12) |
+| It can check the small model's answers | 300 fresh items never used for any choice, AURC | 0.046 (chain + learner) | The small model's own confidence 0.118 | Better (95% interval 0.038 to 0.112) | [E8](#e8-choosing-word-senses-along-the-chain-and-a-fresh-test-set), [recheck](#recheck-without-hand-written-word-lists-2026-11-11) |
+| It helps as a feature with other signals | 700 items, AURC, gradient boosting | 0.038 (all signals) | Learner on the small model's answers only 0.053 | Better (5 of 5 runs) | [E11](#e11-fixing-e8s-weak-points-and-combining-every-signal-2026-11-12) |
+
+**What was not shown.**
+
+- That TADORI beats a single dictionary step (E6). On 700 items the scores are 0.063 vs 0.069, and on the 300 fresh items the interval crosses 0. Its strengths are fewer wrong-sense chains and its value as a feature for a learner. The chain score alone has not been shown to beat one step.
+- 80.9% is the **accuracy of sense choice** on WordNet definitions. It is not the accuracy of TADORI's answers. E8 uses Wiktionary, which splits senses differently.
+- Only one small model (Gemma-2 2B) and only English were tested, mostly on the "is a type of" question. Other small models, other dictionaries and other languages are untested.
+- Common-sense labels come from two models (Claude and Gemini), not from people.
+
+**What we tried and dropped** (each tied or lost).
+
+| Direction | Result | Decision | Section |
+|---|---|---|---|
+| Combine with a network (BP), add penalties for incompatible categories | 0.091 vs the strongest path 0.047 (worse); the penalty weight was 0 in 23 of 25 runs | No network | [E8](#e8-choosing-word-senses-along-the-chain-and-a-fresh-test-set) |
+| The p-bit method | Never differed from BP in accuracy | No role for accuracy (speed and power not measured) | [E4](#e4-a-large-memory-network-with-many-loops-bp-and-the-p-bit-method), [E13](#e13-without-any-labels-does-a-network-combine-conflicting-signals-better-2026-11-12) |
+| Deeper chains, 3 to 6 steps | 0.063 vs 0.063 (tie) | Depth is not pursued. Chains stop at dictionary dead ends, not at the step limit | [E11-2](#e11-fixing-e8s-weak-points-and-combining-every-signal-2026-11-12), [E14](#e14-filling-the-chains-dead-ends-with-outside-sentences-2026-11-12-to-11-13) |
+| Fill dead ends with outside sentences (GenericsKB, Gemma's own, Wikipedia) | 0.063 → 0.140 (GenericsKB, worse); Wikipedia ties | Adding sources is not pursued | [E14](#e14-filling-the-chains-dead-ends-with-outside-sentences-2026-11-12-to-11-13) |
+| Let the small model judge the last step "is it a type of C" (with every definition on the path shown) | 0.060 → 0.109 (worse); no better than showing an unrelated path (0.102) | Keep the external NLI judge | [E15](#e15-letting-gemma-judge-the-chains-last-step-2026-11-13) |
+| Let the small model choose the parent word | 0.062 vs 0.060 (tie) | Keep the current head noun | [E15](#e15-letting-gemma-judge-the-chains-last-step-2026-11-13) |
+
+E15 shows that a 2B model makes a poor final judge. It does not undo TADORI's division of labour. A larger model might behave differently: LORex reports gains from showing the path with 8B-class models.
+
+**Relation to prior work.** Each part has been done before:
+
+- following head words of dictionary definitions (Chodorow et al. 1985, Véronis and Ide 1991, Rigau et al. 1998, OntoLearn Reloaded 2013);
+- having a model pick a sense from a list of definitions (Meconi et al. 2025);
+- checking a model's answers with an external judge (ConCoRD 2022, BTProp 2025).
+
+TADORI combines them and uses the small model only to choose senses along the way, not to judge. We did not find this combination in the work we surveyed, but we may have missed some. The difference from BTProp: BTProp links the model's own answers in a network, while TADORI follows an outside dictionary and uses no network.
+
+**Run it.** To run it from saved outputs on a CPU, use `cd analysis/nolist; E8_DIR=../e8 python e8n_analyze.py ../../data/E8n_chains_nli.json out.json`. Method D is TADORI, and it takes about 5 minutes. To run the large sense-choice test, use `cd analysis; python e12/e12_analyze.py ../data/E12/e12_items_all.json.gz ../data/E12/e12_local.json.gz ../data/E12/E12_results.json.gz out.json`, which takes a few seconds. The small model's sense choice itself is in `colab/E8_sense_choice.ipynb` and in `choice_prompt` in `analysis/e8/e8_core.py`. The figure above is drawn by `analysis/tadori/fig_tadori.py`; it is a schematic and shows no numbers.
+
+**Name and citation.** TADORI (たどり, Japanese for "tracing") stands for Tracing Along Definitions, Opting for the Right Interpretation. To cite it, please use this repository's DOI (https://doi.org/10.5281/zenodo.24045799, `CITATION.cff`).
 
 ## AKANE Architecture in short
 
