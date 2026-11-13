@@ -16,7 +16,7 @@
 - **Gemmaの狭い役目は、たくさんの問題でも保てた（E12）。** 人が意味を付けたWordNetの説明文34,402問で、Gemmaは頭の語の意味を80.9%当てた（意味選びの正しさで、TADORI全体の答えの正しさではない）。WordNetの最初の意味は60.5%、文の近さは67.9%。E12-1の確かめでは、覚えていただけではなかった。
 - **鎖の行き止まりを外の文で埋めても、良くならなかった（E14）。** 一般的な文（GenericsKB）は抜けの多くを埋めるが、直す分より多くの間違いを足した（0.063→0.140）。Wikipediaはきれいだが埋まる数が少なく、同着。残った外れの多くは、鎖の最後の段の「Cの一種か」の判定で落ちている。その判定を Gemma に替えても（道の説明文を全部見せても）、今の NLI より悪かった（E15：0.060→0.109）。
 - **部分と全体の問いでは、答えを書いた文を見せると効く（E10）。** GenericsKBの文（0.068→0.039）でも、Gemmaが自分で書いた文（0.044、同着）でも。
-- **網（BP）は主役にならなかった。** ルールも疑うBPは、分類と病気のテストで違反を数えるだけの方法に勝った（E2-6・E2-8）が、正解付きのデータがある所では強い学習に勝てなかった（E3・E4・E9）。正解がまったくない時も、5つの手がかりを素直に平均する方が同じか良かった（E13）。p-bit方式とBPの正しさは一度も分かれなかった（E4・E13）。
+- **網（BP）は主役にならなかった。** ルールも疑うBPは、分類と病気のテストで違反を数えるだけの方法に勝った（E2-6・E2-8）が、正解付きのデータがある所では強い学習に勝てなかった（E3・E4・E9）。正解がまったくない時も、5つの手がかりを素直に平均する方が同じか良かった（E13）。p-bit方式とBPの正しさは一度も分かれなかった（E4・E13）。網の揺れでTADORIに確かめさせる所を選ぶ方法も、WordNetの採点では良く見えたが、常識の採点では良くならなかった（E16）。
 
 同着や負けも、各節にそのまま載せています。2026-11-11の2つの訂正で前の数字が変わりました。[訂正](#訂正2026-11-11)にまとめています。
 
@@ -133,6 +133,7 @@ E15 で分かったのは「2B の小さいAIに最後の判定をさせると�
 - 先行研究 BTProp との比べ：元のつながりでは BTProp が上か同着。実際のAIに付けさせたつながりでも、ルールも疑う BP が上回る所はなかった（E2-10〜E2-12）。
 - 輪の多い大きな網は崩れ、慎重な網でも特徴＋学習と同着（E4）。網は木の学習に負け（E9-3）、正解がない時も平均と同着（E13）。
 - 鎖を深くする、箱の形のベクトルだけ、外の文で行き止まりを埋める、はどれも同着か悪い（E11-2・E14）。鎖の最後の段の判定を Gemma に替えると悪く、親の語を Gemma で選んでも同じ（E15）。
+- 網を揺らして矛盾で揺れる主張を TADORI に回すと、木の学習に勝つのは WordNet の採点の時だけ。常識の採点では予算1%でしか勝たず、病気・地理では負け（E16）。
 - E10 の「ほかの問いでも効く」は、決まりで選んだ新しい問題では繰り返せなかった（E10-1）。
 - 2026-11-11 の点検で、学習の相手を強くし、手書きの一覧を外すと、いくつかの数字と「はっきり上」が残らなかった（[訂正](#訂正2026-11-11)）。
 
@@ -1352,6 +1353,7 @@ E15 にも網がないので、公開したファイルから分析をやり直�
 - `analysis/e12/`：E12 のコード（`e12_items.py` Gloss Corpus から問題を作る、`e12_local.py` GPU なしの方法、`e12_core.py`・`e121_core.py` Colab の中身、`e12_analyze.py`・`e121_analyze.py`・`e122_coarse.py`・`e122_chain.py`、ノートを作るスクリプト）。ノート：`colab/E12_gloss_head_sense.ipynb`（L4 GPU、1時間以内）、`colab/E12-1_memorized_or_not.ipynb`（L4 GPU）。`data/E12/`：問題（WordNet の説明文と人の印）、手元の方法の値、ノートの出力（Gemma の意味の確率、文の近さ、Qwen の言い換え、覚えている度合い）。`results/E12/`：分析の出力
 - `analysis/e13/e13.py`：E13（CPU で約15分。`data/E10/`、`results/E10/E10-1/`、`analysis/e10/e103/`、`data/E4-2_answers_gemma-2-2b-it.json` を読む）。`results/E13/`：その出力
 - `analysis/e14/`：E14 のコード（`e14_core.py` Colab の中身、`e14_analyze.py` E14 の比べ、`e141_compare.py` E14-1、`e142_compare.py` E14-2・E14-3、`strip_texts.py`、`count_gaps.py`、`e143_diag.py`、ノートを作るスクリプト。前のノートを作り直すと後の `e14_core.py` が入るが、足した選択肢は E14〜E14-2 では切ってあり動きは同じ）。ノート：`colab/E14_fill_gaps.ipynb`・`colab/E14-1_gemma_judge.ipynb`・`colab/E14-2v2_wikipedia_first_sentence.ipynb`・`colab/E14-3_wikipedia_lead.ipynb`（L4 GPU、それぞれ10分〜1時間、途中から続けられる）。`data/E14/`：伸ばした鎖（Wiktionary の説明文と Wikipedia の文は外した、CC BY-SA。GenericsKB の文〈CC BY 4.0〉と Gemma が書いた文は残した）。`results/E14/`：分析の出力（意味のずれの見本は道の語と、GenericsKB・Gemma の文だけ残した）
+- `analysis/e16/`：E16 のコード（`e160_*` と `build_notebook_E16-0.py` 逆向きの問い、`e161.py` 揺らす網と読み取り、`e161b.py`・`e161c.py`・`e161c2.py` どの主張を TADORI に回すか、`e161d.py` 常識での採点し直し、`e162.py` 病気・地理）。ノート：`colab/E16-0_reverse_questions.ipynb`。`data/E16/`：E16-0 の問題と Gemma の答え。`results/E16/`：出力と、方法を伏せた常識の判定
 - `analysis/e15/`：E15 のコード（`e15_core.py` 道と聞き方、`e15_analyze.py` 比べ、`count15.py` 前の数え、`build_notebook_E15.py` ノートを作るスクリプト）。ノート：`colab/E15_last_step.ipynb`（L4 GPU、約30分）。`data/E15/`：ノートの出力（親の語、段の値、着きの値、Gemma の Yes−No の logit。Wiktionary の説明文は外した、CC BY-SA）。`results/E15/`：分析の出力
 - `results/`：計算結果のJSONと図（E3は `results/E3/E3_main_analysis.json`、E4は `results/E4/`、E5は `results/E5/`、E6は `results/E6/`、E7は `results/E7/`、E8は `results/E8/`、E9は `results/E9/`）
 - `analysis/e9/`：E9のコード。`e9.py`（作り物の確かめ役でのE9。`real` でE9-1・E9-2の本物の辞書）、`e93.py`（E9-3）、`e9*_analyze.py`（まとめと判定の決まり）、`e91_checker.py`・`e91_from_small.py`（Colabの出力を確かめの点にする）、`check_formulas_e9.py`（網のコードが式どおりかの確かめ）、ノートを作るコード、`labels/E9-3_sample_labeled_claude.json`（Claudeが常識で判定した600個。人の判定ではない）
