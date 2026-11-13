@@ -9,10 +9,10 @@ English | [日本語](README_ja.md)
 **Main findings so far** (one small model, English, mostly one domain; see [Limitations](#limitations)):
 
 - **A small model is a poor judge but a good helper.** Gemma-2 2B is often confidently wrong on "X is a type of Y". Checking its answer against dictionary definitions with an NLI model cuts the error measure (AURC, lower is better) from 0.154 to 0.070 (E6).
-- **Give it only the narrow job it is good at.** Chaining definitions (granddaughter → person → mammal) breaks when a word is read in the wrong sense. When Gemma only picks which sense of each word is meant, wrong-sense chains fall from 72% to 10%, and on 300 new items the chain check with a learner beats Gemma's own confidence (0.046 vs 0.118) (E7, E8, rechecked without hand-written lists).
+- **Give it only the narrow job it is good at (TADORI).** Chaining definitions (granddaughter → person → mammal) breaks when a word is read in the wrong sense. When Gemma only picks which sense of each word is meant, wrong-sense chains fall from 72% to 10%, and on 300 new items the chain check with a learner beats Gemma's own confidence (0.046 vs 0.118) (E7, E8, rechecked without hand-written lists). We call this check, following dictionary definitions and letting the small model pick only the sense of each word on the way, **TADORI** (Japanese for "tracing"; Tracing Along Definitions, Opting for the Right Interpretation). Following definitions and having a model pick word senses are both older ideas; what is new is how they are combined ([Related work](#related-work-and-what-is-different)).
 - **Combining every signal in one learner helps; deeper chains and box embeddings alone do not (E11).** Gemma's answers, the dictionary chain, outside sentences and a box embedding in one gradient-boosting learner beat the learner on Gemma's answers alone on "is a type of" (0.017 → 0.004), part-whole (0.062 → 0.039) and disease (0.025 → 0.016); geography ties, and part-whole and disease tie under Gemini's labels.
 - **Gemma's narrow job holds up at scale (E12).** On 34,402 WordNet definitions whose head word was sense-tagged by people, Gemma picks the meant sense 80.9% of the time, against 60.5% for WordNet's first sense and 67.9% for embedding similarity, and the checks in E12-1 say this is not only memory.
-- **Filling the chain's dead ends with outside sentences did not help (E14).** Generic sentences (GenericsKB) fill most of the gaps but add more wrong answers than they fix (0.063 → 0.140); Wikipedia is clean but fills too few (a tie). Most remaining misses fail at the chain's last step, the judgement "is this a kind of C" (E15, in progress).
+- **Filling the chain's dead ends with outside sentences did not help (E14).** Generic sentences (GenericsKB) fill most of the gaps but add more wrong answers than they fix (0.063 → 0.140); Wikipedia is clean but fills too few (a tie). Most remaining misses fail at the chain's last step, the judgement "is this a kind of C". Letting Gemma make that judgement, even with every definition on the path shown, is worse than the current NLI (E15: 0.060 → 0.109).
 - **Showing sentences that state the answer helps on part-whole questions (E10)**, whether they come from GenericsKB (0.068 → 0.039) or Gemma writes them itself (0.044, a tie).
 - **The network (BP) did not become the main part.** BP that also doubts the model's rules beat counting violations in taxonomy and disease tests (E2-6, E2-8), but it did not beat a strong learner where labeled data existed (E3, E4, E9), and with no labels at all a plain average of five signals was as good or better (E13). The p-bit method and BP never differed in accuracy (E4, E13).
 
@@ -60,7 +60,7 @@ The experiments here test the smallest version of that outside checker. **They s
 **Lost or tied** (all in [Results at a glance](#results-at-a-glance))
 - Against BTProp: with the original links BTProp is better or tied, and with links from real models our rule-doubting BP is never better (E2-10 to E2-12).
 - A large loopy network collapses, and a cautious one only ties features + learner (E4). The network loses to a gradient-boosting learner (E9-3) and, with no labels, ties a plain average (E13).
-- Deeper chains, box embeddings alone, and filling dead ends with outside sentences all tie or are worse (E11-2, E14).
+- Deeper chains, box embeddings alone, and filling dead ends with outside sentences all tie or are worse (E11-2, E14). Letting Gemma judge the chain's last step is worse, and letting it choose the parent word changes nothing (E15).
 - E10's "it works on other questions" did not repeat on new items chosen by rule (E10-1).
 - The 2026-11-11 audit (a stronger learner, no hand-written lists) removed some numbers and some "clearly better" claims ([Corrections](#corrections-2026-11-11)).
 
@@ -94,6 +94,7 @@ Details in [Layout](#layout); commands in [Rerunning the analysis](#rerunning-th
 | E12 | yes, seconds; matches `results/E12/` exactly | yes |
 | E13 | yes, about 15 min; matches `results/E13/` exactly | not needed (reuses earlier answers) |
 | E14 | yes; E14-1 to E14-3 match exactly, E14 differs only in the learner's box | yes |
+| E15 | yes, seconds; matches `results/E15/` exactly | yes, L4, about 30 minutes |
 
 Running Gemma needs your own Hugging Face token.
 
@@ -230,9 +231,9 @@ Rule: E6 to E9-2, AURC difference of at least 0.02 in at least 4 of 5 (rates: 10
 | E9 | Only a few claims can be checked by the dictionary; does the network spread the checks better than learning? (simulated checker, then the real one) | Beat logistic regression on the nouns that received a check (E9-1: 2% 0.072 vs 0.032), but tied gradient boosting (E9-2). Holds without hand-written lists ([recheck](#recheck-without-hand-written-word-lists-2026-11-11)) | `plans/E9-1_real_dictionary.md`, `plans/E9-2_strong_learner.md` |
 | E9-3 | Same question on all 1,681 nouns × 46 categories (77,326 claims), rules only from the model's answers | Network loses to gradient boosting in all 13 conditions (10%: 0.0029 vs 0.0018); boosting finished by the network 0.0014, a tie by the rule. Without hand-written lists the network results hold, but checking every claim with the dictionary is no longer best ([recheck](#recheck-without-hand-written-word-lists-2026-11-11)) | `plans/E9-3_all_categories.md` |
 
-### Stage 5: other questions, combining signals, the chain's dead ends (E10 to E14)
+### Stage 5: other questions, combining signals, the chain's dead ends (E10 to E15)
 
-Rule: a difference of at least 20% of the other value in at least 4 of 5 (E10 series, E11-3). E11-1, E11-2, E13, E14: at least 20% and a 95% interval that excludes 0. E12: at least 5 points and a 95% interval that excludes 0.
+Rule: a difference of at least 20% of the other value in at least 4 of 5 (E10 series, E11-3). E11-1, E11-2, E13, E14, E15: at least 20% and a 95% interval that excludes 0. E12: at least 5 points and a 95% interval that excludes 0.
 
 | Exp. | What | Main result | Plan and results |
 |---|---|---|---|
@@ -251,6 +252,7 @@ Rule: a difference of at least 20% of the other value in at least 4 of 5 (E10 se
 | E14-1 | Same, Gemma as the judge | 0.124 vs 0.063: worse (difference +0.061, 95% interval +0.037 to +0.085) | `plans/E14-1_gemma_judge.md` |
 | E14-2 | Wikipedia's first sentence, at most one per path | 0.063 vs 0.063 (difference 0.000, 95% interval −0.008 to +0.008; 300: 0.050 vs 0.056): tie; fills 12 of 52 | `plans/E14-2_wikipedia_first_sentence.md` |
 | E14-3 | Wikipedia's whole lead (10 sentences) | 0.067 vs 0.063 (difference +0.004, 95% interval −0.008 to +0.015; 300: 0.049 vs 0.056): tie; fills 14 of 52 | `plans/E14-3_wikipedia_lead.md` |
+| E15 | Gemma judges the chain's last step with the whole path of definitions shown / Gemma picks the parent word (checked on 600 "is a type of" items) | Last step: 0.109 vs 0.060, worse (difference −0.049, 95% interval −0.071 to −0.029); ties the unrelated-path control (0.102). Parent word: 0.062 vs 0.060, no change | `plans/E15_last_step.md` |
 
 ## E3: Can evidence let the model say "I don't know"?
 
@@ -1083,7 +1085,7 @@ Setup shared by the four steps:
 
 - The dead ends can be filled: with GenericsKB and Gemma's sentences, 80% of the wrong "no"s became "yes". But general sentences are noisy (a sentence about a pesticide named "Safety" made safety → plant; NLI gave "Granddaughters trump even a four-homer win" 0.99 for "a granddaughter is a type of win"), and sentences shaped "X is a Y" pass even Gemma's judge. Chains that add sentence after sentence drift (breadwinner → support → price → mechanism → …). Overall, worse.
 - Clean sources (Wikipedia) do not hurt, but fill too little: articles are missing for many common nouns (disambiguation pages: web, station, player), and more text (the whole lead) fills only 2 more.
-- Looking at the 38 still unfilled after E14-3 (after the fact): many chains already reach person, human, mammal or organism, and fail only at the **last step**, the NLI arrival (for example "mammal ⇒ living thing" gets a low value); others pick a wrong parent from the sentence (mathematician → work), or the answer itself is debatable (athlete → worker). The amount of outside text is not the bottleneck. This is what E15 tests next.
+- Looking at the 38 still unfilled after E14-3 (after the fact): many chains already reach person, human, mammal or organism, and fail only at the **last step**, the NLI arrival (for example "mammal ⇒ living thing" gets a low value); others pick a wrong parent from the sentence (mathematician → work), or the answer itself is debatable (athlete → worker). The amount of outside text is not the bottleneck. [E15](#e15-letting-gemma-judge-the-chains-last-step-2026-11-13) tests this.
 - What we cannot claim: that outside text is needed. In E10-3, E14 and E14-1, Gemma's own sentences did at least as well as the retrieved ones.
 
 **Hand-set parts.** 3 GenericsKB sentences per word (20 read), 6 parent candidates per sentence, 30 words for Gemma's sentence, 6 steps, 10 lead sentences, at most 1 added sentence per path (E14-2/3), Wikipedia: 20 titles per request, one request per second. No word lists: the source filter uses GenericsKB's source field, disambiguation pages are dropped by the API's page properties; scanned with `analysis/e10/e101/scan.py` before each notebook was handed over (only key, method and dependency-label names were found). E14-2's first notebook (the summary API, 8 requests in parallel) was refused by Wikipedia for over half the words; it was replaced by the slower v2 before any comparison and is not used.
@@ -1147,6 +1149,69 @@ $$ S(n, t, \kappa) = \max\Big( a_n,\; \max_{m \in \mathrm{ch}(n),\; c(n\to m) \l
 
 E14 has no network, so the check is that rerunning the analyses from the published files reproduces the saved outputs ([Rerunning the analysis](#rerunning-the-analysis)).
 
+## E15: Letting Gemma judge the chain's last step (2026-11-13)
+
+After E14-3, and in a count over E8n's 1,000 items (`plans/E15_count_prior_work.md`), 29 of the 82 wrong "no"s on true claims reach a correct intermediate word strongly (kitten → cat, wife → human) and fail only at the **last step**. That step is one NLI call, "the intermediate word's definition ⇒ W is a type of C.", and it scores low when the definition does not name the class (human ⇒ mammal 0.015, cat ⇒ mammal 0.012). E15 replaces this last step, and the choice of parent word, with Gemma.
+- Plan and results: `plans/E15_last_step.md`; count and prior work: `plans/E15_count_prior_work.md`
+- Code `analysis/e15/`, notebook `colab/E15_last_step.ipynb` (L4 GPU, about 30 minutes), outputs `data/E15/` (Wiktionary definitions removed, CC BY-SA), analysis outputs `results/E15/`
+
+**What changes (two things).**
+
+1. Last step: show Gemma every definition along the path and ask (`Dictionary definitions: - "kitten": … - "cat": … Based on these definitions, is a "kitten" a kind of "mammal"? Answer Yes or No only.`). The class name is never added to the definitions.
+2. Parent word: when a definition has two or more parent candidates, Gemma picks by number which word says what kind of thing w is. The step strength stays the NLI value.
+
+Controls: Gemma shown only the path's last definition (last), Gemma shown an unrelated path of the same length from another item (ctrl), and Gemma with no definitions (none). The ctrl condition checks whether Gemma answers from its own knowledge instead of reading the path.
+
+**Items and rule (fixed before running).** The check (flags) uses E10-3's 600 "is a type of" items (from E4-2's 501 words × 46 classes, labelled by Claude's common sense; 210 yes). E8's 1,000 items were used many times in E14, so they are only looked at. The rule is as before (a difference of at least 20% of the other value, and a 95% interval, resampled by entity word, that excludes 0). Main claim 1, "fixing the last step works", needs the full-path Gemma to beat the current NLI **and** to beat the unrelated path.
+
+| Method | 600 "is a type of" items (flags) | E8's 1,000 items (look only) |
+|---|---|---|
+| Current (NLI for parent and last step) | **0.060** | **0.061** |
+| Last step: Gemma with the whole path | 0.109 | 0.088 |
+| Last step: Gemma with the last definition only | 0.128 | 0.096 |
+| Last step: Gemma with an unrelated path | 0.102 | 0.131 |
+| Gemma with no definitions (Gemma's confidence) | 0.168 | 0.117 |
+| Parent word chosen by Gemma (NLI last step) | 0.062 | 0.060 |
+| Both by Gemma | 0.110 | 0.089 |
+
+(AURC, lower is better)
+
+**What E15 shows.**
+
+- Letting Gemma judge the last step is **worse** (600 items: 0.109 vs 0.060, difference −0.049, 95% interval −0.071 to −0.029). It adds wrong "yes"s (on E8's 1,000: 30 fixed, 39 new wrong "yes"s, 9 correct "yes"s lost).
+- The whole path beats the last definition alone (600 items: difference +0.019, 95% interval +0.009 to +0.030, below the 20% bar) and beats no definitions by far. But on the 600 items it ties the unrelated path (0.109 vs 0.102), so we cannot say Gemma reads the path (on E8's 1,000 it does beat the unrelated path).
+- Choosing the parent word with Gemma changes nothing (within 0.002). NLI and Gemma pick the same parent in 12,653 of 14,851 cases, and the answers barely change when they differ.
+- None of the four flags is raised. For the last step, the dedicated NLI judge beats the 2B Gemma, in line with the lesson from E8 (give the small model only a narrow role). The dictionary-chain line of experiments stops here.
+- Not shown: whether a larger model reads the path (LORex finds it helps at 8B).
+
+**Choices made by hand.** Three prompts (arrival, parent word, and sense choice as in E8n), 3 steps (as E8n), up to 8 senses (as E8n), random seed 15 for picking the unrelated path. No word lists.
+
+### E15: how the computation works
+
+Notation as in [E6 to E8: how the computation works](#e6-to-e8-how-the-computation-works) ($n = (w,j)$, $q_n$, $a_n$, $S(n,t)$, $j^*$).
+
+- Parent word: before, $g(n) = \arg\max_{p} \mathrm{NLI}(\text{definition} \Rightarrow \text{W is a type of } p)$; in E15's g, the candidate $p$ that Gemma picks by number. The step strength $q_n$ is the NLI value either way.
+- Paths: from every sense of the entity word $x$, up to 3 steps; for each node $n$ the strongest path $\pi(n)$ and its strength $Q(n) = \prod_{m \in \pi(n)} q_m$ (the stronger path wins when two reach the same node).
+- Arrival: before, $a_n = \mathrm{NLI}(\text{definition}_n \Rightarrow \text{W is a type of } C)$. In E15, $a^{\text{path}}_n = \sigma(\ell_{\text{Yes}} - \ell_{\text{No}})$ with every definition on $\pi(n)$ shown, $a^{\text{last}}_n$ with only $n$'s definition, and $a^{\text{ctrl}}_n$ with another item's path of the same length. If the node's word is the class itself, $a_n = 1$.
+- Score: $\max_n Q(n)\, a_n$. "none" is $\sigma(\ell_{\text{Yes}} - \ell_{\text{No}})$ for the question with no definitions.
+
+| Formula | Code |
+|---|---|
+| Parent node and step $g(n)$, $q_n$; paths $\pi$, $Q$ | `analysis/e15/e15_core.py`: `step_from`, `reach` |
+| Prompts (arrival, parent word) | `e15_core.py`: `arrive_prompt`, `genus_prompt`, `path_lines` |
+| Score | `e15_core.py`: `score`; `analysis/e15/e15_analyze.py`: `scores` |
+| Running Gemma and NLI (Colab cells) | `analysis/e15/build_notebook_E15.py` |
+| Rule | `e15_analyze.py` (uses E14's `judge`) |
+| The count before E15 | `analysis/e15/count15.py` |
+
+| Part | Borrowed idea (source) | Our own choice |
+|---|---|---|
+| Show the path (the lineage) when judging | LORex (Mishra et al. 2025, arXiv 2505.13282) | a 2B Gemma, paths of dictionary definitions, the unrelated-path control |
+| NLI is weak on hypernym substitution | Glockner et al. 2018 | – |
+| Picking the parent word from a definition | Chodorow et al. 1985; OntoLearn Reloaded (Velardi et al. 2013) | Gemma picks from the candidates by number |
+
+E15 has no network either, so the check is that rerunning the analysis from the published files reproduces the saved output (`results/E15/E15_analysis.json`) exactly.
+
 ## Layout
 
 - `colab/`: Google Colab notebooks (T4 GPU). They ask Gemma the questions and save the answers. The E2-2 and E2-3 notebooks also run the analysis and draw the figures.
@@ -1177,6 +1242,7 @@ E14 has no network, so the check is that rerunning the analyses from the publish
 - `analysis/e12/`: E12 code (`e12_items.py` builds the items from the Gloss Corpus, `e12_local.py` the methods without a GPU, `e12_core.py`/`e121_core.py` Colab cores, `e12_analyze.py`, `e121_analyze.py`, `e122_coarse.py`, `e122_chain.py`, notebook builders). Notebooks: `colab/E12_gloss_head_sense.ipynb` (L4 GPU, under an hour), `colab/E12-1_memorized_or_not.ipynb` (L4 GPU). `data/E12/`: the items (WordNet glosses and tags), the local methods' scores and the notebooks' outputs (Gemma's sense probabilities, similarities, Qwen's paraphrases, recall). `results/E12/`: analysis outputs
 - `analysis/e13/e13.py`: E13 (CPU, about 15 minutes; reads `data/E10/`, `results/E10/E10-1/`, `analysis/e10/e103/` and `data/E4-2_answers_gemma-2-2b-it.json`). `results/E13/`: its output
 - `analysis/e14/`: E14 code (`e14_core.py` Colab core, `e14_analyze.py` for E14, `e141_compare.py` for E14-1, `e142_compare.py` for E14-2 and E14-3, `strip_texts.py`, `count_gaps.py`, `e143_diag.py`, notebook builders; rebuilding the earlier notebooks gives the later `e14_core.py`, whose added options are off for E14 to E14-2). Notebooks: `colab/E14_fill_gaps.ipynb`, `colab/E14-1_gemma_judge.ipynb`, `colab/E14-2v2_wikipedia_first_sentence.ipynb`, `colab/E14-3_wikipedia_lead.ipynb` (L4 GPU, 10 minutes to 1 hour each; resumable). `data/E14/`: the grown chains with Wiktionary definitions and Wikipedia sentences removed (CC BY-SA); GenericsKB sentences (CC BY 4.0) and Gemma's sentences are kept. `results/E14/`: analysis outputs (the drift samples keep only the words on each path, plus GenericsKB and Gemma sentences)
+- `analysis/e15/`: E15 code (`e15_core.py` paths and prompts, `e15_analyze.py` comparisons, `count15.py` the count before E15, `build_notebook_E15.py` builds the notebook). Notebook: `colab/E15_last_step.ipynb` (L4 GPU, about 30 minutes). `data/E15/`: notebook outputs (parent words, step values, arrival values, Gemma's Yes−No logits; Wiktionary definitions removed, CC BY-SA). `results/E15/`: analysis output
 - `results/`: result JSON files and figures (`results/E3/E3_main_analysis.json` for E3, `results/E4/` for E4, `results/E5/` for E5, `results/E6/` for E6, `results/E7/` for E7, `results/E8/` for E8, `results/E9/` for E9)
 - `plans/`: plans and results for each experiment (Japanese)
 
@@ -1248,6 +1314,8 @@ E13: `cd analysis/e13; python e13.py out.json` (about 15 minutes; needs `wordfre
 
 E14: in `analysis/e14/`, with `E8_DIR=../e8`: E14 `python e14_analyze.py ../../data/E8n_chains_nli.json ../../data/E11/E11-1_results.json ../../data/E11/E11-2_results.json.gz ../../data/E14/E14_results.json.gz out.json drift.json` (needs `torch`; the E11-2 box inside the learner takes most of the time). E14-1: `python e141_compare.py ../../data/E8n_chains_nli.json ../../data/E14/E14_results.json.gz ../../data/E14/E14-1_results.json.gz out.json`. E14-2 and E14-3: `python e142_compare.py ../../data/E8n_chains_nli.json ../../data/E14/E14-2v2_results.json.gz out.json drift.json` (and `E14-3_results.json.gz`). The error count before E14: `python count_gaps.py ../../data/E8n_chains_nli.json`.
 
+E15: in `analysis/e15/`, `E8_DIR=../e8 python e15_analyze.py ../../data/E15/E15_results.json.gz out.json` (seconds; reads `analysis/e14/` and `k_items.json`, `cs_K_claude.json` in `analysis/e10/e103/`). It reproduces `results/E15/E15_analysis.json` exactly.
+
 Rerunning E12, E12-1, E12-2, E13, E14-1, E14-2 and E14-3 from the files in this repository reproduces `results/E12/`, `results/E13/` and `results/E14/` exactly (E14-2 and E14-3 from the stripped data). E14 reproduces everything except the learner: the E11-2 box inside it is trained on a CPU and differs slightly between runs (as in E11-2). The rerun (`results/E14/E14_analysis_rerun.json`) gives the same decisions (the learner with ⑭gs better in 0 of 5 runs; on the 300 new items 0.031 → 0.023 against 0.032 → 0.024 in the saved run, not counted as a win because the 700 items failed).
 
 ## Related work and what is different
@@ -1258,7 +1326,9 @@ For E10: showing retrieved text to answer a question is retrieval-augmented gene
 
 For E11: asking an LLM to pick a word's sense from numbered definitions was measured on standard tests by Meconi et al. (EMNLP 2025, https://arxiv.org/abs/2509.13905; Gemma-2 2B 72.4, most frequent sense 65.2); E11-1 asks for the usual sense without a sentence. Disambiguating the genus word of dictionary definitions to build a taxonomy goes back to Rigau et al. (1998, without an LLM). Box embeddings of hierarchies: Vilnis et al. (2018), Li et al. (2019), Boratko et al. (2021); Ganea et al. (2018) found that embeddings trained only on direct edges recover distant pairs poorly, which matches the weak box alone in E11-2. Learning to combine several confidence signals with a few labels beats the best single signal in 30 of 32 settings in Chauhan et al. (2026, https://arxiv.org/abs/2608.24492); UniFact (Su et al., https://arxiv.org/abs/2512.02772) combines internal signals with outside checks, and its gain shrinks for another model. E11-3 finds the same kind of gain for one small model on three of four question types.
 
-For E12: the Senseval-3 task on WordNet glosses (Litkowski 2004) disambiguated every word of the glosses (best 68.6%, a different WordNet version and all parts of speech, so not directly comparable); Rigau et al. (1998) disambiguated the genus words of a dictionary at 61–64%. E12 measures only the head word, with a small model and no training. Contamination checks follow Golchin and Surdeanu (Data Contamination Quiz, Time Travel) and Deng et al. (NAACL 2024). For E13: estimating source accuracies without labels is Dawid and Skene (1979) and Snorkel; Berti-Equille (2026) found that picking the best source with 20 labels beats truth-discovery methods, and that sources built on the same model share errors, which is what E13 sees. For E14: combining several dictionaries to fill the gaps of a definition taxonomy goes back to Véronis and Ide (1991), and Wikipedia's first sentence as a hypernym source to Kazama and Torisawa (2007) and WiBi (Flati et al., ACL 2014); E14 tests them as additions to a small model's dictionary chain, under a fixed rule, and finds no gain.
+For E12: the Senseval-3 task on WordNet glosses (Litkowski 2004) disambiguated every word of the glosses (best 68.6%, a different WordNet version and all parts of speech, so not directly comparable); Rigau et al. (1998) disambiguated the genus words of a dictionary at 61–64%. E12 measures only the head word, with a small model and no training. Contamination checks follow Golchin and Surdeanu (Data Contamination Quiz, Time Travel) and Deng et al. (NAACL 2024). For E13: estimating source accuracies without labels is Dawid and Skene (1979) and Snorkel; Berti-Equille (2026) found that picking the best source with 20 labels beats truth-discovery methods, and that sources built on the same model share errors, which is what E13 sees. For E14: combining several dictionaries to fill the gaps of a definition taxonomy goes back to Véronis and Ide (1991), and Wikipedia's first sentence as a hypernym source to Kazama and Torisawa (2007) and WiBi (Flati et al., ACL 2014); E14 tests them as additions to a small model's dictionary chain, under a fixed rule, and finds no gain. For E15: showing the path from the root (the lineage) helps taxonomy judgements in LORex (Mishra et al. 2025, https://arxiv.org/abs/2505.13282 ) with 8B-class LLMs, and NLI models are weak on hypernym substitution (Glockner et al., ACL 2018); E15 finds that a 2B Gemma shown a path of dictionary definitions still falls short of the dedicated NLI judge.
+
+On TADORI: following the head words of dictionary definitions to build a taxonomy is old (Chodorow et al. 1985; Véronis and Ide 1991; Rigau et al. 1998; OntoLearn Reloaded, Velardi et al. 2013), and the accuracy of LLMs at picking word senses has been measured (Meconi et al. 2025). Combining the two to check a small model's answers from the outside, with the model doing only the sense choice, is something we did not find in the work we searched (we may have missed some).
 
 ## Limitations
 
