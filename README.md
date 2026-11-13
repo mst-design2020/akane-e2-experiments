@@ -37,7 +37,65 @@ Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ �
 ## AKANE Architecture in short
 
 The idea is to use a language model as the "mouth" and to place the checking outside the model. The model answers first. Then an outside system checks whether the answers are consistent with a large memory and with rules. In the long run, we want to hand this checking computation to physical parts such as p-bits (probabilistic bits that flip between 0 and 1).
-The experiments here test the smallest version of that outside checker. More about the overall research: https://mst-design.jp/research/ (Japanese)
+The experiments here test the smallest version of that outside checker. **They study components of AKANE; they do not test the whole architecture** (see [What is and is not shown](#what-is-and-is-not-shown)). More about the overall research: https://mst-design.jp/research/ (Japanese)
+
+## What is and is not shown
+
+**Scope.** Only one part of AKANE: checking a small model's answers with parts placed outside it (rules, networks, evidence, dictionaries, NLI). One small model (Gemma-2 2B), English, mostly "X is a type of Y" (also part-whole, disease and geography). The p-bit method is simulated on a PC. Real p-bit hardware, speed or power, building up or updating a large memory, and the performance of the whole architecture have not been tested at all.
+
+**Shown** (a difference under rules fixed before the run, and still there after the recheck without hand-written lists)
+- Checking with dictionary definitions and NLI beats Gemma's confidence alone (E6: AURC 0.154 → 0.070; without lists, on 300 new items: chain + learner 0.046 vs confidence 0.118, 95% interval of the difference 0.038–0.112).
+- Giving Gemma only the job of picking word senses cuts wrong-sense chains (72% → 10%, E8 recheck). On 34,402 human-tagged definitions it picks 80.9%, above similarity 67.9% and first sense 60.5% (E12: Gemma − similarity +13.0 points, 95% interval 10.3–16.3), and not only from memory (E12-1).
+- Putting every signal into one gradient-boosting learner beats the learner on Gemma's answers alone (E11-2: 0.053 → 0.038, 5 of 5; E11-3: "is a type of", part-whole and disease; part-whole and disease tie under Gemini's labels).
+- On part-whole questions, showing a sentence that states the answer before the question helps (E10-2: 0.068 → 0.039, 5 of 5).
+- BP that also doubts the rules beats counting violations (E2-6, E2-8, at least 8 of 10).
+
+**Not shown**
+- That the network (BP) or the p-bit method beats a strong learner. Where labeled data existed, it never did.
+- That p-bits are faster or use less power. No hardware was measured.
+- That the results carry over to other models (larger ones, other vendors), other languages or other domains.
+- Commonsense labels come from two AIs (Claude and Gemini), not people, and items where they disagree have not been checked by people.
+- That AKANE as a whole beats other ways of checking.
+
+**Lost or tied** (all in [Results at a glance](#results-at-a-glance))
+- Against BTProp: with the original links BTProp is better or tied, and with links from real models our rule-doubting BP is never better (E2-10 to E2-12).
+- A large loopy network collapses, and a cautious one only ties features + learner (E4). The network loses to a gradient-boosting learner (E9-3) and, with no labels, ties a plain average (E13).
+- Deeper chains, box embeddings alone, and filling dead ends with outside sentences all tie or are worse (E11-2, E14).
+- E10's "it works on other questions" did not repeat on new items chosen by rule (E10-1).
+- The 2026-11-11 audit (a stronger learner, no hand-written lists) removed some numbers and some "clearly better" claims ([Corrections](#corrections-2026-11-11)).
+
+## Repository map
+
+```
+plans/      plan and results of each experiment, with the rules fixed before the run (Japanese)
+colab/      notebooks that query Gemma (Google Colab, GPU)
+data/       saved Gemma answers and NLI scores (enough to redo the analysis without a GPU)
+analysis/   analysis code (CPU), including check_formulas*.py, which checks the code against the formulas
+results/    output JSON and figures
+figures/    figures used in this README
+```
+
+Details in [Layout](#layout); commands in [Rerunning the analysis](#rerunning-the-analysis).
+
+**What can be reproduced.** "From saved data" means the analysis can be redone on a CPU from the files in `data/` and `results/`. "From Gemma" means a Colab notebook reruns everything from querying Gemma.
+
+| Exp. | From saved data (CPU) | From Gemma (Colab GPU) |
+|---|---|---|
+| E2-2, E2-3 | partly: Gemma's answers are in `data/`; analysis and figures are inside the notebook | yes, T4 |
+| E2-4 to E2-9 | yes, `analysis/` | yes, notebooks for E2-4, E2-5, E2-7, E2-8 |
+| E2-10, E2-11 | yes, fetches BTProp's published logs | not needed (uses the published logs) |
+| E2-12 | yes, from the judgements in `results/E212/` | yes, about 30 min on a T4 |
+| E3 | no: HoVer text (CC BY-SA) is not included, so run the notebook | yes, about 4 h on an L4 |
+| E4, E5 | yes (E4-0 takes about 20 min) | yes, E4-1 and E4-2 notebooks |
+| E6 to E8, recheck without lists | yes | yes, L4 (the notebook refetches definitions) |
+| E9 | yes | yes, E9-1 notebook |
+| E10 | yes | yes |
+| E11 | yes (E11-2's box takes about 30 min on a CPU and drifts slightly between runs) | yes |
+| E12 | yes, seconds; matches `results/E12/` exactly | yes |
+| E13 | yes, about 15 min; matches `results/E13/` exactly | not needed (reuses earlier answers) |
+| E14 | yes; E14-1 to E14-3 match exactly, E14 differs only in the learner's box | yes |
+
+Running Gemma needs your own Hugging Face token.
 
 ## Corrections (2026-11-11)
 
@@ -114,6 +172,12 @@ The network that fully trusts the rules (E2-2 to E2-5, and the "trusting BP" in 
 
 ## Results at a glance
 
+Split into five stages following the course of the work. Each stage starts with its rule for a "difference"; every rule was fixed in the plan before the run. 95% intervals come from resampling by item noun (or head word). AURC differences are "this method − the comparison", so negative is better.
+
+### Stage 1: rules written by the model, checked with belief propagation (E2-2 to E2-9)
+
+Rule: a "win" needs a mean AUROC gain of at least 0.02 over 10 runs and a higher score in at least 8 of 10.
+
 | Exp. | What | Main result | Plan and results |
 |---|---|---|---|
 | E2-2 | Geography test (GeoNames, 3,586 statements), human rules | BP 0.83 vs counting 0.81: win, just at the threshold | `plans/E2-2_geo.md` |
@@ -124,32 +188,60 @@ The network that fully trusts the rules (E2-2 to E2-5, and the "trusting BP" in 
 | E2-7 | Repeat in geography; compare with other methods | Geography: BP 0.82 vs counting 0.80, tie. Taxonomy: BP beats the other methods when the combination uses logistic regression (0.844 vs 0.803); with gradient boosting the combination reaches 0.825 (gap 0.019, 8/10), a tie (checked 2026-11-11 with a gradient-boosting learner, `analysis/audit_gb/`). Geography: tie with the logistic-regression ensemble (0.817 vs 0.804); the gradient-boosting ensemble beats BP (0.851 vs 0.817, 8/10) | `plans/E2-7_geo_and_baselines.md` |
 | E2-8 | Third domain (disease classes, Human Disease Ontology, 3,304 questions); the model also chooses which label pairs to check | Model rules 84% correct. Rule-doubting BP 0.76 vs counting 0.74: win (10/10). Pairs chosen by the model were 80% wrong; BP on them was slightly below BP on all pairs (tie by our criterion, but lower in all 10 runs) | `plans/E2-8_disease.md` |
 | E2-9 | Same networks, only the fraction of wrong rules changes (0 to 50%; disease and taxonomy) | The BP-minus-counting gap stays about the same ("no change" by our criterion). BP that fully trusts the rules is better when rules are right and falls behind at 30% wrong. Extra check: without the human-written chaining rules, the gap grows with the wrong fraction in taxonomy (+0.03 to +0.09) | `plans/E2-9_wrong_rate.md` |
+
+### Stage 2: the same test as BTProp (E2-10 to E2-12)
+
+Rule: mean AUROC gain of at least 0.02 and better in at least 4 of 5.
+
+| Exp. | What | Main result | Plan and results |
+|---|---|---|---|
 | E2-10 | Same test as BTProp (Hou et al., NAACL 2025): BTProp's released ChatGPT belief trees and confidences, scored on FactCheckGPT (631 claims) and WikiBio (921 sentences); only the final probability computation is swapped | BTProp's gain over the model's confidence is reproduced (+0.03 / +0.08). WikiBio: BTProp 0.80 vs our rule-doubting BP 0.77, BTProp wins (5/5). FactCheckGPT: 0.79 vs 0.80, tie | `plans/E2-10_btprop.md` |
 | E2-11 | Same trees, a random fraction (0 to 50%) of the NLI links reversed | BTProp falls below the model's confidence at 20–30% wrong links (0.60–0.65 at 50%); rule-doubting BP stays near the confidence. Our BP wins from 20% (FactCheckGPT) and at 50% (WikiBio) | `plans/E2-10_btprop.md` |
 | E2-12 | Same trees, links labeled by four real models (NLI small/base/large, Gemma-2 2B) | BTProp barely degrades (still above the confidence with Gemma). FactCheckGPT: all ties; WikiBio: BTProp wins for every link model (by 0.02–0.05). With natural link errors the rule-doubting BP is never better | `plans/E2-12_real_links.md` |
+
+### Stage 3: evidence, a large network, and the cost of rule errors (E3 to E5)
+
+Rule: AURC difference of at least 0.02 in at least 4 of 5.
+
+| Exp. | What | Main result | Plan and results |
+|---|---|---|---|
 | E3 | Evidence (HoVer, 3,952 claims): can a network over retrieved evidence tell the model when to abstain? | Network ties the model's confidence and loses to NLI features + LR (AURC 0.225 vs 0.207 vs 0.177) | `plans/E3_evidence_abstain.md` |
 | E4 | Thousands of the model's WordNet answers in one large network with many loops; BP vs the p-bit method | Large network collapses; a cautious network ties features + LR. BP and the p-bit method never differ in accuracy | `plans/E4-2_learned_net.md` |
 | E5 | How much do errors in the model's own rules cost? | A cost under WordNet labels (0.02 to 0.04), almost none under common-sense labels; doubting the rules = trusting them | `plans/E5_rule_errors.md` |
+
+### Stage 4: checking with dictionary definitions (E6 to E9)
+
+Rule: E6 to E9-2, AURC difference of at least 0.02 in at least 4 of 5 (rates: 10 points). E9-3: a difference of at least 20% of the other value in at least 4 of 5.
+
+| Exp. | What | Main result | Plan and results |
+|---|---|---|---|
 | E6 | Dictionary definitions + NLI against the model's confident errors (700 items) | 75% of confident errors fixed; AURC 0.154 → 0.070; but 40% of right two-step answers broken | `plans/E6_dictionary.md` |
 | E7 | Chain definitions up to three steps | Fewer right answers broken (40% → 29%), but 30 of 50 chains go through a wrong sense; BP ties the path product. Without hand-written lists: 40% → 31%, holds ([recheck](#recheck-without-hand-written-word-lists-2026-11-11)) | `plans/E7_chain_definitions.md` |
-| E8 | The model picks each word's sense along the chain; negative evidence; 300 new items | Wrong-sense chains 64% → 4%; AURC 0.047 without training, 0.037 learned; network loses; new items 0.039 vs 0.118 for confidence. Without hand-written lists: 72% → 10%, 0.063, 0.056, new items 0.046 vs 0.118 ([recheck](#recheck-without-hand-written-word-lists-2026-11-11)) | `plans/E8_sense_choice.md` |
+| E8 | The model picks each word's sense along the chain; negative evidence; 300 new items | Wrong-sense chains 64% → 4%; AURC 0.047 without training, 0.037 learned; network loses; new items 0.039 vs 0.118 for confidence. Without hand-written lists: 72% → 10%, 0.063, 0.056, new items 0.046 vs 0.118, 95% interval of the difference 0.038–0.112 ([recheck](#recheck-without-hand-written-word-lists-2026-11-11)) | `plans/E8_sense_choice.md` |
 | E9 | Only a few claims can be checked by the dictionary; does the network spread the checks better than learning? (simulated checker, then the real one) | Beat logistic regression on the nouns that received a check (E9-1: 2% 0.072 vs 0.032), but tied gradient boosting (E9-2). Holds without hand-written lists ([recheck](#recheck-without-hand-written-word-lists-2026-11-11)) | `plans/E9-1_real_dictionary.md`, `plans/E9-2_strong_learner.md` |
 | E9-3 | Same question on all 1,681 nouns × 46 categories (77,326 claims), rules only from the model's answers | Network loses to gradient boosting in all 13 conditions (10%: 0.0029 vs 0.0018); boosting finished by the network 0.0014, a tie by the rule. Without hand-written lists the network results hold, but checking every claim with the dictionary is no longer best ([recheck](#recheck-without-hand-written-word-lists-2026-11-11)) | `plans/E9-3_all_categories.md` |
+
+### Stage 5: other questions, combining signals, the chain's dead ends (E10 to E14)
+
+Rule: a difference of at least 20% of the other value in at least 4 of 5 (E10 series, E11-3). E11-1, E11-2, E13, E14: at least 20% and a 95% interval that excludes 0. E12: at least 5 points and a 95% interval that excludes 0.
+
+| Exp. | What | Main result | Plan and results |
+|---|---|---|---|
 | E10 | Does the dictionary check carry over to part-whole, disease and geography questions? | Chain better than confidence on part-whole and geography, worse on disease; but hand-chosen wholes and hand-written lists were used ([E10](#e10-do-outside-checks-carry-over-to-other-questions-part-whole-disease-geography)) | `plans/E10_other_questions.md` |
 | E10-1 | Fixes set in advance, no hand-written lists, new items chosen by rule | Fixes make things worse; E10's gains do not repeat (one step vs confidence, part-whole 0.076 vs 0.068: tie) | `plans/E10-1_fixes_without_lists.md` |
 | E10-2 | Show definitions or GenericsKB sentences in the prompt | Part-whole: sentences 0.068 → 0.039 (5/5); definitions 0.088 (worse); only common words gain | `plans/E10-2_show_resources.md` |
 | E10-3 | Gemma's own sentences; the same resources on "is a type of"; keep only sense-matched sentences | Own sentences 0.044 vs GenericsKB 0.039: tie. "Is a type of": every resource ties with confidence. Sense filter: tie | `plans/E10-3_self_text_and_isa.md` |
-| E11-1 | Gemma picks a noun's usual sense (2,000 WordNet nouns); E8's first step narrowed to that sense | Usual sense: Gemma 59% vs similarity 47%. Narrowing the first step: 0.056 vs 0.063, a tie; worse on the 300 new items | `plans/E11-1_usual_sense.md` |
-| E11-2 | Chains up to 6 steps; a box embedding learned from the chains; everything in one learner | Deeper: tie. Box alone or filling: worse. Combined learner 0.053 → 0.038 (5/5), new items 0.042 → 0.031 | `plans/E11-2_deep_chain_and_box.md` |
+| E11-1 | Gemma picks a noun's usual sense (2,000 WordNet nouns); E8's first step narrowed to that sense | Usual sense: Gemma 59% vs similarity 47% (+11.9 points, 95% interval 9.2–14.4). Narrowing the first step: 0.056 vs 0.063, a tie; worse on the 300 new items | `plans/E11-1_usual_sense.md` |
+| E11-2 | Chains up to 6 steps; a box embedding learned from the chains; everything in one learner | Deeper: tie (difference 0.000, 95% interval −0.003 to 0.002). Box alone or filling: worse. Combined learner 0.053 → 0.038 (5/5), new items 0.042 → 0.031 | `plans/E11-2_deep_chain_and_box.md` |
 | E11-3 | The combined learner on "is a type of", part-whole, disease and geography | Beats Gemma-only boosting on K (0.017 → 0.004), P (0.062 → 0.039) and D (0.025 → 0.016); G tie. Gemini's labels: P, D, G ties. Box adds nothing | `plans/E11-3_combine_on_other_questions.md` |
-| E12 | Gemma picks the sense of a definition's head word, on 34,402 human-tagged WordNet glosses | Gemma 80.9% vs similarity 67.9%, first sense 60.5%, Lesk 35.9% (differences) | `plans/E12_gloss_head_sense.md` |
+| E12 | Gemma picks the sense of a definition's head word, on 34,402 human-tagged WordNet glosses | Gemma 80.9% vs similarity 67.9%, first sense 60.5%, Lesk 35.9% (differences; Gemma − similarity +13.0 points, 95% interval 10.3–16.3) | `plans/E12_gloss_head_sense.md` |
 | E12-1 | Is that only memory? Hide the word, paraphrase, ask for the rest of the gloss | Hidden 80.8%, paraphrased 69.3% (still above first sense 59.3%); flat across recall levels: not only memory | `plans/E12-1_memorized_or_not.md` |
 | E12-2 | Coarse senses; switching on Gemma's confidence | Coarse 88.9%; 41% of misses in the answer's group. Confidence switch: tie; in the chain (300 new items) 0.056 vs 0.056: tie | `plans/E12-2_coarse_senses_and_abstain.md` |
-| E13 | No labels: combine five disagreeing signals (mean, vote, Dawid–Skene, network) | Mean best (K 0.077, P 0.084, better than any single signal); network 0.091, a tie with the mean: "the network's role is over". Dawid–Skene worse on P | `plans/E13_combine_without_labels.md` |
-| E14 | Fill the chain's dead ends with GenericsKB and Gemma's own sentences (NLI judge) | 41 of 52 wrong "no"s filled, but 127 wrong "yes"s added: 0.140 vs 0.063, worse | `plans/E14_fill_gaps.md` |
-| E14-1 | Same, Gemma as the judge | 0.124 vs 0.063: worse | `plans/E14-1_gemma_judge.md` |
-| E14-2 | Wikipedia's first sentence, at most one per path | 0.063 vs 0.063 (300: 0.050 vs 0.056): tie; fills 12 of 52 | `plans/E14-2_wikipedia_first_sentence.md` |
-| E14-3 | Wikipedia's whole lead (10 sentences) | 0.067 vs 0.063 (300: 0.049 vs 0.056): tie; fills 14 of 52 | `plans/E14-3_wikipedia_lead.md` |
+| E13 | No labels: combine five disagreeing signals (mean, vote, Dawid–Skene, network) | Mean best (K 0.077, P 0.084, better than any single signal); network 0.091, a tie with the mean (network − mean +0.015, 95% interval −0.017 to +0.048): "the network's role is over". Dawid–Skene worse on P | `plans/E13_combine_without_labels.md` |
+| E14 | Fill the chain's dead ends with GenericsKB and Gemma's own sentences (NLI judge) | 41 of 52 wrong "no"s filled, but 127 wrong "yes"s added: 0.140 vs 0.063, worse (difference +0.077, 95% interval +0.051 to +0.106) | `plans/E14_fill_gaps.md` |
+| E14-1 | Same, Gemma as the judge | 0.124 vs 0.063: worse (difference +0.061, 95% interval +0.037 to +0.085) | `plans/E14-1_gemma_judge.md` |
+| E14-2 | Wikipedia's first sentence, at most one per path | 0.063 vs 0.063 (difference 0.000, 95% interval −0.008 to +0.008; 300: 0.050 vs 0.056): tie; fills 12 of 52 | `plans/E14-2_wikipedia_first_sentence.md` |
+| E14-3 | Wikipedia's whole lead (10 sentences) | 0.067 vs 0.063 (difference +0.004, 95% interval −0.008 to +0.015; 300: 0.049 vs 0.056): tie; fills 14 of 52 | `plans/E14-3_wikipedia_lead.md` |
 
 ## E3: Can evidence let the model say "I don't know"?
 
