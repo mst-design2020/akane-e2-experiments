@@ -1,0 +1,38 @@
+{
+ "easy": {
+  "forward": 0.893,
+  "reverse": 0.9,
+  "gap": -0.008,
+  "ci": [
+   -0.035,
+   0.019
+  ],
+  "gap_by_category_mean": -0.008,
+  "prob_forward": 0.889,
+  "prob_reverse": 0.898,
+  "both_right": 0.73,
+  "only_forward": 0.091,
+  "only_reverse": 0.107
+ },
+ "hard": {
+  "forward": 0.849,
+  "reverse": 0.882,
+  "gap": -0.033,
+  "ci": [
+   -0.06,
+   -0.004
+  ],
+  "gap_by_category_mean": -0.037,
+  "prob_forward": 0.848,
+  "prob_reverse": 0.878,
+  "both_right": 0.675,
+  "only_forward": 0.08,
+  "only_reverse": 0.132
+ },
+ "decision": "やめる",
+ "open": {
+  "forward_ok": 0.369,
+  "reverse_ok": 0.692,
+  "reverse_n": 21.6
+ }
+}

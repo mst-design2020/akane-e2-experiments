@@ -1,0 +1,82 @@
+{
+ "seeds": {
+  "0": {
+   "gemma_alone": 3119,
+   "net_alone": 3102,
+   "gemma+viol@0.01": 3102,
+   "gemma+unsure@0.01": 2957,
+   "net+conflict@0.01": 2702,
+   "gemma+viol@0.025": 3080,
+   "gemma+unsure@0.025": 2824,
+   "net+conflict@0.025": 2381,
+   "gemma+viol@0.05": 2983,
+   "gemma+unsure@0.05": 2776,
+   "net+conflict@0.05": 2147
+  },
+  "1": {
+   "gemma_alone": 3122,
+   "net_alone": 3112,
+   "gemma+viol@0.01": 3103,
+   "gemma+unsure@0.01": 2949,
+   "net+conflict@0.01": 2719,
+   "gemma+viol@0.025": 3082,
+   "gemma+unsure@0.025": 2826,
+   "net+conflict@0.025": 2370,
+   "gemma+viol@0.05": 2986,
+   "gemma+unsure@0.05": 2777,
+   "net+conflict@0.05": 2152
+  },
+  "2": {
+   "gemma_alone": 3119,
+   "net_alone": 3116,
+   "gemma+viol@0.01": 3099,
+   "gemma+unsure@0.01": 2952,
+   "net+conflict@0.01": 2718,
+   "gemma+viol@0.025": 3079,
+   "gemma+unsure@0.025": 2825,
+   "net+conflict@0.025": 2380,
+   "gemma+viol@0.05": 2978,
+   "gemma+unsure@0.05": 2776,
+   "net+conflict@0.05": 2157
+  },
+  "3": {
+   "gemma_alone": 3120,
+   "net_alone": 3109,
+   "gemma+viol@0.01": 3102,
+   "gemma+unsure@0.01": 2946,
+   "net+conflict@0.01": 2712,
+   "gemma+viol@0.025": 3082,
+   "gemma+unsure@0.025": 2822,
+   "net+conflict@0.025": 2373,
+   "gemma+viol@0.05": 2987,
+   "gemma+unsure@0.05": 2778,
+   "net+conflict@0.05": 2149
+  },
+  "4": {
+   "gemma_alone": 3122,
+   "net_alone": 3113,
+   "gemma+viol@0.01": 3107,
+   "gemma+unsure@0.01": 2946,
+   "net+conflict@0.01": 2712,
+   "gemma+viol@0.025": 3086,
+   "gemma+unsure@0.025": 2828,
+   "net+conflict@0.025": 2397,
+   "gemma+viol@0.05": 2986,
+   "gemma+unsure@0.05": 2779,
+   "net+conflict@0.05": 2147
+  }
+ },
+ "mean": {
+  "gemma_alone": 3120.4,
+  "net_alone": 3110.4,
+  "gemma+viol@0.01": 3102.6,
+  "gemma+unsure@0.01": 2950.0,
+  "net+conflict@0.01": 2712.6,
+  "gemma+viol@0.025": 3081.8,
+  "gemma+unsure@0.025": 2825.0,
+  "net+conflict@0.025": 2380.2,
+  "gemma+viol@0.05": 2984.0,
+  "gemma+unsure@0.05": 2777.2,
+  "net+conflict@0.05": 2150.4
+ }
+}

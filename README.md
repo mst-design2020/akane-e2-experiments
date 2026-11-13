@@ -184,6 +184,7 @@ Details in [Layout](#layout); commands in [Rerunning the analysis](#rerunning-th
 | E13 | yes, about 15 min; matches `results/E13/` exactly | not needed (reuses earlier answers) |
 | E14 | yes; E14-1 to E14-3 match exactly, E14 differs only in the learner's box | yes |
 | E15 | yes, seconds; matches `results/E15/` exactly | yes, L4, about 30 minutes |
+| E16 | yes, CPU; E16-1 about 20 minutes, E16-2 about 15 minutes; the common-sense step matches `results/E16/E161d_out.json` exactly | E16-0 only: yes, L4 |
 
 Running Gemma needs your own Hugging Face token.
 
@@ -343,6 +344,14 @@ Rule: a difference of at least 20% of the other value in at least 4 of 5 (E10 se
 | E14-2 | Wikipedia's first sentence, at most one per path | 0.063 vs 0.063 (difference 0.000, 95% interval −0.008 to +0.008; 300: 0.050 vs 0.056): tie; fills 12 of 52 | `plans/E14-2_wikipedia_first_sentence.md` |
 | E14-3 | Wikipedia's whole lead (10 sentences) | 0.067 vs 0.063 (difference +0.004, 95% interval −0.008 to +0.015; 300: 0.049 vs 0.056): tie; fills 14 of 52 | `plans/E14-3_wikipedia_lead.md` |
 | E15 | Gemma judges the chain's last step with the whole path of definitions shown / Gemma picks the parent word (checked on 600 "is a type of" items) | Last step: 0.109 vs 0.060, worse (difference −0.049, 95% interval −0.071 to −0.029); ties the unrelated-path control (0.102). Parent word: 0.062 vs 0.060, no change | `plans/E15_last_step.md` |
+
+### Stage 6: looking for a use of the p-bit's wobble (E16)
+
+| Exp. | What | Main result | Plan and results |
+|---|---|---|---|
+| E16-0 | Is Gemma weaker on reversed "is a type of" questions (a precondition for a reversal-curse network)? | No: forward 0.849 vs reverse 0.882 on the hard set; direction stopped | `plans/E16-0_reverse_questions.md` |
+| E16-1 | Sample a rule network (Gibbs, as a p-bit would), read whether a claim wobbles from conflict or from ignorance, and send conflict cases to TADORI | Scored by WordNet, conflict order fixes more errors than the tree learner (5% budget: 960 vs 792). Re-scored by common sense on the claims where the two differ, it wins only at a 1% budget and loses at 2.5% and 5%. Mean-field gives the same readout, so nothing here needs a p-bit | `plans/E16-1_wobble_routing.md` |
+| E16-2 | The same on disease and geography | Conflict order loses to every other selection, 0/5 at every budget | `plans/E16-2_disease_geography.md` |
 
 ## E3: Can evidence let the model say "I don't know"?
 
@@ -1301,6 +1310,16 @@ Notation as in [E6 to E8: how the computation works](#e6-to-e8-how-the-computati
 | Picking the parent word from a definition | Chodorow et al. 1985; OntoLearn Reloaded (Velardi et al. 2013) | Gemma picks from the candidates by number |
 
 E15 has no network either, so the check is that rerunning the analysis from the published files reproduces the saved output (`results/E15/E15_analysis.json`) exactly.
+
+## E16: Can the p-bit's wobble choose what TADORI checks? (2026-11-13)
+
+A short record of a direction that did not work, kept so it is not tried again unknowingly. Prior work: `plans/E16_prior_work.md` (closest: Knowledge-driven Active Learning, Ciravegna et al. 2023, which queries the samples that break domain rules most and helps only when there are many rules).
+
+- **Idea.** A p-bit network samples answers; besides the average, one can read whether a claim wobbles because its evidence is weak ("ignorance") or because rules pull it both ways ("conflict": the sum of absolute pulls minus the absolute net pull). Send the conflict cases to TADORI, the outside dictionary check.
+- **E16-1 (E4-2's 77,326 "is a type of" claims, 5 seeds, rules fixed before each step).** Conflict cases are wrong about twice as often as ignorance cases (54% vs 23%). With a check budget of 1/2.5/5% of the claims, conflict order fixed 398/730/960 WordNet-scored errors, versus 353/643/792 for a tree learner and about 0 for counting rule violations. **But** when the 1,756 claims that only one of the two orders changed were labelled blind by common sense (Claude, one labeller), conflict order won only at 1% (+45, 95% interval +25 to +65) and lost at 2.5% (−68, −106 to −32) and 5% (−60, −110 to −10): the WordNet win came mostly from WordNet's narrow labels. The readout is identical with mean-field marginals, so it is not p-bit specific.
+- **E16-2 (E10-1's disease and geography items).** Conflict order lost to every other selection at every budget. TADORI covers only 28% and 34% of these claims, and the rule networks are thin.
+- **Still shown:** where TADORI changes the network's answer, common sense agrees with TADORI most of the time (at 1%: net +221 of 245 changes). **Not shown:** any task where the p-bit's wobble beats an ordinary learner.
+- Code `analysis/e16/` (inputs: `analysis/e4/e42_data.json` built as in E4, `data/E4-2_answers_gemma-2-2b-it.json`, `data/E9n_checker_scores.json`, `analysis/e5/labels/sample_labeled.json`; E16-2 also needs `data/E10/E10-1/` and the Disease Ontology file of 2026-10-29), outputs `results/E16/`, common-sense labels `results/E16/common_sense/`, E16-0 notebook `colab/E16-0_reverse_questions.ipynb` and its output `data/E16/`. No word lists; geography's only rule is that UN subregions do not overlap.
 
 ## Layout
 
