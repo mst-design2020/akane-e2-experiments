@@ -40,6 +40,8 @@ python e8_analyze.py ../../data/E8_chains_nli.json out.json   # 約5分。AURC�
 
 E2〜E15 で、最後まで残った確かめ方です。ほかの部品（網・BP・p-bit・深い鎖・外の文の継ぎ足し）を試し、同着か負けになったものを外して、残った形を名前にしました。この節だけで全体が分かるように書き、詳しい数字は各実験の節に置いています。
 
+**名前。** TADORI（たどり）は **T**racing **A**long **D**efinitions, **O**pting for the **R**ight **I**nterpretation の頭文字です。「辞書の説明文（定義）をたどり、途中の語の正しい意味を選ぶ」という意味で、日本語の「たどる」とも読めるように名付けました。
+
 ![TADORI の模式図：辞書（灰）、小さいAIの受け持ち（青、意味選びだけ）、外の判定 NLI（緑）](figures/TADORI/tadori_ja.png)
 
 **一言で。** 小さいAIの「X は C の一種か」という答えを、辞書の説明文の鎖で確かめます。小さいAIには、鎖の途中で「この説明文の中の語は、どの意味で使われているか」を選ぶ役だけをさせます。各段の確からしさと「C に着いたか」は、外の NLI が決めます。小さいAI自身は「X は C の一種か」を判定しません。
@@ -102,7 +104,7 @@ E15 で分かったのは「2B の小さいAIに最後の判定をさせると�
 
 **動かす。** 保存済みの答えから（CPU だけ）：`cd analysis/nolist; E8_DIR=../e8 python e8n_analyze.py ../../data/E8n_chains_nli.json out.json`（方法Dが TADORI。約5分）。意味選びの大量の測り：`cd analysis; python e12/e12_analyze.py ../data/E12/e12_items_all.json.gz ../data/E12/e12_local.json.gz ../data/E12/E12_results.json.gz out.json`（数秒）。小さいAIの意味選びそのものは `colab/E8_sense_choice.ipynb` と `analysis/e8/e8_core.py` の `choice_prompt` です。上の図は `analysis/tadori/fig_tadori.py` で作りました（数字は使っていない模式図です）。
 
-**名前と引用。** TADORI（たどり）＝ Tracing Along Definitions, Opting for the Right Interpretation。日本語の「たどる」と読めるように付けました。引用するときは、このリポジトリの DOI（https://doi.org/10.5281/zenodo.24045799 、`CITATION.cff`）をお使いください。
+**引用。** 引用するときは、このリポジトリの DOI（https://doi.org/10.5281/zenodo.24045799 、`CITATION.cff`）をお使いください。
 
 ## AKANE Architectureとは（短く）
 
