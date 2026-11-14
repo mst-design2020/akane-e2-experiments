@@ -15,7 +15,7 @@ English | [日本語](README_ja.md)
 - **Combining every signal in one learner helps; deeper chains and box embeddings alone do not (E11).** Gemma's answers, the dictionary chain, outside sentences and a box embedding in one gradient-boosting learner beat the learner on Gemma's answers alone on "is a type of" (0.017 → 0.004), part-whole (0.062 → 0.039) and disease (0.025 → 0.016); geography ties, and part-whole and disease tie under Gemini's labels.
 - **Gemma's narrow job holds up at scale (E12).** On 34,402 WordNet definitions whose head word was sense-tagged by people, Gemma picks the meant sense 80.9% of the time (this is sense-choice accuracy, not the accuracy of TADORI's answers), against 60.5% for WordNet's first sense and 67.9% for embedding similarity, and the checks in E12-1 say this is not only memory.
 - **Filling the chain's dead ends with outside sentences did not help (E14).** Generic sentences (GenericsKB) fill most of the gaps but add more wrong answers than they fix (0.063 → 0.140); Wikipedia is clean but fills too few (a tie). Most remaining misses fail at the chain's last step, the judgement "is this a kind of C". Letting Gemma make that judgement, even with every definition on the path shown, is worse than the current NLI (E15: 0.060 → 0.109).
-- **Against people's labels, rare words and other small models (E17 to E20).** Against human ratings (HyperLex) and a human-made list (BLESS), TADORI did not beat a small model whose threshold was tuned well (E17 worse, E18 a tie). On rare words, simply showing the dictionary definition does most of the work (E19). Where the definition does not name the category, adding the chain helps on common words for all three small models tested (Gemma-2 2B, Qwen2.5 3B, Phi-3.5 mini: +0.07 to +0.11 balanced accuracy under every set of labels), but not over all words, not on rare words, and not on the public SemEval-2018 benchmark (E20). A learned combination is no better than a simple "or" (E20-1). [Details](#e17-to-e20-testing-tadori-on-human-labels-rare-words-and-other-small-models-2026-11-14)
+- **Against people's labels, rare words and other small models (E17 to E20).** Against human ratings (HyperLex) and a human-made list (BLESS), TADORI did not beat a small model whose threshold was tuned well (E17 worse, E18 a tie). On rare words, simply showing the dictionary definition does most of the work (E19). On common words whose first three definitions do not name the category, adding the chain to the definition helps for all three small models tested (Gemma-2 2B, Qwen2.5 3B, Phi-3.5 mini: +0.07 to +0.11 balanced accuracy under every set of labels; +0.03 to +0.12 when the thresholds are tuned on other words, 73 of 75 checks pass). It does not carry over to all words, rare words, or SemEval-2018 Task 9 turned into yes/no pairs (E20). A learned combination is no better than a simple "or" (E20-1). [Details](#e17-to-e20-testing-tadori-on-human-labels-rare-words-and-other-small-models-2026-11-14)
 - **Showing sentences that state the answer helps on part-whole questions (E10)**, whether they come from GenericsKB (0.068 → 0.039) or Gemma writes them itself (0.044, a tie).
 - **The network (BP) did not become the main part.** BP that also doubts the model's rules beat counting violations in taxonomy and disease tests (E2-6, E2-8), but it did not beat a strong learner where labeled data existed (E3, E4, E9), and with no labels at all a plain average of five signals was as good or better (E13). The p-bit method and BP never differed in accuracy (E4, E13). Using the network's wobble to choose which answers TADORI checks looked better under WordNet labels but not under common-sense labels (E16).
 
@@ -76,7 +76,7 @@ AURC is the average error rate when the most confident answers are given first; 
 | It is not only memory | 5,000 items with the defined word hidden or the text paraphrased | Hidden 80.8%, paraphrased 69.3% | First sense 59.3% | Accuracy survives hiding and paraphrase (paraphrased − first sense +10.0, 3.4 to 17.0) | [E12](#e12-does-gemmas-sense-choice-hold-up-at-scale-2026-11-12) |
 | It can check the small model's answers | 300 fresh items never used for any choice, AURC (lower is better) | 0.046 (chain + learner) | The small model's own confidence 0.118 | Better at finding the small model's errors (95% interval 0.038 to 0.112) | [E8](#e8-choosing-word-senses-along-the-chain-and-a-fresh-test-set), [recheck](#recheck-without-hand-written-word-lists-2026-11-11) |
 | It helps as a feature with other signals | 700 items, AURC (lower is better), gradient boosting | 0.038 (all signals) | Learner on the small model's answers only 0.053 | Adding it to a learner finds errors better (5 of 5 runs) | [E11](#e11-fixing-e8s-weak-points-and-combining-every-signal-2026-11-12) |
-| Where the definition does not name the category, the chain adds to the definition (common words, three small models) | Common-word pairs whose first three definitions do not contain the category; balanced accuracy (higher is better); majority of 3 AI judges | Definition + chain (SO): Gemma 0.880, Qwen 0.881, Phi 0.887 | Definition only (S): 0.769, 0.811, 0.815 | +0.111, +0.069, +0.072; all three models under every set of labels | [E20](#e17-to-e20-testing-tadori-on-human-labels-rare-words-and-other-small-models-2026-11-14) |
+| Where the definition does not name the category, the chain adds to the definition (common words, three small models) | Common-word pairs whose first three definitions do not contain the category; balanced accuracy (higher is better); majority of 3 AI judges | Definition + chain (SO): Gemma 0.880, Qwen 0.881, Phi 0.887 | Definition only (S): 0.769, 0.811, 0.815 | +0.111, +0.069, +0.072; all three models under every set of labels. Thresholds tuned on other words: +0.08 to +0.12, +0.03 to +0.09, +0.04 to +0.09 (25, 23 and 25 of 25 checks pass) | [E20](#e17-to-e20-testing-tadori-on-human-labels-rare-words-and-other-small-models-2026-11-14) |
 
 **What was not shown.**
 
@@ -368,14 +368,14 @@ Rule: a difference of at least 20% of the other value in at least 4 of 5 (E10 se
 
 ### Stage 7: people's labels, rare words, other small models (E17 to E20-1)
 
-Rule: a difference of at least 0.03 in balanced accuracy (E17: 0.05 in Spearman's $\rho$) with a 95% interval above 0, resampled by word; E20 needs this for at least 2 of 3 small models. Claims are kept only when the answer table and the AI judges' labels agree. Details: [E17 to E20](#e17-to-e20-testing-tadori-on-human-labels-rare-words-and-other-small-models-2026-11-14).
+Rule: a difference of at least 0.03 in balanced accuracy (E17: 0.05 in Spearman's $\rho$) and the lower end of its 95% interval above 0, resampled by word ("worse": the upper end below 0); E20 needs this for at least 2 of 3 small models. Claims are kept only when the answer table and the AI judges' labels agree. Details: [E17 to E20](#e17-to-e20-testing-tadori-on-human-labels-rare-words-and-other-small-models-2026-11-14).
 
 | Exp. | What | Main result | Plan and results |
 |---|---|---|---|
 | E17 | HyperLex: 2,163 noun pairs rated by people (0 to 6); does TADORI bring 2B closer? | Spearman: 2B 0.832, TADORI (2B where no entry) 0.795: worse (−0.037, −0.054 to −0.021). 9B 0.852. With a learner: tie (+0.014) | `plans/E17_hyperlex.md` |
 | E18 | BLESS: does a TADORI veto stop "yes" to parts, reversed pairs, siblings? (thresholds from HyperLex) | 2B 0.902, ask the reverse 0.903, veto 0.910 (tie, +0.009), 9B 0.958. A tuned 2B already says "yes" to only 0.5% to 3% of them | `plans/E18_bless.md` |
 | E19 | Rare words (wordfreq Zipf < 1.5), 600 words × 46 categories | Rare: 2B 0.795 → 2B or TADORI 0.921 (works, +0.07 to +0.13 under every label set), above 9B; but the same as showing the definition (S 0.899; TO − S a tie) | `plans/E19_rare_words.md` |
-| E20 | Pairs whose definitions do not name the category; three small models; SemEval-2018 | Definition + chain vs definition: common words 3/3 models work (+0.07 to +0.11); all words 1/3 (cannot be claimed); rare 1/3; SemEval 0/3 | `plans/E20_gloss_gap.md` |
+| E20 | Pairs whose definitions do not name the category; three small models; SemEval-2018 | Definition + chain vs definition: common words 3/3 models work (+0.07 to +0.11; with thresholds tuned on other words 73 of 75 checks still pass); all words 1/3 (cannot be claimed); rare 1/3; SemEval (as yes/no pairs) 0/3 | `plans/E20_gloss_gap.md` |
 | E20-1 | Learned combination; why rare words gain little | Logistic regression ties the "or" (0/3). The chain reaches the answer as often on rare words (85% to 88%) but the definition alone is already right more often (Qwen, Phi 59% → 85% to 87%); about 11% have no path | `plans/E20-1_combine_and_count.md` |
 
 ## E3: Can evidence let the model say "I don't know"?
@@ -1378,22 +1378,24 @@ $$T_m(x,y) = \max_{\text{paths } n_0 \to \dots \to n_t} \; q_{n_0} \cdots q_{n_{
 
 where $q_n$ is the NLI entailment probability of the step and $a_n(y)$ the NLI probability that the node's definition entails "W is a type of $y$." ($a_n = 1$ if the node's word is $y$ itself). If $x$ has no Wiktionary noun entry, there is no chain.
 
+**Reading the rules below.** Every comparison is a difference between two methods with a 95% bootstrap interval (percentile method, 2,000 resamples). "The interval is above 0" means its **lower end** is above 0; "below 0" means its **upper end** is below 0. The main measure from E18 on is **balanced accuracy (BA)**: the average of the share of true pairs answered "yes" and the share of false pairs answered "no". It gives both halves equal weight, so a method cannot score well just by saying "no" to the many false pairs (in E19 and E20 only about 5% of pairs are true).
+
 ### E17: human ratings (HyperLex)
 
 **Question.** HyperLex (Vulić et al. 2017) gives 2,163 noun pairs with average human ratings from 0 to 6 for "to what degree is X a type of Y". Does adding TADORI to Gemma-2 2B bring its answers closer to the human ratings?
 
-**What is compared.** $G_2$ (2B), $G_9$ (Gemma-2 9B, a larger model, as a reference), $T$, and the usual way TADORI is used without training, $S^{E17} = T$ if $x$ has a dictionary entry and $\sigma(G_2)$ otherwise (as in E10-1). Measure: Spearman's $\rho$ with the human ratings; 95% intervals from 2,000 resamples of pairs. With training (secondary): gradient boosting on the official train+dev split (1,622 pairs), tested on the 541 test pairs, features $[G_2]$ (LG2), $[G_2, T, \text{has chain}, \text{path length}]$ (LG2T) and $[G_9]$ (LG9).
+**What is compared.** $G_2$ (2B), $G_9$ (Gemma-2 9B, a larger model, as a reference), $T$, and the usual way TADORI is used without training, $H = T$ if $x$ has a dictionary entry and $\sigma(G_2)$ otherwise (as in E10-1; $\sigma$ is the logistic function, which puts $G_2$ on the same 0-to-1 scale as $T$). $H$ is used only in E17; it is not the S of E19 and E20. Measure: Spearman's $\rho$ with the human ratings; 95% intervals from 2,000 resamples of pairs. With training (secondary): gradient boosting on the official train+dev split (1,622 pairs), tested on the 541 test pairs, features $[G_2]$ (LG2), $[G_2, T, \text{has chain}, \text{path length}]$ (LG2T) and $[G_9]$ (LG9).
 
-**Rule.** Flag A: $\rho(S) - \rho(G_2) \ge 0.05$ with an interval above 0 means "works"; below 0 with an interval below 0 means "worse"; otherwise a tie. Flag B: the same for LG2T vs LG2. Flag C: against 9B.
+**Rule.** Flag A: $\rho(H) - \rho(G_2) \ge 0.05$ with an interval above 0 means "works"; below 0 with an interval below 0 means "worse"; otherwise a tie. Flag B: the same for LG2T vs LG2. Flag C: against 9B.
 
 | Without training (2,163 pairs) | $\rho$ | With training (541 test pairs) | $\rho$ |
 |---|---|---|---|
 | 2B ($G_2$) | 0.832 | LG2 | 0.810 |
 | 9B ($G_9$) | 0.852 | LG2T | 0.824 |
 | TADORI ($T$) | 0.782 | LG9 | 0.835 |
-| TADORI, 2B where no entry ($S$) | 0.795 | | |
+| TADORI, 2B where no entry ($H$) | 0.795 | | |
 
-- Flag A: **worse** ($S - G_2 = -0.037$, 95% interval $-0.054$ to $-0.021$). Flag C: does not reach 9B ($-0.057$).
+- Flag A: **worse** ($H - G_2 = -0.037$, 95% interval $-0.054$ to $-0.021$). Flag C: does not reach 9B ($H - G_9 = -0.057$).
 - Flag B: **tie** (+0.014, $-0.007$ to $+0.034$). LG2T vs LG9: a tie ($-0.011$).
 - Looked at after the result: TADORI says "no" to many part-whole, reversed and sibling pairs that people rate in the middle (about 2), but it also lowers true "type of" pairs (people 4.8 to 5.2) and synonyms. A 0/1-like score is a poor fit for ranking graded ratings.
 
@@ -1459,7 +1461,7 @@ On the rare bucket, with each judge's labels and thresholds re-tuned on those la
 
 - **On rare words, adding the dictionary to 2B helps a lot and puts it above 9B**, under WordNet and all four AI labellings. But **most of this comes from showing the definition**: S alone is +0.10 over 2B, and the chain on top of S is a tie (Flag B).
 - Checks made after the first result (all in the plan): a threshold-free AUC gives the same order; dropping "living thing" and "person" does not change it; on the common bucket TO also beats 2B under common-sense labels (+0.074, 0.053 to 0.095). In 14% to 16% of true pairs the category name is literally in the first three definitions; removing them leaves the result. Among true pairs whose definitions do **not** name the category, the chain says yes much more often than S on common and mid words (S 0.65 → TO 0.84 on common words). This led to E20.
-- Judges: Claude labelled 2,493 pairs (1,169 rare, 1,324 common), and ChatGPT and Gemini labelled the same pairs with the same instructions in batches of 250 (method hidden). Agreement: Claude–ChatGPT 0.92, Claude–Gemini 0.90, ChatGPT–Gemini 0.89; with WordNet 0.955, 0.91 and 0.90. Gemini said yes most often (405 vs Claude's 190). These are AI judges, not people.
+- Judges: Claude labelled 2,493 pairs (1,169 rare, 1,324 common), and ChatGPT and Gemini labelled the same pairs with the same instructions in batches of 250 (method hidden). Agreement on these judged pairs (only pairs where the compared methods disagree, so harder than average): Claude–ChatGPT 0.92, Claude–Gemini 0.90, ChatGPT–Gemini 0.89; with WordNet 0.955, 0.91 and 0.90. The mid bucket was not judged. Gemini said yes most often (405 vs Claude's 190). These are AI judges, not people.
 
 ### E20: definitions that do not name the category, three small models, and SemEval
 
@@ -1518,11 +1520,12 @@ Bold: meets the rule (≥ 0.03, interval above 0).
 
 - **Flag 1: cannot be claimed.** Under the answer table, Claude, ChatGPT and the majority vote, only 1 of 3 models (Gemma) meets the rule over all words (Gemini's labels give 2 of 3). Qwen (+0.02 to +0.04) and Phi (+0.01 to +0.03) gain, but below the 0.03 bar.
 - **Common words: the chain helps for all three models under every label set** (Gemma +0.10 to +0.11, Qwen +0.06 to +0.08, Phi +0.07 to +0.08).
+- **Check added after review: common words measured on words not used for tuning.** The thresholds are tuned on the common bucket, so the common-word numbers above are measured on the same words (mid, rare and SemEval are not). We split the common words in half (5 random splits), tuned on one half and measured SO − S on the other half's main subset, under all five label sets (`analysis/e20/e20_holdout.py`, `results/E20/E20_holdout.json`). Gemma +0.08 to +0.12 (25 of 25 pass the rule), Phi +0.04 to +0.09 (25 of 25), Qwen +0.03 to +0.09 (23 of 25; two ties). The gain is a little smaller, Qwen's the most, but it remains.
 - **Rare words: cannot be claimed**; Phi is slightly worse in places. E19's gain on rare words did not repeat once the pairs whose definitions name the category were removed and the words were redrawn.
-- **Flag 2 (SemEval): cannot be claimed** (0/3 under every label set). Under common-sense labels Phi is slightly worse (−0.012 to −0.024).
+- **Flag 2 (SemEval): cannot be claimed** (0/3 under every label set). Note that SemEval-2018 Task 9 is a ranking task (find the hypernyms of a term); here it is turned into yes/no pairs with negatives taken from other terms' gold hypernyms, so this says nothing about TADORI on the original ranking measures (MAP, MRR). Under common-sense labels Phi is slightly worse (−0.012 to −0.024).
 - Against 9B (W, all buckets): SO with the definition is above 9B asked without one for all three small models (+0.07 to +0.09, under every label set). On SemEval, SO and 9B tie.
 - **Flag 3: not enough.** Using the chain only when S is close to its threshold is slightly worse than or equal to SO, and the chain is consulted for 85% to 95% of pairs.
-- Judges: agreement with the answer table Claude 0.898, ChatGPT 0.842, Gemini 0.852, majority 0.894; between judges 0.83 to 0.87. These are AI judges, not people.
+- Judges: agreement on the 1,044 judged pairs (only pairs where SO and S disagree) with the answer table Claude 0.898, ChatGPT 0.842, Gemini 0.852, majority 0.894; between judges 0.83 to 0.87. All other pairs keep the answer-table label. These are AI judges, not people.
 
 ### E20-1: a learned combination, and why the chain stops adding on rare words
 
@@ -1617,7 +1620,7 @@ with `class_weight="balanced"` and $C = 1$, trained where E20 tunes its threshol
 - `analysis/e15/`: E15 code (`e15_core.py` paths and prompts, `e15_analyze.py` comparisons, `count15.py` the count before E15, `build_notebook_E15.py` builds the notebook). Notebook: `colab/E15_last_step.ipynb` (L4 GPU, about 30 minutes). `data/E15/`: notebook outputs (parent words, step values, arrival values, Gemma's Yes−No logits; Wiktionary definitions removed, CC BY-SA). `results/E15/`: analysis output
 - `analysis/e17/`, `analysis/e18/`: E17 and E18 analysis (`e17_analyze.py`, `e18_analyze.py`; `e17/e15_core.py` is a copy of E15's) and notebook builders. `results/E17/`, `results/E18/`: summaries only (HyperLex and BLESS are not redistributed)
 - `analysis/e19/`: E19 (`e19_analyze.py` comparisons and rules, `judge_combine.py` the three AI judges, notebook builders `build_notebook_E19.py` and `build_notebook_E19_defs.py` for the definition check). `data/E19/`: per-pair scores (`c19.json`, Zipf values removed) and `judge/` (the judged pairs, ChatGPT's and Gemini's raw answers, Claude's labels, the instruction text). `results/E19/`: summary and `judge/` outputs
-- `analysis/e20/`: E20 (`e20_analyze.py`, `judge_combine.py`, `e201_analyze.py` for E20-1, `fig_e20.py`, `build_notebook_E20.py`). `data/E20/`: per-pair scores of the three small models and 9B (`c20.json`; SemEval words replaced by ids, Zipf values removed) and `judge/`. `results/E20/`: `judge/` outputs and `E20-1_out.json`. `figures/E20/`: the figure in the E20 section
+- `analysis/e20/`: E20 (`e20_analyze.py`, `judge_combine.py`, `e201_analyze.py` for E20-1, `e20_holdout.py` for the held-out check, `fig_e20.py`, `build_notebook_E20.py`). `data/E20/`: per-pair scores of the three small models and 9B (`c20.json`; SemEval words replaced by ids, Zipf values removed) and `judge/`. `results/E20/`: `judge/` outputs and `E20-1_out.json`. `figures/E20/`: the figure in the E20 section
 - `results/`: result JSON files and figures (`results/E3/E3_main_analysis.json` for E3, `results/E4/` for E4, `results/E5/` for E5, `results/E6/` for E6, `results/E7/` for E7, `results/E8/` for E8, `results/E9/` for E9)
 - `plans/`: plans and results for each experiment (Japanese)
 
@@ -1696,6 +1699,7 @@ E17 to E20-1 (CPU, seconds to a minute each; `numpy scipy scikit-learn matplotli
 ```
 cd analysis/e19 && python judge_combine.py                      # E19: WordNet and the three AI judges -> results/E19/judge/
 cd ../e20 && python judge_combine.py && python e201_analyze.py  # E20 and E20-1 -> results/E20/
+python e20_holdout.py                                           # held-out check of the common bucket -> results/E20/E20_holdout.json
 python fig_e20.py                                               # figure -> figures/E20/ (JP_FONT for the Japanese one)
 # E17, E18 need the notebook output and the HyperLex zip:
 # python ../e17/e17_analyze.py E17_results.json.gz hyperlex-data.zip out.json
@@ -1741,7 +1745,7 @@ On TADORI: following the head words of dictionary definitions to build a taxonom
 - E12: WordNet glosses and WordNet senses, not Wiktionary (E8's dictionary). The human sense tags contain errors and close calls. The paraphrases in E12-1 were rough, so the size of any memory effect is not measured.
 - E13: five signals from one small model (and one NLI model); the network had rules only for "is a type of". The common-sense labels are Claude's.
 - E14: the 1,000 items had been used before (E8n, E11); four variants were tried on them, all tied or lost. Wikipedia lacks articles for many common nouns. The reading of 50 grown paths is one annotator (Claude). What is left after E14-3 was looked at after the results.
-- E17 to E20: labels for E19 and E20 come from WordNet or SemEval's gold lists and from three AI judges (Claude, ChatGPT through the free web chat, Gemini), not from people; Gemini says yes more often than the others. Phi-3.5 mini replaced Llama-3.2 3B because access was not granted (the files call it `llama3b`). SemEval was read from a Hugging Face copy because the original download no longer worked. E17 and E18 use one small model; the HyperLex threshold transfer in E18 assumes HyperLex and BLESS mean the same by "type of". E19's checks after the first result (AUC, removing two categories, literal mentions) were not fixed in advance; E20 was planned to test them. E20 has one seed per data set.
+- E17 to E20: labels for E19 and E20 come from WordNet or SemEval's gold lists and from three AI judges (Claude, ChatGPT through the free web chat, Gemini), not from people; Gemini says yes more often than the others. Phi-3.5 mini replaced Llama-3.2 3B because access was not granted (the files call it `llama3b`). SemEval was read from a Hugging Face copy because the original download no longer worked. E17 and E18 use one small model; the HyperLex threshold transfer in E18 assumes HyperLex and BLESS mean the same by "type of". E19's checks after the first result (AUC, removing two categories, literal mentions) were not fixed in advance; E20 was planned to test them. E20 has one seed per data set. Only single-word, lowercase English nouns with a Wiktionary entry were used (no multi-word terms, other parts of speech or other languages), and each model was asked with one prompt wording; how much the results depend on the wording is not tested. The chain needs definitions that name a broader word; about 11% of true pairs find no path.
 - The p-bits are simulated in software. These experiments say nothing about speed or energy.
 
 ## How this was made
