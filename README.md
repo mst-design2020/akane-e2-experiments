@@ -6,6 +6,8 @@ English | [日本語](README_ja.md)
 
 **What this is:** experiments that keep a small language model (Gemma-2 2B) as the "mouth" and check its answers with parts placed outside it: rules, belief propagation (BP), retrieved evidence, dictionary definitions and a small NLI model. Each plan was fixed before its results, and ties and losses are reported as well.
 
+**New here? In three lines.** Small AI models often answer "Is X a kind of Y?" wrongly and with confidence. We tried many ways to check such answers from outside the model; the one that kept working, **TADORI**, follows dictionary definitions step by step and lets the small model do only one easy job on the way (pick which meaning of a word is meant). It helps most where the dictionary does not state the answer directly, and it does not help everywhere; every result below says where it worked and where it did not. Terms are explained in [Terms used here](#terms-used-here).
+
 **For researchers:** the method that remained, TADORI, is summarised in one section (definition, procedure, what was and was not shown, what was dropped): [TADORI (summary for researchers)](#tadori-summary-for-researchers).
 
 **Main findings so far** (mostly one small model, Gemma-2 2B, with two more small models in E20; English; mostly one domain; see [Limitations](#limitations)):
@@ -19,7 +21,7 @@ English | [日本語](README_ja.md)
 - **Showing sentences that state the answer helps on part-whole questions (E10)**, whether they come from GenericsKB (0.068 → 0.039) or Gemma writes them itself (0.044, a tie).
 - **The network (BP) did not become the main part.** BP that also doubts the model's rules beat counting violations in taxonomy and disease tests (E2-6, E2-8), but it did not beat a strong learner where labeled data existed (E3, E4, E9), and with no labels at all a plain average of five signals was as good or better (E13). The p-bit method and BP never differed in accuracy (E4, E13). Using the network's wobble to choose which answers TADORI checks looked better under WordNet labels but not under common-sense labels (E16).
 
-Ties and losses are reported in every section. Two corrections (2026-11-11) changed earlier numbers; they are listed in [Corrections](#corrections-2026-11-11).
+Ties and losses are reported in every section. Two corrections (2026-11-11) changed earlier numbers; they are listed in [Corrections](#corrections-2026-11-11). A check of every experiment for settings chosen on the scored items is in [this check](#check-were-settings-chosen-on-the-same-data-they-were-scored-on-2026-11-14).
 
 ![Checking a small model's "X is a type of Y" answers from outside (E6–E8)](figures/E8/overview_en.png)
 
@@ -36,6 +38,22 @@ python e8_analyze.py ../../data/E8_chains_nli.json out.json   # about 5 minutes;
 All experiments in one table: [Results at a glance](#results-at-a-glance). Each experiment's plan and results are in `plans/` (Japanese). Articles explaining each step (Japanese): [Articles](#articles-japanese).
 
 Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ · ORCID https://orcid.org/0009-0001-6803-654X · DOI https://doi.org/10.5281/zenodo.24045799
+
+## Terms used here
+
+| Term | Meaning in this repository |
+|---|---|
+| Small model, 2B, 9B | Gemma-2 with 2 or 9 billion parameters (E20 also Qwen2.5 3B and Phi-3.5 mini), used without fine-tuning |
+| Yes−No logit | How much more the model leans to "Yes" than to "No" as its next word; larger means more sure of "Yes" |
+| NLI model | A separate small model that judges whether one sentence follows from another (here DeBERTa-v3-large) |
+| TADORI | The dictionary-chain check: follow definitions (kitten → cat → mammal), the small model only picks word senses, NLI judges each step |
+| AURC | Average error rate when answers are given in order of confidence; lower is better (used up to E16) |
+| BA, balanced accuracy | Average of "yes on true pairs" and "no on false pairs"; higher is better (E18 to E20) |
+| Flag, rule | A pass/fail rule written in the plan before the run, e.g. "a difference of at least 0.03 with the lower end of the 95% interval above 0" |
+| Tie | The difference did not meet the rule; it is not a win |
+| Common-sense labels | Answers re-judged by AI models (Claude, Gemini, from E19 ChatGPT), not by people |
+| BP, network | Belief propagation: passing evidence between linked claims in a network of rules (E2 to E16) |
+| p-bit method | The same network sampled the way probabilistic bits would, run in software; never better than BP in accuracy |
 
 ## TADORI (summary for researchers)
 
@@ -207,6 +225,32 @@ Both corrections were found by our own audit. The numbers in the findings above 
 
 - **Correction (2026-11-11): the learned baselines were all linear.** Every "features + learning" baseline in E2 to E8 was logistic regression. Redoing them with a tree-based learner (gradient boosting, `analysis/audit_gb/`) changes three statements: E2-7 (taxonomy: BP's win becomes a tie; geography: BP now loses to the learned combination), E4-2 (the cautious network loses under WordNet labels) and E7 (adding chain scores is no longer clearly best). E8's result holds. Details are marked "Audit (2026-11-11)" below.
 - **Correction (2026-11-11): hand-written word lists.** E7, E8 and the real dictionary check used in E9-1 to E9-3 picked each definition's head noun with hand-written word lists (`PERSON_HEADS`, `OF_HEADS`, `META` and two fixes: for example "one who …" → person, "a kind of X" → X; audit: `plans/audit_hand_lists.md`). We reran them without any such list: head-noun candidates come from grammar only (the head of the first noun chunk and the object of its "of"), and the NLI score of the step chooses among them (`analysis/nolist/`). The rules for "holds" were fixed before the runs. **Held:** Gemma's sense choice cuts wrong-sense chains (72% → 10%), the chain + learner beats Gemma's confidence on the 300 new items (0.046 vs 0.118), chaining breaks fewer right answers (40% → 31%), and every E9 conclusion about the network. **Not held:** the chain scores (0.047 → 0.063 without training, 0.037 → 0.056 learned), the clear gain over E6's features with gradient boosting (only 3 of 5 splits by 20%), the dictionary's hit rate on true claims (88% → 83%), and E9-3's "checking every claim with the dictionary is best" (now best in 1 of 12 conditions; gradient boosting is better). Details: [Recheck without hand-written word lists](#recheck-without-hand-written-word-lists-2026-11-11).
+
+## Check: were settings chosen on the same data they were scored on? (2026-11-14)
+
+After an outside review (ChatGPT and Gemini read this README), we checked every experiment for one common mistake: choosing a threshold, weight or setting on some items and then reporting results on the **same** items. That makes a method look better than it is. Result: two places did this, both in E19 and E20, and both were rechecked on held-out words; the results held. Everywhere else the setting was chosen on separate items, or nothing was tuned.
+
+| Exp. | Where settings were chosen | Where results were measured | Same items? |
+|---|---|---|---|
+| E2-2 to E2-9, E2-10 to E2-12 | 20% of words, cities, diseases or responses | the other 80% (5 splits) | no |
+| E3 | the network has no tuned settings; the learner uses 5 folds | the held-out fold | no |
+| E4, E5 | 20% of nouns (rule weights, bias correction, the grid in (7)) | the other 80% (5 splits) | no |
+| E6 to E8, E8n | 4 folds by noun (network strengths, learners) | the fifth fold; the 300 new items were never used for any choice | no |
+| E9 to E9-3 | the training part of each split | the unchecked claims of the evaluation part | no |
+| E10 to E10-3, E11-3 | 20% of entities | the other 80% (5 splits) | no |
+| E11-1, E12, E12-1 | nothing tuned (accuracy of fixed methods) | all items | – |
+| E11-2, E14 | learners: 4 folds by noun | the fifth fold, and the 300 new items | no |
+| E12-2 | the confidence threshold on half of the head words | the other half | no |
+| E13 | nothing tuned (no labels). The reference "pick the best signal with 20 labels" is scored on all items including those 20 (a small advantage to the reference, not to the network) | all items | 20 items |
+| E15 | nothing tuned; methods fixed before | E10-3's 600 items (E8's 1,000 were only looked at) | no |
+| E16 | network weights and learners: 4 folds | the held-out folds, joined | no |
+| E17 | learners: the official train+dev split | the official test split | no |
+| E18 | thresholds on HyperLex | BLESS | no |
+| E19 | thresholds on the common bucket | all buckets; **common bucket = same words** | **yes → rechecked on held-out words: holds** |
+| E20 | thresholds on W's common bucket, SemEval's tuning half | all buckets, SemEval's other half; **W common = same words** | **yes → rechecked on held-out words: holds (Qwen's gain shrinks)** |
+| E20-1 | the logistic regression: same places as E20 | the same comparisons as E20 | as E20 (only ties were found) |
+
+What this check does not cover: E8's 700 items, E4-2's answers and E10's items were reused across several later experiments (listed in [Limitations](#limitations)), so later designs were made knowing earlier results on the same items. The fresh 300 items (E8) and E10-3's 600 items (E15) are the guards against this.
 
 ## Articles (Japanese)
 
@@ -1580,6 +1624,8 @@ with `class_weight="balanced"` and $C = 1$, trained where E20 tunes its threshol
 **Choices made by hand** (all written in the plans before the runs): bucket edges 1.5 and 3.0; 200 words per bucket; seeds (E19: 0, E20 W: 1, E20 E: 0); three definitions shown; at most three gold hypernyms per SemEval term; margins 0.03 (and 0.01 for flag 3, 0.05 for E17's $\rho$); human rating 3 as the middle; SA's 19-point grid. No hand-written word lists. The 46 categories are the questions themselves (as since E4-2).
 
 **Judge instructions** (the same for all three judges; `data/E19/judge/prompt_header.txt`, `data/E20/judge/prompt_header.txt`): "For each numbered line "X | Y", decide whether X is a kind of Y … in ordinary common sense. Any established dictionary sense of X counts (e.g. a rare meaning). People count as "living thing" and "person", but NOT as "animal" or "mammal". "man-made object" means any artifact. Reply ONLY with the line numbers whose answer is YES …". Pairs were shuffled (seed 0) and sent in batches, each in a new chat. One ChatGPT batch in E19 collapsed (almost everything YES) and was redone in a new chat. Raw answers are in `data/E19/judge/` and `data/E20/judge/`.
+
+**Run conditions (for reproducing E17 to E20).** Google Colab, one L4 GPU, `transformers` with each model's own chat template (`apply_chat_template`, generation prompt added), left padding, no quantization; Gemma-2 2B in float16, the other models in bfloat16. Models were downloaded from Hugging Face on 2026-11-14 without a pinned revision. "Yes" and "No" are the last token of the tokenizer's encoding of each word (printed by the notebook); the value read is the logit difference at the last position, so nothing is generated. Logit scales differ between models, which is why every threshold is set per model. NLI: the same DeBERTa model as since E6, inputs cut at 192 tokens.
 
 **What is published and what can be rerun.**
 
