@@ -269,7 +269,7 @@ Every number in the articles below comes from files in this repository. Articles
 - Article 11: E11, combining every signal in one learner. https://note.com/mst_design2020/n/n8ca2afb0ac35 (Zenn, E11 to E14: https://zenn.dev/mst_design2020/articles/8ac3114ae8cf58)
 - Article 12: E12 to E14, word-sense choice on 34,000 items, combining without labels, and filling dead ends. https://note.com/mst_design2020/n/nd15d73345722 (Zenn: same as Article 11)
 - Article 13: E15 and TADORI, the last step judged by the small model, and naming the method. https://note.com/mst_design2020/n/n4a4123b34fd6 (Zenn: https://zenn.dev/mst_design2020/articles/fc03d9c1a5763b)
-- Zenn (Japanese), E16 to E20-1: where TADORI helps and where it does not (human labels, rare words, other small models, and the review checks). https://zenn.dev/mst_design2020/articles/45f9359416b8e5 (no note article yet)
+- Article 14: E17 to E20-1, where TADORI helps (human labels, rare words, other small models, and the review checks). https://note.com/mst_design2020/n/n1f1871868858 (Zenn, E16 to E20-1: https://zenn.dev/mst_design2020/articles/45f9359416b8e5)
 
 ## E2: rules written by the model, checked with belief propagation
 
