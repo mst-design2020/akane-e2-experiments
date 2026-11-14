@@ -1464,6 +1464,7 @@ $$\mathrm{BA} = \tfrac12\,\Pr(\text{はい}\mid\text{一種}) + \tfrac12\,\Pr(\t
 
 - **珍しい語では、2B に辞書を足すと大きく良くなり、9B より上になった**（WordNet と4通りのAIの判定のどれでも）。ただし**伸びのほとんどは説明文を見せることから**来ている。S だけで 2B より +0.10、S に鎖を足す上乗せは同着（旗B）。
 - 最初の結果の後に足した点検（計画に記録）：しきい値に頼らない AUC でも順番は同じ。「生き物」「人」を除いても同じ。よく出る段でも常識の正解で TO が 2B より上（+0.074、0.053〜0.095）。一種の組の 14〜16% は最初の3つの説明文に分類の名前がそのまま書いてあり、除いても結果は残る。書いていない一種の組では、よく出る・中の語で鎖が S よりずっと多く「はい」と言えた（よく出る語：S 0.65 → TO 0.84）。これが E20 のきっかけ。
+- **見直しの後に足した確かめ：よく出る語を、しきい値を決めていない語で測る。** しきい値は「よく出る」段で決めているので、上のよく出る段の数字は同じ語で測っています（主の珍しい段は別の語）。よく出る語を半分に分け（くじ5通り）、半分でしきい値を決めて残り半分で測りました。WordNet と4通りのAIの判定のすべてで行いました（`analysis/e19/e19_holdout.py`、`results/E19/E19_holdout.json`）。TO − $G_2$ +0.03〜+0.13（25回中24回が決まりを満たす）、TO − $G_9$ +0.04〜+0.13（25回中25回 9Bより上）、TO − S +0.03〜+0.12（25回中25回）。よく出る語の結果は残りました。なお、よく出る段で判定したのは TO と $G_2$ の答えが割れた組だけなので、S・$G_9$ との比べは一部 WordNet の正解のままです。
 - 判定：Claude が 2,493組（珍しい 1,169・よく出る 1,324）を判定し、同じ指示で ChatGPT・Gemini も 250組ずつ判定（方法は伏せた）。判定した組（比べる方法の答えが割れた組だけなので、平均より難しい）での一致：Claude〜ChatGPT 0.92、Claude〜Gemini 0.90、ChatGPT〜Gemini 0.89。WordNet との一致 0.955・0.91・0.90。中の段は判定していません。「はい」が一番多いのは Gemini（405、Claude は 190）。人ではなくAIの判定です。
 
 ### E20：分類の語が書いていない説明文、3つの小さいAI、SemEval
@@ -1620,7 +1621,7 @@ $$p_{\mathrm{LR}}(x,y) = \mathbf{w}^\top \operatorname{standardise}\big([\,S,\ \
 - `analysis/e16/`：E16 のコード（`e160_*` と `build_notebook_E16-0.py` 逆向きの問い、`e161.py` 揺らす網と読み取り、`e161b.py`・`e161c.py`・`e161c2.py` どの主張を TADORI に回すか、`e161d.py` 常識での採点し直し、`e162.py` 病気・地理）。ノート：`colab/E16-0_reverse_questions.ipynb`。`data/E16/`：E16-0 の問題と Gemma の答え。`results/E16/`：出力と、方法を伏せた常識の判定
 - `analysis/e15/`：E15 のコード（`e15_core.py` 道と聞き方、`e15_analyze.py` 比べ、`count15.py` 前の数え、`build_notebook_E15.py` ノートを作るスクリプト）。ノート：`colab/E15_last_step.ipynb`（L4 GPU、約30分）。`data/E15/`：ノートの出力（親の語、段の値、着きの値、Gemma の Yes−No の logit。Wiktionary の説明文は外した、CC BY-SA）。`results/E15/`：分析の出力
 - `analysis/e17/`・`analysis/e18/`：E17・E18 の分析（`e17_analyze.py`・`e18_analyze.py`。`e17/e15_core.py` は E15 の写し）とノートを作るプログラム。`results/E17/`・`results/E18/`：まとめの値だけ（HyperLex・BLESS は配らない）
-- `analysis/e19/`：E19（`e19_analyze.py` 比べと決まり、`judge_combine.py` 3つのAIの判定、ノートを作る `build_notebook_E19.py` と説明文の点検用 `build_notebook_E19_defs.py`）。`data/E19/`：組ごとの値（`c19.json`、Zipf の値は外した）と `judge/`（判定した組、ChatGPT・Gemini の答えそのまま、Claude の判定、指示文）。`results/E19/`：まとめと `judge/` の出力
+- `analysis/e19/`：E19（`e19_analyze.py` 比べと決まり、`judge_combine.py` 3つのAIの判定、`e19_holdout.py` よく出る語を別の語で測る確かめ、ノートを作る `build_notebook_E19.py` と説明文の点検用 `build_notebook_E19_defs.py`）。`data/E19/`：組ごとの値（`c19.json`、Zipf の値は外した）と `judge/`（判定した組、ChatGPT・Gemini の答えそのまま、Claude の判定、指示文）。`results/E19/`：まとめと `judge/` の出力
 - `analysis/e20/`：E20（`e20_analyze.py`、`judge_combine.py`、E20-1 の `e201_analyze.py`、見直し後の確かめ `e20_holdout.py`、`fig_e20.py`、`build_notebook_E20.py`）。`data/E20/`：3つの小さいAIと 9B の組ごとの値（`c20.json`。SemEval の語は番号に置き換え、Zipf の値は外した）と `judge/`。`results/E20/`：`judge/` の出力と `E20-1_out.json`。`figures/E20/`：E20 の節の図
 - `results/`：計算結果のJSONと図（E3は `results/E3/E3_main_analysis.json`、E4は `results/E4/`、E5は `results/E5/`、E6は `results/E6/`、E7は `results/E7/`、E8は `results/E8/`、E9は `results/E9/`）
 - `analysis/e9/`：E9のコード。`e9.py`（作り物の確かめ役でのE9。`real` でE9-1・E9-2の本物の辞書）、`e93.py`（E9-3）、`e9*_analyze.py`（まとめと判定の決まり）、`e91_checker.py`・`e91_from_small.py`（Colabの出力を確かめの点にする）、`check_formulas_e9.py`（網のコードが式どおりかの確かめ）、ノートを作るコード、`labels/E9-3_sample_labeled_claude.json`（Claudeが常識で判定した600個。人の判定ではない）
@@ -1702,7 +1703,7 @@ E15：`analysis/e15/` で `E8_DIR=../e8 python e15_analyze.py ../../data/E15/E15
 E17〜E20-1（CPU、それぞれ数秒〜1分。`numpy scipy scikit-learn matplotlib`）：
 
 ```
-cd analysis/e19 && python judge_combine.py                      # E19：WordNet と3つのAIの判定 → results/E19/judge/
+cd analysis/e19 && python judge_combine.py && python e19_holdout.py   # E19：WordNet と3つのAIの判定、別の語で測る確かめ → results/E19/
 cd ../e20 && python judge_combine.py && python e201_analyze.py  # E20 と E20-1 → results/E20/
 python e20_holdout.py                                           # よく出る語を別の語で測る確かめ → results/E20/E20_holdout.json
 python fig_e20.py                                               # 図 → figures/E20/（日本語の図は JP_FONT）
