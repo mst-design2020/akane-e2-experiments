@@ -1,0 +1,683 @@
+{
+ "agree": {
+  "gold_yes": 193,
+  "claude": {
+   "yes": 105,
+   "gold": 0.898
+  },
+  "claude~gemini": 0.874,
+  "claude~vote": 0.947,
+  "chatgpt": {
+   "yes": 188,
+   "gold": 0.842
+  },
+  "chatgpt~claude": 0.853,
+  "chatgpt~gemini": 0.832,
+  "chatgpt~vote": 0.906,
+  "gemini": {
+   "yes": 231,
+   "gold": 0.852
+  },
+  "gemini~vote": 0.926,
+  "vote": {
+   "yes": 158,
+   "gold": 0.894
+  }
+ },
+ "claude": {
+  "W|main|all": {
+   "gemma2b|SO-S": {
+    "diff": 0.0602,
+    "lo": 0.047,
+    "hi": 0.0725,
+    "flag": "効く"
+   },
+   "gemma2b|SO-9B": {
+    "diff": 0.0737,
+    "lo": 0.0569,
+    "hi": 0.0899,
+    "flag": "効く"
+   },
+   "gemma2b|SA-SO": {
+    "diff": -0.0005,
+    "lo": -0.0053,
+    "hi": 0.0042,
+    "chain_share": 0.855,
+    "flag": "足りない"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0252,
+    "lo": 0.0152,
+    "hi": 0.0364,
+    "flag": "同着"
+   },
+   "qwen3b|SO-9B": {
+    "diff": 0.088,
+    "lo": 0.0726,
+    "hi": 0.104,
+    "flag": "効く"
+   },
+   "qwen3b|SA-SO": {
+    "diff": -0.0051,
+    "lo": -0.0094,
+    "hi": -0.0011,
+    "chain_share": 0.85,
+    "flag": "足りない"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0148,
+    "lo": 0.0035,
+    "hi": 0.0256,
+    "flag": "同着"
+   },
+   "llama3b|SO-9B": {
+    "diff": 0.087,
+    "lo": 0.0713,
+    "hi": 0.1022,
+    "flag": "効く"
+   },
+   "llama3b|SA-SO": {
+    "diff": -0.004,
+    "lo": -0.0075,
+    "hi": -0.0011,
+    "chain_share": 0.952,
+    "flag": "足りない"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "W|main|common": {
+   "gemma2b|SO-S": {
+    "diff": 0.1072,
+    "lo": 0.0817,
+    "hi": 0.1343,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0599,
+    "lo": 0.0375,
+    "hi": 0.0817,
+    "flag": "効く"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0687,
+    "lo": 0.0446,
+    "hi": 0.0936,
+    "flag": "効く"
+   },
+   "verdict": "3/3 で効く → 効く"
+  },
+  "W|main|mid": {
+   "gemma2b|SO-S": {
+    "diff": 0.0405,
+    "lo": 0.0213,
+    "hi": 0.0598,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0153,
+    "lo": -0.0013,
+    "hi": 0.0327,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0111,
+    "lo": -0.025,
+    "hi": 0.0036,
+    "flag": "同着"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "W|main|rare": {
+   "gemma2b|SO-S": {
+    "diff": 0.0295,
+    "lo": 0.0109,
+    "hi": 0.05,
+    "flag": "同着"
+   },
+   "qwen3b|SO-S": {
+    "diff": -0.0021,
+    "lo": -0.0147,
+    "hi": 0.0106,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0179,
+    "lo": -0.0288,
+    "hi": -0.0064,
+    "flag": "悪くなる"
+   },
+   "verdict": "0/3 で効く → 言えない"
+  },
+  "E|main|all": {
+   "gemma2b|SO-S": {
+    "diff": -0.0065,
+    "lo": -0.018,
+    "hi": 0.0054,
+    "flag": "同着"
+   },
+   "gemma2b|SO-9B": {
+    "diff": -0.0124,
+    "lo": -0.0288,
+    "hi": 0.0051,
+    "flag": "同着"
+   },
+   "qwen3b|SO-S": {
+    "diff": -0.0198,
+    "lo": -0.0308,
+    "hi": -0.0084,
+    "flag": "悪くなる"
+   },
+   "qwen3b|SO-9B": {
+    "diff": -0.0181,
+    "lo": -0.0371,
+    "hi": 0.0004,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0241,
+    "lo": -0.0339,
+    "hi": -0.0147,
+    "flag": "悪くなる"
+   },
+   "llama3b|SO-9B": {
+    "diff": -0.009,
+    "lo": -0.0261,
+    "hi": 0.0092,
+    "flag": "同着"
+   },
+   "verdict": "0/3 で効く → 言えない"
+  }
+ },
+ "chatgpt": {
+  "W|main|all": {
+   "gemma2b|SO-S": {
+    "diff": 0.0605,
+    "lo": 0.0479,
+    "hi": 0.0728,
+    "flag": "効く"
+   },
+   "gemma2b|SO-9B": {
+    "diff": 0.079,
+    "lo": 0.0635,
+    "hi": 0.0947,
+    "flag": "効く"
+   },
+   "gemma2b|SA-SO": {
+    "diff": -0.0027,
+    "lo": -0.0065,
+    "hi": 0.0005,
+    "chain_share": 0.855,
+    "flag": "足りない"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0287,
+    "lo": 0.0181,
+    "hi": 0.0403,
+    "flag": "同着"
+   },
+   "qwen3b|SO-9B": {
+    "diff": 0.0849,
+    "lo": 0.0687,
+    "hi": 0.1008,
+    "flag": "効く"
+   },
+   "qwen3b|SA-SO": {
+    "diff": -0.002,
+    "lo": -0.0064,
+    "hi": 0.0026,
+    "chain_share": 0.85,
+    "flag": "足りない"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0194,
+    "lo": 0.0076,
+    "hi": 0.0309,
+    "flag": "同着"
+   },
+   "llama3b|SO-9B": {
+    "diff": 0.0903,
+    "lo": 0.0745,
+    "hi": 0.1059,
+    "flag": "効く"
+   },
+   "llama3b|SA-SO": {
+    "diff": -0.0042,
+    "lo": -0.0077,
+    "hi": -0.0012,
+    "chain_share": 0.952,
+    "flag": "足りない"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "W|main|common": {
+   "gemma2b|SO-S": {
+    "diff": 0.0977,
+    "lo": 0.073,
+    "hi": 0.1252,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.067,
+    "lo": 0.0453,
+    "hi": 0.0884,
+    "flag": "効く"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0682,
+    "lo": 0.0439,
+    "hi": 0.0929,
+    "flag": "効く"
+   },
+   "verdict": "3/3 で効く → 効く"
+  },
+  "W|main|mid": {
+   "gemma2b|SO-S": {
+    "diff": 0.0404,
+    "lo": 0.0222,
+    "hi": 0.0603,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0121,
+    "lo": -0.0068,
+    "hi": 0.0319,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0057,
+    "lo": -0.0213,
+    "hi": 0.0108,
+    "flag": "同着"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "W|main|rare": {
+   "gemma2b|SO-S": {
+    "diff": 0.0404,
+    "lo": 0.0214,
+    "hi": 0.0615,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0033,
+    "lo": -0.009,
+    "hi": 0.0156,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.009,
+    "lo": -0.0221,
+    "hi": 0.0046,
+    "flag": "同着"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "E|main|all": {
+   "gemma2b|SO-S": {
+    "diff": -0.0028,
+    "lo": -0.0135,
+    "hi": 0.0084,
+    "flag": "同着"
+   },
+   "gemma2b|SO-9B": {
+    "diff": -0.0041,
+    "lo": -0.0209,
+    "hi": 0.0135,
+    "flag": "同着"
+   },
+   "qwen3b|SO-S": {
+    "diff": -0.0106,
+    "lo": -0.0216,
+    "hi": 0.0009,
+    "flag": "同着"
+   },
+   "qwen3b|SO-9B": {
+    "diff": -0.007,
+    "lo": -0.0257,
+    "hi": 0.0114,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0136,
+    "lo": -0.0237,
+    "hi": -0.0042,
+    "flag": "悪くなる"
+   },
+   "llama3b|SO-9B": {
+    "diff": 0.0015,
+    "lo": -0.0164,
+    "hi": 0.0197,
+    "flag": "同着"
+   },
+   "verdict": "0/3 で効く → 言えない"
+  }
+ },
+ "gemini": {
+  "W|main|all": {
+   "gemma2b|SO-S": {
+    "diff": 0.0617,
+    "lo": 0.0481,
+    "hi": 0.0747,
+    "flag": "効く"
+   },
+   "gemma2b|SO-9B": {
+    "diff": 0.0768,
+    "lo": 0.0608,
+    "hi": 0.0927,
+    "flag": "効く"
+   },
+   "gemma2b|SA-SO": {
+    "diff": -0.0005,
+    "lo": -0.0051,
+    "hi": 0.0039,
+    "chain_share": 0.855,
+    "flag": "足りない"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0375,
+    "lo": 0.0258,
+    "hi": 0.0501,
+    "flag": "効く"
+   },
+   "qwen3b|SO-9B": {
+    "diff": 0.0882,
+    "lo": 0.0728,
+    "hi": 0.1035,
+    "flag": "効く"
+   },
+   "qwen3b|SA-SO": {
+    "diff": -0.006,
+    "lo": -0.0105,
+    "hi": -0.002,
+    "chain_share": 0.85,
+    "flag": "足りない"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0279,
+    "lo": 0.0163,
+    "hi": 0.0397,
+    "flag": "同着"
+   },
+   "llama3b|SO-9B": {
+    "diff": 0.091,
+    "lo": 0.0748,
+    "hi": 0.1063,
+    "flag": "効く"
+   },
+   "llama3b|SA-SO": {
+    "diff": -0.0058,
+    "lo": -0.0104,
+    "hi": -0.002,
+    "chain_share": 0.952,
+    "flag": "足りない"
+   },
+   "verdict": "2/3 で効く → 効く"
+  },
+  "W|main|common": {
+   "gemma2b|SO-S": {
+    "diff": 0.1097,
+    "lo": 0.0846,
+    "hi": 0.1367,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0846,
+    "lo": 0.0625,
+    "hi": 0.1066,
+    "flag": "効く"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0838,
+    "lo": 0.0607,
+    "hi": 0.1075,
+    "flag": "効く"
+   },
+   "verdict": "3/3 で効く → 効く"
+  },
+  "W|main|mid": {
+   "gemma2b|SO-S": {
+    "diff": 0.0344,
+    "lo": 0.0145,
+    "hi": 0.0557,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0148,
+    "lo": -0.004,
+    "hi": 0.0347,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0039,
+    "lo": -0.0139,
+    "hi": 0.0229,
+    "flag": "同着"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "W|main|rare": {
+   "gemma2b|SO-S": {
+    "diff": 0.0344,
+    "lo": 0.0144,
+    "hi": 0.0565,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0049,
+    "lo": -0.0119,
+    "hi": 0.0219,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0131,
+    "lo": -0.0268,
+    "hi": 0.0008,
+    "flag": "同着"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "E|main|all": {
+   "gemma2b|SO-S": {
+    "diff": 0.0012,
+    "lo": -0.0096,
+    "hi": 0.0124,
+    "flag": "同着"
+   },
+   "gemma2b|SO-9B": {
+    "diff": -0.0071,
+    "lo": -0.0236,
+    "hi": 0.0097,
+    "flag": "同着"
+   },
+   "qwen3b|SO-S": {
+    "diff": -0.0017,
+    "lo": -0.0127,
+    "hi": 0.0095,
+    "flag": "同着"
+   },
+   "qwen3b|SO-9B": {
+    "diff": -0.0099,
+    "lo": -0.0288,
+    "hi": 0.0076,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0117,
+    "lo": -0.0216,
+    "hi": -0.0018,
+    "flag": "悪くなる"
+   },
+   "llama3b|SO-9B": {
+    "diff": -0.0015,
+    "lo": -0.0194,
+    "hi": 0.0161,
+    "flag": "同着"
+   },
+   "verdict": "0/3 で効く → 言えない"
+  }
+ },
+ "vote": {
+  "W|main|all": {
+   "gemma2b|SO-S": {
+    "diff": 0.0623,
+    "lo": 0.0489,
+    "hi": 0.0752,
+    "flag": "効く"
+   },
+   "gemma2b|SO-9B": {
+    "diff": 0.0763,
+    "lo": 0.0595,
+    "hi": 0.0929,
+    "flag": "効く"
+   },
+   "gemma2b|SA-SO": {
+    "diff": -0.0003,
+    "lo": -0.0052,
+    "hi": 0.0045,
+    "chain_share": 0.855,
+    "flag": "足りない"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0274,
+    "lo": 0.0164,
+    "hi": 0.0389,
+    "flag": "同着"
+   },
+   "qwen3b|SO-9B": {
+    "diff": 0.087,
+    "lo": 0.0717,
+    "hi": 0.1031,
+    "flag": "効く"
+   },
+   "qwen3b|SA-SO": {
+    "diff": -0.0038,
+    "lo": -0.0082,
+    "hi": 0.0005,
+    "chain_share": 0.85,
+    "flag": "足りない"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0186,
+    "lo": 0.0071,
+    "hi": 0.0302,
+    "flag": "同着"
+   },
+   "llama3b|SO-9B": {
+    "diff": 0.0907,
+    "lo": 0.0749,
+    "hi": 0.1063,
+    "flag": "効く"
+   },
+   "llama3b|SA-SO": {
+    "diff": -0.0038,
+    "lo": -0.0072,
+    "hi": -0.0011,
+    "chain_share": 0.952,
+    "flag": "足りない"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "W|main|common": {
+   "gemma2b|SO-S": {
+    "diff": 0.1112,
+    "lo": 0.0863,
+    "hi": 0.1383,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0692,
+    "lo": 0.0479,
+    "hi": 0.0898,
+    "flag": "効く"
+   },
+   "llama3b|SO-S": {
+    "diff": 0.0718,
+    "lo": 0.0476,
+    "hi": 0.0962,
+    "flag": "効く"
+   },
+   "verdict": "3/3 で効く → 効く"
+  },
+  "W|main|mid": {
+   "gemma2b|SO-S": {
+    "diff": 0.0411,
+    "lo": 0.0215,
+    "hi": 0.0615,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": 0.0112,
+    "lo": -0.0073,
+    "hi": 0.0301,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0068,
+    "lo": -0.021,
+    "hi": 0.0077,
+    "flag": "同着"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "W|main|rare": {
+   "gemma2b|SO-S": {
+    "diff": 0.0303,
+    "lo": 0.0103,
+    "hi": 0.0521,
+    "flag": "効く"
+   },
+   "qwen3b|SO-S": {
+    "diff": -0.0023,
+    "lo": -0.0156,
+    "hi": 0.0106,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0148,
+    "lo": -0.0272,
+    "hi": -0.0027,
+    "flag": "悪くなる"
+   },
+   "verdict": "1/3 で効く → 言えない"
+  },
+  "E|main|all": {
+   "gemma2b|SO-S": {
+    "diff": -0.0017,
+    "lo": -0.0135,
+    "hi": 0.0105,
+    "flag": "同着"
+   },
+   "gemma2b|SO-9B": {
+    "diff": -0.0072,
+    "lo": -0.0237,
+    "hi": 0.0098,
+    "flag": "同着"
+   },
+   "qwen3b|SO-S": {
+    "diff": -0.009,
+    "lo": -0.0204,
+    "hi": 0.0031,
+    "flag": "同着"
+   },
+   "qwen3b|SO-9B": {
+    "diff": -0.0113,
+    "lo": -0.0303,
+    "hi": 0.0072,
+    "flag": "同着"
+   },
+   "llama3b|SO-S": {
+    "diff": -0.0162,
+    "lo": -0.0263,
+    "hi": -0.0064,
+    "flag": "悪くなる"
+   },
+   "llama3b|SO-9B": {
+    "diff": -0.0026,
+    "lo": -0.02,
+    "hi": 0.015,
+    "flag": "同着"
+   },
+   "verdict": "0/3 で効く → 言えない"
+  }
+ }
+}

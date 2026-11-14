@@ -1,0 +1,11 @@
+{"n_tune":1622,"tune_pos":937,"bless":{"hyper":1240,"rev":1240,"mero":1240,"coord":1240,"random-n":1240},
+"params":{"G2":[4.0],"G9":[3.5],"D":[4.0,-3.4657],"V":[1.7933,0.01994]},
+"tune_ba":{"G2":0.8649,"G9":0.9073,"D":0.8686,"V":0.8833},
+"bless_ba":{"G2":0.9016,"G9":0.9577,"D":0.9033,"V":0.9101},
+"bless_yes_rate":{"G2":{"hyper":0.821,"mero":0.023,"rev":0.031,"coord":0.011,"random-n":0.005},"G9":{"hyper":0.937,"mero":0.026,"rev":0.022,"coord":0.027,"random-n":0.012},"D":{"hyper":0.821,"mero":0.023,"rev":0.018,"coord":0.011,"random-n":0.005},"V":{"hyper":0.836,"mero":0.015,"rev":0.023,"coord":0.019,"random-n":0.008}},
+"bless_x_in_dict":0.978,
+"flag_A_V_vs_G2":{"diff":0.0085,"lo":-0.0018,"hi":0.0192,"flag":"同着"},
+"flag_B_V_vs_D":{"diff":0.0068,"lo":-0.0037,"hi":0.0173,"flag":"同着"},
+"flag_C_V_vs_G9":{"diff":-0.0476,"lo":-0.0572,"hi":-0.0381,"flag":"9Bに届かない"},
+"ref_D_vs_G2":{"diff":0.0017,"lo":0.0009,"hi":0.0027},
+"note":"Colab（ドライブなし）11-14 9:29 JST。ノート E18_TADORIの拒否権をBLESSで測る.ipynb（Drive id 1HHy20fSE8notuicDalSRQDq11GhcKTn3）の最後のセルの出力。"}
