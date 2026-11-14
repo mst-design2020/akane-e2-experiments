@@ -252,7 +252,7 @@ note記事の数字は、すべてこのリポジトリのファイルから出�
 - 記事11（E11、手がかりを全部1つの学習にまとめる） https://note.com/mst_design2020/n/n8ca2afb0ac35 （Zenn、E11〜E14 https://zenn.dev/mst_design2020/articles/8ac3114ae8cf58 ）
 - 記事12（E12〜E14、意味選びを3万4千問で、正解なしのまとめ方、行き止まりの穴埋め） https://note.com/mst_design2020/n/nd15d73345722 （Zenn は記事11と同じ）
 - 記事13（E15とTADORI、最後の段の判定を小さいAIに任せる、確かめ方の名前） https://note.com/mst_design2020/n/n4a4123b34fd6 （Zenn https://zenn.dev/mst_design2020/articles/fc03d9c1a5763b ）
-- Zenn（E16〜E20-1、TADORI はどこで効いて、どこで効かないか。人の正解・珍しい語・ほかの小さいAI、見直しの確かめ） https://zenn.dev/mst_design2020/articles/45f9359416b8e5 （note はまだ）
+- 記事14（E17〜E20-1、TADORI はどこで効くのか。人の正解・珍しい語・ほかの小さいAI、見直しの確かめ） https://note.com/mst_design2020/n/n1f1871868858 （Zenn、E16〜E20-1 https://zenn.dev/mst_design2020/articles/45f9359416b8e5 ）
 
 ## E2：AIが作ったルールで、確率伝搬を使って確かめる
 
