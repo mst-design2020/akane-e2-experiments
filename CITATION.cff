@@ -4,7 +4,8 @@ type: software
 title: "AKANE Architecture experiments: checking a small LLM's answers from the outside"
 abstract: >-
   Code, data, and results for small experiments in which a small language model
-  (Gemma-2 2B) answers true/false and "X is a type of Y" questions and its
+  (Gemma-2 2B; in E20 also Qwen2.5-3B and Phi-3.5-mini) answers true/false and
+  "X is a type of Y" questions and its
   answers are checked by parts placed outside it: the model's own consistency
   rules with belief propagation, retrieved evidence, dictionary definitions with
   an NLI model, and definition chains in which the model only picks word senses
