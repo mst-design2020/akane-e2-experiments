@@ -57,7 +57,7 @@ Author: Masaya Kato (M.S.T. Design, Saiki, Oita, Japan) https://mst-design.jp/ �
 
 ## TADORI (summary for researchers)
 
-TADORI is the check that survived E2 to E15. The other parts we tried (a network with BP, the p-bit method, deeper chains, outside sentences added to the chain) tied or lost and were dropped. What remained got a name. This section is meant to be read on its own; the detailed numbers stay in each experiment's section.
+TADORI is the check that survived E2 to E15. The other parts we tried (a network with BP, the p-bit method, deeper chains, outside sentences added to the chain) tied or lost and were dropped. What remained got a name. E17 to E20-1 then tested it further: against human ratings and a human-made list (no gain), on rare words (works, but showing the definition alone does as well), and with two more small models, Qwen2.5 3B and Phi-3.5 mini (the chain adds to the definition on common words for all three). Those results are included in the tables below. This section is meant to be read on its own; the detailed numbers stay in each experiment's section.
 
 **Name.** TADORI is an acronym of **T**racing **A**long **D**efinitions, **O**pting for the **R**ight **I**nterpretation: follow the dictionary definitions and choose the right sense of each word on the way. It also reads as the Japanese word たどり (*tadori*, "tracing").
 
